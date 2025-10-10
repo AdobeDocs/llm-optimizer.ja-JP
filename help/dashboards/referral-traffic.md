@@ -1,9 +1,9 @@
 ---
 title: リファラルトラフィック
-description: 記事の概要です。
-source-git-commit: c83b4929a82331534654fcfdccd41d91eefe6d92
+description: リファラルトラフィックダッシュボードを使用して、外部プラットフォーム、AI 引用、リファラルリンクから訪問者がサイトに到達する方法を確認する方法について説明します。
+source-git-commit: e8ea9ae0d6592ea3d1e9945ec117f852112ba9d7
 workflow-type: tm+mt
-source-wordcount: '544'
+source-wordcount: '563'
 ht-degree: 0%
 
 ---
@@ -27,7 +27,7 @@ ht-degree: 0%
 
 初回ログイン時に、リファラルトラフィックダッシュボードが空白で表示される場合があります。 データを表示するには、紹介トラフィック プロバイダーを構成する必要があります。
 
-![&#x200B; リファラルの設定 &#x200B;](/help/dashboards/assets/referral-setup.png)
+![ リファラルの設定 ](/help/dashboards/assets/referral-setup.png)
 
 1. Source（CDN ログまたはAEM運用テレメトリ）を選択します。
 2. 主要連絡先のメールアドレスを入力します。
@@ -56,7 +56,7 @@ ht-degree: 0%
 * **同意率** – 同意プロンプトを受け入れる訪問者の割合。
 * **バウンス率** - エンゲージメントイベントがなかったリファラルソースのセッションの割合。
 
-![&#x200B; リファラルページ &#x200B;](/help/dashboards/assets/referral-traffic.png)
+![ リファラルページ ](/help/dashboards/assets/referral-traffic.png)
 
 上記の全体的なパフォーマンス指標に加えて、**上位地域** パネルでは、トラフィックを地域別に分類します。 一方、**上位のリファラルソース** パネルには、最も多くの訪問を促進するプラットフォームが表示されます。
 
@@ -64,13 +64,13 @@ ht-degree: 0%
 
 上位のリファラル URL リストには、リファラルからサイトで最も訪問されたページが表示されます。
 
-![&#x200B; 上位のリファラル URL](/help/dashboards/assets/top-url.png)
+![ 上位のリファラル URL](/help/dashboards/assets/top-url.png)
 
 ## リファラルトラフィックの詳細 {#traffic-details}
 
 「リファラルトラフィックの詳細」テーブルは、トラフィックの量と品質の両方を評価するのに役立ちます。 訪問数、バウンス率、チャネルタイプなど、ソース別に詳細な分類を提供します。
 
-![&#x200B; リファラルトラフィックの詳細 &#x200B;](/help/dashboards/assets/traffic-details.png)
+![ リファラルトラフィックの詳細 ](/help/dashboards/assets/traffic-details.png)
 
 このテーブルには、次のカテゴリが含まれます。
 
