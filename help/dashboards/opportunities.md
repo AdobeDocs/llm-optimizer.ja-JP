@@ -1,7 +1,7 @@
 ---
 title: 最適化の機会
 description: 記事の概要です。
-source-git-commit: e35ddb9b055d2f974fd94b3a21e13e92d05c8799
+source-git-commit: 77bddfa7351d573c20a0f68a08b69000bc06beb8
 workflow-type: tm+mt
 source-wordcount: '429'
 ht-degree: 0%
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 最適化の機会は、サイトや外部プレゼンスを改善して AI 検索でのブランドの可視性を高めることができる場所を示すインサイトを自動的に検出します。 これらの最適化には、ページ上の修正（構造化コンテンツ、正規化、概要の追加）、技術的な調整（AI クローラーのブロック解除やエラーの解決）、サードパーティの権限のあるサイト上のコンテンツへの影響などが含まれます。 これらの最適化の機会に対処することで、ブランドが正確に示され、ジェネレーティブな回答で引き合いに出される可能性が高くなります。
 
-![&#x200B; 最適化の機会 &#x200B;](/help/dashboards/assets/oport.png)
+![ 最適化の機会 ](/help/dashboards/assets/oport.png)
 
 ## 商談ダッシュボード
 
