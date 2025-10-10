@@ -1,0 +1,149 @@
+---
+title: LLM Optimizerの基本
+description: AI 駆動型検索でAdobe LLM Optimizerがブランドの認知度を高める方法について説明します。 メンション、引用およびインサイトをトラッキングします。 より良いエンゲージメントと影響力を得るために、今すぐ最適化を開始してください。
+source-git-commit: 227eb378bd5484fad2fb4165822394b0b605747b
+workflow-type: tm+mt
+source-wordcount: '496'
+ht-degree: 0%
+
+---
+
+
+# LLM Optimizerの概要
+
+<!-- This doesn't seem like a tutorials overview to me. Still trying to place correctly -->
+
+このページの詳細は次のとおりです。
+
+* [Adobe LLM Optimizerとは](#what-is-adobe-llm-optimizer)
+* [LLM Optimizerの機能とは](#what-are-llm-optimizer-capabilities)
+* [ブランドにとって LLM の最適化が重要な理由](#why-llm-optimization-matters-for-your-brand)
+* [Adobe LLM Optimizerを使用すべきユーザー](#who-should-use-adobe-llm-optimizer)
+* [Adobe LLM Optimizerの機能](#what-can-i-do-with-adobe-llm-optimizer)
+
+## Adobe LLM Optimizerとは
+
+Adobe LLM Optimizerは、ジェネレーティブエンジン最適化（回答エンジン最適化とも呼ばれます）のジェネレーティブ AI ファーストのアプリケーションで、AI 駆動型検索環境でのブランドの可視性、精度、影響力を向上させるのに役立つように設計されています。 AI が生成した回答でのブランドプレゼンスに関するインサイトを提供し、規範的なコンテンツのレコメンデーションを提供し、最適化の修正を自動化します。
+
+## LLM Optimizerの機能とは
+
+Adobe LLM Optimizerは、生成エンジンの最適化のために設計された一連のツールを提供します。
+
+* ブランドの可視性の測定：AI を活用した検索結果でブランドが表示されるタイミング、場所、頻度を追跡し、ベンチマークの明確な表示スコアを得ます。
+* 競合他社のベンチマーク：ブランドの声とプレゼンスのシェアを、ジェネレーティブエンジンの競合他社と比較します。
+* アクションにつながる機会を見つける：コンテンツや技術的な改善（FAQ、要約、スキーマ、クロール可能性など）を特定し、メンションや引用文を強化します。
+* トラフィックの影響の追跡：所有するプロパティへのエージェント（AI アシスタント）とリファラルトラフィックの両方を監視し、可視性をエンゲージメントにリンクします。
+* チームCollaborationを有効にする：マーケティングチーム、SEO チーム、コミュニケーションドチーム全体でダッシュボードを共有し、所有者を割り当てて、目標を調整します。
+
+
+<!-- I'm adding headings because LLMs like them and that way we'll rank better. Generally question format/question words in the the title is preferred. We can discuss. Or we can mirror what we did for Sites Optimizer and have this info on another page-->
+
+## ブランドにとって LLM の最適化が重要な理由
+
+* AI が生み出す回答は、消費者の発見を変えています。
+* LLM Optimizerを使用すると、これらの環境でブランドを可視化、正確かつ影響力のあるものにすることができます。
+* AI の可視性を、エンゲージメントや収益などの実際のビジネス成果につなげます。
+* ゼロクリックジャーニーの世界では、このツールは競争力を維持するために不可欠です。
+
+## Adobe LLM Optimizerを使用するのは誰ですか？
+
+生成エンジンの最適化は、本質的に部門横断的です。 LLM Optimizerは、以下に示す様々なペルソナ向けに、このレンズを使用して設計されています。
+
+* **マーケティングマネージャー** AI 検索でブランドの可視性とキャンペーンの有効性を測定します。
+* **SEO アナリスト** は、ブランドのメンション、引用、その他のインサイトを追跡して、コンテンツ戦略に情報を提供します。
+* **PR およびコミュニケーションマネージャー** サードパーティのプラットフォームによって LLM のブランド認識を追跡し、誤情報に対処し、感情を管理し、ブランドの信頼を保護します。
+
+## Adobe LLM Optimizerで実行できること
+
+Adobe LLM Optimizerを使用すると、次のことができます。
+
+**ブランドの可視性の測定** - AI を利用した検索結果でブランドがメンションされたタイミング、場所、頻度を追跡します。 時間の経過と共にベンチマークできる明確な可視性スコアを使用して、推測を超える作業を行います。
+**ベンチマークの競合他社** – 生成エンジンの競合他社に対するブランドの積み重ねを確認します。 シェア・オブ・ボイスのギャップを特定し、競争上の優位性を明らかにします。
+**実用的な機会の発見** - コンテンツの機会（FAQ、要約、スキーマなど）と技術的な機会（クロール可能性、インデックスの問題）を特定し、言及や引用を直接増やします。
+**AI からのトラフィック影響の追跡** – 所有するプロパティへのエージェンティックトラフィック（AI アシスタントから）およびリファラルトラフィック（引用からのユーザークリック）を監視します。 地域の可視性を実際のエンゲージメントに結び付けます。
+**チームCollaborationを有効にする** - ダッシュボードを共有し、プロンプトやカテゴリの所有者を割り当て、マーケティング、SEO、コミュニケーションの各機能全体で表示目標が確実に追跡されるようにします。
+
+
+## 参照
+
+さらにリンクや詳細をここに追加します。
+
+
+
+
+
+
+
+
+<!--## Understanding Brand Visibility and AI Search
+
+Use these as guidelines for creating tutorials - some may be covered already in docs
+
+## Using the Brand Presence Dashboard
+
+* Visibility Score
+* Mentions and Citations
+* Competitor Benchmarking
+* Sentiment Trend Analysis
+
+
+## Exploring the Data Insights Table
+
+* Topic-Level Performance
+* Sentiment and Position Analysis
+* Citation Breakdown
+* Optimization Prioritization
+
+
+## Tracking Agentic Traffic from AI Crawlers
+
+* Setup and Activation
+* Traffic Distribution and Trends
+* User Agent and URL Performance Analysis
+
+
+## Measuring Referral Traffic from AI Citations
+
+* Setup and Activation
+* Source, Region, and Channel Filters
+* Top Referral URLs and Traffic Quality
+
+
+## Inspecting URL Performance in AI Responses
+
+* Cited URLs and Prompt Coverage
+* Competing URLs and Citation Trends
+
+
+## Identifying Optimization Opportunities
+
+* Content Fixes (Headings, FAQs, Canonicals)
+* Technical Fixes (Blocked Agents, Errors)
+* Third-Party Influence Strategies
+
+## Collaborating Across Teams
+
+* Workspace Sharing
+* Role-Based Dashboards
+* Prompt and Category Ownership
+
+
+## Configuring Your Brand Monitoring Setup
+
+* Categories and Topics
+* Brand and Competitor Aliases
+* Domain Switching and Customization -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
