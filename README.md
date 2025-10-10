@@ -17,7 +17,7 @@ ht-degree: 36%
 
 **Adobeの従業員でない場合は** 外部のコミュニティ投稿を送信できます。 コミュニティの投稿は社内システムにインポートされ、編集されてパブリックリポジトリにマージされます。 その後、公開リポジトリが最新の変更と同期され、非公開リポジトリに結合されます。
 
-**Adobeの従業員の場合**、非公開の [Adobe GitHub リポジトリに直接投稿できます ](https://git.corp.adobe.com/AdobeDocs/)。 詳しくは、Adobeの社員向けの Adobe Experience League オーサリングガイドを参照してください。
+**Adobeの従業員の場合**、非公開の [Adobe GitHub リポジトリに直接投稿できます &#x200B;](https://git.corp.adobe.com/AdobeDocs/)。 詳しくは、Adobeの社員向けの Adobe Experience League オーサリングガイドを参照してください。
 
 ## 外部寄稿者
 
@@ -47,7 +47,7 @@ Adobe コミュニティのメンバーが新しいトピックを作成した�
 
 ## 内部寄稿者
 
-Adobe Experience Cloud ソリューションの製品チームのテクニカルライター、プログラムマネージャー、または開発者で技術記事の投稿または作成を担当している場合は、[ プライベートリポジトリ ](https://git.corp.adobe.com/AdobeDocs) を使用します。
+Adobe Experience Cloud ソリューションの製品チームのテクニカルライター、プログラムマネージャー、または開発者で技術記事の投稿または作成を担当している場合は、[&#x200B; プライベートリポジトリ &#x200B;](https://git.corp.adobe.com/AdobeDocs) を使用します。
 
 ## トピックの書式設定
 

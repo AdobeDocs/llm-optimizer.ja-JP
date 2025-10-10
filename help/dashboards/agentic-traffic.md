@@ -26,7 +26,7 @@ ht-degree: 0%
 
 最初のログイン時には、Agentic トラフィックダッシュボードは空白になります。 エージェントのインタラクションを表示するには、**CDN ログ転送** を設定する必要があります。 **クイックスタート/オンボーディングの CDN 設定を示す未定**
 
-![CDN 設定 ](/help/dashboards/assets/ag-log-forward.png)
+![CDN 設定 &#x200B;](/help/dashboards/assets/ag-log-forward.png)
 
 1. CDN プロバイダー（Akamai、Adobeで管理される Fastly、Fastly、AWS Cloudfront、Azure CDN、Cloudflare、その他）を選択します。
 2. 主要連絡先のメールアドレスを入力します。
@@ -51,7 +51,7 @@ ht-degree: 0%
 
 トラフィック配分ビューには、エージェントトラフィックがマーケット、カテゴリおよびページタイプをまたいでどのように分散しているかが表示されます。 そのため、このビューを使用すると、サイトを操作する際に AI エージェントが最も頻繁にアクセスする地域、製品領域、またはコンテンツ形式を判断できます。
 
-![ トラフィック配分 ](/help/dashboards/assets/ag-main.png)
+![&#x200B; トラフィック配分 &#x200B;](/help/dashboards/assets/ag-main.png)
 
 ページの上部には、次の 3 つの主要指標について注意する必要があります。
 
@@ -65,7 +65,7 @@ ht-degree: 0%
 
 エージェンティックトラフィックトレンド グラフを使用して、成功、失敗および全体的なヒットの週別合計を追跡します。 そのため、エージェントのアクティビティとパフォーマンスの変化を経時的に監視できます。 また、グラフに沿ってマウスを移動して、週次時間枠全体でのデータの変化を確認することもできます。
 
-![Agentic トラフィックのトレンド ](/help/dashboards/assets/ag-trends.png)
+![Agentic トラフィックのトレンド &#x200B;](/help/dashboards/assets/ag-trends.png)
 
 ## 上下のムーバー {#top-bottom-movers}
 
@@ -78,7 +78,7 @@ ht-degree: 0%
 
 ユーザーエージェント ビューと URL パフォーマンス分析ビューでは、クローラーとチャットボットがサイトとどのようにやり取りするかについての詳細なデータ分類を提供します。 詳細については、以下のタブをクリックしてください。
 
-![ ユーザーエージェントと URL パフォーマンス分析 ](/help/dashboards/assets/user-agent.png)
+![&#x200B; ユーザーエージェントと URL パフォーマンス分析 &#x200B;](/help/dashboards/assets/user-agent.png)
 
 >[!BEGINTABS]
 

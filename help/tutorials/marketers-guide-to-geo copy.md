@@ -38,9 +38,9 @@ SEO のプロフェッショナル/アナリストの目標は、発見可能性
 
 AdobeのLLM Optimizerでは、上位の KPI をツールから直接使用できます。
 
-* AI の可視性トラッキング：ページが AI で生成された回答に表示されるタイミングと方法を確認する必要があります。 これには、**引用** および **メンション** とセンチメントが含まれます。 [ ブランドプレゼンスダッシュボード ](/help/dashboards/brand-presence.md) を参照
+* AI の可視性トラッキング：ページが AI で生成された回答に表示されるタイミングと方法を確認する必要があります。 これには、**引用** および **メンション** とセンチメントが含まれます。 [&#x200B; ブランドプレゼンスダッシュボード &#x200B;](/help/dashboards/brand-presence.md) を参照
 
-* エージェンティックトラフィック測定：AI 駆動の紹介または要約からのトラフィックを理解する必要があります。 [Agentic トラフィックダッシュボード ](/help/dashboards/agentic-traffic.md) を参照してください。
+* エージェンティックトラフィック測定：AI 駆動の紹介または要約からのトラフィックを理解する必要があります。 [Agentic トラフィックダッシュボード &#x200B;](/help/dashboards/agentic-traffic.md) を参照してください。
 
 <!-- Not sure llm optimizer has all these - remove those not relevant-->
 

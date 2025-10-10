@@ -27,7 +27,7 @@ ht-degree: 0%
 
 初回ログイン時に、リファラルトラフィックダッシュボードが空白で表示される場合があります。 データを表示するには、紹介トラフィック プロバイダーを構成する必要があります。
 
-![ リファラルの設定 ](/help/dashboards/assets/referral-setup.png)
+![&#x200B; リファラルの設定 &#x200B;](/help/dashboards/assets/referral-setup.png)
 
 1. Source（CDN ログまたはAEM運用テレメトリ）を選択します。
 2. 主要連絡先のメールアドレスを入力します。
@@ -56,7 +56,7 @@ ht-degree: 0%
 * **同意率** – 同意プロンプトを受け入れる訪問者の割合。
 * **バウンス率** - エンゲージメントイベントがなかったリファラルソースのセッションの割合。
 
-![ リファラルページ ](/help/dashboards/assets/referral-traffic.png)
+![&#x200B; リファラルページ &#x200B;](/help/dashboards/assets/referral-traffic.png)
 
 上記の全体的なパフォーマンス指標に加えて、**上位地域** パネルでは、トラフィックを地域別に分類します。 一方、**上位のリファラルソース** パネルには、最も多くの訪問を促進するプラットフォームが表示されます。
 
@@ -64,13 +64,13 @@ ht-degree: 0%
 
 上位のリファラル URL リストには、リファラルからサイトで最も訪問されたページが表示されます。
 
-![ 上位のリファラル URL](/help/dashboards/assets/top-url.png)
+![&#x200B; 上位のリファラル URL](/help/dashboards/assets/top-url.png)
 
 ## リファラルトラフィックの詳細 {#traffic-details}
 
 「リファラルトラフィックの詳細」テーブルは、トラフィックの量と品質の両方を評価するのに役立ちます。 訪問数、バウンス率、チャネルタイプなど、ソース別に詳細な分類を提供します。
 
-![ リファラルトラフィックの詳細 ](/help/dashboards/assets/traffic-details.png)
+![&#x200B; リファラルトラフィックの詳細 &#x200B;](/help/dashboards/assets/traffic-details.png)
 
 このテーブルには、次のカテゴリが含まれます。
 

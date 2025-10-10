@@ -50,9 +50,9 @@ ht-degree: 1%
 
 CDN ログ転送の情報を指定すると、次の操作を実行できます。
 
-* [ ブランドプレゼンス ](/help/dashboards/brand-presence.md) ダッシュボードを表示し、可視性スコアを表示し、競合他社に対するパフォーマンスを追跡します。
-* [Agentic](/help/dashboards/agentic-traffic.md) および [ リファラルトラフィック ](/help/dashboards/referral-traffic.md) ダッシュボードを探索します。
-* [ 商談 ](/help/dashboards/opportunities.md) を使用して、コンテンツと技術的な改善を特定します。
+* [&#x200B; ブランドプレゼンス &#x200B;](/help/dashboards/brand-presence.md) ダッシュボードを表示し、可視性スコアを表示し、競合他社に対するパフォーマンスを追跡します。
+* [Agentic](/help/dashboards/agentic-traffic.md) および [&#x200B; リファラルトラフィック &#x200B;](/help/dashboards/referral-traffic.md) ダッシュボードを探索します。
+* [&#x200B; 商談 &#x200B;](/help/dashboards/opportunities.md) を使用して、コンテンツと技術的な改善を特定します。
 * データを書き出してチームで共同作業したり、同僚に製品の使用を勧めたりします。
 
 使用可能なダッシュボードについては、以下の節を参照してください。
