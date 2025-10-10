@@ -21,7 +21,7 @@ LLM Optimizer を使い始めるには、オンボーディングプロセスを
 
 ### AEM Cloud のお客様
 
-AEM Cloud をご利用のお客様（Cloud Service/Managed Services/Edge Delivery サービス）には、[Experience Hub](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/experience-hub/experience-hub) の商品お知らせカードからLLM Optimizerを試すオプションが表示されます。
+AEM Cloud をご利用のお客様（Cloud Service/Managed Services/Edge Delivery サービス）には、[Experience Hub](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/experience-hub/experience-hub) の商品お知らせカードからLLM Optimizerを試すオプションが表示されます。
 
 >[!NOTE]
 >処理が完了するまで、新しく追加されたプロンプトはブランドプレゼンスに表示されません。 AEM Cloud のお客様（Cloud Service、Managed Services/Edge Delivery サービス）は、LLM Optimizerの無料体験版を使用できます。 200 を超えるプロンプトを使用するには、別のライセンス契約が必要です。 アクセスは「現状のまま」および「利用可能」ベースで提供され、Adobeによっていつでも変更、制限、削除される可能性があります。 詳しくは、[ アカウント担当者 ] にお問い合わせください。
