@@ -3,9 +3,10 @@ cloud: Experience Cloud
 solution: LLM Optimizer
 type: Documentation
 mini-toc-levels: 2
+feature-set: LLM Optimizer
 git-repo: https://github.com/AdobeDocs/llm-optimizer.ja-JP
 hide: true
-source-git-commit: afe96baf84eb7f4e8d91cbaa0c424880fb06394d
+source-git-commit: bb3e3e4ebc7499fb8c8dfc165eb87595b40a4b4c
 workflow-type: tm+mt
 source-wordcount: '53'
 ht-degree: 98%
