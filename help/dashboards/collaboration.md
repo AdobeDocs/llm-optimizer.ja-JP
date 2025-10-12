@@ -17,4 +17,4 @@ Collaborationでは、組織のLLM Optimizer workspace にチームメンバー�
 
 チームメンバーを招待するには、「**メールアドレス**」フィールドにメンバーのメールアドレスを追加して、「招待を送信 **をクリック** します。 承認すると、組織のLLM Optimizer Workspace に参加します。
 
-![Collaborationへの招待 ](/help/dashboards/assets/collaboration.png)
+![Collaborationへの招待 &#x200B;](/help/dashboards/assets/collaboration.png)

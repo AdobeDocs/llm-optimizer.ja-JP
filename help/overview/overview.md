@@ -65,10 +65,10 @@ Adobe LLM Optimizerを使用すると、次のことができます。
 
 LLM Optimizerを最大限に活用するために役立つリソースを次に示します。
 
-* [ クイックスタート ](/help/overview/quick-start.md) を使用すると、すぐに使い始めることができます。
-* [ ダッシュボードの概要 ](/help/dashboards/dashboards-overview.md) では、LLM Optimizerで使用可能なすべてのダッシュボードについて説明します。
-* [ カテゴリ、トピック、プロンプト、競合他社の設定のベストプラクティス ](/help/overview/best-practices-topics-prompts.md) には、LLM Optimizerの設定に関する基本的な情報が含まれています。
-* [ ベストプラクティス ](/help/tutorials/best-practices.md) を使用すると、LLM 最適化のベストプラクティスを見つけて、AI 検索でのブランドの可視性を高めることができます。
+* [&#x200B; クイックスタート &#x200B;](/help/overview/quick-start.md) を使用すると、すぐに使い始めることができます。
+* [&#x200B; ダッシュボードの概要 &#x200B;](/help/dashboards/dashboards-overview.md) では、LLM Optimizerで使用可能なすべてのダッシュボードについて説明します。
+* [&#x200B; カテゴリ、トピック、プロンプト、競合他社の設定のベストプラクティス &#x200B;](/help/overview/best-practices-topics-prompts.md) には、LLM Optimizerの設定に関する基本的な情報が含まれています。
+* [&#x200B; ベストプラクティス &#x200B;](/help/tutorials/best-practices.md) を使用すると、LLM 最適化のベストプラクティスを見つけて、AI 検索でのブランドの可視性を高めることができます。
 
 
 
