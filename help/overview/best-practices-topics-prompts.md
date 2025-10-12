@@ -1,9 +1,9 @@
 ---
 title: カテゴリ、トピック、プロンプトのベストプラクティス
 description: カスタマイズされたブランド監視と戦略的コンテンツ分析のために、カテゴリ、トピック、プロンプト、および競合他社を設定して、LLM インサイトを最適化します。
-source-git-commit: 29e067086f9b6dd41c04b349c86ddc1c2baf8d2f
+source-git-commit: c7c66566137ad1f5bda89f55748b9d81ddf36f76
 workflow-type: tm+mt
-source-wordcount: '945'
+source-wordcount: '983'
 ht-degree: 0%
 
 ---
@@ -15,11 +15,11 @@ ht-degree: 0%
 
 これは重要な最初のステップです。 ここで決定する内容によって、ビジネスコンテキストに合わせた情報のカスタマイズ方法が決まります。 今後、履歴データがリセットされる際にカテゴリに変更が加えられた場合。
 
-[[!UICONTROL &#x200B; 顧客設定 &#x200B;]](/help/dashboards/customer-configuration.md) ダッシュボードでは、LLM Optimizer プラットフォーム内でブランドを監視および分析する方法を定義します。 ダッシュボードの使用方法については、[[!UICONTROL &#x200B; 顧客設定 &#x200B;]](/help/dashboards/customer-configuration.md) を参照してください。
+[[!UICONTROL  顧客設定 ]](/help/dashboards/customer-configuration.md) ダッシュボードでは、LLM Optimizer プラットフォーム内でブランドを監視および分析する方法を定義します。 ダッシュボードの使用方法については、[[!UICONTROL  顧客設定 ]](/help/dashboards/customer-configuration.md) を参照してください。
 
-![&#x200B; 顧客設定ウィンドウ &#x200B;](/help/assets/best-practices/customer-configuration-best-practices.png)
+![ 顧客設定ウィンドウ ](/help/assets/best-practices/customer-configuration-best-practices.png)
 
-[!UICONTROL &#x200B; 顧客設定 &#x200B;] ダッシュボードでは、カテゴリ（事業部門や製品ラインなど）のカスタマイズ、競合他社の追跡、ブランド表記エイリアスの追加を行い、プロンプトをまたいでブランドのすべてのバリエーションを取り込むことができます。 この設定により、platform はビジネスコンテキストに合わせてインサイトを調整し、正確な表示、トラフィックおよび商談分析を可能にします。
+[!UICONTROL  顧客設定 ] ダッシュボードでは、カテゴリ（事業部門や製品ラインなど）のカスタマイズ、競合他社の追跡、ブランド表記エイリアスの追加を行い、プロンプトをまたいでブランドのすべてのバリエーションを取り込むことができます。 この設定により、platform はビジネスコンテキストに合わせてインサイトを調整し、正確な表示、トラフィックおよび商談分析を可能にします。
 
 ## カテゴリのベストプラクティス
 
@@ -83,7 +83,7 @@ ht-degree: 0%
 
 * エディターがプロンプトテキストから 5 秒でトピックを理解できますか？ そうでない場合は、名前を変更/簡素化します。
 * 異なるチームが異なるトピックの修正を所有していますか？ 「はい」の場合は、役に立つトピックを選択しました。
-  <!-- Last bullet point does not make sense. Clarification needed.-->
+  <!-- Last bullet point does not make sense. Clarification needed. Also not sure what is meant by "editor"?-->
 
 その他の役立つヒント：
 
@@ -94,14 +94,20 @@ ht-degree: 0%
 >
 > * 組織的ではなく、インテントベースのトピックを維持します。
 > * 「**[!UICONTROL ブランド]**」タブでフィルターできるので、ブランド/ブランド以外の地域/地域のカテゴリ/フィルターを追加しないでください。
-> * トピックは複数のカテゴリに分散しています。カテゴリごとに異なるトピックを持つこ **は** できません。
-> * 1 つのプロンプトが複数のトピックまたはカテゴリに存在する場合があります。
+> * トピックはいくつかのカテゴリに分かれています。 各カテゴリに対して一意のトピックを定義することはできま **ん**。
+> * 1 つのプロンプト **実行** は、複数のトピックまたはカテゴリに存在します。
 
 ## プロンプトのベストプラクティス
 
 プロンプトは、顧客が尋ねている特定の質問やクエリを識別するもので、ビジネスに影響を与える可能性があります。 これらは、ユーザーが LLM に入力する実際の質問またはクエリです。
 
 プロンプトを定期的に確認および更新して、顧客のニーズやビジネス目標に合わせるようにしてください。
+
+プロンプトのベストプラクティス：
+
+* ユーザーの質問に基づいて、類似のプロンプトをグループ化します。
+* 顧客にとって最も重要なプロンプトに焦点を当てます。
+* ブランドが特定のプロンプトでメンションされる可能性が高いかどうかを確認します。
 
 >[!TIP]
 >
@@ -122,6 +128,6 @@ ht-degree: 0%
 
 ## 詳細情報
 
-* [&#x200B; 顧客設定ダッシュボード &#x200B;](/help/dashboards/customer-configuration.md) では、カテゴリ、トピック、プロンプトおよび競合他社を設定できます。
-* [LLM Optimizerのベストプラクティス &#x200B;](/help/tutorials/best-practices.md)LLM の最適化に関するベストプラクティスを説明します
+* [ 顧客設定ダッシュボード ](/help/dashboards/customer-configuration.md) では、カテゴリ、トピック、プロンプトおよび競合他社を設定できます。
+* [LLM Optimizerのベストプラクティス ](/help/tutorials/best-practices.md)LLM の最適化に関するベストプラクティスを説明します
 
