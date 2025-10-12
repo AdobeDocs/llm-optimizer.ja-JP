@@ -1,7 +1,7 @@
 ---
 title: LLM Optimizerの基本
 description: AI 駆動型検索でAdobe LLM Optimizerがブランドの認知度を高める方法について説明します。 メンション、引用およびインサイトをトラッキングします。 より良いエンゲージメントと影響力を得るために、今すぐ最適化を開始してください。
-source-git-commit: 227eb378bd5484fad2fb4165822394b0b605747b
+source-git-commit: 29e067086f9b6dd41c04b349c86ddc1c2baf8d2f
 workflow-type: tm+mt
 source-wordcount: '496'
 ht-degree: 0%
@@ -9,9 +9,7 @@ ht-degree: 0%
 ---
 
 
-# LLM Optimizerの概要
-
-<!-- This doesn't seem like a tutorials overview to me. Still trying to place correctly -->
+# LLM Optimizerの基本
 
 このページの詳細は次のとおりです。
 
@@ -34,9 +32,6 @@ Adobe LLM Optimizerは、生成エンジンの最適化のために設計され�
 * アクションにつながる機会を見つける：コンテンツや技術的な改善（FAQ、要約、スキーマ、クロール可能性など）を特定し、メンションや引用文を強化します。
 * トラフィックの影響の追跡：所有するプロパティへのエージェント（AI アシスタント）とリファラルトラフィックの両方を監視し、可視性をエンゲージメントにリンクします。
 * チームCollaborationを有効にする：マーケティングチーム、SEO チーム、コミュニケーションドチーム全体でダッシュボードを共有し、所有者を割り当てて、目標を調整します。
-
-
-<!-- I'm adding headings because LLMs like them and that way we'll rank better. Generally question format/question words in the the title is preferred. We can discuss. Or we can mirror what we did for Sites Optimizer and have this info on another page-->
 
 ## ブランドにとって LLM の最適化が重要な理由
 
