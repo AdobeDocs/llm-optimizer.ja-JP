@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # リファラルトラフィック
 
-リファラルトラフィックは、外部プラットフォーム、AI 引用、リファラルリンクから訪問者がお客様のサイトに到達する方法を示します。 外部の Web サイトやプラットフォームからのトラフィックソース、リファラルパターン、コンバージョン指標を追跡および分析します。 これにより、最も関与の多いトラフィックを推進するソース、地域、ページを理解できます。 データは、CDN ログまたは [AEM運用テレメトリ &#x200B;](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/sites/operational-telemetry-for-aem-as-a-cloud-service) のいずれかから取得されます。 これらのソースは両方ともプライバシーを保持するものであり、個人ユーザーデータを取り込むことはありません。 また、表示されるデータを絞り込むのに役立つ、カスタマイズ可能なフィルターもあります。
+リファラルトラフィックは、外部プラットフォーム、AI 引用、リファラルリンクから訪問者がお客様のサイトに到達する方法を示します。 外部の Web サイトやプラットフォームからのトラフィックソース、リファラルパターン、コンバージョン指標を追跡および分析します。 これにより、最も関与の多いトラフィックを推進するソース、地域、ページを理解できます。 データは、CDN ログまたは [AEM運用テレメトリ &#x200B;](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/sites/operational-telemetry-for-aem-as-a-cloud-service) のいずれかから取得されます。 これらのソースは両方ともプライバシーを保持するものであり、個人ユーザーデータを取り込むことはありません。 また、表示されるデータを絞り込むのに役立つ、カスタマイズ可能なフィルターもあります。
 
 ![&#x200B; リファラルページ &#x200B;](/help/dashboards/assets/referral-traffic.png)
 
