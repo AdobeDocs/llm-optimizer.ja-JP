@@ -1,9 +1,9 @@
 ---
 title: Adobe LLM Optimizer
 description: Adobe LLM Optimizerでブランドを強化しましょう。 メンションの追跡、インサイトの発見、AI 駆動検索の支配。 可視性を制御 – 今すぐ最適化を開始
-source-git-commit: 29e067086f9b6dd41c04b349c86ddc1c2baf8d2f
+source-git-commit: 2a723770b33a0c93e13e1b123962892fb3f9505b
 workflow-type: tm+mt
-source-wordcount: '288'
+source-wordcount: '326'
 ht-degree: 3%
 
 ---
@@ -19,16 +19,16 @@ Adobe LLM Optimizerは、ジェネレーティブエンジン最適化のジェ�
 
 <!-- CARDS
 
+* ./overview/overview.md
+  {title= LLM Optimizer overview}
+  {image= /help/assets/overview/llm-overview-card.png}
+  {description= Learn about how Adobe LLM Optimizer boosts brand visibility in AI-driven search.}
+  {target=_blank}
+  {cta=Learn more}
 * ./overview/quick-start.md
   {title= Quickstart guide}
   {description= Learn how to quickly get up and running with the LLM Optimizer.}
   {image= /help/assets/overview/agentic-traffic-card.png}
-  {target=_blank}
-  {cta=Learn more}
-* ./overview/best-practices-topics-prompts.md
-  {title= Best practices for setting up categories, topics, prompts, and competitors}
-  {description= Learn how to configure LLM Optimizer for tailored brand monitoring and strategic content analysis.}
-  {image= /help/assets/overview/customer-configuration-card.png}
   {target=_blank}
   {cta=Learn more}
 * ./dashboards/dashboards-overview.md
@@ -40,6 +40,29 @@ Adobe LLM Optimizerは、ジェネレーティブエンジン最適化のジェ�
 -->
 <!-- START CARDS HTML - DO NOT MODIFY BY HAND -->
 <div class="columns">
+    <div class="column is-half-tablet is-half-desktop is-one-third-widescreen" aria-label="LLM Optimizer overview">
+        <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
+            <div class="card-image">
+                <figure class="image x-is-16by9">
+                    <a href="./overview/overview.md" title="LLM Optimizerの概要" target="_blank" rel="referrer">
+                        <img class="is-bordered-r-small" src="/help/assets/overview/llm-overview-card.png" alt="LLM Optimizerの概要"
+                             style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
+                    </a>
+                </figure>
+            </div>
+            <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
+                <div class="top-card-content">
+                    <p class="headline is-size-6 has-text-weight-bold">
+                        <a href="./overview/overview.md" target="_blank" rel="referrer" title="LLM Optimizerの概要">LLM Optimizerの概要 </a>
+                    </p>
+                    <p class="is-size-6">AI 駆動型検索でAdobe LLM Optimizerがブランドの認知度を高める方法について説明します。</p>
+                </div>
+                <a href="./overview/overview.md" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">詳細情報</span>
+                </a>
+            </div>
+        </div>
+    </div>
     <div class="column is-half-tablet is-half-desktop is-one-third-widescreen" aria-label="Quickstart guide">
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
@@ -58,29 +81,6 @@ Adobe LLM Optimizerは、ジェネレーティブエンジン最適化のジェ�
                     <p class="is-size-6">LLM Optimizerをすぐに使い始める方法について説明します。</p>
                 </div>
                 <a href="./overview/quick-start.md" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
-                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">詳細情報</span>
-                </a>
-            </div>
-        </div>
-    </div>
-    <div class="column is-half-tablet is-half-desktop is-one-third-widescreen" aria-label="Best practices for setting up categories, topics, prompts, and competitors">
-        <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
-            <div class="card-image">
-                <figure class="image x-is-16by9">
-                    <a href="./overview/best-practices-topics-prompts.md" title="カテゴリ、トピック、プロンプトおよび競合他社の設定のベストプラクティス" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="/help/assets/overview/customer-configuration-card.png" alt="カテゴリ、トピック、プロンプトおよび競合他社の設定のベストプラクティス"
-                             style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
-                    </a>
-                </figure>
-            </div>
-            <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
-                <div class="top-card-content">
-                    <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="./overview/best-practices-topics-prompts.md" target="_blank" rel="referrer" title="カテゴリ、トピック、プロンプトおよび競合他社の設定のベストプラクティス"> カテゴリ、トピック、プロンプトおよび競合他社の設定のベストプラクティス </a>
-                    </p>
-                    <p class="is-size-6">カスタマイズされたブランドモニタリングと戦略的コンテンツ分析用にLLM Optimizerを設定する方法について説明します。</p>
-                </div>
-                <a href="./overview/best-practices-topics-prompts.md" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                     <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">詳細情報</span>
                 </a>
             </div>
@@ -118,8 +118,14 @@ Adobe LLM Optimizerは、ジェネレーティブエンジン最適化のジェ�
 
 <!-- CARDS
 
+* ./overview/best-practices-topics-prompts.md
+  {title= Best practices for setting up categories, topics, prompts, and tracking others}
+  {description= Learn how to configure LLM Optimizer for tailored brand monitoring and strategic content analysis.}
+  {image= /help/assets/overview/customer-configuration-card.png}
+  {target=_blank}
+  {cta=Learn more}
 * ./tutorials/best-practices.md
-  {title= Best practices for marketers and SEO analysts}
+  {title= Best practices for LLM optimization using Adobe LLM Optimizer}
   {image= /help/assets/overview/best-practices-card.png}
   {description= Learn how LLM Optimizer can help you drive brand authority in AI search and discovery.}
 * https://business.adobe.com/products/llm-optimizer.html
@@ -131,12 +137,12 @@ Adobe LLM Optimizerは、ジェネレーティブエンジン最適化のジェ�
 -->
 <!-- START CARDS HTML - DO NOT MODIFY BY HAND -->
 <div class="columns">
-    <div class="column is-half-tablet is-half-desktop is-one-third-widescreen" aria-label="Best practices for marketers and SEO analysts">
+    <div class="column is-half-tablet is-half-desktop is-one-third-widescreen" aria-label="Best practices for setting up categories, topics, prompts, and tracking others">
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="./tutorials/best-practices.md" title="マーケターと SEO アナリスト向けのベストプラクティス" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="/help/assets/overview/best-practices-card.png" alt="マーケターと SEO アナリスト向けのベストプラクティス"
+                    <a href="./overview/best-practices-topics-prompts.md" title="カテゴリ、トピック、プロンプトの設定およびその他の追跡のベストプラクティス" target="_blank" rel="referrer">
+                        <img class="is-bordered-r-small" src="/help/assets/overview/customer-configuration-card.png" alt="カテゴリ、トピック、プロンプトの設定およびその他の追跡のベストプラクティス"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -144,7 +150,30 @@ Adobe LLM Optimizerは、ジェネレーティブエンジン最適化のジェ�
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="./tutorials/best-practices.md" target="_blank" rel="referrer" title="マーケターと SEO アナリスト向けのベストプラクティス"> マーケターと SEO アナリスト向けのベストプラクティス </a>
+                        <a href="./overview/best-practices-topics-prompts.md" target="_blank" rel="referrer" title="カテゴリ、トピック、プロンプトの設定およびその他の追跡のベストプラクティス"> カテゴリ、トピック、プロンプトの設定およびその他の追跡のベストプラクティス </a>
+                    </p>
+                    <p class="is-size-6">カスタマイズされたブランドモニタリングと戦略的コンテンツ分析用にLLM Optimizerを設定する方法について説明します。</p>
+                </div>
+                <a href="./overview/best-practices-topics-prompts.md" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">詳細情報</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="column is-half-tablet is-half-desktop is-one-third-widescreen" aria-label="Best practices for LLM optimization using Adobe LLM Optimizer">
+        <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
+            <div class="card-image">
+                <figure class="image x-is-16by9">
+                    <a href="./tutorials/best-practices.md" title="Adobe LLM Optimizerを使用した LLM 最適化のベストプラクティス" target="_blank" rel="referrer">
+                        <img class="is-bordered-r-small" src="/help/assets/overview/best-practices-card.png" alt="Adobe LLM Optimizerを使用した LLM 最適化のベストプラクティス"
+                             style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
+                    </a>
+                </figure>
+            </div>
+            <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
+                <div class="top-card-content">
+                    <p class="headline is-size-6 has-text-weight-bold">
+                        <a href="./tutorials/best-practices.md" target="_blank" rel="referrer" title="Adobe LLM Optimizerを使用した LLM 最適化のベストプラクティス">Adobe LLM Optimizerを使用した LLM 最適化のベストプラクティス </a>
                     </p>
                     <p class="is-size-6">AI 検索と検出でLLM Optimizerがブランド力を高めるためにどのように役立つかを説明します。</p>
                 </div>
