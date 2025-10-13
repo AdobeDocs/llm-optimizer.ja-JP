@@ -1,7 +1,7 @@
 ---
 title: リファラルトラフィック
 description: リファラルトラフィックダッシュボードを使用して、外部プラットフォーム、AI 引用、リファラルリンクから訪問者がサイトに到達する方法を確認する方法について説明します。
-source-git-commit: 4cbfbe420a8419a04c2d6c465b6a290ee00ff3d4
+source-git-commit: 4192fe32c9e7cea4218ea580a9300f1fceb0f909
 workflow-type: tm+mt
 source-wordcount: '629'
 ht-degree: 0%
@@ -27,7 +27,7 @@ ht-degree: 0%
 
 初回ログイン時に、リファラルトラフィックダッシュボードが空白で表示される場合があります。 データを表示するには、「設定に移動 **を選択してリファラルトラフィックプロバイダーを設定する必要があ** ます。
 
-![&#x200B; リファラルの設定 &#x200B;](/help/dashboards/assets/referral-setup1.png)
+![ リファラルの設定 ](/help/dashboards/assets/referral-setup1.png)
 
 <!--- 1. Select your Source (either CDN logs or AEM Operational Telemetry).
 2. Enter a primary contact email.
@@ -56,7 +56,7 @@ ht-degree: 0%
 * **同意率** – 同意プロンプトを受け入れる訪問者の割合。
 * **バウンス率** - エンゲージメントイベントがなかったリファラルソースのセッションの割合。
 
-![&#x200B; リファラルページ &#x200B;](/help/dashboards/assets/referral-traffic.png)
+![ リファラルページ ](/help/dashboards/assets/referral-traffic.png)
 
 上記の全体的なパフォーマンス指標に加えて、**上位地域** パネルでは、トラフィックを地域別に分類します。 一方、**上位のリファラルソース** パネルには、最も多くの訪問を促進するプラットフォームが表示されます。 指標のトレンド指標は、前期と比較して、これらの値が時間の経過とともにどのように変化しているかを示します。
 
@@ -70,7 +70,7 @@ The Top Referral URLs list surfaces your site’s most visited pages from referr
 
 リファラルソースの詳細および URL パフォーマンス分析テーブルは、トラフィック量と品質の両方を評価するのに役立ちます。 詳しくは、以下の各タブをクリックしてください。
 
-![&#x200B; リファラルトラフィックの詳細 &#x200B;](/help/dashboards/assets/traffic-details.png)
+![ リファラルトラフィックの詳細 ](/help/dashboards/assets/traffic-details.png)
 
 >[!BEGINTABS]
 
@@ -78,10 +78,10 @@ The Top Referral URLs list surfaces your site’s most visited pages from referr
 
 リファラルソースの詳細ビューでは、OpenAI、Microsoft、Google、Perplexity など、様々なプラットフォームからのトラフィックを分類します。 訪問数、バウンス率、チャネルタイプなどの主要指標が表示され、サイトに最も関与しているトラフィックを推進している AI および検索ソースを理解するのに役立ちます。
 
-**Source** – 紹介トラフィックのソース。
-**訪問回数** – 各ソースの訪問総数。
-**バウンス率** - エンゲージメントイベントがなかったリファラルソースからのセッションの割合。
-**チャネル** - ソースのチャネル（獲得、有料、またはその両方）。
+* **Source** – 紹介トラフィックのソース。
+* **訪問回数** – 各ソースの訪問総数。
+* **バウンス率** - エンゲージメントイベントがなかったリファラルソースからのセッションの割合。
+* **チャネル** - ソースのチャネル（獲得、有料、またはその両方）。
 
 >[!TAB URL パフォーマンス分析 ]
 
