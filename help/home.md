@@ -1,7 +1,7 @@
 ---
 title: Adobe LLM Optimizer
 description: Adobe LLM Optimizerでブランドを強化しましょう。 メンションの追跡、インサイトの発見、AI 駆動検索の支配。 可視性を制御 – 今すぐ最適化を開始
-source-git-commit: 8debb7b04342f300a360c430768831c20c0d1015
+source-git-commit: 21af29c64d1d4b448e4ccc4bd7652b7cdb2e31a1
 workflow-type: tm+mt
 source-wordcount: '326'
 ht-degree: 3%
@@ -10,8 +10,6 @@ ht-degree: 3%
 
 
 # Adobe LLM Optimizer
-
->[!SLIDE](llm-optimizer-overview)
 
 Adobe LLM Optimizerは、ジェネレーティブエンジン最適化のジェネレーティブ AI ファーストのアプリケーションで、ブランドが AI 駆動の検索環境で可視性、精度、影響力を高めるのを支援するように設計されています。 AI が生成した回答でのブランドプレゼンスに関するインサイトを提供し、規範的なコンテンツのレコメンデーションを提供し、最適化の修正を自動化します。
 
