@@ -1,9 +1,9 @@
 ---
 title: クイックスタート
 description: Adobe LLM Optimizerの基本を学ぶ – ブランドをオンボーディングし、AI の可視性インサイトを解き放ち、検索パフォーマンスを向上させるダッシュボードを探索します。
-source-git-commit: a699f8f3c50f77d07f29cd354fd1ef8e6eed8ff9
+source-git-commit: 5e8efde82c10c9afa09d51ec9ef20fc006363210
 workflow-type: tm+mt
-source-wordcount: '933'
+source-wordcount: '931'
 ht-degree: 0%
 
 ---
@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # クイックスタート
 
-LLM Optimizer の使用を開始するには、以下の手順に従ってオンボーディングプロセスを完了する必要があります。 プロセスを完了すると、[LLM Optimizerのダッシュボードおよびその他の機能に完全にアクセスでき &#x200B;](/help/dashboards/dashboards-overview.md) ようになります。
+LLM Optimizer の使用を開始するには、以下の手順に従ってオンボーディングプロセスを完了する必要があります。 プロセスを完了すると、[LLM Optimizerのダッシュボードおよびその他の機能に完全にアクセスでき ](/help/dashboards/dashboards-overview.md) ようになります。
 
 ## オンボーディングの概要
 
@@ -32,25 +32,25 @@ AEM Cloud （Cloud Service、Managed Services、Edge Delivery Service）をご�
 
 ### AEM Cloud のお客様
 
-AEM Cloud のお客様は、[Experience Hub](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/experience-hub/experience-hub) の製品のお知らせカードを使用してLLM Optimizerを試すことができます。
+AEM Cloud のお客様は、[Experience Hub](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/experience-hub/experience-hub) の製品のお知らせカードを使用してLLM Optimizerを試すことができます。
 
 >[!NOTE]
->新しく追加されたプロンプトは、処理が完了するまで [&#x200B; ブランドプレゼンスダッシュボード &#x200B;](/help/dashboards/brand-presence.md) に表示されません。 AEM Cloud のお客様は、LLM Optimizerの無料体験版を使用できます。 200 を超えるプロンプトを使用するには、別のライセンス契約が必要です。 アクセスは「現状のまま」および「利用可能」ベースで提供され、Adobeによっていつでも変更、制限、削除される可能性があります。 詳しくは、アカウント担当者にお問い合わせください。
+>新しく追加されたプロンプトは、処理が完了するまで [ ブランドプレゼンスダッシュボード ](/help/dashboards/brand-presence.md) に表示されません。 AEM Cloud のお客様は、LLM Optimizerの無料体験版を使用できます。 200 を超えるプロンプトを使用するには、別のライセンス契約が必要です。 アクセスは「現状のまま」および「利用可能」ベースで提供され、Adobeによっていつでも変更、制限、削除される可能性があります。 詳しくは、アカウント担当者にお問い合わせください。
 
-![LLM Optimizer体験版 &#x200B;](/help/overview/assets/llm-trial.png)
+![LLM Optimizer体験版 ](/help/overview/assets/llm-trial.png)
 
 「**LLM Optimizerを試す**」ボタンをクリックすると、[https://llmo.now](https://llmo.now) にリダイレクトされます。 その後、IMS 経由でログインする必要があります。 ログインしたら、ドメインとブランド名を指定して、オンボーディングプロセスを開始します。
 
-![LLM Optimizer ドメイン &#x200B;](/help/overview/assets/domain.png)
+![LLM Optimizer ドメイン ](/help/overview/assets/domain.png)
 
 >[!NOTE]
 >指定したドメインは、組織のすべてのユーザーが使用するもので、変更できません。
 
 Brand Presence Analysis をトリガーするには、カテゴリ、トピック、プロンプトを指定する必要があります。
 
-![&#x200B; ブランドプレゼンス分析 &#x200B;](/help/overview/assets/bp-analysis.png)
+![ ブランドプレゼンス分析 ](/help/overview/assets/bp-analysis.png)
 
-さらに、トラフィック分析用に [CDN ログ転送 &#x200B;](#step-4) も設定する必要があります。 LLM Optimizerでは、AI の可視性を高めるために、代理店や紹介トラフィックからのブランドプレゼンスデータやインサイトを活用して、オポチュニティを特定し、規範的なレコメンデーションを提供する必要があります。
+さらに、トラフィック分析用に [CDN ログ転送 ](#step-4) も設定する必要があります。 LLM Optimizerでは、AI の可視性を高めるために、代理店や紹介トラフィックからのブランドプレゼンスデータやインサイトを活用して、オポチュニティを特定し、規範的なレコメンデーションを提供する必要があります。
 
 ### AEM Cloud 以外のお客様
 
@@ -58,9 +58,9 @@ Brand Presence Analysis をトリガーするには、カテゴリ、トピッ�
 
 ### 手順 2：カテゴリ、トピック、プロンプトをカスタマイズする
 
-Brand Presence Analysis をトリガーにし、ブランドの可視性に関するインサイトをダッシュボードに入力するには、カテゴリ、トピック、プロンプトをカスタマイズする必要があります。 この設定は、[&#x200B; 顧客設定ダッシュボード &#x200B;](/help/dashboards/customer-configuration.md) で作成します。
+Brand Presence Analysis をトリガーにし、ブランドの可視性に関するインサイトをダッシュボードに入力するには、カテゴリ、トピック、プロンプトをカスタマイズする必要があります。 この設定は、[ 顧客設定ダッシュボード ](/help/dashboards/customer-configuration.md) で作成します。
 
-![&#x200B; 顧客設定ダッシュボード &#x200B;](/help/overview/assets/prompt-creation.png)
+![ 顧客設定ダッシュボード ](/help/overview/assets/prompt-creation.png)
 
 このダッシュボードから、次の操作を実行できます。
 
@@ -68,14 +68,14 @@ Brand Presence Analysis をトリガーにし、ブランドの可視性に関�
 * 追跡する **カスタムトピック** またはサブトピックを入力します。 トピックは、ドメインに関連付けられた大量の非ブランドキーワードに結び付けられた特定のテーマにすることができます。
 * **プロンプト** を作成し、特定のクエリでの表示を監視します。 プロンプトは、ベースライン表示を提供するクエリ（ブランド化および非ブランド化）です。 指定したカテゴリとトピックに基づいて、自動的に生成されるプロンプトの数は制限されています。
 * ブランドのすべてのメンションが確実に取り込まれ、反映されるように、メンション **エイリアス** を定義します。
-* 競合他社を正確に追跡するための **競合他社のエイリアス** を定義します。
+* **その他のエイリアス** を定義して、他のブランドを正確に追跡します。
 
 >[!NOTE]
 >LLM に尋ねる正確なプロンプトは、LLM によって公開されていないため、公開されていません。
 
 >[!NOTE]
 >
-> カテゴリ、トピック、プロンプト、および競合製品の設定方法の詳細については、[&#x200B; カテゴリ、トピック、プロンプト、および競合製品を構成するためのベスト プラクティス &#x200B;](/help/overview/best-practices-topics-prompts.md) ページを参照してください。
+> カテゴリ、トピック、プロンプトの設定方法について詳しくは、[ カテゴリ、トピック、プロンプトを設定するためのベストプラクティス ](/help/overview/best-practices-topics-prompts.md) ページを参照してください。
 
 ### 手順 3：インサイトの自動事前設定
 
@@ -83,9 +83,9 @@ Brand Presence Analysis をトリガーにし、ブランドの可視性に関�
 
 ### 手順 4:CDN ログ転送の情報を指定する {#step-4}
 
-エージェンティックトラフィックおよびリファラルトラフィックインサイトのロックを解除するには、CDN ログ転送用の情報を指定する必要があります。 「[CDN 設定 &#x200B;](/help/dashboards/customer-configuration.md)」タブに移動し、「**CDN をオンボード**」をクリックして、**顧客設定ダッシュボード** から追加できます。
+エージェンティックトラフィックおよびリファラルトラフィックインサイトのロックを解除するには、CDN ログ転送用の情報を指定する必要があります。 「[CDN 設定 ](/help/dashboards/customer-configuration.md)」タブに移動し、「**CDN をオンボード**」をクリックして、**顧客設定ダッシュボード** から追加できます。
 
-![&#x200B; 顧客設定 CDN](/help/overview/assets/cc-cdn.png)
+![ 顧客設定 CDN](/help/overview/assets/cc-cdn.png)
 
 または、上記の例のように CDN プロバイダーが事前に追加されていない場合、Agentic およびリファラルトラフィックダッシュボードに初めてアクセスする際に、CDN ログ転送を追加するように求められます。 詳しくは、次を参照してください。
 
@@ -96,9 +96,9 @@ Brand Presence Analysis をトリガーにし、ブランドの可視性に関�
 
 CDN ログ転送の情報を指定すると、次の操作を実行できます。
 
-* [&#x200B; ブランドプレゼンス &#x200B;](/help/dashboards/brand-presence.md) ダッシュボードを表示し、可視性スコアを表示し、競合他社に対するパフォーマンスを追跡します。
-* CDN ログのフォーワディングが設定されている場合は、[Agentic](/help/dashboards/agentic-traffic.md) および [&#x200B; リファラルトラフィック &#x200B;](/help/dashboards/referral-traffic.md) ダッシュボードを調べます。
-* [&#x200B; 商談 &#x200B;](/help/dashboards/opportunities.md) を使用して、コンテンツと技術的な改善を特定します。
+* [ ブランドプレゼンス ](/help/dashboards/brand-presence.md) ダッシュボードを表示し、可視性スコアを表示し、他のブランドに対するパフォーマンスを追跡します。
+* CDN ログのフォーワディングが設定されている場合は、[Agentic](/help/dashboards/agentic-traffic.md) および [ リファラルトラフィック ](/help/dashboards/referral-traffic.md) ダッシュボードを調べます。
+* [ 商談 ](/help/dashboards/opportunities.md) を使用して、コンテンツと技術的な改善を特定します。
 * データを書き出してチームで共同作業したり、同僚に製品の使用を勧めたりします。
 
-最後に、LLM Optimizerの機能を完全に理解するには、使用可能なすべての [&#x200B; ダッシュボード &#x200B;](/help/dashboards/dashboards-overview.md) を参照する必要があります。
+最後に、LLM Optimizerの機能を完全に理解するには、使用可能なすべての [ ダッシュボード ](/help/dashboards/dashboards-overview.md) を参照する必要があります。
