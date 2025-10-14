@@ -1,9 +1,9 @@
 ---
 title: リファラルトラフィック
 description: リファラルトラフィックダッシュボードを使用して、外部プラットフォーム、AI 引用、リファラルリンクから訪問者がサイトに到達する方法を確認する方法について説明します。
-source-git-commit: a699f8f3c50f77d07f29cd354fd1ef8e6eed8ff9
+source-git-commit: a6d050516e681094d97b25fcdc59e9ed4e60e104
 workflow-type: tm+mt
-source-wordcount: '632'
+source-wordcount: '599'
 ht-degree: 0%
 
 ---
@@ -11,9 +11,9 @@ ht-degree: 0%
 
 # リファラルトラフィック
 
-リファラルトラフィックは、外部プラットフォーム、AI 引用、リファラルリンクから訪問者がお客様のサイトに到達する方法を示します。 外部の Web サイトやプラットフォームからのトラフィックソース、リファラルパターン、コンバージョン指標を追跡および分析します。 これにより、最も関与の多いトラフィックを推進するソース、地域、ページを理解できます。 データは、CDN ログまたは [AEM運用テレメトリ &#x200B;](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/sites/operational-telemetry-for-aem-as-a-cloud-service) のいずれかから取得されます。 これらのソースは両方ともプライバシーを保持するものであり、個人ユーザーデータを取り込むことはありません。 また、表示されるデータを絞り込むのに役立つ、カスタマイズ可能なフィルターもあります。
+リファラルトラフィックは、外部プラットフォーム、AI 引用、リファラルリンクから訪問者がお客様のサイトに到達する方法を示します。 外部の Web サイトやプラットフォームからのトラフィックソース、リファラルパターン、コンバージョン指標を追跡および分析します。 これにより、最も関与の多いトラフィックを推進するソース、地域、ページを理解できます。 <!--Data is sourced from the CDN logs, a privacy-preserving source that does not capture personal user data.--> 表示されるデータを絞り込むのに役立つ、カスタマイズ可能なフィルターもあります。
 
-![&#x200B; リファラルページ &#x200B;](/help/dashboards/assets/referral-traffic.png)
+![ リファラルページ ](/help/dashboards/assets/referral-traffic.png)
 
 このページの詳細は次のとおりです。
 
@@ -25,15 +25,15 @@ ht-degree: 0%
 
 ## 設定 {#setup}
 
-初回ログイン時に、リファラルトラフィックダッシュボードが空白で表示される場合があります。 データを表示するには、「設定に移動 **を選択してリファラルトラフィックプロバイダーを設定する必要があ** ます。
+初回ログイン時に、リファラルトラフィックダッシュボードが空白で表示される場合があります。 データを表示するには、「[ 設定に移動 ](/help/dashboards/customer-configuration.md#cdn-configuration)」を選択して **CDN ログ転送** を設定する必要があります。
 
-![&#x200B; リファラルの設定 &#x200B;](/help/dashboards/assets/referral-setup1.png)
+![ リファラルの設定 ](/help/dashboards/assets/referral-setup1.png)
 
 <!--- 1. Select your Source (either CDN logs or AEM Operational Telemetry).
 2. Enter a primary contact email.
 3. Click **Request activation** to enable data ingestion. Hiding this until confirmation from PM-->
 
-リファラルトラフィックプロバイダーを選択すると、ダッシュボードにリファラルトラフィック指標が表示されます。
+アクティブ化すると、ダッシュボードにリファラルトラフィック指標が表示されます。
 
 ## フィルター {#filters}
 
@@ -56,7 +56,7 @@ ht-degree: 0%
 * **同意率** – 同意プロンプトを受け入れる訪問者の割合。
 * **バウンス率** - エンゲージメントイベントがなかったリファラルソースのセッションの割合。
 
-![&#x200B; リファラルページ &#x200B;](/help/dashboards/assets/referral-traffic.png)
+![ リファラルページ ](/help/dashboards/assets/referral-traffic.png)
 
 上記の全体的なパフォーマンス指標に加えて、**上位地域** パネルでは、トラフィックを地域別に分類します。 一方、**上位のリファラルソース** パネルには、最も多くの訪問を促進するプラットフォームが表示されます。 指標のトレンド指標は、前期と比較して、これらの値が時間の経過とともにどのように変化しているかを示します。
 
@@ -70,7 +70,7 @@ The Top Referral URLs list surfaces your site’s most visited pages from referr
 
 リファラルソースの詳細および URL パフォーマンス分析テーブルは、トラフィック量と品質の両方を評価するのに役立ちます。 詳しくは、以下の各タブをクリックしてください。
 
-![&#x200B; リファラルトラフィックの詳細 &#x200B;](/help/dashboards/assets/traffic-details.png)
+![ リファラルトラフィックの詳細 ](/help/dashboards/assets/traffic-details.png)
 
 >[!BEGINTABS]
 
