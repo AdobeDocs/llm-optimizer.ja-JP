@@ -1,7 +1,8 @@
 ---
 title: エージェンティック トラフィック
 description: Agentic トラフィックダッシュボードを使用して、AI エージェントによるサイトの操作を確認する方法を説明します。
-source-git-commit: a6d050516e681094d97b25fcdc59e9ed4e60e104
+feature: Agentic Traffic
+source-git-commit: c6e37395362262eb5fe8366473e76086e36d77e9
 workflow-type: tm+mt
 source-wordcount: '1100'
 ht-degree: 0%
@@ -13,7 +14,7 @@ ht-degree: 0%
 
 エージェンティックトラフィックダッシュボードは、AI エージェント（クローラーやチャットボット）がサイトとどのようにやり取りするかを示します。 このビューを使用すると、リクエストの合計数と一般的なパフォーマンス関連指標を追跡できます。 また、マーケット、カテゴリ、ページおよびエージェントをまたいだトラフィックの分布を確認することもできます。 このダッシュボードで使用されるデータは CDN ログから取得されるので、指標を表示するには **CDN ログ転送** を設定する必要があります。 また、表示されるデータを絞り込むのに役立つ、カスタマイズ可能なフィルターもあります。
 
-![&#x200B; トラフィック配分 &#x200B;](/help/dashboards/assets/ag-main.png)
+![ トラフィック配分 ](/help/dashboards/assets/ag-main.png)
 
 このページの詳細は次のとおりです。
 
@@ -28,11 +29,11 @@ ht-degree: 0%
 
 **CDN ログ転送** がないと、Agentic トラフィックダッシュボードは空白になります。 エージェントのインタラクションを表示するには、**CDN ログ転送** を設定する必要があります。  初回ログイン時には、次の画像に示すメッセージが表示されます。
 
-![CDN 設定 &#x200B;](/help/dashboards/assets/ag-log-forward1.png)
+![CDN 設定 ](/help/dashboards/assets/ag-log-forward1.png)
 
-**設定に移動** を選択すると、自動的に **顧客設定ダッシュボード** の [CDN 設定 &#x200B;](/help/dashboards/customer-configuration.md) タブに移動します。
+**設定に移動** を選択すると、自動的に **顧客設定ダッシュボード** の [CDN 設定 ](/help/dashboards/customer-configuration.md) タブに移動します。
 
-![CDN セットアップオンボード &#x200B;](/help/dashboards/assets/ag-log-forward2.png)
+![CDN セットアップオンボード ](/help/dashboards/assets/ag-log-forward2.png)
 
 このタブで、「**オンボード CDN**」を選択します。 CDN プロバイダーウィンドウが表示されます。
 
@@ -63,7 +64,7 @@ ht-degree: 0%
 
 トラフィック配分ビューには、エージェントトラフィックがマーケット、カテゴリおよびページタイプをまたいでどのように分散しているかが表示されます。 そのため、このビューを使用すると、サイトを操作する際に AI エージェントが最も頻繁にアクセスする地域、製品領域、またはコンテンツ形式を判断できます。
 
-![&#x200B; トラフィック配分 &#x200B;](/help/dashboards/assets/ag-main.png)
+![ トラフィック配分 ](/help/dashboards/assets/ag-main.png)
 
 ページの上部には、次の 3 つの主要指標について注意する必要があります。
 
@@ -77,19 +78,19 @@ ht-degree: 0%
 
 エージェンティックトラフィックトレンド グラフを使用して、成功、失敗および全体的なヒットの週別合計を追跡します。 そのため、エージェントのアクティビティとパフォーマンスの変化を経時的に監視できます。 また、グラフに沿ってマウスを移動して、週次時間枠全体でのデータの変化を確認することもできます。
 
-![Agentic トラフィックのトレンド &#x200B;](/help/dashboards/assets/ag-trends.png)
+![Agentic トラフィックのトレンド ](/help/dashboards/assets/ag-trends.png)
 
 ## 上下のムーバー {#top-bottom-movers}
 
 上位および下位の Movers ビューでは、エージェンティックトラフィックの週別の変化が最も大きい URL がハイライト表示されます。つまり、コンテンツにアクセスする AI システムからの訪問やヒットです。 トップムーバーは、表示またはエンゲージメントを向上させるページを表示し、ボトムムーバーは、最も急降下する URL を表示します。 これにより、どのコンテンツが上昇傾向にあり、注意が必要か、AI 駆動の検出パターンが変化しているかをすばやく特定できます。
 
-![&#x200B; 上下のムーバー &#x200B;](/help/dashboards/assets/movers.png)
+![ 上下のムーバー ](/help/dashboards/assets/movers.png)
 
 ## ユーザーエージェントと URL パフォーマンス分析 {#user-url-performance}
 
 ユーザーエージェント ビューと URL パフォーマンス分析ビューでは、クローラーとチャットボットがサイトとどのようにやり取りするかについての詳細なデータ分類を提供します。 詳細については、以下のタブをクリックしてください。
 
-![&#x200B; ユーザーエージェントと URL パフォーマンス分析 &#x200B;](/help/dashboards/assets/user-agent.png)
+![ ユーザーエージェントと URL パフォーマンス分析 ](/help/dashboards/assets/user-agent.png)
 
 >[!BEGINTABS]
 
@@ -115,7 +116,7 @@ URL パフォーマンス分析テーブルには、個々の URL の詳細ビ�
 
 URL パフォーマンス テーブルには、URL にクイックアクセスするための検索フィールドがあります。 各行の最後にある情報アイコンをクリックして、各 URL の追加の詳細を表示することもできます。
 
-![URL の詳細 &#x200B;](/help/dashboards/assets/details.png)
+![URL の詳細 ](/help/dashboards/assets/details.png)
 
 URL の詳細ビューは、ページのパフォーマンスの全体像を提供し、ページの引用頻度、ページが言及される AI 応答の感情、ページが表示されるトピックとプロンプト、エージェンティックトラフィックとリファラルトラフィックの経時的なトレンドを示します。
 

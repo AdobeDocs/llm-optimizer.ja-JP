@@ -1,7 +1,8 @@
 ---
 title: カテゴリ、トピック、プロンプトなどのベストプラクティス
 description: カスタマイズされたブランド監視と戦略的コンテンツ分析のために、競合他社を含めて追跡するカテゴリ、トピック、プロンプト、その他のブランドを設定して、LLM インサイトを最適化します。
-source-git-commit: 06c09c4690488d9b29d0626521fb53bf7d70d3a8
+feature: Best Practices, Customer Configuration
+source-git-commit: c6e37395362262eb5fe8366473e76086e36d77e9
 workflow-type: tm+mt
 source-wordcount: '1014'
 ht-degree: 0%
@@ -15,11 +16,11 @@ ht-degree: 0%
 
 これは重要な最初のステップです。 ここで決定する内容によって、ビジネスコンテキストに合わせた情報のカスタマイズ方法が決まります。 今後、履歴データがリセットされる際にカテゴリに変更が加えられた場合。
 
-[[!UICONTROL &#x200B; 顧客設定 &#x200B;]](/help/dashboards/customer-configuration.md) ダッシュボードでは、LLM Optimizer プラットフォーム内でブランドを監視および分析する方法を定義します。 ダッシュボードの使用方法については、[[!UICONTROL &#x200B; 顧客設定 &#x200B;]](/help/dashboards/customer-configuration.md) を参照してください。
+[[!UICONTROL  顧客設定 ]](/help/dashboards/customer-configuration.md) ダッシュボードでは、LLM Optimizer プラットフォーム内でブランドを監視および分析する方法を定義します。 ダッシュボードの使用方法については、[[!UICONTROL  顧客設定 ]](/help/dashboards/customer-configuration.md) を参照してください。
 
-![&#x200B; 顧客設定ウィンドウ &#x200B;](/help/assets/best-practices/customer-configuration-best-practices.png)
+![ 顧客設定ウィンドウ ](/help/assets/best-practices/customer-configuration-best-practices.png)
 
-[!UICONTROL &#x200B; 顧客設定 &#x200B;] ダッシュボードでは、カテゴリ（事業部門や製品ラインなど）のカスタマイズ、他のブランドの追跡、ブランド表記エイリアスの追加を行い、プロンプトをまたいでブランドのすべてのバリエーションを取り込むことができます。 この設定により、platform はビジネスコンテキストに合わせてインサイトを調整し、正確な表示、トラフィックおよび商談分析を可能にします。
+[!UICONTROL  顧客設定 ] ダッシュボードでは、カテゴリ（事業部門や製品ラインなど）のカスタマイズ、他のブランドの追跡、ブランド表記エイリアスの追加を行い、プロンプトをまたいでブランドのすべてのバリエーションを取り込むことができます。 この設定により、platform はビジネスコンテキストに合わせてインサイトを調整し、正確な表示、トラフィックおよび商談分析を可能にします。
 
 ## カテゴリのベストプラクティス
 
@@ -45,7 +46,7 @@ ht-degree: 0%
 * *web/コンテンツの所有者* の場合は、**URL_DIR** アプローチを選択します。
 * *マーチャンダイジング/オファーマネージャー* の場合は、**製品/サービスカテゴリ** アプローチを選択します。
 
-![LLM Optimizerでのカテゴリの追加 &#x200B;](/help/assets/best-practices/add-category.png)
+![LLM Optimizerでのカテゴリの追加 ](/help/assets/best-practices/add-category.png)
 
 >[!IMPORTANT]
 >
@@ -81,7 +82,7 @@ ht-degree: 0%
 * サポート連絡先
 * 企業/ニュース（本当に必要な場合）
 
-![LLM Optimizerでのトピックの追加 &#x200B;](/help/assets/best-practices/add-topic.png)
+![LLM Optimizerでのトピックの追加 ](/help/assets/best-practices/add-topic.png)
 
 リストを作成する際は、次の点を考慮してください。
 
@@ -132,6 +133,6 @@ ht-degree: 0%
 
 ## 詳細情報
 
-* [&#x200B; 顧客設定ダッシュボード &#x200B;](/help/dashboards/customer-configuration.md) では、カテゴリ、トピック、プロンプトおよびその他のトラッキングを設定できます。
-* [LLM Optimizerのベストプラクティス &#x200B;](/help/tutorials/best-practices.md)LLM の最適化に関するベストプラクティスを説明します
+* [ 顧客設定ダッシュボード ](/help/dashboards/customer-configuration.md) では、カテゴリ、トピック、プロンプトおよびその他のトラッキングを設定できます。
+* [LLM Optimizerのベストプラクティス ](/help/tutorials/best-practices.md)LLM の最適化に関するベストプラクティスを説明します
 
