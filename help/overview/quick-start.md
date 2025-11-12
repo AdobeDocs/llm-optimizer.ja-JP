@@ -33,7 +33,7 @@ AEM Cloud （Cloud Service、Managed Services、Edge Delivery Service）をご�
 
 ### AEM Cloud のお客様
 
-AEM Cloud のお客様は、[Experience Hub](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/experience-hub/experience-hub) の製品のお知らせカードを使用してLLM Optimizerを試すことができます。
+AEM Cloud のお客様は、[Experience Hub](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/experience-hub/experience-hub) の製品のお知らせカードを使用してLLM Optimizerを試すことができます。
 
 >[!NOTE]
 >新しく追加されたプロンプトは、処理が完了するまで [&#x200B; ブランドプレゼンスダッシュボード &#x200B;](/help/dashboards/brand-presence.md) に表示されません。 AEM Cloud のお客様は、LLM Optimizerの無料体験版を使用できます。 200 を超えるプロンプトを使用するには、別のライセンス契約が必要です。 アクセスは「現状のまま」および「利用可能」ベースで提供され、Adobeによっていつでも変更、制限、削除される可能性があります。 詳しくは、アカウント担当者にお問い合わせください。
