@@ -12,7 +12,7 @@ ht-degree: 0%
 
 # クイックスタート
 
-LLM Optimizer の使用を開始するには、以下の手順に従ってオンボーディングプロセスを完了する必要があります。 プロセスを完了すると、[LLM Optimizerのダッシュボードおよびその他の機能に完全にアクセスでき ](/help/dashboards/dashboards-overview.md) ようになります。
+LLM Optimizer の使用を開始するには、以下の手順に従ってオンボーディングプロセスを完了する必要があります。 プロセスを完了すると、[LLM Optimizerのダッシュボードおよびその他の機能に完全にアクセスでき &#x200B;](/help/dashboards/dashboards-overview.md) ようになります。
 
 ## オンボーディングの概要
 
@@ -47,13 +47,13 @@ AEM Cloud （Cloud Service、Managed Services、Edge Delivery Service）をご�
 AEM Cloud のお客様は、[Experience Hub](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/experience-hub/experience-hub) の製品のお知らせカードを使用してLLM Optimizerを試すことができます。
 
 >[!NOTE]
->新しく追加されたプロンプトは、処理が完了するまで [ ブランドプレゼンスダッシュボード ](/help/dashboards/brand-presence.md) に表示されません。 AEM Cloud のお客様は、LLM Optimizerの無料体験版を使用できます。 200 を超えるプロンプトを使用するには、別のライセンス契約が必要です。 アクセスは「現状のまま」および「利用可能」ベースで提供され、Adobeによっていつでも変更、制限、削除される可能性があります。 詳しくは、アカウント担当者にお問い合わせください。
+>新しく追加されたプロンプトは、処理が完了するまで [&#x200B; ブランドプレゼンスダッシュボード &#x200B;](/help/dashboards/brand-presence.md) に表示されません。 AEM Cloud のお客様は、LLM Optimizerの無料体験版を使用できます。 200 を超えるプロンプトを使用するには、別のライセンス契約が必要です。 アクセスは「現状のまま」および「利用可能」ベースで提供され、Adobeによっていつでも変更、制限、削除される可能性があります。 詳しくは、アカウント担当者にお問い合わせください。
 
-![LLM Optimizer体験版 ](/help/overview/assets/llm-trial.png)
+![LLM Optimizer体験版 &#x200B;](/help/overview/assets/llm-trial.png)
 
 「**LLM Optimizerを試す**」ボタンをクリックすると、[https://llmo.now](https://llmo.now) にリダイレクトされます。 その後、IMS 経由でログインする必要があります。 ログインしたら、ドメインとブランド名を指定して、オンボーディングプロセスを開始します。
 
-![LLM Optimizer ドメイン ](/help/overview/assets/domain.png)
+![LLM Optimizer ドメイン &#x200B;](/help/overview/assets/domain.png)
 
 >[!NOTE]
 >指定したドメインは、組織のすべてのユーザーが使用するもので、変更できません。
@@ -62,7 +62,7 @@ AEM Cloud のお客様は、[Experience Hub](https://experienceleague.adobe.com/
 
 <!--![Brand Presence Analysis](/help/overview/assets/bp-analysis.png)-->
 
-さらに、トラフィック分析用に [CDN ログ転送 ](#step-4) も設定する必要があります。 LLM Optimizerでは、AI の可視性を高めるために、代理店や紹介トラフィックからのブランドプレゼンスデータやインサイトを活用して、オポチュニティを特定し、規範的なレコメンデーションを提供する必要があります。
+さらに、トラフィック分析用に [CDN ログ転送 &#x200B;](#step-4) も設定する必要があります。 LLM Optimizerでは、AI の可視性を高めるために、代理店や紹介トラフィックからのブランドプレゼンスデータやインサイトを活用して、オポチュニティを特定し、規範的なレコメンデーションを提供する必要があります。
 
 ### AEM Cloud 以外のお客様
 
@@ -70,9 +70,9 @@ AEM Cloud のお客様は、[Experience Hub](https://experienceleague.adobe.com/
 
 ### 手順 2：カテゴリ、トピック、プロンプトをカスタマイズする
 
-サイトがオンボーディングされると、オンボーディングフェーズで自動的に生成された小さなプロンプトのセットに基づいて、ブランドプレゼンス分析を表示できます。 今後、ブランドのカテゴリ、トピックおよびプロンプトをカスタマイズできます。 この設定は、[ 顧客設定ダッシュボード ](/help/dashboards/customer-configuration.md) で作成します。
+サイトがオンボーディングされると、オンボーディングフェーズで自動的に生成された小さなプロンプトのセットに基づいて、ブランドプレゼンス分析を表示できます。 今後、ブランドのカテゴリ、トピックおよびプロンプトをカスタマイズできます。 この設定は、[&#x200B; 顧客設定ダッシュボード &#x200B;](/help/dashboards/customer-configuration.md) で作成します。
 
-![ 顧客設定ダッシュボード ](/help/overview/assets/prompt-creation.png)
+![&#x200B; 顧客設定ダッシュボード &#x200B;](/help/overview/assets/prompt-creation.png)
 
 このダッシュボードから、次の操作を実行できます。
 
@@ -87,7 +87,7 @@ AEM Cloud のお客様は、[Experience Hub](https://experienceleague.adobe.com/
 
 >[!NOTE]
 >
-> カテゴリ、トピック、プロンプトの設定方法について詳しくは、[ カテゴリ、トピック、プロンプトを設定するためのベストプラクティス ](/help/overview/best-practices-topics-prompts.md) ページを参照してください。
+> カテゴリ、トピック、プロンプトの設定方法について詳しくは、[&#x200B; カテゴリ、トピック、プロンプトを設定するためのベストプラクティス &#x200B;](/help/overview/best-practices-topics-prompts.md) ページを参照してください。
 
 ### 手順 3：ブランドプレゼンスインサイト
 
@@ -95,9 +95,9 @@ AEM Cloud のお客様は、[Experience Hub](https://experienceleague.adobe.com/
 
 ### 手順 4:CDN ログ転送の情報を指定する {#step-4}
 
-エージェンティックトラフィックおよびリファラルトラフィックインサイトのロックを解除するには、CDN ログ転送用の情報を指定する必要があります。 「[CDN 設定 ](/help/dashboards/customer-configuration.md#cdn-configuration)」タブに移動し、「**CDN をオンボード**」をクリックして、**顧客設定ダッシュボード** から追加できます。
+エージェンティックトラフィックおよびリファラルトラフィックインサイトのロックを解除するには、CDN ログ転送用の情報を指定する必要があります。 「[CDN 設定 &#x200B;](/help/dashboards/customer-configuration.md#cdn-configuration)」タブに移動し、「**CDN をオンボード**」をクリックして、**顧客設定ダッシュボード** から追加できます。
 
-![ 顧客設定 CDN](/help/overview/assets/cc-cdn.png)
+![&#x200B; 顧客設定 CDN](/help/overview/assets/cc-cdn.png)
 
 または、事前に CDN プロバイダーが追加されていない場合（前述のとおり）、Agentic およびリファラルトラフィックダッシュボードに初めてアクセスする際に、CDN ログ転送を追加するように求められます。 詳しくは、次を参照してください。
 
@@ -108,9 +108,9 @@ AEM Cloud のお客様は、[Experience Hub](https://experienceleague.adobe.com/
 
 CDN ログ転送の情報を指定すると、次の操作を実行できます。
 
-* [ ブランドプレゼンス ](/help/dashboards/brand-presence.md) ダッシュボードを表示し、可視性スコアを表示し、他のブランドに対するパフォーマンスを追跡します。
-* CDN ログのフォーワディングが設定されている場合は、[Agentic](/help/dashboards/agentic-traffic.md) および [ リファラルトラフィック ](/help/dashboards/referral-traffic.md) ダッシュボードを調べます。
-* [ 商談 ](/help/dashboards/opportunities.md) を使用して、コンテンツと技術的な改善を特定します。
+* [&#x200B; ブランドプレゼンス &#x200B;](/help/dashboards/brand-presence.md) ダッシュボードを表示し、可視性スコアを表示し、他のブランドに対するパフォーマンスを追跡します。
+* CDN ログのフォーワディングが設定されている場合は、[Agentic](/help/dashboards/agentic-traffic.md) および [&#x200B; リファラルトラフィック &#x200B;](/help/dashboards/referral-traffic.md) ダッシュボードを調べます。
+* [&#x200B; 商談 &#x200B;](/help/dashboards/opportunities.md) を使用して、コンテンツと技術的な改善を特定します。
 * データを書き出してチームで共同作業したり、同僚に製品の使用を勧めたりします。
 
-最後に、LLM Optimizerの機能を完全に理解するには、使用可能なすべての [ ダッシュボード ](/help/dashboards/dashboards-overview.md) を参照する必要があります。
+最後に、LLM Optimizerの機能を完全に理解するには、使用可能なすべての [&#x200B; ダッシュボード &#x200B;](/help/dashboards/dashboards-overview.md) を参照する必要があります。
