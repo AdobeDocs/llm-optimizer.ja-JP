@@ -40,7 +40,7 @@ Edgeでの最適化は、マーケティング、SEO、コンテンツ、デジ�
 
 ## Edgeで最適化が行われているオポチュニティはどれですか。
 
-Edgeの最適化では、効率的な web エクスペリエンスを実現するオポチュニティがサポートされています。 各商談について詳しくは、「商談 [ の節を参照し ](/help/dashboards/opportunities.md) ください。
+Edgeの最適化では、効率的な web エクスペリエンスを実現するオポチュニティがサポートされています。 各商談について詳しくは、「商談 [&#x200B; の節を参照し &#x200B;](/help/dashboards/opportunities.md) ください。
 
 ## オンボーディング
 
@@ -388,7 +388,7 @@ data:
 
 ![Fastly VCL](/help/assets/optimize-at-edge/fastly-vcl.png)
 
-![VCL スニペットの追加 ](/help/assets/optimize-at-edge/add-vcl-snippets.png)
+![VCL スニペットの追加 &#x200B;](/help/assets/optimize-at-edge/add-vcl-snippets.png)
 
 **vcl_recv スニペット**
 
@@ -457,7 +457,7 @@ if (!req.http.x-tokowaka-config && req.http.x-tokowaka-request == "failover") {
 
 #### 追加ツール
 
-あなたのウェブページは可能ですか？ [Adobe LLM Optimizer：あなたの Web ページはキャッシュ可能ですか？Chrome拡張機能 ](https://chromewebstore.google.com/detail/adobe-llm-optimizer-is-yo/jbjngahjjdgonbeinjlepfamjdmdcbcc) 使用すると、Web ページコンテンツの LLM がアクセスできる量と、非表示のままの内容を正確に確認できます。 無料のスタンドアロン診断ツールとして設計されているため、製品ライセンスやセットアップは必要ありません。
+あなたのウェブページは可能ですか？ [Adobe LLM Optimizer：あなたの Web ページはキャッシュ可能ですか？Chrome拡張機能 &#x200B;](https://chromewebstore.google.com/detail/adobe-llm-optimizer-is-yo/jbjngahjjdgonbeinjlepfamjdmdcbcc) 使用すると、Web ページコンテンツの LLM がアクセスできる量と、非表示のままの内容を正確に確認できます。 無料のスタンドアロン診断ツールとして設計されているため、製品ライセンスやセットアップは必要ありません。
 
 1 回のクリックで、任意のサイトの機械可読性を評価し、AI エージェントが表示する内容と人間が表示する内容を横に並べて比較し、LLM Optimizerを使用して復元できるコンテンツの量を見積もることができます。 [AI はあなたのウェブサイトを読むことができますか？](https://business.adobe.com/blog/introducing-the-llm-optimizer-chrome-extension) を参照してください。
 
@@ -497,19 +497,19 @@ if (!req.http.x-tokowaka-config && req.http.x-tokowaka-request == "failover") {
 
 デプロイでは、最適化されたエクスペリエンスをエッジから AI エージェントに提供できるように、選択した提案を公開します。 CDN が完全にルーティングされると、ドメイン内のすべてのページは、通常、数分以内に新しい変更で有効になります。 ルーティングが選択パスのみに設定されている場合、許可リストに加えるされたページのみが最適化されて有効になります。
 
-![ デプロイ ](/help/assets/optimize-at-edge/deploy.png)
+![&#x200B; デプロイ &#x200B;](/help/assets/optimize-at-edge/deploy.png)
 
 ### ライブで表示
 
 ライブで表示を使用すると、最適化がライブであり、エージェンティックトラフィックに対して期待どおりに動作していることを確認できます。このような表示は通常、アクセスが困難です。 ユーザーは、「固定提案」の下でライブページを表示できます。これにより、AI エージェントに表示されるようにページがレンダリングされます。
 
-![ ライブで表示 ](/help/assets/optimize-at-edge/view-live.png)
+![&#x200B; ライブで表示 &#x200B;](/help/assets/optimize-at-edge/view-live.png)
 
 ### ロールバック
 
 ロールバックを実行すると、以前にデプロイした最適化が安全に元に戻ります。 通常、ページの AI 専用バージョンは数分以内に以前の状態に戻るので、必要に応じて最適化を試すことができます。
 
-![ ロールバック ](/help/assets/optimize-at-edge/rollback.png)
+![&#x200B; ロールバック &#x200B;](/help/assets/optimize-at-edge/rollback.png)
 
 ## よくある質問
 
