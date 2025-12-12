@@ -459,7 +459,7 @@ if (!req.http.x-tokowaka-config && req.http.x-tokowaka-request == "failover") {
 
 あなたのウェブページは可能ですか？ [Adobe LLM Optimizer：あなたの Web ページはキャッシュ可能ですか？Chrome拡張機能 &#x200B;](https://chromewebstore.google.com/detail/adobe-llm-optimizer-is-yo/jbjngahjjdgonbeinjlepfamjdmdcbcc) 使用すると、Web ページコンテンツの LLM がアクセスできる量と、非表示のままの内容を正確に確認できます。 無料のスタンドアロン診断ツールとして設計されているため、製品ライセンスやセットアップは必要ありません。
 
-1 回のクリックで、任意のサイトの機械可読性を評価し、AI エージェントが表示する内容と人間が表示する内容を横に並べて比較し、LLM Optimizerを使用して復元できるコンテンツの量を見積もることができます。 [AI はあなたのウェブサイトを読むことができますか？](https://business.adobe.com/blog/introducing-the-llm-optimizer-chrome-extension) を参照してください。
+1 回のクリックで、任意のサイトの機械可読性を評価し、AI エージェントが表示する内容と人間が表示する内容を横に並べて比較し、LLM Optimizerを使用して復元できるコンテンツの量を見積もることができます。 [AI はあなたのウェブサイトを読むことができますか？](https://business.adobe.com/jp/blog/introducing-the-llm-optimizer-chrome-extension) を参照してください。
 
 ### LLM の見出しの最適化
 
