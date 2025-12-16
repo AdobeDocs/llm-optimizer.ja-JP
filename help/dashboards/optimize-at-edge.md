@@ -2,9 +2,9 @@
 title: Edgeで最適化
 description: オーサリングを変更せずに、CDN エッジでLLM Optimizerで最適化を配信する方法を説明します。
 feature: Opportunities
-source-git-commit: 522abddcabaf02ce86fb4d7978ef7fa4d6eb0358
+source-git-commit: 39658a057fd4d67f74dc286e1687e384133ac653
 workflow-type: tm+mt
-source-wordcount: '2218'
+source-wordcount: '2224'
 ht-degree: 1%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 1%
 
 Edgeでの最適化は、LLM ユーザーエージェントに対して AI に適した変更を提供する、LLM Optimizerのエッジベースのデプロイメント機能です。 現在のコンテキストでは、「Edge」は、最適化が CDN レイヤーで適用されることを意味します。 CDN レイヤーで最適化が行われるので、元のCMSが変わらないように、Content Management System （CMS）でのオーサリング変更は必要ありません。 この分離により、既存の公開ワークフローを変更することなく、LLM の可視性を向上させることができます。 これはエージェンティックトラフィックのみをターゲットにし、人間のユーザーや SEO ボットには影響しません。 LLM Optimizerがページを最適化する機会を検出すると、ユーザーは CDN エッジに直接修正をデプロイできます。
 
-Edgeでの最適化は、複雑なエンジニアリング作業を必要とする従来の修正に代わる、より迅速で無駄のない方法です。 前述のように、1 回限りの設定を完了すると、変更を適用するためにプラットフォームの変更や長い開発サイクルが必要になることはありません。 開発者のエンゲージメントを必要とせずに、改善点を数分で公開できます。 これは、AI エージェントのために web サイトを最適化するための、リスクの低いコードなしの方法です。
+Edgeでの最適化は、複雑なエンジニアリング作業を必要とする従来の修正に代わる、より迅速で無駄のない方法です。 前述のように、1 回限りの設定を完了すると、変更を適用するためにプラットフォームの変更や長い開発サイクルが必要になることはありません。 開発者のエンゲージメントを必要とせずに、改善点を数分で公開できます。 AI エージェント用に web サイトを最適化するためのコードなしの方法です。
 
 Edgeでの最適化は、マーケティング、SEO、コンテンツ、デジタル戦略の各チームのビジネスユーザー向けに設計されています。 ビジネスユーザーはLLM Optimizerで、オポチュニティの特定、提案の理解、簡単な修正点のデプロイなどのすべてのジャーニーを完了できます。 Edgeでの最適化を使用すると、変更をプレビューし、CDN エッジですばやくデプロイして、最適化がライブであることを検証できます。 パフォーマンスは、LLM Optimizerのエコシステムでトラッキングできます。
 
@@ -29,13 +29,13 @@ Edgeでの最適化は、マーケティング、SEO、コンテンツ、デジ�
 
 * **AI のみの配信：** 最適化されたHTMLを AI エージェントにのみ提供し、人間の訪問者や SEO ボットには影響しません。
 * **サイクルの高速化：** 変更を数週間ではなく数分で公開します。 プラットフォームの変更や長いエンジニアリングサイクルは不要です。
-* **低リスクで可逆的：** ページを数分で元に戻せるワンクリックロールバック機能がサポートされています。
+* **リバーシブル：** ページを数分で元に戻すことができるワンクリックロールバック機能をサポートしています。
 * **パフォーマンスへの影響なし：** Edge ベースの最適化とキャッシュにより、サイトの待ち時間に影響しません。
 * **CDN とCMSに依存しない：** コンテンツ管理システムに関係なく、任意の CDN 設定およびフロントエンド設定と連携します。
 
 ### Edgeでの最適化でサポートされているオポチュニティを教えてください。
 
-Edgeの最適化では、効率的な web エクスペリエンスを実現するオポチュニティがサポートされています。 [&#x200B; 商談ダッシュボード &#x200B;](/help/dashboards/opportunities.md) ページの各商談について、および現在のページの商談セクションについて詳しく説明します。
+Edgeの最適化では、効率的な web エクスペリエンスを実現するオポチュニティがサポートされています。 [ 商談ダッシュボード ](/help/dashboards/opportunities.md) ページの各商談について、および現在のページの商談セクションについて詳しく説明します。
 
 ## オンボーディング
 
@@ -74,7 +74,7 @@ curl -svo page.html https://frescopa.coffee/about-us --header "user-agent: chatg
 < x-tokowaka-request-id: 50fce12d-0519-4fc6-af78-d928785c1b85
 ```
 
-ルーティング設定は、[originSelector CDN ルール &#x200B;](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn-configuring-traffic#origin-selectors) を使用して行われます。 前提条件は次のとおりです。
+ルーティング設定は、[originSelector CDN ルール ](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn-configuring-traffic#origin-selectors) を使用して行われます。 前提条件は次のとおりです。
 
 * ルーティングするドメインの決定
 * ルーティングするパスの決定
@@ -83,9 +83,9 @@ curl -svo page.html https://frescopa.coffee/about-us --header "user-agent: chatg
 
 ルールをデプロイするには、次の操作が必要です。
 
-* [&#x200B; 設定パイプライン &#x200B;](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/operations/config-pipeline) を作成
+* [ 設定パイプライン ](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/operations/config-pipeline) を作成
 * リポジトリ内の `cdn.yaml` 設定ファイルをコミットします
-* api キーを [&#x200B; シークレット環境変数 &#x200B;](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn-credentials-authentication) としてデプロイします
+* api キーを [ シークレット環境変数 ](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn-credentials-authentication) としてデプロイします
 * 設定パイプラインを実行
 
 
@@ -410,7 +410,7 @@ Important considerations:
 
 ![Fastly VCL](/help/assets/optimize-at-edge/fastly-vcl.png)
 
-![VCL スニペットの追加 &#x200B;](/help/assets/optimize-at-edge/add-vcl-snippets.png)
+![VCL スニペットの追加 ](/help/assets/optimize-at-edge/add-vcl-snippets.png)
 
 **vcl_recv スニペット**
 
@@ -471,9 +471,9 @@ if (!req.http.x-tokowaka-config && req.http.x-tokowaka-request == "failover") {
 
 ### 追加ツール
 
-[Adobe LLM Optimizer：あなたの Web ページはキャッシュ可能ですか？Chrome拡張機能 &#x200B;](https://chromewebstore.google.com/detail/adobe-llm-optimizer-is-yo/jbjngahjjdgonbeinjlepfamjdmdcbcc) 使用すると、Web ページコンテンツの LLM がアクセスできる量と、非表示のままの内容を正確に確認できます。 無料のスタンドアロン診断ツールとして設計されているため、製品ライセンスやセットアップは必要ありません。
+[Adobe LLM Optimizer：あなたの Web ページはキャッシュ可能ですか？Chrome拡張機能 ](https://chromewebstore.google.com/detail/adobe-llm-optimizer-is-yo/jbjngahjjdgonbeinjlepfamjdmdcbcc) 使用すると、Web ページコンテンツの LLM がアクセスできる量と、非表示のままの内容を正確に確認できます。 無料のスタンドアロン診断ツールとして設計されているため、製品ライセンスやセットアップは必要ありません。
 
-シングルクリックで、任意のサイトの機械読みやすさを評価できます。 AI エージェントが表示する内容と人間のユーザーが表示する内容を横に並べて比較し、LLM Optimizerを使用して復元できるコンテンツの量を推定できます。 [AI があなたのウェブサイトを読むことができるか？](https://business.adobe.com/jp/blog/introducing-the-llm-optimizer-chrome-extension) しくは、ページを参照してください。
+シングルクリックで、任意のサイトの機械読みやすさを評価できます。 AI エージェントが表示する内容と人間のユーザーが表示する内容を横に並べて比較し、LLM Optimizerを使用して復元できるコンテンツの量を推定できます。 [AI があなたのウェブサイトを読むことができるか？](https://business.adobe.com/blog/introducing-the-llm-optimizer-chrome-extension) しくは、ページを参照してください。
 
 ## 商談の詳細
 
@@ -482,10 +482,10 @@ if (!req.http.x-tokowaka-config && req.http.x-tokowaka-request == "failover") {
 ### コンテンツの表示の復元
 
 このオポチュニティは、クライアントサイドレンダリングが原因で、AI エージェントに対して主要なコンテンツが非表示になっているページにフラグを付けます。 識別された各ページについて、AI エージェント ビューに表示されないコンテンツを正確に示し、可視性のギャップを強調し、変更を直接適用して非表示のコンテンツを回復できるようにします。 Edgeで最適化を使用してこのオポチュニティをデプロイすると、AI で最適化されたレンダリング済みバージョンのページが LLM ユーザーエージェントに提供されるので、LLM ユーザーエージェントは JavaScript を実行せずにコンテキスト全体にアクセスできます。
-これにより、最初にページが AI エージェントに完全に表示されます。 プリレンダリングされたHTMLに加えて、さらに機能強化が行われています。
+これにより、AI エージェントが最初にページを完全に表示できるようになります。 プリレンダリングされたHTMLに加えて、さらに機能強化が行われています。
 
 >[!IMPORTANT]
->このプリレンダリング機能は、Edgeで最適化を使用してデプロイされた場合に、以下に示すすべてのオポチュニティに自動的に適用されます。
+>このプリレンダリング機能は、Edgeで最適化を使用してページをデプロイする際に、以下に示すすべてのオポチュニティに自動的に適用され、ページが AI エージェントに完全に表示されるようにします。
 
 ### LLM の見出しの最適化
 
@@ -505,7 +505,7 @@ if (!req.http.x-tokowaka-config && req.http.x-tokowaka-request == "failover") {
 
 ## Edgeでの自動最適化
 
-オポチュニティごとに、エッジで最適化をプレビュー、編集、デプロイ、ライブプレビュー、ロールバックできます。
+オポチュニティごとに、エッジで最適化をプレビュー、編集、デプロイ、ライブで表示、ロールバックできます。
 
 ### プレビュー
 
@@ -523,19 +523,19 @@ if (!req.http.x-tokowaka-config && req.http.x-tokowaka-request == "failover") {
 
 **デプロイ** 最適化されたエクスペリエンスをエッジから AI エージェントに提供できるように、選択した提案を公開します。 CDN が完全にルーティングされると、ドメイン内のすべてのページは通常、新しい変更で数分以内に有効になります。 ルーティングが選択パスのみに設定されている場合、許可リストに加えるされたページのみが最適化されて有効になります。
 
-![&#x200B; デプロイ &#x200B;](/help/assets/optimize-at-edge/deploy.png)
+![ デプロイ ](/help/assets/optimize-at-edge/deploy.png)
 
 ### ライブで表示
 
 **ライブで表示** を使用すると、最適化がライブであり、エージェンティックトラフィックに対して期待どおりに動作していることを確認できます。このようなビューは通常、アクセスが困難です。 「固定提案」の下にライブページが表示され、AI エージェントに表示されるようにページがレンダリングされます。
 
-![&#x200B; ライブで表示 &#x200B;](/help/assets/optimize-at-edge/view-live.png)
+![ ライブで表示 ](/help/assets/optimize-at-edge/view-live.png)
 
 ### ロールバック
 
 ロールバックを実行すると、以前にデプロイした最適化が安全に元に戻ります。 通常、ページの AI 専用バージョンは数分以内に以前の状態に戻るので、必要に応じて最適化を安全に試すことができます。
 
-![&#x200B; ロールバック &#x200B;](/help/assets/optimize-at-edge/rollback.png)
+![ ロールバック ](/help/assets/optimize-at-edge/rollback.png)
 
 ## よくある質問
 
@@ -566,4 +566,3 @@ Edgeでの最適化は、Adobe Edge 配信サービス（EDS）を使用する�
 Q. Edgeのプレレンダリングでの最適化は、従来のサーバーサイドレンダリング（SSR）とどのように異なりますか。
 
 どちらも異なる問題を解決し、連携して動作できます。 従来の SSR ではサーバーサイドのコンテンツはレンダリングされますが、ブラウザーに後から読み込まれるコンテンツは含まれません。 「Edgeで最適化」プリレンダリングは、JavaScriptとクライアントサイドのデータが読み込まれた後にページをキャプチャし、CDN エッジで完全にアセンブルされたバージョンを生成します。 SSR は、人間の経験を向上させることに重点を置いており、Edgeでの最適化は、LLM の web エクスペリエンスを向上させます。
-

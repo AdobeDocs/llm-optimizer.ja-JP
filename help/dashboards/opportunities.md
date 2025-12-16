@@ -2,9 +2,9 @@
 title: 最適化の機会
 description: 機会ダッシュボードを使用して、ブランドの可視性を高めるためにサイトがどのように改善されたかを自動的に検出する方法を説明します。
 feature: Opportunities
-source-git-commit: 533565d089076d651bb633ea7e426b0a4282de97
+source-git-commit: 39658a057fd4d67f74dc286e1687e384133ac653
 workflow-type: tm+mt
-source-wordcount: '718'
+source-wordcount: '624'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 これらの最適化には、ページ上の修正（構造化コンテンツ、正規化、概要の追加）、技術的な調整（AI クローラーのブロック解除やエラーの解決）、サードパーティの権限のあるサイト上のコンテンツへの影響などが含まれます。 これらの最適化の機会に対処することで、ブランドが正確に示され、ジェネレーティブな回答で引き合いに出される可能性が高くなります。
 
-![&#x200B; 最適化の機会 &#x200B;](/help/dashboards/assets/oport.png)
+![ 最適化の機会 ](/help/dashboards/assets/oport.png)
 
 ## 商談ダッシュボード
 
@@ -42,12 +42,12 @@ ht-degree: 0%
 
 ## 自動最適化 {#auto-optimization}
 
-自動最適化により、推奨される最適化をワンクリックでデプロイでき、手動の労力と価値創出までの時間を削減できます。 最適化は、コンテンツソースまたは CDN エッジで適用できます。 Edge ベースの自動最適化は、現在、一部のオポチュニティに対して早期アクセスで利用できます。 詳しくは、[Edgeで最適化 &#x200B;](/help/dashboards/optimize-at-edge.md) ページを参照してください。
+自動最適化により、推奨される最適化をワンクリックでデプロイでき、手動の労力と価値創出までの時間を削減できます。 最適化は、コンテンツソースまたは CDN エッジで適用できます。 Edge ベースの自動最適化は、現在、一部のオポチュニティに対して早期アクセスで利用できます。 詳しくは、[Edgeで最適化 ](/help/dashboards/optimize-at-edge.md) ページを参照してください。
 
-### コンテンツ表示のオポチュニティをリカバリ {#recover-contet}
+<!--### Recover Content Visibility Opportunity {#recover-contet}
 
-前述のように、コンテンツの表示の機会により、クライアントサイドのレンダリングが原因で AI エージェントの主要なコンテンツが失われたページにフラグが付けられます。 識別された各ページに対して、AI エージェント表示に見つからないコンテンツが正確に表示されるので、可視性のギャップを特定するのに役立ちます。 また、エッジベースのプリレンダリング機能によってもサポートされ、Content Management System （CMS）を変更しなくても、より多くのHTML コンテンツをエージェンティックトラフィックに提供できます。 この機能は現在、早期アクセスで提供されており、LLM Optimizer チームによる設定が必要です。 コンテンツ表示のオポチュニティをアクティブ化するには、`llmo-at-edge@adobe.com` にお問い合わせください。
+As stated above, the content visibility opportunity, flags pages where key content is lost for AI agents due to client-side rendering. For each identified page, it shows you exactly which content is missing from the AI agent view, helping you pinpoint visibility gaps. It's also supported by an edge-based pre-rendering capability that can serve more HTML content to agentic traffic without requiring Content Management System (CMS) changes. This functionality is currently in Early Access and requires setup from the LLM Optimizer team. Please contact `llmo-at-edge@adobe.com` to activate the content visibility opportunity.-->
 
 ### 追加ツール
 
-[LLM 表示チェッカー &#x200B;](https://chromewebstore.google.com/detail/is-your-webpage-citable/jbjngahjjdgonbeinjlepfamjdmdcbcc) は、LLM がアクセスできる web ページコンテンツの量と、非表示のままの内容を正確に確認できるChrome拡張機能です。 無料のスタンドアロン診断ツールとして設計されているため、製品ライセンスやセットアップは必要ありません。 ユーザーはシングルクリックで、任意のサイトの機械可読性を評価し、AI エージェントの表示内容と人間のユーザーの表示内容を横に並べて比較できます。 また、LLM Optimizerを使用して復元できるコンテンツの量を見積もります。
+[LLM 表示チェッカー ](https://chromewebstore.google.com/detail/is-your-webpage-citable/jbjngahjjdgonbeinjlepfamjdmdcbcc) は、LLM がアクセスできる web ページコンテンツの量と、非表示のままの内容を正確に確認できるChrome拡張機能です。 無料のスタンドアロン診断ツールとして設計されているため、製品ライセンスやセットアップは必要ありません。 ユーザーはシングルクリックで、任意のサイトの機械可読性を評価し、AI エージェントの表示内容と人間のユーザーの表示内容を横に並べて比較できます。 また、LLM Optimizerを使用して復元できるコンテンツの量を見積もります。
