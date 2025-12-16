@@ -1,10 +1,10 @@
 ---
 title: Adobe LLM Optimizer
 description: Adobe LLM Optimizerでブランドを強化しましょう。 メンションの追跡、インサイトの発見、AI 駆動検索の支配。 可視性を制御 – 今すぐ最適化を開始
-source-git-commit: c8752f04dda63c6add508e034b1b158ae43140e0
+source-git-commit: 782266229b98b515b33a7e004c3bb681eb412cf5
 workflow-type: tm+mt
-source-wordcount: '381'
-ht-degree: 4%
+source-wordcount: '354'
+ht-degree: 3%
 
 ---
 
@@ -126,15 +126,9 @@ Adobe LLM Optimizerは、ジェネレーティブエンジン最適化のジェ�
   {description= Learn how LLM Optimizer can help you drive brand authority in AI search and discovery.}
   {target=_blank}
   {cta=Learn more}
-* https://business.adobe.com/jp/products/llm-optimizer.html
+* https://business.adobe.com/products/llm-optimizer.html
   {title = Explore the capabilities of the Adobe LLM Optimizer}
   {image = /help/assets/overview/business-adobe.png}
-  {target=_blank}
-  {cta=Learn more}
-* ./dashboards/optimize-at-edge.md
-  {title= Optimize at Edge}
-  {image= /help/assets/overview/optimize-on-edge-card.png}
-  {description= Learn how to deliver optimizations in LLM Optimizer without any authoring changes required.}
   {target=_blank}
   {cta=Learn more}
 
@@ -191,7 +185,7 @@ Adobe LLM Optimizerは、ジェネレーティブエンジン最適化のジェ�
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="https://business.adobe.com/jp/products/llm-optimizer.html" title="Adobe LLM Optimizerの機能を探索" target="_blank" rel="referrer">
+                    <a href="https://business.adobe.com/products/llm-optimizer.html" title="Adobe LLM Optimizerの機能を探索" target="_blank" rel="referrer">
                         <img class="is-bordered-r-small" src="/help/assets/overview/business-adobe.png" alt="Adobe LLM Optimizerの機能を探索"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
@@ -200,34 +194,11 @@ Adobe LLM Optimizerは、ジェネレーティブエンジン最適化のジェ�
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="https://business.adobe.com/jp/products/llm-optimizer.html" target="_blank" rel="referrer" title="Adobe LLM Optimizerの機能を探索">Adobe LLM Optimizerの機能を見る </a>
+                        <a href="https://business.adobe.com/products/llm-optimizer.html" target="_blank" rel="referrer" title="Adobe LLM Optimizerの機能を探索">Adobe LLM Optimizerの機能を見る </a>
                     </p>
                     <p class="is-size-6">Adobe LLM Optimizerを使用して AI 検索結果でのブランドの存在感を形作ります。 地域に関するインサイトを得て、LLM 全体の可視性を高め、測定可能なトラフィックの増加を促します。</p>
                 </div>
-                <a href="https://business.adobe.com/jp/products/llm-optimizer.html" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
-                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">詳細情報</span>
-                </a>
-            </div>
-        </div>
-    </div>
-    <div class="column is-half-tablet is-half-desktop is-one-third-widescreen" aria-label="Optimize at Edge">
-        <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
-            <div class="card-image">
-                <figure class="image x-is-16by9">
-                    <a href="./dashboards/optimize-at-edge.md" title="Edgeで最適化" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="/help/assets/overview/optimize-on-edge-card.png" alt="Edgeで最適化"
-                             style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
-                    </a>
-                </figure>
-            </div>
-            <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
-                <div class="top-card-content">
-                    <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="./dashboards/optimize-at-edge.md" target="_blank" rel="referrer" title="Edgeで最適化">Edgeで最適化 </a>
-                    </p>
-                    <p class="is-size-6">オーサリングを変更せずに、LLM Optimizerで最適化を配信する方法を説明します。</p>
-                </div>
-                <a href="./dashboards/optimize-at-edge.md" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                <a href="https://business.adobe.com/products/llm-optimizer.html" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                     <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">詳細情報</span>
                 </a>
             </div>
