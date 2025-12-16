@@ -2,9 +2,9 @@
 title: Edgeで最適化
 description: オーサリングを変更せずに、CDN エッジでLLM Optimizerで最適化を配信する方法を説明します。
 feature: Opportunities
-source-git-commit: 39658a057fd4d67f74dc286e1687e384133ac653
+source-git-commit: 52984ea987ecacbd6d3bb08a6d04ff634fdf2779
 workflow-type: tm+mt
-source-wordcount: '2224'
+source-wordcount: '2206'
 ht-degree: 1%
 
 ---
@@ -35,7 +35,7 @@ Edgeでの最適化は、マーケティング、SEO、コンテンツ、デジ�
 
 ### Edgeでの最適化でサポートされているオポチュニティを教えてください。
 
-Edgeの最適化では、効率的な web エクスペリエンスを実現するオポチュニティがサポートされています。 [&#x200B; 商談ダッシュボード &#x200B;](/help/dashboards/opportunities.md) ページの各商談について、および現在のページの商談セクションについて詳しく説明します。
+Edgeの最適化では、効率的な web エクスペリエンスを実現するオポチュニティがサポートされています。 [ 商談ダッシュボード ](/help/dashboards/opportunities.md) ページの各商談について、および現在のページの商談セクションについて詳しく説明します。
 
 ## オンボーディング
 
@@ -74,18 +74,16 @@ curl -svo page.html https://frescopa.coffee/about-us --header "user-agent: chatg
 < x-tokowaka-request-id: 50fce12d-0519-4fc6-af78-d928785c1b85
 ```
 
-ルーティング設定は、[originSelector CDN ルール &#x200B;](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn-configuring-traffic#origin-selectors) を使用して行われます。 前提条件は次のとおりです。
+ルーティング設定は、[originSelector CDN ルール ](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn-configuring-traffic#origin-selectors) を使用して行われます。 前提条件は次のとおりです。
 
 * ルーティングするドメインの決定
 * ルーティングするパスの決定
 * ルーティングするユーザーエージェントを決定する（推奨の正規表現）
-* `edge.tokowaka.now` バックエンド用の api キーをAdobeから取得する
 
 ルールをデプロイするには、次の操作が必要です。
 
-* [&#x200B; 設定パイプライン &#x200B;](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/operations/config-pipeline) を作成
+* [ 設定パイプライン ](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/operations/config-pipeline) を作成
 * リポジトリ内の `cdn.yaml` 設定ファイルをコミットします
-* api キーを [&#x200B; シークレット環境変数 &#x200B;](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn-credentials-authentication) としてデプロイします
 * 設定パイプラインを実行
 
 
@@ -113,8 +111,6 @@ data:
         action:
           type: selectOrigin
           originName: tokowaka-backend
-          headers:
-            x-tokowaka-api-key: "${{TOKOWAKA_API_KEY}}"
     origins:
       - name: tokowaka-backend
         domain: "edge.tokowaka.now"
@@ -410,7 +406,7 @@ Important considerations:
 
 ![Fastly VCL](/help/assets/optimize-at-edge/fastly-vcl.png)
 
-![VCL スニペットの追加 &#x200B;](/help/assets/optimize-at-edge/add-vcl-snippets.png)
+![VCL スニペットの追加 ](/help/assets/optimize-at-edge/add-vcl-snippets.png)
 
 **vcl_recv スニペット**
 
@@ -471,9 +467,9 @@ if (!req.http.x-tokowaka-config && req.http.x-tokowaka-request == "failover") {
 
 ### 追加ツール
 
-[Adobe LLM Optimizer：あなたの Web ページはキャッシュ可能ですか？Chrome拡張機能 &#x200B;](https://chromewebstore.google.com/detail/adobe-llm-optimizer-is-yo/jbjngahjjdgonbeinjlepfamjdmdcbcc) 使用すると、Web ページコンテンツの LLM がアクセスできる量と、非表示のままの内容を正確に確認できます。 無料のスタンドアロン診断ツールとして設計されているため、製品ライセンスやセットアップは必要ありません。
+[Adobe LLM Optimizer：あなたの Web ページはキャッシュ可能ですか？Chrome拡張機能 ](https://chromewebstore.google.com/detail/adobe-llm-optimizer-is-yo/jbjngahjjdgonbeinjlepfamjdmdcbcc) 使用すると、Web ページコンテンツの LLM がアクセスできる量と、非表示のままの内容を正確に確認できます。 無料のスタンドアロン診断ツールとして設計されているため、製品ライセンスやセットアップは必要ありません。
 
-シングルクリックで、任意のサイトの機械読みやすさを評価できます。 AI エージェントが表示する内容と人間のユーザーが表示する内容を横に並べて比較し、LLM Optimizerを使用して復元できるコンテンツの量を推定できます。 [AI があなたのウェブサイトを読むことができるか？](https://business.adobe.com/jp/blog/introducing-the-llm-optimizer-chrome-extension) しくは、ページを参照してください。
+シングルクリックで、任意のサイトの機械読みやすさを評価できます。 AI エージェントが表示する内容と人間のユーザーが表示する内容を横に並べて比較し、LLM Optimizerを使用して復元できるコンテンツの量を推定できます。 [AI があなたのウェブサイトを読むことができるか？](https://business.adobe.com/blog/introducing-the-llm-optimizer-chrome-extension) しくは、ページを参照してください。
 
 ## 商談の詳細
 
@@ -507,6 +503,8 @@ if (!req.http.x-tokowaka-config && req.http.x-tokowaka-request == "failover") {
 
 オポチュニティごとに、エッジで最適化をプレビュー、編集、デプロイ、ライブで表示、ロールバックできます。
 
+>[!VIDEO](https://video.tv.adobe.com/v/3477983/?learn=on&enablevpops)
+
 ### プレビュー
 
 **プレビュー** を使用すると、提案が実稼動になる前に影響を確認できます。 これにより、現在のページと提案を適用した後に期待される AI に最適化されたバージョンとの横に並んだ違いが示されます。 このビューでは、ライブトラフィックを強化するのと同じEdgeでの最適化ロジックを使用しますが、分離されたプレビューモードとなります。 これはレビューのための読み取り専用シミュレーションなので、ライブトラフィックには影響しません。
@@ -523,19 +521,19 @@ if (!req.http.x-tokowaka-config && req.http.x-tokowaka-request == "failover") {
 
 **デプロイ** 最適化されたエクスペリエンスをエッジから AI エージェントに提供できるように、選択した提案を公開します。 CDN が完全にルーティングされると、ドメイン内のすべてのページは通常、新しい変更で数分以内に有効になります。 ルーティングが選択パスのみに設定されている場合、許可リストに加えるされたページのみが最適化されて有効になります。
 
-![&#x200B; デプロイ &#x200B;](/help/assets/optimize-at-edge/deploy.png)
+![ デプロイ ](/help/assets/optimize-at-edge/deploy.png)
 
 ### ライブで表示
 
 **ライブで表示** を使用すると、最適化がライブであり、エージェンティックトラフィックに対して期待どおりに動作していることを確認できます。このようなビューは通常、アクセスが困難です。 「固定提案」の下にライブページが表示され、AI エージェントに表示されるようにページがレンダリングされます。
 
-![&#x200B; ライブで表示 &#x200B;](/help/assets/optimize-at-edge/view-live.png)
+![ ライブで表示 ](/help/assets/optimize-at-edge/view-live.png)
 
 ### ロールバック
 
 ロールバックを実行すると、以前にデプロイした最適化が安全に元に戻ります。 通常、ページの AI 専用バージョンは数分以内に以前の状態に戻るので、必要に応じて最適化を安全に試すことができます。
 
-![&#x200B; ロールバック &#x200B;](/help/assets/optimize-at-edge/rollback.png)
+![ ロールバック ](/help/assets/optimize-at-edge/rollback.png)
 
 ## よくある質問
 
