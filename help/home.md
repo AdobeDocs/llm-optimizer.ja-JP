@@ -1,7 +1,7 @@
 ---
 title: Adobe LLM Optimizer
 description: Adobe LLM Optimizerでブランドを強化しましょう。 メンションの追跡、インサイトの発見、AI 駆動検索の支配。 可視性を制御 – 今すぐ最適化を開始
-source-git-commit: 66993ce43c6b25c27dcd2affdb56352802949e18
+source-git-commit: 0714b6c83e384ff21ddceafa941e3fe8c7305467
 workflow-type: tm+mt
 source-wordcount: '357'
 ht-degree: 3%
@@ -126,7 +126,7 @@ Adobe LLM Optimizerは、ジェネレーティブエンジン最適化のジェ�
   {description= Learn how LLM Optimizer can help you drive brand authority in AI search and discovery.}
   {target=_blank}
   {cta=Learn more}
-* https://business.adobe.com/jp/products/llm-optimizer.html
+* https://business.adobe.com/products/llm-optimizer.html
   {title = Explore the capabilities of the Adobe LLM Optimizer}
   {image = /help/assets/overview/business-adobe.png}
   {target=_blank}
@@ -185,7 +185,7 @@ Adobe LLM Optimizerは、ジェネレーティブエンジン最適化のジェ�
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="https://business.adobe.com/jp/products/llm-optimizer.html" title="Adobe LLM Optimizerの機能を探索" target="_blank" rel="referrer">
+                    <a href="https://business.adobe.com/products/llm-optimizer.html" title="Adobe LLM Optimizerの機能を探索" target="_blank" rel="referrer">
                         <img class="is-bordered-r-small" src="/help/assets/overview/business-adobe.png" alt="Adobe LLM Optimizerの機能を探索"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
@@ -194,11 +194,11 @@ Adobe LLM Optimizerは、ジェネレーティブエンジン最適化のジェ�
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="https://business.adobe.com/jp/products/llm-optimizer.html" target="_blank" rel="referrer" title="Adobe LLM Optimizerの機能を探索">Adobe LLM Optimizerの機能を見る </a>
+                        <a href="https://business.adobe.com/products/llm-optimizer.html" target="_blank" rel="referrer" title="Adobe LLM Optimizerの機能を探索">Adobe LLM Optimizerの機能を見る </a>
                     </p>
                     <p class="is-size-6">Adobe LLM Optimizerを使用して AI 検索結果でのブランドの存在感を形作ります。 地域に関するインサイトを得て、LLM 全体の可視性を高め、測定可能なトラフィックの増加を促します。</p>
                 </div>
-                <a href="https://business.adobe.com/jp/products/llm-optimizer.html" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                <a href="https://business.adobe.com/products/llm-optimizer.html" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                     <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">詳細情報</span>
                 </a>
             </div>
@@ -246,3 +246,4 @@ Adobe LLM Optimizerは、ジェネレーティブエンジン最適化のジェ�
     </div>
 </div>
 <!-- END CARDS HTML - DO NOT MODIFY BY HAND -->
+
