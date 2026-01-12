@@ -15,7 +15,7 @@ ht-degree: 1%
 このページでは、オーサリングを変更せずに CDN エッジで最適化を配信する方法の詳細な概要を説明します。 オンボーディングプロセス、利用可能な最適化の機会、Edge で自動最適化する方法について説明します。
 
 >[!NOTE]
->この機能は、現在、早期アクセス中です。 アーリーアクセスプログラムについて詳しくは [&#x200B; こちら &#x200B;](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/release-notes/release-notes/release-notes-current#aem-beta-programs) を参照してください。
+>この機能は、現在、早期アクセス中です。 アーリーアクセスプログラムについて詳しくは [&#x200B; こちら &#x200B;](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/release-notes/release-notes/release-notes-current#aem-beta-programs) を参照してください。
 
 ## Edgeでの最適化とは
 
@@ -74,7 +74,7 @@ curl -svo page.html https://frescopa.coffee/about-us --header "user-agent: chatg
 < x-tokowaka-request-id: 50fce12d-0519-4fc6-af78-d928785c1b85
 ```
 
-ルーティング設定は、[originSelector CDN ルール &#x200B;](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn-configuring-traffic#origin-selectors) を使用して行われます。 前提条件は次のとおりです。
+ルーティング設定は、[originSelector CDN ルール &#x200B;](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn-configuring-traffic#origin-selectors) を使用して行われます。 前提条件は次のとおりです。
 
 * ルーティングするドメインの決定
 * ルーティングするパスの決定
@@ -82,7 +82,7 @@ curl -svo page.html https://frescopa.coffee/about-us --header "user-agent: chatg
 
 ルールをデプロイするには、次の操作が必要です。
 
-* [&#x200B; 設定パイプライン &#x200B;](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/operations/config-pipeline) を作成
+* [&#x200B; 設定パイプライン &#x200B;](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/operations/config-pipeline) を作成
 * リポジトリ内の `cdn.yaml` 設定ファイルをコミットします
 * 設定パイプラインを実行
 
@@ -469,7 +469,7 @@ if (!req.http.x-tokowaka-config && req.http.x-tokowaka-request == "failover") {
 
 [Adobe LLM Optimizer：あなたの Web ページはキャッシュ可能ですか？Chrome拡張機能 &#x200B;](https://chromewebstore.google.com/detail/adobe-llm-optimizer-is-yo/jbjngahjjdgonbeinjlepfamjdmdcbcc)、Web ページコンテンツ LLM がアクセスできる Web ページの量と、非表示のままの内容を表示します。 無料のスタンドアロン診断ツールとして設計されているため、製品ライセンスやセットアップは必要ありません。
 
-シングルクリックで、任意のサイトの機械読みやすさを評価できます。 AI エージェントが表示する内容と人間のユーザーが表示する内容を横に並べて比較し、LLM Optimizerを使用して復元できるコンテンツの量を推定できます。 [AI があなたのウェブサイトを読むことができるか？](https://business.adobe.com/blog/introducing-the-llm-optimizer-chrome-extension) しくは、ページを参照してください。
+シングルクリックで、任意のサイトの機械読みやすさを評価できます。 AI エージェントが表示する内容と人間のユーザーが表示する内容を横に並べて比較し、LLM Optimizerを使用して復元できるコンテンツの量を推定できます。 [AI があなたのウェブサイトを読むことができるか？](https://business.adobe.com/jp/blog/introducing-the-llm-optimizer-chrome-extension) しくは、ページを参照してください。
 
 ## 商談の詳細
 
