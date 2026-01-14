@@ -16,11 +16,11 @@ ht-degree: 0%
 
 これは重要な最初のステップです。 ここで決定する内容によって、ビジネスコンテキストに合わせた情報のカスタマイズ方法が決まります。 今後、履歴データがリセットされる際にカテゴリに変更が加えられた場合。
 
-[[!UICONTROL  顧客設定 ]](/help/dashboards/customer-configuration.md) ダッシュボードでは、LLM Optimizer プラットフォーム内でブランドを監視および分析する方法を定義します。 ダッシュボードの使用方法については、[[!UICONTROL  顧客設定 ]](/help/dashboards/customer-configuration.md) を参照してください。
+[[!UICONTROL &#x200B; 顧客設定 &#x200B;]](/help/dashboards/customer-configuration.md) ダッシュボードでは、LLM Optimizer プラットフォーム内でブランドを監視および分析する方法を定義します。 ダッシュボードの使用方法については、[[!UICONTROL &#x200B; 顧客設定 &#x200B;]](/help/dashboards/customer-configuration.md) を参照してください。
 
-![ 顧客設定ウィンドウ ](/help/assets/best-practices/customer-configuration-best-practices.png)
+![&#x200B; 顧客設定ウィンドウ &#x200B;](/help/assets/best-practices/customer-configuration-best-practices.png)
 
-[!UICONTROL  顧客設定 ] ダッシュボードでは、カテゴリ（事業部門や製品ラインなど）のカスタマイズ、他のブランドの追跡、ブランド表記エイリアスの追加を行い、プロンプトをまたいでブランドのすべてのバリエーションを取り込むことができます。 この設定により、platform はビジネスコンテキストに合わせてインサイトを調整し、正確な表示、トラフィックおよび商談分析を可能にします。
+[!UICONTROL &#x200B; 顧客設定 &#x200B;] ダッシュボードでは、カテゴリ（事業部門や製品ラインなど）のカスタマイズ、他のブランドの追跡、ブランド表記エイリアスの追加を行い、プロンプトをまたいでブランドのすべてのバリエーションを取り込むことができます。 この設定により、platform はビジネスコンテキストに合わせてインサイトを調整し、正確な表示、トラフィックおよび商談分析を可能にします。
 
 ## 業界プロンプトライブラリ
 
@@ -30,7 +30,7 @@ Adobeは、プロンプトやトピックを使い始めるために、業界の
 
 1. **顧客設定** ダッシュボードに移動します。
 1. **プロンプトライブラリをダウンロード** を選択して、LLM Optimizerからライブラリファイルをダウンロードします。
-   ![ 業界プロンプトライブラリのダウンロード ](/help/assets/best-practices/customer-configuration-prompts-library.png)
+   ![&#x200B; 業界プロンプトライブラリのダウンロード &#x200B;](/help/assets/best-practices/customer-configuration-prompts-library.png)
 1. ブランドの業界に推奨される **トピック** と **プロンプト** を各タブで確認し、最も関連性の高いオプションを選択します。
 1. **カスタマージャーニーステージ** 列を確認して、カスタマーライフサイクル全体でプロンプトのオプションを表示します（例えば、検出からリテンションへのコンバージョンなど）。 funnelの早期段階/上位段階のプロンプトは優先度が高いものの、リテンションを高めたりカスタマーサポートを有効にしたりするための後段階のオプションも検討します。
 1. 必要に応じてトピックまたはプロンプトを変更し、トピックやプロンプトをAdobe LLM Optimizerにアップロードする前に、目標や目的に最も合うように調整します（例えば、ブランド名や製品名を追加したり、オンブランド用語を追加したりします）。 プロンプトは、手動で、または提供された *.csv* テンプレートを使用した一括アップロードでLLM Optimizerに追加できます。
@@ -85,7 +85,7 @@ LLM ツールの AI 検索とプロンプト動作に関する顧客トレンド
 * *web/コンテンツの所有者* の場合は、**URL_DIR** アプローチを選択します。
 * *マーチャンダイジング/オファーマネージャー* の場合は、**製品/サービスカテゴリ** アプローチを選択します。
 
-![LLM Optimizerでのカテゴリの追加 ](/help/assets/best-practices/add-category.png)
+![LLM Optimizerでのカテゴリの追加 &#x200B;](/help/assets/best-practices/add-category.png)
 
 >[!IMPORTANT]
 >
@@ -121,7 +121,7 @@ LLM ツールの AI 検索とプロンプト動作に関する顧客トレンド
 * サポート連絡先
 * 企業/ニュース（本当に必要な場合）
 
-![LLM Optimizerでのトピックの追加 ](/help/assets/best-practices/add-topic.png)
+![LLM Optimizerでのトピックの追加 &#x200B;](/help/assets/best-practices/add-topic.png)
 
 リストを作成する際は、次の点を考慮してください。
 
@@ -172,6 +172,6 @@ LLM ツールの AI 検索とプロンプト動作に関する顧客トレンド
 
 ## 詳細情報
 
-* [ 顧客設定ダッシュボード ](/help/dashboards/customer-configuration.md) では、カテゴリ、トピック、プロンプトおよびその他のトラッキングを設定できます。
-* [LLM Optimizerのベストプラクティス ](/help/tutorials/best-practices.md)LLM の最適化に関するベストプラクティスを説明します
+* [&#x200B; 顧客設定ダッシュボード &#x200B;](/help/dashboards/customer-configuration.md) では、カテゴリ、トピック、プロンプトおよびその他のトラッキングを設定できます。
+* [LLM Optimizerのベストプラクティス &#x200B;](/help/tutorials/best-practices.md)LLM の最適化に関するベストプラクティスを説明します
 
