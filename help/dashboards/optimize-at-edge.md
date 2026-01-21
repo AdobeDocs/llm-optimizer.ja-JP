@@ -2,9 +2,9 @@
 title: Edgeで最適化
 description: オーサリングを変更せずに、CDN エッジでLLM Optimizerで最適化を配信する方法を説明します。
 feature: Opportunities
-source-git-commit: 2311bd2990c6ff7ecee22ca82b25987df10e7e1c
+source-git-commit: 09fa235f39d61daa343a8c9cc043574a6ea2a1cc
 workflow-type: tm+mt
-source-wordcount: '2188'
+source-wordcount: '2149'
 ht-degree: 1%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 1%
 このページでは、オーサリングを変更せずに CDN エッジで最適化を配信する方法の詳細な概要を説明します。 オンボーディングプロセス、利用可能な最適化の機会、Edge で自動最適化する方法について説明します。
 
 >[!NOTE]
->この機能は、現在、早期アクセス中です。 アーリーアクセスプログラムについて詳しくは [&#x200B; こちら &#x200B;](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/release-notes/release-notes/release-notes-current#aem-beta-programs) を参照してください。
+>この機能は、現在、早期アクセス中です。 アーリーアクセスプログラムについて詳しくは [ こちら ](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/release-notes/release-notes/release-notes-current#aem-beta-programs) を参照してください。
 
 ## Edgeでの最適化とは
 
@@ -35,7 +35,7 @@ Edgeでの最適化は、マーケティング、SEO、コンテンツ、デジ�
 
 ### Edgeでの最適化でサポートされているオポチュニティを教えてください。
 
-Edgeの最適化では、効率的な web エクスペリエンスを実現するオポチュニティがサポートされています。 [&#x200B; 商談ダッシュボード &#x200B;](/help/dashboards/opportunities.md) ページの各商談について、および現在のページの商談セクションについて詳しく説明します。
+Edgeの最適化では、効率的な web エクスペリエンスを実現するオポチュニティがサポートされています。 [ 商談ダッシュボード ](/help/dashboards/opportunities.md) ページの各商談について、および現在のページの商談セクションについて詳しく説明します。
 
 ## オンボーディング
 
@@ -57,24 +57,21 @@ IT/CDN チームの要件：
 
 設定プロセスをガイドするために、以下に、様々な CDN 設定のサンプル設定を示します。 これらの例は、実際のライブ設定に適応させる必要があることに注意してください。 最初に下位環境で変更を適用することをお勧めします。
 
->[!NOTE]
->以下のコードサンプルでは、Edgeの Optimize の作業プロジェクト名である「tokowaka」への参照が確認できます。 これらの識別子は、互換性のためにコード内に残り、このドキュメントで説明したのと同じ機能を参照します。
-
 >[!BEGINTABS]
 
 >[!TAB Adobeの管理による CDN]
 
 **Adobeの管理による CDN**
 
-この設定の目的は、Optimizer サービス（バックエンド）にルーティングされるエージェントのユーザーエージェントを使用してリクエストを設定 `edge.tokowaka.now` ることです。 設定をテストするには、セットアップが完了した後、応答でヘッダー `x-tokowaka-request-id` を探します。
+この設定の目的は、Optimizer サービス（バックエンド）にルーティングされるエージェントのユーザーエージェントを使用してリクエストを設定 `live.edgeoptimize.net` ることです。 設定をテストするには、セットアップが完了した後、応答でヘッダー `x-edge-optimize-request-id` を探します。
 
 ```
 curl -svo page.html https://frescopa.coffee/about-us --header "user-agent: chatgpt-user"
 < HTTP/2 200
-< x-tokowaka-request-id: 50fce12d-0519-4fc6-af78-d928785c1b85
+< x-edge-optimize-request-id: 50fce12d-0519-4fc6-af78-d928785c1b85
 ```
 
-ルーティング設定は、[originSelector CDN ルール &#x200B;](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn-configuring-traffic#origin-selectors) を使用して行われます。 前提条件は次のとおりです。
+ルーティング設定は、[originSelector CDN ルール ](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn-configuring-traffic#origin-selectors) を使用して行われます。 前提条件は次のとおりです。
 
 * ルーティングするドメインの決定
 * ルーティングするパスの決定
@@ -82,7 +79,7 @@ curl -svo page.html https://frescopa.coffee/about-us --header "user-agent: chatg
 
 ルールをデプロイするには、次の操作が必要です。
 
-* [&#x200B; 設定パイプライン &#x200B;](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/operations/config-pipeline) を作成
+* [ 設定パイプライン ](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/operations/config-pipeline) を作成
 * リポジトリ内の `cdn.yaml` 設定ファイルをコミットします
 * 設定パイプラインを実行
 
@@ -91,16 +88,16 @@ curl -svo page.html https://frescopa.coffee/about-us --header "user-agent: chatg
 kind: "CDN"
 version: "1"
 data:
-  # Origin selectors to route to Tokowaka backend
+  # Origin selectors to route to Edge Optimize backend
   originSelectors:
     rules:
-      - name: route-to-tokowaka-backend
+      - name: route-to-edge-optimize-backend
         when:
           allOf:
-            - reqHeader: x-tokowaka-request
-              exists: false # avoid loops when requests comes from Tokowaka
+            - reqHeader: x-edge-optimize-request
+              exists: false # avoid loops when requests comes from Edge Optimize
             - reqHeader: user-agent
-              matches: "(?i)(Tokowaka-AI|ChatGPT-User|GPTBot|OAI-SearchBot|PerplexityBot|Perplexity-User)" # routed user agents
+              matches: "(?i)(AdobeEdgeOptimize-AI|ChatGPT-User|GPTBot|OAI-SearchBot|PerplexityBot|Perplexity-User)" # routed user agents
             - reqProperty: domain
               equals: "example.com" # routed domain
             - reqProperty: originalPath
@@ -110,10 +107,10 @@ data:
               - { reqProperty: originalPath, like: "/dir/*" } # routed pages, wildcard path matching
         action:
           type: selectOrigin
-          originName: tokowaka-backend
+          originName: edge-optimize-backend
     origins:
-      - name: tokowaka-backend
-        domain: "edge.tokowaka.now"
+      - name: edge-optimize-backend
+        domain: "live.edgeoptimize.net"
 ```
 
 設定をテストするには、curl を実行し、次の内容を確認します。
@@ -121,7 +118,7 @@ data:
 ```
 curl -svo page.html https://www.example.com/page.html --header "user-agent: chatgpt-user"
 < HTTP/2 200
-< x-tokowaka-request-id: 50fce12d-0519-4fc6-af78-d928785c1b85
+< x-edge-optimize-request-id: 50fce12d-0519-4fc6-af78-d928785c1b85
 ```
 
 <!-- >>[!TAB Akamai (BYOCDN)]
@@ -402,49 +399,49 @@ Important considerations:
 
 >[!TAB Fastly （BYOCDN） ]
 
-**常若 BYOCDN - Fastly - VCL**
+**Edgeによる BYOCDN の最適化 – Fastly - VCL**
 
 ![Fastly VCL](/help/assets/optimize-at-edge/fastly-vcl.png)
 
-![VCL スニペットの追加 &#x200B;](/help/assets/optimize-at-edge/add-vcl-snippets.png)
+![VCL スニペットの追加 ](/help/assets/optimize-at-edge/add-vcl-snippets.png)
 
 **vcl_recv スニペット**
 
 ```
-unset req.http.x-tokowaka-url;
-unset req.http.x-tokowaka-config;
-unset req.http.x-tokowaka-api-key;
+unset req.http.x-edge-optimize-url;
+unset req.http.x-edge-optimize-config;
+unset req.http.x-edge-optimize-api-key;
 
-if (!req.http.x-tokowaka-request
-    && req.http.user-agent ~ "(?i)(Tokowaka-AI|ChatGPT-User|GPTBot|OAI-SearchBot|PerplexityBot|Perplexity-User)") {
+if (!req.http.x-edge-optimize-request
+    && req.http.user-agent ~ "(?i)(AdobeEdgeOptimize-AI|ChatGPT-User|GPTBot|OAI-SearchBot|PerplexityBot|Perplexity-User)") {
   set req.http.x-fowarded-host = req.http.host; # required for identifying the original host
-  set req.http.x-tokowaka-url = req.url; # required for identifying the original url
-  set req.http.x-tokowaka-config = "LLMCLIENT=true"; # required for cache key
-  set req.http.x-tokowaka-api-key = "<YOUR API KEY>"; # required for identifying the client
-  set req.backend = F_Tokowaka;
+  set req.http.x-edge-optimize-url = req.url; # required for identifying the original url
+  set req.http.x-edge-optimize-config = "LLMCLIENT=true"; # required for cache key
+  set req.http.x-edge-optimize-api-key = "<YOUR API KEY>"; # required for identifying the client
+  set req.backend = F_EDGE_OPTIMIZE;
 }
 ```
 
 **vcl_hash スニペット**
 
 ```
-if (req.http.x-tokowaka-config) {
-  set req.hash += "tokowaka";
-  set req.hash += req.http.x-tokowaka-config;
+if (req.http.x-edge-optimize-config) {
+  set req.hash += "edge-optimize";
+  set req.hash += req.http.x-edge-optimize-config;
 }
 ```
 
 **vcl_deliver スニペット**
 
 ```
-if (req.http.x-tokowaka-config && resp.status >= 400) {
-  set req.http.x-tokowaka-request = "failover";
+if (req.http.x-edge-optimize-config && resp.status >= 400) {
+  set req.http.x-edge-optimize-request = "failover";
   set req.backend = F_Default_Origin;
   restart;
 }
 
-if (!req.http.x-tokowaka-config && req.http.x-tokowaka-request == "failover") {
-  set resp.http.x-tokowaka-fo = "1";
+if (!req.http.x-edge-optimize-config && req.http.x-edge-optimize-request == "failover") {
+  set resp.http.x-edge-optimize-fo = "1";
 }
 ```
 
@@ -467,9 +464,9 @@ if (!req.http.x-tokowaka-config && req.http.x-tokowaka-request == "failover") {
 
 ### 追加ツール
 
-[Adobe LLM Optimizer：あなたの Web ページはキャッシュ可能ですか？Chrome拡張機能 &#x200B;](https://chromewebstore.google.com/detail/adobe-llm-optimizer-is-yo/jbjngahjjdgonbeinjlepfamjdmdcbcc)、Web ページコンテンツ LLM がアクセスできる Web ページの量と、非表示のままの内容を表示します。 無料のスタンドアロン診断ツールとして設計されているため、製品ライセンスやセットアップは必要ありません。
+[Adobe LLM Optimizer：あなたの Web ページはキャッシュ可能ですか？Chrome拡張機能 ](https://chromewebstore.google.com/detail/adobe-llm-optimizer-is-yo/jbjngahjjdgonbeinjlepfamjdmdcbcc)、Web ページコンテンツ LLM がアクセスできる Web ページの量と、非表示のままの内容を表示します。 無料のスタンドアロン診断ツールとして設計されているため、製品ライセンスやセットアップは必要ありません。
 
-シングルクリックで、任意のサイトの機械読みやすさを評価できます。 AI エージェントが表示する内容と人間のユーザーが表示する内容を横に並べて比較し、LLM Optimizerを使用して復元できるコンテンツの量を推定できます。 [AI があなたのウェブサイトを読むことができるか？](https://business.adobe.com/jp/blog/introducing-the-llm-optimizer-chrome-extension) しくは、ページを参照してください。
+シングルクリックで、任意のサイトの機械読みやすさを評価できます。 AI エージェントが表示する内容と人間のユーザーが表示する内容を横に並べて比較し、LLM Optimizerを使用して復元できるコンテンツの量を推定できます。 [AI があなたのウェブサイトを読むことができるか？](https://business.adobe.com/blog/introducing-the-llm-optimizer-chrome-extension) しくは、ページを参照してください。
 
 ## 商談の詳細
 
@@ -503,7 +500,7 @@ if (!req.http.x-tokowaka-config && req.http.x-tokowaka-request == "failover") {
 
 オポチュニティごとに、エッジで最適化をプレビュー、編集、デプロイ、ライブで表示、ロールバックできます。
 
->[!VIDEO](https://video.tv.adobe.com/v/3477985/?captions=jpn&learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3477983/?learn=on&enablevpops)
 
 ### プレビュー
 
@@ -521,19 +518,19 @@ if (!req.http.x-tokowaka-config && req.http.x-tokowaka-request == "failover") {
 
 **デプロイ** 最適化されたエクスペリエンスをエッジから AI エージェントに提供できるように、選択した提案を公開します。 CDN が完全にルーティングされると、ドメイン内のすべてのページは通常、新しい変更で数分以内に有効になります。 ルーティングが選択パスのみに設定されている場合、許可リストに加えるされたページのみが最適化されて有効になります。
 
-![&#x200B; デプロイ &#x200B;](/help/assets/optimize-at-edge/deploy.png)
+![ デプロイ ](/help/assets/optimize-at-edge/deploy.png)
 
 ### ライブで表示
 
 **ライブで表示** を使用すると、最適化がライブであり、エージェンティックトラフィックに対して期待どおりに動作していることを確認できます。このようなビューは通常、アクセスが困難です。 「固定提案」の下にライブページが表示され、AI エージェントに表示されるようにページがレンダリングされます。
 
-![&#x200B; ライブで表示 &#x200B;](/help/assets/optimize-at-edge/view-live.png)
+![ ライブで表示 ](/help/assets/optimize-at-edge/view-live.png)
 
 ### ロールバック
 
 ロールバックを実行すると、以前にデプロイした最適化が安全に元に戻ります。 通常、ページの AI 専用バージョンは数分以内に以前の状態に戻るので、必要に応じて最適化を安全に試すことができます。
 
-![&#x200B; ロールバック &#x200B;](/help/assets/optimize-at-edge/rollback.png)
+![ ロールバック ](/help/assets/optimize-at-edge/rollback.png)
 
 ## よくある質問
 
