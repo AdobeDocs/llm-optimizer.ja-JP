@@ -11,13 +11,13 @@ recommendations: noDisplay
 source-git-commit: 43372ded8691adbbbbcfd859b4d2176c17115ba8
 workflow-type: tm+mt
 source-wordcount: '56'
-ht-degree: 92%
+ht-degree: 0%
 
 ---
 
 
-# 内部使用メタデータ
+# 内部使用のメタデータ
 
-metadata.md ファイルには、リポジトリ内にあるユーザーガイドの TOC.md ファイルにパススルーされる、リポジトリレベルのメタデータが含まれています。 任意のユーザーガイドの metadata.md コンテンツを変更するには、任意の TOC.md ファイル内で行います。
+metadata.md ファイルには、リポジトリでユーザーガイドの TOC.md ファイルにパススルーされる、リポジトリレベルのメタデータが含まれています。 任意のユーザーガイドの metadata.md コンテンツを変更したい場合は、任意の TOC.md ファイル内で行います。
 
-**ソリューション**、**製品**、**タイプ**&#x200B;の有効な値のリストについては、[メタデータ](https://experienceleague.adobe.com/docs/authoring-guide-exl/using/editing/user-guide-setup/metadata.html?lang=ja)を参照してください。
+[solution](https://experienceleague.adobe.com/docs/authoring-guide-exl/using/editing/user-guide-setup/metadata.html)、**product**、および **type** の有効な値のリストについては、**メタデータ** を参照してください。

@@ -12,9 +12,9 @@ ht-degree: 5%
 
 # ダッシュボードの概要
 
-ダッシュボードの概要へようこそ。 LLM-Optimizer のダッシュボードは、マーケターが AI 検索プラットフォーム全体でブランドの可視性とセンチメントを追跡し、最適化の機会を特定し、規範的な変更を実装して引用とパフォーマンスを向上させるのに役立ちます。
+ダッシュボードの概要へようこそ。 LLM-Optimizer のダッシュボードは、マーケターがAI 検索プラットフォームをまたいでブランドの可視性とセンチメントを追跡し、最適化の機会を特定し、規範的な変更を導入して引用とパフォーマンスを向上させるのに役立ちます。
 
-主要なビューには、ブランドプレゼンス、代理店やリファラルトラフィック、URL インスペクター、オポチュニティの特定、Collaboration、顧客設定などが含まれます。
+主なビューには、ブランドプレゼンス、エージェントとリファラルトラフィック、URL インスペクタ、オポチュニティの特定、Collaboration、お客様の構成などが含まれます。
 
 <!-- CARDS
 
@@ -77,7 +77,7 @@ ht-degree: 5%
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="./brand-presence.md" target="_blank" rel="referrer" title="ブランドプレゼンスダッシュボード"> ブランドプレゼンスダッシュボード </a>
+                        <a href="./brand-presence.md" target="_blank" rel="referrer" title="ブランドプレゼンスダッシュボード">ブランドプレゼンスダッシュボード </a>
                     </p>
                     <p class="is-size-6">センチメント分析や他のブランドのベンチマークなど、LLM 検索プラットフォーム全体でブランドがどのように表示されるかをトラッキングします。</p>
                 </div>
@@ -123,7 +123,7 @@ ht-degree: 5%
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="./referral-traffic.md" target="_blank" rel="referrer" title="リファラルトラフィックダッシュボード"> リファラルトラフィックダッシュボード </a>
+                        <a href="./referral-traffic.md" target="_blank" rel="referrer" title="リファラルトラフィックダッシュボード">リファラルトラフィックダッシュボード </a>
                     </p>
                     <p class="is-size-6">実際の AI ユーザーエンゲージメントを検出できる、AI で生成された引用に起因する人訪問を測定します</p>
                 </div>
@@ -171,7 +171,7 @@ ht-degree: 5%
                     <p class="headline is-size-6 has-text-weight-bold">
                         <a href="./opportunities.md" target="_blank" rel="referrer" title="商談ダッシュボード"> 商談ダッシュボード </a>
                     </p>
-                    <p class="is-size-6">AI を活用した検索プラットフォーム全体でブランドの可視性と引用パフォーマンスを向上させる、実用的なインサイトを表示して優先順位付けします</p>
+                    <p class="is-size-6">AI を活用した検索プラットフォーム全体でブランドの可視性と引用パフォーマンスを向上させる、実用的なインサイトを表示して優先順位を付けます</p>
                 </div>
                 <a href="./opportunities.md" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                     <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">詳細情報</span>
