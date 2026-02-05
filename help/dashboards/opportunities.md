@@ -16,7 +16,7 @@ ht-degree: 1%
 
 これらの最適化には、ページ上の修正（構造化コンテンツ、正規化、概要の追加）、技術的な調整（AI web クローラーのブロック解除やエラーの解決）、サードパーティの権限のあるサイト上のコンテンツへの影響などが含まれます。 これらの最適化の機会に対処することで、ブランドが正確に示され、ジェネレーティブな回答で引き合いに出される可能性が高くなります。
 
-![ 最適化の機会 ](/help/dashboards/assets/oport.png)
+![&#x200B; 最適化の機会 &#x200B;](/help/dashboards/assets/oport.png)
 
 ## 商談ダッシュボード
 
@@ -42,7 +42,7 @@ ht-degree: 1%
 
 ## 自動最適化 {#auto-optimization}
 
-自動最適化により、推奨される最適化をワンクリックでデプロイでき、手動の労力と価値創出までの時間を削減できます。 最適化は、コンテンツソースまたは CDN エッジで適用できます。 Edge ベースの自動最適化は、現在、一部のオポチュニティに対して早期アクセスで利用できます。 詳しくは、[Edgeで最適化 ](/help/dashboards/optimize-at-edge.md) ページを参照してください。
+自動最適化により、推奨される最適化をワンクリックでデプロイでき、手動の労力と価値創出までの時間を削減できます。 最適化は、コンテンツソースまたは CDN エッジで適用できます。 Edge ベースの自動最適化は、現在、一部のオポチュニティに対して早期アクセスで利用できます。 詳しくは、[Edgeで最適化 &#x200B;](/help/dashboards/optimize-at-edge.md) ページを参照してください。
 
 <!--### Recover Content Visibility Opportunity {#recover-contet}
 
@@ -50,4 +50,4 @@ As stated above, the content visibility opportunity, flags pages where key conte
 
 ### 追加ツール
 
-[LLM 表示チェッカー ](https://chromewebstore.google.com/detail/is-your-webpage-citable/jbjngahjjdgonbeinjlepfamjdmdcbcc) は、LLM がアクセスできる web ページコンテンツの量と、非表示のままの内容を正確に確認できるChrome拡張機能です。 無料のスタンドアロン診断ツールとして設計されているため、製品ライセンスやセットアップは必要ありません。 ユーザーはシングルクリックで、任意のサイトの機械可読性を評価し、AI エージェントの表示内容と人間のユーザーの表示内容を横に並べて比較できます。 また、LLM Optimizerを使用して復元できるコンテンツの量を見積もります。
+[LLM 表示チェッカー &#x200B;](https://chromewebstore.google.com/detail/is-your-webpage-citable/jbjngahjjdgonbeinjlepfamjdmdcbcc) は、LLM がアクセスできる web ページコンテンツの量と、非表示のままの内容を正確に確認できるChrome拡張機能です。 無料のスタンドアロン診断ツールとして設計されているため、製品ライセンスやセットアップは必要ありません。 ユーザーはシングルクリックで、任意のサイトの機械可読性を評価し、AI エージェントの表示内容と人間のユーザーの表示内容を横に並べて比較できます。 また、LLM Optimizerを使用して復元できるコンテンツの量を見積もります。

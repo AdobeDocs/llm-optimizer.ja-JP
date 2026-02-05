@@ -13,13 +13,13 @@ ht-degree: 0%
 
 ## 行動規範
 
-このプロジェクトはAdobe[ 行動規範 ](code-of-conduct.md) を遵守しています。 参加することにより、
+このプロジェクトはAdobe[&#x200B; 行動規範 &#x200B;](code-of-conduct.md) を遵守しています。 参加することにより、
 この行動規範を遵守することが求められます。 受け入れがたい行動を見かけた場合は
 [Grp-opensourceoffice@adobe.com](mailto:Grp-opensourceoffice@adobe.com)。
 
 ## 投稿者ガイドドキュメント
 
-詳しくは、[ 投稿者ガイド ](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html) を参照してください。
+詳しくは、[&#x200B; 投稿者ガイド &#x200B;](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html) を参照してください。
 
 ## 質問がある場合
 
@@ -31,14 +31,14 @@ ht-degree: 0%
 
 このプロジェクトへのサードパーティ投稿者には、署名済みの投稿者が関連付けられている必要があります
 使用許諾契約。 これにより、Adobeに投稿を再配布する権限が付与されます
-プロジェクトの一環として。 [ アドビの CLA に署名してください ](http://opensource.adobe.com/cla.html)。 あなた
+プロジェクトの一環として。 [&#x200B; アドビの CLA に署名してください &#x200B;](http://opensource.adobe.com/cla.html)。 あなた
 Adobe CLA の送信は 1 回だけでかまいません。したがって、以前に送信したことがある場合は、
 行ってもよろしい。
 
 ## コードレビュー
 
 すべての送信は、プルリクエスト形式でおこなわれ、レビューする必要があります
-プロジェクト コミッター別 [GitHub のプルリクエストドキュメントをお読みください ](https://help.github.com/articles/about-pull-requests/)
+プロジェクト コミッター別 [GitHub のプルリクエストドキュメントをお読みください &#x200B;](https://help.github.com/articles/about-pull-requests/)
 プルリクエストの送信に関する詳細情報。
 
 <!--
@@ -57,4 +57,4 @@ submitting a pull request!
 
 ## セキュリティ上の問題
 
-セキュリティ上の問題は、このイシュートラッカーでは報告しないでください。 代わりに、[ セキュリティの専門家に問題を提起してください ](https://helpx.adobe.com/jp/security/alertus.html)
+セキュリティ上の問題は、このイシュートラッカーでは報告しないでください。 代わりに、[&#x200B; セキュリティの専門家に問題を提起してください &#x200B;](https://helpx.adobe.com/jp/security/alertus.html)

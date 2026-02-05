@@ -15,7 +15,7 @@ ht-degree: 1%
 このページでは、オーサリングを変更せずに CDN エッジで最適化を配信する方法の詳細な概要を説明します。 オンボーディングプロセス、利用可能な最適化の機会、Edge で自動最適化する方法について説明します。
 
 >[!NOTE]
->この機能は、現在、早期アクセス中です。 アーリーアクセスプログラムについて詳しくは [ こちら ](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/release-notes/release-notes/release-notes-current#aem-beta-programs) を参照してください。
+>この機能は、現在、早期アクセス中です。 アーリーアクセスプログラムについて詳しくは [&#x200B; こちら &#x200B;](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/release-notes/release-notes/release-notes-current#aem-beta-programs) を参照してください。
 
 ## Edgeでの最適化とは
 
@@ -35,7 +35,7 @@ Edgeでの最適化は、マーケティング、SEO、コンテンツ、デジ�
 
 ### Edgeでの最適化でサポートされているオポチュニティを教えてください。
 
-Edgeの最適化では、効率的な web エクスペリエンスを実現するオポチュニティがサポートされています。 [ 商談ダッシュボード ](/help/dashboards/opportunities.md) ページの各商談について、および現在のページの商談セクションについて詳しく説明します。
+Edgeの最適化では、効率的な web エクスペリエンスを実現するオポチュニティがサポートされています。 [&#x200B; 商談ダッシュボード &#x200B;](/help/dashboards/opportunities.md) ページの各商談について、および現在のページの商談セクションについて詳しく説明します。
 
 ## オンボーディング
 
@@ -71,7 +71,7 @@ curl -svo page.html https://frescopa.coffee/about-us --header "user-agent: chatg
 < x-edgeoptimize-request-id: 50fce12d-0519-4fc6-af78-d928785c1b85
 ```
 
-ルーティング設定は、[originSelector CDN ルール ](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn-configuring-traffic#origin-selectors) を使用して行われます。 前提条件は次のとおりです。
+ルーティング設定は、[originSelector CDN ルール &#x200B;](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn-configuring-traffic#origin-selectors) を使用して行われます。 前提条件は次のとおりです。
 
 * ルーティングするドメインの決定
 * ルーティングするパスの決定
@@ -79,7 +79,7 @@ curl -svo page.html https://frescopa.coffee/about-us --header "user-agent: chatg
 
 ルールをデプロイするには、次の操作が必要です。
 
-* [ 設定パイプライン ](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/operations/config-pipeline) を作成
+* [&#x200B; 設定パイプライン &#x200B;](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/operations/config-pipeline) を作成
 * リポジトリ内の `cdn.yaml` 設定ファイルをコミットします
 * 設定パイプラインを実行
 
@@ -127,7 +127,7 @@ curl -svo page.html https://www.example.com/page.html --header "user-agent: chat
 
 ![Fastly VCL](/help/assets/optimize-at-edge/fastly-vcl.png)
 
-![VCL スニペットの追加 ](/help/assets/optimize-at-edge/add-vcl-snippets.png)
+![VCL スニペットの追加 &#x200B;](/help/assets/optimize-at-edge/add-vcl-snippets.png)
 
 **vcl_recv スニペット**
 
@@ -182,41 +182,41 @@ if (!req.http.x-edgeoptimize-config && req.http.x-edgeoptimize-request == "failo
 
 **1. ルーティング条件を設定（ユーザーエージェントによるマッチング）**
 
-![ ルーティング条件の設定 ](/help/assets/optimize-at-edge/akamai-step1-routing.png)
+![&#x200B; ルーティング条件の設定 &#x200B;](/help/assets/optimize-at-edge/akamai-step1-routing.png)
 
 **2.接触チャネルと SSL 動作の設定**
 
-![ 接触チャネルと SSL 動作の設定 ](/help/assets/optimize-at-edge/akamai-step2-origin.png)
+![&#x200B; 接触チャネルと SSL 動作の設定 &#x200B;](/help/assets/optimize-at-edge/akamai-step2-origin.png)
 
 **3.キャッシュ キー変数** 設定
 
-![ キャッシュキー変数を設定 ](/help/assets/optimize-at-edge/akamai-step3-cachekey.png)
+![&#x200B; キャッシュキー変数を設定 &#x200B;](/help/assets/optimize-at-edge/akamai-step3-cachekey.png)
 
 **4. キャッシュルール**
 
-![ キャッシュルール ](/help/assets/optimize-at-edge/akamai-step4-rules.png)
+![&#x200B; キャッシュルール &#x200B;](/help/assets/optimize-at-edge/akamai-step4-rules.png)
 
 **5. 受信リクエストヘッダーを変更**
 
-![ 受信リクエストヘッダーの変更 ](/help/assets/optimize-at-edge/akamai-step5-request.png)
+![&#x200B; 受信リクエストヘッダーの変更 &#x200B;](/help/assets/optimize-at-edge/akamai-step5-request.png)
 
 **6。 受信応答ヘッダー** 変更
 
-![ 受信応答ヘッダーの変更 ](/help/assets/optimize-at-edge/akamai-step6-response.png)
+![&#x200B; 受信応答ヘッダーの変更 &#x200B;](/help/assets/optimize-at-edge/akamai-step6-response.png)
 
 **7。 キャッシュ ID の変更**
 
-![ キャッシュ ID の変更 ](/help/assets/optimize-at-edge/akamai-step7-cacheid.png)
+![&#x200B; キャッシュ ID の変更 &#x200B;](/help/assets/optimize-at-edge/akamai-step7-cacheid.png)
 
 **8。 サイト・フェイルオーバー**
 
-![ サイト・フェイルオーバー ](/help/assets/optimize-at-edge/akamai-step8-failover.png)
+![&#x200B; サイト・フェイルオーバー &#x200B;](/help/assets/optimize-at-edge/akamai-step8-failover.png)
 
-![ フェイルオーバー動作 ](/help/assets/optimize-at-edge/akamai-step8-failover-behaviors.png)
+![&#x200B; フェイルオーバー動作 &#x200B;](/help/assets/optimize-at-edge/akamai-step8-failover-behaviors.png)
 
-![ フェイルオーバールール ](/help/assets/optimize-at-edge/akamai-step8-failover-rules.png)
+![&#x200B; フェイルオーバールール &#x200B;](/help/assets/optimize-at-edge/akamai-step8-failover-rules.png)
 
-![ 行動応答 ](/help/assets/optimize-at-edge/akamai-step8-behaviors-response.png)
+![&#x200B; 行動応答 &#x200B;](/help/assets/optimize-at-edge/akamai-step8-behaviors-response.png)
 
 設定をテストするには、curl を実行し、次の内容を確認します。
 
@@ -245,7 +245,7 @@ curl -svo page.html https://www.example.com/page.html --header "user-agent: chat
 
 ### 追加ツール
 
-[Adobe LLM Optimizer：あなたの Web ページはキャッシュ可能ですか？Chrome拡張機能 ](https://chromewebstore.google.com/detail/adobe-llm-optimizer-is-yo/jbjngahjjdgonbeinjlepfamjdmdcbcc)、Web ページコンテンツ LLM がアクセスできる Web ページの量と、非表示のままの内容を表示します。 無料のスタンドアロン診断ツールとして設計されているため、製品ライセンスやセットアップは必要ありません。
+[Adobe LLM Optimizer：あなたの Web ページはキャッシュ可能ですか？Chrome拡張機能 &#x200B;](https://chromewebstore.google.com/detail/adobe-llm-optimizer-is-yo/jbjngahjjdgonbeinjlepfamjdmdcbcc)、Web ページコンテンツ LLM がアクセスできる Web ページの量と、非表示のままの内容を表示します。 無料のスタンドアロン診断ツールとして設計されているため、製品ライセンスやセットアップは必要ありません。
 
 シングルクリックで、任意のサイトの機械読みやすさを評価できます。 AI エージェントが表示する内容と人間のユーザーが表示する内容を横に並べて比較し、LLM Optimizerを使用して復元できるコンテンツの量を推定できます。 [AI があなたのウェブサイトを読むことができるか？](https://business.adobe.com/blog/introducing-the-llm-optimizer-chrome-extension) しくは、ページを参照してください。
 
@@ -299,19 +299,19 @@ curl -svo page.html https://www.example.com/page.html --header "user-agent: chat
 
 **デプロイ** 最適化されたエクスペリエンスをエッジから AI エージェントに提供できるように、選択した提案を公開します。 CDN が完全にルーティングされると、ドメイン内のすべてのページは通常、新しい変更で数分以内に有効になります。 ルーティングが選択パスのみに設定されている場合、許可リストに加えるされたページのみが最適化されて有効になります。
 
-![ デプロイ ](/help/assets/optimize-at-edge/deploy.png)
+![&#x200B; デプロイ &#x200B;](/help/assets/optimize-at-edge/deploy.png)
 
 ### ライブ表示
 
 **ライブで表示** を使用すると、最適化がライブであり、エージェンティックトラフィックに対して期待どおりに動作していることを確認できます。このようなビューは通常、アクセスが困難です。 「固定提案」の下にライブページが表示され、AI エージェントに表示されるようにページがレンダリングされます。
 
-![ ライブで表示 ](/help/assets/optimize-at-edge/view-live.png)
+![&#x200B; ライブで表示 &#x200B;](/help/assets/optimize-at-edge/view-live.png)
 
 ### ロールバック
 
 ロールバックを実行すると、以前にデプロイした最適化が安全に元に戻ります。 通常、ページの AI 専用バージョンは数分以内に以前の状態に戻るので、必要に応じて最適化を安全に試すことができます。
 
-![ ロールバック ](/help/assets/optimize-at-edge/rollback.png)
+![&#x200B; ロールバック &#x200B;](/help/assets/optimize-at-edge/rollback.png)
 
 ## よくある質問
 
