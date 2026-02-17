@@ -1,20 +1,20 @@
 ---
 title: ダッシュボードの概要
-description: 記事の概要です。
+description: これは記事の概要です。
 feature: Onboarding
-source-git-commit: c6e37395362262eb5fe8366473e76086e36d77e9
+source-git-commit: ae37ef578f279eae6ea51fd8aed5c6b91c8e1088
 workflow-type: tm+mt
-source-wordcount: '255'
-ht-degree: 5%
+source-wordcount: '262'
+ht-degree: 93%
 
 ---
 
 
 # ダッシュボードの概要
 
-ダッシュボードの概要へようこそ。 LLM-Optimizer のダッシュボードは、マーケターがAI 検索プラットフォームをまたいでブランドの可視性とセンチメントを追跡し、最適化の機会を特定し、規範的な変更を導入して引用とパフォーマンスを向上させるのに役立ちます。
+ダッシュボードの概要へようこそ。 LLM-Optimizer のダッシュボードは、マーケターが AI 検索プラットフォームをまたいでブランドの可視性とセンチメントを追跡し、最適化の機会を特定し、引用とパフォーマンスを改善する規範的な変更を実装するのに役立ちます。
 
-主なビューには、ブランドプレゼンス、エージェントとリファラルトラフィック、URL インスペクタ、オポチュニティの特定、Collaboration、お客様の構成などが含まれます。
+主要なビューには、概要、ブランドプレゼンス、エージェントとリファラルトラフィック、URL インスペクター、オポチュニティ、Collaboration、Customer Configuration などが含まれます。
 
 <!-- CARDS
 
@@ -77,9 +77,9 @@ ht-degree: 5%
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="./brand-presence.md" target="_blank" rel="referrer" title="ブランドプレゼンスダッシュボード">ブランドプレゼンスダッシュボード </a>
+                        <a href="./brand-presence.md" target="_blank" rel="referrer" title="ブランドプレゼンスダッシュボード">ブランドプレゼンスダッシュボード</a>
                     </p>
-                    <p class="is-size-6">センチメント分析や他のブランドのベンチマークなど、LLM 検索プラットフォーム全体でブランドがどのように表示されるかをトラッキングします。</p>
+                    <p class="is-size-6">センチメント分析やその他のブランドのベンチマークなど、LLM 検索プラットフォームをまたいでブランドがどのように表示されるかを追跡します。</p>
                 </div>
                 <a href="./brand-presence.md" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                     <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">詳細情報</span>
@@ -91,8 +91,8 @@ ht-degree: 5%
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="./agentic-traffic.md" title="エージェンティックトラフィックダッシュボード" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="/help/assets/overview/agentic-traffic-card.png" alt="エージェンティックトラフィックダッシュボード"
+                    <a href="./agentic-traffic.md" title="エージェントトラフィックダッシュボード" target="_blank" rel="referrer">
+                        <img class="is-bordered-r-small" src="/help/assets/overview/agentic-traffic-card.png" alt="エージェントトラフィックダッシュボード"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -100,9 +100,9 @@ ht-degree: 5%
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="./agentic-traffic.md" target="_blank" rel="referrer" title="エージェンティックトラフィックダッシュボード">Agentic トラフィックダッシュボード </a>
+                        <a href="./agentic-traffic.md" target="_blank" rel="referrer" title="エージェントトラフィックダッシュボード">エージェントトラフィックダッシュボード</a>
                     </p>
-                    <p class="is-size-6">従来の分析では得られなかった LLM からのトラフィックを表示し、AI による検出をエンゲージメントと収益に結び付けるのに役立ちます。</p>
+                    <p class="is-size-6">従来の分析では見逃されていた LLM からのトラフィックを明らかにし、AI による検出をエンゲージメントと売上高に結び付けるのに役立ちます。</p>
                 </div>
                 <a href="./agentic-traffic.md" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                     <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">詳細情報</span>
@@ -123,9 +123,9 @@ ht-degree: 5%
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="./referral-traffic.md" target="_blank" rel="referrer" title="リファラルトラフィックダッシュボード">リファラルトラフィックダッシュボード </a>
+                        <a href="./referral-traffic.md" target="_blank" rel="referrer" title="リファラルトラフィックダッシュボード">リファラルトラフィックダッシュボード</a>
                     </p>
-                    <p class="is-size-6">実際の AI ユーザーエンゲージメントを検出できる、AI で生成された引用に起因する人訪問を測定します</p>
+                    <p class="is-size-6">AI 生成の引用から発生した人間の訪問を測定し、実際の AI ユーザーエンゲージメントを検出できます。</p>
                 </div>
                 <a href="./referral-traffic.md" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                     <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">詳細情報</span>
@@ -137,8 +137,8 @@ ht-degree: 5%
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="./collaboration.md" title="Collaboration ダッシュボード" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="/help/assets/overview/collaboration-card.png" alt="Collaboration ダッシュボード"
+                    <a href="./collaboration.md" title="コラボレーションダッシュボード" target="_blank" rel="referrer">
+                        <img class="is-bordered-r-small" src="/help/assets/overview/collaboration-card.png" alt="コラボレーションダッシュボード"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -146,9 +146,9 @@ ht-degree: 5%
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="./collaboration.md" target="_blank" rel="referrer" title="Collaboration ダッシュボード">Collaboration ダッシュボード </a>
+                        <a href="./collaboration.md" target="_blank" rel="referrer" title="コラボレーションダッシュボード">コラボレーションダッシュボード</a>
                     </p>
-                    <p class="is-size-6">を使用すると、共有ワークスペースに同僚を招待できるので、部門横断的なチームワークが可能になります。</p>
+                    <p class="is-size-6">同僚を共有ワークスペースに招待することで、部門横断的なチームワークを実現できます。</p>
                 </div>
                 <a href="./collaboration.md" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                     <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">詳細情報</span>
@@ -160,8 +160,8 @@ ht-degree: 5%
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="./opportunities.md" title="商談ダッシュボード" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="/help/assets/overview/opportunities-card.png" alt="商談ダッシュボード"
+                    <a href="./opportunities.md" title="オポチュニティダッシュボード" target="_blank" rel="referrer">
+                        <img class="is-bordered-r-small" src="/help/assets/overview/opportunities-card.png" alt="オポチュニティダッシュボード"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -169,9 +169,9 @@ ht-degree: 5%
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="./opportunities.md" target="_blank" rel="referrer" title="商談ダッシュボード"> 商談ダッシュボード </a>
+                        <a href="./opportunities.md" target="_blank" rel="referrer" title="オポチュニティダッシュボード">オポチュニティダッシュボード</a>
                     </p>
-                    <p class="is-size-6">AI を活用した検索プラットフォーム全体でブランドの可視性と引用パフォーマンスを向上させる、実用的なインサイトを表示して優先順位を付けます</p>
+                    <p class="is-size-6">AI を活用した検索プラットフォームをまたいでブランドの可視性と引用パフォーマンスを向上させる実用的なインサイトを明らかにし、優先順位を付けます。</p>
                 </div>
                 <a href="./opportunities.md" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                     <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">詳細情報</span>
@@ -183,8 +183,8 @@ ht-degree: 5%
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="./url-inspector.md" title="URL 検査ダッシュボード" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="/help/assets/overview/url-inspector-card.png" alt="URL 検査ダッシュボード"
+                    <a href="./url-inspector.md" title="URL インスペクターダッシュボード" target="_blank" rel="referrer">
+                        <img class="is-bordered-r-small" src="/help/assets/overview/url-inspector-card.png" alt="URL インスペクターダッシュボード"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -192,9 +192,9 @@ ht-degree: 5%
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="./url-inspector.md" target="_blank" rel="referrer" title="URL 検査ダッシュボード">URL 検査ダッシュボード </a>
+                        <a href="./url-inspector.md" target="_blank" rel="referrer" title="URL インスペクターダッシュボード">URL インスペクターダッシュボード</a>
                     </p>
-                    <p class="is-size-6">AI 駆動型検索環境において、所有する URL のパフォーマンスを可視化します。</p>
+                    <p class="is-size-6">AI 駆動型検索環境で所有コンテンツの URL のパフォーマンスを可視化します。</p>
                 </div>
                 <a href="./url-inspector.md" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                     <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">詳細情報</span>
@@ -215,9 +215,9 @@ ht-degree: 5%
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="./customer-configuration.md" target="_blank" rel="referrer" title="顧客設定ダッシュボード"> 顧客設定ダッシュボード </a>
+                        <a href="./customer-configuration.md" target="_blank" rel="referrer" title="顧客設定ダッシュボード">顧客設定ダッシュボード</a>
                     </p>
-                    <p class="is-size-6">組織は、Adobe LLM Optimizerが具体的なニーズにどのように対応するかを制御できます。</p>
+                    <p class="is-size-6">組織が特定のニーズに合わせて Adobe LLM Optimizer の動作を制御できるようにします。</p>
                 </div>
                 <a href="./customer-configuration.md" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                     <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">詳細情報</span>
