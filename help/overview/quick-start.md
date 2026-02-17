@@ -38,7 +38,7 @@ AEM Cloud （Cloud Service、Managed Services、Edge Delivery サービス）を
 無料版では使用できない製品機能がいくつかあります。
 
 * 体験版は 1 つのドメインに制限されています。 設定が完了すると、指定したドメインを変更できません。
-* 最適化をデプロイする機能は、早期アクセスで利用できます。 詳しくは、[Edgeで最適化に関するよくある質問 ](https://experienceleague.adobe.com/en/docs/llm-optimizer/using/resources/optimize-at-edge#frequently-asked-questions) を参照してください。
+* 最適化をデプロイする機能は、早期アクセスで利用できます。 詳しくは、[Edgeで最適化に関するよくある質問 &#x200B;](https://experienceleague.adobe.com/en/docs/llm-optimizer/using/resources/optimize-at-edge#frequently-asked-questions) を参照してください。
 
 無料体験版のアクティブ化方法とドメインのオンボード方法について詳しくは、以下の節を参照してください。
 
