@@ -68,15 +68,15 @@ IT／CDN チームの要件：
 
 1. **顧客設定** に移動し、「**CDN 設定**」タブを選択します。
 
-   ![ 顧客設定に移動 ](/help/assets/optimize-at-edge/prereq-customer-config-nav.png)
+   ![&#x200B; 顧客設定に移動 &#x200B;](/help/assets/optimize-at-edge/prereq-customer-config-nav.png)
 
 2. 「**最適化をデプロイするための AI トラフィックルーティング**」で、「**最適化を AI エージェントにデプロイ**」チェックボックスをオンにします。 Adobe チームが、お客様に代わってルーティング設定を処理します。
 
-   ![AI エージェントへのティックのデプロイの最適化 ](/help/assets/optimize-at-edge/prereq-deploy-checkbox.png)
+   ![AI エージェントへのティックのデプロイの最適化 &#x200B;](/help/assets/optimize-at-edge/prereq-deploy-checkbox.png)
 
 3. チェックボックスを有効にすると、ステータスにセットアップが進行中であることが示されます。 Adobe チームがルーティング設定を行います。
 
-   ![AI トラフィックルーティングの設定中 ](/help/assets/optimize-at-edge/prereq-traffic-routing-progress.png)
+   ![AI トラフィックルーティングの設定中 &#x200B;](/help/assets/optimize-at-edge/prereq-traffic-routing-progress.png)
 
    ルーティングが設定され、アクティブになると、ステータスが更新され、ルーティングが正常に有効になったことを示す緑色のチェックマークが表示されます。 ユーザー側でこれ以上のアクションを行う必要はありません。
 
@@ -92,7 +92,7 @@ Cloud Manager パイプラインを使用して自分でルーティングを設
 
 ルールをデプロイするには、次の操作を実行する必要があります。
 
-* [ 設定パイプライン ](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/operations/config-pipeline) を作成します。
+* [&#x200B; 設定パイプライン &#x200B;](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/operations/config-pipeline) を作成します。
 * リポジトリの `cdn.yaml` 設定ファイルをコミットします。
 * 設定パイプラインを実行します。
 
@@ -137,7 +137,7 @@ curl -svo /dev/null https://www.example.com/page.html --header "user-agent: chat
 
 トラフィックルーティングのステータスは、LLM Optimizer UI でも確認できます。 **顧客設定** に移動し、「**CDN 設定**」タブを選択します。
 
-![ ルーティングを有効にした AI トラフィックルーティングステータス ](/help/assets/optimize-at-edge/adobe-CDN-traffic-routed-tick.png)
+![&#x200B; ルーティングを有効にした AI トラフィックルーティングステータス &#x200B;](/help/assets/optimize-at-edge/adobe-CDN-traffic-routed-tick.png)
 
 >[!TAB Fastly（BYOCDN）]
 
@@ -158,15 +158,15 @@ Fastly VCL ルールを設定する前に、以下が揃っていることを確
 
 1. **顧客設定** に移動し、「**CDN 設定**」タブを選択します。
 
-   ![ 顧客設定に移動 ](/help/assets/optimize-at-edge/prereq-customer-config-nav.png)
+   ![&#x200B; 顧客設定に移動 &#x200B;](/help/assets/optimize-at-edge/prereq-customer-config-nav.png)
 
 2. 「**最適化をデプロイするための AI トラフィックルーティング**」で、「**最適化を AI エージェントにデプロイ**」チェックボックスをオンにします。
 
-   ![AI エージェントへのティックのデプロイの最適化 ](/help/assets/optimize-at-edge/prereq-deploy-checkbox.png)
+   ![AI エージェントへのティックのデプロイの最適化 &#x200B;](/help/assets/optimize-at-edge/prereq-deploy-checkbox.png)
 
 3. API キーをコピーして、以下のルーティング設定手順に進みます。
 
-   ![API キーをコピーします ](/help/assets/optimize-at-edge/prereq-copy-api-key.png)
+   ![API キーをコピーします &#x200B;](/help/assets/optimize-at-edge/prereq-copy-api-key.png)
 
    >[!NOTE]
    >この段階では、ステータスに、設定がまだ完了していないことを示す赤い十字が表示される場合があります。 これは想定されています。以下のルーティング設定を完了し、AI ボットトラフィックのフローが開始されると、ステータスが緑色のチェックマークに更新され、ルーティングが正常に有効であることが確認されます。
@@ -243,7 +243,7 @@ curl -svo /dev/null https://www.example.com/page.html --header "user-agent: chat
 
 トラフィックルーティングのステータスは、LLM Optimizer UI でも確認できます。 **顧客設定** に移動し、「**CDN 設定**」タブを選択します。
 
-![ ルーティングを有効にした AI トラフィックルーティングステータス ](/help/assets/optimize-at-edge/byocdn-CDN-traffic-routed-tick.png)
+![&#x200B; ルーティングを有効にした AI トラフィックルーティングステータス &#x200B;](/help/assets/optimize-at-edge/byocdn-CDN-traffic-routed-tick.png)
 
 >[!TAB Akamai（BYOCDN）]
 
@@ -264,15 +264,15 @@ Akamai Property Manager ルールを設定する前に、次のことを確認�
 
 1. **顧客設定** に移動し、「**CDN 設定**」タブを選択します。
 
-   ![ 顧客設定に移動 ](/help/assets/optimize-at-edge/prereq-customer-config-nav.png)
+   ![&#x200B; 顧客設定に移動 &#x200B;](/help/assets/optimize-at-edge/prereq-customer-config-nav.png)
 
 2. 「**最適化をデプロイするための AI トラフィックルーティング**」で、「**最適化を AI エージェントにデプロイ**」チェックボックスをオンにします。
 
-   ![AI エージェントへのティックのデプロイの最適化 ](/help/assets/optimize-at-edge/prereq-deploy-checkbox.png)
+   ![AI エージェントへのティックのデプロイの最適化 &#x200B;](/help/assets/optimize-at-edge/prereq-deploy-checkbox.png)
 
 3. API キーをコピーして、以下のルーティング設定手順に進みます。
 
-   ![API キーをコピーします ](/help/assets/optimize-at-edge/prereq-copy-api-key.png)
+   ![API キーをコピーします &#x200B;](/help/assets/optimize-at-edge/prereq-copy-api-key.png)
 
    >[!NOTE]
    >この段階では、ステータスに、設定がまだ完了していないことを示す赤い十字が表示される場合があります。 これは想定されています。以下のルーティング設定を完了し、AI ボットトラフィックのフローが開始されると、ステータスが緑色のチェックマークに更新され、ルーティングが正常に有効であることが確認されます。
@@ -333,9 +333,9 @@ LLMO から取得した API キーに `x-edgeoptimize-api-key` しています
 
 **8. 送信リクエストヘッダーを変更**
 
-ヘッダー `x-forwarded-host``{{builtin.AK_HOST}}` に設定
+ヘッダー `x-forwarded-host` `{{builtin.AK_HOST}}` に設定
 
-![ 送信リクエストヘッダーの変更 ](/help/assets/optimize-at-edge/akamai-step8-outgoing-request.png)
+![&#x200B; 送信リクエストヘッダーの変更 &#x200B;](/help/assets/optimize-at-edge/akamai-step8-outgoing-request.png)
 
 **9. サイトフェイルオーバー**
 
@@ -364,7 +364,7 @@ curl -svo /dev/null https://www.example.com/page.html --header "user-agent: chat
 
 トラフィックルーティングのステータスは、LLM Optimizer UI でも確認できます。 **顧客設定** に移動し、「**CDN 設定**」タブを選択します。
 
-![ ルーティングを有効にした AI トラフィックルーティングステータス ](/help/assets/optimize-at-edge/byocdn-CDN-traffic-routed-tick.png)
+![&#x200B; ルーティングを有効にした AI トラフィックルーティングステータス &#x200B;](/help/assets/optimize-at-edge/byocdn-CDN-traffic-routed-tick.png)
 
 >[!TAB Cloudflare （BYOCDN） ]
 
@@ -386,15 +386,15 @@ Cloudflare Worker のルーティングルールを設定する前に、以下�
 
 1. **顧客設定** に移動し、「**CDN 設定**」タブを選択します。
 
-   ![ 顧客設定に移動 ](/help/assets/optimize-at-edge/prereq-customer-config-nav.png)
+   ![&#x200B; 顧客設定に移動 &#x200B;](/help/assets/optimize-at-edge/prereq-customer-config-nav.png)
 
 2. 「**最適化をデプロイするための AI トラフィックルーティング**」で、「**最適化を AI エージェントにデプロイ**」チェックボックスをオンにします。
 
-   ![AI エージェントへのティックのデプロイの最適化 ](/help/assets/optimize-at-edge/prereq-deploy-checkbox.png)
+   ![AI エージェントへのティックのデプロイの最適化 &#x200B;](/help/assets/optimize-at-edge/prereq-deploy-checkbox.png)
 
 3. API キーをコピーして、以下のルーティング設定手順に進みます。
 
-   ![API キーをコピーします ](/help/assets/optimize-at-edge/prereq-copy-api-key.png)
+   ![API キーをコピーします &#x200B;](/help/assets/optimize-at-edge/prereq-copy-api-key.png)
 
    >[!NOTE]
    >この段階では、ステータスに、設定がまだ完了していないことを示す赤い十字が表示される場合があります。 これは想定されています。以下のルーティング設定を完了し、AI ボットトラフィックのフローが開始されると、ステータスが緑色のチェックマークに更新され、ルーティングが正常に有効であることが確認されます。
@@ -436,7 +436,7 @@ Edge Optimize バックエンドへのリクエストでは、次のヘッダー
 4. ワーカーに名前を付けます（例：`edge-optimize-router`）。
 5. 「**デプロイ**」をクリックして、デフォルトのコードを使用してワーカーを作成します。
 
-![Cloudflare Workers ダッシュボード ](/help/assets/optimize-at-edge/cloudflare-workers-dashboard.png)
+![Cloudflare Workers ダッシュボード &#x200B;](/help/assets/optimize-at-edge/cloudflare-workers-dashboard.png)
 
 **手順 2：ワーカーコードの追加**
 
@@ -609,7 +609,7 @@ async function failoverToOrigin(request, env, url) {
 
 **保存してデプロイ** をクリックして、ワーカーを公開します。
 
-![Cloudflare Worker コードエディター ](/help/assets/optimize-at-edge/cloudflare-worker-editor.png)
+![Cloudflare Worker コードエディター &#x200B;](/help/assets/optimize-at-edge/cloudflare-worker-editor.png)
 
 **手順 3：環境変数の設定**
 
@@ -627,7 +627,7 @@ async function failoverToOrigin(request, env, url) {
 4. API キーの場合は、「**暗号化**」をクリックして、安全に保存します。
 5. **保存してデプロイ** をクリックします。
 
-![Cloudflare 環境変数 ](/help/assets/optimize-at-edge/cloudflare-env-variables.png)
+![Cloudflare 環境変数 &#x200B;](/help/assets/optimize-at-edge/cloudflare-env-variables.png)
 
 **手順 4：ドメインへのルートの追加**
 
@@ -645,7 +645,7 @@ async function failoverToOrigin(request, env, url) {
 2. **ワーカールート** に移動します。
 3. **ルートを追加** をクリックし、パターンとワーカーを指定します。
 
-![Cloudflare ワーカールート ](/help/assets/optimize-at-edge/cloudflare-worker-routes.png)
+![Cloudflare ワーカールート &#x200B;](/help/assets/optimize-at-edge/cloudflare-worker-routes.png)
 
 **手順 5：設定を確認する**
 
@@ -665,7 +665,7 @@ curl -svo /dev/null https://www.example.com/page.html \
 
 トラフィックルーティングのステータスは、LLM Optimizer UI でも確認できます。 **顧客設定** に移動し、「**CDN 設定**」タブを選択します。
 
-![ ルーティングを有効にした AI トラフィックルーティングステータス ](/help/assets/optimize-at-edge/byocdn-CDN-traffic-routed-tick.png)
+![&#x200B; ルーティングを有効にした AI トラフィックルーティングステータス &#x200B;](/help/assets/optimize-at-edge/byocdn-CDN-traffic-routed-tick.png)
 
 また、通常のトラフィックが引き続き動作することを確認することもできます。
 
