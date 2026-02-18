@@ -3,7 +3,7 @@ title: 最適化の機会
 description: オポチュニティダッシュボードを使用して、ブランドの可視性を高めることを目的に、サイトを改善できる方法を自動的に検出する方法について説明します。
 feature: Opportunities
 source-git-commit: 1f665bd14349c15d92f8274742606abcf9b02000
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '575'
 ht-degree: 100%
 
