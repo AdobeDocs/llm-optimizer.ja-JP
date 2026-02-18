@@ -61,7 +61,7 @@ Edge Optimize バックエンドへのリクエストでは、次のヘッダー
 4. ワーカーに名前を付けます（例：`edge-optimize-router`）。
 5. 「**デプロイ**」をクリックして、デフォルトのコードを使用してワーカーを作成します。
 
-![Cloudflare Workers ダッシュボード ](/help/assets/optimize-at-edge/cloudflare-workers-dashboard.png)
+![Cloudflare Workers ダッシュボード &#x200B;](/help/assets/optimize-at-edge/cloudflare-workers-dashboard.png)
 
 **手順 2：ワーカーコードの追加**
 
@@ -234,7 +234,7 @@ async function failoverToOrigin(request, env, url) {
 
 **保存してデプロイ** をクリックして、ワーカーを公開します。
 
-![Cloudflare Worker コードエディター ](/help/assets/optimize-at-edge/cloudflare-worker-editor.png)
+![Cloudflare Worker コードエディター &#x200B;](/help/assets/optimize-at-edge/cloudflare-worker-editor.png)
 
 **手順 3：環境変数の設定**
 
@@ -252,7 +252,7 @@ async function failoverToOrigin(request, env, url) {
 4. API キーの場合は、「**暗号化**」をクリックして、安全に保存します。
 5. **保存してデプロイ** をクリックします。
 
-![Cloudflare 環境変数 ](/help/assets/optimize-at-edge/cloudflare-env-variables.png)
+![Cloudflare 環境変数 &#x200B;](/help/assets/optimize-at-edge/cloudflare-env-variables.png)
 
 **手順 4：ドメインへのルートの追加**
 
@@ -270,7 +270,7 @@ async function failoverToOrigin(request, env, url) {
 2. **ワーカールート** に移動します。
 3. **ルートを追加** をクリックし、パターンとワーカーを指定します。
 
-![Cloudflare ワーカールート ](/help/assets/optimize-at-edge/cloudflare-worker-routes.png)
+![Cloudflare ワーカールート &#x200B;](/help/assets/optimize-at-edge/cloudflare-worker-routes.png)
 
 **フェイルオーバー動作の確認**
 

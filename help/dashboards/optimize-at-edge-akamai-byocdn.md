@@ -79,9 +79,9 @@ LLMO から取得した API キーに `x-edgeoptimize-api-key` しています
 
 **8. 送信リクエストヘッダーを変更**
 
-ヘッダー `x-forwarded-host``{{builtin.AK_HOST}}` に設定
+ヘッダー `x-forwarded-host` `{{builtin.AK_HOST}}` に設定
 
-![ 送信リクエストヘッダーの変更 ](/help/assets/optimize-at-edge/akamai-step8-outgoing-request.png)
+![&#x200B; 送信リクエストヘッダーの変更 &#x200B;](/help/assets/optimize-at-edge/akamai-step8-outgoing-request.png)
 
 **9. サイトフェイルオーバー**
 
