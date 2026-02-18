@@ -2,10 +2,10 @@
 title: Edge での最適化
 description: オーサリングの変更を必要とせずに、CDN Edge で LLM Optimizer の最適化を実現する方法について説明します。
 feature: Opportunities
-source-git-commit: ae37ef578f279eae6ea51fd8aed5c6b91c8e1088
+source-git-commit: 1f665bd14349c15d92f8274742606abcf9b02000
 workflow-type: tm+mt
-source-wordcount: '4843'
-ht-degree: 45%
+source-wordcount: '4708'
+ht-degree: 44%
 
 ---
 
@@ -68,15 +68,15 @@ IT／CDN チームの要件：
 
 1. **顧客設定** に移動し、「**CDN 設定**」タブを選択します。
 
-   ![&#x200B; 顧客設定に移動 &#x200B;](/help/assets/optimize-at-edge/prereq-customer-config-nav.png)
+   ![ 顧客設定に移動 ](/help/assets/optimize-at-edge/prereq-customer-config-nav.png)
 
 2. 「**最適化をデプロイするための AI トラフィックルーティング**」で、「**最適化を AI エージェントにデプロイ**」チェックボックスをオンにします。 Adobe チームが、お客様に代わってルーティング設定を処理します。
 
-   ![AI エージェントへのティックのデプロイの最適化 &#x200B;](/help/assets/optimize-at-edge/prereq-deploy-checkbox.png)
+   ![AI エージェントへのティックのデプロイの最適化 ](/help/assets/optimize-at-edge/prereq-deploy-checkbox.png)
 
 3. チェックボックスを有効にすると、ステータスにセットアップが進行中であることが示されます。 Adobe チームがルーティング設定を行います。
 
-   ![AI トラフィックルーティングの設定中 &#x200B;](/help/assets/optimize-at-edge/prereq-traffic-routing-progress.png)
+   ![AI トラフィックルーティングの設定中 ](/help/assets/optimize-at-edge/prereq-traffic-routing-progress.png)
 
    ルーティングが設定され、アクティブになると、ステータスが更新され、ルーティングが正常に有効になったことを示す緑色のチェックマークが表示されます。 ユーザー側でこれ以上のアクションを行う必要はありません。
 
@@ -92,7 +92,7 @@ Cloud Manager パイプラインを使用して自分でルーティングを設
 
 ルールをデプロイするには、次の操作を実行する必要があります。
 
-* [&#x200B; 設定パイプライン &#x200B;](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/operations/config-pipeline) を作成します。
+* [ 設定パイプライン ](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/operations/config-pipeline) を作成します。
 * リポジトリの `cdn.yaml` 設定ファイルをコミットします。
 * 設定パイプラインを実行します。
 
@@ -137,7 +137,7 @@ curl -svo /dev/null https://www.example.com/page.html --header "user-agent: chat
 
 トラフィックルーティングのステータスは、LLM Optimizer UI でも確認できます。 **顧客設定** に移動し、「**CDN 設定**」タブを選択します。
 
-![&#x200B; ルーティングを有効にした AI トラフィックルーティングステータス &#x200B;](/help/assets/optimize-at-edge/adobe-CDN-traffic-routed-tick.png)
+![ ルーティングを有効にした AI トラフィックルーティングステータス ](/help/assets/optimize-at-edge/adobe-CDN-traffic-routed-tick.png)
 
 >[!TAB Fastly（BYOCDN）]
 
@@ -158,15 +158,15 @@ Fastly VCL ルールを設定する前に、以下が揃っていることを確
 
 1. **顧客設定** に移動し、「**CDN 設定**」タブを選択します。
 
-   ![&#x200B; 顧客設定に移動 &#x200B;](/help/assets/optimize-at-edge/prereq-customer-config-nav.png)
+   ![ 顧客設定に移動 ](/help/assets/optimize-at-edge/prereq-customer-config-nav.png)
 
 2. 「**最適化をデプロイするための AI トラフィックルーティング**」で、「**最適化を AI エージェントにデプロイ**」チェックボックスをオンにします。
 
-   ![AI エージェントへのティックのデプロイの最適化 &#x200B;](/help/assets/optimize-at-edge/prereq-deploy-checkbox.png)
+   ![AI エージェントへのティックのデプロイの最適化 ](/help/assets/optimize-at-edge/prereq-deploy-checkbox.png)
 
 3. API キーをコピーして、以下のルーティング設定手順に進みます。
 
-   ![API キーをコピーします &#x200B;](/help/assets/optimize-at-edge/prereq-copy-api-key.png)
+   ![API キーをコピーします ](/help/assets/optimize-at-edge/prereq-copy-api-key.png)
 
    >[!NOTE]
    >この段階では、ステータスに、設定がまだ完了していないことを示す赤い十字が表示される場合があります。 これは想定されています。以下のルーティング設定を完了し、AI ボットトラフィックのフローが開始されると、ステータスが緑色のチェックマークに更新され、ルーティングが正常に有効であることが確認されます。
@@ -243,7 +243,7 @@ curl -svo /dev/null https://www.example.com/page.html --header "user-agent: chat
 
 トラフィックルーティングのステータスは、LLM Optimizer UI でも確認できます。 **顧客設定** に移動し、「**CDN 設定**」タブを選択します。
 
-![&#x200B; ルーティングを有効にした AI トラフィックルーティングステータス &#x200B;](/help/assets/optimize-at-edge/byocdn-CDN-traffic-routed-tick.png)
+![ ルーティングを有効にした AI トラフィックルーティングステータス ](/help/assets/optimize-at-edge/byocdn-CDN-traffic-routed-tick.png)
 
 >[!TAB Akamai（BYOCDN）]
 
@@ -264,15 +264,15 @@ Akamai Property Manager ルールを設定する前に、次のことを確認�
 
 1. **顧客設定** に移動し、「**CDN 設定**」タブを選択します。
 
-   ![&#x200B; 顧客設定に移動 &#x200B;](/help/assets/optimize-at-edge/prereq-customer-config-nav.png)
+   ![ 顧客設定に移動 ](/help/assets/optimize-at-edge/prereq-customer-config-nav.png)
 
 2. 「**最適化をデプロイするための AI トラフィックルーティング**」で、「**最適化を AI エージェントにデプロイ**」チェックボックスをオンにします。
 
-   ![AI エージェントへのティックのデプロイの最適化 &#x200B;](/help/assets/optimize-at-edge/prereq-deploy-checkbox.png)
+   ![AI エージェントへのティックのデプロイの最適化 ](/help/assets/optimize-at-edge/prereq-deploy-checkbox.png)
 
 3. API キーをコピーして、以下のルーティング設定手順に進みます。
 
-   ![API キーをコピーします &#x200B;](/help/assets/optimize-at-edge/prereq-copy-api-key.png)
+   ![API キーをコピーします ](/help/assets/optimize-at-edge/prereq-copy-api-key.png)
 
    >[!NOTE]
    >この段階では、ステータスに、設定がまだ完了していないことを示す赤い十字が表示される場合があります。 これは想定されています。以下のルーティング設定を完了し、AI ボットトラフィックのフローが開始されると、ステータスが緑色のチェックマークに更新され、ルーティングが正常に有効であることが確認されます。
@@ -333,9 +333,9 @@ LLMO から取得した API キーに `x-edgeoptimize-api-key` しています
 
 **8. 送信リクエストヘッダーを変更**
 
-ヘッダー `x-forwarded-host` `{{builtin.AK_HOST}}` に設定
+ヘッダー `x-forwarded-host``{{builtin.AK_HOST}}` に設定
 
-![&#x200B; 送信リクエストヘッダーの変更 &#x200B;](/help/assets/optimize-at-edge/akamai-step8-outgoing-request.png)
+![ 送信リクエストヘッダーの変更 ](/help/assets/optimize-at-edge/akamai-step8-outgoing-request.png)
 
 **9. サイトフェイルオーバー**
 
@@ -364,7 +364,7 @@ curl -svo /dev/null https://www.example.com/page.html --header "user-agent: chat
 
 トラフィックルーティングのステータスは、LLM Optimizer UI でも確認できます。 **顧客設定** に移動し、「**CDN 設定**」タブを選択します。
 
-![&#x200B; ルーティングを有効にした AI トラフィックルーティングステータス &#x200B;](/help/assets/optimize-at-edge/byocdn-CDN-traffic-routed-tick.png)
+![ ルーティングを有効にした AI トラフィックルーティングステータス ](/help/assets/optimize-at-edge/byocdn-CDN-traffic-routed-tick.png)
 
 >[!TAB Cloudflare （BYOCDN） ]
 
@@ -386,15 +386,15 @@ Cloudflare Worker のルーティングルールを設定する前に、以下�
 
 1. **顧客設定** に移動し、「**CDN 設定**」タブを選択します。
 
-   ![&#x200B; 顧客設定に移動 &#x200B;](/help/assets/optimize-at-edge/prereq-customer-config-nav.png)
+   ![ 顧客設定に移動 ](/help/assets/optimize-at-edge/prereq-customer-config-nav.png)
 
 2. 「**最適化をデプロイするための AI トラフィックルーティング**」で、「**最適化を AI エージェントにデプロイ**」チェックボックスをオンにします。
 
-   ![AI エージェントへのティックのデプロイの最適化 &#x200B;](/help/assets/optimize-at-edge/prereq-deploy-checkbox.png)
+   ![AI エージェントへのティックのデプロイの最適化 ](/help/assets/optimize-at-edge/prereq-deploy-checkbox.png)
 
 3. API キーをコピーして、以下のルーティング設定手順に進みます。
 
-   ![API キーをコピーします &#x200B;](/help/assets/optimize-at-edge/prereq-copy-api-key.png)
+   ![API キーをコピーします ](/help/assets/optimize-at-edge/prereq-copy-api-key.png)
 
    >[!NOTE]
    >この段階では、ステータスに、設定がまだ完了していないことを示す赤い十字が表示される場合があります。 これは想定されています。以下のルーティング設定を完了し、AI ボットトラフィックのフローが開始されると、ステータスが緑色のチェックマークに更新され、ルーティングが正常に有効であることが確認されます。
@@ -436,7 +436,7 @@ Edge Optimize バックエンドへのリクエストでは、次のヘッダー
 4. ワーカーに名前を付けます（例：`edge-optimize-router`）。
 5. 「**デプロイ**」をクリックして、デフォルトのコードを使用してワーカーを作成します。
 
-![Cloudflare Workers ダッシュボード &#x200B;](/help/assets/optimize-at-edge/cloudflare-workers-dashboard.png)
+![Cloudflare Workers ダッシュボード ](/help/assets/optimize-at-edge/cloudflare-workers-dashboard.png)
 
 **手順 2：ワーカーコードの追加**
 
@@ -609,7 +609,7 @@ async function failoverToOrigin(request, env, url) {
 
 **保存してデプロイ** をクリックして、ワーカーを公開します。
 
-![Cloudflare Worker コードエディター &#x200B;](/help/assets/optimize-at-edge/cloudflare-worker-editor.png)
+![Cloudflare Worker コードエディター ](/help/assets/optimize-at-edge/cloudflare-worker-editor.png)
 
 **手順 3：環境変数の設定**
 
@@ -627,7 +627,7 @@ async function failoverToOrigin(request, env, url) {
 4. API キーの場合は、「**暗号化**」をクリックして、安全に保存します。
 5. **保存してデプロイ** をクリックします。
 
-![Cloudflare 環境変数 &#x200B;](/help/assets/optimize-at-edge/cloudflare-env-variables.png)
+![Cloudflare 環境変数 ](/help/assets/optimize-at-edge/cloudflare-env-variables.png)
 
 **手順 4：ドメインへのルートの追加**
 
@@ -645,7 +645,7 @@ async function failoverToOrigin(request, env, url) {
 2. **ワーカールート** に移動します。
 3. **ルートを追加** をクリックし、パターンとワーカーを指定します。
 
-![Cloudflare ワーカールート &#x200B;](/help/assets/optimize-at-edge/cloudflare-worker-routes.png)
+![Cloudflare ワーカールート ](/help/assets/optimize-at-edge/cloudflare-worker-routes.png)
 
 **手順 5：設定を確認する**
 
@@ -665,7 +665,7 @@ curl -svo /dev/null https://www.example.com/page.html \
 
 トラフィックルーティングのステータスは、LLM Optimizer UI でも確認できます。 **顧客設定** に移動し、「**CDN 設定**」タブを選択します。
 
-![&#x200B; ルーティングを有効にした AI トラフィックルーティングステータス &#x200B;](/help/assets/optimize-at-edge/byocdn-CDN-traffic-routed-tick.png)
+![ ルーティングを有効にした AI トラフィックルーティングステータス ](/help/assets/optimize-at-edge/byocdn-CDN-traffic-routed-tick.png)
 
 また、通常のトラフィックが引き続き動作することを確認することもできます。
 
@@ -800,7 +800,6 @@ const FAILOVER_ON_5XX = false;
 | オポチュニティ | タイプ | 自動特定 | 自動提案 | 自動最適化 |
 |---------|----------|----------|----------|----------|
 | コンテンツの可視性を回復 | テクニカル GEO | 重要なコンテンツが AI エージェントから非表示になっているページを検出します。 影響を受ける URL と回復可能な予想されるコンテンツを表示します。 | AI エージェントに使用できるコンテンツをハイライト表示し、これらのページの事前レンダリングを有効にすることをお勧めします。 | 以前は非表示になっていたコンテンツを回復するエージェントトラフィックに、完全にレンダリングされた AI 対応の HTML スナップショットを提供します。 |
-| LLM の見出しの最適化 | コンテンツの最適化 | 見出しをスキャンして、機械による読みやすさを低下させる可能性のある、空の見出し、重複した見出し、欠落した見出し、あいまいな見出しを検出します。 | よりクリーンな見出し階層と改善されたラベルを提案し、各ページの更新された構造のプレビューを表示します。 | AI エージェント用に改善された見出し構造を挿入し、視覚的なデザインを維持しながら、LLM にとってページが読みやすくなるようにします。 |
 | LLM 対応の要約の追加 | コンテンツの最適化 | ページレベルやセクションレベルで簡潔な要約がなく、AI がすばやくスキャンして理解するのが難しくなる長いページや複雑なページを特定します。 | 主要なコンテンツをキャプチャするページレベルおよびセクションレベルでの短い AI 生成の要約をお勧めします。 | 関連する HTML セクションに要約を挿入し、モデルがページコンテンツを解釈および記述する方法を改善します。 |
 | 関連する FAQ の追加 | コンテンツの最適化 | FAQ からメリットが得られる可能性のある、既存のページコンテンツ内のインテントのギャップを検出します。 | ユーザーのインテントと既存のトピックに合わせて AI 生成の FAQ コンテンツを提案します。 | FAQ コンテンツを HTML に挿入することで、ページがより見つけやすくなり、AI 駆動型の回答の関連性を高めます。 |
 | 複雑なコンテンツの簡素化 | コンテンツの最適化 | AI の理解を妨げる可能性のある複雑なテキストを含むページにフラグを付けます。 | 元の意味を維持しながら、複雑なテキストの AI 生成の簡素化バージョンを提供します。 | ページ内の複雑なセクションを書き換えて、AI の読みやすさを向上させます。 |
@@ -809,7 +808,7 @@ const FAILOVER_ON_5XX = false;
 
 [Adobe LLM Optimizer：web ページは引用できますか？](https://chromewebstore.google.com/detail/adobe-llm-optimizer-is-yo/jbjngahjjdgonbeinjlepfamjdmdcbcc) Chrome 拡張機能は、LLM が web ページのコンテンツにどの程度にアクセスでき、どの部分が非表示になっているかを示します。 無料のスタンドアロン診断ツールとして設計され、製品ライセンスや設定は必要ありません。
 
-シングルクリックで、任意のサイトの機械による読みやすさを評価できます。 AI エージェントに表示される内容と人間のユーザーに表示される内容を並べて比較表示し、LLM Optimizer を使用して回復できるコンテンツの量を推定できます。 詳しくは、[AI は web サイトを読み取れるか](https://business.adobe.com/jp/blog/introducing-the-llm-optimizer-chrome-extension) ページを参照してください。
+シングルクリックで、任意のサイトの機械による読みやすさを評価できます。 AI エージェントに表示される内容と人間のユーザーに表示される内容を並べて比較表示し、LLM Optimizer を使用して回復できるコンテンツの量を推定できます。 詳しくは、[AI は web サイトを読み取れるか](https://business.adobe.com/blog/introducing-the-llm-optimizer-chrome-extension) ページを参照してください。
 
 ## オポチュニティの詳細
 
@@ -822,10 +821,6 @@ const FAILOVER_ON_5XX = false;
 
 >[!IMPORTANT]
 >この事前レンダリング機能は、Edge での最適化でデプロイした際、以下に示すすべての機会に自動的に適用され、ページが AI エージェントに完全に表示されます。
-
-### LLM の見出しの最適化
-
-このオポチュニティでは、空の見出し、重複する見出し、欠落する見出し、あいまいな見出しが原因で、見出し構造により AI エージェントがページを理解するのが困難なページを検出します。 影響を受ける各ページについて、オポチュニティには最適でない見出しが表示され、より明確な階層が推奨されます。 Edge での最適化を使用してデプロイすると、エージェントトラフィックに提供される HTML に改善された見出しが適用されます。 これにより、人間が直面するレイアウトはそのまま維持され、機械による読みやすさが向上します。
 
 ### LLM 対応の要約の追加
 
@@ -843,7 +838,7 @@ const FAILOVER_ON_5XX = false;
 
 各オポチュニティについて、Edge での最適化をプレビュー、編集、デプロイ、ライブ表示、ロールバックできます。
 
->[!VIDEO](https://video.tv.adobe.com/v/3477985/?captions=jpn&learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3477983/?learn=on&enablevpops)
 
 ### プレビュー
 
