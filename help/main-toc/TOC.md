@@ -1,11 +1,11 @@
 ---
 user-guide-title: LLM Optimizer
 breadcrumb-title: LLM Optimizer
-user-guide-description: Adobe LLM Optimizer でブランドを強化します。言及を追跡し、インサイトを明らかにし、AI 駆動型の検索を活用できます。可視性を制御して、今すぐ最適化を開始しましょう。
-source-git-commit: 8f914fb60036058870b63addae690c945127f349
-workflow-type: ht
-source-wordcount: '71'
-ht-degree: 100%
+user-guide-description: Adobe LLM Optimizer でブランドを強化します。 言及を追跡し、インサイトを明らかにし、AI 駆動型の検索を活用できます。 可視性を制御して、今すぐ最適化を開始しましょう。
+source-git-commit: 26ee5a2412bccb955fee1c3aecf45ac918465e55
+workflow-type: tm+mt
+source-wordcount: '84'
+ht-degree: 85%
 
 ---
 
@@ -28,4 +28,9 @@ ht-degree: 100%
    + [顧客設定](/help/dashboards/customer-configuration.md)
    + [コラボレーション](/help/dashboards/collaboration.md)
 + その他のリソース{#resources}
-   + [Edge での最適化](/help/dashboards/optimize-at-edge.md)
+   + Edge での最適化{#optimize-at-edge}
+      + [概要](/help/dashboards/optimize-at-edge.md)
+      + [AEM Cloud Service の管理による CDN （Fastly）](/help/dashboards/optimize-at-edge-aem-managed-cdn.md)
+      + [Fastly （BYOCDN）](/help/dashboards/optimize-at-edge-fastly-byocdn.md)
+      + [Akamai （BYOCDN）](/help/dashboards/optimize-at-edge-akamai-byocdn.md)
+      + [Cloudflare （BYOCDN）](/help/dashboards/optimize-at-edge-cloudflare-byocdn.md)
