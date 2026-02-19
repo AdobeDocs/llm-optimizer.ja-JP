@@ -2,9 +2,9 @@
 title: クイックスタート
 description: Adobe LLM Optimizer の基本を学ぶ - ブランドをオンボードし、AI による可視性のインサイトを活用し、ダッシュボードを探索して、検索パフォーマンスを向上させます。
 feature: Quickstart, Onboarding
-source-git-commit: ae37ef578f279eae6ea51fd8aed5c6b91c8e1088
+source-git-commit: 82830e66d43ddd9741617cdf6daab63cd259554b
 workflow-type: tm+mt
-source-wordcount: '1151'
+source-wordcount: '1152'
 ht-degree: 93%
 
 ---
@@ -38,7 +38,7 @@ AEM Cloud （Cloud Service、Managed Services、Edge Delivery サービス）を
 無料版では使用できない製品機能がいくつかあります。
 
 * 体験版は 1 つのドメインに制限されています。 設定が完了すると、指定したドメインを変更できません。
-* 最適化をデプロイする機能は、早期アクセスで利用できます。 詳しくは、[Edgeで最適化に関するよくある質問 &#x200B;](https://experienceleague.adobe.com/ja/docs/llm-optimizer/using/resources/optimize-at-edge#frequently-asked-questions) を参照してください。
+* 最適化をデプロイする機能は、早期アクセスで利用できます。 詳しくは、[Edgeで最適化に関するよくある質問 ](https://experienceleague.adobe.com/en/docs/llm-optimizer/using/resources/optimize-at-edge/overview#frequently-asked-questions) を参照してください。
 
 無料体験版のアクティブ化方法とドメインのオンボード方法について詳しくは、以下の節を参照してください。
 

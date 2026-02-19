@@ -2,8 +2,8 @@
 title: 最適化の機会
 description: オポチュニティダッシュボードを使用して、ブランドの可視性を高めることを目的に、サイトを改善できる方法を自動的に検出する方法について説明します。
 feature: Opportunities
-source-git-commit: 1f665bd14349c15d92f8274742606abcf9b02000
-workflow-type: ht
+source-git-commit: 82830e66d43ddd9741617cdf6daab63cd259554b
+workflow-type: tm+mt
 source-wordcount: '575'
 ht-degree: 100%
 
@@ -40,7 +40,7 @@ ht-degree: 100%
 
 ## 自動最適化 {#auto-optimization}
 
-自動最適化により、推奨される最適化のワンクリックデプロイメントを実行できるので、手動の労力と価値実現までの時間が削減されます。 最適化は、コンテンツソースまたは CDN Edge のいずれかで適用できます。 Edge ベースの自動最適化は現在、一部の機会に早期アクセスで使用できます。 詳しくは、[Edge での最適化](/help/dashboards/optimize-at-edge.md)ページを参照してください。
+自動最適化により、推奨される最適化のワンクリックデプロイメントを実行できるので、手動の労力と価値実現までの時間が削減されます。 最適化は、コンテンツソースまたは CDN Edge のいずれかで適用できます。 Edge ベースの自動最適化は現在、一部の機会に早期アクセスで使用できます。 詳しくは、[Edge での最適化](/help/dashboards/optimize-at-edge/overview.md)ページを参照してください。
 
 <!--### Recover Content Visibility Opportunity {#recover-contet}
 
