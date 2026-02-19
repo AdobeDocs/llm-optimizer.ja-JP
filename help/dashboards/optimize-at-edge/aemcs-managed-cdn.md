@@ -20,15 +20,15 @@ ht-degree: 12%
 
 1. **顧客設定** に移動し、「**CDN 設定**」タブを選択します。
 
-   ![ 顧客設定に移動 ](/help/assets/optimize-at-edge/prereq-customer-config-nav.png)
+   ![&#x200B; 顧客設定に移動 &#x200B;](/help/assets/optimize-at-edge/prereq-customer-config-nav.png)
 
 2. 「**最適化をデプロイするための AI トラフィックルーティング**」で、「**最適化を AI エージェントにデプロイ**」チェックボックスをオンにします。 Adobe チームが、お客様に代わってルーティング設定を処理します。
 
-   ![AI エージェントへのティックのデプロイの最適化 ](/help/assets/optimize-at-edge/prereq-deploy-checkbox.png)
+   ![AI エージェントへのティックのデプロイの最適化 &#x200B;](/help/assets/optimize-at-edge/prereq-deploy-checkbox.png)
 
 3. チェックボックスを有効にすると、ステータスにセットアップが進行中であることが示されます。 Adobe チームがルーティング設定を行います。
 
-   ![AI トラフィックルーティングの設定中 ](/help/assets/optimize-at-edge/prereq-traffic-routing-progress.png)
+   ![AI トラフィックルーティングの設定中 &#x200B;](/help/assets/optimize-at-edge/prereq-traffic-routing-progress.png)
 
    ルーティングが設定され、アクティブになると、ステータスが更新され、ルーティングが正常に有効になったことを示す緑色のチェックマークが表示されます。 ユーザー側でこれ以上のアクションを行う必要はありません。
 
@@ -44,7 +44,7 @@ Cloud Manager パイプラインを使用して自分でルーティングを設
 
 ルールをデプロイするには、次の操作を実行する必要があります。
 
-* [ 設定パイプライン ](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/operations/config-pipeline) を作成します。
+* [&#x200B; 設定パイプライン &#x200B;](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/operations/config-pipeline) を作成します。
 * リポジトリの `cdn.yaml` 設定ファイルをコミットします。
 * 設定パイプラインを実行します。
 
@@ -117,6 +117,6 @@ curl -svo /dev/null https://www.example.com/page.html \
 
 トラフィックルーティングのステータスは、LLM Optimizer UI でも確認できます。 **顧客設定** に移動し、「**CDN 設定**」タブを選択します。
 
-![ ルーティングを有効にした AI トラフィックルーティングステータス ](/help/assets/optimize-at-edge/adobe-CDN-traffic-routed-tick.png)
+![&#x200B; ルーティングを有効にした AI トラフィックルーティングステータス &#x200B;](/help/assets/optimize-at-edge/adobe-CDN-traffic-routed-tick.png)
 
 {{return-to-overview}}

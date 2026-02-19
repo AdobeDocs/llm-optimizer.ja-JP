@@ -123,6 +123,6 @@ curl -svo /dev/null https://www.example.com/page.html \
 
 トラフィックルーティングのステータスは、LLM Optimizer UI でも確認できます。 **顧客設定** に移動し、「**CDN 設定**」タブを選択します。
 
-![ ルーティングを有効にした AI トラフィックルーティングステータス ](/help/assets/optimize-at-edge/byocdn-CDN-traffic-routed-tick.png)
+![&#x200B; ルーティングを有効にした AI トラフィックルーティングステータス &#x200B;](/help/assets/optimize-at-edge/byocdn-CDN-traffic-routed-tick.png)
 
 {{return-to-overview}}

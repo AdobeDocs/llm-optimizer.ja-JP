@@ -79,9 +79,9 @@ LLMO から取得した API キーに `x-edgeoptimize-api-key` しています
 
 **8. 送信リクエストヘッダーを変更**
 
-ヘッダー `x-forwarded-host``{{builtin.AK_HOST}}` に設定
+ヘッダー `x-forwarded-host` `{{builtin.AK_HOST}}` に設定
 
-![ 送信リクエストヘッダーの変更 ](/help/assets/optimize-at-edge/akamai-step8-outgoing-request.png)
+![&#x200B; 送信リクエストヘッダーの変更 &#x200B;](/help/assets/optimize-at-edge/akamai-step8-outgoing-request.png)
 
 **9. サイトフェイルオーバー**
 
@@ -172,6 +172,6 @@ curl -svo /dev/null https://www.example.com/page.html \
 
 トラフィックルーティングのステータスは、LLM Optimizer UI でも確認できます。 **顧客設定** に移動し、「**CDN 設定**」タブを選択します。
 
-![ ルーティングを有効にした AI トラフィックルーティングステータス ](/help/assets/optimize-at-edge/byocdn-CDN-traffic-routed-tick.png)
+![&#x200B; ルーティングを有効にした AI トラフィックルーティングステータス &#x200B;](/help/assets/optimize-at-edge/byocdn-CDN-traffic-routed-tick.png)
 
 {{return-to-overview}}

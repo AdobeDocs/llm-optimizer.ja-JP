@@ -13,15 +13,15 @@ ht-degree: 0%
 
 1. **顧客設定** に移動し、「**CDN 設定**」タブを選択します。
 
-   ![ 顧客設定に移動 ](/help/assets/optimize-at-edge/prereq-customer-config-nav.png)
+   ![&#x200B; 顧客設定に移動 &#x200B;](/help/assets/optimize-at-edge/prereq-customer-config-nav.png)
 
 2. 「**最適化をデプロイするための AI トラフィックルーティング**」で、「**最適化を AI エージェントにデプロイ**」チェックボックスをオンにします。
 
-   ![AI エージェントへのティックのデプロイの最適化 ](/help/assets/optimize-at-edge/prereq-deploy-checkbox.png)
+   ![AI エージェントへのティックのデプロイの最適化 &#x200B;](/help/assets/optimize-at-edge/prereq-deploy-checkbox.png)
 
 3. API キーをコピーして、以下のルーティング設定手順に進みます。
 
-   ![API キーをコピーします ](/help/assets/optimize-at-edge/prereq-copy-api-key.png)
+   ![API キーをコピーします &#x200B;](/help/assets/optimize-at-edge/prereq-copy-api-key.png)
 
    >[!NOTE]
    >この段階では、ステータスに、設定がまだ完了していないことを示す赤い十字が表示される場合があります。 これは想定されています。以下のルーティング設定を完了し、AI ボットトラフィックのフローが開始されると、ステータスが緑色のチェックマークに更新され、ルーティングが正常に有効であることが確認されます。
@@ -30,4 +30,4 @@ ht-degree: 0%
 
 ## 概要に戻る {#return-to-overview}
 
-利用可能なオポチュニティ、自動最適化ワークフロー、FAQ など、Edgeでの最適化について詳しくは、[Edgeでの最適化の概要 ](/help/dashboards/optimize-at-edge/overview.md) を参照してください。
+利用可能なオポチュニティ、自動最適化ワークフロー、FAQ など、Edgeでの最適化について詳しくは、[Edgeでの最適化の概要 &#x200B;](/help/dashboards/optimize-at-edge/overview.md) を参照してください。
