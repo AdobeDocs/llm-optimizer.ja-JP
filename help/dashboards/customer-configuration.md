@@ -115,7 +115,7 @@ Adobe LLM Optimizerでは、Google Search Console アカウントを統合して
 
 LLM OptimizerとGoogle Search Console の統合について覚えておくべき主な点は次のとおりです。顧客が AI アシスタントに質問する可能性がある内容を手動で推測する代わりに、顧客が **既に検索している** ものを調べ、これらの実際のクエリを自然な対話型プロンプトに変換します。 検索クエリから AI プロンプトに移行するこのプロセスの例を、次の図に示します。
 
-![ プロセスフロー ](/help/dashboards/assets/diagram-flow.png)
+![&#x200B; プロセスフロー &#x200B;](/help/dashboards/assets/diagram-flow.png)
 
 一般的に、このプロセスには次の 5 つのステップがあります。
 
@@ -131,7 +131,7 @@ Googleで web サイトを見つけたときに、オーディエンスが実際
 
 関連するクエリは、自動的に **カテゴリ** （広範なビジネステーマ）と **トピック** （各カテゴリ内の焦点を当てたサブトピック）にグループ化されます。 LLM Optimizerの設定で既に設定されているカテゴリに優先順位が付けられます。 さらに、検索データに表示されるがまだ監視されていない新しいカテゴリを表示することもできます。 次の図は、家具ブランドのカテゴリとトピックの例です。
 
-![ 家具ブランド ](/help/dashboards/assets/diagram-example.png)
+![&#x200B; 家具ブランド &#x200B;](/help/dashboards/assets/diagram-example.png)
 
 #### 手順 4 – 実際のキーワードに基づいたプロンプトの生成 {#gsc-four}
 
@@ -179,28 +179,28 @@ Google Search Console クエリをLLM Optimizerと統合して使用するには
 
 1. 顧客設定ダッシュボードを開きます。
 1. Google検索コンソール タブに移動し、「**アカウントを接続**」をクリックします。
-   ![Google検索コンソール ](/help/dashboards/assets/google-console.png)
+   ![Google検索コンソール &#x200B;](/help/dashboards/assets/google-console.png)
 1. 目的の検索コンソールプロパティへのアクセス権を持つGoogle アカウントでログインします。
-   ![Google アカウント ](/help/dashboards/assets/google-account.png)
+   ![Google アカウント &#x200B;](/help/dashboards/assets/google-account.png)
 1. 接続するプロパティを選択します。
-   ![Console プロパティ ](/help/dashboards/assets/console-property.png)
+   ![Console プロパティ &#x200B;](/help/dashboards/assets/console-property.png)
 1. 連携が完了すると、LLM Optimizerは関連する検索クエリの取得を開始します。
-   ![ データの取得 ](/help/dashboards/assets/console-complete.png)
+   ![&#x200B; データの取得 &#x200B;](/help/dashboards/assets/console-complete.png)
 
 #### クエリのレビューと検索 {#search-query}
 
 Google Search Console アカウントを LLM Optimizer と統合したら、検索コンソールから取得したトピックとプロンプトのリストを確認し、リストからプロンプトを追加できます。
 
 1. 「Google Search Console」タブで、検索コンソールから取得されるトピックとプロンプトのリストを確認します。
-   ![ プロンプト リスト ](/help/dashboards/assets/prompts-list.png)
+   ![&#x200B; プロンプト リスト &#x200B;](/help/dashboards/assets/prompts-list.png)
 1. 目的のトピック/プロンプトカテゴリをクリックして、リストを展開します。
 1. 「**追加**」ボタンを使用して、リストからプロンプトを追加します。 **すべて追加** を使用して、プロンプトとカテゴリを一括追加することもできます。
-   ![ プロンプトの追加 ](/help/dashboards/assets/add-prompts.png)
+   ![&#x200B; プロンプトの追加 &#x200B;](/help/dashboards/assets/add-prompts.png)
 1. 選択に問題がなければ、通知メッセージの「**保存**」をクリックします。
 
 #### 追加したクエリをプロンプトリストに表示 {#prompts-list}
 
-クエリを追加すると、顧客設定ダッシュボード内の [ プロンプト ](#prompts-brand) タブに表示されます。 Google検索コンソールから取得されたプロンプトは、「**接触チャネル**」列にGoogle検索コンソールアイコンでマークされます。 このアイコンは、実際のユーザー検索動作に基づくプロンプトと、手動で追加されたプロンプトや他のソースから追加されたプロンプトを区別するのに役立ちます。
+クエリを追加すると、顧客設定ダッシュボード内の [&#x200B; プロンプト &#x200B;](#prompts-brand) タブに表示されます。 Google検索コンソールから取得されたプロンプトは、「**接触チャネル**」列にGoogle検索コンソールアイコンでマークされます。 このアイコンは、実際のユーザー検索動作に基づくプロンプトと、手動で追加されたプロンプトや他のソースから追加されたプロンプトを区別するのに役立ちます。
 
 ### よくある質問 {#gsc-faq}
 
