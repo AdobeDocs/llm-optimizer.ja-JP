@@ -2,10 +2,10 @@
 title: Edge での最適化
 description: オーサリングの変更を必要とせずに、CDN Edge で LLM Optimizer の最適化を実現する方法について説明します。
 feature: Opportunities
-source-git-commit: 82830e66d43ddd9741617cdf6daab63cd259554b
+source-git-commit: 547c38986da609a6cd42cb94402c811d6eb1f939
 workflow-type: tm+mt
-source-wordcount: '2172'
-ht-degree: 85%
+source-wordcount: '2181'
+ht-degree: 84%
 
 ---
 
@@ -58,10 +58,11 @@ IT／CDN チームの要件：
 
 | CDN プロバイダー | タイプ | ガイド |
 |---|---|---|
-| AEM Cloud Service の管理による CDN （Fastly） | アドビが管理する | [&#x200B; 設定ガイドを表示 &#x200B;](/help/dashboards/optimize-at-edge/aemcs-managed-cdn.md) |
-| Fastly （BYOCDN） | 独自の CDN の導入 | [&#x200B; 設定ガイドを表示 &#x200B;](/help/dashboards/optimize-at-edge/fastly-byocdn.md) |
-| Akamai （BYOCDN） | 独自の CDN の導入 | [&#x200B; 設定ガイドを表示 &#x200B;](/help/dashboards/optimize-at-edge/akamai-byocdn.md) |
-| Cloudflare （BYOCDN） | 独自の CDN の導入 | [&#x200B; 設定ガイドを表示 &#x200B;](/help/dashboards/optimize-at-edge/cloudflare-byocdn.md) |
+| AEM Cloud Service の管理による CDN （Fastly） | アドビが管理する | [ 設定ガイドを表示 ](/help/dashboards/optimize-at-edge/aemcs-managed-cdn.md) |
+| Fastly （BYOCDN） | 独自の CDN の導入 | [ 設定ガイドを表示 ](/help/dashboards/optimize-at-edge/fastly-byocdn.md) |
+| Akamai （BYOCDN） | 独自の CDN の導入 | [ 設定ガイドを表示 ](/help/dashboards/optimize-at-edge/akamai-byocdn.md) |
+| Cloudflare （BYOCDN） | 独自の CDN の導入 | [ 設定ガイドを表示 ](/help/dashboards/optimize-at-edge/cloudflare-byocdn.md) |
+| CloudFront （BYOCDN） | 独自の CDN の導入 | [ 設定ガイドを表示 ](/help/dashboards/optimize-at-edge/cloudfront-byocdn.md) |
 
 >[!NOTE]
 >CDN プロバイダーが上記に記載されていない場合や、LLM Optimizer UI にドメインやメールが見つからない場合は、`llmo-at-edge@adobe.com` にお問い合わせいただき、オンボーディングサポートを受けてください。 設定が完了したら、LLM Optimizer で Edge での最適化の機会に関する候補をデプロイできます。
@@ -83,7 +84,7 @@ IT／CDN チームの要件：
 
 [Adobe LLM Optimizer：web ページは引用できますか？](https://chromewebstore.google.com/detail/adobe-llm-optimizer-is-yo/jbjngahjjdgonbeinjlepfamjdmdcbcc) Chrome 拡張機能は、LLM が web ページのコンテンツにどの程度にアクセスでき、どの部分が非表示になっているかを示します。 無料のスタンドアロン診断ツールとして設計され、製品ライセンスや設定は必要ありません。
 
-シングルクリックで、任意のサイトの機械による読みやすさを評価できます。 AI エージェントに表示される内容と人間のユーザーに表示される内容を並べて比較表示し、LLM Optimizer を使用して回復できるコンテンツの量を推定できます。 詳しくは、[AI は web サイトを読み取れるか](https://business.adobe.com/jp/blog/introducing-the-llm-optimizer-chrome-extension) ページを参照してください。
+シングルクリックで、任意のサイトの機械による読みやすさを評価できます。 AI エージェントに表示される内容と人間のユーザーに表示される内容を並べて比較表示し、LLM Optimizer を使用して回復できるコンテンツの量を推定できます。 詳しくは、[AI は web サイトを読み取れるか](https://business.adobe.com/blog/introducing-the-llm-optimizer-chrome-extension) ページを参照してください。
 
 ## オポチュニティの詳細
 
@@ -113,7 +114,7 @@ IT／CDN チームの要件：
 
 各オポチュニティについて、Edge での最適化をプレビュー、編集、デプロイ、ライブ表示、ロールバックできます。
 
->[!VIDEO](https://video.tv.adobe.com/v/3477985/?captions=jpn&learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3477983/?learn=on&enablevpops)
 
 ### プレビュー
 
