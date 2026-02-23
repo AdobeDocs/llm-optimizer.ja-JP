@@ -49,7 +49,7 @@ CloudFront 設定を行う前に、以下を確認します。
 
 5. **原点を作成** をクリックします。
 
-![Cloudfront オリジンの作成 ](/help/assets/optimize-at-edge/cloudfront-origin-creation.png)
+![Cloudfront オリジンの作成 &#x200B;](/help/assets/optimize-at-edge/cloudfront-origin-creation.png)
 
 **手順 2：ビューアリクエスト関数の作成**
 
@@ -70,7 +70,7 @@ CloudFront 設定を行う前に、以下を確認します。
 
 4. **変更を保存**/**公開関数** をクリックします。
 
-![Cloudfront 関数の作成 ](/help/assets/optimize-at-edge/cloudfront-function-creation.png)
+![Cloudfront 関数の作成 &#x200B;](/help/assets/optimize-at-edge/cloudfront-function-creation.png)
 
 
 **手順 3：キャッシュポリシーの設定**
@@ -93,7 +93,7 @@ CloudFront 設定を行う前に、以下を確認します。
 
    * ドロップダウンから **次のヘッダーを含める** を選択します。
    * `x-edgeoptimize-config` と `x-edgeoptimize-url` を追加します。
-     ![Cloudfront キャッシュレガシー ](/help/assets/optimize-at-edge/cloudfront-cache-policy-legacy.png)
+     ![Cloudfront キャッシュレガシー &#x200B;](/help/assets/optimize-at-edge/cloudfront-cache-policy-legacy.png)
 
    「ヘッダー」ドロップダウンで既に **すべて** が選択されている場合は、この手順をスキップします。すべてのヘッダーがオリジンに自動的に転送されます。
 
@@ -115,10 +115,10 @@ CloudFront 設定を行う前に、以下を確認します。
 2. 「**編集**」をクリックします。
 
 3. **最小 TTL** を `0` に設定することをお勧めします。 ただし、現在の最小 TTL が既に非常に短い場合は、変更する必要はありません。
-   ![ キャッシュポリシー TTL 設定 ](/help/assets/optimize-at-edge/cloudfront-cache-policy-ttl.png)
+   ![&#x200B; キャッシュポリシー TTL 設定 &#x200B;](/help/assets/optimize-at-edge/cloudfront-cache-policy-ttl.png)
 
 4. **キャッシュキー設定**/**ヘッダー** の下に、既存のインクルージョンと共に `x-edgeoptimize-config` と `x-edgeoptimize-url` を追加します。
-   ![ ポリシーヘッダーをキャッシュする ](/help/assets/optimize-at-edge/cloudfront-cache-policy-headers.png)
+   ![&#x200B; ポリシーヘッダーをキャッシュする &#x200B;](/help/assets/optimize-at-edge/cloudfront-cache-policy-headers.png)
 
 5. **変更を保存** をクリックします。
 
@@ -147,17 +147,17 @@ CloudFront 設定を行う前に、以下を確認します。
 
 2. **名前：** `edgeoptimize-cache`
 
-   ![ キャッシュポリシー名 ](/help/assets/optimize-at-edge/cloudfront-cache-policy-name.png)
+   ![&#x200B; キャッシュポリシー名 &#x200B;](/help/assets/optimize-at-edge/cloudfront-cache-policy-name.png)
 
 3. パート 1 で説明したすべての設定と、次の修正をレプリケートします。
 
    * **最小 TTL** を `0` に設定することをお勧めします。 ただし、現在の最小 TTL が既に非常に短い場合は、変更する必要はありません。
 
-   ![ キャッシュポリシー TTL 設定 ](/help/assets/optimize-at-edge/cloudfront-cache-policy-ttl.png)
+   ![&#x200B; キャッシュポリシー TTL 設定 &#x200B;](/help/assets/optimize-at-edge/cloudfront-cache-policy-ttl.png)
 
    * **キャッシュキー設定**/**ヘッダー** に、管理対象ポリシーにあったすべてを含め、さらに `x-edgeoptimize-config` と `x-edgeoptimize-url` を追加します。
 
-   ![ ポリシーヘッダーをキャッシュする ](/help/assets/optimize-at-edge/cloudfront-cache-policy-headers.png)
+   ![&#x200B; ポリシーヘッダーをキャッシュする &#x200B;](/help/assets/optimize-at-edge/cloudfront-cache-policy-headers.png)
 
 4. 「**作成**」をクリックします。
 
@@ -234,10 +234,10 @@ CloudFront 設定を行う前に、以下を確認します。
 2. 説明を追加します。
 
 3. 「**公開する**」をクリックします。
-   ![Lambda パブリッシュ ](/help/assets/optimize-at-edge/cloudfront-lambda-publish.png)
+   ![Lambda パブリッシュ &#x200B;](/help/assets/optimize-at-edge/cloudfront-lambda-publish.png)
 
 4. **Function ARN** をコピーまたはメモします。これは次の手順で必要になります。
-   ![ ラムダ ARN](/help/assets/optimize-at-edge/cloudfront-lambda-arn.png)
+   ![&#x200B; ラムダ ARN](/help/assets/optimize-at-edge/cloudfront-lambda-arn.png)
 
 **手順 5：関数とキャッシュポリシーを動作と関連付ける**
 
@@ -246,7 +246,7 @@ CloudFront 設定を行う前に、以下を確認します。
 1. ビヘイビアーを編集します。
 
 2. 手順 3 （シナリオ C）で新しいキャッシュポリシーを作成した場合は、**キャッシュポリシー** を `edgeoptimize-cache` に設定します。
-   ![ キャッシュポリシー ](/help/assets/optimize-at-edge/cloudfront-behaviour-cache.png)
+   ![&#x200B; キャッシュポリシー &#x200B;](/help/assets/optimize-at-edge/cloudfront-behaviour-cache.png)
 
 3. 「**関数の関連付け**」で、次の項目を設定します。
 
@@ -254,7 +254,7 @@ CloudFront 設定を行う前に、以下を確認します。
    * **接触チャネルリクエスト：** 手順 4 の（**バージョンを公開** 内の）バージョン管理された関数 ARN
    * **オリジン応答：手順 4 の** バージョン管理された関数 ARN （**バージョンの公開**）
 
-   ![ 関数の関連付けの設定 ](/help/assets/optimize-at-edge/cloudfront-function-association.png)
+   ![&#x200B; 関数の関連付けの設定 &#x200B;](/help/assets/optimize-at-edge/cloudfront-function-association.png)
 
 4. **変更を保存** をクリックします。
 
@@ -298,7 +298,7 @@ curl -svo /dev/null https://www.example.com/page.html \
 
 トラフィックルーティングのステータスは、LLM Optimizer UI でも確認できます。 **顧客設定** に移動し、「**CDN 設定**」タブを選択します。
 
-![ ルーティングを有効にした AI トラフィックルーティングステータス ](/help/assets/optimize-at-edge/byocdn-CDN-traffic-routed-tick.png)
+![&#x200B; ルーティングを有効にした AI トラフィックルーティングステータス &#x200B;](/help/assets/optimize-at-edge/byocdn-CDN-traffic-routed-tick.png)
 
 **4. ログが正しくフローしていることを確認**
 
@@ -350,7 +350,7 @@ Lambda@Edge関数（`edgeoptimize-origin`）は、CloudFront 動作のオリジ�
 
 **Lambda@Edgeの停止を検出する方法**
 
-* **AWS サービス正常性ダッシュボード** — **AWS CloudFront](https://health.aws.amazon.com/health/status) または** Amazon Lambda} に影響を与えるアクティブなインシデントについては **[AWS サービス正常性ダッシュボード** を確認してください。 ここで報告されるグローバルまたは地域的な停止は、問題が設定ではなくAWS インフラストラクチャ側にあることを確認する最も迅速な方法です。
+* **AWS サービス正常性ダッシュボード** — **AWS CloudFront[&#128279;](https://health.aws.amazon.com/health/status) または** Amazon Lambda&rbrace; に影響を与えるアクティブなインシデントについては **AWS サービス正常性ダッシュボード** を確認してください。 ここで報告されるグローバルまたは地域的な停止は、問題が設定ではなくAWS インフラストラクチャ側にあることを確認する最も迅速な方法です。
 * **Lambda@Edge errors** — **AWS コンソール/CloudFront/モニタリング/[ 配布版]** に移動します。 「**Lambda@Edge エラー**」タブを開き、「**実行エラー**」グラフで実行エラーを確認します。 これらの値が大きい場合、Lambda@Edgeがダウンしている可能性があります。
 
 **Lambda@Edge関数の分離**
@@ -369,7 +369,7 @@ Lambda@Edge関数（`edgeoptimize-origin`）は、CloudFront 動作のオリジ�
    | 接触チャネルリクエスト | 関連付けなし |
    | 接触チャネル応答 | 関連付けなし |
 
-   ![ 関数の関連付けの設定 ](/help/assets/optimize-at-edge/cloudfront-no-function-association.png)
+   ![&#x200B; 関数の関連付けの設定 &#x200B;](/help/assets/optimize-at-edge/cloudfront-no-function-association.png)
 
 4. **変更を保存** をクリックします。
 
@@ -395,7 +395,7 @@ Lambda@Edge関数（`edgeoptimize-origin`）は、CloudFront 動作のオリジ�
 
    手順 4 で示したバージョン付き **関数 ARN** を使用します（**バージョンの公開**）。
 
-   ![ 関数の関連付けの設定 ](/help/assets/optimize-at-edge/cloudfront-function-association.png)
+   ![&#x200B; 関数の関連付けの設定 &#x200B;](/help/assets/optimize-at-edge/cloudfront-function-association.png)
 
 4. **変更を保存** をクリックします。
 

@@ -58,11 +58,11 @@ IT／CDN チームの要件：
 
 | CDN プロバイダー | タイプ | ガイド |
 |---|---|---|
-| AEM Cloud Service の管理による CDN （Fastly） | アドビが管理する | [ 設定ガイドを表示 ](/help/dashboards/optimize-at-edge/aemcs-managed-cdn.md) |
-| Fastly （BYOCDN） | 独自の CDN の導入 | [ 設定ガイドを表示 ](/help/dashboards/optimize-at-edge/fastly-byocdn.md) |
-| Akamai （BYOCDN） | 独自の CDN の導入 | [ 設定ガイドを表示 ](/help/dashboards/optimize-at-edge/akamai-byocdn.md) |
-| Cloudflare （BYOCDN） | 独自の CDN の導入 | [ 設定ガイドを表示 ](/help/dashboards/optimize-at-edge/cloudflare-byocdn.md) |
-| CloudFront （BYOCDN） | 独自の CDN の導入 | [ 設定ガイドを表示 ](/help/dashboards/optimize-at-edge/cloudfront-byocdn.md) |
+| AEM Cloud Service の管理による CDN （Fastly） | アドビが管理する | [&#x200B; 設定ガイドを表示 &#x200B;](/help/dashboards/optimize-at-edge/aemcs-managed-cdn.md) |
+| Fastly （BYOCDN） | 独自の CDN の導入 | [&#x200B; 設定ガイドを表示 &#x200B;](/help/dashboards/optimize-at-edge/fastly-byocdn.md) |
+| Akamai （BYOCDN） | 独自の CDN の導入 | [&#x200B; 設定ガイドを表示 &#x200B;](/help/dashboards/optimize-at-edge/akamai-byocdn.md) |
+| Cloudflare （BYOCDN） | 独自の CDN の導入 | [&#x200B; 設定ガイドを表示 &#x200B;](/help/dashboards/optimize-at-edge/cloudflare-byocdn.md) |
+| CloudFront （BYOCDN） | 独自の CDN の導入 | [&#x200B; 設定ガイドを表示 &#x200B;](/help/dashboards/optimize-at-edge/cloudfront-byocdn.md) |
 
 >[!NOTE]
 >CDN プロバイダーが上記に記載されていない場合や、LLM Optimizer UI にドメインやメールが見つからない場合は、`llmo-at-edge@adobe.com` にお問い合わせいただき、オンボーディングサポートを受けてください。 設定が完了したら、LLM Optimizer で Edge での最適化の機会に関する候補をデプロイできます。
