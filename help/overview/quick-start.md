@@ -2,10 +2,10 @@
 title: クイックスタート
 description: Adobe LLM Optimizer の基本を学ぶ - ブランドをオンボードし、AI による可視性のインサイトを活用し、ダッシュボードを探索して、検索パフォーマンスを向上させます。
 feature: Quickstart, Onboarding
-source-git-commit: 82830e66d43ddd9741617cdf6daab63cd259554b
+source-git-commit: a1ba7684ccef9baf3452cc158fc0d6a12aa7adb8
 workflow-type: tm+mt
-source-wordcount: '1152'
-ht-degree: 93%
+source-wordcount: '1169'
+ht-degree: 92%
 
 ---
 
@@ -38,7 +38,7 @@ AEM Cloud （Cloud Service、Managed Services、Edge Delivery サービス）を
 無料版では使用できない製品機能がいくつかあります。
 
 * 体験版は 1 つのドメインに制限されています。 設定が完了すると、指定したドメインを変更できません。
-* 最適化をデプロイする機能は、早期アクセスで利用できます。 詳しくは、[Edgeで最適化に関するよくある質問 &#x200B;](https://experienceleague.adobe.com/ja/docs/llm-optimizer/using/resources/optimize-at-edge/overview#frequently-asked-questions) を参照してください。
+* 最適化をデプロイする機能は、早期アクセスで利用できます。 詳しくは、[Edgeで最適化に関するよくある質問 ](https://experienceleague.adobe.com/en/docs/llm-optimizer/using/resources/optimize-at-edge/overview#frequently-asked-questions) を参照してください。
 
 無料体験版のアクティブ化方法とドメインのオンボード方法について詳しくは、以下の節を参照してください。
 
@@ -103,6 +103,9 @@ AEM Cloud のお客様の場合は、[Experience Hub](https://experienceleague.a
 
 * [エージェントトラフィック](/help/dashboards/agentic-traffic.md#cdn-setup)
 * [リファラルトラフィック](/help/dashboards/referral-traffic.md#setup#setup)
+
+>[!NOTE]
+>顧客管理 CDN （BYOCDN）を使用する場合のログ転送について詳しくは、「[BYOCDN ログ転送の概要 ](/help/overview/log-forwarding/log-forwarding-overview.md)」を参照してください。
 
 ## 手順 5：ダッシュボードを探索し、アクションを実行
 
