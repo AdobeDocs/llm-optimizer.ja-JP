@@ -30,7 +30,7 @@ ht-degree: 2%
 
 1. 「**CDN 設定**」タブをクリックします。
 
-   ![CDN 設定タブ ](/help/overview/assets/log-forwarding/common/cdn-config-tab.png)
+   ![CDN 設定タブ &#x200B;](/help/overview/assets/log-forwarding/common/cdn-config-tab.png)
 
 1. **開始** をクリックします。
 
@@ -42,7 +42,7 @@ ht-degree: 2%
 
 1. **その他** を選択します。
 
-   ![ その他を選択 ](/help/overview/assets/log-forwarding/other/other-select.png)
+   ![&#x200B; その他を選択 &#x200B;](/help/overview/assets/log-forwarding/other/other-select.png)
 
 1. **オンボード** をクリックします。
 

@@ -24,7 +24,7 @@ LLM Optimizerページ [https://llmo.now/](https://llmo.now/) で、次の操作
 
 1. 「**CDN 設定**」タブをクリックします。
 
-   ![CDN 設定タブ ](/help/overview/assets/log-forwarding/common/cdn-config-tab.png)
+   ![CDN 設定タブ &#x200B;](/help/overview/assets/log-forwarding/common/cdn-config-tab.png)
 
 1. **開始** をクリックします。
 
@@ -40,17 +40,17 @@ LLM Optimizerページ [https://llmo.now/](https://llmo.now/) で、次の操作
 
 1. 「**CloudFront （BYOCDN）**」を選択します。
 
-   ![CloudFront を選択 ](/help/overview/assets/log-forwarding/cloudfront/cloudfront-select.png)
+   ![CloudFront を選択 &#x200B;](/help/overview/assets/log-forwarding/cloudfront/cloudfront-select.png)
 
 1. **オンボード** をクリックします。
 
-   ![ オンボードボタン ](/help/overview/assets/log-forwarding/common/onboard-button.png)
+   ![&#x200B; オンボードボタン &#x200B;](/help/overview/assets/log-forwarding/common/onboard-button.png)
 
 ## 手順 2：標準ログを有効にする（CloudFront コンソール） {#step-2}
 
 標準ログを有効にするには、[AWS Management Console](https://aws.amazon.com/console/) から次の操作を行います。
 
-1. [CloudFront コンソール ](https://console.aws.amazon.com/cloudfront/v4/home) にアクセスし、[ 既存の配布を更新 ](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/HowToUpdateDistribution.html#HowToUpdateDistributionProcedure) します。
+1. [CloudFront コンソール &#x200B;](https://console.aws.amazon.com/cloudfront/v4/home) にアクセスし、[&#x200B; 既存の配布を更新 &#x200B;](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/HowToUpdateDistribution.html#HowToUpdateDistributionProcedure) します。
 
 1. 「**ログ** タブを開きます。
 
@@ -58,21 +58,21 @@ LLM Optimizerページ [https://llmo.now/](https://llmo.now/) で、次の操作
 
 1. **宛先** については、リソースを選択または作成します。 **バケット名** を入力すると、LLM Optimizer CDN 設定ページから値をコピーできます。
 
-   ![CloudFront バケット名 ](/help/overview/assets/log-forwarding/cloudfront/cloudfront-bucket-name.png)
+   ![CloudFront バケット名 &#x200B;](/help/overview/assets/log-forwarding/cloudfront/cloudfront-bucket-name.png)
 
 1. 設定 **追加設定**:
 
    - **フィールドの選択** — ログ ファイルのフィールドを選択します。 LLM Optimizer CDN 設定ページの必須フィールドを参照してください。
 
-     ![CloudFront フィールドの選択 ](/help/overview/assets/log-forwarding/cloudfront/cloudfront-field-selection.png)
+     ![CloudFront フィールドの選択 &#x200B;](/help/overview/assets/log-forwarding/cloudfront/cloudfront-field-selection.png)
 
    - **パーティション化** — LLM Optimizer設定ページから **path サフィックス** をコピーします。
 
-     ![CloudFront のパーティション設定 ](/help/overview/assets/log-forwarding/cloudfront/cloudfront-partitioning.png)
+     ![CloudFront のパーティション設定 &#x200B;](/help/overview/assets/log-forwarding/cloudfront/cloudfront-partitioning.png)
 
    - **出力形式** – 形式は JSON にする必要があります。
 
-     ![CloudFront 出力形式 ](/help/overview/assets/log-forwarding/cloudfront/cloudfront-output-format.png)
+     ![CloudFront 出力形式 &#x200B;](/help/overview/assets/log-forwarding/cloudfront/cloudfront-output-format.png)
 
 1. 配布を更新または作成するには、次の手順を実行します。
 
@@ -82,13 +82,13 @@ LLM Optimizerページ [https://llmo.now/](https://llmo.now/) で、次の操作
 
 （CloudFront 配布の **ソースアカウント** は、アクセスログを **宛先アカウント** （LLM Optimizer CDN 設定ページに表示される S3 バケット）に送信します。 両方のアカウントに適切な権限が必要です。
 
-例：ソースアカウント `111111111111` は、宛先アカウント `222222222222` の S3 バケットにログを送信します。 [AWS Commad Line インターフェイス ](https://aws.amazon.com/cli/) を使用できます。
+例：ソースアカウント `111111111111` は、宛先アカウント `222222222222` の S3 バケットにログを送信します。 [AWS Commad Line インターフェイス &#x200B;](https://aws.amazon.com/cli/) を使用できます。
 
 >[!NOTE]
 >
 >以下のコマンドでは、配信先の ARN 値（`arn:aws:logs:us-east-1:222222222222:delivery-destination:cloudfront-delivery-destination`）を、LLM Optimizerの設定ページにある **配信先 ARN** の値に置き換えます。
 
-![ 配信先 ARN](/help/overview/assets/log-forwarding/cloudfront/cloudfront-delivery-destination-arn.png)
+![&#x200B; 配信先 ARN](/help/overview/assets/log-forwarding/cloudfront/cloudfront-delivery-destination-arn.png)
 
 ### ソースアカウントの設定 {#source-account}
 

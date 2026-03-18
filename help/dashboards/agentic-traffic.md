@@ -46,7 +46,7 @@ ht-degree: 98%
 「**その他**」を選択した場合は、llmo-now@adobe.com に問い合わせてサポートを受ける必要があります。
 
 >[!NOTE]
->顧客管理 CDN （BYOCDN）を使用する場合のログ転送について詳しくは、「[BYOCDN ログ転送の概要 ](/help/overview/log-forwarding/log-forwarding-overview.md)」を参照してください。
+>顧客管理 CDN （BYOCDN）を使用する場合のログ転送について詳しくは、「[BYOCDN ログ転送の概要 &#x200B;](/help/overview/log-forwarding/log-forwarding-overview.md)」を参照してください。
 
 アクティブ化すると、ログが取り込まれ、合計エージェントインタラクション数、成功率、マーケット別のヒット数、ユーザーエージェント分析、URL レベルのパフォーマンスなどの指標がダッシュボードに入力されます。
 

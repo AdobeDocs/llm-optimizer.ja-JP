@@ -24,7 +24,7 @@ LLM Optimizerページ [https://llmo.now/](https://llmo.now/) で、次の操作
 
 1. 「**CDN 設定**」タブをクリックします。
 
-   ![CDN 設定タブ ](/help/overview/assets/log-forwarding/common/cdn-config-tab.png)
+   ![CDN 設定タブ &#x200B;](/help/overview/assets/log-forwarding/common/cdn-config-tab.png)
 
 1. **開始** をクリックします。
 
@@ -36,7 +36,7 @@ LLM Optimizerページ [https://llmo.now/](https://llmo.now/) で、次の操作
 
 1. **Cloudflare （BYOCDN）** を選択します。
 
-   ![Cloudflare を選択 ](/help/overview/assets/log-forwarding/cloudflare/cloudflare-select.png)
+   ![Cloudflare を選択 &#x200B;](/help/overview/assets/log-forwarding/cloudflare/cloudflare-select.png)
 
 1. **オンボード** をクリックします。
 
@@ -44,7 +44,7 @@ LLM Optimizerページ [https://llmo.now/](https://llmo.now/) で、次の操作
 
 ## 手順 2:Cloudflare で Logpush ジョブを作成する {#step-2}
 
-[Cloudflare ダッシュボード ](https://dash.cloudflare.com/login) で、次の手順に従います。
+[Cloudflare ダッシュボード &#x200B;](https://dash.cloudflare.com/login) で、次の手順に従います。
 
 1. **ドメイン（ゾーン）** レベルの **Logpush** ページに移動します。
 1. **ログプッシュジョブを作成** を選択します。
@@ -53,15 +53,15 @@ LLM Optimizerページ [https://llmo.now/](https://llmo.now/) で、次の操作
 
    - **バケット** - S3 バケット名。 LLM Optimizer CDN 設定ページから値をコピーします。
 
-     ![ バケット名 ](/help/overview/assets/log-forwarding/common/bucket-name.png)
+     ![&#x200B; バケット名 &#x200B;](/help/overview/assets/log-forwarding/common/bucket-name.png)
 
    - **パス** - ストレージコンテナ内のバケットの場所。 LLM Optimizer CDN 設定ページから値をコピーします。
 
-     ![Cloudflare パス ](/help/overview/assets/log-forwarding/cloudflare/cloudflare-path.png)
+     ![Cloudflare パス &#x200B;](/help/overview/assets/log-forwarding/cloudflare/cloudflare-path.png)
 
    - **ログを毎日のサブフォルダーに整理** （推奨）。
 
-     ![ 日別サブフォルダー ](/help/overview/assets/log-forwarding/cloudflare/cloudflare-daily-subfolders.png)
+     ![&#x200B; 日別サブフォルダー &#x200B;](/help/overview/assets/log-forwarding/cloudflare/cloudflare-daily-subfolders.png)
 
    - **バケットリージョン** — LLM Optimizer CDN 設定ページから値をコピーします。
 
@@ -83,7 +83,7 @@ LLM Optimizerページ [https://llmo.now/](https://llmo.now/) で、次の操作
 
    - **次のフィールドを送信** で、LLM Optimizer設定ページの値を参照してください。
 
-     ![Logpush フィールド ](/help/overview/assets/log-forwarding/cloudflare/cloudflare-logpush-fields.png)
+     ![Logpush フィールド &#x200B;](/help/overview/assets/log-forwarding/cloudflare/cloudflare-logpush-fields.png)
 
    - **ログ形式**:JSON
 
@@ -93,10 +93,10 @@ LLM Optimizerページ [https://llmo.now/](https://llmo.now/) で、次の操作
 
    - ログのタイムスタンプフィールドの形式を次のように選択します。`RFC3339`
 
-     ![ タイムスタンプ形式 ](/help/overview/assets/log-forwarding/cloudflare/cloudflare-timestamp-format.png)
+     ![&#x200B; タイムスタンプ形式 &#x200B;](/help/overview/assets/log-forwarding/cloudflare/cloudflare-timestamp-format.png)
 
    - サンプリングレートには、「**すべてのログ**」を選択します。
 
-     ![ サンプリングレート ](/help/overview/assets/log-forwarding/cloudflare/cloudflare-sampling-rate.png)
+     ![&#x200B; サンプリングレート &#x200B;](/help/overview/assets/log-forwarding/cloudflare/cloudflare-sampling-rate.png)
 
 1. Logpush ジョブの設定が完了したら、**送信** を選択します。

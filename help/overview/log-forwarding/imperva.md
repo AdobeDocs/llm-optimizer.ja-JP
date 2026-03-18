@@ -24,19 +24,19 @@ LLM Optimizerページ [https://llmo.now/](https://llmo.now/) で、次の操作
 
 1. 「**CDN 設定**」タブをクリックします。
 
-   ![CDN 設定タブ ](/help/overview/assets/log-forwarding/common/cdn-config-tab.png)
+   ![CDN 設定タブ &#x200B;](/help/overview/assets/log-forwarding/common/cdn-config-tab.png)
 1. **開始** をクリックします。
 1. **AI トラフィックインサイトをアクティブ化** の横にある **設定** をクリックします。
 
    ![設定](/help/overview/assets/log-forwarding/common/configure.png)
 1. 「**Imperva （BYOCDN）**」を選択します。
 
-   ![ インパーバを選択 ](/help/overview/assets/log-forwarding/imperva/imperva-select.png)
+   ![&#x200B; インパーバを選択 &#x200B;](/help/overview/assets/log-forwarding/imperva/imperva-select.png)
 1. **オンボード** をクリックします。
 
 ## 手順 2:Imperva でのログ転送の設定 {#step-2}
 
-[Imperva コンソール ](https://my.imperva.com) で：
+[Imperva コンソール &#x200B;](https://my.imperva.com) で：
 
 >[!NOTE]
 >
@@ -53,7 +53,7 @@ LLM Optimizerページ [https://llmo.now/](https://llmo.now/) で、次の操作
    | フィールド | 説明 | メモ |
    |---|---|---|
    | **接続名** | 接続のわかりやすい名前（例：実稼動 S3 ログ）。 デフォルトの名前は変更できます。 | |
-   | **パス** | ログファイルが保存されるフォルダーの場所。 形式 `<Amazon S3 bucket name>/<log folder>` を使用します。 例：`MyBucket/MyImpervaLogFolder`。 | `Amazon S3 bucket name` は、LLM Optimizer設定ページの **バケット名** です。![バケット名 ](/help/overview/assets/log-forwarding/imperva/imperva-bucket-name.png) ログフォルダーは、LLM Optimizer設定ページの **パス** です。![パス ](/help/overview/assets/log-forwarding/imperva/imperva-path.png) |
+   | **パス** | ログファイルが保存されるフォルダーの場所。 形式 `<Amazon S3 bucket name>/<log folder>` を使用します。 例：`MyBucket/MyImpervaLogFolder`。 | `Amazon S3 bucket name` は、LLM Optimizer設定ページの **バケット名** です。![バケット名 &#x200B;](/help/overview/assets/log-forwarding/imperva/imperva-bucket-name.png) ログフォルダーは、LLM Optimizer設定ページの **パス** です。![パス &#x200B;](/help/overview/assets/log-forwarding/imperva/imperva-path.png) |
 
 5. **接続をテスト** をクリックします。 Imperva は完全なテストを実行し、指定されたフォルダーにテストファイル（実際のデータなし）が送信され、転送が完了すると削除されます。
 
@@ -66,9 +66,9 @@ LLM Optimizerページ [https://llmo.now/](https://llmo.now/) で、次の操作
 
    | フィールド | メモ |
    |---|---|
-   | ログ統合モード | ![ ログ統合モード ](/help/overview/assets/log-forwarding/imperva/imperva-log-integration-mode.png) |
-   | 配信方法 | ![ 配信方法 ](/help/overview/assets/log-forwarding/imperva/imperva-delivery-method.png) |
-   | ログタイプ | ![ ログタイプ ](/help/overview/assets/log-forwarding/imperva/imperva-log-types.png) |
-   | ログレベル | ![ ログレベル ](/help/overview/assets/log-forwarding/imperva/imperva-log-level.png) |
+   | ログ統合モード | ![&#x200B; ログ統合モード &#x200B;](/help/overview/assets/log-forwarding/imperva/imperva-log-integration-mode.png) |
+   | 配信方法 | ![&#x200B; 配信方法 &#x200B;](/help/overview/assets/log-forwarding/imperva/imperva-delivery-method.png) |
+   | ログタイプ | ![&#x200B; ログタイプ &#x200B;](/help/overview/assets/log-forwarding/imperva/imperva-log-types.png) |
+   | ログレベル | ![&#x200B; ログレベル &#x200B;](/help/overview/assets/log-forwarding/imperva/imperva-log-level.png) |
    | 書式設定 | ![形式](/help/overview/assets/log-forwarding/imperva/imperva-format.png) |
-   | ログを圧縮 | ![ ログを圧縮 ](/help/overview/assets/log-forwarding/imperva/imperva-compress-logs.png) |
+   | ログを圧縮 | ![&#x200B; ログを圧縮 &#x200B;](/help/overview/assets/log-forwarding/imperva/imperva-compress-logs.png) |

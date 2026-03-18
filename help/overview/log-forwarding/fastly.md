@@ -24,7 +24,7 @@ LLM Optimizerページ [https://llmo.now/](https://llmo.now/) で、次の操作
 
 1. 「**CDN 設定**」タブをクリックします。
 
-   ![CDN 設定タブ ](/help/overview/assets/log-forwarding/common/cdn-config-tab.png)
+   ![CDN 設定タブ &#x200B;](/help/overview/assets/log-forwarding/common/cdn-config-tab.png)
 
 1. **開始** をクリックします。
 1. **AI トラフィックインサイトをアクティブ化** の横にある **設定** をクリックします。
@@ -32,7 +32,7 @@ LLM Optimizerページ [https://llmo.now/](https://llmo.now/) で、次の操作
    ![設定](/help/overview/assets/log-forwarding/common/configure.png)
 1. 「**Fastly （BYOCDN）**」を選択します。
 
-   ![Fastly を選択 ](/help/overview/assets/log-forwarding/fastly/fastly-select.png)
+   ![Fastly を選択 &#x200B;](/help/overview/assets/log-forwarding/fastly/fastly-select.png)
 1. **オンボード** をクリックします。
 
 ## 手順 2:Fastly での S3 エンドポイントの作成 {#step-2}
@@ -49,10 +49,10 @@ LLM Optimizerページ [https://llmo.now/](https://llmo.now/) で、次の操作
 | **プレースメント** | デフォルト |
 | **ログ形式** | 以下の **ログ形式文字列** セクションに示すログ形式文字列を使用します。 |
 | **タイムスタンプ形式** | `%Y-%m-%dT%H:%M:%S.000` |
-| **バケット名** | LLM Optimizerの設定ページから **バケット名** をコピーします。![バケット名 ](/help/overview/assets/log-forwarding/fastly/fastly-bucket-name.png) |
-| **ドメイン** | LLM Optimizer設定ページから **ドメイン名** をコピーします。![ドメイン名 ](/help/overview/assets/log-forwarding/fastly/fastly-domain-name.png) |
+| **バケット名** | LLM Optimizerの設定ページから **バケット名** をコピーします。![バケット名 &#x200B;](/help/overview/assets/log-forwarding/fastly/fastly-bucket-name.png) |
+| **ドメイン** | LLM Optimizer設定ページから **ドメイン名** をコピーします。![ドメイン名 &#x200B;](/help/overview/assets/log-forwarding/fastly/fastly-domain-name.png) |
 | **Access メソッド** | **ユーザー資格情報** |
-| **ユーザー資格情報** | **アクセスキー** と **秘密鍵** をLLM Optimizer設定ページからコピーします。![アクセスキー ](/help/overview/assets/log-forwarding/common/access-keys.png) |
+| **ユーザー資格情報** | **アクセスキー** と **秘密鍵** をLLM Optimizer設定ページからコピーします。![アクセスキー &#x200B;](/help/overview/assets/log-forwarding/common/access-keys.png) |
 | **期間** | `300` |
 
 **ログ形式文字列：**
@@ -69,7 +69,7 @@ LLM Optimizerページ [https://llmo.now/](https://llmo.now/) で、次の操作
 
 | フィールド | 説明 |
 | --- | --- |
-| **パス** | LLM Optimizer設定ページから **パス** をコピーします。![パス ](/help/overview/assets/log-forwarding/fastly/fastly-path.png) |
+| **パス** | LLM Optimizer設定ページから **パス** をコピーします。![パス &#x200B;](/help/overview/assets/log-forwarding/fastly/fastly-path.png) |
 | **ログ行の形式を選択** | 空白 |
 | **圧縮** | Gzip |
 | **冗長性レベル** | 標準 |
