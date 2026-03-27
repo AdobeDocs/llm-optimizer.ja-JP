@@ -2,7 +2,7 @@
 title: Edge での最適化
 description: オーサリングの変更を必要とせずに、CDN Edge で LLM Optimizer の最適化を実現する方法について説明します。
 feature: Opportunities
-source-git-commit: 547c38986da609a6cd42cb94402c811d6eb1f939
+source-git-commit: d0134d1b7f8e1e50c7edf75e427d759389a0d18b
 workflow-type: tm+mt
 source-wordcount: '2181'
 ht-degree: 84%
@@ -15,6 +15,7 @@ ht-degree: 84%
 このページでは、オーサリングを変更せずに、CDN Edge で最適化を実現する方法の詳細な概要について説明します。 オンボーディングプロセス、使用可能な最適化の機会、Edge 自動最適化の方法について説明します。
 
 >[!NOTE]
+>
 >この機能は現在、早期アクセス版です。 早期アクセスプログラムについて詳しくは、[こちら](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/release-notes/release-notes/release-notes-current#aem-beta-programs)を参照してください。
 
 ## Edge での最適化とは
@@ -47,27 +48,29 @@ Edge での最適化にオンボードする際の前提条件：
 * CDN ログのログ転送プロセスを完了します。
 
 IT／CDN チームの要件：
-* サイト `*AdobeEdgeOptimize/1.0*`robots.txt ファイルまたはボットトラフィック管理ルールの許可リストに user-agent を追加します。
+
+* サイトのrobots.txt ファイルまたはbot-traffic管理ルールで`*AdobeEdgeOptimize/1.0*` user-agentを許可リストに追加します。
 * ページがドメインレベルや CDN レベルでブロックされていないことを確認します。
 * CDN に Edge での最適化ルーティングルールを追加します。
 * LLM Optimizer インターフェイスで Edge での最適化ルーティングを確認します。
 
-設定プロセスをガイドするには、以下で CDN プロバイダーを選択し、対応する設定ガイドに従ってください。 これらの例は、実際のライブ設定に合わせて調整する必要があることに注意してください。 最初に下位環境で変更を適用することをお勧めします。
+設定プロセスをガイドするには、以下のCDN プロバイダーを選択し、対応する設定ガイドに従います。 これらの例は、実際のライブ設定に合わせて調整する必要があることに注意してください。 最初に下位環境で変更を適用することをお勧めします。
 
-### CDN 設定ガイド
+### CDN設定ガイド
 
 | CDN プロバイダー | タイプ | ガイド |
 |---|---|---|
-| AEM Cloud Service の管理による CDN （Fastly） | アドビが管理する | [&#x200B; 設定ガイドを表示 &#x200B;](/help/dashboards/optimize-at-edge/aemcs-managed-cdn.md) |
-| Fastly （BYOCDN） | 独自の CDN の導入 | [&#x200B; 設定ガイドを表示 &#x200B;](/help/dashboards/optimize-at-edge/fastly-byocdn.md) |
-| Akamai （BYOCDN） | 独自の CDN の導入 | [&#x200B; 設定ガイドを表示 &#x200B;](/help/dashboards/optimize-at-edge/akamai-byocdn.md) |
-| Cloudflare （BYOCDN） | 独自の CDN の導入 | [&#x200B; 設定ガイドを表示 &#x200B;](/help/dashboards/optimize-at-edge/cloudflare-byocdn.md) |
-| CloudFront （BYOCDN） | 独自の CDN の導入 | [&#x200B; 設定ガイドを表示 &#x200B;](/help/dashboards/optimize-at-edge/cloudfront-byocdn.md) |
+| AEM Cloud Service Managed CDN （Fastly） | アドビが管理する | [設定ガイドを表示](/help/dashboards/optimize-at-edge/aemcs-managed-cdn.md) |
+| Fastly （BYOCDN） | 独自のCDNの作成 | [設定ガイドを表示](/help/dashboards/optimize-at-edge/fastly-byocdn.md) |
+| Akamai （BYOCDN） | 独自のCDNの作成 | [設定ガイドを表示](/help/dashboards/optimize-at-edge/akamai-byocdn.md) |
+| Cloudflare （BYOCDN） | 独自のCDNの作成 | [設定ガイドを表示](/help/dashboards/optimize-at-edge/cloudflare-byocdn.md) |
+| CloudFront （BYOCDN） | 独自のCDNの作成 | [設定ガイドを表示](/help/dashboards/optimize-at-edge/cloudfront-byocdn.md) |
 
 >[!NOTE]
->CDN プロバイダーが上記に記載されていない場合や、LLM Optimizer UI にドメインやメールが見つからない場合は、`llmo-at-edge@adobe.com` にお問い合わせいただき、オンボーディングサポートを受けてください。 設定が完了したら、LLM Optimizer で Edge での最適化の機会に関する候補をデプロイできます。
+>
+>上記に記載されていないCDN プロバイダーの場合、またはLLM Optimizer UIにドメインまたは電子メールが見つからない場合は、`llmo-at-edge@adobe.com`に連絡してオンボーディングのサポートを受けてください。 設定が完了したら、LLM Optimizer で Edge での最適化の機会に関する候補をデプロイできます。
 
-上記の各 CDN セットアップガイドには、エージェンティックトラフィックが正しくルーティングされており、人間のトラフィックが影響を受けないことを確認するための詳細な検証手順が最後に含まれています。
+上記の各CDN セットアップガイドには、エージェント型トラフィックが正しくルーティングされ、人間のトラフィックが影響を受けないことを確認するための詳細な検証手順が最後に含まれています。
 
 ## オポチュニティ
 
@@ -84,7 +87,7 @@ IT／CDN チームの要件：
 
 [Adobe LLM Optimizer：web ページは引用できますか？](https://chromewebstore.google.com/detail/adobe-llm-optimizer-is-yo/jbjngahjjdgonbeinjlepfamjdmdcbcc) Chrome 拡張機能は、LLM が web ページのコンテンツにどの程度にアクセスでき、どの部分が非表示になっているかを示します。 無料のスタンドアロン診断ツールとして設計され、製品ライセンスや設定は必要ありません。
 
-シングルクリックで、任意のサイトの機械による読みやすさを評価できます。 AI エージェントに表示される内容と人間のユーザーに表示される内容を並べて比較表示し、LLM Optimizer を使用して回復できるコンテンツの量を推定できます。 詳しくは、[AI は web サイトを読み取れるか](https://business.adobe.com/jp/blog/introducing-the-llm-optimizer-chrome-extension) ページを参照してください。
+シングルクリックで、任意のサイトの機械による読みやすさを評価できます。 AI エージェントに表示される内容と人間のユーザーに表示される内容を並べて比較表示し、LLM Optimizer を使用して回復できるコンテンツの量を推定できます。 詳しくは、[AI は web サイトを読み取れるか](https://business.adobe.com/blog/introducing-the-llm-optimizer-chrome-extension) ページを参照してください。
 
 ## オポチュニティの詳細
 
@@ -114,7 +117,7 @@ IT／CDN チームの要件：
 
 各オポチュニティについて、Edge での最適化をプレビュー、編集、デプロイ、ライブ表示、ロールバックできます。
 
->[!VIDEO](https://video.tv.adobe.com/v/3477985/?captions=jpn&learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3477983/?learn=on&enablevpops)
 
 ### プレビュー
 
@@ -152,13 +155,15 @@ Q. Edge での最適化では、どの種類の LLM をターゲットにして�
 
 ターゲットにするユーザーエージェントのリストは、オンボーディングプロセス中に定義されます。
 
-<!--Q. What does "Edge" in Optimize at Edge mean?
+<!--
+Q. What does "Edge" in Optimize at Edge mean?
 
 In our context, "Edge" means that the optimization is applied at the CDN layer and not inside your CMS.
 
 Q. Why does this optimization require a CDN?
 
-The CDN is where the optimized version of the page is assembled and delivered to AI agents. We leverage the CDN to ensure your origin CMS remains unchanged. This separation lets you improve LLM visibility without altering your existing publishing workflows.-->
+The CDN is where the optimized version of the page is assembled and delivered to AI agents. We leverage the CDN to ensure your origin CMS remains unchanged. This separation lets you improve LLM visibility without altering your existing publishing workflows.
+-->
 
 Q. Edge での最適化にまだオンボードしていない場合はどうなりますか？
 
@@ -166,7 +171,7 @@ Q. Edge での最適化にまだオンボードしていない場合はどうな
 
 Q：ソースでコンテンツを更新する際、何が発生しますか？
 
-基になるソースページが変更されていない限り、キャッシュからページの最適化バージョンが提供されます。 ただし、**復元コンテンツの可視性** でソースが変更された場合は、システムが自動更新されるので、AI エージェントは常に最新のコンテンツを受け取ります。 これは、サイト上のコンテンツが更新されると、そのウィンドウ内で新しい最適化がトリガーされるように、低キャッシュの有効期限（TTL）設定を（分順で）使用するからです。 **LLM に対応した概要を追加する** などのコンテンツオポチュニティの場合、LLM Optimizerはソースページを監視して変更を確認します。 変更が検出された場合、エージェント表示ページと人間が表示するページの間でコンテンツがずれるのを防ぐために、最適化を一時停止して、人間によるレビューのためにフラグを立てます。
+基礎となるソースページが変更されていない限り、最適化されたバージョンのページをキャッシュから提供します。 ただし、**コンテンツの可視性を復元**&#x200B;するソースが変更されると、システムが自動的に更新されるため、AI担当者は常に最新のコンテンツを受け取ることができます。 これは、サイト上のコンテンツの更新がそのウィンドウ内で新しい最適化をトリガーするように、低キャッシュ時間をライブ（TTL）設定（分単位）に使用するためです。 **LLMに適した概要を追加**などのコンテンツに関する商談の場合、LLM Optimizerはソースページの変更内容を監視します。 変更が検出された場合は、最適化を一時停止し、人間によるレビュー用にフラグを付けて、エージェントに表示されるページと人間に表示されるページの間のコンテンツドリフトを防ぎます。
 <!--As there is no universal TTL that fits every site, we can configure this TTL based on your cache invalidation rules to ensure both systems stay in sync.-->
 
 Q. Edge での最適化は、Adobe Edge Delivery Service（EDS）を使用しているサイトのみの対象ですか？
@@ -177,6 +182,6 @@ Q. Edge での最適化の事前レンダリングは、従来のサーバーサ
 
 どちらも異なる問題を解決し、連携して動作できます。 従来の SSR では、サーバーサイドコンテンツがレンダリングされますが、後でブラウザーに読み込まれるコンテンツは含まれません。 Edge での最適化の事前レンダリングでは、JavaScript とクライアントサイドデータが読み込まれた後のページが取得され、CDN Edge で完全にアセンブリされたバージョンが生成されます。 SSR は人間のエクスペリエンスの向上に焦点を当て、Edge での最適化は LLM の web エクスペリエンスを向上させます。
 
-質問：ドメイン内の一部の URL ではなく、すべての URL に最適化をデプロイするとどうなりますか？
+質問：ドメイン内の一部のURLに対して最適化をデプロイしたが、一部のURLに対してすべてがデプロイされない場合はどうなりますか？
 
-明示的に最適化した URL のみが変更されます。 オポチュニティがデプロイされた URL の場合、AI エージェントは最適化されたバージョンを受け取ります。 デプロイされた機会のない URL の場合、このサービスは、変更を適用したり、最適化キャッシュレイヤーに保存したりせずに、元のページをそのままプロキシするだけです。 これにより、サイトの他の部分に影響を与えることなく、最適化を選択的にデプロイできます。
+明示的に最適化したURLのみが変更されます。 デプロイされた商談を含むURLの場合、AI エージェントは最適化されたバージョンを受け取ります。 デプロイされた機会のないURLの場合、変更を適用したり、最適化キャッシュレイヤーに保存したりすることなく、元のページをそのままプロキシします。 これにより、サイトの他の部分に影響を与えることなく、選択的に最適化をデプロイすることができます。

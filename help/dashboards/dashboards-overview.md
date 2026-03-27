@@ -2,7 +2,7 @@
 title: ダッシュボードの概要
 description: これは記事の概要です。
 feature: Onboarding
-source-git-commit: ae37ef578f279eae6ea51fd8aed5c6b91c8e1088
+source-git-commit: 945537c3139e5a2038858e6121172e1a1a10ddf4
 workflow-type: tm+mt
 source-wordcount: '262'
 ht-degree: 93%
@@ -14,9 +14,10 @@ ht-degree: 93%
 
 ダッシュボードの概要へようこそ。 LLM-Optimizer のダッシュボードは、マーケターが AI 検索プラットフォームをまたいでブランドの可視性とセンチメントを追跡し、最適化の機会を特定し、引用とパフォーマンスを改善する規範的な変更を実装するのに役立ちます。
 
-主要なビューには、概要、ブランドプレゼンス、エージェントとリファラルトラフィック、URL インスペクター、オポチュニティ、Collaboration、Customer Configuration などが含まれます。
+主要なビューには、概要、ブランドプレゼンス、Agenticおよびリファラルトラフィック、URL Inspector、Opportunities、Collaboration、Customer Configurationが含まれます。
 
-<!-- CARDS
+<!--
+CARDS
 
 * ./brand-presence.md
   {title= Brand presence dashboard}

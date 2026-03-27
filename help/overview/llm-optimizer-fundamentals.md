@@ -1,8 +1,8 @@
 ---
 title: LLM Optimizer の基本
 description: Adobe LLM Optimizer が AI 駆動型検索でブランドの可視性を高める仕組みについて説明します。 言及、引用、インサイトを追跡します。 エンゲージメントと影響力を高めるために、今すぐ最適化を開始しましょう。
-source-git-commit: 1f665bd14349c15d92f8274742606abcf9b02000
-workflow-type: ht
+source-git-commit: d0134d1b7f8e1e50c7edf75e427d759389a0d18b
+workflow-type: tm+mt
 source-wordcount: '508'
 ht-degree: 100%
 
@@ -70,7 +70,8 @@ Adobe LLM Optimizer を使用すると、次の操作を実行できます。
 
 
 
-<!--## Understanding Brand Visibility and AI Search
+<!--
+## Understanding Brand Visibility and AI Search
 
 Use these as guidelines for creating tutorials - some may be covered already in docs
 
@@ -127,18 +128,5 @@ Use these as guidelines for creating tutorials - some may be covered already in 
 
 * Categories and Topics
 * Brand and Competitor Aliases
-* Domain Switching and Customization -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+* Domain Switching and Customization
+-->

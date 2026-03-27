@@ -2,7 +2,7 @@
 title: 最適化の機会
 description: オポチュニティダッシュボードを使用して、ブランドの可視性を高めることを目的に、サイトを改善できる方法を自動的に検出する方法について説明します。
 feature: Opportunities
-source-git-commit: 3204d46106b4ae1645df19138cabd55bf153eb42
+source-git-commit: f62148a9073e79d63e6ae19f0585aa87c16bcd3e
 workflow-type: tm+mt
 source-wordcount: '544'
 ht-degree: 97%
@@ -34,20 +34,24 @@ ht-degree: 97%
 | 構造化コンテンツ（FAQ）を推奨 | コンテンツ（オンサイト） | 一致する FAQ エントリがない、人気の高いプロンプトを検出します。 関連するプロンプト、カテゴリ、影響を受ける URL を表示します。 | よくあるクエリに一致する簡潔な回答を含む FAQ スキーマブロックを追加します。 |
 | ブロックされたエージェントトラフィックを検出 | テクニカル GEO | 既知の AI エージェント（例：GPTBot、PerplexityBot）からのブロックされたリクエストの CDN ログを分析します。 影響を受ける URL とエージェントをレポートします。 | 必要に応じて、robots.txt またはサーバー設定を更新して、サポートされている AI クローラーのアクセスを許可します。 |
 | 404s／403s／5xx の問題を検出 | テクニカル GEO | CDN ログでエラー応答を監視します。 頻度、影響を受ける URL、失われた推定ヒット数をレポートします。 | 破損したリンクを修正し、権限を更新し、サーバーサイドの問題を解決して、主要なコンテンツが 200 応答を返すようにします。 |
-| 複雑なコンテンツの簡素化 | コンテンツ（オンサイト） | 読みやすさのしきい値を超える長く複雑な段落を識別し、AI の理解度を低下させることができます。 | ページを事前レンダリングすることで、JavaScript を実行せずに AI エージェントがより多くのコンテンツを利用できるようにします。 |
+| 複雑なコンテンツの簡素化 | コンテンツ（オンサイト） | AIの理解度を下げることができる、読みやすいしきい値を超えた長くて複雑な段落を特定します。 | ページを事前レンダリングすることで、JavaScript を実行せずに AI エージェントがより多くのコンテンツを利用できるようにします。 |
 | コンテンツの可視性を回復（早期アクセス） | テクニカル GEO | 重要なコンテンツが AI エージェントから非表示になっているページにフラグを付けます。 影響を受ける URL と回復可能な予想されるコンテンツを表示します。 | ページを事前レンダリングすることで、JavaScript を実行せずに AI エージェントがより多くのコンテンツを利用できるようにします。 |
 
 ## 自動最適化 {#auto-optimization}
 
 自動最適化により、推奨される最適化のワンクリックデプロイメントを実行できるので、手動の労力と価値実現までの時間が削減されます。 最適化は、コンテンツソースまたは CDN Edge のいずれかで適用できます。 Edge ベースの自動最適化は現在、一部の機会に早期アクセスで使用できます。 詳しくは、[Edge での最適化](/help/dashboards/optimize-at-edge/overview.md)ページを参照してください。
 
-<!--### Recover Content Visibility Opportunity {#recover-contet}
+<!--
+### Recover Content Visibility Opportunity {#recover-contet}
 
-As stated above, the content visibility opportunity, flags pages where key content is lost for AI agents due to client-side rendering. For each identified page, it shows you exactly which content is missing from the AI agent view, helping you pinpoint visibility gaps. It's also supported by an edge-based pre-rendering capability that can serve more HTML content to agentic traffic without requiring Content Management System (CMS) changes. This functionality is currently in Early Access and requires setup from the LLM Optimizer team. Please contact `llmo-at-edge@adobe.com` to activate the content visibility opportunity.-->
+As stated above, the content visibility opportunity, flags pages where key content is lost for AI agents due to client-side rendering. For each identified page, it shows you exactly which content is missing from the AI agent view, helping you pinpoint visibility gaps. It's also supported by an edge-based pre-rendering capability that can serve more HTML content to agentic traffic without requiring Content Management System (CMS) changes. This functionality is currently in Early Access and requires setup from the LLM Optimizer team. Please contact `llmo-at-edge@adobe.com` to activate the content visibility opportunity.
+-->
 
 ### その他のツール
 
 [LLM 可視性チェッカー](https://chromewebstore.google.com/detail/is-your-webpage-citable/jbjngahjjdgonbeinjlepfamjdmdcbcc)は、LLM が web ページのコンテンツのどの程度にアクセスでき、またどの部分が非表示になっているかを正確に確認できる Chrome 拡張機能です。 無料のスタンドアロン診断ツールとして設計され、製品ライセンスや設定は必要ありません。 ユーザーはシングルクリックで、任意のサイトの機械による読みやすさを評価し、AI エージェントに表示される内容と人間のユーザーに表示される内容を並べて比較表示できます。 また、LLM Optimizer を使用して回復できるコンテンツの量を推定します。
 
-<!--| Detect Missing Hreflang | Content (Onsite)| Flags pages missing hreflang attributes. Provides affected URLs and expected coverage by language/region.| Implement hreflang tags to indicate correct localized versions. |
-| Detect Missing Canonicals | Content (Onsite) | Scans for pages without canonical tags or with conflicting tags. Lists affected URLs and duplicates. | Add canonical tags pointing to the preferred version of each page. Ensure consistent usage across variants. |-->
+<!--
+| Detect Missing Hreflang | Content (Onsite)| Flags pages missing hreflang attributes. Provides affected URLs and expected coverage by language/region.| Implement hreflang tags to indicate correct localized versions. |
+| Detect Missing Canonicals | Content (Onsite) | Scans for pages without canonical tags or with conflicting tags. Lists affected URLs and duplicates. | Add canonical tags pointing to the preferred version of each page. Ensure consistent usage across variants. |
+-->

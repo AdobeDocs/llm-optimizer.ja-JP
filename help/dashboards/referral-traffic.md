@@ -2,8 +2,8 @@
 title: リファラルトラフィック
 description: リファラルトラフィックダッシュボードを使用して、外部プラットフォーム、AI の引用、リファラルリンクから訪問者がサイトに到達する方法を確認する方法について説明します。
 feature: Referral Traffic
-source-git-commit: e50c87e8e5a669526f3c10855c1629ce82b67aef
-workflow-type: ht
+source-git-commit: d0134d1b7f8e1e50c7edf75e427d759389a0d18b
+workflow-type: tm+mt
 source-wordcount: '605'
 ht-degree: 100%
 
@@ -12,7 +12,7 @@ ht-degree: 100%
 
 # リファラルトラフィック
 
-リファラルトラフィックでは、外部プラットフォーム、AI の引用、リファラルリンクから訪問者がサイトに到達する方法が表示されます。外部の web サイトやプラットフォームからのトラフィックソース、リファラルパターン、コンバージョン指標を追跡および分析します。これは、最も関与の多いトラフィックを推進するソース、地域、ページを理解するのに役立ちます。<!--Data is sourced from the CDN logs, a privacy-preserving source that does not capture personal user data.-->また、表示するデータを絞り込むのに役立つカスタマイズ可能なフィルターもあります。
+リファラルトラフィックでは、外部プラットフォーム、AI の引用、リファラルリンクから訪問者がサイトに到達する方法が表示されます。 外部の web サイトやプラットフォームからのトラフィックソース、リファラルパターン、コンバージョン指標を追跡および分析します。 これは、最も関与の多いトラフィックを推進するソース、地域、ページを理解するのに役立ちます。<!--Data is sourced from the CDN logs, a privacy-preserving source that does not capture personal user data.--> また、表示するデータを絞り込むのに役立つカスタマイズ可能なフィルターもあります。
 
 ![リファラルページ](/help/dashboards/assets/referral-traffic.png)
 
@@ -26,24 +26,26 @@ ht-degree: 100%
 
 ## 設定 {#setup}
 
-初回ログイン時に、リファラルトラフィックダッシュボードが空白で表示される場合があります。データを表示するには、「**設定に移動**」を選択して、[CDN ログ転送](/help/dashboards/customer-configuration.md#cdn-configuration)を設定する必要があります。
+初回ログイン時に、リファラルトラフィックダッシュボードが空白で表示される場合があります。 データを表示するには、「**設定に移動**」を選択して、[CDN ログ転送](/help/dashboards/customer-configuration.md#cdn-configuration)を設定する必要があります。
 
 ![リファラル設定](/help/dashboards/assets/referral-setup1.png)
 
-<!--- 1. Select your Source (either CDN logs or AEM Operational Telemetry).
+<!--
+1. Select your Source (either CDN logs or AEM Operational Telemetry).
 2. Enter a primary contact email.
-3. Click **Request activation** to enable data ingestion. Hiding this until confirmation from PM-->
+3. Click **Request activation** to enable data ingestion. Hiding this until confirmation from PM
+-->
 
 アクティブ化すると、ダッシュボードにリファラルトラフィック指標が入力されます。
 
 ## フィルター {#filters}
 
-ページの上部でフィルターを適用して表示を絞り込むことができます。選択するフィルターは、ダッシュボードに存在する&#x200B;**すべて**&#x200B;のセクションに影響を与えます。次の項目をカスタマイズできます。
+ページの上部でフィルターを適用して表示を絞り込むことができます。 選択するフィルターは、ダッシュボードに存在する&#x200B;**すべて**&#x200B;のセクションに影響を与えます。 次の項目をカスタマイズできます。
 
-* **日付範囲** - 表示するデータの時間枠を選択します。例：過去 4 週間。また、「**カスタム週**」オプションを選択して期間をカスタマイズするオプションもあります。
+* **日付範囲** - 表示するデータの時間枠を選択します。 例：過去 4 週間。 また、「**カスタム週**」オプションを選択して期間をカスタマイズするオプションもあります。
 * **プラットフォーム** - Google、OpenAI、ソーシャルメディアなどの特定のトラフィックソースを選択します。
 * **ページインテント** - ユーザーのインテント別にリファラルトラフィックをフィルタリングします。
-* **チャネルソース** - チャネルのソースでフィルタリングします。オプションには、LLM、獲得、有料、混合のリファラルチャネルが含まれます。
+* **チャネルソース** - チャネルのソースでフィルタリングします。 オプションには、LLM、獲得、有料、混合のリファラルチャネルが含まれます。
 * **デバイスタイプ** - 訪問者のデバイスタイプ（デスクトップ、モバイル、すべてのデバイス）別にトラフィックを分析します。
   **地域** - 様々な地域をまたいでリファラルパターンを表示します。
 
@@ -62,15 +64,17 @@ ht-degree: 100%
 
 上記の全体的なパフォーマンス指標の他に、様々なマーケット、リファラルソース、ページインテントカテゴリをまたいでトラフィック分布を示す 3 つの追加パネルがあります<!-- the **Top Regions** panel breaks down traffic by geography. Meanwhile, the **Top Referral Sources** panel shows the platforms driving the most visits. Trend indicators for the metrics show how these values are changing over time compared to the previous period.-->
 
-<!--## Top Referral URLs {#top-referrals}
+<!--
+## Top Referral URLs {#top-referrals}
 
 The Top Referral URLs list surfaces your site's most visited pages from referrals.
 
-![Top Referral URLs](/help/dashboards/assets/top-url.png)-->
+![Top Referral URLs](/help/dashboards/assets/top-url.png)
+-->
 
 ## リファラルソースの詳細と URL パフォーマンス分析 {#traffic-details}
 
-リファラルソースの詳細と URL パフォーマンス分析テーブルは、トラフィック量と品質の両方を評価するのに役立ちます。詳しくは、次の各タブをクリックしてください。
+リファラルソースの詳細と URL パフォーマンス分析テーブルは、トラフィック量と品質の両方を評価するのに役立ちます。 詳しくは、次の各タブをクリックしてください。
 
 ![リファラルトラフィックの詳細](/help/dashboards/assets/traffic-details.png)
 
@@ -78,7 +82,7 @@ The Top Referral URLs list surfaces your site's most visited pages from referral
 
 >[!TAB リファラルソースの詳細]
 
-リファラルソースの詳細ビューでは、OpenAI、Microsoft、Google、Perplexity など、様々なプラットフォームからのトラフィックが分類されます。訪問数、バウンス率、チャネルタイプなどの主要指標が表示されるので、サイトに最も関与しているトラフィックを推進している AI および検索ソースを理解するのに役立ちます。
+リファラルソースの詳細ビューでは、OpenAI、Microsoft、Google、Perplexity など、様々なプラットフォームからのトラフィックが分類されます。 訪問数、バウンス率、チャネルタイプなどの主要指標が表示されるので、サイトに最も関与しているトラフィックを推進している AI および検索ソースを理解するのに役立ちます。
 
 * **ソース** - リファラルトラフィックのソース。
 * **訪問回数** - 各ソースの訪問回数の合計数。
@@ -87,8 +91,8 @@ The Top Referral URLs list surfaces your site's most visited pages from referral
 
 >[!TAB URL パフォーマンス分析]
 
-URL パフォーマンス分析ビューでは、LLM やその他のソースからのリファラルトラフィック量に基づいて、パフォーマンスが上位のページがランク付けされます。トラフィック、バウンス率、同意率、ページインテントなどの指標をハイライト表示し、AI 駆動型のリファラルから最もエンゲージメントの高い訪問者を引き付け、保持するページを特定するのに役立ちます。テーブルには、トピックにすばやくアクセスする検索フィールドがあります。
+URL パフォーマンス分析ビューでは、LLM やその他のソースからのリファラルトラフィック量に基づいて、パフォーマンスが上位のページがランク付けされます。 トラフィック、バウンス率、同意率、ページインテントなどの指標をハイライト表示し、AI 駆動型のリファラルから最もエンゲージメントの高い訪問者を引き付け、保持するページを特定するのに役立ちます。 テーブルには、トピックにすばやくアクセスする検索フィールドがあります。
 
 >[!ENDTABS]
 
-両方のテーブルで、「**書き出し**」オプションを使用してテーブル .csv をダウンロードし、インサイトをチームと共有したり、テーブルをエグゼクティブレポートに含めたりすることができます。さらに、両方のテーブルについて、「**列を設定**」ボタンをクリックすると、表示する指標をカスタマイズできます。
+両方のテーブルで、「**書き出し**」オプションを使用してテーブル .csv をダウンロードし、インサイトをチームと共有したり、テーブルをエグゼクティブレポートに含めたりすることができます。 さらに、両方のテーブルについて、「**列を設定**」ボタンをクリックすると、表示する指標をカスタマイズできます。
