@@ -86,7 +86,7 @@ LLM Optimizerは、分析データとAIの可視化インサイトをリンク�
 
 ### LLM トラフィックの識別方法
 
-LLMが開始したトラフィックは、Adobe Analytics [&#x200B; リファラータイプ – 対話型AI ツール &#x200B;](https://experienceleague.adobe.com/en/docs/analytics/components/dimensions/referrer-type#conversational-ai-tools)を使用して識別されます。
+LLMが開始したトラフィックは、Adobe Analytics [&#x200B; リファラータイプ – 対話型AI ツール &#x200B;](https://experienceleague.adobe.com/ja/docs/analytics/components/dimensions/referrer-type#conversational-ai-tools)を使用して識別されます。
 
 ### 取り込まれたデータ {#data-ingested}
 
