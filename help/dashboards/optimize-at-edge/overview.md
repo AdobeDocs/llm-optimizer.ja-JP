@@ -2,10 +2,10 @@
 title: Edge での最適化
 description: オーサリングの変更を必要とせずに、CDN Edge で LLM Optimizer の最適化を実現する方法について説明します。
 feature: Opportunities
-source-git-commit: d0134d1b7f8e1e50c7edf75e427d759389a0d18b
+source-git-commit: 23a4b06e2492d9692d37eb0e52208bdc49328b2a
 workflow-type: tm+mt
-source-wordcount: '2181'
-ht-degree: 84%
+source-wordcount: '2240'
+ht-degree: 77%
 
 ---
 
@@ -13,10 +13,6 @@ ht-degree: 84%
 # Edge での最適化
 
 このページでは、オーサリングを変更せずに、CDN Edge で最適化を実現する方法の詳細な概要について説明します。 オンボーディングプロセス、使用可能な最適化の機会、Edge 自動最適化の方法について説明します。
-
->[!NOTE]
->
->この機能は現在、早期アクセス版です。 早期アクセスプログラムについて詳しくは、[こちら](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/release-notes/release-notes/release-notes-current#aem-beta-programs)を参照してください。
 
 ## Edge での最適化とは
 
@@ -40,7 +36,17 @@ Edge での最適化では、エージェント型の web エクスペリエン�
 
 ## オンボーディング
 
-オンボーディングプロセスを開始するには、アドビのアカウントチームまたは FDE チームに問い合わせる必要があります。 また、IT チームまたは CDN チームも、前提条件と設定プロセスを完了する必要があります。 さらに、オンボーディングのサポートが必要な場合は、`llmo-at-edge@adobe.com` までお問い合わせください。
+<!--You should reach out to either your Adobe account team or the FDE team to start the onboarding process. Your IT or CDN team is also required to complete the pre-requisites and setup process. Additionally, you can also contact `llmo-at-edge@adobe.com` for further onboarding assistance.-->
+
+LLM Optimizer アカウントでオンボーディングプロセスを開始します。
+
+1. **顧客設定** n ダッシュボードで、「**CDN設定**」タブを選択します。
+1. 「**オンボード CDN**」をクリックします。
+   ![CDN設定タブ ](/help/overview/assets/cc-cdn.png)
+1. AEM Fastlyをご利用のお客様は、Adobeを使用してオンボーディングプロセスを進めることができます。 他のCDN プロバイダーを使用しているお客様の場合、IT/CDN チームは、必要なセットアップと前提条件を完了する必要があります。 追加のガイダンスについては、以下に示すCDN ガイドの例を参照してください。
+
+>[!NOTE]
+>オンボーディングフローについて詳しくは、以下のステップバイステップガイドを参照してください。 ガイドで解決されていない問題については、`llmo-at-edge@adobe.com`までお問い合わせください。
 
 Edge での最適化にオンボードする際の前提条件：
 
@@ -85,9 +91,9 @@ IT／CDN チームの要件：
 
 ### その他のツール
 
-[Adobe LLM Optimizer：web ページは引用できますか？](https://chromewebstore.google.com/detail/adobe-llm-optimizer-is-yo/jbjngahjjdgonbeinjlepfamjdmdcbcc) Chrome 拡張機能は、LLM が web ページのコンテンツにどの程度にアクセスでき、どの部分が非表示になっているかを示します。 無料のスタンドアロン診断ツールとして設計され、製品ライセンスや設定は必要ありません。
+[AI コンテンツの可視性チェッカー](https://chromewebstore.google.com/detail/ai-content-visibility-che/jbjngahjjdgonbeinjlepfamjdmdcbcc) ブラウザー拡張機能は、web ページのコンテンツ LLMの多くにアクセスできること、および非表示のままになっていることを示します。 無料のスタンドアロン診断ツールとして設計され、製品ライセンスや設定は必要ありません。
 
-シングルクリックで、任意のサイトの機械による読みやすさを評価できます。 AI エージェントに表示される内容と人間のユーザーに表示される内容を並べて比較表示し、LLM Optimizer を使用して回復できるコンテンツの量を推定できます。 詳しくは、[AI は web サイトを読み取れるか](https://business.adobe.com/jp/blog/introducing-the-llm-optimizer-chrome-extension) ページを参照してください。
+シングルクリックで、任意のサイトの機械による読みやすさを評価できます。 AI エージェントに表示される内容と人間のユーザーに表示される内容を並べて比較表示し、LLM Optimizer を使用して回復できるコンテンツの量を推定できます。 詳しくは、[AI は web サイトを読み取れるか](https://business.adobe.com/blog/introducing-the-llm-optimizer-chrome-extension) ページを参照してください。
 
 ## オポチュニティの詳細
 
@@ -117,7 +123,7 @@ IT／CDN チームの要件：
 
 各オポチュニティについて、Edge での最適化をプレビュー、編集、デプロイ、ライブ表示、ロールバックできます。
 
->[!VIDEO](https://video.tv.adobe.com/v/3477985/?captions=jpn&learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3477983/?learn=on&enablevpops)
 
 ### プレビュー
 
@@ -151,6 +157,10 @@ IT／CDN チームの要件：
 
 ## よくある質問
 
+質問：体験版のお客様は、EdgeでOptimizeを試すことができますか？
+
+はい。体験版のお客様は、1つの最適化オポチュニティにアクセスして、最大10 ページまでデプロイできます。 デフォルトでは、オポチュニティは「コンテンツの可視性を復元」です。これにより、AI担当者はページコンテンツの全版にアクセスできます。
+
 Q. Edge での最適化では、どの種類の LLM をターゲットにしていますか？
 
 ターゲットにするユーザーエージェントのリストは、オンボーディングプロセス中に定義されます。
@@ -171,7 +181,7 @@ Q. Edge での最適化にまだオンボードしていない場合はどうな
 
 Q：ソースでコンテンツを更新する際、何が発生しますか？
 
-基礎となるソースページが変更されていない限り、最適化されたバージョンのページをキャッシュから提供します。 ただし、**コンテンツの可視性を復元**&#x200B;するソースが変更されると、システムが自動的に更新されるため、AI担当者は常に最新のコンテンツを受け取ることができます。 これは、サイト上のコンテンツの更新がそのウィンドウ内で新しい最適化をトリガーするように、低キャッシュ時間をライブ（TTL）設定（分単位）に使用するためです。 **LLMに適した概要を追加**&#x200B;などのコンテンツに関する商談の場合、LLM Optimizerはソースページの変更内容を監視します。 変更が検出された場合は、最適化を一時停止し、人間によるレビュー用にフラグを付けて、エージェントに表示されるページと人間に表示されるページの間のコンテンツドリフトを防ぎます。
+基礎となるソースページが変更されていない限り、最適化されたバージョンのページをキャッシュから提供します。 ただし、**コンテンツの可視性を復元**&#x200B;するソースが変更されると、システムが自動的に更新されるため、AI担当者は常に最新のコンテンツを受け取ることができます。 これは、サイト上のコンテンツの更新がそのウィンドウ内で新しい最適化をトリガーするように、低キャッシュ時間をライブ（TTL）設定（分単位）に使用するためです。 **LLMに適した概要を追加**などのコンテンツに関する商談の場合、LLM Optimizerはソースページの変更内容を監視します。 変更が検出された場合は、最適化を一時停止し、人間によるレビュー用にフラグを付けて、エージェントに表示されるページと人間に表示されるページの間のコンテンツドリフトを防ぎます。
 <!--As there is no universal TTL that fits every site, we can configure this TTL based on your cache invalidation rules to ensure both systems stay in sync.-->
 
 Q. Edge での最適化は、Adobe Edge Delivery Service（EDS）を使用しているサイトのみの対象ですか？
