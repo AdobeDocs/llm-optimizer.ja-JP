@@ -12,7 +12,7 @@ ht-degree: 47%
 
 # クイックスタート
 
-LLM Optimizerを導入するには、オンボーディングプロセスを完了する必要があります。 オンボーディング後、カテゴリ、トピック、プロンプトをカスタマイズし、ログ転送を設定することで、より正確なインサイトと[LLM Optimizer ダッシュボード ](/help/dashboards/dashboards-overview.md)およびその他の機能への完全なアクセスを実現できます。
+LLM Optimizerを導入するには、オンボーディングプロセスを完了する必要があります。 オンボーディング後、カテゴリ、トピック、プロンプトをカスタマイズし、ログ転送を設定することで、より正確なインサイトと[LLM Optimizer ダッシュボード &#x200B;](/help/dashboards/dashboards-overview.md)およびその他の機能への完全なアクセスを実現できます。
 
 ## オンボーディングの概要
 
@@ -124,7 +124,7 @@ LLM Optimizerを使用するには、ブランド名とドメインをオンボ�
 
 ## 手順 4：CDN ログ転送の情報を指定 {#step-4}
 
-エージェント型トラフィックとリファラルトラフィックインサイトを活用するには、[ カスタマー設定ダッシュボード ](/help/dashboards/customer-configuration.md#cdn-configuration)からCDN ログ転送情報を追加します。 「**CDN設定**」タブを開き、**オンボード CDN**&#x200B;を選択します。
+エージェント型トラフィックとリファラルトラフィックインサイトを活用するには、[&#x200B; カスタマー設定ダッシュボード &#x200B;](/help/dashboards/customer-configuration.md#cdn-configuration)からCDN ログ転送情報を追加します。 「**CDN設定**」タブを開き、**オンボード CDN**&#x200B;を選択します。
 
 ![顧客設定 CDN](/help/overview/assets/cc-cdn.png)
 
