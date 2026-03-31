@@ -1,22 +1,22 @@
 ---
 title: クイックスタート
-description: Adobe LLM Optimizer の基本を学ぶ - ブランドをオンボードし、AI による可視性のインサイトを活用し、ダッシュボードを探索して、検索パフォーマンスを向上させます。
+description: ブランド名とドメインをオンボーディングし、Experience HubまたはExperience Cloudから体験版をアクティベートして、Adobe LLM Optimizerの設定を完了する方法について説明します。
 feature: Quickstart, Onboarding
-source-git-commit: a1ba7684ccef9baf3452cc158fc0d6a12aa7adb8
+source-git-commit: dcbeb1c61dd9dcefd83908f65f8303d36c0fb78e
 workflow-type: tm+mt
-source-wordcount: '1169'
-ht-degree: 92%
+source-wordcount: '1208'
+ht-degree: 47%
 
 ---
 
 
 # クイックスタート
 
-LLM Optimizerの使用を開始するには、以下の手順に従ってオンボーディングプロセスを完了する必要があります。 プロセスを完了すると、[LLM Optimizer のダッシュボード](/help/dashboards/dashboards-overview.md)とその他の機能に完全にアクセスできます。
+LLM Optimizerを導入するには、オンボーディングプロセスを完了する必要があります。 オンボーディング後、カテゴリ、トピック、プロンプトをカスタマイズし、ログ転送を設定することで、より正確なインサイトと[LLM Optimizer ダッシュボード ](/help/dashboards/dashboards-overview.md)およびその他の機能への完全なアクセスを実現できます。
 
 ## オンボーディングの概要
 
-オンボーディングプロセスは、ドメインのオンボーディングから開始します。 プロセスは、AEM Cloud の顧客であるかどうかに応じて異なります。 プロセスを完了したら、CDN ログ転送の情報を指定し、最後にカテゴリ、トピック、プロンプトをカスタマイズする必要があります。 プロセスの各パートについて詳しくは、LLM Optimizer の使用をできるだけ早く開始する方法に関する役立つヒントと共に以下を参照してください。
+オンボーディングプロセスは、ドメインとブランド名をオンボーディングすることから始まります。 以下では、オンボーディングジャーニーの各部分と、できるだけ早くLLM Optimizerを使い始めるためのヒントについて詳しく説明します。
 
 ### Adobe LLM Optimizer で公開ページにアクセスできるようにする
 
@@ -24,49 +24,78 @@ LLM Optimizerの使用を開始するには、以下の手順に従ってオン�
 
 設定要件：
 
-* Spacecat/1.0 ユーザーエージェントをサイトの robots.txt ファイルまたはボットトラフィック管理ルールの許可リストに加えます。
-* ページがドメインレベルや CDN レベルでブロックされていないことを確認します。 ブロックされたページでは、インデックスを作成できません。つまり、これらのページに対して最適化タスクとインサイトを生成できません。
+* サイトのrobots.txt ファイルまたはbot-traffic管理ルールで、Spacecat/1.0 ユーザーエージェントを許可リストに追加します。
+* ページがドメインレベルまたはCDN レベルでブロックされていないことを確認します。 ブロックされたページでは、インデックスを作成できません。つまり、これらのページに対して最適化タスクとインサイトを生成できません。
 
 ダッシュボードでコンテンツの可視性が低いと表示される場合は、web クローラーがドメインにアクセスできることを確認してください。 制限付きアクセスは、インデックス作成が不完全になる一般的な原因です。
 
-## 手順 1：ドメインをオンボード
+## ステップ 1：ブランド名とドメインのオンボーディング {#step-1-onboard-your-domain}
 
-### 購入前に試す
+LLM Optimizerを使い始めるには、まず体験版をアクティベートし、ブランド名とドメインをオンボーディングします。
 
-AEM Cloud （Cloud Service、Managed Services、Edge Delivery サービス）をご利用のお客様は、**購入前に試す** オファーを利用できます。 これは、最大 200 個の無料プロンプトを備えた LLM Optimizer の無料体験版です。 200 個を超えるプロンプトを使用するには、別のライセンス契約が必要です。 アクセス権は「現状有姿」および「利用可能な範囲」で付与され、アドビにより、いつでも変更、制限、削除される場合があります。
+### 体験版を有効にする
 
-無料版では使用できない製品機能がいくつかあります。
+アクティベーションフローは、Adobeの製品によって異なります。
 
-* 体験版は 1 つのドメインに制限されています。 設定が完了すると、指定したドメインを変更できません。
-* 最適化をデプロイする機能は、早期アクセスで利用できます。 詳しくは、[Edgeで最適化に関するよくある質問 &#x200B;](https://experienceleague.adobe.com/ja/docs/llm-optimizer/using/resources/optimize-at-edge/overview#frequently-asked-questions) を参照してください。
+#### AEM Cloudのお客様
 
-無料体験版のアクティブ化方法とドメインのオンボード方法について詳しくは、以下の節を参照してください。
+AEM Cloudのお客様は、体験版をアクティベートするために、次のいずれかを実行できます。
 
-### AEM Cloud のお客様
-
-AEM Cloud のお客様の場合は、[Experience Hub](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/experience-hub/experience-hub) の製品のお知らせカードを使用して LLM Optimizer を試すオプションがあります。
-
->[!NOTE]
->新しく追加されたプロンプトは、処理が完了するまで[ブランドプレゼンスダッシュボード](/help/dashboards/brand-presence.md)に表示されません。 AEM Cloud のお客様は、LLM Optimizer の無料体験版を使用できます。 200 個を超えるプロンプトを使用するには、別のライセンス契約が必要です。 アクセス権は「現状有姿」および「利用可能な範囲」で付与され、アドビにより、いつでも変更、制限、削除される場合があります。 詳しくは、アカウント担当者にお問い合わせください。
+* [Experience Hub](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/experience-hub/experience-hub)に移動し、お知らせカードを使用してLLM Optimizerを有効にします。 **LLM Optimizerを試す**&#x200B;を選択すると、[https://llmo.now](https://llmo.now)にリダイレクトされます。 IMSを介してログインし、ドメインとブランド名を入力してオンボーディングプロセスを開始します。
+* または、[https://llmo.now](https://llmo.now)に直接移動してログインします。
 
 ![LLM Optimizer 体験版](/help/overview/assets/llm-trial.png)
 
-「**LLM Optimizer を試す**」ボタンをクリックすると、[https://llmo.now](https://llmo.now) にリダイレクトされます。 次に、IMS 経由でログインする必要があります。 ログインしたら、ドメインとブランド名を指定して、オンボーディングプロセスを開始します。
+#### Adobe Analyticsをご利用のお客様
+
+Adobe Analyticsをご利用の場合は、Experience Cloud ホームページにバナーが表示されます。
+
+![Experience Cloudのホームページと「Adobe LLM Optimizer体験版を開始」バナー](/help/overview/assets/experience-cloud-llmo-trial-banner.png)
+
+体験版は、次のいずれかの方法でアクティベートできます。
+
+* バナーで「**Adobe LLM Optimizer体験版を開始**」を選択します。
+* [https://llmo.now](https://llmo.now)に直接移動してログインします。
+
+体験版が有効になったら、ブランド名とドメインのオンボーディングを続行します。
+
+>[!NOTE]
+>
+> * **無償体験版：** AEM CloudおよびAdobe Analyticsのお客様は、無償体験版のLLM Optimizerを使用できます。
+> * **2026年4月1日以降に体験版をアクティベートするお客様**&#x200B;は、最大100個のプロンプト、1つのドメインを使用でき、1つの機会タイプに対して最大10個のURLに最適化をデプロイできます。
+> * **2026年4月1日より前に体験版をアクティベートしたお客様**&#x200B;は、引き続き、既存の条件に従って最大200個のプロンプトにアクセスできます。
+>
+>含まれている制限を超えて使用するには、別個のライセンス契約が必要です。 アクセスは「現状のまま」および「利用可能な状態」で提供され、いつでも変更、制限、または削除することができます。 詳細については、アカウント担当者にお問い合わせください。
+
+#### ブランド名とドメインのオンボーディング
+
+LLM Optimizerを使用するには、ブランド名とドメインをオンボーディングする必要があります。
+
+1. ブランド名と関連ドメインを入力します。
+
+   * これは、コンテンツを分析して最適化するメインドメインです。
+
+1. オンボーディングの完了。
+
+   * 送信されたデータは、LLM Optimizerでドメインの分析とインサイトの生成に利用されます。
 
 ![LLM Optimizer ドメイン](/help/overview/assets/domain.png)
+
+>[!NOTE]
+>新しく追加されたプロンプトは、処理が完了するまで[ブランドプレゼンスダッシュボード](/help/dashboards/brand-presence.md)に表示されません。
 
 >[!NOTE]
 >指定したドメインは、組織内のすべてのユーザーによって使用され、変更できません。
 
 オンボーディングフェーズ中に、カテゴリ、トピック、プロンプトの小さなセットが生成されます。 これらのプロンプトでのブランドプレゼンス分析は、サイトをオンボードした直後に使用できるようになります。
 
-<!--![Brand Presence Analysis](/help/overview/assets/bp-analysis.png)-->
+エッジで最適化をデプロイする機能も利用できます。 詳しくは、[Edgeでの最適化に関するよくある質問](https://experienceleague.adobe.com/en/docs/llm-optimizer/using/resources/optimize-at-edge/overview#frequently-asked-questions)を参照してください。
 
-さらに、トラフィック分析用に [CDN ログ転送](#step-4)を設定する必要もあります。 LLM Optimizer では、機会を特定し、AI の可視性を向上させる規範的なレコメンデーションを提供するには、ブランドプレゼンスデータと、エージェントトラフィックおよびリファラルトラフィックからのインサイトが必要です。
+さらに、トラフィック分析用に[CDN ログ転送](#step-4)を設定します。 LLM Optimizerなら、AI エージェントとリファラルトラフィックからブランドプレゼンスデータとインサイトを獲得し、ビジネス機会を特定して、AIによる可視性を強化するための推奨事項を処方できます。
 
-### AEM Cloud 以外のお客様
+### AEM Cloud以外のお客様
 
-ビジネス契約が締結されると、LLM Optimizer にオンボードするドメインでオンボードされます。 このオンボーディングが完了すると、[https://llmo.now](https://llmo.now) 経由で LLM Optimizer にログインできます。
+組織が業務契約書を完成させた後、選択したドメインでLLM Optimizerにオンボーディングされます。 オンボーディングが完了したら、[https://llmo.now](https://llmo.now)でログインします。
 
 ## 手順 2：カテゴリ、トピック、プロンプトをカスタマイズ
 
@@ -95,24 +124,24 @@ AEM Cloud のお客様の場合は、[Experience Hub](https://experienceleague.a
 
 ## 手順 4：CDN ログ転送の情報を指定 {#step-4}
 
-エージェントトラフィックとリファラルトラフィックのインサイトをロック解除するには、CDN ログ転送の情報を指定する必要があります。 「**CDN 設定**」タブに移動し、「**CDN をオンボード**」をクリックして、[顧客設定ダッシュボード](/help/dashboards/customer-configuration.md#cdn-configuration)から追加できます。
+エージェント型トラフィックとリファラルトラフィックインサイトを活用するには、[ カスタマー設定ダッシュボード ](/help/dashboards/customer-configuration.md#cdn-configuration)からCDN ログ転送情報を追加します。 「**CDN設定**」タブを開き、**オンボード CDN**&#x200B;を選択します。
 
 ![顧客設定 CDN](/help/overview/assets/cc-cdn.png)
 
 または、CDN プロバイダーが事前に追加されていない場合（上記の説明に従って）、エージェントトラフィックダッシュボードとリファラルトラフィックダッシュボードに初めてアクセスする際に、CDN ログ転送を追加するプロンプトが表示されます。 詳しくは、次を参照してください。
 
 * [エージェントトラフィック](/help/dashboards/agentic-traffic.md#cdn-setup)
-* [リファラルトラフィック](/help/dashboards/referral-traffic.md#setup#setup)
+* [リファラルトラフィック](/help/dashboards/referral-traffic.md#setup)
 
 >[!NOTE]
->顧客管理 CDN （BYOCDN）を使用する場合のログ転送について詳しくは、「[BYOCDN ログ転送の概要 &#x200B;](/help/overview/log-forwarding/log-forwarding-overview.md)」を参照してください。
+>顧客管理CDN （BYOCDN）を使用する際のログ転送について詳しくは、[BYOCDN ログ転送の概要](/help/overview/log-forwarding/log-forwarding-overview.md)を参照してください
 
 ## 手順 5：ダッシュボードを探索し、アクションを実行
 
 CDN ログ転送の情報を指定すると、次の操作を実行できます。
 
 * [ブランドプレゼンス](/help/dashboards/brand-presence.md)ダッシュボードを表示して、可視性スコアを確認し、その他のブランドと比較したパフォーマンスを追跡します。
-* CDN ログ転送が設定されている場合は、[エージェント](/help/dashboards/agentic-traffic.md)トラフィックダッシュボードと[リファラルトラフィック](/help/dashboards/referral-traffic.md)ダッシュボードを探索します。
+* CDN ログ転送が設定されている場合は、[Agentic](/help/dashboards/agentic-traffic.md)および[リファラルトラフィック](/help/dashboards/referral-traffic.md) ダッシュボードを探索します。
 * [オポチュニティ](/help/dashboards/opportunities.md)を使用して、コンテンツと技術的な改善点を特定します。
 * データを書き出してチームでコラボレーションしたり、同僚を招待して製品を使用したりできます。
 
