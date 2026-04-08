@@ -46,7 +46,7 @@ Cloud Manager パイプラインを使用してルーティングを自分で設
 
 ルールをデプロイするには、次の操作を実行する必要があります。
 
-* [設定パイプライン ](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/operations/config-pipeline)を作成します。
+* [設定パイプライン &#x200B;](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/operations/config-pipeline)を作成します。
 * リポジトリ内の`cdn.yaml`設定ファイルをコミットします。
 * 設定パイプラインを実行します。
 

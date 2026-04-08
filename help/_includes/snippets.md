@@ -49,11 +49,11 @@ ht-degree: 0%
 
 3. **ステージングドメイン** ダイアログで、`https://`を含む完全なステージング URLを入力し、**ドメインを設定**&#x200B;を選択します。
 
-   ![ ステージドメイン入力ダイアログ ](/help/assets/optimize-at-edge/byocdn-staging-domain-input.png)
+   ![&#x200B; ステージドメイン入力ダイアログ &#x200B;](/help/assets/optimize-at-edge/byocdn-staging-domain-input.png)
 
 4. 次のプロンプトでドメインを確認します。 ワークフローが完了すると、設定されたドメインとその&#x200B;**API キー**&#x200B;が&#x200B;**ステージドメイン** ダイアログに表示されます。 「**コピー**」を選択して、ステージング API キーをコピーします。
 
-   ![ ステージング ドメイン API キー](/help/assets/optimize-at-edge/byocdn-staging-domain-api-key.png)
+   ![&#x200B; ステージング ドメイン API キー](/help/assets/optimize-at-edge/byocdn-staging-domain-api-key.png)
 
 サポートが必要な場合は、`llmo-at-edge@adobe.com`にお問い合わせください。
 

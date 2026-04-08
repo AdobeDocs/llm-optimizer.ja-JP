@@ -64,7 +64,7 @@ Edge Optimize バックエンドへのリクエストには、次のヘッダー
 4. ワーカーに名前を付けます（例：`edge-optimize-router`）。
 5. 「**デプロイ**」をクリックして、デフォルトコードを使用してワーカーを作成します。
 
-![Cloudflare Workers ダッシュボード ](/help/assets/optimize-at-edge/cloudflare-workers-dashboard.png)
+![Cloudflare Workers ダッシュボード &#x200B;](/help/assets/optimize-at-edge/cloudflare-workers-dashboard.png)
 
 **手順2: ワーカーコードを追加**
 
@@ -273,7 +273,7 @@ async function failoverToOrigin(request, env, url) {
 2. **Workers Routes**&#x200B;に移動します。
 3. 「**ルートを追加**」をクリックし、パターンとワーカーを指定します。
 
-![Cloudflare ワーカーのルート ](/help/assets/optimize-at-edge/cloudflare-worker-routes.png)
+![Cloudflare ワーカーのルート &#x200B;](/help/assets/optimize-at-edge/cloudflare-worker-routes.png)
 
 **フェールオーバー動作の検証**
 
