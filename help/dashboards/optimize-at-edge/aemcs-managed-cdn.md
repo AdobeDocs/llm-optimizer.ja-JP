@@ -1,8 +1,8 @@
 ---
-title: Edgeでの最適化 – AEM Cloud Service の管理による CDN （Fastly）
-description: LLM OptimizerのEdgeで最適化をおこなうために、AEM Cloud Service Managed CDN （Fastly）を設定する方法について説明します。
+title: Edgeでの最適化 – AEM Cloud Service Managed CDN （Fastly）
+description: LLM OptimizerのEdgeで、AEM Cloud Service Managed CDN （Fastly） for Optimizeを設定する方法について説明します。
 feature: Opportunities
-source-git-commit: 9230e525340bb951fcd9f2ae1f88bad557d5b7d7
+source-git-commit: 0c7ccadbb40c8c119cb2a57cf8118708c33c4236
 workflow-type: tm+mt
 source-wordcount: '481'
 ht-degree: 12%
@@ -10,33 +10,35 @@ ht-degree: 12%
 ---
 
 
-# AEM Cloud Service の管理による CDN （Fastly）
+# AEM Cloud Service Managed CDN （Fastly）
 
-この設定により、エージェンティックトラフィック（AI ボットや LLM ユーザーエージェントからのリクエスト）がEdge Optimize バックエンドサービス（`live.edgeoptimize.net`）にルーティングされます。 人間の訪問者と SEO ボットは、通常どおりオリジンから提供され続けます。 設定をテストするには、セットアップが完了した後、応答でヘッダー `x-edgeoptimize-request-id` を探します。
+この設定により、エージェント型トラフィック（AI ボットおよびLLM ユーザーエージェントからのリクエスト）がEdge Optimize バックエンドサービス（`live.edgeoptimize.net`）にルーティングされます。 通常どおり、人間の訪問者とSEO ボットは、元のページから引き続き提供されます。 設定をテストするには、設定が完了した後、応答でヘッダー`x-edgeoptimize-request-id`を探します。
 
 **前提条件**
 
-エージェンティックトラフィックのEdgeへのルーティングを開始するには最適化：
+エージェント型トラフィックのEdge Optimizeへのルーティングを開始するには：
 
-1. **顧客設定** に移動し、「**CDN 設定**」タブを選択します。
+1. LLM Optimizerで、**顧客設定**&#x200B;を開き、**CDN設定** タブを選択します。
 
-   ![&#x200B; 顧客設定に移動 &#x200B;](/help/assets/optimize-at-edge/prereq-customer-config-nav.png)
+   ![顧客設定に移動](/help/assets/optimize-at-edge/prereq-customer-config-nav.png)
 
-2. 「**最適化をデプロイするための AI トラフィックルーティング**」で、「**最適化を AI エージェントにデプロイ**」チェックボックスをオンにします。 Adobe チームが、お客様に代わってルーティング設定を処理します。
+2. 「**AI エージェントに最適化をデプロイ**」セクションを見つけます。 「**最適化エンジンを有効にする**」チェックボックスをオンにします。
 
-   ![AI エージェントへのティックのデプロイの最適化 &#x200B;](/help/assets/optimize-at-edge/prereq-deploy-checkbox.png)
+   ![AI エージェントへの最適化のデプロイ – 保留中](/help/assets/optimize-at-edge/byocdn-deploy-optimizations-pending.png)
 
-3. チェックボックスを有効にすると、ステータスにセットアップが進行中であることが示されます。 Adobe チームがルーティング設定を行います。
+3. 確認ダイアログで、**有効**&#x200B;を選択します。 Adobe チームが、お客様の代わりにルーティング設定を処理します。
 
-   ![AI トラフィックルーティングの設定中 &#x200B;](/help/assets/optimize-at-edge/prereq-traffic-routing-progress.png)
+   ![最適化エンジン確認ダイアログを有効にする](/help/assets/optimize-at-edge/byocdn-enable-optimization-engine-dialog.png)
 
-   ルーティングが設定され、アクティブになると、ステータスが更新され、ルーティングが正常に有効になったことを示す緑色のチェックマークが表示されます。 ユーザー側でこれ以上のアクションを行う必要はありません。
+   ルーティングが設定され、アクティブになると、ルーティングが有効であることを確認する緑色のチェックマークが付いて、ステータスが&#x200B;**完了**&#x200B;に更新されます。 ユーザー側でこれ以上の操作は必要ありません。
 
-さらに、上記の手順に関するヘルプが必要な場合は、Adobe アカウントチームまたは `llmo-at-edge@adobe.com` に問い合わせてください。
+   ![AI エージェントへの最適化のデプロイ – 完了](/help/assets/optimize-at-edge/byocdn-CDN-traffic-routed-tick.png)
 
-**Cloud Manager パイプラインを介したセルフサービスルーティング**
+上記の手順についてサポートが必要な場合は、Adobe アカウントチームまたは`llmo-at-edge@adobe.com`にお問い合わせください。
 
-Cloud Manager パイプラインを使用して自分でルーティングを設定する場合は、次の手順に従います。 ルーティング設定は、[originSelector CDN ルール](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn-configuring-traffic#origin-selectors)を使用して行われます。 前提条件は、次のとおりです。
+**Cloud Manager パイプライン経由のセルフサービスルーティング**
+
+Cloud Manager パイプラインを使用してルーティングを自分で設定する場合は、次の手順に従います。 ルーティング設定は、[originSelector CDN ルール](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn-configuring-traffic#origin-selectors)を使用して行われます。 前提条件は、次のとおりです。
 
 * ルーティングするドメインを決定します。
 * ルーティングするパスを決定します。
@@ -44,8 +46,8 @@ Cloud Manager パイプラインを使用して自分でルーティングを設
 
 ルールをデプロイするには、次の操作を実行する必要があります。
 
-* [&#x200B; 設定パイプライン &#x200B;](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/operations/config-pipeline) を作成します。
-* リポジトリの `cdn.yaml` 設定ファイルをコミットします。
+* [設定パイプライン ](https://experienceleague.adobe.com/ja/docs/experience-manager-cloud-service/content/operations/config-pipeline)を作成します。
+* リポジトリ内の`cdn.yaml`設定ファイルをコミットします。
 * 設定パイプラインを実行します。
 
 ```
@@ -77,46 +79,48 @@ data:
         domain: "live.edgeoptimize.net"
 ```
 
-**設定の確認**
+**設定を確認**
 
-設定が完了したら、ボットトラフィックがEdge Optimize にルーティングされていることと、人間のトラフィックが影響を受けないことを確認します。
+設定が完了したら、ボットトラフィックがEdge Optimizeにルーティングされ、人間のトラフィックが影響を受けないことを確認します。
 
 **1. ボットトラフィックのテスト （最適化する必要があります）**
 
-エージェント user-agent を使用して AI ボットリクエストをシミュレートします。
+エージェント型ユーザーエージェントを使用してAI ボットリクエストをシミュレートします。
 
 ```
 curl -svo /dev/null https://www.example.com/page.html \
   --header "user-agent: chatgpt-user"
 ```
 
-リクエストが成功した応答には `x-edgeoptimize-request-id` ヘッダーが含まれ、リクエストがEdge Optimize を通じてルーティングされたことを確認します。
+応答が成功すると、`x-edgeoptimize-request-id` ヘッダーが含まれ、リクエストがEdge Optimizeを通じてルーティングされたことが確認されます。
 
 ```
 < HTTP/2 200
 < x-edgeoptimize-request-id: 50fce12d-0519-4fc6-af78-d928785c1b85
 ```
 
-**2. 人間によるトラフィックのテスト（影響を受けない）**
+**2. 人間のトラフィックをテストします（影響を受けません）**
 
-通常の人間によるブラウザーリクエストをシミュレートする：
+通常のヒューマンブラウザーリクエストをシミュレートします。
 
 ```
 curl -svo /dev/null https://www.example.com/page.html \
   --header "user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36"
 ```
 
-応答には、`x-edgeoptimize-request-id` ヘッダーを含める **しない** でください。 Edgeで最適化を有効にする前と同じページコンテンツおよび応答時間である必要があります。
+応答には、**not**&#x200B;に`x-edgeoptimize-request-id` ヘッダーを含める必要があります。 Edgeで最適化を有効にする前に、ページの内容と応答時間を同じにしておく必要があります。
 
-**3. 2 つのシナリオの違い**
+**3. 2つのシナリオを区別する方法**
 
-| ヘッダー | ボットトラフィック（最適化） | ヒューマントラフィック（影響を受けない） |
+| ヘッダー | ボットトラフィック（最適化） | 人的トラフィック（影響なし） |
 |---|---|---|
-| `x-edgeoptimize-request-id` | 現在 – 一意のリクエスト ID が含まれます | 不在 |
-| `x-edgeoptimize-fo` | フェールオーバーが発生した場合にのみ表示されます（値：`1`） | 不在 |
+| `x-edgeoptimize-request-id` | 現在 – 一意のリクエスト IDを含む | 不在 |
+| `x-edgeoptimize-fo` | フェールオーバーが発生した場合にのみ存在します（値：`1`） | 不在 |
 
-トラフィックルーティングのステータスは、LLM Optimizer UI でも確認できます。 **顧客設定** に移動し、「**CDN 設定**」タブを選択します。
+**4. LLM Optimizer**&#x200B;のルーティング状況を確認する
 
-![&#x200B; ルーティングを有効にした AI トラフィックルーティングステータス &#x200B;](/help/assets/optimize-at-edge/adobe-CDN-traffic-routed-tick.png)
+LLM Optimizer UIでルーティングを確認することもできます。 **顧客設定**&#x200B;を開き、**CDN設定** タブを選択します。 ルーティングがアクティブな場合、「**AI エージェントに最適化をデプロイ**」セクションに「**完了**」と表示されます。
+
+![AI エージェントへの最適化のデプロイ – 完了](/help/assets/optimize-at-edge/byocdn-CDN-traffic-routed-tick.png)
 
 {{return-to-overview}}

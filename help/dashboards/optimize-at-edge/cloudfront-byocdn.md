@@ -1,10 +1,10 @@
 ---
-title: Edgeでの最適化 – CloudFront （BYOCDN）
-description: LLM OptimizerのEdgeで最適化をおこなうために CloudFront BYOCDN を設定する方法を説明します。
+title: Edgeで最適化 – CloudFront （BYOCDN）
+description: LLM OptimizerのEdgeでCloudFront BYOCDN for Optimizeを設定する方法について説明します。
 feature: Opportunities
-source-git-commit: 1253d0f0a58f6523699c52fbfab23028dc469c82
+source-git-commit: da789100d814004687de2f46e18a295671dec4b8
 workflow-type: tm+mt
-source-wordcount: '2228'
+source-wordcount: '2265'
 ht-degree: 1%
 
 ---
@@ -12,393 +12,405 @@ ht-degree: 1%
 
 # CloudFront （BYOCDN）
 
-この設定により、エージェンティックトラフィック（AI ボットや LLM ユーザーエージェントからのリクエスト）がEdge Optimize バックエンドサービス（`live.edgeoptimize.net`）にルーティングされます。 人間の訪問者と SEO ボットは、通常どおりオリジンから提供され続けます。 設定をテストするには、セットアップが完了した後、応答でヘッダー `x-edgeoptimize-request-id` を探します。
+この設定により、エージェント型トラフィック（AI ボットおよびLLM ユーザーエージェントからのリクエスト）がEdge Optimize バックエンドサービス（`live.edgeoptimize.net`）にルーティングされます。 通常どおり、人間の訪問者とSEO ボットは、元のページから引き続き提供されます。 設定をテストするには、設定が完了した後、応答でヘッダー`x-edgeoptimize-request-id`を探します。
 
 **前提条件**
 
-CloudFront 設定を行う前に、以下を確認します。
+CloudFront設定を設定する前に、次のことを確認してください。
 
-* Web サイトを提供する既存の CloudFront 配布。
-* Lambda 関数、IAM ロール、CloudFront ディストリビューション、キャッシュポリシーを作成するためのAWS IAM 権限。
-* LLM Optimizerのオンボーディングプロセスを完了しました。
-* LLM Optimizerへの CDN ログ転送が完了しました。
-* LLM Optimizer UI から取得されたEdge最適化 API キー。
+* Web サイトを提供する既存のCloudFront ディストリビューション。
+* Lambda関数、IAM ロール、CloudFront ディストリビューション、およびキャッシュポリシーを作成するためのAWS IAM権限。
+* LLM Optimizer オンボーディングプロセスを完了しました。
+* LLM OptimizerへのCDN ログの転送が完了しました。
+* LLM Optimizer UIから取得したEdge Optimize API キー。
+* （オプション）最初にステージングホスト名でルーティングをテストする場合は、ステージング Edge Optimize API キー。
 
 {{retrieve-byocdn-api-key}}
 
-**手順 1:Edgeの原点の最適化を作成する**
+{{retrieve-staging-edge-optimize-api-key}}
 
-**ナビゲーション：** AWS コンソール/CloudFront/配布版/[ 自分の配布版 ]/「オリジン」タブ
+**手順1: Edge Optimize Originの作成**
 
-1. **原点を作成** をクリックします。
+**ナビゲーション：** AWS コンソール > CloudFront > ディストリビューション > [ ディストリビューション ] > 「配信元」タブ
 
-2. 接触チャネルを設定します。
-   * **接触チャネルドメイン：** `live.edgeoptimize.net`
+1. 「**原点を作成**」をクリックします。
+
+2. オリジンを設定します。
+   * **オリジンドメイン：** `live.edgeoptimize.net`
    * **名前：** `EdgeOptimize_Origin`
 
-3. その他のフィールドはすべてデフォルト値のままにします。
+3. その他のすべてのフィールドをデフォルト値のままにします。
 
 4. カスタムヘッダーを追加：
 
    | ヘッダー | 値 |
    |--------|-------|
-   | `x-edgeoptimize-api-key` | API キー |
+   | `x-edgeoptimize-api-key` | あなたのAPI キー |
    | `x-forwarded-host` | `www.example.com` |
 
-   `www.example.com` を実際の web サイトドメインに置き換え、`Your API key` をAdobe担当者から提供されるEdge Optimize API キーに置き換えます。
+   `www.example.com`を実際のweb サイトドメインに、そして`Your API key`をAdobe担当者から提供されたEdge Optimize API キーに置き換えます。
 
-5. **原点を作成** をクリックします。
+5. 「**原点を作成**」をクリックします。
 
-![Cloudfront オリジンの作成 &#x200B;](/help/assets/optimize-at-edge/cloudfront-origin-creation.png)
+![Cloudfront オリジンの作成](/help/assets/optimize-at-edge/cloudfront-origin-creation.png)
 
-**手順 2：ビューアリクエスト関数の作成**
+**手順2: ビューアリクエスト関数を作成**
 
-**ナビゲーション：** AWS コンソール/CloudFront/関数
+**ナビゲーション：** AWS コンソール > CloudFront >関数
 
-1. **関数を作成** をクリックします。
+1. 「**関数を作成**」をクリックします。
 
 2. 設定：
    * **名前：** `edgeoptimize-routing`
-   * **Runtime:** `cloudfront-js-2.0`
+   * **実行時間：** `cloudfront-js-2.0`
 
-3. デフォルトのコードを [viewer-request.js](https://github.com/adobe-rnd/llmo-edge-optimize-samples/blob/main/cloudfront/cloudfront-function/viewer-request.js) のコードに置き換えます。
+3. デフォルトコードを[viewer-request.js](https://github.com/adobe-rnd/llmo-edge-optimize-samples/blob/main/cloudfront/cloudfront-function/viewer-request.js)のコードに置き換えます。
 
    公開する前に、コードで次の値をカスタマイズします。
 
-   * `YOUR_DEFAULT_ORIGIN` – 既存のデフォルトオリジンの名前に置き換えます（CloudFront/配布版/[ 配布版 ]/「オリジン」タブにあります）。
-   * `TARGETED_PATHS` – すべてのHTML ページを対象とする場合は `null` に設定し、特定のパスの配列（例：`['/', '/products', '/about']`）に設定する場合はに設定します。
+   * `YOUR_DEFAULT_ORIGIN` – 既存のデフォルトのオリジンの名前に置き換えます（CloudFront/ディストリビューション/[ ディストリビューション ]/オリジン タブにあります）。
+   * `TARGETED_PATHS` – すべてのHTML ページをターゲットにするか、特定のパスの配列（例：`['/', '/products', '/about']`）に設定するには、`null`に設定します。
 
-4. **変更を保存**/**公開関数** をクリックします。
+4. **変更を保存** > **関数を公開**&#x200B;をクリックします。
 
-![Cloudfront 関数の作成 &#x200B;](/help/assets/optimize-at-edge/cloudfront-function-creation.png)
+![Cloudfront関数の作成](/help/assets/optimize-at-edge/cloudfront-function-creation.png)
 
 
-**手順 3：キャッシュポリシーの設定**
+**手順3: キャッシュポリシーの設定**
 
-**ナビゲーション：** AWS コンソール/CloudFront/配布版/[ 配布版 ]/ビヘイビアー
+**ナビゲーション：** AWS コンソール > CloudFront > ディストリビューション > [ ディストリビューション ] >動作
 
-現在ビヘイビアーに添付されているキャッシュポリシーを確認します。 動作の **編集** をクリックし、**キャッシュキーとオリジンリクエスト** セクションを見て、シナリオを特定します。
+現在ビヘイビアーにアタッチされているキャッシュポリシーを確認します。 行動の&#x200B;**編集**&#x200B;をクリックし、**キャッシュキーとオリジンリクエスト** セクションを確認して、シナリオを特定します。
 
-* **シナリオ A （レガシー）:** 「レガシーキャッシュ設定 **というラベルの付いたラジオボタンが選択** れています。 ポリシー名のドロップダウンはなく、代わりにインライン TTL およびヘッダー設定が表示されます。
-* **シナリオ B （カスタムポリシー）:** 自分または自分のチームが作成したポリシー名で選択された **キャッシュポリシー** が表示されます（AWSが提供するポリシーではありません）。
-* **シナリオ C （管理ポリシー）:** キャッシュポリシー **、`CachingOptimized`、`CachingDisabled`、`CachingOptimizedForUncompressedObjects` など、AWSが指定した名前で選択されています** これらは編集できません。
+* **シナリオ A （レガシー）:** 「**レガシーキャッシュ設定**」というラベルのラジオボタンが選択されています。 ポリシー名のドロップダウンはなく、インライン TTLとヘッダーの設定が表示されます。
+* **シナリオ B （カスタムポリシー）:**&#x200B;自分またはチームが作成したポリシー名で&#x200B;**キャッシュポリシー**&#x200B;が選択されています（AWSが提供するポリシーではありません）。
+* **シナリオ C （管理ポリシー）:** `CachingOptimized`、`CachingDisabled`、`CachingOptimizedForUncompressedObjects`など、AWSが提供する名前で&#x200B;**キャッシュポリシー**&#x200B;が選択されています。これらは編集できません。
 
 **シナリオ A：従来のキャッシュ設定**
 
-従来のキャッシュ設定を使用している場合：
+ビヘイビアーで従来のキャッシュ設定を使用している場合：
 
-1. **キャッシュキーおよびオリジンリクエスト** の下で、**従来のキャッシュ設定** が選択されます。
+1. **キャッシュキーとオリジンリクエスト**&#x200B;の下に、**レガシーキャッシュ設定**&#x200B;が選択されています。
 
-2. `x-edgeoptimize-config` と `x-edgeoptimize-url` を **Headers** 許可リストに追加します。
+2. `x-edgeoptimize-config`と`x-edgeoptimize-url`を&#x200B;**Headers**&#x200B;許可リストに追加します。
 
-   * ドロップダウンから **次のヘッダーを含める** を選択します。
-   * `x-edgeoptimize-config` と `x-edgeoptimize-url` を追加します。
-     ![Cloudfront キャッシュレガシー &#x200B;](/help/assets/optimize-at-edge/cloudfront-cache-policy-legacy.png)
+   * ドロップダウンから「**次のヘッダーを含める**」を選択します。
+   * `x-edgeoptimize-config`と`x-edgeoptimize-url`を追加します。
+     ![Cloudfront キャッシュ レガシー](/help/assets/optimize-at-edge/cloudfront-cache-policy-legacy.png)
 
-   「ヘッダー」ドロップダウンで既に **すべて** が選択されている場合は、この手順をスキップします。すべてのヘッダーがオリジンに自動的に転送されます。
+   「ヘッダー」ドロップダウンで「**すべて**」が既に選択されている場合は、この手順をスキップしてください。すべてのヘッダーが自動的にオリジンに転送されます。
 
-3. **オブジェクトのキャッシュ** 設定を確認します。
+3. 「**オブジェクトキャッシュ**」設定を確認します。
 
-   * **カスタマイズ** に設定した場合 – **最小 TTL** を `0` に設定することをお勧めします。 ただし、現在の最小 TTL が既に非常に短い場合は、変更する必要はありません。
-   * **オリジンキャッシュヘッダーを使用** に設定した場合 – 変更は不要です。
+   * **カスタマイズ**&#x200B;に設定されている場合は、**最小TTL**&#x200B;を`0`に設定することをお勧めします。 ただし、現在の最小TTLがすでに非常に短い場合は、変更する必要がない可能性があります。
+   * **オリジンキャッシュヘッダーを使用**&#x200B;に設定した場合、変更は必要ありません。
 
-4. **変更を保存** をクリックします。
+4. 「**変更を保存**」をクリックします。
 
-**シナリオ B：カスタムキャッシュポリシーを使用した非レガシー**
+**シナリオ B：カスタムキャッシュポリシーを持つレガシー以外**
 
-ビヘイビアーで既にカスタムキャッシュポリシー（AWS管理ポリシーではなく、作成したもの）を使用している場合：
+ビヘイビアーで既にカスタムキャッシュポリシーを使用している場合（作成したカスタムキャッシュポリシーではなく、AWSが管理するポリシーを使用している場合）:
 
-**ナビゲーション：** AWS コンソール/CloudFront/ポリシー/キャッシュ
+**ナビゲーション：** AWS コンソール / CloudFront / ポリシー/ キャッシュ
 
 1. 既存のポリシーをクリックします。
 
 2. 「**編集**」をクリックします。
 
-3. **最小 TTL** を `0` に設定することをお勧めします。 ただし、現在の最小 TTL が既に非常に短い場合は、変更する必要はありません。
-   ![&#x200B; キャッシュポリシー TTL 設定 &#x200B;](/help/assets/optimize-at-edge/cloudfront-cache-policy-ttl.png)
+3. **最小TTL**&#x200B;を`0`に設定することをお勧めします。 ただし、現在の最小TTLがすでに非常に短い場合は、変更する必要がない可能性があります。
+   ![ キャッシュポリシーのTTL設定](/help/assets/optimize-at-edge/cloudfront-cache-policy-ttl.png)
 
-4. **キャッシュキー設定**/**ヘッダー** の下に、既存のインクルージョンと共に `x-edgeoptimize-config` と `x-edgeoptimize-url` を追加します。
-   ![&#x200B; ポリシーヘッダーをキャッシュする &#x200B;](/help/assets/optimize-at-edge/cloudfront-cache-policy-headers.png)
+4. **キャッシュキー設定** > **ヘッダー**&#x200B;の下に、既存のインクルージョンと共に`x-edgeoptimize-config`と`x-edgeoptimize-url`を追加します。
+   ![ キャッシュポリシーヘッダー](/help/assets/optimize-at-edge/cloudfront-cache-policy-headers.png)
 
-5. **変更を保存** をクリックします。
+5. 「**変更を保存**」をクリックします。
 
-**シナリオ C：管理（AWS）キャッシュポリシーを使用した非レガシー**
+**シナリオ C：管理対象（AWS） キャッシュ ポリシーを持つレガシー以外**
 
-お使いのビヘイビアーでAWS管理キャッシュポリシー（`CachingOptimized` など）を使用している場合は、それを編集することはできません。 既存の管理ポリシー設定を複製し、その上にEdge Optimize ヘッダーを追加する、新しいカスタムキャッシュポリシーを作成する必要があります。
+ビヘイビアーでAWS マネージドキャッシュポリシー（例：`CachingOptimized`）を使用している場合、それを編集することはできません。 既存のマネージドポリシー設定を複製し、上部にEdge Optimize ヘッダーを追加する新しいカスタムキャッシュポリシーを作成する必要があります。
 
-**パート 1：現在の管理キャッシュポリシー設定をメモしておきます**
+**パート 1：現在のマネージド キャッシュ ポリシー設定を書き留めます**
 
-**ナビゲーション：** AWS コンソール/CloudFront/ポリシー/キャッシュ
+**ナビゲーション：** AWS コンソール / CloudFront / ポリシー/ キャッシュ
 
-1. 現在お使いのビヘイビアーに関連付けられている管理キャッシュポリシー（`CachingOptimized` など）を見つけてクリックします。
+1. 現在ビヘイビアーに添付されているマネージドキャッシュポリシー（例：`CachingOptimized`）を検索してクリックします。
 
-2. 既存の設定をすべて書き留めます。
-   * 最小 TTL、最大 TTL、デフォルト TTL
+2. 既存のすべての設定をメモします。
+   * 最小TTL、最大TTL、デフォルト TTL
    * キャッシュキーに含まれるヘッダー
-   * キャッシュキーに含まれる cookie
+   * キャッシュキーに含まれるCookie
    * キャッシュキーに含まれるクエリ文字列
-   * 圧縮のサポート（Gzip、Brotli）
+   * 圧縮サポート（Gzip、Brotli）
 
-**パート 2：同じ設定とEdge最適化設定を使用して、新しいカスタムキャッシュポリシーを作成する**
+**パート 2：同じ設定で新しいカスタム キャッシュ ポリシーを作成する+ Edge Optimize config**
 
-**ナビゲーション：** AWS コンソール/CloudFront/ポリシー/キャッシュ
+**ナビゲーション：** AWS コンソール / CloudFront / ポリシー/ キャッシュ
 
-1. **キャッシュポリシーの作成** をクリックします。
+1. 「**キャッシュポリシーの作成**」をクリックします。
 
 2. **名前：** `edgeoptimize-cache`
 
-   ![&#x200B; キャッシュポリシー名 &#x200B;](/help/assets/optimize-at-edge/cloudfront-cache-policy-name.png)
+   ![ キャッシュポリシー名](/help/assets/optimize-at-edge/cloudfront-cache-policy-name.png)
 
-3. パート 1 で説明したすべての設定と、次の修正をレプリケートします。
+3. パート 1に記載されているすべての設定を、次の変更を加えてレプリケートします。
 
-   * **最小 TTL** を `0` に設定することをお勧めします。 ただし、現在の最小 TTL が既に非常に短い場合は、変更する必要はありません。
+   * **最小TTL**&#x200B;を`0`に設定することをお勧めします。 ただし、現在の最小TTLがすでに非常に短い場合は、変更する必要がない可能性があります。
 
-   ![&#x200B; キャッシュポリシー TTL 設定 &#x200B;](/help/assets/optimize-at-edge/cloudfront-cache-policy-ttl.png)
+   ![ キャッシュポリシーのTTL設定](/help/assets/optimize-at-edge/cloudfront-cache-policy-ttl.png)
 
-   * **キャッシュキー設定**/**ヘッダー** に、管理対象ポリシーにあったすべてを含め、さらに `x-edgeoptimize-config` と `x-edgeoptimize-url` を追加します。
+   * **キャッシュキー設定** > **ヘッダー**&#x200B;の下で、管理ポリシーが持つすべてを含め、さらに`x-edgeoptimize-config`と`x-edgeoptimize-url`を追加します。
 
-   ![&#x200B; ポリシーヘッダーをキャッシュする &#x200B;](/help/assets/optimize-at-edge/cloudfront-cache-policy-headers.png)
+   ![ キャッシュポリシーヘッダー](/help/assets/optimize-at-edge/cloudfront-cache-policy-headers.png)
 
 4. 「**作成**」をクリックします。
 
-5. 行動に戻り、新しく作成したポリシーを関連付けます。
+5. ビヘイビアーに戻り、新しく作成したポリシーを関連付けます。
 
-   **ナビゲーション：** AWS コンソール/CloudFront/配布版/[ 配布版 ]/ビヘイビアー
+   **ナビゲーション：** AWS コンソール > CloudFront > ディストリビューション > [ ディストリビューション ] >動作
 
-   1. ビヘイビアーを編集します。
-   2. **キャッシュキーおよびオリジンリクエスト** で、**キャッシュポリシー** を選択します。
+   1. 行動の編集：
+   2. **キャッシュキーとオリジンリクエスト**&#x200B;で、**キャッシュポリシー**&#x200B;を選択します。
    3. ドロップダウンから「`edgeoptimize-cache`」を選択します。
-   4. **変更を保存** をクリックします。
+   4. 「**変更を保存**」をクリックします。
 
-**手順 4:Lambda@Edge関数の作成（接触チャネルリクエストと応答）**
+**ステップ 4: Lambda@Edge関数を作成します（オリジンのリクエストと応答）**
 
 >[!IMPORTANT]
->Lambda@Edge関数 **`us-east-1` （バージニア北部） リージョンで作成する必要があります**。 これはAWSの要件です。 関数は `us-east-1` で作成されますが、AWSは世界中のすべての CloudFront エッジ場所に自動的に関数を複製するので、ビューアに最も近いエッジ場所で実行されます。 続行する前に、AWS コンソールの `us-east-1` リージョンにいることを確認します。
+>Lambda@Edge関数&#x200B;**は、`us-east-1` （バージニア北部）地域**&#x200B;で作成する必要があります。 これはAWSの要件です。 関数が`us-east-1`で作成されたとしても、AWSは自動的に世界中のすべてのCloudFront エッジロケーションにレプリケートするため、ビューアに最も近いエッジロケーションで実行されます。 続行する前に、AWS Consoleの`us-east-1` リージョンにいることを確認してください。
 
-**Lambda 関数の作成**
+**Lambda関数を作成**
 
-**ナビゲーション：** AWS コンソール/Lambda
+**ナビゲーション：** AWS コンソール > Lambda
 
-1. **関数を作成** をクリックします。
+1. 「**関数を作成**」をクリックします。
 
-2. **ゼロから作成** を選択します。
+2. **作成者をゼロから選択**&#x200B;します。
 
 3. 設定：
    * **関数名：** `edgeoptimize-origin`
-   * その他のフィールドはすべてデフォルト値のままにします。
+   * その他のすべてのフィールドをデフォルト値のままにします。
 
-4. **関数を作成** をクリックします。
+4. 「**関数を作成**」をクリックします。
 
-5. コードエディターで、デフォルトのコードを [origin-request-response.js](https://github.com/adobe-rnd/llmo-edge-optimize-samples/blob/main/cloudfront/lambda/origin-request-response.js) からのコードで置き換えます。
+5. コードエディターで、デフォルトコードを[origin-request-response.js](https://github.com/adobe-rnd/llmo-edge-optimize-samples/blob/main/cloudfront/lambda/origin-request-response.js)のコードに置き換えます。
 
 6. 「**デプロイ**」をクリックして、コードを保存します。
 
-7. **設定**/**権限** の下に表示される **実行ロール名** に注意してください（例：`edgeoptimize-origin-role-xxxxx`）。 これは、次の手順で必要になります。
+7. **設定**/**権限** （例：`edgeoptimize-origin-role-xxxxx`）の下に表示されている&#x200B;**実行ロール名**&#x200B;に注意してください。 次の手順で必要になります。
 
-**実行ロールの信頼ポリシーの更新**
+**実行ロールの信頼ポリシーを更新する**
 
-自動作成された役割は、`lambda.amazonaws.com` のみを信頼します。 Lambda@Edgeの場合、`edgelambda.amazonaws.com` も追加する必要があります。
+自動作成された役割は`lambda.amazonaws.com`のみを信頼します。 Lambda@Edgeの場合は、`edgelambda.amazonaws.com`も追加する必要があります。
 
-**ナビゲーション：** AWSコンソール/IAM/役割/[ 前のステップからの役割 ]/「信頼関係」タブ
+**ナビゲーション：** AWS コンソール > IAM > ロール > [前の手順のロール ] > 「信頼関係」タブ
 
-1. **信頼ポリシーの編集** をクリックします。
+1. 「**信頼ポリシーを編集**」をクリックします。
 
-2. ポリシーを [trust-policy.json](https://github.com/adobe-rnd/llmo-edge-optimize-samples/blob/main/cloudfront/lambda/trust-policy.json) のコンテンツに置き換えます。
+2. ポリシーを[trust-policy.json](https://github.com/adobe-rnd/llmo-edge-optimize-samples/blob/main/cloudfront/lambda/trust-policy.json)のコンテンツに置き換えます。
 
-3. **ポリシーを更新** をクリックします。
+3. 「**ポリシーを更新**」をクリックします。
 
 >[!WARNING]
->Lambda@Edgeの `edgelambda.amazonaws.com` サービスプリンシパルは **必須** です。 これを使用しないと、CloudFront はエッジロケーションであなたの関数を呼び出すことができません。
+>`edgelambda.amazonaws.com` サービス プリンシパルは、Lambda@Edgeに&#x200B;**必須**&#x200B;です。 これを使用しない場合、CloudFrontはエッジの場所で関数を呼び出すことはできません。
 
-**CloudWatch ログの権限ポリシーの修正**
+**CloudWatch Logs権限ポリシーの修正**
 
-自動作成された役割には、通常のラムダ用に設定された `AWSLambdaBasicExecutionRole` ポリシーが付属していますが、このポリシーは、Lambda@Edgeに対して誤った地域とログ グループ名を持っています。 更新する必要があります。
+自動作成された役割には、通常のLambda用に設定された`AWSLambdaBasicExecutionRole` ポリシーが付属しています。このポリシーには、Lambda@Edgeのリージョンとロググループ名が間違っています。 それを更新する必要があります。
 
-**ナビゲーション：** AWSコンソール/IAM/役割/[ 自分の役割 ]/「権限」タブ/添付されたポリシー名（`AWSLambdaBasicExecutionRole-xxxx` など）をクリックします
+**ナビゲーション：** AWS コンソール > IAM > ロール > [自分のロール ] >権限タブ >添付されたポリシー名をクリックします（例：`AWSLambdaBasicExecutionRole-xxxx`）
 
 1. 「**編集**」をクリックします。
 
-2. ポリシーを [cloudwatch-policy.json](https://github.com/adobe-rnd/llmo-edge-optimize-samples/blob/main/cloudfront/lambda/cloudwatch-policy.json) のコンテンツに置き換えます。
+2. ポリシーを[cloudwatch-policy.json](https://github.com/adobe-rnd/llmo-edge-optimize-samples/blob/main/cloudfront/lambda/cloudwatch-policy.json)のコンテンツに置き換えます。
 
-   JSON 内で、`ACCOUNT_ID` を実際のAWS アカウント ID （AWS コンソールの右上隅にあります）に置き換え、`FUNCTION_NAME` を Lambda 関数の名前（例：`edgeoptimize-origin`）に置き換えます。
+   JSONで、`ACCOUNT_ID`を実際のAWS アカウント ID （AWS コンソールの右上隅）に、`FUNCTION_NAME`をLambda関数の名前（例：`edgeoptimize-origin`）に置き換えます。
 
-3. **変更を保存** をクリックします。
+3. 「**変更を保存**」をクリックします。
 
 >[!WARNING]
->ARN の領域は `*` である必要があります。Lambda@Edgeは、ビューアに最も近いエッジ位置で実行されるので、ログは必ずしも `us-east-1` ードされるとは限らない、エッジ位置の領域（例：`ap-south-1`、`eu-west-1`）で CloudWatch に書き込まれます。 ロググループでは、領域のプレフィックスが付いた名前 `/aws/lambda/us-east-1.FUNCTION_NAME` を使用します。`us-east-1` は常に関数のホーム領域です。
+>ARNの領域は`*`である必要があります – Lambda@Edgeはビューアに最も近いエッジの場所で実行されるので、ログはエッジの場所の領域（例：`ap-south-1`、`eu-west-1`）でCloudWatchに書き込まれます。必ずしも`us-east-1`ではありません。 ロググループは、領域接頭辞が付いた名前を使用します：`/aws/lambda/us-east-1.FUNCTION_NAME`。`us-east-1`は常に関数のホーム領域です。
 
-**バージョンの公開**
+**バージョンを公開**
 
-1. 関数ページで、**アクション** （右上）/**新しいバージョンを公開** をクリックします。
+1. 関数ページで、**アクション** （右上）/**新しいバージョンを公開**&#x200B;をクリックします。
 
 2. 説明を追加します。
 
 3. 「**公開する**」をクリックします。
-   ![Lambda パブリッシュ &#x200B;](/help/assets/optimize-at-edge/cloudfront-lambda-publish.png)
+   ![Lambda パブリッシュ ](/help/assets/optimize-at-edge/cloudfront-lambda-publish.png)
 
-4. **Function ARN** をコピーまたはメモします。これは次の手順で必要になります。
-   ![&#x200B; ラムダ ARN](/help/assets/optimize-at-edge/cloudfront-lambda-arn.png)
+4. **関数ARN**をコピーまたはメモします。次の手順で必要になります。
+   ![Lambda ARN](/help/assets/optimize-at-edge/cloudfront-lambda-arn.png)
 
-**手順 5：関数とキャッシュポリシーを動作と関連付ける**
+**手順5：関数とキャッシュ ポリシーをビヘイビアーに関連付ける**
 
-**ナビゲーション：** AWS コンソール/CloudFront/配布版/[ 配布版 ]/ビヘイビアー
+**ナビゲーション：** AWS コンソール > CloudFront > ディストリビューション > [ ディストリビューション ] >動作
 
-1. ビヘイビアーを編集します。
+1. 行動の編集：
 
-2. 手順 3 （シナリオ C）で新しいキャッシュポリシーを作成した場合は、**キャッシュポリシー** を `edgeoptimize-cache` に設定します。
-   ![&#x200B; キャッシュポリシー &#x200B;](/help/assets/optimize-at-edge/cloudfront-behaviour-cache.png)
+2. 手順3 （シナリオ C）で新しいキャッシュポリシーを作成した場合は、**キャッシュポリシー**&#x200B;を`edgeoptimize-cache`に設定します。
+   ![ キャッシュポリシー](/help/assets/optimize-at-edge/cloudfront-behaviour-cache.png)
 
-3. 「**関数の関連付け**」で、次の項目を設定します。
+3. **関数の関連付け**&#x200B;で、次を設定します。
 
-   * **ビューアリクエスト：** `edgeoptimize-routing`
-   * **接触チャネルリクエスト：** 手順 4 の（**バージョンを公開** 内の）バージョン管理された関数 ARN
-   * **オリジン応答：手順 4 の** バージョン管理された関数 ARN （**バージョンの公開**）
+   * **閲覧者の要求：** `edgeoptimize-routing`
+   * **オリジンリクエスト：** ステップ 4のバージョン付き関数ARN （**バージョンの公開**&#x200B;で）
+   * **発信元の応答：** ステップ 4のバージョン付き関数ARN （**バージョンの公開**&#x200B;で）
 
-   ![&#x200B; 関数の関連付けの設定 &#x200B;](/help/assets/optimize-at-edge/cloudfront-function-association.png)
+   ![関数の関連付け設定](/help/assets/optimize-at-edge/cloudfront-function-association.png)
 
-4. **変更を保存** をクリックします。
+4. 「**変更を保存**」をクリックします。
 
-**手順 6：設定をテストする**
+**手順6：設定のテスト**
 
 **1. ボットトラフィックのテスト （最適化する必要があります）**
 
-エージェント ボットユーザーエージェントと共にリクエストを送信します。 **最初のリクエスト** において、Edge Optimize は、ページの処理およびキャッシュ中に、プロキシ化された（最適化されていない）応答を返す場合があります。 これは、応答の `x-edgeoptimize-proxy: 1` ヘッダーで識別できます。
+エージェント型ボットユーザーエージェントでリクエストを送信します。 **最初のリクエスト**&#x200B;で、Edge Optimizeがページを処理およびキャッシュする際に、プロキシ化された（最適化されていない）応答を返す場合があります。 応答の`x-edgeoptimize-proxy: 1` ヘッダーでこれを識別できます。
 
-エージェント user-agent を使用して AI ボットリクエストをシミュレートします。
+エージェント型ユーザーエージェントを使用してAI ボットリクエストをシミュレートします。
 
 ```
 curl -svo /dev/null https://www.example.com/page.html \
   --header "user-agent: chatgpt-user"
 ```
 
-リクエストが成功した応答には `x-edgeoptimize-request-id` ヘッダーが含まれ、リクエストがEdge Optimize を通じてルーティングされたことを確認します。
+応答が成功すると、`x-edgeoptimize-request-id` ヘッダーが含まれ、リクエストがEdge Optimizeを通じてルーティングされたことが確認されます。
 
 ```
 < HTTP/2 200
 < x-edgeoptimize-request-id: 50fce12d-0519-4fc6-af78-d928785c1b85
 ```
 
-**2. 人間によるトラフィックのテスト（影響を受けない）**
+**2. 人間のトラフィックをテストします（影響を受けません）**
 
-通常の人間によるブラウザーリクエストをシミュレートする：
+通常のヒューマンブラウザーリクエストをシミュレートします。
 
 ```
 curl -svo /dev/null https://www.example.com/page.html \
   --header "user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36"
 ```
 
-応答には、`x-edgeoptimize-request-id` ヘッダーを含める **しない** でください。 Edgeで最適化を有効にする前と同じページコンテンツおよび応答時間である必要があります。
+応答には、**not**&#x200B;に`x-edgeoptimize-request-id` ヘッダーを含める必要があります。 Edgeで最適化を有効にする前に、ページの内容と応答時間を同じにしておく必要があります。
 
-**3. 2 つのシナリオの違い**
+**3. 2つのシナリオを区別する方法**
 
-| ヘッダー | ボットトラフィック（最適化） | ヒューマントラフィック（影響を受けない） |
+| ヘッダー | ボットトラフィック（最適化） | 人的トラフィック（影響なし） |
 |---|---|---|
-| `x-edgeoptimize-request-id` | 現在 – 一意のリクエスト ID が含まれます | 不在 |
-| `x-edgeoptimize-fo` | フェールオーバーが発生した場合にのみ表示されます（値：`1`） | 不在 |
+| `x-edgeoptimize-request-id` | 現在 – 一意のリクエスト IDを含む | 不在 |
+| `x-edgeoptimize-fo` | フェールオーバーが発生した場合にのみ存在します（値：`1`） | 不在 |
 
-トラフィックルーティングのステータスは、LLM Optimizer UI でも確認できます。 **顧客設定** に移動し、「**CDN 設定**」タブを選択します。
+**4. ステージング ドメイン （オプション）**
 
-![&#x200B; ルーティングを有効にした AI トラフィックルーティングステータス &#x200B;](/help/assets/optimize-at-edge/byocdn-CDN-traffic-routed-tick.png)
+LLM Optimizerのステージング ホスト名とステージング API キーを使用する場合は、**ステージング** API キーを使用して、**ステージング** ディストリビューションに同じCloudFront設定をデプロイします。 次に、ステージングホストのボットトラフィックを確認します。
 
-**4. ログが正しくフローしていることを確認**
+```
+curl -svo /dev/null https://staging.example.com/page.html \
+  --header "user-agent: chatgpt-user"
+```
 
-上記のテストリクエストを実行した後、CloudFront 関数とLambda@Edge関数の両方に対してログが書き込まれていることを確認します。
+`https://staging.example.com/page.html`を実際のステージング URLとパスに置き換えます。 応答が成功すると、`x-edgeoptimize-request-id` ヘッダーが含まれます。
 
-*CloudFront 関数ログ （`edgeoptimize-routing`）*
+{{verify-routing-status-in-ui}}
 
-**移動：** AWS コンソール/CloudWatch/ロググループ（`us-east-1` または CloudFront 配布が設定されている地域）
+**5. ログが正しく流れていることを確認する**
 
-1. `/aws/cloudfront/function/edgeoptimize-routing` という名前のロググループを探します。
+上記のテストリクエストを実行した後、CloudFront関数とLambda@Edge関数の両方にログが書き込まれていることを確認します。
+
+*CloudFront関数ログ （`edgeoptimize-routing`）*
+
+**ナビゲーション：** AWS コンソール / CloudWatch / ロググループ（`us-east-1`またはCloudFront ディストリビューションが設定されているリージョン）
+
+1. `/aws/cloudfront/function/edgeoptimize-routing`という名前のロググループを探します。
 2. 最新のログストリームを開きます。
-3. エージェンティックリクエストの場合は、次のようなエントリが表示されます。
+3. エージェント型リクエストの場合は、次のようなエントリが表示されます。
    * `Adding origin group for userAgent: chatgpt-user`
    * `Routing to Edge Optimize origin for userAgent: chatgpt-user`
-4. 非 agentic リクエストの場合は、次のように表示されます。
+4. エージェント以外のリクエストの場合は、次を参照してください。
    * `Routing to Default origin for userAgent: ...`
 
-また、**AWS コンソール/CloudFront/機能/edgeoptimize-routing** で **指標** タブを確認して、呼び出し数とエラー率を表示することもできます。
+**AWS コンソール/CloudFront/関数/edgeoptimize-routing**&#x200B;の「**指標**」タブで、呼び出し数とエラー率を確認することもできます。
 
-*Lambda@Edge件のログ （`edgeoptimize-origin`）*
+*Lambda@Edge ログ （`edgeoptimize-origin`）*
 
 >[!IMPORTANT]
->Lambda@Edgeのログは、`us-east-1` ではなく、リクエストを処理した **edge ロケーションの地域** で CloudWatch に書き込まれます。 curl コマンドを実行した場所に最も近いAWS リージョンで、CloudWatch をチェックします。
+>Lambda@Edge ログは、`us-east-1`ではなく、リクエストを処理したエッジの場所&#x200B;**の**&#x200B;領域でCloudWatchに書き込まれます。 curl コマンドを実行した場所に最も近いAWS リージョンのCloudWatchを確認します。
 
-**ナビゲーション：** AWS コンソール/CloudWatch/ロググループ（正しいリージョンにいることを確認します）
+**ナビゲーション：** AWS コンソール/CloudWatch/ロググループ（正しいリージョンに属していることを確認してください）
 
-1. `/aws/lambda/us-east-1.edgeoptimize-origin` という名前のロググループを探します。
+1. `/aws/lambda/us-east-1.edgeoptimize-origin`という名前のロググループを探します。
 2. 最新のログストリームを開きます。
-3. エージェンティックリクエストの場合は、次のようなエントリが表示されます。
+3. エージェント型リクエストの場合は、次のようなエントリが表示されます。
    * `Calling Edge Optimize Origin for agentic requests` — プライマリパス
-   * `Calling Default Origin in case of failover for agentic requests` — フェイルオーバーパス
-   * `Failover Triggered for agentic requests` — オリジン応答のフェイルオーバー検出
+   * `Calling Default Origin in case of failover for agentic requests` — フェールオーバーパス
+   * `Failover Triggered for agentic requests` — origin-response フェールオーバー検出
 
-ロググループが存在しない場合は、手順 4 で IAM 権限が正しく更新されたことを確認します。 また、近くのAWS リージョンも確認してください。リクエストを提供したエッジの場所は、期待したものとは異なる場合があります。
+ロググループが存在しない場合は、手順4でIAM権限が正しく更新されていることを確認します。 また、近くにある他のAWS リージョンも確認してください。リクエストを提供したエッジの場所は、想定したものとは異なる場合があります。
 
 **トラブルシューティング**
 
 | 問題 | 考えられる原因 | 解決策 |
 |-------|----------------|----------|
-| 代理店のリクエストに対応する `x-edgeoptimize-request-id` ールがありません | 接触チャネルグループがEdge Optimize にルーティングされていない | CloudFront のファンクションコード（手順 2）で、`YOUR_DEFAULT_ORIGIN` が正しく置き換えられていることを確認します。 |
-| アジェンティックリクエストの 403 エラー | API キーが無効または見つかりません | Edge Optimize の接触チャネルカスタムヘッダー（手順 1）で `x-edgeoptimize-api-key` ヘッダーの値を確認します。 |
-| Lambda@Edgeの CloudWatch ログが見つかりません | 間違った IAM 権限 | CloudWatch ログの権限ポリシーが更新されたことを確認します（手順 4）。 注意：Lambda@Edge ログは、必ずしも `us-east-1` ージでなくても、リクエストを提供したエッジ領域に表示されます。 |
-| キャッシュが `cache-control: no-store` に従っていない | 最小 TTL が高すぎる可能性があります | キャッシュポリシーで、最小 TTL を `0` に設定します（手順 3）。 最小 TTL がすでに非常に短い場合は、問題ない可能性があります。 |
-| 通常の（非エージェンティック）トラフィックがセットアップ後に壊れる | キャッシュポリシーの設定ミス | 新しいキャッシュポリシー（シナリオ C）を作成した場合は、元の管理ポリシーからすべての設定がレプリケートされていることを確認します。 |
+| エージェント型リクエストに対する応答に`x-edgeoptimize-request-id`がありません | オリジン グループがEdge Optimizeにルーティングされない | CloudFront関数コードで`YOUR_DEFAULT_ORIGIN`が正しく置き換えられたことを確認します（手順2）。 |
+| エージェント型リクエストで403 エラーが発生する | API キーが無効または見つかりません | Edge Optimize origin カスタムヘッダーの`x-edgeoptimize-api-key` ヘッダー値を確認します（手順1）。 |
+| Lambda@EdgeのCloudWatch ログが見つかりません | 間違ったIAM権限 | CloudWatch Logs権限ポリシーが更新されたことを確認します（手順4）。 メモ：Lambda@Edge ログは、必ずしも`us-east-1`ではなく、リクエストを提供したエッジ領域に表示されます。 |
+| キャッシュが`cache-control: no-store`を尊重していません | 最小値TTLが高すぎる可能性があります | キャッシュポリシーで最小TTLを`0`に設定します（手順3）。 最小値のTTLがすでに非常に短い場合は、この問題が発生しない可能性があります。 |
+| セットアップ後に正常な（エージェント以外の）トラフィックが破損する | キャッシュポリシーの設定ミス | 新しいキャッシュポリシー（シナリオ C）を作成した場合は、元のマネージドポリシーのすべての設定をレプリケートしてください。 |
 
-**Edgeでの最適化の無効化と再有効化**
+**EdgeでのOptimizeの無効化と再有効化**
 
-Lambda@Edge関数（`edgeoptimize-origin`）は、CloudFront 動作のオリジンリクエストおよびオリジン応答イベントに関連付けられています。 なぜなら、Lambda@Edgeの停止は、人間と Agentic の両方のその行動を通過するすべてのリクエストでインラインで実行されるので、Agentic リクエストだけでなく、すべてのライブトラフィックに影響を与えます。 Lambda@Edgeの停止が検出された場合は、関数の関連付けを直ちに削除し、通常のトラフィックフローをデフォルトオリジンに復元します。
+Lambda@Edge関数（`edgeoptimize-origin`）は、CloudFront ビヘイビアーのオリジン要求イベントおよびオリジン応答イベントに関連付けられます。 Lambda@Edgeの停止は、その動作を通過するあらゆるリクエスト（人間とエージェントの両方）に対してインラインで実行されるので、エージェントのリクエストだけでなく、すべてのライブトラフィックに影響します。 Lambda@Edgeの停止を検出した場合は、すぐに関数の関連付けを削除して、通常のトラフィックフローをデフォルトのオリジンに戻します。
 
-**Lambda@Edgeの停止を検出する方法**
+**Lambda@Edgeの障害を検出する方法**
 
-* **AWS サービス正常性ダッシュボード** — **AWS CloudFront[&#128279;](https://health.aws.amazon.com/health/status) または** Amazon Lambda&rbrace; に影響を与えるアクティブなインシデントについては **AWS サービス正常性ダッシュボード** を確認してください。 ここで報告されるグローバルまたは地域的な停止は、問題が設定ではなくAWS インフラストラクチャ側にあることを確認する最も迅速な方法です。
-* **Lambda@Edge errors** — **AWS コンソール/CloudFront/モニタリング/[ 配布版]** に移動します。 「**Lambda@Edge エラー**」タブを開き、「**実行エラー**」グラフで実行エラーを確認します。 これらの値が大きい場合、Lambda@Edgeがダウンしている可能性があります。
+* **AWS Service Health Dashboard** — **AWS CloudFront**&#x200B;または&#x200B;**AWS Lambda**&#x200B;に影響を与えるアクティブなインシデントについては、[Amazon Service Health Dashboard](https://health.aws.amazon.com/health/status)を確認してください。 ここで報告されるグローバルまたはリージョンの障害は、問題が設定ではなくAWS インフラストラクチャ側にあることを確認する最速の方法です。
+* **Lambda@Edge errors** — **AWS コンソール / CloudFront / モニタリング / [ ディストリビューション]**&#x200B;に移動します。 「**Lambda@Edge errors**」タブを開き、**実行エラー** グラフで実行エラーを確認します。 これらの値が高い場合は、Lambda@Edgeがダウンしている可能性があります。
 
-**Lambda@Edge関数の分離**
+**Lambda@Edge関数のデタッチ**
 
-**ナビゲーション：** AWS コンソール/CloudFront/配布版/[ 配布版 ]/ビヘイビアー
+**ナビゲーション：** AWS コンソール > CloudFront > ディストリビューション > [ ディストリビューション ] >動作
 
-1. 動作の **編集** をクリックします。
+1. ビヘイビアーで「**編集**」をクリックします。
 
-2. 「**関数の関連付け**」セクションまでスクロールします。
+2. **関数の関連付け** セクションまでスクロールします。
 
-3. 次の関連付けを「**関連付けなし**」に設定します。
+3. 次の関連付けを&#x200B;**関連付けなし**&#x200B;に設定します。
 
-   | イベント | をに変更 |
+   | イベント | 変更先 |
    |---|---|
-   | ビューアリクエスト | 関連付けなし |
-   | 接触チャネルリクエスト | 関連付けなし |
-   | 接触チャネル応答 | 関連付けなし |
+   | Viewer リクエスト | 関連付けなし |
+   | オリジンリクエスト | 関連付けなし |
+   | オリジンレスポンス | 関連付けなし |
 
-   ![&#x200B; 関数の関連付けの設定 &#x200B;](/help/assets/optimize-at-edge/cloudfront-no-function-association.png)
+   ![関数の関連付け設定](/help/assets/optimize-at-edge/cloudfront-no-function-association.png)
 
-4. **変更を保存** をクリックします。
+4. 「**変更を保存**」をクリックします。
 
-5. CloudFront 配布がデプロイを完了するまで待ちます。 ステータスが **デプロイ** から最終変更日（通常、数分以内）に変更されます。
+5. CloudFront ディストリビューションのデプロイが完了するのを待ちます。 ステータスが&#x200B;**デプロイ**&#x200B;から最終変更日に変更されます（通常は数分以内）。
 
-デプロイが完了すると、すべてのトラフィックルートはデフォルトオリジンに直接ルーティングされます。 設定は削除されません。Lambda 関数とその関連付けはいつでも復元できます。
+デプロイが完了すると、すべてのトラフィックルートがデフォルトのオリジンに直接送信されます。 設定は削除されません。Lambda関数とその関連付けはいつでも復元できます。
 
-**Lambda@Edge関数の再接続**
+**Lambda@Edge関数を再アタッチしています**
 
-**ナビゲーション：** AWS コンソール/CloudFront/配布版/[ 配布版 ]/ビヘイビアー
+**ナビゲーション：** AWS コンソール > CloudFront > ディストリビューション > [ ディストリビューション ] >動作
 
-1. 動作の **編集** をクリックします。
+1. ビヘイビアーで「**編集**」をクリックします。
 
-2. 「**関数の関連付け**」セクションまでスクロールします。
+2. **関数の関連付け** セクションまでスクロールします。
 
-3. 関連付けを復元します。
+3. 関連付けを復元：
 
-   | イベント | をに設定 |
+   | イベント | に設定 |
    |---|---|
-   | ビューアリクエスト | `edgeoptimize-routing` （CloudFront 関数） |
-   | 接触チャネルリクエスト | 手順 4 のバージョン管理された Lambda ARN |
-   | 接触チャネル応答 | 手順 4 のバージョン管理された Lambda ARN |
+   | Viewer リクエスト | `edgeoptimize-routing` （CloudFront関数） |
+   | オリジンリクエスト | 手順4のバージョン管理されたLambda ARN |
+   | オリジンレスポンス | 手順4のバージョン管理されたLambda ARN |
 
-   手順 4 で示したバージョン付き **関数 ARN** を使用します（**バージョンの公開**）。
+   手順4でメモしたバージョン管理された&#x200B;**Function ARN**&#x200B;を使用します（**バージョンの公開**&#x200B;で）。
 
-   ![&#x200B; 関数の関連付けの設定 &#x200B;](/help/assets/optimize-at-edge/cloudfront-function-association.png)
+   ![関数の関連付け設定](/help/assets/optimize-at-edge/cloudfront-function-association.png)
 
-4. **変更を保存** をクリックします。
+4. 「**変更を保存**」をクリックします。
 
-5. 配布がデプロイを完了するのを待ってから、Agentic リクエストが手順 6 で説明したように `x-edgeoptimize-request-id` ヘッダーを返すことを確認します。
+5. ディストリビューションのデプロイが完了するのを待ってから、エージェンティック要求が手順6で説明されているように`x-edgeoptimize-request-id` ヘッダーを返すことを確認します。
 
 {{return-to-overview}}

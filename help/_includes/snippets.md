@@ -1,33 +1,68 @@
 ---
-source-git-commit: 9230e525340bb951fcd9f2ae1f88bad557d5b7d7
+source-git-commit: da789100d814004687de2f46e18a295671dec4b8
 workflow-type: tm+mt
-source-wordcount: '153'
+source-wordcount: '363'
 ht-degree: 0%
 
 ---
 # スニペット
 
-## API キー取得手順 {#retrieve-byocdn-api-key}
+## API キー取得ステップ {#retrieve-byocdn-api-key}
 
-**API キーを取得する手順：**
+**実稼動のEdge Optimize API キーを取得する手順：**
 
-1. **顧客設定** に移動し、「**CDN 設定**」タブを選択します。
+1. LLM Optimizerで、**顧客設定**&#x200B;を開き、**CDN設定** タブを選択します。
 
-   ![&#x200B; 顧客設定に移動 &#x200B;](/help/assets/optimize-at-edge/prereq-customer-config-nav.png)
+   ![顧客設定に移動](/help/assets/optimize-at-edge/prereq-customer-config-nav.png)
 
-2. 「**最適化をデプロイするための AI トラフィックルーティング**」で、「**最適化を AI エージェントにデプロイ**」チェックボックスをオンにします。
+2. 「**AI エージェントに最適化をデプロイ**」セクションを見つけます。 「**最適化エンジンを有効にする**」チェックボックスをオンにします。
 
-   ![AI エージェントへのティックのデプロイの最適化 &#x200B;](/help/assets/optimize-at-edge/prereq-deploy-checkbox.png)
+   ![AI エージェントへの最適化のデプロイ – 保留中](/help/assets/optimize-at-edge/byocdn-deploy-optimizations-pending.png)
 
-3. API キーをコピーして、以下のルーティング設定手順に進みます。
+3. 確認ダイアログで、**有効**&#x200B;を選択します。
 
-   ![API キーをコピーします &#x200B;](/help/assets/optimize-at-edge/prereq-copy-api-key.png)
+   ![最適化エンジン確認ダイアログを有効にする](/help/assets/optimize-at-edge/byocdn-enable-optimization-engine-dialog.png)
+
+4. **詳細を表示**&#x200B;を選択します。 **最適化の詳細をデプロイ** ダイアログで、**実稼動API キー**&#x200B;をコピーします（フィールドの横に&#x200B;**コピー**&#x200B;を使用）。
+
+   デプロイ最適化の詳細![実稼動API キー](/help/assets/optimize-at-edge/byocdn-production-api-key-details.png)
 
    >[!NOTE]
-   >この段階では、ステータスに、設定がまだ完了していないことを示す赤い十字が表示される場合があります。 これは想定されています。以下のルーティング設定を完了し、AI ボットトラフィックのフローが開始されると、ステータスが緑色のチェックマークに更新され、ルーティングが正常に有効であることが確認されます。
+   >設定が完了していないことがダイアログに表示される場合があります。 これは、ルーティングが検証されるまで想定されます。引き続きAPI キーをコピーして、IT部門またはCDN部門が設定を完了できるようにすることができます。
 
-さらに、上記の手順に関するヘルプが必要な場合は、Adobe アカウントチームまたは `llmo-at-edge@adobe.com` に問い合わせてください。
+上記の手順についてサポートが必要な場合は、Adobe アカウントチームまたは`llmo-at-edge@adobe.com`にお問い合わせください。
+
+## ステージング ドメイン API キー（オプション） {#retrieve-staging-edge-optimize-api-key}
+
+実稼動トラフィックがルーティングルールを使用する前に、より低い環境でEdgeでOptimizeをテストする場合は、ステージングホスト名を使用します。
+
+**前提条件**
+
+* ステージング ホスト名は、実稼動サイトと&#x200B;**同じ登録可能ドメイン**&#x200B;に属している必要があります（実稼動が`https://www.example.com`の場合は`https://staging.example.com`など）。
+* サイトに対して設定できるのは&#x200B;**one** ステージング ドメインのみです。 保存した後は、支援なしでは変更できません。
+
+**手順**
+
+1. LLM Optimizerで、**顧客設定**&#x200B;を開き、**CDN設定** タブを選択します。
+
+2. 「**AI エージェントに最適化をデプロイ**」セクションで、「**ステージドメインを追加**」（ステージングドメインが既に設定されている場合は&#x200B;**ステージドメイン**）を選択します。
+
+3. **ステージングドメイン** ダイアログで、`https://`を含む完全なステージング URLを入力し、**ドメインを設定**&#x200B;を選択します。
+
+   ![ ステージドメイン入力ダイアログ ](/help/assets/optimize-at-edge/byocdn-staging-domain-input.png)
+
+4. 次のプロンプトでドメインを確認します。 ワークフローが完了すると、設定されたドメインとその&#x200B;**API キー**&#x200B;が&#x200B;**ステージドメイン** ダイアログに表示されます。 「**コピー**」を選択して、ステージング API キーをコピーします。
+
+   ![ ステージング ドメイン API キー](/help/assets/optimize-at-edge/byocdn-staging-domain-api-key.png)
+
+サポートが必要な場合は、`llmo-at-edge@adobe.com`にお問い合わせください。
+
+## LLM Optimizerでのルーティングステータスの確認 {#verify-routing-status-in-ui}
+
+トラフィックルーティングのステータスは、LLM Optimizer UIでも確認できます。 **顧客設定**&#x200B;に移動し、**CDN設定** タブを選択します。
+
+![AI エージェントへの最適化のデプロイ – 完了](/help/assets/optimize-at-edge/byocdn-CDN-traffic-routed-tick.png)
 
 ## 概要に戻る {#return-to-overview}
 
-利用可能なオポチュニティ、自動最適化ワークフロー、FAQ など、Edgeでの最適化について詳しくは、[Edgeでの最適化の概要 &#x200B;](/help/dashboards/optimize-at-edge/overview.md) を参照してください。
+利用可能なオポチュニティ、自動最適化ワークフロー、FAQなど、Edgeでの最適化について詳しくは、[Edgeでの最適化の概要](/help/dashboards/optimize-at-edge/overview.md)に戻ります。

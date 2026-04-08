@@ -2,10 +2,10 @@
 title: Edgeでの最適化 – Akamai （BYOCDN）
 description: LLM OptimizerのEdgeでAkamai BYOCDN for Optimizeを設定する方法について説明します。
 feature: Opportunities
-source-git-commit: 16a1142cb70d9bcd70406a3779a43fc8568c77d0
+source-git-commit: f2a652761acbea7ca5b8e8740c1dbd0132e42f7f
 workflow-type: tm+mt
-source-wordcount: '745'
-ht-degree: 11%
+source-wordcount: '849'
+ht-degree: 9%
 
 ---
 
@@ -22,25 +22,32 @@ Akamai プロパティマネージャールールを設定する前に、次の�
 * LLM Optimizer オンボーディングプロセスを完了しました。
 * LLM OptimizerへのCDN ログの転送が完了しました。
 * LLM Optimizer UIから取得したEdge Optimize API キー。
+* （オプション）最初にステージングホスト名でルーティングをテストする場合は、ステージング Edge Optimize API キー。
 
 {{retrieve-byocdn-api-key}}
 
+{{retrieve-staging-edge-optimize-api-key}}
+
 **設定**
 
-次のAkamai Property Manager ルールは、LLM ユーザーエージェントをEdge Optimizeにルーティングします。 設定には、次の手順が含まれます。
+次のAkamai Property Manager ルールは、エージェント型HTML ページトラフィックをEdge Optimizeにルーティングします。 設定には、次の手順が含まれます。
 
-**1. ルーティング条件を設定（ユーザーエージェントの一致）**
+**1. ルーティング条件の設定（User-AgentとHTMLのトラフィックの一致）**
 
-次のuser-agents:image.pngのルーティングを設定します
+次のユーザーエージェントのルーティングを設定します。
 
 ```
- *AdobeEdgeOptimize-AI*,
- *ChatGPT-User*,
- *GPTBot*,
- *OAI-SearchBot*,
- *PerplexityBot*,
+ *AdobeEdgeOptimize-AI*
+ *ChatGPT-User*
+ *GPTBot*
+ *OAI-SearchBot*
+ *PerplexityBot*
  *Perplexity-User*
 ```
+
+>[!NOTE]
+>
+>Edgeで最適化のルーティングルールをエージェント型HTML ページトラフィックにのみ適用します。 一般的な設定では、**File Extension**&#x200B;などのリクエストサイドの条件を使用して、拡張機能のないページ URLに`html`と`EMPTY_STRING`を一致させることができます。 サイトが他のURL パターンからHTMLを提供している場合、またはAPI エンドポイントなどの拡張なし非ページルートを含んでいる場合は、パスベースの条件を追加してルールを絞り込みます。
 
 ![ルーティング条件を設定](/help/assets/optimize-at-edge/akamai-step1-routing.png)
 
@@ -68,7 +75,7 @@ Akamai プロパティマネージャールールを設定する前に、次の�
 
 次の受信リクエストヘッダーを設定します。
 LLMOから取得したAPI キーへの`x-edgeoptimize-api-key`
-`x-edgeoptimize-config` ～ `LLMCLIENT=TRUE;`
+`x-edgeoptimize-config` コピー先： `LLMCLIENT=TRUE;`
 `x-edgeoptimize-url` ～ `{{builtin.AK_URL}}`
 
 ![受信リクエストヘッダーを変更](/help/assets/optimize-at-edge/akamai-step5-request.png)
@@ -180,8 +187,17 @@ curl -svo /dev/null https://www.example.com/page.html \
 | `x-edgeoptimize-request-id` | 現在 – 一意のリクエスト IDを含む | 不在 |
 | `x-edgeoptimize-fo` | フェールオーバーが発生した場合にのみ存在します（値：`1`） | 不在 |
 
-トラフィックルーティングのステータスは、LLM Optimizer UIでも確認できます。 「**顧客設定**」に移動し、「**CDN設定**」タブを選択します。
+**4. ステージング ドメイン （オプション）**
 
-ルーティングが有効になっている![AI トラフィック ルーティングのステータス &#x200B;](/help/assets/optimize-at-edge/byocdn-CDN-traffic-routed-tick.png)
+LLM Optimizerのステージングホスト名とステージング API キーを使用する場合は、ルールの&#x200B;**ステージング** キーを使用して、**ステージング** Akamai プロパティに同じルーティングパターンをデプロイします。 次に、ステージングホストのボットトラフィックを確認します。
+
+```
+curl -svo /dev/null https://staging.example.com/page.html \
+  --header "user-agent: chatgpt-user"
+```
+
+`https://staging.example.com/page.html`を実際のステージング URLとパスに置き換えます。 応答が成功すると、`x-edgeoptimize-request-id` ヘッダーが含まれます。
+
+{{verify-routing-status-in-ui}}
 
 {{return-to-overview}}
