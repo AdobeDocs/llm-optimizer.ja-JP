@@ -1,37 +1,38 @@
 ---
 title: BYOCDN ログ転送の概要
-description: LLM Optimizerでアジェンティックトラフィックデータを収集するために、プロバイダーからAdobeの S3 バケットに CDN ログを転送する方法を説明します。
+description: LLM Optimizerでエージェンティックトラフィックデータを収集するために、プロバイダーからAdobeのS3 バケットにCDN ログを転送する方法について説明します。
 feature: Agentic Traffic
-source-git-commit: a1ba7684ccef9baf3452cc158fc0d6a12aa7adb8
+source-git-commit: b6e74e8706c4074a47cc355cb5f3a69a817f8a49
 workflow-type: tm+mt
-source-wordcount: '189'
-ht-degree: 3%
+source-wordcount: '215'
+ht-degree: 2%
 
 ---
 
 
 # BYOCDN ログ転送の概要 {#cdn-log-forwarding}
 
-お客様が管理する CDN （BYOCDN）のログ転送は、CDN アクセスログをAdobeのAmazon S3 バケットに送信して、LLM Optimizerがエージェンティックトラフィックデータを収集および分析できるようにするプロセスです。 CDN ログ転送がないと、[&#x200B; エージェンティックトラフィック &#x200B;](/help/dashboards/agentic-traffic.md) ダッシュボードに指標を表示できません。
+顧客管理CDN （BYOCDN）のログ転送とは、LLM Optimizerがエージェント型トラフィックデータを収集および分析できるように、CDN アクセスログをAdobeのAmazon S3 バケットに送信するプロセスです。 CDN ログ転送がなければ、[Agentic Traffic](/help/dashboards/agentic-traffic.md) ダッシュボードに指標を表示できません。
 
-以下に示すガイドは、同じ 2 段階のワークフローに従います。
+以下のガイドは、同じ2段階のワークフローに従います。
 
-1. **LLM Optimizerへのオンボーディング** - [CDN 設定 &#x200B;](/help/dashboards/customer-configuration.md) ページで CDN を登録して、必要な S3 資格情報とパスの詳細を生成します。
-2. **CDN の設定** – これらの詳細を使用して、CDN プロバイダーのコンソールでログ転送ジョブを作成（または手動でログをアップロード）します。
+1. **LLM Optimizerでのオンボード** – 必要なS3資格情報とパスの詳細を生成するには、[CDN Configuration](/help/dashboards/customer-configuration.md) ページでCDNを登録します。
+2. **CDN**&#x200B;を設定します。これらの詳細を使用して、CDN プロバイダーのコンソールでログ転送ジョブを作成するか、ログを手動でアップロードします。 CloudFrontの場合、**AWS CLI**&#x200B;でのみコンソールを使用するか、配信の設定を完了できます。[CloudFront （AWS CLI） ](/help/overview/log-forwarding/cloudfront-cli.md)を参照してください。
 
 ## CDN プロバイダー {#cdn-providers}
 
-CDN プロバイダーに対応するガイドに従ってください。
+CDN プロバイダーの対応するガイドに従います。
 
 | CDN プロバイダー | ガイド |
 |---|---|
-| Akamai | [&#x200B; ガイドを表示 &#x200B;](/help/overview/log-forwarding/akamai.md) |
-| Cloudflare | [&#x200B; ガイドを表示 &#x200B;](/help/overview/log-forwarding/cloudflare.md) |
-| CloudFront | [&#x200B; ガイドを表示 &#x200B;](/help/overview/log-forwarding/cloudfront.md) |
-| Fastly | [&#x200B; ガイドを表示 &#x200B;](/help/overview/log-forwarding/fastly.md) |
-| インパーバ | [&#x200B; ガイドを表示 &#x200B;](/help/overview/log-forwarding/imperva.md) |
-| その他（手動/サポートされていない CDN） | [&#x200B; ガイドを表示 &#x200B;](/help/overview/log-forwarding/other.md) |
+| Akamai | [ ガイドを表示](/help/overview/log-forwarding/akamai.md) |
+| Cloudflare | [ ガイドを表示](/help/overview/log-forwarding/cloudflare.md) |
+| CloudFront （コンソール） | [ ガイドを表示](/help/overview/log-forwarding/cloudfront.md) |
+| CloudFront （AWS CLI） | [ ガイドを表示](/help/overview/log-forwarding/cloudfront-cli.md) |
+| Fastly | [ ガイドを表示](/help/overview/log-forwarding/fastly.md) |
+| インペルバ | [ ガイドを表示](/help/overview/log-forwarding/imperva.md) |
+| その他（手動/サポートされていないCDN） | [ ガイドを表示](/help/overview/log-forwarding/other.md) |
 
 >[!NOTE]
 >
->お使いの CDN プロバイダーが上記に記載されていない場合は、手動のアップロード、アドホックスクリプト、およびネイティブでサポートされていない CDN に関する **その他（手動/サポートされていない CDN）** ガイドを参照してください。
+>上記に記載されていないCDN プロバイダーの場合は、**その他（手動/サポートされていないCDN）** ガイドを使用してください。このガイドでは、手動アップロード、アドホックスクリプト、およびネイティブでサポートされていないCDNについて説明しています。
