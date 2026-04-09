@@ -12,11 +12,11 @@ ht-degree: 0%
 
 # ログ転送：CloudFront （AWS CLI） {#log-forwarding-cloudfront-cli}
 
-このページでは、エージェント型トラフィックデータ収集用にCloudFrontからAdobeのS3 バケットにCDN ログを転送する方法について詳しく説明します。 LLM Optimizer CDN設定ページを使用して、LLM Optimizerにオンボーディングします。 オンボーディングプロセスが完了したら、このページに記載されている手順に従って、[ ステップ 2](#step-2-cli)の[AWS コマンドラインインターフェイス ](https://aws.amazon.com/cli/)を使用してログ転送を設定します。
+このページでは、エージェント型トラフィックデータ収集用にCloudFrontからAdobeのS3 バケットにCDN ログを転送する方法について詳しく説明します。 LLM Optimizer CDN設定ページを使用して、LLM Optimizerにオンボーディングします。 オンボーディングプロセスが完了したら、このページに記載されている手順に従って、[&#x200B; ステップ 2](#step-2-cli)の[AWS コマンドラインインターフェイス &#x200B;](https://aws.amazon.com/cli/)を使用してログ転送を設定します。
 
 >[!NOTE]
 >
-> このガイドでは、[AWS コマンドラインインターフェイス ](https://aws.amazon.com/cli/)を使用してログ転送を設定する方法について説明します。 **CloudFront UI**&#x200B;を使用してログ転送を設定する場合は、[ ログ転送：CloudFront](/help/overview/log-forwarding/cloudfront.md)を参照してください。
+> このガイドでは、[AWS コマンドラインインターフェイス &#x200B;](https://aws.amazon.com/cli/)を使用してログ転送を設定する方法について説明します。 **CloudFront UI**&#x200B;を使用してログ転送を設定する場合は、[&#x200B; ログ転送：CloudFront](/help/overview/log-forwarding/cloudfront.md)を参照してください。
 
 ## ステップ 1: LLM Optimizerでのオンボーディング {#step-1}
 
@@ -28,7 +28,7 @@ LLM Optimizer ページ [https://llmo.now/](https://llmo.now/)で、次の操作
 
 1. 「**CDN設定**」タブをクリックします。
 
-   ![CDN設定タブ ](/help/overview/assets/log-forwarding/common/cdn-config-tab.png)
+   ![CDN設定タブ &#x200B;](/help/overview/assets/log-forwarding/common/cdn-config-tab.png)
 
 1. 「**基本を学ぶ**」をクリックします。
 
@@ -48,7 +48,7 @@ LLM Optimizer ページ [https://llmo.now/](https://llmo.now/)で、次の操作
 
 1. 「**オンボード**」をクリックします。
 
-   ![ オンボードボタン ](/help/overview/assets/log-forwarding/common/onboard-button.png)
+   ![&#x200B; オンボードボタン &#x200B;](/help/overview/assets/log-forwarding/common/onboard-button.png)
 
 ## 手順2:AWS CLIを使用したCDN ログ転送の設定 {#step-2-cli}
 
