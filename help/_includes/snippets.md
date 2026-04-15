@@ -50,7 +50,7 @@ ht-degree: 0%
 3. `https://`を含む完全なステージング URLを入力し、**ドメインを設定**&#x200B;を選択します。
 4. 確認ダイアログから&#x200B;**ステージング** API キーをコピーします。
 
-![ ステージング ドメイン API キー](/help/assets/optimize-at-edge/byocdn-staging-domain-api-key.png)
+![&#x200B; ステージング ドメイン API キー](/help/assets/optimize-at-edge/byocdn-staging-domain-api-key.png)
 
 ステージング API キーを使用して、ステージング環境に同じルーティングルールをデプロイします。
 

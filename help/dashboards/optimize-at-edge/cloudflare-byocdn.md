@@ -69,23 +69,23 @@ Edge Optimize用にCloudflare Workerを設定するには、次の2つの方法�
 
 >[!IMPORTANT]
 >
->このオプションは、**がドメインに既存のCloudflare Workerを持っていない**&#x200B;場合にのみ使用してください。 既にワーカーがある場合は、[ オプション 2：手動セットアップ ](#option-2-manual-setup)を使用して、既存のワーカーにEdge Optimize ルーティングロジックを追加します。
+>このオプションは、**がドメインに既存のCloudflare Workerを持っていない**&#x200B;場合にのみ使用してください。 既にワーカーがある場合は、[&#x200B; オプション 2：手動セットアップ &#x200B;](#option-2-manual-setup)を使用して、既存のワーカーにEdge Optimize ルーティングロジックを追加します。
 
 **手順1: ワーカーのデプロイ**
 
 以下のボタンをクリックして、Edge Optimize ワーカーをCloudflare アカウントにデプロイします。
 
-[![Cloudflareへのデプロイ ](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/adobe/llmo-code-samples/tree/main/optimize-at-edge/cloudflare/automation)
+[![Cloudflareへのデプロイ &#x200B;](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/adobe/llmo-code-samples/tree/main/optimize-at-edge/cloudflare/automation)
 
 **手順2：展開フォームに入力**
 
 ボタンをクリックすると、ワーカーの設定ページが開きます。 次のようにフォームに入力します。
 
-![Cloudflare Workers設定ページ ](/help/assets/optimize-at-edge/cloudflare-deploy-form.png)
+![Cloudflare Workers設定ページ &#x200B;](/help/assets/optimize-at-edge/cloudflare-deploy-form.png)
 
-1. **Git アカウント** — ドロップダウンからGitHubまたはGitLab アカウントを選択します。 Cloudflareは、ワーカーコードをアカウントのリポジトリにフォークします。 アカウントがリストにない場合は、**+新規GitHub Connection**&#x200B;または&#x200B;**+新規GitLab Connection**&#x200B;を選択して、ドロップダウンから直接新しい接続を追加できます。 詳しくは、[Cloudflare Git統合ガイド ](https://developers.cloudflare.com/workers/ci-cd/builds/git-integration/github-integration/)を参照してください。
+1. **Git アカウント** — ドロップダウンからGitHubまたはGitLab アカウントを選択します。 Cloudflareは、ワーカーコードをアカウントのリポジトリにフォークします。 アカウントがリストにない場合は、**+新規GitHub Connection**&#x200B;または&#x200B;**+新規GitLab Connection**&#x200B;を選択して、ドロップダウンから直接新しい接続を追加できます。 詳しくは、[Cloudflare Git統合ガイド &#x200B;](https://developers.cloudflare.com/workers/ci-cd/builds/git-integration/github-integration/)を参照してください。
 
-   新しいGitHub接続と新しいGitLab接続オプションを表示する![Git アカウントのドロップダウン ](/help/assets/optimize-at-edge/cloudflare-git-connection.png)
+   新しいGitHub接続と新しいGitLab接続オプションを表示する![Git アカウントのドロップダウン &#x200B;](/help/assets/optimize-at-edge/cloudflare-git-connection.png)
 2. **プライベート Git リポジトリを作成** – このチェックをオンのままにします（デフォルト）。
 3. **プロジェクト名** — `edge-optimize-router`のままにするか、任意の名前を入力してください。
 4. **EDGE_OPTIMIZE_API_KEY** — Adobeが提供するEdge Optimize API キーを貼り付けます。 この値は、暗号化された秘密鍵として保存されます。
@@ -95,7 +95,7 @@ Edge Optimize用にCloudflare Workerを設定するには、次の2つの方法�
 8. **実稼動以外のブランチ用のビルド** – 選択を解除します。 これは開発者ワークフロー機能であり、このデプロイメントには必要ありません。
 9. 「**作成してデプロイ**」をクリックします。
 
-ワーカーをデプロイしたら、[ ドメインへのルートの追加](#add-a-route-to-your-domain)に進み、ワーカーをドメインにリンクします。 ルーティングは自動的に設定されないので、手動で完了する必要があります。
+ワーカーをデプロイしたら、[&#x200B; ドメインへのルートの追加](#add-a-route-to-your-domain)に進み、ワーカーをドメインにリンクします。 ルーティングは自動的に設定されないので、手動で完了する必要があります。
 
 ## オプション 2：手動セットアップ
 
@@ -109,7 +109,7 @@ Edge Optimize用にCloudflare Workerを設定するには、次の2つの方法�
 4. ワーカーに名前を付けます（例：`edge-optimize-router`）。
 5. 「**デプロイ**」をクリックして、デフォルトコードを使用してワーカーを作成します。
 
-![Cloudflare Workers ダッシュボード ](/help/assets/optimize-at-edge/cloudflare-workers-dashboard.png)
+![Cloudflare Workers ダッシュボード &#x200B;](/help/assets/optimize-at-edge/cloudflare-workers-dashboard.png)
 
 **手順2: ワーカーコードを追加**
 
@@ -321,7 +321,7 @@ async function failoverToOrigin(request, env, url) {
 2. **Workers Routes**&#x200B;に移動します。
 3. 「**ルートを追加**」をクリックし、パターンとワーカーを指定します。
 
-![Cloudflare ワーカーのルート ](/help/assets/optimize-at-edge/cloudflare-worker-routes.png)
+![Cloudflare ワーカーのルート &#x200B;](/help/assets/optimize-at-edge/cloudflare-worker-routes.png)
 
 **フェールオーバー動作の検証**
 
