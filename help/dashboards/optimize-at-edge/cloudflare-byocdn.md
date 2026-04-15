@@ -2,9 +2,9 @@
 title: Edgeで最適化 – Cloudflare （BYOCDN）
 description: LLM OptimizerのEdgeでCloudflare BYOCDN for Optimizeを設定する方法について説明します。
 feature: Opportunities
-source-git-commit: 66b058734597c378040e77a23a4023bed9273427
+source-git-commit: 38ea32e27b1c5c129b019155cb7b717c7ca4f179
 workflow-type: tm+mt
-source-wordcount: '1880'
+source-wordcount: '1922'
 ht-degree: 1%
 
 ---
@@ -59,7 +59,7 @@ Edge Optimize バックエンドへのリクエストには、次のヘッダー
 Edge Optimize用にCloudflare Workerを設定するには、次の2つの方法があります。
 
 * [**オプション 1: Cloudflareへのデプロイ （推奨）**](#option-1-deploy-to-cloudflare) – 新しいワーカーを自動的に作成し、必要な環境変数とシークレットの入力を求めるメッセージを表示します。 このドメインに既存のCloudflare Workerがない場合は、このオプションを使用します。
-* [**オプション 2：手動セットアップ**](#option-2-manual-setup) — ワーカーを自分で作成および設定するための手順ごとの手順。 既存のCloudflare Workerを既に拡張したい場合、またはデプロイメントを完全に制御したい場合は、このオプションを使用します。
+* [**オプション 2：手動セットアップ**](#option-2-manual-setup) — ワーカーを自分で作成および設定するための手順ごとの手順。 ドメインに既存のCloudflare Workerが既に設定されている場合は、このオプションを使用します。Edge Optimize コードを既存のワーカーにマージする必要があります（[&#x200B; ステップ 2: ワーカーコードを追加](#option-2-manual-setup)を参照）。また、デプロイメントを完全に制御する必要がある場合は、このオプションを使用します。
 
 選択したオプションに関係なく、ワーカーをドメインに手動でリンクする必要があります。[手順：ドメインへのルートの追加](#add-a-route-to-your-domain)を参照してください。
 
@@ -113,7 +113,7 @@ Edge Optimize用にCloudflare Workerを設定するには、次の2つの方法�
 
 **手順2: ワーカーコードを追加**
 
-ワーカーを作成したら、**コードを編集**&#x200B;をクリックし、デフォルトコードを次のコードに置き換えます。
+ワーカーを作成したら、**コードを編集**&#x200B;をクリックし、デフォルトコードを次のコードに置き換えます。 既存のCloudflare Workerがある場合は、以下のコードを完全に置き換えるのではなく、既存のワーカーコードとマージします。
 
 ```javascript
 /**
