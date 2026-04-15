@@ -1,7 +1,7 @@
 ---
-source-git-commit: da789100d814004687de2f46e18a295671dec4b8
+source-git-commit: e9309dc8f8d1d81b953483f17dcb424e46d5cd3b
 workflow-type: tm+mt
-source-wordcount: '363'
+source-wordcount: '457'
 ht-degree: 0%
 
 ---
@@ -32,28 +32,31 @@ ht-degree: 0%
 
 上記の手順についてサポートが必要な場合は、Adobe アカウントチームまたは`llmo-at-edge@adobe.com`にお問い合わせください。
 
-## ステージング ドメイン API キー（オプション） {#retrieve-staging-edge-optimize-api-key}
+## オプション：ステージングホスト名でのルーティングのテスト {#retrieve-staging-edge-optimize-api-key}
 
-実稼動トラフィックがルーティングルールを使用する前に、より低い環境でEdgeでOptimizeをテストする場合は、ステージングホスト名を使用します。
+**オプション：ステージング ホスト名**&#x200B;でルーティングをテストします
 
-**前提条件**
+実稼動用ルーティングを有効にする前に、下位の環境でルーティングを検証する場合は、ステージングホスト名を設定できます。
 
-* ステージング ホスト名は、実稼動サイトと&#x200B;**同じ登録可能ドメイン**&#x200B;に属している必要があります（実稼動が`https://www.example.com`の場合は`https://staging.example.com`など）。
-* サイトに対して設定できるのは&#x200B;**one** ステージング ドメインのみです。 保存した後は、支援なしでは変更できません。
+**要件**
 
-**手順**
+* ステージング ホスト名は、実稼動環境と同じ&#x200B;**登録可能なドメイン**&#x200B;上にある必要があります（実稼動環境が`https://www.example.com`の場合は`https://staging.example.com`など）。
+* サイトごとに&#x200B;**one**&#x200B;個のステージングドメインのみ。 保存した後は、Adobeに連絡せずに変更することはできません。
 
-1. LLM Optimizerで、**顧客設定**&#x200B;を開き、**CDN設定** タブを選択します。
+**ステージング API キーを取得**
 
-2. 「**AI エージェントに最適化をデプロイ**」セクションで、「**ステージドメインを追加**」（ステージングドメインが既に設定されている場合は&#x200B;**ステージドメイン**）を選択します。
+1. **顧客設定**&#x200B;を開き、**CDN設定**&#x200B;を選択します。
+2. 「**AI エージェントに最適化をデプロイ**」で、「**ステージドメインを追加**」（ステージングドメインが既に設定されている場合は「**ステージドメイン**」を選択）を選択します。
+3. `https://`を含む完全なステージング URLを入力し、**ドメインを設定**&#x200B;を選択します。
+4. 確認ダイアログから&#x200B;**ステージング** API キーをコピーします。
 
-3. **ステージングドメイン** ダイアログで、`https://`を含む完全なステージング URLを入力し、**ドメインを設定**&#x200B;を選択します。
+![ ステージング ドメイン API キー](/help/assets/optimize-at-edge/byocdn-staging-domain-api-key.png)
 
-   ![&#x200B; ステージドメイン入力ダイアログ &#x200B;](/help/assets/optimize-at-edge/byocdn-staging-domain-input.png)
+ステージング API キーを使用して、ステージング環境に同じルーティングルールをデプロイします。
 
-4. 次のプロンプトでドメインを確認します。 ワークフローが完了すると、設定されたドメインとその&#x200B;**API キー**&#x200B;が&#x200B;**ステージドメイン** ダイアログに表示されます。 「**コピー**」を選択して、ステージング API キーをコピーします。
+**ステージング ボットのトラフィックをテスト**
 
-   ![&#x200B; ステージング ドメイン API キー](/help/assets/optimize-at-edge/byocdn-staging-domain-api-key.png)
+`https://staging.example.com/page.html`を実際のステージング URLとパスに置き換えます。 **成功：**&#x200B;応答には`x-edgeoptimize-request-id` ヘッダーが含まれています。
 
 サポートが必要な場合は、`llmo-at-edge@adobe.com`にお問い合わせください。
 
@@ -62,6 +65,16 @@ ht-degree: 0%
 トラフィックルーティングのステータスは、LLM Optimizer UIでも確認できます。 **顧客設定**&#x200B;に移動し、**CDN設定** タブを選択します。
 
 ![AI エージェントへの最適化のデプロイ – 完了](/help/assets/optimize-at-edge/byocdn-CDN-traffic-routed-tick.png)
+
+## ファイアウォールルールを使用したEdgeでの最適化の許可（オプション） {#waf-allowlist-setup}
+
+CDNでWAFまたはBot Managerを使用している場合：
+
+* WAFまたはBot Managerで`*AdobeEdgeOptimize/1.0*` ユーザーエージェントを許可リストに加えるして、Optimize at Edge サービスがオリジンコンテンツを取得できるようにします。
+* ファイアウォールでユーザーエージェント以外の追加の検証が必要な場合は、秘密鍵（例：`openssl rand -hex 32`）を生成し、次の操作を行います。
+   * ルーティングルールのシークレットを他の`x-edgeoptimize-*` ヘッダーと共に`x-edgeoptimize-fetcher-key`を追加します。
+   * WAFまたはBot Manager ルールを追加して、`x-edgeoptimize-fetcher-key`が同じシークレットと一致するリクエストを許可します。
+* Edgeで最適化すれば、このヘッダーをそのまま転送できます。ユーザーは鍵のライフサイクル全体を所有しています。
 
 ## 概要に戻る {#return-to-overview}
 

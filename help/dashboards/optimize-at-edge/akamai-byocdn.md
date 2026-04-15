@@ -2,9 +2,9 @@
 title: Edgeでの最適化 – Akamai （BYOCDN）
 description: LLM OptimizerのEdgeでAkamai BYOCDN for Optimizeを設定する方法について説明します。
 feature: Opportunities
-source-git-commit: f2a652761acbea7ca5b8e8740c1dbd0132e42f7f
+source-git-commit: 66b058734597c378040e77a23a4023bed9273427
 workflow-type: tm+mt
-source-wordcount: '849'
+source-wordcount: '825'
 ht-degree: 9%
 
 ---
@@ -22,11 +22,9 @@ Akamai プロパティマネージャールールを設定する前に、次の�
 * LLM Optimizer オンボーディングプロセスを完了しました。
 * LLM OptimizerへのCDN ログの転送が完了しました。
 * LLM Optimizer UIから取得したEdge Optimize API キー。
-* （オプション）最初にステージングホスト名でルーティングをテストする場合は、ステージング Edge Optimize API キー。
+* （オプション）ステージング ルーティングをテストするには、このページの最後にある「**オプション：ステージング ホスト名**&#x200B;でのルーティングのテスト」を参照してください。
 
 {{retrieve-byocdn-api-key}}
-
-{{retrieve-staging-edge-optimize-api-key}}
 
 **設定**
 
@@ -79,6 +77,16 @@ LLMOから取得したAPI キーへの`x-edgeoptimize-api-key`
 `x-edgeoptimize-url` ～ `{{builtin.AK_URL}}`
 
 ![受信リクエストヘッダーを変更](/help/assets/optimize-at-edge/akamai-step5-request.png)
+
+**ファイアウォール ルールを使用してEdgeで最適化を許可する（オプション）**
+
+{{waf-allowlist-setup}}
+
+![Property Manager](/help/assets/optimize-at-edge/akamai-step10-fetcher-key.png)でx-edgeoptimize-fetcher-key ヘッダーを設定
+
+>[!NOTE]
+>
+>Akamai Bot Managerで`*AdobeEdgeOptimize/1.0*` ユーザーエージェントと`x-edgeoptimize-fetcher-key` ヘッダーも許可リストに加えるします。
 
 **6. 受信応答ヘッダーを変更**
 
@@ -187,17 +195,13 @@ curl -svo /dev/null https://www.example.com/page.html \
 | `x-edgeoptimize-request-id` | 現在 – 一意のリクエスト IDを含む | 不在 |
 | `x-edgeoptimize-fo` | フェールオーバーが発生した場合にのみ存在します（値：`1`） | 不在 |
 
-**4. ステージング ドメイン （オプション）**
+{{verify-routing-status-in-ui}}
 
-LLM Optimizerのステージングホスト名とステージング API キーを使用する場合は、ルールの&#x200B;**ステージング** キーを使用して、**ステージング** Akamai プロパティに同じルーティングパターンをデプロイします。 次に、ステージングホストのボットトラフィックを確認します。
+{{retrieve-staging-edge-optimize-api-key}}
 
 ```
 curl -svo /dev/null https://staging.example.com/page.html \
   --header "user-agent: chatgpt-user"
 ```
-
-`https://staging.example.com/page.html`を実際のステージング URLとパスに置き換えます。 応答が成功すると、`x-edgeoptimize-request-id` ヘッダーが含まれます。
-
-{{verify-routing-status-in-ui}}
 
 {{return-to-overview}}

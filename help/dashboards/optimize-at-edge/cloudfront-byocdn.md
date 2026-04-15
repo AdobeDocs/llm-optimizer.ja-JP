@@ -2,9 +2,9 @@
 title: Edgeで最適化 – CloudFront （BYOCDN）
 description: LLM OptimizerのEdgeでCloudFront BYOCDN for Optimizeを設定する方法について説明します。
 feature: Opportunities
-source-git-commit: da789100d814004687de2f46e18a295671dec4b8
+source-git-commit: 001ed59e25975c718367f543b2e35fedbce686f5
 workflow-type: tm+mt
-source-wordcount: '2265'
+source-wordcount: '2223'
 ht-degree: 1%
 
 ---
@@ -23,11 +23,9 @@ CloudFront設定を設定する前に、次のことを確認してください�
 * LLM Optimizer オンボーディングプロセスを完了しました。
 * LLM OptimizerへのCDN ログの転送が完了しました。
 * LLM Optimizer UIから取得したEdge Optimize API キー。
-* （オプション）最初にステージングホスト名でルーティングをテストする場合は、ステージング Edge Optimize API キー。
+* （オプション）ステージング ルーティングをテストするには、このページの最後にある「**オプション：ステージング ホスト名**&#x200B;でのルーティングのテスト」を参照してください。
 
 {{retrieve-byocdn-api-key}}
-
-{{retrieve-staging-edge-optimize-api-key}}
 
 **手順1: Edge Optimize Originの作成**
 
@@ -118,10 +116,10 @@ CloudFront設定を設定する前に、次のことを確認してください�
 2. 「**編集**」をクリックします。
 
 3. **最小TTL**&#x200B;を`0`に設定することをお勧めします。 ただし、現在の最小TTLがすでに非常に短い場合は、変更する必要がない可能性があります。
-   ![&#x200B; キャッシュポリシーのTTL設定](/help/assets/optimize-at-edge/cloudfront-cache-policy-ttl.png)
+   ![ キャッシュポリシーのTTL設定](/help/assets/optimize-at-edge/cloudfront-cache-policy-ttl.png)
 
 4. **キャッシュキー設定** > **ヘッダー**&#x200B;の下に、既存のインクルージョンと共に`x-edgeoptimize-config`と`x-edgeoptimize-url`を追加します。
-   ![&#x200B; キャッシュポリシーヘッダー](/help/assets/optimize-at-edge/cloudfront-cache-policy-headers.png)
+   ![ キャッシュポリシーヘッダー](/help/assets/optimize-at-edge/cloudfront-cache-policy-headers.png)
 
 5. 「**変更を保存**」をクリックします。
 
@@ -150,17 +148,17 @@ CloudFront設定を設定する前に、次のことを確認してください�
 
 2. **名前：** `edgeoptimize-cache`
 
-   ![&#x200B; キャッシュポリシー名](/help/assets/optimize-at-edge/cloudfront-cache-policy-name.png)
+   ![ キャッシュポリシー名](/help/assets/optimize-at-edge/cloudfront-cache-policy-name.png)
 
 3. パート 1に記載されているすべての設定を、次の変更を加えてレプリケートします。
 
    * **最小TTL**&#x200B;を`0`に設定することをお勧めします。 ただし、現在の最小TTLがすでに非常に短い場合は、変更する必要がない可能性があります。
 
-   ![&#x200B; キャッシュポリシーのTTL設定](/help/assets/optimize-at-edge/cloudfront-cache-policy-ttl.png)
+   ![ キャッシュポリシーのTTL設定](/help/assets/optimize-at-edge/cloudfront-cache-policy-ttl.png)
 
    * **キャッシュキー設定** > **ヘッダー**&#x200B;の下で、管理ポリシーが持つすべてを含め、さらに`x-edgeoptimize-config`と`x-edgeoptimize-url`を追加します。
 
-   ![&#x200B; キャッシュポリシーヘッダー](/help/assets/optimize-at-edge/cloudfront-cache-policy-headers.png)
+   ![ キャッシュポリシーヘッダー](/help/assets/optimize-at-edge/cloudfront-cache-policy-headers.png)
 
 4. 「**作成**」をクリックします。
 
@@ -237,9 +235,9 @@ CloudFront設定を設定する前に、次のことを確認してください�
 2. 説明を追加します。
 
 3. 「**公開する**」をクリックします。
-   ![Lambda パブリッシュ &#x200B;](/help/assets/optimize-at-edge/cloudfront-lambda-publish.png)
+   ![Lambda パブリッシュ ](/help/assets/optimize-at-edge/cloudfront-lambda-publish.png)
 
-4. **関数ARN**&#x200B;をコピーまたはメモします。次の手順で必要になります。
+4. **関数ARN**をコピーまたはメモします。次の手順で必要になります。
    ![Lambda ARN](/help/assets/optimize-at-edge/cloudfront-lambda-arn.png)
 
 **手順5：関数とキャッシュ ポリシーをビヘイビアーに関連付ける**
@@ -249,7 +247,7 @@ CloudFront設定を設定する前に、次のことを確認してください�
 1. 行動の編集：
 
 2. 手順3 （シナリオ C）で新しいキャッシュポリシーを作成した場合は、**キャッシュポリシー**&#x200B;を`edgeoptimize-cache`に設定します。
-   ![&#x200B; キャッシュポリシー](/help/assets/optimize-at-edge/cloudfront-behaviour-cache.png)
+   ![ キャッシュポリシー](/help/assets/optimize-at-edge/cloudfront-behaviour-cache.png)
 
 3. **関数の関連付け**&#x200B;で、次を設定します。
 
@@ -260,6 +258,10 @@ CloudFront設定を設定する前に、次のことを確認してください�
    ![関数の関連付け設定](/help/assets/optimize-at-edge/cloudfront-function-association.png)
 
 4. 「**変更を保存**」をクリックします。
+
+**ファイアウォール ルールを使用してEdgeで最適化を許可する（オプション）**
+
+{{waf-allowlist-setup}}
 
 **手順6：設定のテスト**
 
@@ -299,20 +301,9 @@ curl -svo /dev/null https://www.example.com/page.html \
 | `x-edgeoptimize-request-id` | 現在 – 一意のリクエスト IDを含む | 不在 |
 | `x-edgeoptimize-fo` | フェールオーバーが発生した場合にのみ存在します（値：`1`） | 不在 |
 
-**4. ステージング ドメイン （オプション）**
-
-LLM Optimizerのステージング ホスト名とステージング API キーを使用する場合は、**ステージング** API キーを使用して、**ステージング** ディストリビューションに同じCloudFront設定をデプロイします。 次に、ステージングホストのボットトラフィックを確認します。
-
-```
-curl -svo /dev/null https://staging.example.com/page.html \
-  --header "user-agent: chatgpt-user"
-```
-
-`https://staging.example.com/page.html`を実際のステージング URLとパスに置き換えます。 応答が成功すると、`x-edgeoptimize-request-id` ヘッダーが含まれます。
-
 {{verify-routing-status-in-ui}}
 
-**5. ログが正しく流れていることを確認する**
+**4. ログが正しく流れていることを確認する**
 
 上記のテストリクエストを実行した後、CloudFront関数とLambda@Edge関数の両方にログが書き込まれていることを確認します。
 
@@ -412,5 +403,12 @@ Lambda@Edge関数（`edgeoptimize-origin`）は、CloudFront ビヘイビアー�
 4. 「**変更を保存**」をクリックします。
 
 5. ディストリビューションのデプロイが完了するのを待ってから、エージェンティック要求が手順6で説明されているように`x-edgeoptimize-request-id` ヘッダーを返すことを確認します。
+
+{{retrieve-staging-edge-optimize-api-key}}
+
+```
+curl -svo /dev/null https://staging.example.com/page.html \
+  --header "user-agent: chatgpt-user"
+```
 
 {{return-to-overview}}

@@ -2,9 +2,9 @@
 title: Edgeで最適化 – Fastly （BYOCDN）
 description: LLM OptimizerのEdgeでFastly BYOCDN for Optimizeを設定する方法について説明します。
 feature: Opportunities
-source-git-commit: da789100d814004687de2f46e18a295671dec4b8
+source-git-commit: 412500d2a95d66a5c9bf6fa88efc62c6244834c8
 workflow-type: tm+mt
-source-wordcount: '407'
+source-wordcount: '364'
 ht-degree: 5%
 
 ---
@@ -22,11 +22,9 @@ Fastly VCL ルールを設定する前に、次のことを確認してくださ
 * LLM Optimizer オンボーディングプロセスを完了しました。
 * LLM OptimizerへのCDN ログの転送が完了しました。
 * LLM Optimizer UIから取得したEdge Optimize API キー。
-* （オプション）最初にステージングホスト名でルーティングをテストする場合は、ステージング Edge Optimize API キー。
+* （オプション）ステージング ルーティングをテストするには、このページの最後にある「**オプション：ステージング ホスト名**&#x200B;でのルーティングのテスト」を参照してください。
 
 {{retrieve-byocdn-api-key}}
-
-{{retrieve-staging-edge-optimize-api-key}}
 
 **設定**
 
@@ -42,6 +40,7 @@ Fastly VCL ルールを設定する前に、次のことを確認してくださ
 unset req.http.x-edgeoptimize-url;
 unset req.http.x-edgeoptimize-config;
 unset req.http.x-edgeoptimize-api-key;
+unset req.http.x-edgeoptimize-fetcher-key; # Optional (required only in case of WAF)
 
 if (!req.http.x-edgeoptimize-request
     && req.http.user-agent ~ "(?i)(AdobeEdgeOptimize-AI|ChatGPT-User|GPTBot|OAI-SearchBot|PerplexityBot|Perplexity-User)") {
@@ -49,6 +48,7 @@ if (!req.http.x-edgeoptimize-request
   set req.http.x-edgeoptimize-url = req.url; # required for identifying the original url
   set req.http.x-edgeoptimize-config = "LLMCLIENT=TRUE;"; # required for cache key
   set req.http.x-edgeoptimize-api-key = "<YOUR API KEY>"; # required for identifying the client
+  set req.http.x-edgeoptimize-fetcher-key = "<YOUR FETCHER KEY>"; # Optional (required only in case of WAF)
   set req.backend = F_EDGE_OPTIMIZE;
 }
 ```
@@ -85,6 +85,10 @@ if (!req.http.x-edgeoptimize-config && req.http.x-edgeoptimize-request == "failo
 | Edge Optimizeは`2XX`を返します | 最適化された応答がクライアントに提供されます。 |
 | Edge Optimizeは`4XX`または`5XX`を返します | リクエストは再起動され、デフォルトのオリジンから提供されます。 |
 | フェールオーバー応答 | ヘッダー`x-edgeoptimize-fo: 1`が含まれています。 |
+
+**ファイアウォール ルールを使用してEdgeで最適化を許可する（オプション）**
+
+{{waf-allowlist-setup}}
 
 **設定を確認**
 
@@ -124,17 +128,13 @@ curl -svo /dev/null https://www.example.com/page.html \
 | `x-edgeoptimize-request-id` | 現在 – 一意のリクエスト IDを含む | 不在 |
 | `x-edgeoptimize-fo` | フェールオーバーが発生した場合にのみ存在します（値：`1`） | 不在 |
 
-**4. ステージング ドメイン （オプション）**
+{{verify-routing-status-in-ui}}
 
-LLM Optimizerのステージングホスト名とステージング API キーを使用する場合は、**ステージング** API キーを使用して、同じVCL スニペットを&#x200B;**ステージング** Fastly サービスに追加します。 次に、ステージングホストのボットトラフィックを確認します。
+{{retrieve-staging-edge-optimize-api-key}}
 
 ```
 curl -svo /dev/null https://staging.example.com/page.html \
   --header "user-agent: chatgpt-user"
 ```
-
-`https://staging.example.com/page.html`を実際のステージング URLとパスに置き換えます。 応答が成功すると、`x-edgeoptimize-request-id` ヘッダーが含まれます。
-
-{{verify-routing-status-in-ui}}
 
 {{return-to-overview}}
