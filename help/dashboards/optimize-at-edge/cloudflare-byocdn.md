@@ -2,9 +2,9 @@
 title: Edgeで最適化 – Cloudflare （BYOCDN）
 description: LLM OptimizerのEdgeでCloudflare BYOCDN for Optimizeを設定する方法について説明します。
 feature: Opportunities
-source-git-commit: 14dbee36f39b0d993d448edccb63fb8a519704a1
+source-git-commit: 66b058734597c378040e77a23a4023bed9273427
 workflow-type: tm+mt
-source-wordcount: '1922'
+source-wordcount: '1880'
 ht-degree: 1%
 
 ---
@@ -23,11 +23,9 @@ Cloudflare Workerのルーティングルールを設定する前に、次のこ
 * LLM Optimizer オンボーディングプロセスを完了しました。
 * LLM OptimizerへのCDN ログの転送が完了しました。
 * LLM Optimizer UIから取得したEdge Optimize API キー。
-* （オプション）最初にステージングホスト名でルーティングをテストする場合は、ステージング Edge Optimize API キー。
+* （オプション）ステージング ルーティングをテストするには、このページの最後にある「**オプション：ステージング ホスト名**&#x200B;でのルーティングのテスト」を参照してください。
 
 {{retrieve-byocdn-api-key}}
-
-{{retrieve-staging-edge-optimize-api-key}}
 
 **ルーティングの仕組み**
 
@@ -193,6 +191,7 @@ async function handleRequest(request, env, ctx) {
     edgeOptimizeHeaders.delete("x-edgeoptimize-api-key");
     edgeOptimizeHeaders.delete("x-edgeoptimize-url");
     edgeOptimizeHeaders.delete("x-edgeoptimize-config");
+    edgeOptimizeHeaders.delete("x-edgeoptimize-fetcher-key"); // Optional (required only in case of WAF)
 
     // x-forwarded-host: The original site domain
     // Use environment variable if set, otherwise use the request host
@@ -206,6 +205,8 @@ async function handleRequest(request, env, ctx) {
 
     // x-edgeoptimize-config: Configuration for cache key differentiation
     edgeOptimizeHeaders.set("x-edgeoptimize-config", "LLMCLIENT=TRUE;");
+
+    // edgeOptimizeHeaders.set("x-edgeoptimize-fetcher-key", "<YOUR FETCHER KEY>"); // Optional (required only in case of WAF)
 
     try {
       // Send request to Edge Optimize backend
@@ -434,6 +435,10 @@ const FAILOVER_ON_5XX = false;
 | 無効なホストでリクエストが失敗する | `EDGE_OPTIMIZE_TARGET_HOST`にはプロトコルが含まれています（例：`https://`）。 | プロトコルを使用しないドメイン名のみを使用します（例：`https://example.com`ではなく`example.com`）。 |
 | フェールオーバー中の530 エラー | Cloudflareはオリジンに接続できないか、フェールオーバーリクエストに無効なヘッダーが含まれています。 | フェールオーバー関数がEdge Optimize ヘッダーを削除することを確認します。 オリジンがアクセス可能であり、DNSが正しく設定されていることを確認します。 |
 
+**ファイアウォール ルールを使用してEdgeで最適化を許可する（オプション）**
+
+{{waf-allowlist-setup}}
+
 **設定を確認**
 
 設定が完了したら、ボットトラフィックがEdge Optimizeにルーティングされ、人間のトラフィックが影響を受けないことを確認します。
@@ -472,17 +477,13 @@ curl -svo /dev/null https://www.example.com/page.html \
 | `x-edgeoptimize-request-id` | 現在 – 一意のリクエスト IDを含む | 不在 |
 | `x-edgeoptimize-fo` | フェールオーバーが発生した場合にのみ存在します（値：`1`） | 不在 |
 
-**4. ステージング ドメイン （オプション）**
+{{verify-routing-status-in-ui}}
 
-LLM Optimizerのステージング ホスト名とステージング API キーを使用する場合は、**ステージング** API キーを使用して、**ステージング** ゾーンに同じワーカーロジックをデプロイします。 次に、ステージングホストのボットトラフィックを確認します。
+{{retrieve-staging-edge-optimize-api-key}}
 
 ```
 curl -svo /dev/null https://staging.example.com/page.html \
   --header "user-agent: chatgpt-user"
 ```
-
-`https://staging.example.com/page.html`を実際のステージング URLとパスに置き換えます。 応答が成功すると、`x-edgeoptimize-request-id` ヘッダーが含まれます。
-
-{{verify-routing-status-in-ui}}
 
 {{return-to-overview}}
