@@ -2,10 +2,10 @@
 title: Edge での最適化
 description: オーサリングの変更を必要とせずに、CDN Edge で LLM Optimizer の最適化を実現する方法について説明します。
 feature: Opportunities
-source-git-commit: 338baae83b63d2e09450bf508c65c6f97240a7dc
+source-git-commit: 050a4eaa510df7195c5208978ba56d4413916808
 workflow-type: tm+mt
-source-wordcount: '2312'
-ht-degree: 75%
+source-wordcount: '2323'
+ht-degree: 74%
 
 ---
 
@@ -43,7 +43,7 @@ LLM Optimizer アカウントでオンボーディングプロセスを開始し
 1. **顧客設定** ダッシュボードで、「**CDN設定**」タブを選択します。
 1. 「**オンボード CDN**」をクリックします。
    ![CDN設定タブ &#x200B;](/help/overview/assets/cc-cdn.png)
-1. AEM Fastlyをご利用のお客様は、Adobeを使用してオンボーディングプロセスを進めることができます。 他のCDN プロバイダーを使用しているお客様の場合、IT/CDN チームは、必要なセットアップと前提条件を完了する必要があります。 追加のガイダンスについては、以下に示すCDN ガイドの例を参照してください。
+1. AEM Cloud Serviceで管理されているFastlyのお客様の場合、ルーティング設定はセルフサービスで、LLM Optimizer UIで直接完了できます。 他のCDN プロバイダーを使用しているお客様の場合、IT/CDN チームは、必要なセットアップと前提条件を完了する必要があります。 追加のガイダンスについては、以下に示すCDN ガイドの例を参照してください。
 
 >[!NOTE]
 >オンボーディングフローについて詳しくは、以下のステップバイステップガイドを参照してください。 ガイドで解決されていない問題については、`llmo-at-edge@adobe.com`までお問い合わせください。
