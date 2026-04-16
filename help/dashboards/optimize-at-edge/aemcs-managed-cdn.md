@@ -38,13 +38,13 @@ ht-degree: 0%
 
    ![AI エージェントへの最適化のデプロイ – 保留中](/help/assets/optimize-at-edge/cs-fastly-enable-button.png)
 
-3. 確認ダイアログで「**有効にする**」を選択し、ルーティングを有効にすることを確認します。 エラーが発生した場合は、「[ トラブルシューティング ](#troubleshooting)」セクションを参照して解決してください。
+3. 確認ダイアログで「**有効にする**」を選択し、ルーティングを有効にすることを確認します。 エラーが発生した場合は、「[&#x200B; トラブルシューティング &#x200B;](#troubleshooting)」セクションを参照して解決してください。
 
    ![最適化エンジン確認ダイアログを有効にする](/help/assets/optimize-at-edge/cs-fastly-enable-dialog.png)
 
 4. 確認が完了すると、ルーティングが完了するまでに数分かかります。
 
-   ![進行中のルーティング ](/help/assets/optimize-at-edge/cs-fastly-enable-button-clicked-routing-in-progress.png)
+   ![進行中のルーティング &#x200B;](/help/assets/optimize-at-edge/cs-fastly-enable-button-clicked-routing-in-progress.png)
 
    5分後にページをリロードし、ルーティングが完了したことを確認します。 ルーティングが設定され、アクティブになると、ルーティングが有効であることを確認する緑色のチェックマークが付いて、ステータスが&#x200B;**完了**&#x200B;に更新されます。 ユーザー側でこれ以上の操作は必要ありません。
 
