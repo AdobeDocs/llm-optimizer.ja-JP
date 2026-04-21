@@ -2,9 +2,9 @@
 title: Edgeで最適化 – CloudFront （BYOCDN）
 description: LLM OptimizerのEdgeでCloudFront BYOCDN for Optimizeを設定する方法について説明します。
 feature: Opportunities
-source-git-commit: 001ed59e25975c718367f543b2e35fedbce686f5
+source-git-commit: 13d2f4bbd1f9d3886f89f80df0e76093f2afdf13
 workflow-type: tm+mt
-source-wordcount: '2223'
+source-wordcount: '2207'
 ht-degree: 1%
 
 ---
@@ -20,12 +20,8 @@ CloudFront設定を設定する前に、次のことを確認してください�
 
 * Web サイトを提供する既存のCloudFront ディストリビューション。
 * Lambda関数、IAM ロール、CloudFront ディストリビューション、およびキャッシュポリシーを作成するためのAWS IAM権限。
-* LLM Optimizer オンボーディングプロセスを完了しました。
-* LLM OptimizerへのCDN ログの転送が完了しました。
-* LLM Optimizer UIから取得したEdge Optimize API キー。
-* （オプション）ステージング ルーティングをテストするには、このページの最後にある「**オプション：ステージング ホスト名**&#x200B;でのルーティングのテスト」を参照してください。
-
-{{retrieve-byocdn-api-key}}
+* LLM Optimizer UIから取得したEdge Optimize API キー。 手順については、[API キーの取得](/help/dashboards/optimize-at-edge/retrieve-api-keys.md#production-api-key)を参照してください。
+* （オプション）ステージング ルーティングをテストするには、[&#x200B; ステージング API キー](/help/dashboards/optimize-at-edge/retrieve-api-keys.md#staging-api-key-optional)を参照してください。
 
 **手順1: Edge Optimize Originの作成**
 
@@ -403,12 +399,5 @@ Lambda@Edge関数（`edgeoptimize-origin`）は、CloudFront ビヘイビアー�
 4. 「**変更を保存**」をクリックします。
 
 5. ディストリビューションのデプロイが完了するのを待ってから、エージェンティック要求が手順6で説明されているように`x-edgeoptimize-request-id` ヘッダーを返すことを確認します。
-
-{{retrieve-staging-edge-optimize-api-key}}
-
-```
-curl -svo /dev/null https://staging.example.com/page.html \
-  --header "user-agent: chatgpt-user"
-```
 
 {{return-to-overview}}

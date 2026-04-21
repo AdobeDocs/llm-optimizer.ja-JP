@@ -2,10 +2,10 @@
 title: Edgeで最適化 – Fastly （BYOCDN）
 description: LLM OptimizerのEdgeでFastly BYOCDN for Optimizeを設定する方法について説明します。
 feature: Opportunities
-source-git-commit: 412500d2a95d66a5c9bf6fa88efc62c6244834c8
+source-git-commit: 13d2f4bbd1f9d3886f89f80df0e76093f2afdf13
 workflow-type: tm+mt
-source-wordcount: '364'
-ht-degree: 5%
+source-wordcount: '348'
+ht-degree: 6%
 
 ---
 
@@ -19,12 +19,8 @@ ht-degree: 5%
 Fastly VCL ルールを設定する前に、次のことを確認してください。
 
 * ドメイン用にFastlyにアクセスします。
-* LLM Optimizer オンボーディングプロセスを完了しました。
-* LLM OptimizerへのCDN ログの転送が完了しました。
-* LLM Optimizer UIから取得したEdge Optimize API キー。
-* （オプション）ステージング ルーティングをテストするには、このページの最後にある「**オプション：ステージング ホスト名**&#x200B;でのルーティングのテスト」を参照してください。
-
-{{retrieve-byocdn-api-key}}
+* LLM Optimizer UIから取得したEdge Optimize API キー。 手順については、[API キーの取得](/help/dashboards/optimize-at-edge/retrieve-api-keys.md#production-api-key)を参照してください。
+* （オプション）ステージング ルーティングをテストするには、[&#x200B; ステージング API キー](/help/dashboards/optimize-at-edge/retrieve-api-keys.md#staging-api-key-optional)を参照してください。
 
 **設定**
 
@@ -129,12 +125,5 @@ curl -svo /dev/null https://www.example.com/page.html \
 | `x-edgeoptimize-fo` | フェールオーバーが発生した場合にのみ存在します（値：`1`） | 不在 |
 
 {{verify-routing-status-in-ui}}
-
-{{retrieve-staging-edge-optimize-api-key}}
-
-```
-curl -svo /dev/null https://staging.example.com/page.html \
-  --header "user-agent: chatgpt-user"
-```
 
 {{return-to-overview}}
