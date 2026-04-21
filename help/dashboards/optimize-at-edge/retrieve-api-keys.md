@@ -53,7 +53,7 @@ CDNを設定する前に、LLM Optimizer UIからEdge Optimize API キーを取�
 3. `https://`を含む完全なステージング URLを入力し、**ドメインを設定**&#x200B;を選択します。
 4. 確認ダイアログから&#x200B;**ステージング** API キーをコピーします。
 
-   ![ ステージング ドメイン API キー](/help/assets/optimize-at-edge/byocdn-staging-domain-api-key.png)
+   ![&#x200B; ステージング ドメイン API キー](/help/assets/optimize-at-edge/byocdn-staging-domain-api-key.png)
 
 ステージング API キーを使用して、ステージング環境に同じルーティングルールをデプロイします。
 
@@ -61,4 +61,4 @@ CDNを設定する前に、LLM Optimizer UIからEdge Optimize API キーを取�
 
 ## 次の手順
 
-API キーを取得したら、[CDN セットアップガイド ](/help/dashboards/optimize-at-edge/overview.md#cdn-configuration-guides)に戻ってルーティングを設定します。
+API キーを取得したら、[CDN セットアップガイド &#x200B;](/help/dashboards/optimize-at-edge/overview.md#cdn-configuration-guides)に戻ってルーティングを設定します。
