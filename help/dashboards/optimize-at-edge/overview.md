@@ -2,10 +2,10 @@
 title: Edge での最適化
 description: オーサリングの変更を必要とせずに、CDN Edge で LLM Optimizer の最適化を実現する方法について説明します。
 feature: Opportunities
-source-git-commit: e9eab92835e555f7267f58eea7faa0302c2f1cd0
+source-git-commit: 6395ea8bdaae419d931ecd67f719a524caa66d0f
 workflow-type: tm+mt
-source-wordcount: '2283'
-ht-degree: 75%
+source-wordcount: '2301'
+ht-degree: 74%
 
 ---
 
@@ -55,6 +55,10 @@ IT／CDN チームの要件：
 * CDN に Edge での最適化ルーティングルールを追加します。
 * CDNにWAFまたはBot Manager ルールがある場合は、`*AdobeEdgeOptimize/1.0*` ユーザーエージェントを許可リストに加えるします。 追加の検証が必要な場合は、`x-edgeoptimize-fetcher-key` ヘッダーを設定します。 以下の各BYOCDN ガイドには、以下の手順が含まれています。
 * LLM Optimizer インターフェイスで Edge での最適化ルーティングを確認します。
+
+次の図は、EdgeでOptimizeを使用してBYOCDN設定を通じてリクエストがどのようにフローするかを示しています。
+
+![BYOCDN リクエストフロー](/help/assets/optimize-at-edge/byocdn-request-flow.png)
 
 >[!IMPORTANT]
 >ルーティングは、外部CDN （クライアントに最も近いCDN）で設定する必要があります。 複数のCDNがある場合、ルーティングは外部CDNでのみ実行できます。
