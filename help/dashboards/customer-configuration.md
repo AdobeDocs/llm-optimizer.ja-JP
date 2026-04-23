@@ -29,9 +29,9 @@ LLM Optimizer で様々なマーケットや競争環境をまたいでブラン
 
 ブランド中心のエクスペリエンスを利用している場合は、**ブランド管理**&#x200B;に移動して、ブランド、ブランドエイリアス、競合他社の設定と設定を行い、追跡を行います。 **Brands Management**&#x200B;は、ブランドに関連付けられたURLに関連するGoogle Search Console、Adobe Analytics、CDN ログ転送などの統合を設定するためにも使用されます。 これを行うには、対応するタブ（GSC、CDNなど）をクリックします。
 
-![ ブランド管理 – アプリのナビゲーション （ブランド中心のエクスペリエンス） ](/help/assets/brand-centric-experience/llmo-app-shell.png)
+![&#x200B; ブランド管理 – アプリのナビゲーション （ブランド中心のエクスペリエンス） &#x200B;](/help/assets/brand-centric-experience/llmo-app-shell.png)
 
-![ ブランド管理 – 設定の概要（ブランド中心のエクスペリエンス） ](/help/assets/brand-centric-experience/brands-management-configuration.png)
+![&#x200B; ブランド管理 – 設定の概要（ブランド中心のエクスペリエンス） &#x200B;](/help/assets/brand-centric-experience/brands-management-configuration.png)
 
 >[!IMPORTANT]
 >
@@ -62,7 +62,7 @@ LLM Optimizer で様々なマーケットや競争環境をまたいでブラン
 
 ブランド中心のエクスペリエンスを利用しているお客様の場合、トピックとプロンプトを追加するには、**プロンプト管理**&#x200B;に移動します。
 
-![ プロンプト管理（ブランド中心のエクスペリエンス） ](/help/assets/brand-centric-experience/prompts-management.png)
+![&#x200B; プロンプト管理（ブランド中心のエクスペリエンス） &#x200B;](/help/assets/brand-centric-experience/prompts-management.png)
 
 >[!NOTE]
 >新しく追加されたプロンプトは、処理が完了するまでブランドプレゼンスに表示されません。
@@ -127,7 +127,7 @@ Adobe LLM Optimizerでは、Google Search Console アカウントを統合して
 
 LLM OptimizerとGoogle Search Consoleの連携について覚えておくべき重要な点は次のとおりです。お客様がAI アシスタントに対して何を求めているかを手動で推測するのではなく、**が既に**&#x200B;を検索しているものを確認し、それらの実際のクエリを自然で会話的なプロンプトに変換します。 検索クエリからAI プロンプトに移行するこのプロセスは、次の図で示されています。
 
-![ プロセスフロー](/help/dashboards/assets/diagram-flow.png)
+![&#x200B; プロセスフロー](/help/dashboards/assets/diagram-flow.png)
 
 一般的に、このプロセスには5つのステップがあります。
 
@@ -143,7 +143,7 @@ LLM OptimizerとGoogle Search Consoleの連携について覚えておくべき�
 
 関連するクエリは、自動的に&#x200B;**カテゴリー** （幅広いビジネスのテーマ）と&#x200B;**トピック** （各カテゴリー内の焦点を当てたサブトピック）にグループ化されます。 LLM Optimizer設定で既に設定されているカテゴリが優先されます。 さらに、検索データによって明らかになったものの、まだ監視されていない新しいカテゴリーを見つけることもできます。 次の図は、家具ブランドのカテゴリとトピックの例です。
 
-![家具ブランド ](/help/dashboards/assets/diagram-example.png)
+![家具ブランド &#x200B;](/help/dashboards/assets/diagram-example.png)
 
 #### ステップ 4 – 実際のキーワードにもとづいてプロンプトを生成する {#gsc-four}
 
@@ -190,29 +190,29 @@ Google Search Console クエリをLLM Optimizerと統合して使用するには
 この機能を使用する前に、Google Search Console アカウントをLLM Optimizerと統合する必要があります。
 
 1. **Customer Configuration** ダッシュボード （クラシックナビゲーション）または&#x200B;**Brands Management** （Brand Centric エクスペリエンス）を開き、Google Search Console統合（Brand Centric エクスペリエンスのGSC タグ）に移動します。
-1. 「Google Search Console」タブに移動し、**Connect Account**をクリックします。
+1. 「Google Search Console」タブに移動し、**Connect Account**&#x200B;をクリックします。
    ![Google Search Console](/help/dashboards/assets/google-console.png)
 1. 目的のSearch Console プロパティにアクセスできるGoogle アカウントでログインします。
-   ![Google アカウント ](/help/dashboards/assets/google-account.png)
+   ![Google アカウント &#x200B;](/help/dashboards/assets/google-account.png)
 1. 接続するプロパティを選択します。
-   ![ コンソール プロパティ ](/help/dashboards/assets/console-property.png)
+   ![&#x200B; コンソール プロパティ &#x200B;](/help/dashboards/assets/console-property.png)
 1. 接続が完了すると、LLM Optimizerは関連する検索クエリの取得を開始します。
-   ![ データを取得中](/help/dashboards/assets/console-complete.png)
+   ![&#x200B; データを取得中](/help/dashboards/assets/console-complete.png)
 
 #### クエリの確認と検索 {#search-query}
 
 Google Search Console アカウントとLLM Optimizerを統合した後、検索コンソールから取得したトピックとプロンプトのリストを確認し、リストからプロンプトを追加できます。
 
 1. 「Google検索コンソール」タブで、検索コンソールから取得したトピックとプロンプトのリストを確認します。
-   ![ プロンプトリスト ](/help/dashboards/assets/prompts-list.png)
+   ![&#x200B; プロンプトリスト &#x200B;](/help/dashboards/assets/prompts-list.png)
 1. 目的のトピック/プロンプトカテゴリをクリックして、リストを展開します。
-1. リストからプロンプトを追加するには、**追加** ボタンを使用します。 **すべて追加**を使用して、プロンプトとカテゴリを一括追加することもできます。
-   ![ プロンプトを追加](/help/dashboards/assets/add-prompts.png)
+1. リストからプロンプトを追加するには、**追加** ボタンを使用します。 **すべて追加**&#x200B;を使用して、プロンプトとカテゴリを一括追加することもできます。
+   ![&#x200B; プロンプトを追加](/help/dashboards/assets/add-prompts.png)
 1. 選択に問題がなければ、通知メッセージの&#x200B;**保存**&#x200B;をクリックします。
 
 #### プロンプトリストで追加されたクエリを表示する {#prompts-list}
 
-クエリを追加すると、顧客設定ダッシュボードの「[ プロンプト ](#prompts-brand)」タブ（従来のエクスペリエンス）または「**プロンプト管理**」（ブランド中心のエクスペリエンス）に表示されます。 Google Search Consoleから送信されたプロンプトには、**Origin**&#x200B;列にGoogle Search Console アイコンが表示されます。 このアイコンは、実際のユーザー検索動作に基づくプロンプトと、手動または他のソースから追加されたプロンプトを区別するのに役立ちます。
+クエリを追加すると、顧客設定ダッシュボードの「[&#x200B; プロンプト &#x200B;](#prompts-brand)」タブ（従来のエクスペリエンス）または「**プロンプト管理**」（ブランド中心のエクスペリエンス）に表示されます。 Google Search Consoleから送信されたプロンプトには、**Origin**&#x200B;列にGoogle Search Console アイコンが表示されます。 このアイコンは、実際のユーザー検索動作に基づくプロンプトと、手動または他のソースから追加されたプロンプトを区別するのに役立ちます。
 
 ### よくある質問 {#gsc-faq}
 

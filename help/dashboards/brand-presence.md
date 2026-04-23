@@ -26,7 +26,7 @@ ht-degree: 96%
 
 ブランド中心のエクスペリエンスを利用している場合は、**ブランドプレゼンス**&#x200B;に移動します。 ブランドドロップダウンリストで、分析するブランドを選択するか、**すべてのブランド**&#x200B;を選択して、ブランドセット全体の表示を確認します。
 
-![ ブランドセレクター（ブランド中心のエクスペリエンス）とのブランドプレゼンス](/help/assets/brand-centric-experience/brand-presence-brand-centric.png)
+![&#x200B; ブランドセレクター（ブランド中心のエクスペリエンス）とのブランドプレゼンス](/help/assets/brand-centric-experience/brand-presence-brand-centric.png)
 
 ## フィルター {#filters}
 

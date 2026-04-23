@@ -12,7 +12,7 @@ ht-degree: 37%
 
 # クイックスタート
 
-LLM Optimizerを使い始めるには、オンボーディングを完了してください。 次に、カテゴリ、トピック、プロンプトをカスタマイズし、CDN ログ転送を設定し、完全なインサイトを得るために[ ダッシュボード ](/help/dashboards/dashboards-overview.md)を開きます。
+LLM Optimizerを使い始めるには、オンボーディングを完了してください。 次に、カテゴリ、トピック、プロンプトをカスタマイズし、CDN ログ転送を設定し、完全なインサイトを得るために[&#x200B; ダッシュボード &#x200B;](/help/dashboards/dashboards-overview.md)を開きます。
 
 **ブランド中心のエクスペリエンス：** デフォルトでは、新規顧客はオンボーディング主導のセットアップを備えた、ブランド重視のインターフェイスで開始されます。 この新しいインターフェイスでは、各組織は1つのアクティブなブランドと、選択できる追加の推奨ブランドから始まります。 既存のLLM Optimizerのお客様は、このブランド中心の体験に徐々に移行していきます。
 
@@ -107,7 +107,7 @@ LLM Optimizerを使用するには、ブランド名とドメインをオンボ�
 
 ### 顧客設定（従来のナビゲーション）
 
-従来のナビゲーション（ブランド中心のエクスペリエンスではなく）を使用している場合は、[顧客設定ダッシュボード ](/help/dashboards/customer-configuration.md)から、ブランドのカテゴリ、トピック、プロンプトをカスタマイズできます。
+従来のナビゲーション（ブランド中心のエクスペリエンスではなく）を使用している場合は、[顧客設定ダッシュボード &#x200B;](/help/dashboards/customer-configuration.md)から、ブランドのカテゴリ、トピック、プロンプトをカスタマイズできます。
 
 ![顧客設定ダッシュボード](/help/overview/assets/prompt-creation.png)
 
@@ -132,11 +132,11 @@ LLM Optimizerを使用するには、ブランド名とドメインをオンボ�
 
 * **カテゴリ** — **ブランド管理**&#x200B;に移動し、**カテゴリ**&#x200B;をクリックします。 カテゴリーはグローバルレベルで定義され、ブランド管理の下のすべてのブランドに適用されます。
 
-  ![ ナビゲーションにカテゴリを含むブランド管理](/help/assets/brand-centric-experience/llmo-app-shell.png)
+  ![&#x200B; ナビゲーションにカテゴリを含むブランド管理](/help/assets/brand-centric-experience/llmo-app-shell.png)
 
 * **トピックとプロンプト** — **プロンプト管理**&#x200B;に移動して、特定のブランドのプロンプトを含むトピックとプロンプトを作成します。
 
-  ![ プロンプト管理](/help/assets/brand-centric-experience/prompts-management.png)
+  ![&#x200B; プロンプト管理](/help/assets/brand-centric-experience/prompts-management.png)
 
 ## 手順 3：ブランドプレゼンスインサイト
 
@@ -152,7 +152,7 @@ LLM Optimizerを使用するには、ブランド名とドメインをオンボ�
 
 ### 顧客設定（従来のナビゲーション）
 
-従来のナビゲーションを使用している場合は、[顧客設定ダッシュボード ](/help/dashboards/customer-configuration.md#cdn-configuration)からCDN ログ転送情報を追加できます。 「**CDN設定**」タブを開き、**オンボード CDN**&#x200B;を選択します。
+従来のナビゲーションを使用している場合は、[顧客設定ダッシュボード &#x200B;](/help/dashboards/customer-configuration.md#cdn-configuration)からCDN ログ転送情報を追加できます。 「**CDN設定**」タブを開き、**オンボード CDN**&#x200B;を選択します。
 
 ![顧客設定 CDN](/help/overview/assets/cc-cdn.png)
 
@@ -168,7 +168,7 @@ LLM Optimizerを使用するには、ブランド名とドメインをオンボ�
 
 ブランド中心のエクスペリエンスを利用しているお客様の場合、**Brands Management**&#x200B;からCDN ログ転送情報を追加できます。**Brands Management**&#x200B;を開き、**CDN** ラベルをクリックします。
 
-![ ブランド管理 – CDN ログ転送](/help/assets/brand-centric-experience/brands-management-cdn.png)
+![&#x200B; ブランド管理 – CDN ログ転送](/help/assets/brand-centric-experience/brands-management-cdn.png)
 
 ## 手順 5：ダッシュボードを探索し、アクションを実行
 

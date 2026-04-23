@@ -18,7 +18,7 @@ URL インスペクターは、AI 検索におけるドメイン上の特定の�
 
 ブランド中心のエクスペリエンスを利用している場合は、**URL インスペクター**&#x200B;に移動し、インサイトを表示するサイトを選択します。
 
-![URL インスペクター – サイトセレクター（ブランド中心のエクスペリエンス） ](/help/assets/brand-centric-experience/url-inspector-dashboard.png)
+![URL インスペクター – サイトセレクター（ブランド中心のエクスペリエンス） &#x200B;](/help/assets/brand-centric-experience/url-inspector-dashboard.png)
 
 ## フィルター
 

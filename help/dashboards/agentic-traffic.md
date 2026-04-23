@@ -27,7 +27,7 @@ ht-degree: 89%
 
 ブランド中心のエクスペリエンスを利用している場合は、**エージェンティックトラフィック**&#x200B;に移動し、エージェンティックトラフィックインサイトを表示するサイトを選択します。
 
-![ エージェンティックトラフィック – サイトセレクター（ブランド中心のエクスペリエンス） ](/help/assets/brand-centric-experience/agentic-traffic-dashboard.png)
+![&#x200B; エージェンティックトラフィック – サイトセレクター（ブランド中心のエクスペリエンス） &#x200B;](/help/assets/brand-centric-experience/agentic-traffic-dashboard.png)
 
 ## CDN ログ転送 {#cdn-setup}
 
@@ -35,7 +35,7 @@ ht-degree: 89%
 
 ブランド中心のエクスペリエンスを利用している場合は、**Brands Management**&#x200B;に移動し、**CDN** ラベルをクリックして、CDN ログ転送情報を追加できます。
 
-![ ブランド管理 – CDN ログ転送](/help/assets/brand-centric-experience/brands-management-cdn.png)
+![&#x200B; ブランド管理 – CDN ログ転送](/help/assets/brand-centric-experience/brands-management-cdn.png)
 
 **顧客設定（クラシックナビゲーション）:**&#x200B;最初のログイン時に、次の画像に示すメッセージが表示されます。
 
