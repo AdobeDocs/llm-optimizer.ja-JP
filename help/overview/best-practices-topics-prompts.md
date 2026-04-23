@@ -2,7 +2,7 @@
 title: カテゴリ、トピック、プロンプト、その他のベストプラクティス
 description: カスタマイズされたブランドモニタリングと戦略的コンテンツ分析用に、競合他社を含む追跡するカテゴリ、トピック、プロンプト、その他のブランドを設定して、LLM インサイトを最適化します。
 feature: Best Practices, Customer Configuration
-source-git-commit: a09824e35dd5a0b91fe07ca423f633f9253a6d74
+source-git-commit: 625807b8905f741aa89d551483d89cca2ef91873
 workflow-type: tm+mt
 source-wordcount: '1530'
 ht-degree: 93%
@@ -26,15 +26,15 @@ ht-degree: 93%
 
 デフォルトでは、新規顧客はオンボーディング主導の設定により、焦点を絞ったブランドファーストのインターフェイスから開始されます。 この新しいインターフェイスでは、各組織は1つのアクティブなブランドと、選択できる追加の推奨ブランドから始まります。 既存のLLM Optimizerのお客様は、このブランド中心の体験に徐々に移行していきます。
 
-ブランド中心の体験を提供している場合は、**ブランド管理**&#x200B;で、ブランドの監視および分析方法を定義します。
+ブランド中心型のエクスペリエンスを利用している場合、**ブランド管理**&#x200B;で、ブランドの監視および分析方法を定義します。
 
-![&#x200B; ブランド管理 – アプリのナビゲーション （ブランド中心のエクスペリエンス） &#x200B;](/help/assets/brand-centric-experience/llmo-app-shell.png)
+![ ブランド管理 – アプリのナビゲーション （ブランド中心のエクスペリエンス） ](/help/assets/brand-centric-experience/llmo-app-shell.png)
 
-![&#x200B; ブランド管理 – 設定の概要](/help/assets/brand-centric-experience/brands-management-configuration.png)
+![ ブランド管理 – 設定の概要](/help/assets/brand-centric-experience/brands-management-configuration.png)
 
 特定のブランドのトピックとプロンプトを設定するには、**プロンプト管理**&#x200B;を使用します。
 
-![&#x200B; プロンプト管理](/help/assets/brand-centric-experience/prompts-management.png)
+![ プロンプト管理](/help/assets/brand-centric-experience/prompts-management.png)
 
 ## 業界プロンプトライブラリ
 
@@ -104,7 +104,7 @@ LLM ツールでの AI 検索とプロンプト行動に関する顧客トレン
 >[!IMPORTANT]
 >
 > * 1 つのアプローチを選択し、使用し続けます。
-> * アカウント／ブランドごとにカテゴリモデルは **1** 個しか使用できません。 **SBU**&#x200B;と&#x200B;**URL_DIR**&#x200B;を同時に混在させないでください。
+> * アカウント／ブランドごとにカテゴリモデルは **1** 個しか使用できません。 **SBU**&#x200B;と&#x200B;**URL_DIR**を同時に混在させないでください。
 <!--Can you mix Product/Service with these?-->
 
 例：

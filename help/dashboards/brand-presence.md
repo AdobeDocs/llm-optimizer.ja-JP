@@ -2,7 +2,7 @@
 title: ブランドプレゼンス
 description: ブランドプレゼンスダッシュボードを使用して、AI 生成の応答レベルでブランドがどのように認識されているかを理解する方法について説明します。
 feature: Brand Presence
-source-git-commit: be88e6a5fbabbc9c1ceb75b49b883cde92ab98b2
+source-git-commit: 625807b8905f741aa89d551483d89cca2ef91873
 workflow-type: tm+mt
 source-wordcount: '1346'
 ht-degree: 96%
@@ -24,9 +24,9 @@ ht-degree: 96%
 * [センチメントトレンド](#sentiment-trend)
 * [データインサイト](#data-insights)
 
-ブランド中心のエクスペリエンスを利用している場合は、**ブランドプレゼンス**&#x200B;に移動します。 ブランドドロップダウンリストで、分析するブランドを選択するか、**すべてのブランド**&#x200B;を選択して、ブランドセット全体の表示を確認します。
+[ ブランド中心のエクスペリエンス ](/help/overview/quick-start.md#brand-centric-experience)を利用している場合は、**ブランドプレゼンス**&#x200B;に移動します。 ブランドドロップダウンリストで、分析するブランドを選択するか、**すべてのブランド**&#x200B;を選択して、ブランドセット全体の表示を確認します。
 
-![&#x200B; ブランドセレクター（ブランド中心のエクスペリエンス）とのブランドプレゼンス](/help/assets/brand-centric-experience/brand-presence-brand-centric.png)
+![ ブランドセレクター（ブランド中心のエクスペリエンス）とのブランドプレゼンス](/help/assets/brand-centric-experience/brand-presence-brand-centric.png)
 
 ## フィルター {#filters}
 

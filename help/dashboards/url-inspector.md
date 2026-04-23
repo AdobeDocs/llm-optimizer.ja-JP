@@ -2,7 +2,7 @@
 title: URL インスペクター
 description: URL インスペクターを使用して、AI 検索におけるドメイン上の特定のページのパフォーマンスを分析する方法について説明します。
 feature: URL Inspector
-source-git-commit: 7ba417a568d21c1e56de218e023df243b73f6357
+source-git-commit: 625807b8905f741aa89d551483d89cca2ef91873
 workflow-type: tm+mt
 source-wordcount: '718'
 ht-degree: 95%
@@ -16,9 +16,9 @@ URL インスペクターは、AI 検索におけるドメイン上の特定の�
 
 ![URL インスペクター](/help/dashboards/assets/url-insp.png)
 
-ブランド中心のエクスペリエンスを利用している場合は、**URL インスペクター**&#x200B;に移動し、インサイトを表示するサイトを選択します。
+[ ブランド中心のエクスペリエンス ](/help/overview/quick-start.md#brand-centric-experience)を利用している場合は、**URL インスペクター**&#x200B;に移動し、インサイトを表示するサイトを選択します。
 
-![URL インスペクター – サイトセレクター（ブランド中心のエクスペリエンス） &#x200B;](/help/assets/brand-centric-experience/url-inspector-dashboard.png)
+![URL インスペクター – サイトセレクター（ブランド中心のエクスペリエンス） ](/help/assets/brand-centric-experience/url-inspector-dashboard.png)
 
 ## フィルター
 
