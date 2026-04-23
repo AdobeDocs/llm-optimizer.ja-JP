@@ -93,7 +93,7 @@ LLM Optimizerを使用するには、ブランド名とドメインをオンボ�
 
 オンボーディングフェーズ中に、カテゴリ、トピック、プロンプトの小さなセットが生成されます。 これらのプロンプトでのブランドプレゼンス分析は、サイトをオンボードした直後に使用できるようになります。
 
-エッジで最適化をデプロイする機能も利用できます。 詳しくは、[Edgeでの最適化に関するよくある質問](https://experienceleague.adobe.com/en/docs/llm-optimizer/using/resources/optimize-at-edge/overview#frequently-asked-questions)を参照してください。
+エッジで最適化をデプロイする機能も利用できます。 詳しくは、[Edgeでの最適化に関するよくある質問](https://experienceleague.adobe.com/ja/docs/llm-optimizer/using/resources/optimize-at-edge/overview#frequently-asked-questions)を参照してください。
 
 さらに、トラフィック分析用に[CDN ログ転送](#step-4)を設定します。 LLM Optimizerなら、AI エージェントとリファラルトラフィックからブランドプレゼンスデータとインサイトを獲得し、ビジネス機会を特定して、AIによる可視性を強化するための推奨事項を処方できます。
 
