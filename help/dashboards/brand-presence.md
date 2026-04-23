@@ -24,9 +24,9 @@ ht-degree: 96%
 * [センチメントトレンド](#sentiment-trend)
 * [データインサイト](#data-insights)
 
-[ ブランド中心のエクスペリエンス ](/help/overview/quick-start.md#brand-centric-experience)を利用している場合は、**ブランドプレゼンス**&#x200B;に移動します。 ブランドドロップダウンリストで、分析するブランドを選択するか、**すべてのブランド**&#x200B;を選択して、ブランドセット全体の表示を確認します。
+[&#x200B; ブランド中心のエクスペリエンス &#x200B;](/help/overview/quick-start.md#brand-centric-experience)を利用している場合は、**ブランドプレゼンス**&#x200B;に移動します。 ブランドドロップダウンリストで、分析するブランドを選択するか、**すべてのブランド**&#x200B;を選択して、ブランドセット全体の表示を確認します。
 
-![ ブランドセレクター（ブランド中心のエクスペリエンス）とのブランドプレゼンス](/help/assets/brand-centric-experience/brand-presence-brand-centric.png)
+![&#x200B; ブランドセレクター（ブランド中心のエクスペリエンス）とのブランドプレゼンス](/help/assets/brand-centric-experience/brand-presence-brand-centric.png)
 
 ## フィルター {#filters}
 
