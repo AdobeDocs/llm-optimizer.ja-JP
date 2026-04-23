@@ -27,7 +27,7 @@ ht-degree: 90%
 
 If you are on the [Brand Centric experience](/help/overview/quick-start.md#brand-centric-experience), navigate to **Agentic Traffic** and select the site for which you want to view the agentic traffic insights.
 
-![ エージェンティックトラフィック – サイトセレクター（ブランド中心のエクスペリエンス） ](/help/assets/brand-centric-experience/agentic-traffic-dashboard.png)
+![&#x200B; エージェンティックトラフィック – サイトセレクター（ブランド中心のエクスペリエンス） &#x200B;](/help/assets/brand-centric-experience/agentic-traffic-dashboard.png)
 
 ## CDN ログ転送 {#cdn-setup}
 
@@ -62,7 +62,7 @@ If you are on the [Brand Centric experience](/help/overview/quick-start.md#brand
 
 If you are are on the [brand centric experience](/help/overview/quick-start.md#brand-centric-experience), you can add CDN log forwarding information by navigating to **Brands Management** and clicking on the **CDN** label.
 
-![ ブランド管理 – CDN ログ転送](/help/assets/brand-centric-experience/brands-management-cdn.png)
+![&#x200B; ブランド管理 – CDN ログ転送](/help/assets/brand-centric-experience/brands-management-cdn.png)
 
 LLM Optimizer では、CDN ログからのフィールドのサブセットを処理します。 生のログフィールド名は CDN プロバイダーによって異なりますが、次のように正規化されて表示されます。
 
