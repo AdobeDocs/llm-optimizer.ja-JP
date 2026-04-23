@@ -2,7 +2,7 @@
 title: 顧客設定
 description: 顧客設定を使用して、LLM Optimizer プラットフォーム内でブランドを監視および分析する方法を定義します。
 feature: Customer Configuration
-source-git-commit: ef6b4ec9dcb3b5234add6e82cbc54ab29d363509
+source-git-commit: 625807b8905f741aa89d551483d89cca2ef91873
 workflow-type: tm+mt
 source-wordcount: '2249'
 ht-degree: 37%
@@ -27,7 +27,7 @@ LLM Optimizer で様々なマーケットや競争環境をまたいでブラン
 * [CDN 設定](#agentic-cdn)
 * [Google Search Console](#google-console)
 
-ブランド中心のエクスペリエンスを利用している場合は、**ブランド管理**&#x200B;に移動して、ブランド、ブランドエイリアス、競合他社の設定と設定を行い、追跡を行います。 **Brands Management**&#x200B;は、ブランドに関連付けられたURLに関連するGoogle Search Console、Adobe Analytics、CDN ログ転送などの統合を設定するためにも使用されます。 これを行うには、対応するタブ（GSC、CDNなど）をクリックします。
+[&#x200B; ブランド中心のエクスペリエンス &#x200B;](/help/overview/quick-start.md#brand-centric-experience)を利用している場合は、**ブランド管理**&#x200B;に移動して、ブランド、ブランドエイリアスを設定および設定し、競合他社を追跡するように定義します。 **Brands Management**&#x200B;は、ブランドに関連付けられたURLに関連するGoogle Search Console、Adobe Analytics、CDN ログ転送などの統合を設定するためにも使用されます。 これを行うには、対応するタブ（GSC、CDNなど）をクリックします。
 
 ![&#x200B; ブランド管理 – アプリのナビゲーション （ブランド中心のエクスペリエンス） &#x200B;](/help/assets/brand-centric-experience/llmo-app-shell.png)
 
@@ -60,7 +60,7 @@ LLM Optimizer で様々なマーケットや競争環境をまたいでブラン
 5. 地域を選択します。
 6. 「**プロンプトを追加**」をクリックすると、プロンプトを含むトピックがリストに表示されます。
 
-ブランド中心のエクスペリエンスを利用しているお客様の場合、トピックとプロンプトを追加するには、**プロンプト管理**&#x200B;に移動します。
+[&#x200B; ブランド中心のエクスペリエンス &#x200B;](/help/overview/quick-start.md#brand-centric-experience)を利用しているお客様の場合、トピックとプロンプトを追加するには、**プロンプト管理**&#x200B;に移動します。
 
 ![&#x200B; プロンプト管理（ブランド中心のエクスペリエンス） &#x200B;](/help/assets/brand-centric-experience/prompts-management.png)
 
@@ -212,7 +212,7 @@ Google Search Console アカウントとLLM Optimizerを統合した後、検索
 
 #### プロンプトリストで追加されたクエリを表示する {#prompts-list}
 
-クエリを追加すると、顧客設定ダッシュボードの「[&#x200B; プロンプト &#x200B;](#prompts-brand)」タブ（従来のエクスペリエンス）または「**プロンプト管理**」（ブランド中心のエクスペリエンス）に表示されます。 Google Search Consoleから送信されたプロンプトには、**Origin**&#x200B;列にGoogle Search Console アイコンが表示されます。 このアイコンは、実際のユーザー検索動作に基づくプロンプトと、手動または他のソースから追加されたプロンプトを区別するのに役立ちます。
+クエリを追加すると、顧客設定ダッシュボードの「[&#x200B; プロンプト &#x200B;](#prompts-brand)」タブ（従来のナビゲーション）または「**プロンプト管理**」（ブランド中心のエクスペリエンス）に表示されます。 Google Search Consoleから送信されたプロンプトには、**Origin**&#x200B;列にGoogle Search Console アイコンが表示されます。 このアイコンは、実際のユーザー検索動作に基づくプロンプトと、手動または他のソースから追加されたプロンプトを区別するのに役立ちます。
 
 ### よくある質問 {#gsc-faq}
 
