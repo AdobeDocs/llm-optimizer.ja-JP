@@ -2,10 +2,10 @@
 title: エージェントトラフィック
 description: エージェントトラフィックダッシュボードを使用して、AI エージェントによるサイトの操作方法を確認する方法について説明します。
 feature: Agentic Traffic
-source-git-commit: 21c14895ea9c1978332af3d742baacbe53079e88
+source-git-commit: a09824e35dd5a0b91fe07ca423f633f9253a6d74
 workflow-type: tm+mt
-source-wordcount: '1335'
-ht-degree: 94%
+source-wordcount: '1404'
+ht-degree: 89%
 
 ---
 
@@ -25,9 +25,19 @@ ht-degree: 94%
 * [上位と下位のムーバー](#top-bottom-movers)
 * [ユーザーエージェントと URL パフォーマンス分析](#user-url-performance)
 
+ブランド中心のエクスペリエンスを利用している場合は、**エージェンティックトラフィック**&#x200B;に移動し、エージェンティックトラフィックインサイトを表示するサイトを選択します。
+
+![ エージェンティックトラフィック – サイトセレクター（ブランド中心のエクスペリエンス） ](/help/assets/brand-centric-experience/agentic-traffic-dashboard.png)
+
 ## CDN ログ転送 {#cdn-setup}
 
-**CDN ログ転送**&#x200B;がない場合、エージェントトラフィックダッシュボードは空白になります。 エージェント型のインタラクションを表示するには、**CDN ログ転送**&#x200B;を設定する必要があります。  初回ログイン時には、次の画像に示すように、メッセージが表示されます。
+**CDN ログ転送**&#x200B;がない場合、エージェントトラフィックダッシュボードは空白になります。 エージェント型のインタラクションを表示するには、**CDN ログ転送**&#x200B;を設定する必要があります。
+
+ブランド中心のエクスペリエンスを利用している場合は、**Brands Management**&#x200B;に移動し、**CDN** ラベルをクリックして、CDN ログ転送情報を追加できます。
+
+![ ブランド管理 – CDN ログ転送](/help/assets/brand-centric-experience/brands-management-cdn.png)
+
+**顧客設定（クラシックナビゲーション）:**&#x200B;最初のログイン時に、次の画像に示すメッセージが表示されます。
 
 ![CDN 設定](/help/dashboards/assets/ag-log-forward1.png)
 

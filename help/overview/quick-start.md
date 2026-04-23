@@ -2,17 +2,21 @@
 title: クイックスタート
 description: ブランド名とドメインをオンボーディングし、Experience HubまたはExperience Cloudから体験版をアクティベートして、Adobe LLM Optimizerの設定を完了する方法について説明します。
 feature: Quickstart, Onboarding
-source-git-commit: dcbeb1c61dd9dcefd83908f65f8303d36c0fb78e
+source-git-commit: d38cf066ca1e3785032b7beca1c257e3a42f532b
 workflow-type: tm+mt
-source-wordcount: '1208'
-ht-degree: 47%
+source-wordcount: '1454'
+ht-degree: 37%
 
 ---
 
 
 # クイックスタート
 
-LLM Optimizerを導入するには、オンボーディングプロセスを完了する必要があります。 オンボーディング後、カテゴリ、トピック、プロンプトをカスタマイズし、ログ転送を設定することで、より正確なインサイトと[LLM Optimizer ダッシュボード &#x200B;](/help/dashboards/dashboards-overview.md)およびその他の機能への完全なアクセスを実現できます。
+LLM Optimizerを使い始めるには、オンボーディングを完了してください。 次に、カテゴリ、トピック、プロンプトをカスタマイズし、CDN ログ転送を設定し、完全なインサイトを得るために[ ダッシュボード ](/help/dashboards/dashboards-overview.md)を開きます。
+
+**ブランド中心のエクスペリエンス：** デフォルトでは、新規顧客はオンボーディング主導のセットアップを備えた、ブランド重視のインターフェイスで開始されます。 この新しいインターフェイスでは、各組織は1つのアクティブなブランドと、選択できる追加の推奨ブランドから始まります。 既存のLLM Optimizerのお客様は、このブランド中心の体験に徐々に移行していきます。
+
+<!--Where steps differ by layout, use **Customer Configuration (classic experience)** or **Brands Management** / **Prompts Management**, whichever matches your current interface.-->
 
 ## オンボーディングの概要
 
@@ -89,7 +93,7 @@ LLM Optimizerを使用するには、ブランド名とドメインをオンボ�
 
 オンボーディングフェーズ中に、カテゴリ、トピック、プロンプトの小さなセットが生成されます。 これらのプロンプトでのブランドプレゼンス分析は、サイトをオンボードした直後に使用できるようになります。
 
-エッジで最適化をデプロイする機能も利用できます。 詳しくは、[Edgeでの最適化に関するよくある質問](https://experienceleague.adobe.com/ja/docs/llm-optimizer/using/resources/optimize-at-edge/overview#frequently-asked-questions)を参照してください。
+エッジで最適化をデプロイする機能も利用できます。 詳しくは、[Edgeでの最適化に関するよくある質問](https://experienceleague.adobe.com/en/docs/llm-optimizer/using/resources/optimize-at-edge/overview#frequently-asked-questions)を参照してください。
 
 さらに、トラフィック分析用に[CDN ログ転送](#step-4)を設定します。 LLM Optimizerなら、AI エージェントとリファラルトラフィックからブランドプレゼンスデータとインサイトを獲得し、ビジネス機会を特定して、AIによる可視性を強化するための推奨事項を処方できます。
 
@@ -97,13 +101,17 @@ LLM Optimizerを使用するには、ブランド名とドメインをオンボ�
 
 組織が業務契約書を完成させた後、選択したドメインでLLM Optimizerにオンボーディングされます。 オンボーディングが完了したら、[https://llmo.now](https://llmo.now)でログインします。
 
-## 手順 2：カテゴリ、トピック、プロンプトをカスタマイズ
+## 手順 2：カテゴリ、トピック、プロンプトをカスタマイズ {#step-2-customize-categories-topics-and-prompts}
 
-サイトにオンボードしたら、オンボーディングフェーズ中に自動生成された小さなセットのプロンプトに基づいて、ブランドプレゼンス分析を表示できます。 今後は、ブランドのカテゴリ、トピック、プロンプトをカスタマイズできます。 この設定は、[顧客設定ダッシュボード](/help/dashboards/customer-configuration.md)で作成されます。
+サイトにオンボードしたら、オンボーディングフェーズ中に自動生成された小さなセットのプロンプトに基づいて、ブランドプレゼンス分析を表示できます。 今後、ブランドのカテゴリー、トピック、プロンプトをカスタマイズできるようになります。
+
+### 顧客設定（従来のナビゲーション）
+
+従来のナビゲーション（ブランド中心のエクスペリエンスではなく）を使用している場合は、[顧客設定ダッシュボード ](/help/dashboards/customer-configuration.md)から、ブランドのカテゴリ、トピック、プロンプトをカスタマイズできます。
 
 ![顧客設定ダッシュボード](/help/overview/assets/prompt-creation.png)
 
-このダッシュボードから、次の操作を実行できます。
+顧客設定ダッシュボードでは、次のことができます。
 
 * ビジネスの優先度に合わせて&#x200B;**新しいカテゴリ**&#x200B;を追加します。 カテゴリには、ドメインに関連する幅広いコンテンツ領域を指定できます。
 * 追跡する&#x200B;**カスタムトピック**&#x200B;またはサブトピックを入力します。 トピックには、ドメインに関連付けられた大量のブランド化以外のキーワードに結び付けられた特定のテーマを指定できます。
@@ -118,13 +126,33 @@ LLM Optimizerを使用するには、ブランド名とドメインをオンボ�
 >
 > カテゴリ、トピック、プロンプトを設定する方法について詳しくは、[カテゴリ、トピック、プロンプトの設定のベストプラクティス](/help/overview/best-practices-topics-prompts.md)ページを参照してください。
 
+### ブランド中心主義
+
+ブランド中心の体験を提供している顧客に対しては、次のようにカテゴリー、トピック、プロンプトを追加することができます。
+
+* **カテゴリ** — **ブランド管理**&#x200B;に移動し、**カテゴリ**&#x200B;をクリックします。 カテゴリーはグローバルレベルで定義され、ブランド管理の下のすべてのブランドに適用されます。
+
+  ![ ナビゲーションにカテゴリを含むブランド管理](/help/assets/brand-centric-experience/llmo-app-shell.png)
+
+* **トピックとプロンプト** — **プロンプト管理**&#x200B;に移動して、特定のブランドのプロンプトを含むトピックとプロンプトを作成します。
+
+  ![ プロンプト管理](/help/assets/brand-centric-experience/prompts-management.png)
+
 ## 手順 3：ブランドプレゼンスインサイト
 
 ドメインをオンボードした後、オンボーディング中に自動的に生成されたプロンプトに基づいて、ブランドプレゼンスビューに初期インサイトが表示されます。 独自のカテゴリ、トピック、プロンプトをカスタマイズすると、LLM Optimizer では指定したプロンプトに基づいてブランドプレゼンス分析を自動的にトリガーし、結果は 24 時間以内に使用できるようになります。
 
+>[!NOTE]
+>
+> ブランド中心のエクスペリエンスを利用しているお客様の場合は、**ブランドプレゼンス**&#x200B;に移動し、ブランド ドロップダウンを使用するためのブランドプレゼンスを表示するブランドを選択します。 このエクスペリエンスを使用すると、**すべてのブランド** レベルでブランドの可視性を表示することもできます。
+
 ## 手順 4：CDN ログ転送の情報を指定 {#step-4}
 
-エージェント型トラフィックとリファラルトラフィックインサイトを活用するには、[&#x200B; カスタマー設定ダッシュボード &#x200B;](/help/dashboards/customer-configuration.md#cdn-configuration)からCDN ログ転送情報を追加します。 「**CDN設定**」タブを開き、**オンボード CDN**&#x200B;を選択します。
+エージェント型トラフィックとリファラルトラフィックインサイトを活用するには、CDN ログ転送を登録して、LLM Optimizerがアクセスログを読み取れるようにします。
+
+### 顧客設定（従来のナビゲーション）
+
+従来のナビゲーションを使用している場合は、[顧客設定ダッシュボード ](/help/dashboards/customer-configuration.md#cdn-configuration)からCDN ログ転送情報を追加できます。 「**CDN設定**」タブを開き、**オンボード CDN**&#x200B;を選択します。
 
 ![顧客設定 CDN](/help/overview/assets/cc-cdn.png)
 
@@ -136,6 +164,12 @@ LLM Optimizerを使用するには、ブランド名とドメインをオンボ�
 >[!NOTE]
 >顧客管理CDN （BYOCDN）を使用する際のログ転送について詳しくは、[BYOCDN ログ転送の概要](/help/overview/log-forwarding/log-forwarding-overview.md)を参照してください
 
+### ブランド中心主義
+
+ブランド中心のエクスペリエンスを利用しているお客様の場合、**Brands Management**&#x200B;からCDN ログ転送情報を追加できます。**Brands Management**&#x200B;を開き、**CDN** ラベルをクリックします。
+
+![ ブランド管理 – CDN ログ転送](/help/assets/brand-centric-experience/brands-management-cdn.png)
+
 ## 手順 5：ダッシュボードを探索し、アクションを実行
 
 CDN ログ転送の情報を指定すると、次の操作を実行できます。
@@ -144,5 +178,8 @@ CDN ログ転送の情報を指定すると、次の操作を実行できます�
 * CDN ログ転送が設定されている場合は、[Agentic](/help/dashboards/agentic-traffic.md)および[リファラルトラフィック](/help/dashboards/referral-traffic.md) ダッシュボードを探索します。
 * [オポチュニティ](/help/dashboards/opportunities.md)を使用して、コンテンツと技術的な改善点を特定します。
 * データを書き出してチームでコラボレーションしたり、同僚を招待して製品を使用したりできます。
+
+>[!NOTE]
+> ブランド中心のエクスペリエンスで、左側のナビゲーションセクションから目的のビューにアクセスします。
 
 最後に、LLM Optimizer の機能を完全に理解するには、使用できるすべての[ダッシュボード](/help/dashboards/dashboards-overview.md)を探索する必要があります。
