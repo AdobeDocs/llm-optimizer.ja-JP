@@ -2,10 +2,10 @@
 title: エージェントトラフィック
 description: エージェントトラフィックダッシュボードを使用して、AI エージェントによるサイトの操作方法を確認する方法について説明します。
 feature: Agentic Traffic
-source-git-commit: a09824e35dd5a0b91fe07ca423f633f9253a6d74
+source-git-commit: 82bfbea9375fe7f3cd7f27dfdf0adcab6489731d
 workflow-type: tm+mt
-source-wordcount: '1404'
-ht-degree: 89%
+source-wordcount: '1407'
+ht-degree: 90%
 
 ---
 
@@ -25,7 +25,7 @@ ht-degree: 89%
 * [上位と下位のムーバー](#top-bottom-movers)
 * [ユーザーエージェントと URL パフォーマンス分析](#user-url-performance)
 
-ブランド中心のエクスペリエンスを利用している場合は、**エージェンティックトラフィック**&#x200B;に移動し、エージェンティックトラフィックインサイトを表示するサイトを選択します。
+If you are on the [Brand Centric experience](/help/overview/quick-start.md#brand-centric-experience), navigate to **Agentic Traffic** and select the site for which you want to view the agentic traffic insights.
 
 ![&#x200B; エージェンティックトラフィック – サイトセレクター（ブランド中心のエクスペリエンス） &#x200B;](/help/assets/brand-centric-experience/agentic-traffic-dashboard.png)
 
@@ -33,11 +33,9 @@ ht-degree: 89%
 
 **CDN ログ転送**&#x200B;がない場合、エージェントトラフィックダッシュボードは空白になります。 エージェント型のインタラクションを表示するには、**CDN ログ転送**&#x200B;を設定する必要があります。
 
-ブランド中心のエクスペリエンスを利用している場合は、**Brands Management**&#x200B;に移動し、**CDN** ラベルをクリックして、CDN ログ転送情報を追加できます。
+### 顧客設定（従来のナビゲーション）
 
-![&#x200B; ブランド管理 – CDN ログ転送](/help/assets/brand-centric-experience/brands-management-cdn.png)
-
-**顧客設定（クラシックナビゲーション）:**&#x200B;最初のログイン時に、次の画像に示すメッセージが表示されます。
+初回ログイン時には、次の画像に示すように、メッセージが表示されます。
 
 ![CDN 設定](/help/dashboards/assets/ag-log-forward1.png)
 
@@ -59,6 +57,12 @@ ht-degree: 89%
 >顧客管理CDN （BYOCDN）を使用する際のログ転送について詳しくは、[BYOCDN ログ転送の概要](/help/overview/log-forwarding/log-forwarding-overview.md)を参照してください
 
 アクティブ化すると、ログが取り込まれ、合計エージェントインタラクション数、成功率、マーケット別のヒット数、ユーザーエージェント分析、URL レベルのパフォーマンスなどの指標がダッシュボードに入力されます。
+
+### ブランド中心主義
+
+If you are are on the [brand centric experience](/help/overview/quick-start.md#brand-centric-experience), you can add CDN log forwarding information by navigating to **Brands Management** and clicking on the **CDN** label.
+
+![&#x200B; ブランド管理 – CDN ログ転送](/help/assets/brand-centric-experience/brands-management-cdn.png)
 
 LLM Optimizer では、CDN ログからのフィールドのサブセットを処理します。 生のログフィールド名は CDN プロバイダーによって異なりますが、次のように正規化されて表示されます。
 

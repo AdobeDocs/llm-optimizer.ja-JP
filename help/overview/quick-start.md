@@ -2,9 +2,9 @@
 title: クイックスタート
 description: ブランド名とドメインをオンボーディングし、Experience HubまたはExperience Cloudから体験版をアクティベートして、Adobe LLM Optimizerの設定を完了する方法について説明します。
 feature: Quickstart, Onboarding
-source-git-commit: d38cf066ca1e3785032b7beca1c257e3a42f532b
+source-git-commit: 82bfbea9375fe7f3cd7f27dfdf0adcab6489731d
 workflow-type: tm+mt
-source-wordcount: '1454'
+source-wordcount: '1463'
 ht-degree: 37%
 
 ---
@@ -12,11 +12,13 @@ ht-degree: 37%
 
 # クイックスタート
 
-LLM Optimizerを使い始めるには、オンボーディングを完了してください。 次に、カテゴリ、トピック、プロンプトをカスタマイズし、CDN ログ転送を設定し、完全なインサイトを得るために[&#x200B; ダッシュボード &#x200B;](/help/dashboards/dashboards-overview.md)を開きます。
-
-**ブランド中心のエクスペリエンス：** デフォルトでは、新規顧客はオンボーディング主導のセットアップを備えた、ブランド重視のインターフェイスで開始されます。 この新しいインターフェイスでは、各組織は1つのアクティブなブランドと、選択できる追加の推奨ブランドから始まります。 既存のLLM Optimizerのお客様は、このブランド中心の体験に徐々に移行していきます。
+LLM Optimizerを使い始めるには、オンボーディングプロセスを完了してください。 次に、カテゴリ、トピック、プロンプトをカスタマイズし、CDN ログ転送を設定し、完全なインサイトを得るために[&#x200B; ダッシュボード &#x200B;](/help/dashboards/dashboards-overview.md)を開きます。
 
 <!--Where steps differ by layout, use **Customer Configuration (classic experience)** or **Brands Management** / **Prompts Management**, whichever matches your current interface.-->
+
+## ブランド中心主義 {#brand-centric-experience}
+
+デフォルトでは、新規顧客はオンボーディング主導の設定により、焦点を絞ったブランドファーストのインターフェイスから開始されます。 この新しいインターフェイスでは、各組織は1つのアクティブなブランドと、選択できる追加の推奨ブランドから始まります。 既存のLLM Optimizerのお客様は、このブランド中心の体験に徐々に移行していきます。
 
 ## オンボーディングの概要
 
@@ -126,9 +128,9 @@ LLM Optimizerを使用するには、ブランド名とドメインをオンボ�
 >
 > カテゴリ、トピック、プロンプトを設定する方法について詳しくは、[カテゴリ、トピック、プロンプトの設定のベストプラクティス](/help/overview/best-practices-topics-prompts.md)ページを参照してください。
 
-### ブランド中心主義
+### ブランド中心のエクスペリエンスのカテゴリ、トピック、プロンプト
 
-ブランド中心の体験を提供している顧客に対しては、次のようにカテゴリー、トピック、プロンプトを追加することができます。
+ブランド中心主義のエクスペリエンスを利用している顧客に対しては、次のようにカテゴリ、トピック、プロンプトを追加できます。
 
 * **カテゴリ** — **ブランド管理**&#x200B;に移動し、**カテゴリ**&#x200B;をクリックします。 カテゴリーはグローバルレベルで定義され、ブランド管理の下のすべてのブランドに適用されます。
 
@@ -164,9 +166,9 @@ LLM Optimizerを使用するには、ブランド名とドメインをオンボ�
 >[!NOTE]
 >顧客管理CDN （BYOCDN）を使用する際のログ転送について詳しくは、[BYOCDN ログ転送の概要](/help/overview/log-forwarding/log-forwarding-overview.md)を参照してください
 
-### ブランド中心主義
+### Brand Centric Experience CDN ログ転送
 
-ブランド中心のエクスペリエンスを利用しているお客様の場合、**Brands Management**&#x200B;からCDN ログ転送情報を追加できます。**Brands Management**&#x200B;を開き、**CDN** ラベルをクリックします。
+Brand Centric エクスペリエンスを利用しているお客様の場合、**Brands Management**&#x200B;からCDN ログ転送情報を追加できます。**Brands Management**&#x200B;を開き、**CDN** ラベルをクリックします。
 
 ![&#x200B; ブランド管理 – CDN ログ転送](/help/assets/brand-centric-experience/brands-management-cdn.png)
 

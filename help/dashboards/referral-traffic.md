@@ -2,10 +2,10 @@
 title: リファラルトラフィック
 description: リファラルトラフィックダッシュボードを使用して、外部プラットフォーム、AI の引用、リファラルリンクから訪問者がサイトに到達する方法を確認する方法について説明します。
 feature: Referral Traffic
-source-git-commit: ea4cf80dc5f789f7938c800354bc8d8d3246704c
+source-git-commit: 82bfbea9375fe7f3cd7f27dfdf0adcab6489731d
 workflow-type: tm+mt
-source-wordcount: '741'
-ht-degree: 79%
+source-wordcount: '734'
+ht-degree: 80%
 
 ---
 
@@ -27,7 +27,7 @@ ht-degree: 79%
 * [上位のリファラル URL](#top-referrals)
 * [リファラルトラフィックの詳細](#traffic-details)
 
-ブランド中心のエクスペリエンスを利用している場合は、**リファラルトラフィック**&#x200B;に移動し、LLM リファラルトラフィックインサイトを表示するサイトを選択します。
+[&#x200B; ブランド中心のエクスペリエンス &#x200B;](/help/overview/quick-start.md#brand-centric-experience)を利用している場合は、**リファラルトラフィック**&#x200B;に移動し、LLM リファラルトラフィックのインサイトを表示するサイトを選択します。
 
 ![リファラルトラフィック — サイトセレクター（ブランド中心のエクスペリエンス） &#x200B;](/help/assets/brand-centric-experience/referral-traffic-dashboard.png)
 
@@ -35,7 +35,7 @@ ht-degree: 79%
 
 初回ログイン時に、リファラルトラフィックダッシュボードが空白で表示される場合があります。 データを表示するには、CDN ログ転送を設定する必要があります。
 
-ブランド中心の体験を提供しているお客様の場合、CDN ログ転送情報を追加する方法は次のとおりです。 **Brands Management**&#x200B;に移動し、**CDN** ラベルをクリックします。 「[&#x200B; エージェント型トラフィック — CDN セットアップ &#x200B;](/help/dashboards/agentic-traffic.md#cdn-setup)」も参照してください。
+[&#x200B; ブランド中心のエクスペリエンス &#x200B;](/help/overview/quick-start.md#brand-centric-experience)を利用しているお客様の場合、**ブランド管理**&#x200B;に移動し、**CDN** ラベルをクリックすると、CDN ログ転送情報を追加できます。
 
 **顧客設定（クラシックエクスペリエンス）:** **設定に移動**&#x200B;を選択して、[CDN ログ転送](/help/dashboards/customer-configuration.md#cdn-configuration)を設定します。
 
