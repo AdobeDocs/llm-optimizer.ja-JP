@@ -2,10 +2,10 @@
 user-guide-title: LLM Optimizer
 breadcrumb-title: LLM Optimizer
 user-guide-description: Adobe LLM Optimizer でブランドを強化します。 言及を追跡し、インサイトを明らかにし、AI 駆動型の検索を活用できます。 可視性を制御して、今すぐ最適化を開始しましょう。
-source-git-commit: 5e033e9cef05efaf96a6c71ebeae71c533ddd605
+source-git-commit: 34e90bc95aa1d2ffabe8fd06c2c548491dd5c5b7
 workflow-type: tm+mt
-source-wordcount: '113'
-ht-degree: 68%
+source-wordcount: '135'
+ht-degree: 61%
 
 ---
 
@@ -24,7 +24,15 @@ ht-degree: 68%
    + [エージェントトラフィック](/help/dashboards/agentic-traffic.md)
    + [リファラルトラフィック](/help/dashboards/referral-traffic.md)
    + [URL インスペクター](/help/dashboards/url-inspector.md)
-   + [オポチュニティ](/help/dashboards/opportunities.md)
+   + オポチュニティ{#opportunities}
+      + [機会](/help/dashboards/opportunities-overview.md)
+      + [エージェント型トラフィック エラー](/help/dashboards/opportunities/agentic-traffic-errors.md)
+      + [robots.txtによってブロックされたトラフィック](/help/dashboards/opportunities/traffic-blocked-by-robots.md)
+      + [コンテンツの可視性を回復](/help/dashboards/opportunities/recover-content-visibility.md)
+      + [Wikipedia 分析](/help/dashboards/opportunities/wikipedia-analysis.md)
+      + [YouTubeのセンチメント分析](/help/dashboards/opportunities/youtube-sentiment-analysis.md)
+      + [Reddit センチメント解析](/help/dashboards/opportunities/reddit-sentiment-analysis.md)
+      + [引用センチメント分析](/help/dashboards/opportunities/cited-sentiment-analysis.md)
    + [顧客設定](/help/dashboards/customer-configuration.md)
    + [コラボレーション](/help/dashboards/collaboration.md)
 + BYOCDN ログ転送{#log-forwarding}

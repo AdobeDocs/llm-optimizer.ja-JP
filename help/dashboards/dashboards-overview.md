@@ -2,10 +2,10 @@
 title: ダッシュボードの概要
 description: これは記事の概要です。
 feature: Onboarding
-source-git-commit: 945537c3139e5a2038858e6121172e1a1a10ddf4
+source-git-commit: c449e2eb728648285413390ce7dce973380597cc
 workflow-type: tm+mt
 source-wordcount: '262'
-ht-degree: 93%
+ht-degree: 87%
 
 ---
 
@@ -43,7 +43,7 @@ CARDS
   {description= Lets you enable cross-functional teamwork by allowing you to invite colleagues into a shared workspace.}
   {target=_blank}
   {cta=Learn more}
-* ./opportunities.md
+* ./opportunities-overview.md
   {title= Opportunities dashboard}
   {image= /help/assets/overview/opportunities-card.png}
   {description= Surfaces and prioritizes actionable insights that improve brand visibility and citation performance across AI-powered search platforms}
@@ -161,7 +161,7 @@ CARDS
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="./opportunities.md" title="オポチュニティダッシュボード" target="_blank" rel="referrer">
+                    <a href="./opportunities-overview.md" title="オポチュニティダッシュボード" target="_blank" rel="referrer">
                         <img class="is-bordered-r-small" src="/help/assets/overview/opportunities-card.png" alt="オポチュニティダッシュボード"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
@@ -170,11 +170,11 @@ CARDS
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="./opportunities.md" target="_blank" rel="referrer" title="オポチュニティダッシュボード">オポチュニティダッシュボード</a>
+                        <a href="./opportunities-overview.md" target="_blank" rel="referrer" title="オポチュニティダッシュボード">オポチュニティダッシュボード</a>
                     </p>
                     <p class="is-size-6">AI を活用した検索プラットフォームをまたいでブランドの可視性と引用パフォーマンスを向上させる実用的なインサイトを明らかにし、優先順位を付けます。</p>
                 </div>
-                <a href="./opportunities.md" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                <a href="./opportunities-overview.md" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                     <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">詳細情報</span>
                 </a>
             </div>
