@@ -28,7 +28,7 @@ AIは、次の6つの側面でブランドを分析します。
 >[!NOTE]
 >センチメント分析は現在ベータ版です。 機能が開発され続けると、機能と可用性が変更される場合があります。
 
-![YouTube センチメント分析ダッシュボード ](/help/dashboards/opportunities/assets/youtube-sentiment-overview.png)
+![YouTube センチメント分析ダッシュボード &#x200B;](/help/dashboards/opportunities/assets/youtube-sentiment-overview.png)
 
 ## 仕組み
 
@@ -42,7 +42,7 @@ LLM Optimizerは、AI システムによって引用されたYouTubeのビデオ
 
 このタブでは、YouTubeでのブランド認知度を向上させるための推奨事項を紹介します。 候補は3つのサブタブに分かれています：**現在の候補**、**修正候補**、**無視された候補**。
 
-![おすすめタブ ](/help/dashboards/opportunities/assets/youtube-sentiment-suggestions.png)
+![おすすめタブ &#x200B;](/help/dashboards/opportunities/assets/youtube-sentiment-suggestions.png)
 
 候補テーブルには、次の列が含まれます。
 
@@ -105,7 +105,7 @@ LLM Optimizerは、AI システムによって引用されたYouTubeのビデオ
 
 「パフォーマンス」タブには、**ビデオ**&#x200B;と&#x200B;**トピック**&#x200B;のパネルが1つのビューで表示されます（**ビデオ**&#x200B;を選択した状態）。 次の図は、ビデオレベルの表とその下の&#x200B;**トピック**&#x200B;の概要を示しています。
 
-パフォーマンス タブの![ ビデオとトピック テーブル ](/help/dashboards/opportunities/assets/youtube-sentiment-videos.png)
+パフォーマンス タブの![&#x200B; ビデオとトピック テーブル &#x200B;](/help/dashboards/opportunities/assets/youtube-sentiment-videos.png)
 
 ### コメント
 
@@ -119,7 +119,7 @@ LLM Optimizerは、AI システムによって引用されたYouTubeのビデオ
 - **ブランド言及** — トピックに関連付けられているブランド言及の数。
 - **センチメント** — トピックに関連付けられている全体的なセンチメント。
 
-**トピック** テーブルは、ビデオテーブルと同じパフォーマンスビューに表示されます。上記の[ ビデオ ](#videos) セクションの図を参照してください。
+**トピック** テーブルは、ビデオテーブルと同じパフォーマンスビューに表示されます。上記の[&#x200B; ビデオ &#x200B;](#videos) セクションの図を参照してください。
 
 ## デモでやってみましょう
 
