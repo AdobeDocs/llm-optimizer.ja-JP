@@ -2,10 +2,10 @@
 user-guide-title: LLM Optimizer
 breadcrumb-title: LLM Optimizer
 user-guide-description: Adobe LLM Optimizer でブランドを強化します。 言及を追跡し、インサイトを明らかにし、AI 駆動型の検索を活用できます。 可視性を制御して、今すぐ最適化を開始しましょう。
-source-git-commit: 34e90bc95aa1d2ffabe8fd06c2c548491dd5c5b7
+source-git-commit: 5504c3b7fe6880a4ea2d8334137d949f87f4e1cf
 workflow-type: tm+mt
-source-wordcount: '135'
-ht-degree: 61%
+source-wordcount: '136'
+ht-degree: 60%
 
 ---
 
@@ -25,7 +25,7 @@ ht-degree: 61%
    + [リファラルトラフィック](/help/dashboards/referral-traffic.md)
    + [URL インスペクター](/help/dashboards/url-inspector.md)
    + オポチュニティ{#opportunities}
-      + [機会](/help/dashboards/opportunities-overview.md)
+      + [Opportunities Overview](/help/dashboards/opportunities-overview.md)
       + [エージェント型トラフィック エラー](/help/dashboards/opportunities/agentic-traffic-errors.md)
       + [robots.txtによってブロックされたトラフィック](/help/dashboards/opportunities/traffic-blocked-by-robots.md)
       + [コンテンツの可視性を回復](/help/dashboards/opportunities/recover-content-visibility.md)
