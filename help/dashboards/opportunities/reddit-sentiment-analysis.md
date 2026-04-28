@@ -26,7 +26,7 @@ AIは、次の4つの側面でブランドを分析します。
 >[!NOTE]
 >Reddit センチメント解析は現在ベータ版です。 機能が開発され続けると、機能と可用性が変更される場合があります。
 
-![Reddit センチメント分析ダッシュボード ](/help/dashboards/opportunities/assets/reddit-sentiment-overview.png)
+![Reddit センチメント分析ダッシュボード &#x200B;](/help/dashboards/opportunities/assets/reddit-sentiment-overview.png)
 
 ## 仕組み
 
@@ -40,7 +40,7 @@ LLM Optimizerは、AI システムによって引用されたReddit スレッド
 
 このタブには、Redditでのブランドの認識を改善するための推奨事項が表示されます。 候補は3つのサブタブに分かれています：**現在の候補**、**修正候補**、**無視された候補**。
 
-![おすすめタブ ](/help/dashboards/opportunities/assets/reddit-sentiment-suggestions.png)
+![おすすめタブ &#x200B;](/help/dashboards/opportunities/assets/reddit-sentiment-suggestions.png)
 
 候補テーブルには、次の列が含まれます。
 

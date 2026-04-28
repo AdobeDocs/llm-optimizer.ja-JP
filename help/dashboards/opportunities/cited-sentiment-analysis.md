@@ -26,7 +26,7 @@ AI システムが自社に関する質問に回答する際には、AIが生成
 >[!NOTE]
 >引用センチメント分析は現在ベータ版です。 機能が開発され続けると、機能と可用性が変更される場合があります。
 
-![引用センチメント分析ダッシュボード ](/help/dashboards/opportunities/assets/cited-sentiment-overview.png)
+![引用センチメント分析ダッシュボード &#x200B;](/help/dashboards/opportunities/assets/cited-sentiment-overview.png)
 
 ## 仕組み
 
@@ -40,7 +40,7 @@ LLM Optimizerは、ブランドプレゼンスダッシュボードプロンプ�
 
 このタブには、引用の多いURLをまたいでブランドの認識を向上させるための推奨事項が表示されます。 候補は3つのサブタブに分かれています：**現在の候補**、**修正候補**、**無視された候補**。
 
-![おすすめタブ ](/help/dashboards/opportunities/assets/cited-sentiment-suggestions.png)
+![おすすめタブ &#x200B;](/help/dashboards/opportunities/assets/cited-sentiment-suggestions.png)
 
 候補テーブルには、次の列が含まれます。
 

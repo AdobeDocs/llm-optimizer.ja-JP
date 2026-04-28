@@ -26,7 +26,7 @@ Adobe Workfrontには、3つの重要な指標が一目で確認できます。
 
 このオポチュニティの概要については、[コンテンツの可視性を復元](https://www.youtube.com/watch?v=BigPyJssFCw)をご覧ください。
 
-このオポチュニティは、Edge](/help/dashboards/optimize-at-edge/overview.md)で[最適化を使用して最適化できます。 最適化は、AI エージェントにのみ配信され、人間の訪問者には影響を与えません（ボットのみの配信）。 最適化は、CMSの変更を必要とせずにCDN レイヤーに適用されます。開発者の関与なしに数分で適用できるため、迅速かつ低リスクのデプロイメントが可能になります。
+このオポチュニティは、Edge[&#128279;](/help/dashboards/optimize-at-edge/overview.md)で最適化を使用して最適化できます。 最適化は、AI エージェントにのみ配信され、人間の訪問者には影響を与えません（ボットのみの配信）。 最適化は、CMSの変更を必要とせずにCDN レイヤーに適用されます。開発者の関与なしに数分で適用できるため、迅速かつ低リスクのデプロイメントが可能になります。
 
 ## 仕組み
 
@@ -64,7 +64,7 @@ LLM Optimizerは、AI エージェントがアクセスできるデータと、�
 >
 >最適化をデプロイするには、Edgeで最適化のオンボーディングプロセスを完了する必要があります。 まだオンボーディングしていない場合は、**最適化をデプロイ**&#x200B;をクリックすると、オンボーディングプロセスに移動します。 Edgeでの最適化の仕組み、サポートされているCDN プロバイダー、オンボーディングプロセスについて詳しくは、[Edgeでの最適化](/help/dashboards/optimize-at-edge/overview.md) ページを参照してください。
 
-![Edgeへのデプロイ ダイアログ ](/help/dashboards/opportunities/assets/recover-content-visibility-deploy.png)
+![Edgeへのデプロイ ダイアログ &#x200B;](/help/dashboards/opportunities/assets/recover-content-visibility-deploy.png)
 
 ## デモでやってみましょう
 

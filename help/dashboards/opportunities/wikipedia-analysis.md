@@ -24,7 +24,7 @@ Wikipedia分析の機会は、AIを活用して競合他社と比較してWikipe
 - **Images** – 記事の視覚的な豊かさ。
 - **インフォボックスの完全性** – 構造化データ フィールドが存在する場合と、競合他社が含む場合。
 
-![Wikipedia Analysis ダッシュボード ](/help/dashboards/opportunities/assets/wikipedia-analysis-overview.png)
+![Wikipedia Analysis ダッシュボード &#x200B;](/help/dashboards/opportunities/assets/wikipedia-analysis-overview.png)
 
 ## 仕組み
 
@@ -36,7 +36,7 @@ LLM Optimizerは、自社のWikipediaのページをスクレイピングし、�
 
 このタブには、Wikipedia ページを改善するための戦略的な推奨事項が表示されます。 各推奨事項には、優先度レベル、ギャップの説明、LLMにとって重要な理由、およびその修正の予想される結果が含まれます。
 
-![提案とガイダンス タブ ](/help/dashboards/opportunities/assets/wikipedia-analysis-suggestions.png)
+![提案とガイダンス タブ &#x200B;](/help/dashboards/opportunities/assets/wikipedia-analysis-suggestions.png)
 
 タブの上部にある&#x200B;**ガイダンス** パネルには、分析の概要が3つの列で表示されます。
 
@@ -72,7 +72,7 @@ LLM Optimizerは、自社のWikipediaのページをスクレイピングし、�
 
 「**市場比較**」タブには、競合他社のベンチマークテーブルと、Wikipedia ページと業界の同業他社を比較した視覚的チャートが表示されます。
 
-![ マーケット比較タブ ](/help/dashboards/opportunities/assets/wikipedia-analysis-market-comparison.png)
+![&#x200B; マーケット比較タブ &#x200B;](/help/dashboards/opportunities/assets/wikipedia-analysis-market-comparison.png)
 
 比較では、参照、セクション、単語数がカバーされており、業界内のどこにランク付けされているか、ベンチマークに到達したり、それを上回ったりするためにどの程度の改善が必要かを把握するのに役立ちます。
 
@@ -80,7 +80,7 @@ LLM Optimizerは、自社のWikipediaのページをスクレイピングし、�
 
 「**記事**」タブには、現在のWikipedia ページの詳細なスナップショットが表示されます。
 
-![記事タブ ](/help/dashboards/opportunities/assets/wikipedia-analysis-your-article.png)
+![記事タブ &#x200B;](/help/dashboards/opportunities/assets/wikipedia-analysis-your-article.png)
 
 これには以下が含まれます。
 
@@ -112,7 +112,7 @@ Wikipediaのページを改善すると、ChatGPT （無料および有料）、
 
 **Wikipedia ページを編集するにはどうすればよいですか？**
 
-Wikipediaの編集は、[編集ガイドライン ](https://en.wikipedia.org/wiki/Wikipedia:Editing_policy)に従ってWikipediaで直接行う必要があります。 LLM Optimizerには、必要な具体的な推奨事項とデータソースが用意されています。編集自体はWikipediaで行われています。 記事にトーンの問題のフラグが付いている場合は、変更を加える前に、Wikipediaの[中立的な視点ポリシー](https://en.wikipedia.org/wiki/Wikipedia:Neutral_point_of_view)を確認してください。
+Wikipediaの編集は、[編集ガイドライン &#x200B;](https://en.wikipedia.org/wiki/Wikipedia:Editing_policy)に従ってWikipediaで直接行う必要があります。 LLM Optimizerには、必要な具体的な推奨事項とデータソースが用意されています。編集自体はWikipediaで行われています。 記事にトーンの問題のフラグが付いている場合は、変更を加える前に、Wikipediaの[中立的な視点ポリシー](https://en.wikipedia.org/wiki/Wikipedia:Neutral_point_of_view)を確認してください。
 
 **LLM Optimizerから直接レコメンデーションを適用できますか？**
 
@@ -124,4 +124,4 @@ Wikipedia分析は、前回のデータ更新時のWikipedia ページと競合�
 
 **会社にWikipedia ページがない場合はどうなりますか？**
 
-Wikipedia分析の機会には、既存のWikipediaの記事が必要です。 自社にウィキペディアがない場合は、ウィキペディアの[公知ガイドライン ](https://en.wikipedia.org/wiki/Wikipedia:Notability)に準拠したウィキペディアページを作成することは、他の最適化よりも優先する価値のある基本的なGEO ステップです。
+Wikipedia分析の機会には、既存のWikipediaの記事が必要です。 自社にウィキペディアがない場合は、ウィキペディアの[公知ガイドライン &#x200B;](https://en.wikipedia.org/wiki/Wikipedia:Notability)に準拠したウィキペディアページを作成することは、他の最適化よりも優先する価値のある基本的なGEO ステップです。

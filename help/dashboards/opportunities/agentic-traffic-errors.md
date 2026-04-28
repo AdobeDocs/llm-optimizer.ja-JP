@@ -27,7 +27,7 @@ ht-degree: 1%
 - **合計URL** — AI エージェントにエラーを返す一意のURLの数。
 - **合計ヒット数** – すべてのAI エージェント要求で記録されたエラー応答の合計数。
 
-![ エージェント型トラフィックエラーダッシュボードに、概要指標とエラーの詳細が表示されている](/help/dashboards/opportunities/assets/agentic-traffic-errors-overview.png)
+![&#x200B; エージェント型トラフィックエラーダッシュボードに、概要指標とエラーの詳細が表示されている](/help/dashboards/opportunities/assets/agentic-traffic-errors-overview.png)
 
 ## 仕組み
 
@@ -47,7 +47,7 @@ URLは、サーフェス化される前に検証され、誤検出や古いデ�
 - **Total** — AI エージェントからのエラーヒットの合計数。
 - 毎週のヒット数は、ここ数週間を示します。これにより、問題が永続的か改善しているかを追跡できます。
 
-![ フィルターと週次ヒット列を含むエラー詳細テーブル ](/help/dashboards/opportunities/assets/agentic-traffic-errors-table.png)
+![&#x200B; フィルターと週次ヒット列を含むエラー詳細テーブル &#x200B;](/help/dashboards/opportunities/assets/agentic-traffic-errors-table.png)
 
 ## 提案の詳細
 
@@ -57,11 +57,11 @@ URLは、サーフェス化される前に検証され、誤検出や古いデ�
 - AI エージェントユーザーエージェントによる1週間あたりの合計ヒット数を示す&#x200B;**統計** グラフで、トラフィックへの影響と、問題が永続的か改善しているかを把握できます。
 - 提案を管理するための&#x200B;**共有**&#x200B;および&#x200B;**却下** アクション。
 
-統計グラフを含む404の![提案の詳細パネル ](/help/dashboards/opportunities/assets/agentic-traffic-errors-suggestion.png)
+統計グラフを含む404の![提案の詳細パネル &#x200B;](/help/dashboards/opportunities/assets/agentic-traffic-errors-suggestion.png)
 
 **5xx** （および類似）の場合によっては、同じドメインの代替URLが使用できない場合にパネルが注意し、推奨事項がドメインとリストのルールに従う方法を説明する場合があります。 例えば、近い一致を提供できない場合に、SEO値を保持するようにベースドメイン URLを提案します。
 
-説明メッセージを含むサーバーエラーの![提案の詳細パネル ](/help/dashboards/opportunities/assets/agentic-traffic-errors-suggestion-503.png)
+説明メッセージを含むサーバーエラーの![提案の詳細パネル &#x200B;](/help/dashboards/opportunities/assets/agentic-traffic-errors-suggestion-503.png)
 
 ## 修正方法
 
