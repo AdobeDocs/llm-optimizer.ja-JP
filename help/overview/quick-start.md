@@ -2,7 +2,7 @@
 title: クイックスタート
 description: ブランド名とドメインをオンボーディングし、Experience HubまたはExperience Cloudから体験版をアクティベートして、Adobe LLM Optimizerの設定を完了する方法について説明します。
 feature: Quickstart, Onboarding
-source-git-commit: 82bfbea9375fe7f3cd7f27dfdf0adcab6489731d
+source-git-commit: c449e2eb728648285413390ce7dce973380597cc
 workflow-type: tm+mt
 source-wordcount: '1463'
 ht-degree: 37%
@@ -178,7 +178,7 @@ CDN ログ転送の情報を指定すると、次の操作を実行できます�
 
 * [ブランドプレゼンス](/help/dashboards/brand-presence.md)ダッシュボードを表示して、可視性スコアを確認し、その他のブランドと比較したパフォーマンスを追跡します。
 * CDN ログ転送が設定されている場合は、[Agentic](/help/dashboards/agentic-traffic.md)および[リファラルトラフィック](/help/dashboards/referral-traffic.md) ダッシュボードを探索します。
-* [オポチュニティ](/help/dashboards/opportunities.md)を使用して、コンテンツと技術的な改善点を特定します。
+* [オポチュニティ](/help/dashboards/opportunities-overview.md)を使用して、コンテンツと技術的な改善点を特定します。
 * データを書き出してチームでコラボレーションしたり、同僚を招待して製品を使用したりできます。
 
 >[!NOTE]
