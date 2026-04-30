@@ -23,7 +23,7 @@ AI エージェントは、自分で理解できる商品しかレコメンデ�
 
 ![製品詳細ページダッシュボードの拡充](/help/dashboards/opportunities/assets/enrich-product-detail-pages-overview.png)
 
-このオポチュニティは、Edge](https://experienceleague.adobe.com/en/docs/llm-optimizer/using/resources/optimize-at-edge/overview#what-is-optimize-at-edge)で[最適化を使用して最適化できます。 最適化は、人間の訪問者に影響を与えることなく、AI エージェントにのみ配信され（ボットのみの配信）、CMSやカタログの変更が必要なく、CDN レイヤーで適用されます。開発者の関与なしに数分で実施できるため、大規模な商品カタログの迅速かつ低リスクのデプロイメントパスとなります。
+このオポチュニティは、Edge[&#128279;](https://experienceleague.adobe.com/en/docs/llm-optimizer/using/resources/optimize-at-edge/overview#what-is-optimize-at-edge)で最適化を使用して最適化できます。 最適化は、人間の訪問者に影響を与えることなく、AI エージェントにのみ配信され（ボットのみの配信）、CMSやカタログの変更が必要なく、CDN レイヤーで適用されます。開発者の関与なしに数分で実施できるため、大規模な商品カタログの迅速かつ低リスクのデプロイメントパスとなります。
 
 ## 仕組み
 
@@ -35,7 +35,7 @@ Adobe Commerce Catalog Agentは、バリエーション、より詳細な商品�
 
 この修正は、[Optimize at Edge](https://experienceleague.adobe.com/en/docs/llm-optimizer/using/resources/optimize-at-edge/overview#what-is-optimize-at-edge) —Adobeのエッジベースのデプロイメント機能を使用して適用されます。この機能は、CDN レイヤーのLLM ユーザーエージェントに、完全に事前レンダリングされたAIに適したHTML スナップショットを提供します。 これにより、Commerceのカタログや人間が見えるストアフロントのUIに触れることなく、これまで非表示にされていたカタログデータ（製品バリエーション、技術仕様、機能の詳細を含む）をすべて復元できます。
 
-候補テーブル ](/help/dashboards/opportunities/assets/enrich-product-detail-pages-suggestions.png)を含む![URL
+候補テーブル ![&#128279;](/help/dashboards/opportunities/assets/enrich-product-detail-pages-suggestions.png)を含むURL
 
 ## URL と提案
 
@@ -61,7 +61,7 @@ Commerce インスタンスがまだLLM Optimizerに接続されていない場�
 
 まだオンボーディングしていない場合は、**最適化をデプロイ**&#x200B;をクリックすると、オンボーディングプロセスに移動します。 Edgeでの最適化の仕組み、サポートされているCDN プロバイダー、オンボーディングプロセスについて詳しくは、[Edgeでの最適化](https://experienceleague.adobe.com/en/docs/llm-optimizer/using/resources/optimize-at-edge/overview#what-is-optimize-at-edge) ページを参照してください。
 
-![Edgeへのデプロイ ダイアログ ](/help/dashboards/opportunities/assets/enrich-product-detail-pages-deploy.png)
+![Edgeへのデプロイ ダイアログ &#x200B;](/help/dashboards/opportunities/assets/enrich-product-detail-pages-deploy.png)
 
 ## デモでやってみましょう
 

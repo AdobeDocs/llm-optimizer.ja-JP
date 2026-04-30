@@ -66,7 +66,7 @@ Adobe Commerce Catalog Agentは、商品カタログデータを読み取り、�
 >
 >カタログの強化を行うには、LLM OptimizerをAdobe Commerceに接続する必要があります。 Commerce インスタンスがまだLLM Optimizerに接続されていない場合は、エンリッチメントを適用する前に接続設定に移動します。
 
-![ エンリッチメントの適用ダイアログ ](/help/dashboards/opportunities/assets/enrich-product-catalog-deploy.png)
+![&#x200B; エンリッチメントの適用ダイアログ &#x200B;](/help/dashboards/opportunities/assets/enrich-product-catalog-deploy.png)
 
 ## デモでやってみましょう
 

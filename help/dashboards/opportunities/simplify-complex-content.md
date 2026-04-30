@@ -54,11 +54,11 @@ LLM Optimizerは、高いエージェント型トラフィックを受け取り�
 
 エッジで公開する準備ができたら、**最適化をデプロイ**&#x200B;をクリックします。 選択したURLと最適化の詳細が、**Edgeにデプロイ** ダイアログに一覧表示されます。 リストを確認し、**デプロイ**&#x200B;または&#x200B;**キャンセル**&#x200B;を選択します。
 
-![Edgeへのデプロイ ダイアログ ](/help/dashboards/opportunities/assets/simplify-complex-content-deploy-dialog.png)
+![Edgeへのデプロイ ダイアログ &#x200B;](/help/dashboards/opportunities/assets/simplify-complex-content-deploy-dialog.png)
 
 デプロイが正常に完了すると、**デプロイメント完了**&#x200B;は本番稼動した最適化回数を確認し、AI エージェントが更新のインデックス作成に時間がかかる場合があることをメモします。 ダイアログを閉じ、**修正候補**&#x200B;を開いてステータスを確認します。
 
-![ デプロイメント完了の確認](/help/dashboards/opportunities/assets/simplify-complex-content-deploy-confirm.png)
+![&#x200B; デプロイメント完了の確認](/help/dashboards/opportunities/assets/simplify-complex-content-deploy-confirm.png)
 
 >[!NOTE]
 >
@@ -68,11 +68,11 @@ LLM Optimizerは、高いエージェント型トラフィックを受け取り�
 
 **修正候補**&#x200B;で、デプロイされたURLは、ステータス列に&#x200B;**最適化**&#x200B;と表示されます。 行を展開して、展開された&#x200B;**改善されたテキスト**&#x200B;と手順を確認します。
 
-![最適化されたステータス、拡張された簡易コピー、ライブ表示、および詳細が表示された「修正済み提案」タブ ](/help/dashboards/opportunities/assets/simplify-complex-content-fixed.png)
+![最適化されたステータス、拡張された簡易コピー、ライブ表示、および詳細が表示された「修正済み提案」タブ &#x200B;](/help/dashboards/opportunities/assets/simplify-complex-content-fixed.png)
 
 行の&#x200B;**ライブを表示**&#x200B;をクリックすると、検証用に提供された&#x200B;**現在のページコンテンツ**&#x200B;の読み取り専用ビューが開きます（適用された簡略化された節を含む）。 Analyticsに&#x200B;**Details**&#x200B;を使用します。
 
-![ ライブを表示 – エージェントの簡略化されたテキストを含む現在のページコンテンツ ](/help/dashboards/opportunities/assets/simplify-complex-content-view-live.png)
+![&#x200B; ライブを表示 – エージェントの簡略化されたテキストを含む現在のページコンテンツ &#x200B;](/help/dashboards/opportunities/assets/simplify-complex-content-view-live.png)
 
 エッジの変更を一括で元に戻す必要がある場合は、チェックボックスを使用して最適化された行を選択し、ヘッダーに&#x200B;**ロールバック**&#x200B;を使用します。
 
@@ -84,12 +84,12 @@ LLM Optimizerは、高いエージェント型トラフィックを受け取り�
 
 **ロールバック** ダイアログには、ロールバックされる提案が一覧表示され、展開された最適化が元に戻されることを示す短い警告が表示されます。 リストを確認し、**ロールバック**&#x200B;または&#x200B;**キャンセル**&#x200B;をクリックします。
 
-![ ロールバックダイアログに、元に戻す候補が一覧表示されます](/help/dashboards/opportunities/assets/simplify-complex-content-rollback-dialog.png)
+![&#x200B; ロールバックダイアログに、元に戻す候補が一覧表示されます](/help/dashboards/opportunities/assets/simplify-complex-content-rollback-dialog.png)
 
 操作が完了すると、**正常にロールバックされました**&#x200B;の概要が表示されます。ダッシュボードに戻るには、この概要を閉じます。
 
-![ ロールバック完了 – ロールバックが完了しました](/help/dashboards/opportunities/assets/simplify-complex-content-rollback-confirm.png)
+![&#x200B; ロールバック完了 – ロールバックが完了しました](/help/dashboards/opportunities/assets/simplify-complex-content-rollback-confirm.png)
 
 ## デモでやってみましょう
 
-[Frescopa デモ ](https://play.llmo.now/org/demo-org)で、複雑なコンテンツを簡略化ワークフローを確認してください。
+[Frescopa デモ &#x200B;](https://play.llmo.now/org/demo-org)で、複雑なコンテンツを簡略化ワークフローを確認してください。

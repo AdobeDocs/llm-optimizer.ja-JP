@@ -47,17 +47,17 @@ LLM Optimizerは、ブランドのプロンプトセットにもとづいて、Q
 
 行のチェックボックスを使用して、配送するFAQの提案を選択します。 フッターには、選択された数が表示され、**修正済みとしてマーク**、**推奨事項を無視**、**最適化をデプロイ**&#x200B;できます。
 
-![ デプロイの最適化に関する現在の提案に関するFAQ候補を選択](/help/dashboards/opportunities/assets/add-relevant-faqs-ui-02.png)
+![&#x200B; デプロイの最適化に関する現在の提案に関するFAQ候補を選択](/help/dashboards/opportunities/assets/add-relevant-faqs-ui-02.png)
 
 ### 最適化のデプロイ
 
 エッジで公開する準備ができたら、**最適化をデプロイ**&#x200B;をクリックします。 「**Edgeにデプロイ**」ダイアログには、プッシュするURL、質問、および回答が一覧表示されます。 リストを確認し、**デプロイ**&#x200B;または&#x200B;**キャンセル**&#x200B;のいずれかを選択します。
 
-![Edgeへのデプロイ ダイアログ ](/help/dashboards/opportunities/assets/add-relevant-faqs-ui-03.png)
+![Edgeへのデプロイ ダイアログ &#x200B;](/help/dashboards/opportunities/assets/add-relevant-faqs-ui-03.png)
 
 デプロイが正常に完了すると、**デプロイメント完了**&#x200B;は、本番環境に公開された最適化の数を確認します。 ダイアログを閉じ、**修正候補**&#x200B;を開いてステータスを確認します。
 
-![ デプロイメント完了の確認](/help/dashboards/opportunities/assets/add-relevant-faqs-ui-04.png)
+![&#x200B; デプロイメント完了の確認](/help/dashboards/opportunities/assets/add-relevant-faqs-ui-04.png)
 
 >[!NOTE]
 >
@@ -71,7 +71,7 @@ LLM Optimizerは、ブランドのプロンプトセットにもとづいて、Q
 
 「**ライブを表示**」ウィンドウには、そのチェックに表示されているページ構造とFAQ コピーが表示されます。
 
-![ ライブを表示 – FAQを含む現在のページコンテンツ ](/help/dashboards/opportunities/assets/add-relevant-faqs-ui-05.png)
+![&#x200B; ライブを表示 – FAQを含む現在のページコンテンツ &#x200B;](/help/dashboards/opportunities/assets/add-relevant-faqs-ui-05.png)
 
 ## ロールバック
 
@@ -79,12 +79,12 @@ LLM Optimizerは、ブランドのプロンプトセットにもとづいて、Q
 
 **ロールバック** ダイアログには、ロールバックされる提案が一覧表示され、展開された最適化が元に戻されることを示す短い警告が表示されます。 リストを確認し、**ロールバック**&#x200B;または&#x200B;**キャンセル**&#x200B;をクリックします。
 
-![ ロールバックダイアログに、元に戻す候補が一覧表示されます](/help/dashboards/opportunities/assets/add-relevant-faqs-ui-07.png)
+![&#x200B; ロールバックダイアログに、元に戻す候補が一覧表示されます](/help/dashboards/opportunities/assets/add-relevant-faqs-ui-07.png)
 
 操作が完了すると、**正常にロールバックされました**&#x200B;の概要が表示されます。ダッシュボードに戻るには、この概要を閉じます。
 
-![ ロールバック完了 – ロールバックが完了しました](/help/dashboards/opportunities/assets/add-relevant-faqs-ui-08.png)
+![&#x200B; ロールバック完了 – ロールバックが完了しました](/help/dashboards/opportunities/assets/add-relevant-faqs-ui-08.png)
 
 ## デモでやってみましょう
 
-[Frescopa デモ ](https://play.llmo.now/org/demo-org)で、「関連するFAQを追加」ワークフローを確認します。
+[Frescopa デモ &#x200B;](https://play.llmo.now/org/demo-org)で、「関連するFAQを追加」ワークフローを確認します。
