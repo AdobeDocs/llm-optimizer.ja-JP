@@ -2,10 +2,19 @@
 title: Adobe LLM Optimizer
 description: Adobe LLM Optimizer でブランドを強化します。 言及を追跡し、インサイトを明らかにし、AI 駆動型の検索を活用できます。 可視性を制御して、今すぐ最適化を開始しましょう。
 TQID: https://experienceleague.adobe.com/ACuRLzs9s5fVE0HdY0ZPUIavO5-sqi-yLiBc64Cb8wc
-product_v2: id: d830747e-f8f3-4fce-8eff-d53b333b1639
-feature_v2: id: a0b5a505-2fd7-4c3d-b61c-b557fb6f0558id: c0713b97-4af8-4c41-b742-5afcc6ced468id: d1956731-2adb-4bb7-8301-2b239254ac72id: e0828736-236a-487b-a478-5a635455eadc
-subfeature_v2: id: b70f186a-2ef9-43ce-b452-25fa1d91bcdaid: c898dfb2-0885-42fb-b2af-b2d756752646
-topic_v2: id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+product_v2:
+  - id: d830747e-f8f3-4fce-8eff-d53b333b1639
+feature_v2:
+  - id: a0b5a505-2fd7-4c3d-b61c-b557fb6f0558
+  - id: c0713b97-4af8-4c41-b742-5afcc6ced468
+  - id: d1956731-2adb-4bb7-8301-2b239254ac72
+  - id: e0828736-236a-487b-a478-5a635455eadc
+subfeature_v2:
+  - id: b70f186a-2ef9-43ce-b452-25fa1d91bcda
+  - id: c898dfb2-0885-42fb-b2af-b2d756752646
+topic_v2:
+  - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
 autotag-review: '2026-04-30T18:10:07.393Z'
 source-git-commit: 733c693f35c5b023681962cc5089492b95645b28
 workflow-type: tm+mt
