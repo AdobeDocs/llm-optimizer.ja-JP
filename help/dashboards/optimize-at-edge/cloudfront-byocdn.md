@@ -2,17 +2,17 @@
 title: Edgeで最適化 – CloudFront （BYOCDN）
 description: LLM OptimizerのEdgeでCloudFront BYOCDN for Optimizeを設定する方法について説明します。
 feature: Opportunities
-source-git-commit: 13d2f4bbd1f9d3886f89f80df0e76093f2afdf13
+source-git-commit: 6cf66563c0ea043ab7f67e44be29b1e8d29d83d9
 workflow-type: tm+mt
-source-wordcount: '2207'
-ht-degree: 1%
+source-wordcount: '2217'
+ht-degree: 8%
 
 ---
 
 
 # CloudFront （BYOCDN）
 
-この設定により、エージェント型トラフィック（AI ボットおよびLLM ユーザーエージェントからのリクエスト）がEdge Optimize バックエンドサービス（`live.edgeoptimize.net`）にルーティングされます。 通常どおり、人間の訪問者とSEO ボットは、元のページから引き続き提供されます。 設定をテストするには、設定が完了した後、応答でヘッダー`x-edgeoptimize-request-id`を探します。
+この設定では、エージェントトラフィック（AI ボットおよび LLM ユーザーエージェントからのリクエスト）を Edge での最適化バックエンドサービス（`live.edgeoptimize.net`）にルーティングします。 人間の訪問者と SEO ボットは、通常どおりオリジンから引き続き提供されます。 設定をテストするには、設定が完了したら、応答のヘッダー `x-edgeoptimize-request-id` を探します。
 
 **前提条件**
 
@@ -20,7 +20,7 @@ CloudFront設定を設定する前に、次のことを確認してください�
 
 * Web サイトを提供する既存のCloudFront ディストリビューション。
 * Lambda関数、IAM ロール、CloudFront ディストリビューション、およびキャッシュポリシーを作成するためのAWS IAM権限。
-* LLM Optimizer UIから取得したEdge Optimize API キー。 手順については、[API キーの取得](/help/dashboards/optimize-at-edge/retrieve-api-keys.md#production-api-key)を参照してください。
+* LLM Optimizer UI から取得された Edge Optimize API キー。 手順については、[API キーの取得](/help/dashboards/optimize-at-edge/retrieve-api-keys.md#production-api-key)を参照してください。
 * （オプション）ステージング ルーティングをテストするには、[&#x200B; ステージング API キー](/help/dashboards/optimize-at-edge/retrieve-api-keys.md#staging-api-key-optional)を参照してください。
 
 **手順1: Edge Optimize Originの作成**
@@ -41,6 +41,7 @@ CloudFront設定を設定する前に、次のことを確認してください�
    |--------|-------|
    | `x-edgeoptimize-api-key` | あなたのAPI キー |
    | `x-forwarded-host` | `www.example.com` |
+   | `x-edgeoptimize-fetcher-key` | Fetcher キー（WAFを許可リストに加えるする場合のみ必要） |
 
    `www.example.com`を実際のweb サイトドメインに、そして`Your API key`をAdobe担当者から提供されたEdge Optimize API キーに置き換えます。
 
@@ -261,41 +262,41 @@ CloudFront設定を設定する前に、次のことを確認してください�
 
 **手順6：設定のテスト**
 
-**1. ボットトラフィックのテスト （最適化する必要があります）**
+**1. ボットトラフィックをテスト（最適化する必要があります）**
 
 エージェント型ボットユーザーエージェントでリクエストを送信します。 **最初のリクエスト**&#x200B;で、Edge Optimizeがページを処理およびキャッシュする際に、プロキシ化された（最適化されていない）応答を返す場合があります。 応答の`x-edgeoptimize-proxy: 1` ヘッダーでこれを識別できます。
 
-エージェント型ユーザーエージェントを使用してAI ボットリクエストをシミュレートします。
+エージェント型ユーザーエージェントを使用して、AI ボットリクエストをシミュレートします。
 
 ```
 curl -svo /dev/null https://www.example.com/page.html \
   --header "user-agent: chatgpt-user"
 ```
 
-応答が成功すると、`x-edgeoptimize-request-id` ヘッダーが含まれ、リクエストがEdge Optimizeを通じてルーティングされたことが確認されます。
+正常な応答には、リクエストが Edge での最適化を経由してルーティングされたことを確認する `x-edgeoptimize-request-id` ヘッダーが含まれます。
 
 ```
 < HTTP/2 200
 < x-edgeoptimize-request-id: 50fce12d-0519-4fc6-af78-d928785c1b85
 ```
 
-**2. 人間のトラフィックをテストします（影響を受けません）**
+**2. 人間のトラフィックをテスト（影響を受けません）**
 
-通常のヒューマンブラウザーリクエストをシミュレートします。
+通常の人間によるブラウザーリクエストをシミュレートします。
 
 ```
 curl -svo /dev/null https://www.example.com/page.html \
   --header "user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36"
 ```
 
-応答には、**not**&#x200B;に`x-edgeoptimize-request-id` ヘッダーを含める必要があります。 Edgeで最適化を有効にする前に、ページの内容と応答時間を同じにしておく必要があります。
+応答には、`x-edgeoptimize-request-id` ヘッダーを含め&#x200B;**ない**&#x200B;でください。 ページのコンテンツと応答時間は、Edge での最適化を有効にする前と同じ状態を維持する必要があります。
 
-**3. 2つのシナリオを区別する方法**
+**3. 2 つのシナリオを区別する方法**
 
-| ヘッダー | ボットトラフィック（最適化） | 人的トラフィック（影響なし） |
+| ヘッダー | ボットトラフィック（最適化） | 人間のトラフィック（影響を受けない） |
 |---|---|---|
-| `x-edgeoptimize-request-id` | 現在 – 一意のリクエスト IDを含む | 不在 |
-| `x-edgeoptimize-fo` | フェールオーバーが発生した場合にのみ存在します（値：`1`） | 不在 |
+| `x-edgeoptimize-request-id` | 存在 - 一意のリクエスト ID が含まれます | 不在 |
+| `x-edgeoptimize-fo` | フェイルオーバーが発生した場合のみ存在（値：`1`） | 不在 |
 
 {{verify-routing-status-in-ui}}
 
