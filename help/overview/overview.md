@@ -2,9 +2,19 @@
 title: LLM Optimizer の概要
 description: Adobe LLM Optimizer が AI 駆動型検索でブランドの可視性を高める仕組みについて説明します。 言及、引用、インサイトを追跡します。 エンゲージメントと影響力を高めるために、今すぐ最適化を開始しましょう。
 feature: Onboarding
-source-git-commit: c449e2eb728648285413390ce7dce973380597cc
+product_v2:
+  - id: d830747e-f8f3-4fce-8eff-d53b333b1639
+feature_v2:
+  - id: a0b5a505-2fd7-4c3d-b61c-b557fb6f0558
+  - id: c0713b97-4af8-4c41-b742-5afcc6ced468
+topic_v2:
+  - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+  - id: fc314d1d-7cb9-4a38-8dbd-8f9b6478f40d
+autotag-review: '2026-04-30T18:13:19.543Z'
+source-git-commit: b286358b901575290ace70b0eb47dcb82061559f
 workflow-type: tm+mt
-source-wordcount: '618'
+source-wordcount: 618
 ht-degree: 84%
 
 ---

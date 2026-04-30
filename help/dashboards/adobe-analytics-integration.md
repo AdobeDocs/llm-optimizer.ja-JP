@@ -2,9 +2,22 @@
 title: Adobe Analytics との統合
 description: Adobe AnalyticsとLLM Optimizerを連携して、AIを活用してサイトの発見、エンゲージメント、ビジネス成果を測定する方法を、リファラルトラフィックダッシュボードで説明します。
 feature: Referral Traffic
-source-git-commit: e7c9bc1d40267dc92608baa005f85f4be21cfda1
+product_v2:
+  - id: d830747e-f8f3-4fce-8eff-d53b333b1639
+feature_v2:
+  - id: a0b5a505-2fd7-4c3d-b61c-b557fb6f0558
+  - id: c0713b97-4af8-4c41-b742-5afcc6ced468
+  - id: d1956731-2adb-4bb7-8301-2b239254ac72
+subfeature_v2:
+  - id: e69d5a42-0217-4ca5-9396-a9a826a170da
+topic_v2:
+  - id: c2be0313-b3ae-45e0-b454-d20bf54b23f2
+  - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+autotag-review: '2026-04-30T18:25:39.169Z'
+source-git-commit: 733c693f35c5b023681962cc5089492b95645b28
 workflow-type: tm+mt
-source-wordcount: '879'
+source-wordcount: 879
 ht-degree: 4%
 
 ---
