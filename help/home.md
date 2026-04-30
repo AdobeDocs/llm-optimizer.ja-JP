@@ -142,7 +142,7 @@ CARDS
   {description= Learn how LLM Optimizer can help you drive brand authority in AI search and discovery.}
   {target=_blank}
   {cta=Learn more}
-* https://business.adobe.com/products/llm-optimizer.html
+* https://business.adobe.com/jp/products/llm-optimizer.html
   {title = Explore the capabilities of the Adobe LLM Optimizer}
   {image = /help/assets/overview/business-adobe.png}
   {target=_blank}
