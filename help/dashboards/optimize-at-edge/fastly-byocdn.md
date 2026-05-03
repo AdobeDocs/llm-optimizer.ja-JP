@@ -1,30 +1,30 @@
 ---
-title: Edgeで最適化 – Fastly （BYOCDN）
-description: LLM OptimizerのEdgeでFastly BYOCDN for Optimizeを設定する方法について説明します。
+title: Edge での最適化 - Fastly（BYOCDN）
+description: LLM Optimizer の Edge での最適化を行うのに Fastly BYOCDN を設定する方法について説明します。
 feature: Opportunities
 source-git-commit: 13d2f4bbd1f9d3886f89f80df0e76093f2afdf13
 workflow-type: tm+mt
 source-wordcount: '348'
-ht-degree: 6%
+ht-degree: 93%
 
 ---
 
 
-# Fastly （BYOCDN）
+# Fastly（BYOCDN）
 
-この設定により、エージェント型トラフィック（AI ボットおよびLLM ユーザーエージェントからのリクエスト）がEdge Optimize バックエンドサービス（`live.edgeoptimize.net`）にルーティングされます。 通常どおり、人間の訪問者とSEO ボットは、元のページから引き続き提供されます。 設定をテストするには、設定が完了した後、応答でヘッダー`x-edgeoptimize-request-id`を探します。
+この設定では、エージェントトラフィック（AI ボットおよび LLM ユーザーエージェントからのリクエスト）を Edge での最適化バックエンドサービス（`live.edgeoptimize.net`）にルーティングします。 人間の訪問者と SEO ボットは、通常どおりオリジンから引き続き提供されます。 設定をテストするには、設定が完了したら、応答のヘッダー `x-edgeoptimize-request-id` を探します。
 
 **前提条件**
 
-Fastly VCL ルールを設定する前に、次のことを確認してください。
+Fastly VCL ルールを設定する前に、以下を確認します。
 
-* ドメイン用にFastlyにアクセスします。
-* LLM Optimizer UIから取得したEdge Optimize API キー。 手順については、[API キーの取得](/help/dashboards/optimize-at-edge/retrieve-api-keys.md#production-api-key)を参照してください。
+* ドメインの Fastly へのアクセス権。
+* LLM Optimizer UI から取得された Edge Optimize API キー。 手順については、[API キーの取得](/help/dashboards/optimize-at-edge/retrieve-api-keys.md#production-api-key)を参照してください。
 * （オプション）ステージング ルーティングをテストするには、[&#x200B; ステージング API キー](/help/dashboards/optimize-at-edge/retrieve-api-keys.md#staging-api-key-optional)を参照してください。
 
 **設定**
 
-次の3つのVCL スニペットをFastly サービスに追加します。 これらのスニペットは、Edge Optimizeへのエージェント型リクエストのルーティング、キャッシュキーの分離、デフォルトのオリジンへのフェイルオーバーを処理します。
+Fastly サービスに次の 3 つの VCL スニペットを追加します。 これらのスニペットは、エージェント型リクエストを Edge での最適化にルーティングする処理、キャッシュキーの分離、デフォルトのオリジンへのフェイルオーバーを処理します。
 
 ![Fastly VCL](/help/assets/optimize-at-edge/fastly-vcl.png)
 
@@ -72,57 +72,57 @@ if (!req.http.x-edgeoptimize-config && req.http.x-edgeoptimize-request == "failo
 }
 ```
 
-**フェールオーバー**
+**フェイルオーバー**
 
-`vcl_deliver` スニペットは、フェールオーバーを自動的に処理します。 Edge Optimizeが`4XX`または`5XX` エラーを返した場合、リクエストは再起動され、デフォルトのオリジンにルーティングされ、エンドユーザーは引き続き応答を受け取ります。 フェールオーバー応答には、`x-edgeoptimize-fo: 1` ヘッダーが含まれます。
+`vcl_deliver` スニペットは、フェイルオーバーを自動的に処理します。 Edge での最適化が `4XX` または `5XX` エラーを返した場合、リクエストは再開され、デフォルトのオリジンにルーティングされるので、エンドユーザーは応答を引き続き受信できます。 フェイルオーバー応答には、`x-edgeoptimize-fo: 1` ヘッダーが含まれます。
 
 | シナリオ | 動作 |
 | --- | --- |
-| Edge Optimizeは`2XX`を返します | 最適化された応答がクライアントに提供されます。 |
-| Edge Optimizeは`4XX`または`5XX`を返します | リクエストは再起動され、デフォルトのオリジンから提供されます。 |
-| フェールオーバー応答 | ヘッダー`x-edgeoptimize-fo: 1`が含まれています。 |
+| Edge での最適化で `2XX` が返される | 最適化された応答がクライアントに提供されます。 |
+| Edge での最適化で `4XX` または `5XX` が返される | リクエストが再開され、デフォルトのオリジンから提供されます。 |
+| フェイルオーバー応答 | ヘッダー `x-edgeoptimize-fo: 1` を含みます。 |
 
 **ファイアウォール ルールを使用してEdgeで最適化を許可する（オプション）**
 
 {{waf-allowlist-setup}}
 
-**設定を確認**
+**設定の検証**
 
-設定が完了したら、ボットトラフィックがEdge Optimizeにルーティングされ、人間のトラフィックが影響を受けないことを確認します。
+設定が完了したら、ボットトラフィックが Edge での最適化にルーティングされていることと、人間のトラフィックに影響がないことを確認します。
 
-**1. ボットトラフィックのテスト （最適化する必要があります）**
+**1. ボットトラフィックをテスト（最適化する必要があります）**
 
-エージェント型ユーザーエージェントを使用してAI ボットリクエストをシミュレートします。
+エージェント型ユーザーエージェントを使用して、AI ボットリクエストをシミュレートします。
 
 ```
 curl -svo /dev/null https://www.example.com/page.html \
   --header "user-agent: chatgpt-user"
 ```
 
-応答が成功すると、`x-edgeoptimize-request-id` ヘッダーが含まれ、リクエストがEdge Optimizeを通じてルーティングされたことが確認されます。
+正常な応答には、リクエストが Edge での最適化を経由してルーティングされたことを確認する `x-edgeoptimize-request-id` ヘッダーが含まれます。
 
 ```
 < HTTP/2 200
 < x-edgeoptimize-request-id: 50fce12d-0519-4fc6-af78-d928785c1b85
 ```
 
-**2. 人間のトラフィックをテストします（影響を受けません）**
+**2. 人間のトラフィックをテスト（影響を受けません）**
 
-通常のヒューマンブラウザーリクエストをシミュレートします。
+通常の人間によるブラウザーリクエストをシミュレートします。
 
 ```
 curl -svo /dev/null https://www.example.com/page.html \
   --header "user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36"
 ```
 
-応答には、**not**&#x200B;に`x-edgeoptimize-request-id` ヘッダーを含める必要があります。 Edgeで最適化を有効にする前に、ページの内容と応答時間を同じにしておく必要があります。
+応答には、`x-edgeoptimize-request-id` ヘッダーを含め&#x200B;**ない**&#x200B;でください。 ページのコンテンツと応答時間は、Edge での最適化を有効にする前と同じ状態を維持する必要があります。
 
-**3. 2つのシナリオを区別する方法**
+**3. 2 つのシナリオを区別する方法**
 
-| ヘッダー | ボットトラフィック（最適化） | 人的トラフィック（影響なし） |
+| ヘッダー | ボットトラフィック（最適化） | 人間のトラフィック（影響を受けない） |
 |---|---|---|
-| `x-edgeoptimize-request-id` | 現在 – 一意のリクエスト IDを含む | 不在 |
-| `x-edgeoptimize-fo` | フェールオーバーが発生した場合にのみ存在します（値：`1`） | 不在 |
+| `x-edgeoptimize-request-id` | 存在 - 一意のリクエスト ID が含まれます | 不在 |
+| `x-edgeoptimize-fo` | フェイルオーバーが発生した場合のみ存在（値：`1`） | 不在 |
 
 {{verify-routing-status-in-ui}}
 
