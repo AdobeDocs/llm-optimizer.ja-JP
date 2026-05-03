@@ -1,18 +1,18 @@
 ---
-title: Edgeでの最適化 – AEM Cloud Service Managed CDN （Fastly）
-description: LLM OptimizerのEdgeで、AEM Cloud Service Managed CDN （Fastly） for Optimizeを設定する方法について説明します。
+title: Edge での最適化 - AEM Cloud Service の管理による CDN（Fastly）
+description: LLM Optimizer の Edge での最適化を行うのに AEM Cloud Service の管理による CDN（Fastly）を設定する方法について説明します。
 feature: Opportunities
 source-git-commit: 184d6008c2579014c6ff453e8bfff4bb898f4b82
 workflow-type: tm+mt
 source-wordcount: '836'
-ht-degree: 0%
+ht-degree: 20%
 
 ---
 
 
-# AEM Cloud Service Managed CDN （Fastly）
+# AEM Cloud Service の管理による CDN（Fastly）
 
-この設定により、エージェント型トラフィック（AI ボットおよびLLM ユーザーエージェントからのリクエスト）がEdge Optimize バックエンドサービス（`live.edgeoptimize.net`）にルーティングされます。 通常どおり、人間の訪問者とSEO ボットは、元のページから引き続き提供されます。 設定をテストするには、設定が完了した後、応答のヘッダー`x-edgeoptimize-request-id`を確認します。
+この設定では、エージェントトラフィック（AI ボットおよび LLM ユーザーエージェントからのリクエスト）を Edge での最適化バックエンドサービス（`live.edgeoptimize.net`）にルーティングします。 人間の訪問者と SEO ボットは、通常どおりオリジンから引き続き提供されます。 設定をテストするには、設定が完了した後、応答のヘッダー`x-edgeoptimize-request-id`を確認します。
 
 ## 前提条件
 
@@ -28,31 +28,31 @@ ht-degree: 0%
 
 ## ルーティングを有効にする手順
 
-エージェント型トラフィックのEdge Optimizeへのルーティングを開始するには：
+Edge での最適化へのエージェントトラフィックのルーティングを開始するには：
 
 1. LLM Optimizerで、**顧客設定**&#x200B;を開き、**CDN設定** タブを選択します。
 
-   ![顧客設定に移動](/help/assets/optimize-at-edge/cs-fastly-prereq-customer-config-nav.png)
+   ![顧客設定ダッシュボードに移動](/help/assets/optimize-at-edge/cs-fastly-prereq-customer-config-nav.png)
 
 2. 「**AI エージェントに最適化をデプロイ**」セクションを見つけます。 「**有効化**」ボタンをクリックします。
 
    ![AI エージェントへの最適化のデプロイ – 保留中](/help/assets/optimize-at-edge/cs-fastly-enable-button.png)
 
-3. 確認ダイアログで「**有効にする**」を選択し、ルーティングを有効にすることを確認します。 エラーが発生した場合は、「[&#x200B; トラブルシューティング &#x200B;](#troubleshooting)」セクションを参照して解決してください。
+3. 確認ダイアログで「**有効にする**」を選択し、ルーティングを有効にすることを確認します。 エラーが発生した場合は、「[ トラブルシューティング ](#troubleshooting)」セクションを参照して解決してください。
 
    ![最適化エンジン確認ダイアログを有効にする](/help/assets/optimize-at-edge/cs-fastly-enable-dialog.png)
 
 4. 確認が完了すると、ルーティングが完了するまでに数分かかります。
 
-   ![進行中のルーティング &#x200B;](/help/assets/optimize-at-edge/cs-fastly-enable-button-clicked-routing-in-progress.png)
+   ![進行中のルーティング ](/help/assets/optimize-at-edge/cs-fastly-enable-button-clicked-routing-in-progress.png)
 
-   5分後にページをリロードし、ルーティングが完了したことを確認します。 ルーティングが設定され、アクティブになると、ルーティングが有効であることを確認する緑色のチェックマークが付いて、ステータスが&#x200B;**完了**&#x200B;に更新されます。 ユーザー側でこれ以上の操作は必要ありません。
+   5分後にページをリロードし、ルーティングが完了したことを確認します。 ルーティングが設定され、アクティブになると、ルーティングが有効であることを確認する緑色のチェックマークが付いて、ステータスが&#x200B;**完了**&#x200B;に更新されます。 ユーザー側でこれ以上のアクションを行う必要はありません。
 
    ![AI エージェントへの最適化のデプロイ – 完了](/help/assets/optimize-at-edge/cs-fastly-disable-button.png)
 
    ルーティングを無効にするには、**CDN設定** タブの「**AI エージェントに最適化をデプロイ**」セクションに戻り、**無効化**」をクリックします。
 
-上記の手順についてサポートが必要な場合は、Adobe アカウントチームまたは`llmo-at-edge@adobe.com`にお問い合わせください。
+また、上記の手順について不明な点がある場合は、アドビのアカウントチームまたは `llmo-at-edge@adobe.com` にお問い合わせください。
 
 ## トラブルシューティング
 
@@ -106,14 +106,14 @@ ht-degree: 0%
 
 1. **ボットトラフィックのテスト （最適化する必要があります）**
 
-   エージェント型ユーザーエージェントを使用してAI ボットリクエストをシミュレートします。
+   エージェント型ユーザーエージェントを使用して、AI ボットリクエストをシミュレートします。
 
    ```
    curl -svo /dev/null https://www.example.com/page.html \
      --header "user-agent: chatgpt-user"
    ```
 
-   応答が成功すると、`x-edgeoptimize-request-id` ヘッダーが含まれ、リクエストがEdge Optimizeを通じてルーティングされたことが確認されます。
+   正常な応答には、リクエストが Edge での最適化を経由してルーティングされたことを確認する `x-edgeoptimize-request-id` ヘッダーが含まれます。
 
    ```
    < HTTP/2 200
@@ -122,21 +122,21 @@ ht-degree: 0%
 
 2. **人間のトラフィックをテストします（影響を受けません）**
 
-   通常のヒューマンブラウザーリクエストをシミュレートします。
+   通常の人間によるブラウザーリクエストをシミュレートします。
 
    ```
    curl -svo /dev/null https://www.example.com/page.html \
      --header "user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36"
    ```
 
-   応答に`x-edgeoptimize-request-id` ヘッダーを含めることはできません。 Edgeで最適化を有効にする前に、ページの内容と応答時間を同じにしておく必要があります。
+   応答に`x-edgeoptimize-request-id` ヘッダーを含めることはできません。 ページのコンテンツと応答時間は、Edge での最適化を有効にする前と同じ状態を維持する必要があります。
 
 3. **2つのシナリオを区別する方法**
 
-   | ヘッダー | ボットトラフィック（最適化） | 人的トラフィック（影響なし） |
+   | ヘッダー | ボットトラフィック（最適化） | 人間のトラフィック（影響を受けない） |
    |---|---|---|
-   | `x-edgeoptimize-request-id` | 現在 – 一意のリクエスト IDを含む | 不在 |
-   | `x-edgeoptimize-fo` | フェールオーバーが発生した場合にのみ存在します（値：`1`） | 不在 |
+   | `x-edgeoptimize-request-id` | 存在 - 一意のリクエスト ID が含まれます | 不在 |
+   | `x-edgeoptimize-fo` | フェイルオーバーが発生した場合のみ存在（値：`1`） | 不在 |
 
 4. **LLM Optimizerのルーティング状況を確認**
 

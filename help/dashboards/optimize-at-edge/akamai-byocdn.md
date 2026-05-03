@@ -1,26 +1,26 @@
 ---
-title: Edgeでの最適化 – Akamai （BYOCDN）
-description: LLM OptimizerのEdgeでAkamai BYOCDN for Optimizeを設定する方法について説明します。
+title: Edge での最適化 - Akamai（BYOCDN）
+description: LLM Optimizer の Edge での最適化に Akamai BYOCDN を設定する方法について説明します。
 feature: Opportunities
 source-git-commit: 13d2f4bbd1f9d3886f89f80df0e76093f2afdf13
 workflow-type: tm+mt
 source-wordcount: '809'
-ht-degree: 10%
+ht-degree: 62%
 
 ---
 
 
-# Akamai （BYOCDN）
+# Akamai（BYOCDN）
 
-この設定により、エージェント型トラフィック（AI ボットおよびLLM ユーザーエージェントからのリクエスト）がEdge Optimize バックエンドサービス（`live.edgeoptimize.net`）にルーティングされます。 通常どおり、人間の訪問者とSEO ボットは、元のページから引き続き提供されます。 設定をテストするには、設定が完了した後、応答でヘッダー`x-edgeoptimize-request-id`を探します。
+この設定では、エージェントトラフィック（AI ボットおよび LLM ユーザーエージェントからのリクエスト）を Edge での最適化バックエンドサービス（`live.edgeoptimize.net`）にルーティングします。 人間の訪問者と SEO ボットは、通常どおりオリジンから引き続き提供されます。 設定をテストするには、設定が完了したら、応答のヘッダー `x-edgeoptimize-request-id` を探します。
 
 **前提条件**
 
-Akamai プロパティマネージャールールを設定する前に、次のことを確認してください。
+Akamai Property Manager ルールを設定する前に、次の内容を確認します。
 
-* ドメインのAkamai Property Managerへのアクセス。
-* LLM Optimizer UIから取得したEdge Optimize API キー。 手順については、[API キーの取得](/help/dashboards/optimize-at-edge/retrieve-api-keys.md#production-api-key)を参照してください。
-* （オプション）ステージング ルーティングをテストするには、[&#x200B; ステージング API キー](/help/dashboards/optimize-at-edge/retrieve-api-keys.md#staging-api-key-optional)を参照してください。
+* ドメインの Akamai Property Manager へのアクセス権。
+* LLM Optimizer UI から取得された Edge Optimize API キー。 手順については、[API キーの取得](/help/dashboards/optimize-at-edge/retrieve-api-keys.md#production-api-key)を参照してください。
+* （オプション）ステージング ルーティングをテストするには、[ ステージング API キー](/help/dashboards/optimize-at-edge/retrieve-api-keys.md#staging-api-key-optional)を参照してください。
 
 **設定**
 
@@ -47,7 +47,7 @@ Akamai プロパティマネージャールールを設定する前に、次の�
 
 **2. オリジンと SSL の動作を設定**
 
-オリジンを`live.edgeoptimize.net`に設定し、SANを`*.edgeoptimize.net`に一致
+オリジンを `live.edgeoptimize.net` として設定し、SAN を `*.edgeoptimize.net` に一致させます。
 
 >[!NOTE]
 >
@@ -57,7 +57,7 @@ Akamai プロパティマネージャールールを設定する前に、次の�
 
 **3. キャッシュキー変数を設定**
 
-キャッシュキー変数`PMUSER_EDGE_OPTIMIZE_CACHE_KEY`を`LLMCLIENT=TRUE;X_FORWARDED_HOST={{builtin.AK_HOST}}`に設定します
+キャッシュキー変数 `PMUSER_EDGE_OPTIMIZE_CACHE_KEY` を `LLMCLIENT=TRUE;X_FORWARDED_HOST={{builtin.AK_HOST}}` に設定します。
 
 ![キャッシュキー変数を設定](/help/assets/optimize-at-edge/akamai-step3-cachekey.png)
 
@@ -94,17 +94,17 @@ LLMOから取得したAPI キーへの`x-edgeoptimize-api-key`
 
 **8. 送信リクエストヘッダーを変更**
 
-`x-forwarded-host` ヘッダーを`{{builtin.AK_HOST}}`に設定
+`x-forwarded-host` ヘッダーを `{{builtin.AK_HOST}}` に設定します。
 
 ![送信リクエストヘッダーを変更](/help/assets/optimize-at-edge/akamai-step8-outgoing-request.png)
 
 **9. サイトフェイルオーバー**
 
-サイト フェールオーバー設定には、フェールオーバー動作（メインのエッジ最適化ルーティング ルール内で設定）と個別のフェールオーバーテストヘッダールールの2つの部分があります。
+サイトフェイルオーバー設定には、フェイルオーバー動作（メインの optimize-at-edge ルーティングルール内で設定）と、個別のフェイルオーバーテストヘッダールールの 2 つの部分かがあります。
 
-**9a。 サイト フェールオーバー動作（メインのエッジで最適化ルーティング ルール内）**
+**9a. サイトフェイルオーバー動作（メインの optimize-at-edge ルーティングルール内）**
 
-メインのルーティングルール内で、サイトフェールオーバー動作と高度なXML スニペットを次のように設定します。
+メインのルーティングルール内で、サイトフェイルオーバー動作と高度な XML スニペットを次のように設定します。
 
 >[!IMPORTANT]
 >
@@ -112,7 +112,7 @@ LLMOから取得したAPI キーへの`x-edgeoptimize-api-key`
 
 ![サイトフェイルオーバー](/help/assets/optimize-at-edge/akamai-step9-failover.png)
 
-高度なXMLを使用して、値`fo`のリクエストヘッダー`x-edgeoptimize-request`を追加します。
+高度な XML を通じて、リクエストヘッダー `x-edgeoptimize-request` に値 `fo` を追加します。
 
 ```
 <forward:availability.fail-action2>
@@ -126,11 +126,11 @@ LLMOから取得したAPI キーへの`x-edgeoptimize-api-key`
 
 ![フェイルオーバー動作](/help/assets/optimize-at-edge/akamai-step9-failover-behaviors.png)
 
-**9b. フェールオーバーテスト ヘッダー規則（兄弟ルール）**
+**9b. フェイルオーバーテストヘッダールール（兄弟ルール）**
 
 >[!IMPORTANT]
 >
->**EdgeOptimize Failover - Test Header** ルールを、ルーティングルールの&#x200B;**兄弟** （同じレベル）として作成します（**not**）。 Akamai プロパティマネージャールールツリーでは、階層は次のようになります。
+>**EdgeOptimize フェイルオーバー - テストヘッダー**&#x200B;ルールを、ルーティングルールの&#x200B;**兄弟**&#x200B;として（同じレベルで）作成します。ルーティングルールの内部にネスト&#x200B;**しない**&#x200B;でください。 Akamai Property Manager のルールツリーでは、階層は次のようになります。
 >
 >```
 >▼ Parent Rule
@@ -138,58 +138,58 @@ LLMOから取得したAPI キーへの`x-edgeoptimize-api-key`
 >       EdgeOptimize Failover - Test Header       ← sibling, same level
 >```
 >
->これにより、フェールオーバーテストヘッダールールは、1つだけでなく&#x200B;**all** ルーティングルールに対しても評価されます。
+>これにより、フェイルオーバーテストヘッダールールが、1 つだけでなく、**すべて**&#x200B;のルーティングルールに対して評価されることが確保されます。
 >
 >また、**Edge ルーティングで最適化** ルールが、同じリクエストのオリジン、キャッシュ動作、またはキャッシュ IDを変更する後で一致するルールによって上書きされないようにします。 別の一致するルールがこれらの動作をリセットする場合、Edgeで最適化のルーティングまたはキャッシュが期待どおりに動作しない可能性があります。
 
-リクエストヘッダー`x-edgeoptimize-request`の値が`fo`の場合、送信レスポンスヘッダー`x-edgeoptimize-fo`を`true`に設定します。
+リクエストヘッダーの `x-edgeoptimize-request` の値が `fo` の場合、送信応答ヘッダーの `x-edgeoptimize-fo` を `true` に設定します。
 
 ![フェイルオーバールール](/help/assets/optimize-at-edge/akamai-step9-failover-rules.png)
 
-サイトフェールオーバーは、Edge Optimizeが`4XX`または`5XX` エラーを返した場合、リクエストがデフォルトのオリジンに自動的にルーティングされ、エンドユーザーが応答を受け取るようにします。
+サイトフェイルオーバーにより、Edge での最適化が `4XX` または `5XX` エラーを返した場合、リクエストは自動的にデフォルトのオリジンにルーティングされるので、エンドユーザーは応答を引き続き受信できます。
 
 | シナリオ | 動作 |
 | --- | --- |
-| Edge Optimizeは`2XX`を返します | 最適化された応答がクライアントに提供されます。 |
-| Edge Optimizeは`4XX`または`5XX`を返します | リクエストはデフォルトのオリジンに戻されます。 |
+| Edge での最適化で `2XX` が返される | 最適化された応答がクライアントに提供されます。 |
+| Edge での最適化で `4XX` または `5XX` が返される | リクエストがデフォルトのオリジンにルーティングされます。 |
 
-**設定を確認**
+**設定の検証**
 
-設定が完了したら、ボットトラフィックがEdge Optimizeにルーティングされ、人間のトラフィックが影響を受けないことを確認します。
+設定が完了したら、ボットトラフィックが Edge での最適化にルーティングされていることと、人間のトラフィックに影響がないことを確認します。
 
-**1. ボットトラフィックのテスト （最適化する必要があります）**
+**1. ボットトラフィックをテスト（最適化する必要があります）**
 
-エージェント型ユーザーエージェントを使用してAI ボットリクエストをシミュレートします。
+エージェント型ユーザーエージェントを使用して、AI ボットリクエストをシミュレートします。
 
 ```
 curl -svo /dev/null https://www.example.com/page.html \
   --header "user-agent: chatgpt-user"
 ```
 
-応答が成功すると、`x-edgeoptimize-request-id` ヘッダーが含まれ、リクエストがEdge Optimizeを通じてルーティングされたことが確認されます。
+正常な応答には、リクエストが Edge での最適化を経由してルーティングされたことを確認する `x-edgeoptimize-request-id` ヘッダーが含まれます。
 
 ```
 < HTTP/2 200
 < x-edgeoptimize-request-id: 50fce12d-0519-4fc6-af78-d928785c1b85
 ```
 
-**2. 人間のトラフィックをテストします（影響を受けません）**
+**2. 人間のトラフィックをテスト（影響を受けません）**
 
-通常のヒューマンブラウザーリクエストをシミュレートします。
+通常の人間によるブラウザーリクエストをシミュレートします。
 
 ```
 curl -svo /dev/null https://www.example.com/page.html \
   --header "user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36"
 ```
 
-応答には、**not**&#x200B;に`x-edgeoptimize-request-id` ヘッダーを含める必要があります。 Edgeで最適化を有効にする前に、ページの内容と応答時間を同じにしておく必要があります。
+応答には、`x-edgeoptimize-request-id` ヘッダーを含め&#x200B;**ない**&#x200B;でください。 ページのコンテンツと応答時間は、Edge での最適化を有効にする前と同じ状態を維持する必要があります。
 
-**3. 2つのシナリオを区別する方法**
+**3. 2 つのシナリオを区別する方法**
 
-| ヘッダー | ボットトラフィック（最適化） | 人的トラフィック（影響なし） |
+| ヘッダー | ボットトラフィック（最適化） | 人間のトラフィック（影響を受けない） |
 |---|---|---|
-| `x-edgeoptimize-request-id` | 現在 – 一意のリクエスト IDを含む | 不在 |
-| `x-edgeoptimize-fo` | フェールオーバーが発生した場合にのみ存在します（値：`1`） | 不在 |
+| `x-edgeoptimize-request-id` | 存在 - 一意のリクエスト ID が含まれます | 不在 |
+| `x-edgeoptimize-fo` | フェイルオーバーが発生した場合のみ存在（値：`1`） | 不在 |
 
 {{verify-routing-status-in-ui}}
 

@@ -5,7 +5,7 @@ feature: Onboarding
 source-git-commit: c449e2eb728648285413390ce7dce973380597cc
 workflow-type: tm+mt
 source-wordcount: '262'
-ht-degree: 87%
+ht-degree: 94%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 87%
 
 ダッシュボードの概要へようこそ。 LLM-Optimizer のダッシュボードは、マーケターが AI 検索プラットフォームをまたいでブランドの可視性とセンチメントを追跡し、最適化の機会を特定し、引用とパフォーマンスを改善する規範的な変更を実装するのに役立ちます。
 
-主要なビューには、概要、ブランドプレゼンス、Agenticおよびリファラルトラフィック、URL Inspector、Opportunities、Collaboration、Customer Configurationが含まれます。
+主なビューには、概要、ブランドプレゼンス、エージェントとリファラルトラフィック、URL インスペクター、機会、コラボレーション、顧客設定が含まれます。
 
 <!--
 CARDS
