@@ -12,9 +12,9 @@ topic_v2:
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
   - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
 autotag-review: '2026-04-30T18:12:24.085Z'
-source-git-commit: b286358b901575290ace70b0eb47dcb82061559f
+source-git-commit: 9c8e5750410f0746d1777d2637d84561d15a7a64
 workflow-type: tm+mt
-source-wordcount: 1463
+source-wordcount: 1472
 ht-degree: 38%
 
 ---
@@ -62,9 +62,9 @@ AEM Cloudのお客様は、体験版をアクティベートするために、�
 
 ![LLM Optimizer 体験版](/help/overview/assets/llm-trial.png)
 
-#### Adobe Analyticsをご利用のお客様
+#### Adobe AnalyticsとAdobe Customer Journey Analytics
 
-Adobe Analyticsをご利用の場合は、Experience Cloud ホームページにバナーが表示されます。
+Adobe AnalyticsとAdobe Customer Journey Analyticsをご利用のお客様の場合は、Experience Cloud ホームページにバナーが表示されます。
 
 ![Experience Cloudのホームページと「Adobe LLM Optimizer体験版を開始」バナー](/help/overview/assets/experience-cloud-llmo-trial-banner.png)
 
@@ -77,7 +77,7 @@ Adobe Analyticsをご利用の場合は、Experience Cloud ホームページに
 
 >[!NOTE]
 >
-> * **無償体験版：** AEM CloudおよびAdobe Analyticsのお客様は、無償体験版のLLM Optimizerを使用できます。
+> * **無償体験版：** AEM CloudおよびAdobe Analytics/Customer Journey Analyticsのお客様は、無償体験版のLLM Optimizerを使用できます。
 > * **2026年4月1日以降に体験版をアクティベートするお客様**&#x200B;は、最大100個のプロンプト、1つのドメインを使用でき、1つの機会タイプに対して最大10個のURLに最適化をデプロイできます。
 > * **2026年4月1日より前に体験版をアクティベートしたお客様**&#x200B;は、引き続き、既存の条件に従って最大200個のプロンプトにアクセスできます。
 >
