@@ -2,19 +2,14 @@
 title: クイックスタート
 description: ブランド名とドメインをオンボーディングし、Experience HubまたはExperience Cloudから体験版をアクティベートして、Adobe LLM Optimizerの設定を完了する方法について説明します。
 feature: Quickstart, Onboarding
-product_v2:
-  - id: d830747e-f8f3-4fce-8eff-d53b333b1639
-feature_v2:
-  - id: c0713b97-4af8-4c41-b742-5afcc6ced468
-subfeature_v2:
-  - id: b70f186a-2ef9-43ce-b452-25fa1d91bcda
-topic_v2:
-  - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
-  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+product_v2: id: d830747e-f8f3-4fce-8eff-d53b333b1639
+feature_v2: id: c0713b97-4af8-4c41-b742-5afcc6ced468
+subfeature_v2: id: b70f186a-2ef9-43ce-b452-25fa1d91bcda
+topic_v2: id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1id: e1e0219c-f879-479f-8427-888ed2a6e9c2
 autotag-review: '2026-04-30T18:12:24.085Z'
-source-git-commit: b286358b901575290ace70b0eb47dcb82061559f
+source-git-commit: 9c8e5750410f0746d1777d2637d84561d15a7a64
 workflow-type: tm+mt
-source-wordcount: 1463
+source-wordcount: 1472
 ht-degree: 38%
 
 ---
@@ -22,7 +17,7 @@ ht-degree: 38%
 
 # クイックスタート
 
-LLM Optimizerを使い始めるには、オンボーディングプロセスを完了してください。 次に、カテゴリ、トピック、プロンプトをカスタマイズし、CDN ログ転送を設定し、完全なインサイトを得るために[&#x200B; ダッシュボード &#x200B;](/help/dashboards/dashboards-overview.md)を開きます。
+LLM Optimizerを使い始めるには、オンボーディングプロセスを完了してください。 次に、カテゴリ、トピック、プロンプトをカスタマイズし、CDN ログ転送を設定し、完全なインサイトを得るために[ ダッシュボード ](/help/dashboards/dashboards-overview.md)を開きます。
 
 <!--Where steps differ by layout, use **Customer Configuration (classic experience)** or **Brands Management** / **Prompts Management**, whichever matches your current interface.-->
 
@@ -62,9 +57,9 @@ AEM Cloudのお客様は、体験版をアクティベートするために、�
 
 ![LLM Optimizer 体験版](/help/overview/assets/llm-trial.png)
 
-#### Adobe Analyticsをご利用のお客様
+#### Adobe AnalyticsとAdobe Customer Journey Analytics
 
-Adobe Analyticsをご利用の場合は、Experience Cloud ホームページにバナーが表示されます。
+Adobe AnalyticsとAdobe Customer Journey Analyticsをご利用のお客様の場合は、Experience Cloud ホームページにバナーが表示されます。
 
 ![Experience Cloudのホームページと「Adobe LLM Optimizer体験版を開始」バナー](/help/overview/assets/experience-cloud-llmo-trial-banner.png)
 
@@ -77,7 +72,7 @@ Adobe Analyticsをご利用の場合は、Experience Cloud ホームページに
 
 >[!NOTE]
 >
-> * **無償体験版：** AEM CloudおよびAdobe Analyticsのお客様は、無償体験版のLLM Optimizerを使用できます。
+> * **無償体験版：** AEM CloudおよびAdobe Analytics/Customer Journey Analyticsのお客様は、無償体験版のLLM Optimizerを使用できます。
 > * **2026年4月1日以降に体験版をアクティベートするお客様**&#x200B;は、最大100個のプロンプト、1つのドメインを使用でき、1つの機会タイプに対して最大10個のURLに最適化をデプロイできます。
 > * **2026年4月1日より前に体験版をアクティベートしたお客様**&#x200B;は、引き続き、既存の条件に従って最大200個のプロンプトにアクセスできます。
 >
@@ -119,7 +114,7 @@ LLM Optimizerを使用するには、ブランド名とドメインをオンボ�
 
 ### 顧客設定（従来のナビゲーション）
 
-従来のナビゲーション（ブランド中心のエクスペリエンスではなく）を使用している場合は、[顧客設定ダッシュボード &#x200B;](/help/dashboards/customer-configuration.md)から、ブランドのカテゴリ、トピック、プロンプトをカスタマイズできます。
+従来のナビゲーション（ブランド中心のエクスペリエンスではなく）を使用している場合は、[顧客設定ダッシュボード ](/help/dashboards/customer-configuration.md)から、ブランドのカテゴリ、トピック、プロンプトをカスタマイズできます。
 
 ![顧客設定ダッシュボード](/help/overview/assets/prompt-creation.png)
 
@@ -144,11 +139,11 @@ LLM Optimizerを使用するには、ブランド名とドメインをオンボ�
 
 * **カテゴリ** — **ブランド管理**&#x200B;に移動し、**カテゴリ**&#x200B;をクリックします。 カテゴリーはグローバルレベルで定義され、ブランド管理の下のすべてのブランドに適用されます。
 
-  ![&#x200B; ナビゲーションにカテゴリを含むブランド管理](/help/assets/brand-centric-experience/llmo-app-shell.png)
+  ![ ナビゲーションにカテゴリを含むブランド管理](/help/assets/brand-centric-experience/llmo-app-shell.png)
 
 * **トピックとプロンプト** — **プロンプト管理**&#x200B;に移動して、特定のブランドのプロンプトを含むトピックとプロンプトを作成します。
 
-  ![&#x200B; プロンプト管理](/help/assets/brand-centric-experience/prompts-management.png)
+  ![ プロンプト管理](/help/assets/brand-centric-experience/prompts-management.png)
 
 ## 手順 3：ブランドプレゼンスインサイト
 
@@ -164,7 +159,7 @@ LLM Optimizerを使用するには、ブランド名とドメインをオンボ�
 
 ### 顧客設定（従来のナビゲーション）
 
-従来のナビゲーションを使用している場合は、[顧客設定ダッシュボード &#x200B;](/help/dashboards/customer-configuration.md#cdn-configuration)からCDN ログ転送情報を追加できます。 「**CDN設定**」タブを開き、**オンボード CDN**&#x200B;を選択します。
+従来のナビゲーションを使用している場合は、[顧客設定ダッシュボード ](/help/dashboards/customer-configuration.md#cdn-configuration)からCDN ログ転送情報を追加できます。 「**CDN設定**」タブを開き、**オンボード CDN**&#x200B;を選択します。
 
 ![顧客設定 CDN](/help/overview/assets/cc-cdn.png)
 
@@ -180,7 +175,7 @@ LLM Optimizerを使用するには、ブランド名とドメインをオンボ�
 
 Brand Centric エクスペリエンスを利用しているお客様の場合、**Brands Management**&#x200B;からCDN ログ転送情報を追加できます。**Brands Management**&#x200B;を開き、**CDN** ラベルをクリックします。
 
-![&#x200B; ブランド管理 – CDN ログ転送](/help/assets/brand-centric-experience/brands-management-cdn.png)
+![ ブランド管理 – CDN ログ転送](/help/assets/brand-centric-experience/brands-management-cdn.png)
 
 ## 手順 5：ダッシュボードを探索し、アクションを実行
 
