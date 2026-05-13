@@ -36,15 +36,15 @@ Google Cloud プロジェクトを作成する、サービスアカウントを�
 
 1. 「**ビジネスへの影響**」タブを開きます。
 
-   ![リファラルトラフィックダッシュボード、「ビジネスへの影響」タブ ](/help/dashboards/assets/ga4-integration-01-business-impact-tab.png)
+   ![リファラルトラフィックダッシュボード、「ビジネスへの影響」タブ &#x200B;](/help/dashboards/assets/ga4-integration-01-business-impact-tab.png)
 
 1. 「**Analyticsに接続**」を選択します。 LLM Optimizerによって&#x200B;**Customer Configuration > Analytics**&#x200B;にルーティングされます。 Analytics Provider ピッカーで、**Connect Google Analytics 4**&#x200B;を選択します。
 
-   ![顧客設定、GA4が選択されたAnalytics タブ ](/help/dashboards/assets/ga4-integration-02-analytics-ga4-picker.png)
+   ![顧客設定、GA4が選択されたAnalytics タブ &#x200B;](/help/dashboards/assets/ga4-integration-02-analytics-ga4-picker.png)
 
 1. 「**アカウントを接続**」を選択します。 Googleのログイン画面に新しいブラウザータブが開きます。
 
-   ![GA4接続に対するGoogle ログイン ](/help/dashboards/assets/ga4-integration-03-google-sign-in.png)
+   ![GA4接続に対するGoogle ログイン &#x200B;](/help/dashboards/assets/ga4-integration-03-google-sign-in.png)
 
 1. 接続するGA4 プロパティにアクセスできるGoogle アカウントでログインします。 Googleでプロンプトが表示されたら、`See and download your Google Analytics data`権限（`analytics.readonly` スコープ）を承認します。
 
