@@ -2,9 +2,9 @@
 title: Google Analyticsとの連携
 description: Google Analytics 4とLLM Optimizerを連携させて、AIを活用してサイトの発見、エンゲージメント、ビジネス成果を測定する方法を、リファラルトラフィックダッシュボードで説明します。
 feature: Referral Traffic
-source-git-commit: abf88fc3e141e12d6b5c826e35d4590ae6407c9b
+source-git-commit: 368b3c1ee79660ede0c4bf9824f299d2e801c8b2
 workflow-type: tm+mt
-source-wordcount: '1168'
+source-wordcount: '1169'
 ht-degree: 1%
 
 ---
@@ -13,8 +13,6 @@ ht-degree: 1%
 # Google Analyticsとの連携
 
 Google Analytics 4 （GA4）との統合により、LLM Optimizerと自社のGA4 データを連携できます。これにより、ChatGPT、Gemini、Copilot、Claude、Perplexityなどのプラットフォームで、AIを利用してインサイトの発見がどのように実際のweb サイトのエンゲージメントとビジネス成果に結びついているのかを測定できます。 GA4 プロパティを接続すると、LLM OptimizerはGA4属性のリファラルトラフィック、エンゲージメント、コンバージョンの指標をそれらのソースに引き出し、**リファラルトラフィック** ダッシュボードの&#x200B;**ビジネスへの影響** タブに表示します。
-
-## 対象 {#availability}
 
 >[!IMPORTANT]
 >
@@ -38,15 +36,15 @@ Google Cloud プロジェクトを作成する、サービスアカウントを�
 
 1. 「**ビジネスへの影響**」タブを開きます。
 
-   ![リファラルトラフィックダッシュボード、「ビジネスへの影響」タブ &#x200B;](/help/dashboards/assets/ga4-integration-01-business-impact-tab.png)
+   ![リファラルトラフィックダッシュボード、「ビジネスへの影響」タブ ](/help/dashboards/assets/ga4-integration-01-business-impact-tab.png)
 
-1. 「**Analyticsに接続**」を選択します。 LLM Optimizerによって&#x200B;**Customer Configuration > Analytics**&#x200B;にルーティングされます。 Analytics Provider ピッカーで、**Google Analytics 4**&#x200B;を選択します。
+1. 「**Analyticsに接続**」を選択します。 LLM Optimizerによって&#x200B;**Customer Configuration > Analytics**&#x200B;にルーティングされます。 Analytics Provider ピッカーで、**Connect Google Analytics 4**&#x200B;を選択します。
 
-   ![顧客設定、GA4が選択されたAnalytics タブ &#x200B;](/help/dashboards/assets/ga4-integration-02-analytics-ga4-picker.png)
+   ![顧客設定、GA4が選択されたAnalytics タブ ](/help/dashboards/assets/ga4-integration-02-analytics-ga4-picker.png)
 
-1. 「**接続**」を選択します。 Googleのログイン画面に新しいブラウザータブが開きます。
+1. 「**アカウントを接続**」を選択します。 Googleのログイン画面に新しいブラウザータブが開きます。
 
-   ![GA4接続に対するGoogle ログイン &#x200B;](/help/dashboards/assets/ga4-integration-03-google-sign-in.png)
+   ![GA4接続に対するGoogle ログイン ](/help/dashboards/assets/ga4-integration-03-google-sign-in.png)
 
 1. 接続するGA4 プロパティにアクセスできるGoogle アカウントでログインします。 Googleでプロンプトが表示されたら、`See and download your Google Analytics data`権限（`analytics.readonly` スコープ）を承認します。
 
