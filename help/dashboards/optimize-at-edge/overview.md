@@ -168,7 +168,7 @@ IT／CDN チームの要件：
 
 各オポチュニティについて、Edge での最適化をプレビュー、編集、デプロイ、ライブ表示、ロールバックできます。
 
->[!VIDEO](https://video.tv.adobe.com/v/3477983/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3477985/?captions=jpn&learn=on&enablevpops)
 
 ### プレビュー
 
