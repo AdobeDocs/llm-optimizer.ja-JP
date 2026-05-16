@@ -2,9 +2,15 @@
 title: Wikipedia 分析
 description: LLM Optimizerが貴社のウィキペディアの存在感をどのように分析し、AI 検索結果のブランドの可視性を改善するための推奨事項を提供しているかをご覧ください。
 feature: Opportunities
-source-git-commit: fa8b994aa55869cf7f2607e792acc4e8abc213e7
+autotag-review: '2026-05-15T18:11:32.093Z'
+TQID: 'https://experienceleague.adobe.com/D4zBCs6iEOtskT7flnLSOVKxzSL630sF-YURvnMpOGU'
+product_v2: id: d830747e-f8f3-4fce-8eff-d53b333b1639
+feature_v2: id: c0713b97-4af8-4c41-b742-5afcc6ced468
+subfeature_v2: id: e1b649f0-0a61-46e4-9082-64d5cb2576c6
+topic_v2: id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+source-git-commit: 564171851fdccee43afd233da143d66182464889
 workflow-type: tm+mt
-source-wordcount: '979'
+source-wordcount: 979
 ht-degree: 3%
 
 ---
@@ -24,7 +30,7 @@ Wikipedia分析の機会は、AIを活用して競合他社と比較してWikipe
 - **Images** – 記事の視覚的な豊かさ。
 - **インフォボックスの完全性** – 構造化データ フィールドが存在する場合と、競合他社が含む場合。
 
-![Wikipedia Analysis ダッシュボード &#x200B;](/help/dashboards/opportunities/assets/wikipedia-analysis-overview.png)
+![Wikipedia Analysis ダッシュボード ](/help/dashboards/opportunities/assets/wikipedia-analysis-overview.png)
 
 ## 仕組み
 
@@ -36,7 +42,7 @@ LLM Optimizerは、自社のWikipediaのページをスクレイピングし、�
 
 このタブには、Wikipedia ページを改善するための戦略的な推奨事項が表示されます。 各推奨事項には、優先度レベル、ギャップの説明、LLMにとって重要な理由、およびその修正の予想される結果が含まれます。
 
-![提案とガイダンス タブ &#x200B;](/help/dashboards/opportunities/assets/wikipedia-analysis-suggestions.png)
+![提案とガイダンス タブ ](/help/dashboards/opportunities/assets/wikipedia-analysis-suggestions.png)
 
 タブの上部にある&#x200B;**ガイダンス** パネルには、分析の概要が3つの列で表示されます。
 
@@ -72,7 +78,7 @@ LLM Optimizerは、自社のWikipediaのページをスクレイピングし、�
 
 「**市場比較**」タブには、競合他社のベンチマークテーブルと、Wikipedia ページと業界の同業他社を比較した視覚的チャートが表示されます。
 
-![&#x200B; マーケット比較タブ &#x200B;](/help/dashboards/opportunities/assets/wikipedia-analysis-market-comparison.png)
+![ マーケット比較タブ ](/help/dashboards/opportunities/assets/wikipedia-analysis-market-comparison.png)
 
 比較では、参照、セクション、単語数がカバーされており、業界内のどこにランク付けされているか、ベンチマークに到達したり、それを上回ったりするためにどの程度の改善が必要かを把握するのに役立ちます。
 
@@ -80,7 +86,7 @@ LLM Optimizerは、自社のWikipediaのページをスクレイピングし、�
 
 「**記事**」タブには、現在のWikipedia ページの詳細なスナップショットが表示されます。
 
-![記事タブ &#x200B;](/help/dashboards/opportunities/assets/wikipedia-analysis-your-article.png)
+![記事タブ ](/help/dashboards/opportunities/assets/wikipedia-analysis-your-article.png)
 
 これには以下が含まれます。
 
@@ -112,7 +118,7 @@ Wikipediaのページを改善すると、ChatGPT （無料および有料）、
 
 **Wikipedia ページを編集するにはどうすればよいですか？**
 
-Wikipediaの編集は、[編集ガイドライン &#x200B;](https://en.wikipedia.org/wiki/Wikipedia:Editing_policy)に従ってWikipediaで直接行う必要があります。 LLM Optimizerには、必要な具体的な推奨事項とデータソースが用意されています。編集自体はWikipediaで行われています。 記事にトーンの問題のフラグが付いている場合は、変更を加える前に、Wikipediaの[中立的な視点ポリシー](https://en.wikipedia.org/wiki/Wikipedia:Neutral_point_of_view)を確認してください。
+Wikipediaの編集は、[編集ガイドライン ](https://en.wikipedia.org/wiki/Wikipedia:Editing_policy)に従ってWikipediaで直接行う必要があります。 LLM Optimizerには、必要な具体的な推奨事項とデータソースが用意されています。編集自体はWikipediaで行われています。 記事にトーンの問題のフラグが付いている場合は、変更を加える前に、Wikipediaの[中立的な視点ポリシー](https://en.wikipedia.org/wiki/Wikipedia:Neutral_point_of_view)を確認してください。
 
 **LLM Optimizerから直接レコメンデーションを適用できますか？**
 
@@ -124,4 +130,4 @@ Wikipedia分析は、前回のデータ更新時のWikipedia ページと競合�
 
 **会社にWikipedia ページがない場合はどうなりますか？**
 
-Wikipedia分析の機会には、既存のWikipediaの記事が必要です。 自社にウィキペディアがない場合は、ウィキペディアの[公知ガイドライン &#x200B;](https://en.wikipedia.org/wiki/Wikipedia:Notability)に準拠したウィキペディアページを作成することは、他の最適化よりも優先する価値のある基本的なGEO ステップです。
+Wikipedia分析の機会には、既存のWikipediaの記事が必要です。 自社にウィキペディアがない場合は、ウィキペディアの[公知ガイドライン ](https://en.wikipedia.org/wiki/Wikipedia:Notability)に準拠したウィキペディアページを作成することは、他の最適化よりも優先する価値のある基本的なGEO ステップです。

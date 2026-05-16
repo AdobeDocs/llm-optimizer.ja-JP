@@ -2,9 +2,15 @@
 title: 目次を追加
 description: LLM Optimizerが、AI エージェントの明確なナビゲーション構造を持たないトラフィックの多いページを特定する方法と、EdgeでOptimizeを使用して目次をレビューおよびデプロイする方法について説明します。
 feature: Opportunities
-source-git-commit: 36a6836f86b6d31cc4bf4682e881bd127edf66e4
+autotag-review: '2026-05-15T17:29:21.334Z'
+TQID: 'https://experienceleague.adobe.com/A-Oxmmn-Cb4l9-iVx1TAKxvBTEOxRIAnRe1w1PqF6OI'
+product_v2: id: d830747e-f8f3-4fce-8eff-d53b333b1639
+feature_v2: id: c0713b97-4af8-4c41-b742-5afcc6ced468
+subfeature_v2: id: e1b649f0-0a61-46e4-9082-64d5cb2576c6
+topic_v2: id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
+source-git-commit: 7a92587197cf6a9eec6b01bd4eaeeaf1194d3088
 workflow-type: tm+mt
-source-wordcount: '655'
+source-wordcount: 655
 ht-degree: 0%
 
 ---

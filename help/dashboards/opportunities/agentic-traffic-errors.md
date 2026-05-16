@@ -2,9 +2,15 @@
 title: エージェント型トラフィック エラー
 description: LLM Optimizerが、サイトをクロールするAI エージェントが発生したHTTP エラーを検出する方法と、コンテンツのアクセシビリティとAIの可視性を向上させるために、それらのエラーを修正する方法について説明します。
 feature: Opportunities
-source-git-commit: 101a0582a5112c7fdf1871a938b773b7159a9d4c
+autotag-review: '2026-05-15T17:32:31.900Z'
+TQID: 'https://experienceleague.adobe.com/9Gbva-14SNt8A0G0B2Qu26OOp34L5NaM0z6lCv4yrTg'
+product_v2: id: d830747e-f8f3-4fce-8eff-d53b333b1639
+feature_v2: id: e0828736-236a-487b-a478-5a635455eadc
+subfeature_v2: id: e06fae5f-830b-4222-a469-b5e148d36465
+topic_v2: id: c1579802-ddd4-4214-8a91-97b2066abe11
+source-git-commit: 7a92587197cf6a9eec6b01bd4eaeeaf1194d3088
 workflow-type: tm+mt
-source-wordcount: '1045'
+source-wordcount: 1045
 ht-degree: 1%
 
 ---
@@ -27,7 +33,7 @@ ht-degree: 1%
 - **合計URL** — AI エージェントにエラーを返す一意のURLの数。
 - **合計ヒット数** – すべてのAI エージェント要求で記録されたエラー応答の合計数。
 
-![&#x200B; エージェント型トラフィックエラーダッシュボードに、概要指標とエラーの詳細が表示されている](/help/dashboards/opportunities/assets/agentic-traffic-errors-overview.png)
+![ エージェント型トラフィックエラーダッシュボードに、概要指標とエラーの詳細が表示されている](/help/dashboards/opportunities/assets/agentic-traffic-errors-overview.png)
 
 ## 仕組み
 
@@ -47,7 +53,7 @@ URLは、サーフェス化される前に検証され、誤検出や古いデ�
 - **Total** — AI エージェントからのエラーヒットの合計数。
 - 毎週のヒット数は、ここ数週間を示します。これにより、問題が永続的か改善しているかを追跡できます。
 
-![&#x200B; フィルターと週次ヒット列を含むエラー詳細テーブル &#x200B;](/help/dashboards/opportunities/assets/agentic-traffic-errors-table.png)
+![ フィルターと週次ヒット列を含むエラー詳細テーブル ](/help/dashboards/opportunities/assets/agentic-traffic-errors-table.png)
 
 ## 提案の詳細
 
@@ -57,11 +63,11 @@ URLは、サーフェス化される前に検証され、誤検出や古いデ�
 - AI エージェントユーザーエージェントによる1週間あたりの合計ヒット数を示す&#x200B;**統計** グラフで、トラフィックへの影響と、問題が永続的か改善しているかを把握できます。
 - 提案を管理するための&#x200B;**共有**&#x200B;および&#x200B;**却下** アクション。
 
-統計グラフを含む404の![提案の詳細パネル &#x200B;](/help/dashboards/opportunities/assets/agentic-traffic-errors-suggestion.png)
+統計グラフを含む404の![提案の詳細パネル ](/help/dashboards/opportunities/assets/agentic-traffic-errors-suggestion.png)
 
 **5xx** （および類似）の場合によっては、同じドメインの代替URLが使用できない場合にパネルが注意し、推奨事項がドメインとリストのルールに従う方法を説明する場合があります。 例えば、近い一致を提供できない場合に、SEO値を保持するようにベースドメイン URLを提案します。
 
-説明メッセージを含むサーバーエラーの![提案の詳細パネル &#x200B;](/help/dashboards/opportunities/assets/agentic-traffic-errors-suggestion-503.png)
+説明メッセージを含むサーバーエラーの![提案の詳細パネル ](/help/dashboards/opportunities/assets/agentic-traffic-errors-suggestion-503.png)
 
 ## 修正方法
 

@@ -2,17 +2,13 @@
 title: Edge での最適化
 description: オーサリングの変更を必要とせずに、CDN Edge で LLM Optimizer の最適化を実現する方法について説明します。
 feature: Opportunities
-product_v2:
-  - id: d830747e-f8f3-4fce-8eff-d53b333b1639
-feature_v2:
-  - id: a0b5a505-2fd7-4c3d-b61c-b557fb6f0558
-subfeature_v2:
-  - id: e1b649f0-0a61-46e4-9082-64d5cb2576c6
-topic_v2:
-  - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
-  - id: e9001ce2-5245-4a8e-8601-dd958009072f
-autotag-review: '2026-04-30T18:15:36.189Z'
-source-git-commit: b286358b901575290ace70b0eb47dcb82061559f
+autotag-review: '2026-05-15T17:55:41.072Z'
+TQID: 'https://experienceleague.adobe.com/kMxoKtrfyzxIpLJP9nt-rq6GP37ICCNe4XienUKqDZE'
+product_v2: id: d830747e-f8f3-4fce-8eff-d53b333b1639
+feature_v2: id: a0b5a505-2fd7-4c3d-b61c-b557fb6f0558id: d1956731-2adb-4bb7-8301-2b239254ac72id: c0713b97-4af8-4c41-b742-5afcc6ced468
+subfeature_v2: id: e1b649f0-0a61-46e4-9082-64d5cb2576c6
+topic_v2: id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1id: e9001ce2-5245-4a8e-8601-dd958009072f
+source-git-commit: 564171851fdccee43afd233da143d66182464889
 workflow-type: tm+mt
 source-wordcount: 3108
 ht-degree: 57%
@@ -52,7 +48,7 @@ LLM Optimizer アカウントでオンボーディングプロセスを開始し
 
 1. **顧客設定** ダッシュボードで、「**CDN設定**」タブを選択します。
 1. 「**オンボード CDN**」をクリックします。
-   ![CDN設定タブ &#x200B;](/help/overview/assets/cc-cdn.png)
+   ![CDN設定タブ ](/help/overview/assets/cc-cdn.png)
 1. AEM Cloud Serviceで管理されているFastlyのお客様の場合、ルーティング設定はセルフサービスで、LLM Optimizer UIで直接完了できます。 他のCDN プロバイダーを使用しているお客様の場合、IT/CDN チームは、必要なセットアップと前提条件を完了する必要があります。 追加のガイダンスについては、以下に示すCDN ガイドの例を参照してください。
 
 >[!NOTE]
@@ -103,13 +99,13 @@ IT／CDN チームの要件：
 | [関連するFAQを追加](/help/dashboards/opportunities/add-relevant-faqs.md) | コンテンツの最適化 | プロンプトセットに沿った構造化されたQ&amp;A コンテンツが存在しない、トラフィックの多いページを特定します。これにより、AI エージェントがページに対するユーザーの質問を一致させることが困難になります。 | ユーザーの意図と既存のページトピックに合わせて、AIが生成したFAQ コンテンツを提案します。 | FAQ コンテンツを HTML に挿入することで、ページがより見つけやすくなり、AI 駆動型の回答の関連性を高めます。 |
 | [複雑なコンテンツを簡略化](/help/dashboards/opportunities/simplify-complex-content.md) | コンテンツの最適化 | AI の理解を妨げる可能性のある複雑なテキストを含むページにフラグを付けます。 | 元の意味を維持しながら、複雑なテキストの AI 生成の簡素化バージョンを提供します。 | ページ内の複雑なセクションを書き換えて、AI の読みやすさを向上させます。 |
 | [目次を追加](/help/dashboards/opportunities/add-table-of-contents.md) | テクニカル GEO | 明確な構造化やナビゲーションの見出しに欠けるページを検出し、AI エージェントがコンテンツを解析してユーザークエリにマッピングするのを困難にします。 | ページのメインセクションを反映するアンカーでリンクされた見出しを含む構造化目次を提案します。 | HTMLに目次を挿入し、ページ構造を改善することで、AI モデルが関連するセクションをより簡単に抽出、マッピング、引用できるようになります。 |
-| [&#x200B; マルチメディア文字起こしサマリーの追加](/help/dashboards/opportunities/add-multimedia-transcript-summaries.md) | コンテンツの最適化 | 機械で読み取れる文字起こしや要約がなくても、動画やその他のメディアに主要な情報が埋め込まれているページを特定できるため、AI エージェントがそのコンテンツを使用しにくくなります。 影響を受けるURLと推奨テキストを表示します。 | メディアやページに合わせてAIが生成した文字起こしサマリーをレコメンドします。 | エージェント型トラフィックが機械読み取り可能なテキスト（例えば、関連するビデオの近く）を受け取るように、トランスクリプトの要約をHTMLに挿入します。 |
+| [ マルチメディア文字起こしサマリーの追加](/help/dashboards/opportunities/add-multimedia-transcript-summaries.md) | コンテンツの最適化 | 機械で読み取れる文字起こしや要約がなくても、動画やその他のメディアに主要な情報が埋め込まれているページを特定できるため、AI エージェントがそのコンテンツを使用しにくくなります。 影響を受けるURLと推奨テキストを表示します。 | メディアやページに合わせてAIが生成した文字起こしサマリーをレコメンドします。 | エージェント型トラフィックが機械読み取り可能なテキスト（例えば、関連するビデオの近く）を受け取るように、トランスクリプトの要約をHTMLに挿入します。 |
 
 ### その他のツール
 
 [AI コンテンツの可視性チェッカー](https://chromewebstore.google.com/detail/ai-content-visibility-che/jbjngahjjdgonbeinjlepfamjdmdcbcc) ブラウザー拡張機能は、web ページのコンテンツ LLMの多くにアクセスできること、および非表示のままになっていることを示します。 無料のスタンドアロン診断ツールとして設計され、製品ライセンスや設定は必要ありません。
 
-シングルクリックで、任意のサイトの機械による読みやすさを評価できます。 AI エージェントに表示される内容と人間のユーザーに表示される内容を並べて比較表示し、LLM Optimizer を使用して回復できるコンテンツの量を推定できます。 詳しくは、[AI は web サイトを読み取れるか](https://business.adobe.com/jp/blog/introducing-the-llm-optimizer-chrome-extension) ページを参照してください。
+シングルクリックで、任意のサイトの機械による読みやすさを評価できます。 AI エージェントに表示される内容と人間のユーザーに表示される内容を並べて比較表示し、LLM Optimizer を使用して回復できるコンテンツの量を推定できます。 詳しくは、[AI は web サイトを読み取れるか](https://business.adobe.com/blog/introducing-the-llm-optimizer-chrome-extension) ページを参照してください。
 
 ## オポチュニティの詳細
 
@@ -159,13 +155,13 @@ IT／CDN チームの要件：
 
 この機会は、AI エージェントが読むことができる文字起こしやテキストの要約がなくても、重要な情報が動画再生内にのみ存在するページをターゲットにします。 各ページでは、AIが生成した文字起こしと、メディアからの重要なポイントの短い要約をレコメンドしています。 EdgeのOptimizeを使用すると、これらの要約は機械読み取り可能なテキストとしてHTMLに追加され、担当者はビデオの視聴から得られるのと同じ内容を使用できます。
 
-ダッシュボードのチュートリアル、デプロイメント手順、よくある質問については、[&#x200B; マルチメディア文字起こし概要の追加](/help/dashboards/opportunities/add-multimedia-transcript-summaries.md)を参照してください。
+ダッシュボードのチュートリアル、デプロイメント手順、よくある質問については、[ マルチメディア文字起こし概要の追加](/help/dashboards/opportunities/add-multimedia-transcript-summaries.md)を参照してください。
 
 ## Edge での自動最適化
 
 各オポチュニティについて、Edge での最適化をプレビュー、編集、デプロイ、ライブ表示、ロールバックできます。
 
->[!VIDEO](https://video.tv.adobe.com/v/3477985/?captions=jpn&learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3477983/?learn=on&enablevpops)
 
 ### プレビュー
 
@@ -227,7 +223,7 @@ Q. Edge での最適化にまだオンボードしていない場合はどうな
 
 Q：ソースでコンテンツを更新する際、何が発生しますか？
 
-基になるソースページを変更していない限り、キャッシュからページの最適化されたバージョンが提供されます。 ただし、**コンテンツの可視性を回復**&#x200B;のソースを変更すると、システムが自動的に更新されるので、AI エージェントは常に最新のコンテンツを受信できます。 これは、低いキャッシュの有効期間（TTL）設定を（分単位で）使用し、サイトのコンテンツを更新すると、その期間内に新しい最適化がトリガーされるからです。 **LLM 対応の概要を追加**&#x200B;などのコンテンツの機会では、LLM Optimizer はソースページの変更を監視します。 変更が検出された場合は、最適化を一時停止し、人間によるレビュー用にフラグを付けて、エージェントに表示されるページと人間に表示されるページの間のコンテンツドリフトを防ぎます。
+基になるソースページを変更していない限り、キャッシュからページの最適化されたバージョンが提供されます。 ただし、**コンテンツの可視性を回復**&#x200B;のソースを変更すると、システムが自動的に更新されるので、AI エージェントは常に最新のコンテンツを受信できます。 これは、低いキャッシュの有効期間（TTL）設定を（分単位で）使用し、サイトのコンテンツを更新すると、その期間内に新しい最適化がトリガーされるからです。 **LLM 対応の概要を追加**などのコンテンツの機会では、LLM Optimizer はソースページの変更を監視します。 変更が検出された場合は、最適化を一時停止し、人間によるレビュー用にフラグを付けて、エージェントに表示されるページと人間に表示されるページの間のコンテンツドリフトを防ぎます。
 <!--As there is no universal TTL that fits every site, we can configure this TTL based on your cache invalidation rules to ensure both systems stay in sync.-->
 
 Q. Edge での最適化は、Adobe Edge Delivery Service（EDS）を使用しているサイトのみの対象ですか？

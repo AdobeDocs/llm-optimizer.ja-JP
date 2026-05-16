@@ -2,9 +2,14 @@
 title: Edge での最適化 - Akamai（BYOCDN）
 description: LLM Optimizer の Edge での最適化に Akamai BYOCDN を設定する方法について説明します。
 feature: Opportunities
-source-git-commit: 13d2f4bbd1f9d3886f89f80df0e76093f2afdf13
+autotag-review: '2026-05-15T17:34:47.891Z'
+TQID: 'https://experienceleague.adobe.com/oGtqsnvHYn0BSNLl40-KpVl0TjCZHESRgH1LcVmjOiY'
+product_v2: id: d830747e-f8f3-4fce-8eff-d53b333b1639
+feature_v2: id: d1956731-2adb-4bb7-8301-2b239254ac72
+subfeature_v2: id: d23587d6-14d6-4e3f-9ee1-cc18623832e1
+source-git-commit: 7a92587197cf6a9eec6b01bd4eaeeaf1194d3088
 workflow-type: tm+mt
-source-wordcount: '809'
+source-wordcount: 809
 ht-degree: 62%
 
 ---
@@ -20,7 +25,7 @@ Akamai Property Manager ルールを設定する前に、次の内容を確認�
 
 * ドメインの Akamai Property Manager へのアクセス権。
 * LLM Optimizer UI から取得された Edge Optimize API キー。 手順については、[API キーの取得](/help/dashboards/optimize-at-edge/retrieve-api-keys.md#production-api-key)を参照してください。
-* （オプション）ステージング ルーティングをテストするには、[&#x200B; ステージング API キー](/help/dashboards/optimize-at-edge/retrieve-api-keys.md#staging-api-key-optional)を参照してください。
+* （オプション）ステージング ルーティングをテストするには、[ ステージング API キー](/help/dashboards/optimize-at-edge/retrieve-api-keys.md#staging-api-key-optional)を参照してください。
 
 **設定**
 

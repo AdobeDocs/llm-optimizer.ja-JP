@@ -2,9 +2,15 @@
 title: アクセス制御
 description: Adobe LLM Optimizerにおける製品割り当てユーザーと組織ユーザーの違い、読み取り専用ユーザーのUIでの表示、および管理者によるAdobe Admin Consoleでのアクセスの割り当て方法について説明します。
 feature: Customer Configuration
-source-git-commit: 3b792a8ca7efd4b6d6764d2e83f9b0c103a56558
+autotag-review: '2026-05-15T17:26:43.837Z'
+TQID: 'https://experienceleague.adobe.com/hJpQQpuHBRMdKT5oKA9z0Y8H3d3p6To-n2hWKrXgZsQ'
+product_v2: id: d830747e-f8f3-4fce-8eff-d53b333b1639
+feature_v2: id: d1956731-2adb-4bb7-8301-2b239254ac72
+subfeature_v2: id: b704f6a0-b2fb-4df0-9177-9753751004f5
+topic_v2: id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+source-git-commit: 7a92587197cf6a9eec6b01bd4eaeeaf1194d3088
 workflow-type: tm+mt
-source-wordcount: '618'
+source-wordcount: 618
 ht-degree: 4%
 
 ---
@@ -23,14 +29,14 @@ Adobe LLM Optimizerは、ユーザーペルソナに基づく基本的なアク�
 製品に割り当てられている場合は、次の権限に加えて、標準的な組織ユーザーと同じ機能を使用できます。
 
 * プロンプト、カテゴリ、トピック、および関連する設定について、[顧客設定](/help/dashboards/customer-configuration.md)で書き込みアクセス権を設定します。
-* Edge[&#128279;](/help/dashboards/optimize-at-edge/overview.md)最適化で最適化をデプロイし、提案を管理します。
+* Edge](/help/dashboards/optimize-at-edge/overview.md)最適化で[最適化をデプロイし、提案を管理します。
 * Google Search Consoleの設定を管理します。
 * EdgeとCDNの設定で最適化を管理します。
 * 新しいサイトのオンボーディング。
 
 ## 組織ユーザー {#organizational-users}
 
-組織ユーザーは、製品に割り当てられた&#x200B;**not**&#x200B;の標準ユーザーです。 組織ユーザーの場合、[LLM Optimizer ダッシュボード &#x200B;](/help/dashboards/dashboards-overview.md)および関連ビューに&#x200B;**読み取り専用** アクセスできます。 次の制限が適用されます。
+組織ユーザーは、製品に割り当てられた&#x200B;**not**&#x200B;の標準ユーザーです。 組織ユーザーの場合、[LLM Optimizer ダッシュボード ](/help/dashboards/dashboards-overview.md)および関連ビューに&#x200B;**読み取り専用** アクセスできます。 次の制限が適用されます。
 
 ### 顧客設定 {#customer-configuration-restrictions}
 
@@ -61,7 +67,7 @@ Adobe LLM Optimizerは、ユーザーペルソナに基づく基本的なアク�
 * **デプロイ最適化**&#x200B;は非表示です。
 * 情報アラートでは、デプロイメントアクセスが必要であることを説明します。
 
-  ![&#x200B; エージェンティックトラフィック商談で非表示の最適化をデプロイする](/help/dashboards/assets/access-control-agentic-deploy.png)
+  ![ エージェンティックトラフィック商談で非表示の最適化をデプロイする](/help/dashboards/assets/access-control-agentic-deploy.png)
 
 ### その他の商談ページ {#other-opportunities}
 
@@ -82,7 +88,7 @@ Adobe LLM Optimizerは、ユーザーペルソナに基づく基本的なアク�
 * インラインアラートは、デプロイアクセスが必要であることを説明します。 メッセージは次のようになります。*Deploy Access Required – 最適化をデプロイしたり、提案を管理したりする権限がありません。 アクセスをリクエストするには、管理者にお問い合わせください。*
 * デプロイアクションを含むスティッキーなボトムバーは非表示になっています。
 
-  ![&#x200B; デプロイアクセスが必要な場合のインラインアラート &#x200B;](/help/dashboards/assets/access-control-deploy-alert.png)
+  ![ デプロイアクセスが必要な場合のインラインアラート ](/help/dashboards/assets/access-control-deploy-alert.png)
 
   ![読み取り専用ユーザーに対して非表示のEdge デプロイアクションで最適化](/help/dashboards/assets/access-control-optimize-at-edge.png)
 
@@ -106,7 +112,7 @@ Adobe LLM Optimizerは、ユーザーペルソナに基づく基本的なアク�
 1. 組織の管理者権限を持つアカウントで[Adobe Admin Console](https://adminconsole.adobe.com/)にログインします。
 1. 製品割り当て機能を受け取る必要があるユーザーまたはグループに、Adobe LLM Optimizer製品プロファイル（または組織の同等の製品使用権限）を割り当てます。
 
-詳細な手順については、[Admin Consoleでの製品の管理](https://helpx.adobe.com/jp/enterprise/using/manage-products.html)および[&#x200B; ユーザーグループの管理](https://helpx.adobe.com/jp/enterprise/using/user-groups.html)を参照してください。
+詳細な手順については、[Admin Consoleでの製品の管理](https://helpx.adobe.com/enterprise/using/manage-products.html)および[ ユーザーグループの管理](https://helpx.adobe.com/jp/enterprise/using/user-groups.html)を参照してください。
 
 >[!NOTE]
 >

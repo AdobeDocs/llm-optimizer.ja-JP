@@ -2,9 +2,15 @@
 title: ログ転送 – CloudFront （AWS CLI）
 description: 配信の設定と操作にAWS CLIを使用して、CloudFront CDN ログをAdobeのS3 バケットに転送します。
 feature: Agentic Traffic
-source-git-commit: 3277e7f7f2e0c5e4693e40473d595b12d9e5f2e8
+autotag-review: '2026-05-15T17:42:44.992Z'
+TQID: 'https://experienceleague.adobe.com/NoVv3qv1RbtqAWGMPYC1Rz4wO-5Au1yL2e8tRKd9Hao'
+product_v2: id: d830747e-f8f3-4fce-8eff-d53b333b1639
+feature_v2: id: d1956731-2adb-4bb7-8301-2b239254ac72
+subfeature_v2: id: d23587d6-14d6-4e3f-9ee1-cc18623832e1id: e69d5a42-0217-4ca5-9396-a9a826a170da
+topic_v2: id: d3cdead0-685a-4489-9250-4bb709942f66id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+source-git-commit: 7a92587197cf6a9eec6b01bd4eaeeaf1194d3088
 workflow-type: tm+mt
-source-wordcount: '379'
+source-wordcount: 379
 ht-degree: 0%
 
 ---
@@ -12,11 +18,11 @@ ht-degree: 0%
 
 # ログ転送：CloudFront （AWS CLI） {#log-forwarding-cloudfront-cli}
 
-このページでは、エージェント型トラフィックデータ収集用にCloudFrontからAdobeのS3 バケットにCDN ログを転送する方法について詳しく説明します。 LLM Optimizer CDN設定ページを使用して、LLM Optimizerにオンボーディングします。 オンボーディングプロセスが完了したら、このページに記載されている手順に従って、[&#x200B; ステップ 2](#step-2-cli)の[AWS コマンドラインインターフェイス &#x200B;](https://aws.amazon.com/cli/)を使用してログ転送を設定します。
+このページでは、エージェント型トラフィックデータ収集用にCloudFrontからAdobeのS3 バケットにCDN ログを転送する方法について詳しく説明します。 LLM Optimizer CDN設定ページを使用して、LLM Optimizerにオンボーディングします。 オンボーディングプロセスが完了したら、このページに記載されている手順に従って、[ ステップ 2](#step-2-cli)の[AWS コマンドラインインターフェイス ](https://aws.amazon.com/cli/)を使用してログ転送を設定します。
 
 >[!NOTE]
 >
-> このガイドでは、[AWS コマンドラインインターフェイス &#x200B;](https://aws.amazon.com/cli/)を使用してログ転送を設定する方法について説明します。 **CloudFront UI**&#x200B;を使用してログ転送を設定する場合は、[&#x200B; ログ転送：CloudFront](/help/overview/log-forwarding/cloudfront.md)を参照してください。
+> このガイドでは、[AWS コマンドラインインターフェイス ](https://aws.amazon.com/cli/)を使用してログ転送を設定する方法について説明します。 **CloudFront UI**&#x200B;を使用してログ転送を設定する場合は、[ ログ転送：CloudFront](/help/overview/log-forwarding/cloudfront.md)を参照してください。
 
 ## ステップ 1: LLM Optimizerでのオンボーディング {#step-1}
 
@@ -28,7 +34,7 @@ LLM Optimizer ページ [https://llmo.now/](https://llmo.now/)で、次の操作
 
 1. 「**CDN設定**」タブをクリックします。
 
-   ![CDN設定タブ &#x200B;](/help/overview/assets/log-forwarding/common/cdn-config-tab.png)
+   ![CDN設定タブ ](/help/overview/assets/log-forwarding/common/cdn-config-tab.png)
 
 1. 「**基本を学ぶ**」をクリックします。
 
@@ -100,7 +106,7 @@ export REGION1=us-east-1
 export CUSTOMER=<CUSTOMER_NAME> ## No Space, user letters,numbers and dash
 export CDN_ID=<YOUR_CLOUDFRONT_DISTRIBUTION_ID>
 export ACCT1=<YOUR_AWS_ACCOUNT_NUMBER>
-export DELIVERY_DEST_ARN=arn:aws:logs:us-east-1:640168421876:delivery-destination:cdn-logs-<TRANSFORM_IMS_ID>-ams  ## Replace TRANSFORM_IMS_ID with the output of the command above 
+export DELIVERY_DEST_ARN=arn:aws:logs:us-east-1:640168421876:delivery-destination:cdn-logs-<TRANSFORM_IMS_ID>-ams  ## Replace TRANSFORM_IMS_ID with the output of the command above
 ```
 
 <!--Use the **Delivery destination ARN** and org values from the LLM Optimizer CDN configuration page if they differ from the pattern above.-->

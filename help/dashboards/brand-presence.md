@@ -2,9 +2,15 @@
 title: ブランドプレゼンス
 description: ブランドプレゼンスダッシュボードを使用して、AI 生成の応答レベルでブランドがどのように認識されているかを理解する方法について説明します。
 feature: Brand Presence
-source-git-commit: 625807b8905f741aa89d551483d89cca2ef91873
+autotag-review: '2026-05-15T17:37:11.161Z'
+TQID: 'https://experienceleague.adobe.com/sDPtwR-uMfeIYp5K93gzYF27qYgLHBwhyajj9hGVB7Q'
+product_v2: id: d830747e-f8f3-4fce-8eff-d53b333b1639
+feature_v2: id: a0b5a505-2fd7-4c3d-b61c-b557fb6f0558id: e0828736-236a-487b-a478-5a635455eadc
+subfeature_v2: id: ab7fdb62-bd53-4cfd-8c2c-169f7e47f20e
+topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: e1e0219c-f879-479f-8427-888ed2a6e9c2
+source-git-commit: 7a92587197cf6a9eec6b01bd4eaeeaf1194d3088
 workflow-type: tm+mt
-source-wordcount: '1346'
+source-wordcount: 1346
 ht-degree: 96%
 
 ---
@@ -24,9 +30,9 @@ ht-degree: 96%
 * [センチメントトレンド](#sentiment-trend)
 * [データインサイト](#data-insights)
 
-[&#x200B; ブランド中心のエクスペリエンス &#x200B;](/help/overview/quick-start.md#brand-centric-experience)を利用している場合は、**ブランドプレゼンス**&#x200B;に移動します。 ブランドドロップダウンリストで、分析するブランドを選択するか、**すべてのブランド**&#x200B;を選択して、ブランドセット全体の表示を確認します。
+[ ブランド中心のエクスペリエンス ](/help/overview/quick-start.md#brand-centric-experience)を利用している場合は、**ブランドプレゼンス**&#x200B;に移動します。 ブランドドロップダウンリストで、分析するブランドを選択するか、**すべてのブランド**&#x200B;を選択して、ブランドセット全体の表示を確認します。
 
-![&#x200B; ブランドセレクター（ブランド中心のエクスペリエンス）とのブランドプレゼンス](/help/assets/brand-centric-experience/brand-presence-brand-centric.png)
+![ ブランドセレクター（ブランド中心のエクスペリエンス）とのブランドプレゼンス](/help/assets/brand-centric-experience/brand-presence-brand-centric.png)
 
 ## フィルター {#filters}
 

@@ -1,10 +1,16 @@
 ---
 title: ログ転送 – Fastly
-description: LLM Optimizerで Fastly からAdobeの S3 バケットに CDN ログを転送して、アジェンティックトラフィックデータを収集する方法を説明します。
+description: FastlyからAdobeにCDN ログを転送し、LLM Optimizerでエージェンティックトラフィックデータを収集する方法について説明します。
 feature: Agentic Traffic
-source-git-commit: d1f98770b39f550c36d93ece9b89933c0e90f189
+autotag-review: '2026-05-15T17:51:51.808Z'
+TQID: 'https://experienceleague.adobe.com/9SH1I6ajHKLFeEWXy-NpvPm-Ylk2xBKhQro3qobVEX8'
+product_v2: id: d830747e-f8f3-4fce-8eff-d53b333b1639
+feature_v2: id: d1956731-2adb-4bb7-8301-2b239254ac72
+subfeature_v2: id: d23587d6-14d6-4e3f-9ee1-cc18623832e1
+topic_v2: id: d3cdead0-685a-4489-9250-4bb709942f66id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+source-git-commit: 564171851fdccee43afd233da143d66182464889
 workflow-type: tm+mt
-source-wordcount: '381'
+source-wordcount: 381
 ht-degree: 4%
 
 ---
@@ -12,47 +18,47 @@ ht-degree: 4%
 
 # ログ転送：Fastly {#log-forwarding-fastly}
 
-このページでは、CDN ログを Fastly からAdobeの S3 バケットに転送してアジェンティックトラフィックデータを収集する方法について説明します。 LLM Optimizer CDN 設定ページを使用して、LLM Optimizerにオンボードします。 オンボーディングプロセスが完了したら、このページで説明する手順に従って、Fastly web コンソールでログ転送を設定します。
+このページでは、FastlyからAdobeのS3 バケットにCDN ログを転送して、エージェント型トラフィックデータを収集する方法について説明します。 LLM Optimizer CDN設定ページを使用して、LLM Optimizerにオンボーディングします。 オンボーディングプロセスが完了したら、このページに記載されている手順に従って、Fastly web コンソールでログ転送を設定します。
 
-## 手順 1:LLM Optimizerへのオンボード {#step-1}
+## ステップ 1: LLM Optimizerでのオンボーディング {#step-1}
 
-LLM Optimizerページ [https://llmo.now/](https://llmo.now/) で、次の操作を行います。
+LLM Optimizer ページ [https://llmo.now/](https://llmo.now/)で、次の操作を行います。
 
-1. **設定** に移動します。
+1. **設定**&#x200B;に移動します。
 
    ![設定ボタン](/help/overview/assets/log-forwarding/common/config-button.png)
 
-1. 「**CDN 設定**」タブをクリックします。
+1. 「**CDN設定**」タブをクリックします。
 
-   ![CDN 設定タブ &#x200B;](/help/overview/assets/log-forwarding/common/cdn-config-tab.png)
+   ![CDN設定タブ ](/help/overview/assets/log-forwarding/common/cdn-config-tab.png)
 
-1. **開始** をクリックします。
-1. **AI トラフィックインサイトをアクティブ化** の横にある **設定** をクリックします。
+1. 「**基本を学ぶ**」をクリックします。
+1. 「**AI トラフィックインサイトをアクティブ化**」の横にある「**設定**」をクリックします。
 
    ![設定](/help/overview/assets/log-forwarding/common/configure.png)
-1. 「**Fastly （BYOCDN）**」を選択します。
+1. **Fastly （BYOCDN）**&#x200B;を選択します。
 
-   ![Fastly を選択 &#x200B;](/help/overview/assets/log-forwarding/fastly/fastly-select.png)
-1. **オンボード** をクリックします。
+   ![Fastlyを選択](/help/overview/assets/log-forwarding/fastly/fastly-select.png)
+1. 「**オンボード**」をクリックします。
 
-## 手順 2:Fastly での S3 エンドポイントの作成 {#step-2}
+## 手順2:FastlyでS3 エンドポイントを作成する {#step-2}
 
-**Fastly Campaign コントロールパネル** で S3 エンドポイントを作成するには：
+S3 エンドポイントを作成するには、**Fastly Campaign コントロールパネル**&#x200B;で次の操作を行います。
 
-1. Fastly ダッシュボードで、**CDN サービス** （Compute サービスではありません）に移動します。
-1. **Amazon Web Services S3** エリアで、「**エンドポイントを作成** をクリックします。
-1. **Amazon S3 エンドポイントを作成** フィールドに入力します。
+1. Fastly ダッシュボードで、**CDN サービス** （Compute サービスではない）に移動します。
+1. **Amazon Web Services S3**&#x200B;領域で、**Create endpoint**&#x200B;をクリックします。
+1. 「**Amazon S3 エンドポイントを作成**」フィールドに入力します。
 
 | フィールド | 説明 |
 | --- | --- |
 | **名前** | エンドポイントの人間が読み取れる名前。 |
-| **プレースメント** | デフォルト |
-| **ログ形式** | 以下の **ログ形式文字列** セクションに示すログ形式文字列を使用します。 |
+| **配置** | デフォルト |
+| **ログ形式** | 以下の「**ログ形式文字列**」セクションに表示されているログ形式文字列を使用します。 |
 | **タイムスタンプ形式** | `%Y-%m-%dT%H:%M:%S.000` |
-| **バケット名** | LLM Optimizerの設定ページから **バケット名** をコピーします。![バケット名 &#x200B;](/help/overview/assets/log-forwarding/fastly/fastly-bucket-name.png) |
-| **ドメイン** | LLM Optimizer設定ページから **ドメイン名** をコピーします。![ドメイン名 &#x200B;](/help/overview/assets/log-forwarding/fastly/fastly-domain-name.png) |
-| **Access メソッド** | **ユーザー資格情報** |
-| **ユーザー資格情報** | **アクセスキー** と **秘密鍵** をLLM Optimizer設定ページからコピーします。![アクセスキー &#x200B;](/help/overview/assets/log-forwarding/common/access-keys.png) |
+| **バケット名** | LLM Optimizer設定ページから&#x200B;**バケット名**&#x200B;をコピーします。 ![ バケット名](/help/overview/assets/log-forwarding/fastly/fastly-bucket-name.png) |
+| **ドメイン** | LLM Optimizer設定ページから&#x200B;**Domain Name**&#x200B;をコピーします。 ![ ドメイン名](/help/overview/assets/log-forwarding/fastly/fastly-domain-name.png) |
+| **アクセス方法** | **ユーザー資格情報** |
+| **ユーザー資格情報** | LLM Optimizerの設定ページから&#x200B;**アクセスキー**&#x200B;と&#x200B;**秘密鍵**&#x200B;をコピーします。 ![ アクセスキー](/help/overview/assets/log-forwarding/common/access-keys.png) |
 | **期間** | `300` |
 
 **ログ形式文字列：**
@@ -63,32 +69,32 @@ LLM Optimizerページ [https://llmo.now/](https://llmo.now/) で、次の操作
 
 >[!WARNING]
 >
->パスワードマネージャーは、Fastly のパスワードを「**秘密鍵**」フィールドに自動入力する場合があります。 AWS統合に失敗した場合は、秘密鍵を手動で入力します。
+>パスワードマネージャーは、**秘密鍵** フィールドにFastly パスワードを自動入力できます。 AWSとの連携に失敗した場合は、シークレットキーを手動で入力します。
 
-上記の手順を完了したら、「**詳細設定オプション**」をクリックして、以下を設定します。
+上記の手順を完了したら、**詳細オプション**&#x200B;をクリックして設定します。
 
 | フィールド | 説明 |
 | --- | --- |
-| **パス** | LLM Optimizer設定ページから **パス** をコピーします。![パス &#x200B;](/help/overview/assets/log-forwarding/fastly/fastly-path.png) |
+| **パス** | LLM Optimizer設定ページから&#x200B;**Path**&#x200B;をコピーします。 ![パス](/help/overview/assets/log-forwarding/fastly/fastly-path.png) |
 | **ログ行の形式を選択** | 空白 |
 | **圧縮** | Gzip |
 | **冗長性レベル** | 標準 |
 | **ACL** | なし |
 | **サーバー側の暗号化** | なし |
-| **最大バイト数** | 0 |
+| **最大バイト** | 0 |
 
-詳細設定オプションの設定後：
+詳細設定オプションを設定した後：
 
-1. **作成** をクリックして、エンドポイントを作成します。
-1. **アクティベート** メニューから、デプロイする **実稼動環境でアクティベート** を選択します。
+1. 「**作成**」をクリックして、エンドポイントを作成します。
+1. **アクティベート** メニューから、**実稼動環境でアクティベート**&#x200B;を選択してデプロイします。
 
 >[!NOTE]
 >
->Fastly はログを S3 に継続的にストリーミングします。S3 web サイトおよび API では、アップロードが完了した後にのみファイルを使用できるようになります。
+>ログをS3に継続的にストリーミングし、S3のweb サイトとAPIは、アップロードが完了した後にのみファイルを利用可能にします。
 
 ### ログエントリの例 {#example}
 
-Amazon S3 にデータを送信する際の書式文字列の例を以下に示します。
+Amazon S3にデータを送信するためのフォーマット文字列の例を次に示します。
 
 ```json
 {
