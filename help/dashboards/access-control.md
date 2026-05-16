@@ -116,7 +116,7 @@ Adobe LLM Optimizerは、ユーザーペルソナに基づく基本的なアク�
 1. 組織の管理者権限を持つアカウントで[Adobe Admin Console](https://adminconsole.adobe.com/)にログインします。
 1. 製品割り当て機能を受け取る必要があるユーザーまたはグループに、Adobe LLM Optimizer製品プロファイル（または組織の同等の製品使用権限）を割り当てます。
 
-詳細な手順については、[Admin Consoleでの製品の管理](https://helpx.adobe.com/enterprise/using/manage-products.html)および[&#x200B; ユーザーグループの管理](https://helpx.adobe.com/jp/enterprise/using/user-groups.html)を参照してください。
+詳細な手順については、[Admin Consoleでの製品の管理](https://helpx.adobe.com/jp/enterprise/using/manage-products.html)および[&#x200B; ユーザーグループの管理](https://helpx.adobe.com/jp/enterprise/using/user-groups.html)を参照してください。
 
 >[!NOTE]
 >
