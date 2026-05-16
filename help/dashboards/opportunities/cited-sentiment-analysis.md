@@ -2,9 +2,18 @@
 title: 引用センチメント分析
 description: LLM Optimizerが上位に挙げられたURLを分析して、AI 検索結果から企業の認知度や認知度を高めるレコメンデーションを導き出す方法をご紹介します。
 feature: Opportunities
-source-git-commit: 101a0582a5112c7fdf1871a938b773b7159a9d4c
+autotag-review: '2026-05-15T17:39:50.086Z'
+TQID: 'https://experienceleague.adobe.com/ZqgWup29QoQ-j0fDM6DqhGpzRqscg1f-fdXHTMN9fIk'
+product_v2:
+  - id: d830747e-f8f3-4fce-8eff-d53b333b1639
+feature_v2:
+  - id: a0b5a505-2fd7-4c3d-b61c-b557fb6f0558
+  - id: c0713b97-4af8-4c41-b742-5afcc6ced468
+subfeature_v2:
+  - id: e1b649f0-0a61-46e4-9082-64d5cb2576c6
+source-git-commit: 7a92587197cf6a9eec6b01bd4eaeeaf1194d3088
 workflow-type: tm+mt
-source-wordcount: '1030'
+source-wordcount: 1030
 ht-degree: 1%
 
 ---

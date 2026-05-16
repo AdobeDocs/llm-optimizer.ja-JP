@@ -2,9 +2,19 @@
 title: 製品カタログの強化
 description: LLM Optimizerが、一般的な説明や技術的に詳細な説明を含む商品をどのように識別するのか、またAdobe CommerceでAIが生成したストーリーの強化機能を活用して商品を改善する方法について説明します。
 feature: Opportunities
-source-git-commit: 54a7afe1c4472da7a2dff437c82532c4941d3034
+autotag-review: '2026-05-15T17:45:51.619Z'
+TQID: 'https://experienceleague.adobe.com/5ihGQ8L-37uWsZSDo4TVCUPBPqsqqQ5waGbH3VKPIig'
+product_v2:
+  - id: d830747e-f8f3-4fce-8eff-d53b333b1639
+feature_v2:
+  - id: c0713b97-4af8-4c41-b742-5afcc6ced468
+subfeature_v2:
+  - id: e1b649f0-0a61-46e4-9082-64d5cb2576c6
+topic_v2:
+  - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
+source-git-commit: 564171851fdccee43afd233da143d66182464889
 workflow-type: tm+mt
-source-wordcount: '1266'
+source-wordcount: 1266
 ht-degree: 0%
 
 ---

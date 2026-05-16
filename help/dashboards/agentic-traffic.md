@@ -2,9 +2,22 @@
 title: エージェントトラフィック
 description: エージェントトラフィックダッシュボードを使用して、AI エージェントによるサイトの操作方法を確認する方法について説明します。
 feature: Agentic Traffic
-source-git-commit: 82bfbea9375fe7f3cd7f27dfdf0adcab6489731d
+autotag-review: '2026-05-15T17:33:15.711Z'
+TQID: 'https://experienceleague.adobe.com/3dWNUxcquDVip4Gg1WMYfwv8MUSbZYWqJYnkQ3aZkmc'
+product_v2:
+  - id: d830747e-f8f3-4fce-8eff-d53b333b1639
+feature_v2:
+  - id: a0b5a505-2fd7-4c3d-b61c-b557fb6f0558
+  - id: c0713b97-4af8-4c41-b742-5afcc6ced468
+  - id: e0828736-236a-487b-a478-5a635455eadc
+subfeature_v2:
+  - id: e06fae5f-830b-4222-a469-b5e148d36465
+topic_v2:
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+source-git-commit: 7a92587197cf6a9eec6b01bd4eaeeaf1194d3088
 workflow-type: tm+mt
-source-wordcount: '1407'
+source-wordcount: 1407
 ht-degree: 90%
 
 ---
@@ -25,7 +38,7 @@ ht-degree: 90%
 * [上位と下位のムーバー](#top-bottom-movers)
 * [ユーザーエージェントと URL パフォーマンス分析](#user-url-performance)
 
-If you are on the [Brand Centric experience](/help/overview/quick-start.md#brand-centric-experience), navigate to **Agentic Traffic** and select the site for which you want to view the agentic traffic insights.
+[&#x200B; ブランド中心のエクスペリエンス &#x200B;](/help/overview/quick-start.md#brand-centric-experience)を利用している場合は、**エージェンティックトラフィック**&#x200B;に移動し、エージェンティックトラフィックインサイトを表示するサイトを選択します。
 
 ![&#x200B; エージェンティックトラフィック – サイトセレクター（ブランド中心のエクスペリエンス） &#x200B;](/help/assets/brand-centric-experience/agentic-traffic-dashboard.png)
 
@@ -60,7 +73,7 @@ If you are on the [Brand Centric experience](/help/overview/quick-start.md#brand
 
 ### ブランド中心主義
 
-If you are are on the [brand centric experience](/help/overview/quick-start.md#brand-centric-experience), you can add CDN log forwarding information by navigating to **Brands Management** and clicking on the **CDN** label.
+[&#x200B; ブランド中心のエクスペリエンス &#x200B;](/help/overview/quick-start.md#brand-centric-experience)を利用している場合は、**ブランド管理**&#x200B;に移動し、**CDN** ラベルをクリックして、CDN ログ転送情報を追加できます。
 
 ![&#x200B; ブランド管理 – CDN ログ転送](/help/assets/brand-centric-experience/brands-management-cdn.png)
 

@@ -2,9 +2,20 @@
 title: URL インスペクター
 description: URL インスペクターを使用して、AI 検索におけるドメイン上の特定のページのパフォーマンスを分析する方法について説明します。
 feature: URL Inspector
-source-git-commit: 625807b8905f741aa89d551483d89cca2ef91873
+autotag-review: '2026-05-15T18:10:59.172Z'
+TQID: 'https://experienceleague.adobe.com/n5IgVprujFrB8bImxkgzcAzK1fT6bsvnwNzSdBaV-4E'
+product_v2:
+  - id: d830747e-f8f3-4fce-8eff-d53b333b1639
+feature_v2:
+  - id: a0b5a505-2fd7-4c3d-b61c-b557fb6f0558
+  - id: c0713b97-4af8-4c41-b742-5afcc6ced468
+subfeature_v2:
+  - id: aedaee53-dfb4-4ab4-9d23-fa6188148769
+topic_v2:
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+source-git-commit: 564171851fdccee43afd233da143d66182464889
 workflow-type: tm+mt
-source-wordcount: '718'
+source-wordcount: 718
 ht-degree: 95%
 
 ---

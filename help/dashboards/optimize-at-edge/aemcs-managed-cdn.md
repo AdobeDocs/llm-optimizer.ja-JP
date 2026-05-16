@@ -2,9 +2,21 @@
 title: Edge での最適化 - AEM Cloud Service の管理による CDN（Fastly）
 description: LLM Optimizer の Edge での最適化を行うのに AEM Cloud Service の管理による CDN（Fastly）を設定する方法について説明します。
 feature: Opportunities
-source-git-commit: 184d6008c2579014c6ff453e8bfff4bb898f4b82
+autotag-review: '2026-05-15T17:31:38.650Z'
+TQID: 'https://experienceleague.adobe.com/qrCODY3Qg6dDd9QRcaYGdN4YVCgKAsl56UTAVZpsIwE'
+product_v2:
+  - id: d830747e-f8f3-4fce-8eff-d53b333b1639
+feature_v2:
+  - id: d1956731-2adb-4bb7-8301-2b239254ac72
+  - id: e0828736-236a-487b-a478-5a635455eadc
+subfeature_v2:
+  - id: d23587d6-14d6-4e3f-9ee1-cc18623832e1
+  - id: e06fae5f-830b-4222-a469-b5e148d36465
+topic_v2:
+  - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
+source-git-commit: 7a92587197cf6a9eec6b01bd4eaeeaf1194d3088
 workflow-type: tm+mt
-source-wordcount: '836'
+source-wordcount: 836
 ht-degree: 20%
 
 ---

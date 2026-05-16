@@ -2,10 +2,20 @@
 title: API キーの取得
 description: LLM Optimizerから実稼動環境とステージング Edge Optimize API キーを取得する方法。
 feature: Opportunities
-source-git-commit: 3b6dc163f4488a22937916beb6778de4abc5a20c
+autotag-review: '2026-05-15T17:58:10.897Z'
+TQID: 'https://experienceleague.adobe.com/4R-cx6wv75Oowj9ZvEPGCzQbQBSoppgDuI5Ut1IbObA'
+product_v2:
+  - id: d830747e-f8f3-4fce-8eff-d53b333b1639
+feature_v2:
+  - id: d1956731-2adb-4bb7-8301-2b239254ac72
+subfeature_v2:
+  - id: d23587d6-14d6-4e3f-9ee1-cc18623832e1
+topic_v2:
+  - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
+source-git-commit: 564171851fdccee43afd233da143d66182464889
 workflow-type: tm+mt
-source-wordcount: '337'
-ht-degree: 0%
+source-wordcount: 337
+ht-degree: 1%
 
 ---
 
@@ -18,7 +28,7 @@ CDNを設定する前に、LLM Optimizer UIからEdge Optimize API キーを取�
 
 1. LLM Optimizerで、**顧客設定**&#x200B;を開き、**CDN設定** タブを選択します。
 
-   ![顧客設定に移動](/help/assets/optimize-at-edge/prereq-customer-config-nav.png)
+   ![顧客設定ダッシュボードに移動](/help/assets/optimize-at-edge/prereq-customer-config-nav.png)
 
 2. 「**AI エージェントに最適化をデプロイ**」セクションを見つけます。 「**最適化エンジンを有効にする**」チェックボックスをオンにします。
 

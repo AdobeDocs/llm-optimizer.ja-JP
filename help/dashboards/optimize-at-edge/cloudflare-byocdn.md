@@ -2,9 +2,17 @@
 title: Edge での最適化 - Cloudflare（BYOCDN）
 description: LLM Optimizer の Edge での最適化に Cloudflare BYOCDN を設定する方法について説明します。
 feature: Opportunities
-source-git-commit: 13d2f4bbd1f9d3886f89f80df0e76093f2afdf13
+autotag-review: '2026-05-15T17:40:49.847Z'
+TQID: 'https://experienceleague.adobe.com/HkaDwdHRGZJnip-1Bp-4Z-ovwcBPxFUSDqeLUVNu0zo'
+product_v2:
+  - id: d830747e-f8f3-4fce-8eff-d53b333b1639
+feature_v2:
+  - id: d1956731-2adb-4bb7-8301-2b239254ac72
+subfeature_v2:
+  - id: d23587d6-14d6-4e3f-9ee1-cc18623832e1
+source-git-commit: 7a92587197cf6a9eec6b01bd4eaeeaf1194d3088
 workflow-type: tm+mt
-source-wordcount: '1906'
+source-wordcount: 1906
 ht-degree: 68%
 
 ---

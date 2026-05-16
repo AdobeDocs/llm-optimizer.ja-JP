@@ -2,9 +2,19 @@
 title: 複雑なコンテンツの簡素化
 description: LLM Optimizerが、AI担当者が解釈しにくい高密度コピーを使用して、トラフィックの多いページを特定する方法や、EdgeのOptimizeを使用して簡略化されたテキストをレビューおよびデプロイする方法を説明します。
 feature: Opportunities
-source-git-commit: 7f0729839d761ca57236da935c8c7638dd92f32a
+autotag-review: '2026-05-15T17:58:39.879Z'
+TQID: 'https://experienceleague.adobe.com/wO3ZY-fEgOi7cD4dq0kCltk-YJSD431bkA6-9PW42Lo'
+product_v2:
+  - id: d830747e-f8f3-4fce-8eff-d53b333b1639
+feature_v2:
+  - id: c0713b97-4af8-4c41-b742-5afcc6ced468
+subfeature_v2:
+  - id: e1b649f0-0a61-46e4-9082-64d5cb2576c6
+topic_v2:
+  - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
+source-git-commit: 564171851fdccee43afd233da143d66182464889
 workflow-type: tm+mt
-source-wordcount: '785'
+source-wordcount: 785
 ht-degree: 1%
 
 ---
