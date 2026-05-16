@@ -4,9 +4,15 @@ description: Adobe LLM Optimizer が AI 駆動型検索でブランドの可視�
 feature: Onboarding
 autotag-review: '2026-05-15T17:54:37.542Z'
 TQID: 'https://experienceleague.adobe.com/5qyk6PCTaT93tz-UUnYRYznylOh4lXHuH1yN98g3wIE'
-product_v2: id: d830747e-f8f3-4fce-8eff-d53b333b1639
-feature_v2: id: a0b5a505-2fd7-4c3d-b61c-b557fb6f0558id: c0713b97-4af8-4c41-b742-5afcc6ced468
-topic_v2: id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1id: e1e0219c-f879-479f-8427-888ed2a6e9c2id: fc314d1d-7cb9-4a38-8dbd-8f9b6478f40d
+product_v2:
+  - id: d830747e-f8f3-4fce-8eff-d53b333b1639
+feature_v2:
+  - id: a0b5a505-2fd7-4c3d-b61c-b557fb6f0558
+  - id: c0713b97-4af8-4c41-b742-5afcc6ced468
+topic_v2:
+  - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+  - id: fc314d1d-7cb9-4a38-8dbd-8f9b6478f40d
 source-git-commit: 564171851fdccee43afd233da143d66182464889
 workflow-type: tm+mt
 source-wordcount: 618
@@ -64,8 +70,8 @@ Adobe LLM Optimizer を使用すると、次の操作を実行できます。
 
 **ブランドの可視性を測定** - AI を活用した検索結果にブランドが言及されるタイミング、位置、頻度を追跡します。 推測に頼らずに、時間の経過と共にベンチマークできるクリアな可視性スコアを使用します。 詳しくは、[ブランドプレゼンスダッシュボード](/help/dashboards/brand-presence.md)を参照してください。
 **他のユーザーのベンチマーク** – 生成エンジンの競合他社を含む他のユーザーに対して、自社のブランドがどのように機能しているかを確認します。 シェアオブボイスのギャップを特定し、競争上のメリットを明らかにします。 詳しくは、[ブランドプレゼンスダッシュボード](/help/dashboards/brand-presence.md)を参照してください。
-**実用的な機会の発見** - コンテンツの機会（例：FAQ、抽象、スキーマ）と技術的な機会（クロール可能性、インデックス作成の問題）を特定し、メンションと引用を直接増やします。 [商談ダッシュボード ](/help/dashboards/opportunities-overview.md)を参照してください。
-**AIによるトラフィックの影響を追跡** - エージェント型トラフィック（AI アシスタントから）とリファラルトラフィック（引用からのユーザーのクリック）を自社のプロパティにモニタリングします。 GEO の可視性を実際のエンゲージメントに結び付けます。 [ エージェント型トラフィックダッシュボード ](/help/dashboards/agentic-traffic.md)および[リファラルトラフィックダッシュボード ](/help/dashboards/referral-traffic.md)を参照してください。
+**実用的な機会の発見** - コンテンツの機会（例：FAQ、抽象、スキーマ）と技術的な機会（クロール可能性、インデックス作成の問題）を特定し、メンションと引用を直接増やします。 [商談ダッシュボード &#x200B;](/help/dashboards/opportunities-overview.md)を参照してください。
+**AIによるトラフィックの影響を追跡** - エージェント型トラフィック（AI アシスタントから）とリファラルトラフィック（引用からのユーザーのクリック）を自社のプロパティにモニタリングします。 GEO の可視性を実際のエンゲージメントに結び付けます。 [&#x200B; エージェント型トラフィックダッシュボード &#x200B;](/help/dashboards/agentic-traffic.md)および[リファラルトラフィックダッシュボード &#x200B;](/help/dashboards/referral-traffic.md)を参照してください。
 **チーム Collaborationを有効にする** - ダッシュボードを共有し、プロンプトまたはカテゴリの所有者を割り当て、マーケティング、SEO （検索エンジン最適化）、コミュニケーション機能をまたいで可視性の目標を追跡します。 詳しくは、[コラボレーションダッシュボード](/help/dashboards/collaboration.md)を参照してください。
 
 ## 詳細情報

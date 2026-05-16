@@ -4,10 +4,14 @@ description: AkamaiからAdobeのS3 バケットにCDN ログを転送して、L
 feature: Agentic Traffic
 autotag-review: '2026-05-15T17:35:22.816Z'
 TQID: 'https://experienceleague.adobe.com/cO-qqOveWFee1-QnVSlzmO-n383sptHl59Ni2qQcvAU'
-product_v2: id: d830747e-f8f3-4fce-8eff-d53b333b1639
-feature_v2: id: d1956731-2adb-4bb7-8301-2b239254ac72
-subfeature_v2: id: d23587d6-14d6-4e3f-9ee1-cc18623832e1
-topic_v2: id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+product_v2:
+  - id: d830747e-f8f3-4fce-8eff-d53b333b1639
+feature_v2:
+  - id: d1956731-2adb-4bb7-8301-2b239254ac72
+subfeature_v2:
+  - id: d23587d6-14d6-4e3f-9ee1-cc18623832e1
+topic_v2:
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
 source-git-commit: 7a92587197cf6a9eec6b01bd4eaeeaf1194d3088
 workflow-type: tm+mt
 source-wordcount: 595
@@ -30,7 +34,7 @@ LLM Optimizer ページ [https://llmo.now/](https://llmo.now/)で、次の操作
 
 1. 「**CDN設定**」タブをクリックします。
 
-   ![CDN設定タブ ](/help/overview/assets/log-forwarding/common/cdn-config-tab.png)
+   ![CDN設定タブ &#x200B;](/help/overview/assets/log-forwarding/common/cdn-config-tab.png)
 
 1. 「**基本を学ぶ**」をクリックします。
 
@@ -50,13 +54,13 @@ LLM Optimizer ページ [https://llmo.now/](https://llmo.now/)で、次の操作
 
 ## 手順2:Akamaiでストリームを作成する {#step-2}
 
-Akamai コントロールパネル [https://control.akamai.com/](https://control.akamai.com/)で、Akamaiの公式ドキュメントの手順に従って[ ストリームを作成](https://techdocs.akamai.com/datastream2/docs/create-stream)します。
+Akamai コントロールパネル [https://control.akamai.com/](https://control.akamai.com/)で、Akamaiの公式ドキュメントの手順に従って[&#x200B; ストリームを作成](https://techdocs.akamai.com/datastream2/docs/create-stream)します。
 
 ## 手順3：データパラメーターの選択 {#step-3}
 
-ストリームを作成したら、Akamai コントロールパネルで「次へ」をクリックして、「**データセット**」タブに進みます。 Akamaiの公式ドキュメントの手順に従って、[ データパラメーター](https://techdocs.akamai.com/datastream2/docs/choose-data-parameters)を選択します。 LLM Optimizer設定の次のフィールドが必要になります。
+ストリームを作成したら、Akamai コントロールパネルで「次へ」をクリックして、「**データセット**」タブに進みます。 Akamaiの公式ドキュメントの手順に従って、[&#x200B; データパラメーター](https://techdocs.akamai.com/datastream2/docs/choose-data-parameters)を選択します。 LLM Optimizer設定の次のフィールドが必要になります。
 
-![LLMO設定フィールド ](/help/overview/assets/log-forwarding/akamai/akamai-llmo-config-fields.png)
+![LLMO設定フィールド &#x200B;](/help/overview/assets/log-forwarding/akamai/akamai-llmo-config-fields.png)
 
 マッピングは次のようになります。
 
@@ -99,11 +103,11 @@ Akamaiのデータセットフィールド（IDを含む）は次のとおりで
 2. **名前**&#x200B;に、人間が判読可能な宛先の説明を入力します。
 3. **Bucket**&#x200B;で、**Bucket Name**&#x200B;をLLM Optimizer設定ページからコピーします。
 
-   ![ バケット名](/help/overview/assets/log-forwarding/common/bucket-name.png)
+   ![&#x200B; バケット名](/help/overview/assets/log-forwarding/common/bucket-name.png)
 
 4. **フォルダーのパス**&#x200B;で、LLM Optimizerの設定ページから&#x200B;**パス**&#x200B;をコピーします。
 
-   ![ パス設定](/help/overview/assets/log-forwarding/akamai/akamai-path-config.png)
+   ![&#x200B; パス設定](/help/overview/assets/log-forwarding/akamai/akamai-path-config.png)
 
 5. **Region**&#x200B;で、**Region**&#x200B;をLLM Optimizer設定ページからコピーします。
 
@@ -111,7 +115,7 @@ Akamaiのデータセットフィールド（IDを含む）は次のとおりで
 
 6. **アクセスキーID**&#x200B;と&#x200B;**秘密鍵**&#x200B;で、両方の値をLLM Optimizer設定ページからコピーします。
 
-   ![ アクセスキー](/help/overview/assets/log-forwarding/common/access-keys.png)
+   ![&#x200B; アクセスキー](/help/overview/assets/log-forwarding/common/access-keys.png)
 
 7. 「**検証と保存**」をクリックして、宛先への接続を検証し、指定した詳細を保存します。 この検証プロセスの一環として、システムは提供されたアクセスキー識別子と秘密アクセスキーを使用して、ファイル名に`Akamai_access_verification_[TimeStamp].txt`形式のタイムスタンプを含むS3 フォルダーに検証ファイルを作成します。 このファイルは、検証プロセスが成功し、ログの送信先のAmazon S3 バケットとフォルダーにアクセスできる場合にのみ表示されます。
 
@@ -127,7 +131,7 @@ Akamaiのデータセットフィールド（IDを含む）は次のとおりで
 
 9. **プッシュ頻度**&#x200B;を変更します。 **Log Interval**&#x200B;の下のLLM Optimizer設定ページから値をコピーします。
 
-   ![ ログ間隔](/help/overview/assets/log-forwarding/akamai/akamai-log-interval.png)
+   ![&#x200B; ログ間隔](/help/overview/assets/log-forwarding/akamai/akamai-log-interval.png)
 
 10. 「**次へ**」をクリックしてプロセスを完了します。
 

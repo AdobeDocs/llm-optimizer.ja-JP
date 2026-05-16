@@ -4,10 +4,16 @@ description: LLM Optimizer の Edge での最適化を行うのに AEM Cloud Ser
 feature: Opportunities
 autotag-review: '2026-05-15T17:31:38.650Z'
 TQID: 'https://experienceleague.adobe.com/qrCODY3Qg6dDd9QRcaYGdN4YVCgKAsl56UTAVZpsIwE'
-product_v2: id: d830747e-f8f3-4fce-8eff-d53b333b1639
-feature_v2: id: d1956731-2adb-4bb7-8301-2b239254ac72id: e0828736-236a-487b-a478-5a635455eadc
-subfeature_v2: id: d23587d6-14d6-4e3f-9ee1-cc18623832e1id: e06fae5f-830b-4222-a469-b5e148d36465
-topic_v2: id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
+product_v2:
+  - id: d830747e-f8f3-4fce-8eff-d53b333b1639
+feature_v2:
+  - id: d1956731-2adb-4bb7-8301-2b239254ac72
+  - id: e0828736-236a-487b-a478-5a635455eadc
+subfeature_v2:
+  - id: d23587d6-14d6-4e3f-9ee1-cc18623832e1
+  - id: e06fae5f-830b-4222-a469-b5e148d36465
+topic_v2:
+  - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
 source-git-commit: 7a92587197cf6a9eec6b01bd4eaeeaf1194d3088
 workflow-type: tm+mt
 source-wordcount: 836
@@ -44,13 +50,13 @@ Edge での最適化へのエージェントトラフィックのルーティン
 
    ![AI エージェントへの最適化のデプロイ – 保留中](/help/assets/optimize-at-edge/cs-fastly-enable-button.png)
 
-3. 確認ダイアログで「**有効にする**」を選択し、ルーティングを有効にすることを確認します。 エラーが発生した場合は、「[ トラブルシューティング ](#troubleshooting)」セクションを参照して解決してください。
+3. 確認ダイアログで「**有効にする**」を選択し、ルーティングを有効にすることを確認します。 エラーが発生した場合は、「[&#x200B; トラブルシューティング &#x200B;](#troubleshooting)」セクションを参照して解決してください。
 
    ![最適化エンジン確認ダイアログを有効にする](/help/assets/optimize-at-edge/cs-fastly-enable-dialog.png)
 
 4. 確認が完了すると、ルーティングが完了するまでに数分かかります。
 
-   ![進行中のルーティング ](/help/assets/optimize-at-edge/cs-fastly-enable-button-clicked-routing-in-progress.png)
+   ![進行中のルーティング &#x200B;](/help/assets/optimize-at-edge/cs-fastly-enable-button-clicked-routing-in-progress.png)
 
    5分後にページをリロードし、ルーティングが完了したことを確認します。 ルーティングが設定され、アクティブになると、ルーティングが有効であることを確認する緑色のチェックマークが付いて、ステータスが&#x200B;**完了**&#x200B;に更新されます。 ユーザー側でこれ以上のアクションを行う必要はありません。
 

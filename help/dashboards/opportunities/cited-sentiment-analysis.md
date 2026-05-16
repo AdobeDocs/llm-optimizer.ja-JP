@@ -4,9 +4,13 @@ description: LLM Optimizerが上位に挙げられたURLを分析して、AI 検
 feature: Opportunities
 autotag-review: '2026-05-15T17:39:50.086Z'
 TQID: 'https://experienceleague.adobe.com/ZqgWup29QoQ-j0fDM6DqhGpzRqscg1f-fdXHTMN9fIk'
-product_v2: id: d830747e-f8f3-4fce-8eff-d53b333b1639
-feature_v2: id: a0b5a505-2fd7-4c3d-b61c-b557fb6f0558id: c0713b97-4af8-4c41-b742-5afcc6ced468
-subfeature_v2: id: e1b649f0-0a61-46e4-9082-64d5cb2576c6
+product_v2:
+  - id: d830747e-f8f3-4fce-8eff-d53b333b1639
+feature_v2:
+  - id: a0b5a505-2fd7-4c3d-b61c-b557fb6f0558
+  - id: c0713b97-4af8-4c41-b742-5afcc6ced468
+subfeature_v2:
+  - id: e1b649f0-0a61-46e4-9082-64d5cb2576c6
 source-git-commit: 7a92587197cf6a9eec6b01bd4eaeeaf1194d3088
 workflow-type: tm+mt
 source-wordcount: 1030
@@ -31,7 +35,7 @@ AI システムが自社に関する質問に回答する際には、AIが生成
 >[!NOTE]
 >引用センチメント分析は現在ベータ版です。 機能が開発され続けると、機能と可用性が変更される場合があります。
 
-![引用センチメント分析ダッシュボード ](/help/dashboards/opportunities/assets/cited-sentiment-overview.png)
+![引用センチメント分析ダッシュボード &#x200B;](/help/dashboards/opportunities/assets/cited-sentiment-overview.png)
 
 ## 仕組み
 
@@ -45,7 +49,7 @@ LLM Optimizerは、ブランドプレゼンスダッシュボードプロンプ�
 
 このタブには、引用の多いURLをまたいでブランドの認識を向上させるための推奨事項が表示されます。 候補は3つのサブタブに分かれています：**現在の候補**、**修正候補**、**無視された候補**。
 
-![おすすめタブ ](/help/dashboards/opportunities/assets/cited-sentiment-suggestions.png)
+![おすすめタブ &#x200B;](/help/dashboards/opportunities/assets/cited-sentiment-suggestions.png)
 
 候補テーブルには、次の列が含まれます。
 

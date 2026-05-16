@@ -4,10 +4,15 @@ description: CloudflareからAdobeのS3 バケットにCDN ログを転送して
 feature: Agentic Traffic
 autotag-review: '2026-05-15T17:41:23.688Z'
 TQID: 'https://experienceleague.adobe.com/AfhcMa7tZ3L-4qCbNKiblInALmHaKxWLtL-O-Hkvc-U'
-product_v2: id: d830747e-f8f3-4fce-8eff-d53b333b1639
-feature_v2: id: d1956731-2adb-4bb7-8301-2b239254ac72
-subfeature_v2: id: d23587d6-14d6-4e3f-9ee1-cc18623832e1
-topic_v2: id: d3cdead0-685a-4489-9250-4bb709942f66id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+product_v2:
+  - id: d830747e-f8f3-4fce-8eff-d53b333b1639
+feature_v2:
+  - id: d1956731-2adb-4bb7-8301-2b239254ac72
+subfeature_v2:
+  - id: d23587d6-14d6-4e3f-9ee1-cc18623832e1
+topic_v2:
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
 source-git-commit: 7a92587197cf6a9eec6b01bd4eaeeaf1194d3088
 workflow-type: tm+mt
 source-wordcount: 381
@@ -30,7 +35,7 @@ LLM Optimizer ページ [https://llmo.now/](https://llmo.now/)で、次の操作
 
 1. 「**CDN設定**」タブをクリックします。
 
-   ![CDN設定タブ ](/help/overview/assets/log-forwarding/common/cdn-config-tab.png)
+   ![CDN設定タブ &#x200B;](/help/overview/assets/log-forwarding/common/cdn-config-tab.png)
 
 1. 「**基本を学ぶ**」をクリックします。
 
@@ -50,7 +55,7 @@ LLM Optimizer ページ [https://llmo.now/](https://llmo.now/)で、次の操作
 
 ## ステップ 2:CloudflareでLogpush ジョブを作成する {#step-2}
 
-[Cloudflare ダッシュボード ](https://dash.cloudflare.com/login)で、次の手順に従います。
+[Cloudflare ダッシュボード &#x200B;](https://dash.cloudflare.com/login)で、次の手順に従います。
 
 1. **ドメイン （ゾーン）** レベルの&#x200B;**Logpush** ページに移動します。
 1. **ログプッシュジョブの作成**&#x200B;を選択します。
@@ -59,11 +64,11 @@ LLM Optimizer ページ [https://llmo.now/](https://llmo.now/)で、次の操作
 
    - **Bucket** — S3 バケット名。 LLM Optimizer CDN Configuration ページから値をコピーします。
 
-     ![ バケット名](/help/overview/assets/log-forwarding/common/bucket-name.png)
+     ![&#x200B; バケット名](/help/overview/assets/log-forwarding/common/bucket-name.png)
 
    - **パス** — ストレージコンテナ内のバケットの場所。 LLM Optimizer CDN Configuration ページから値をコピーします。
 
-     ![Cloudflare パス ](/help/overview/assets/log-forwarding/cloudflare/cloudflare-path.png)
+     ![Cloudflare パス &#x200B;](/help/overview/assets/log-forwarding/cloudflare/cloudflare-path.png)
 
    - **ログを毎日のサブフォルダー**&#x200B;に整理します（推奨）。
 
@@ -89,7 +94,7 @@ LLM Optimizer ページ [https://llmo.now/](https://llmo.now/)で、次の操作
 
    - **次のフィールドを送信する**&#x200B;で、LLM Optimizer設定ページの値を参照してください。
 
-     ![ ログプッシュフィールド ](/help/overview/assets/log-forwarding/cloudflare/cloudflare-logpush-fields.png)
+     ![&#x200B; ログプッシュフィールド &#x200B;](/help/overview/assets/log-forwarding/cloudflare/cloudflare-logpush-fields.png)
 
    - **ログ形式**: JSON。
 
@@ -99,10 +104,10 @@ LLM Optimizer ページ [https://llmo.now/](https://llmo.now/)で、次の操作
 
    - ログのタイムスタンプフィールドの形式を選択してください：`RFC3339`。
 
-     ![ タイムスタンプ形式](/help/overview/assets/log-forwarding/cloudflare/cloudflare-timestamp-format.png)
+     ![&#x200B; タイムスタンプ形式](/help/overview/assets/log-forwarding/cloudflare/cloudflare-timestamp-format.png)
 
    - サンプリングレートの場合は、**すべてのログ**&#x200B;を選択します。
 
-     ![ サンプリングレート ](/help/overview/assets/log-forwarding/cloudflare/cloudflare-sampling-rate.png)
+     ![&#x200B; サンプリングレート &#x200B;](/help/overview/assets/log-forwarding/cloudflare/cloudflare-sampling-rate.png)
 
 1. ログプッシュジョブの設定が完了したら、**送信**&#x200B;を選択します。

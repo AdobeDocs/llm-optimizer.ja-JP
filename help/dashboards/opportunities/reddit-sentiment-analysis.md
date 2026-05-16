@@ -4,9 +4,13 @@ description: LLM OptimizerがRedditのスレッドを分析して、AI 検索結
 feature: Opportunities
 autotag-review: '2026-05-15T17:56:59.489Z'
 TQID: 'https://experienceleague.adobe.com/LRC3nhHrAZoODy4gfsZiR7gc0i8n-IYqvZFj1TAUxsQ'
-product_v2: id: d830747e-f8f3-4fce-8eff-d53b333b1639
-feature_v2: id: a0b5a505-2fd7-4c3d-b61c-b557fb6f0558id: c0713b97-4af8-4c41-b742-5afcc6ced468
-subfeature_v2: id: e1b649f0-0a61-46e4-9082-64d5cb2576c6
+product_v2:
+  - id: d830747e-f8f3-4fce-8eff-d53b333b1639
+feature_v2:
+  - id: a0b5a505-2fd7-4c3d-b61c-b557fb6f0558
+  - id: c0713b97-4af8-4c41-b742-5afcc6ced468
+subfeature_v2:
+  - id: e1b649f0-0a61-46e4-9082-64d5cb2576c6
 source-git-commit: 564171851fdccee43afd233da143d66182464889
 workflow-type: tm+mt
 source-wordcount: 1163
@@ -31,7 +35,7 @@ AIは、次の4つの側面でブランドを分析します。
 >[!NOTE]
 >Reddit センチメント解析は現在ベータ版です。 機能が開発され続けると、機能と可用性が変更される場合があります。
 
-![Reddit センチメント分析ダッシュボード ](/help/dashboards/opportunities/assets/reddit-sentiment-overview.png)
+![Reddit センチメント分析ダッシュボード &#x200B;](/help/dashboards/opportunities/assets/reddit-sentiment-overview.png)
 
 ## 仕組み
 
@@ -45,7 +49,7 @@ LLM Optimizerは、AI システムによって引用されたReddit スレッド
 
 このタブには、Redditでのブランドの認識を改善するための推奨事項が表示されます。 候補は3つのサブタブに分かれています：**現在の候補**、**修正候補**、**無視された候補**。
 
-![おすすめタブ ](/help/dashboards/opportunities/assets/reddit-sentiment-suggestions.png)
+![おすすめタブ &#x200B;](/help/dashboards/opportunities/assets/reddit-sentiment-suggestions.png)
 
 候補テーブルには、次の列が含まれます。
 

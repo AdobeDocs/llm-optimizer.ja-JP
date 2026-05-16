@@ -4,10 +4,14 @@ description: LLM Optimizerが、機械読み取り可能なテキストを使用
 feature: Opportunities
 autotag-review: '2026-05-15T17:28:28.569Z'
 TQID: 'https://experienceleague.adobe.com/LiXMsMq6D08ciXR85aQBNDpmR5Csiv-5b9kv3lfTpDc'
-product_v2: id: d830747e-f8f3-4fce-8eff-d53b333b1639
-feature_v2: id: c0713b97-4af8-4c41-b742-5afcc6ced468
-subfeature_v2: id: e1b649f0-0a61-46e4-9082-64d5cb2576c6
-topic_v2: id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
+product_v2:
+  - id: d830747e-f8f3-4fce-8eff-d53b333b1639
+feature_v2:
+  - id: c0713b97-4af8-4c41-b742-5afcc6ced468
+subfeature_v2:
+  - id: e1b649f0-0a61-46e4-9082-64d5cb2576c6
+topic_v2:
+  - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
 source-git-commit: 7a92587197cf6a9eec6b01bd4eaeeaf1194d3088
 workflow-type: tm+mt
 source-wordcount: 775
@@ -24,7 +28,7 @@ ht-degree: 0%
 
 「マルチメディア文字起こし要約を追加」オポチュニティは、AI エージェントが読むことができる文字起こしや短いテキストの要約なしに、重要な情報が動画やその他のメディアに存在するページを特定します。 メディアと周囲のページのコンテキストに基づいて&#x200B;**AIが生成した文字起こしサマリー**&#x200B;が導入されます。 AI エージェントがマルチメディアコンテンツを理解できるようにすることで、見落としていた主要なブランド情報を回復することができます。
 
-影響を受けるURLごとに、提案された&#x200B;**Content Patch**、**実装**&#x200B;の詳細（例：対象のCSS セレクターと操作）および&#x200B;**Rationale**&#x200B;を確認し、Edge](/help/dashboards/optimize-at-edge/overview.md)で[Optimizeを使用してデプロイすると、エージェンティック トラフィックがコンテンツ管理システム（CMS）の変更を必要とせずに強化されたHTMLを受け取ることができます。
+影響を受けるURLごとに、提案された&#x200B;**Content Patch**、**実装**&#x200B;の詳細（例：対象のCSS セレクターと操作）および&#x200B;**Rationale**&#x200B;を確認し、Edge[&#128279;](/help/dashboards/optimize-at-edge/overview.md)でOptimizeを使用してデプロイすると、エージェンティック トラフィックがコンテンツ管理システム（CMS）の変更を必要とせずに強化されたHTMLを受け取ることができます。
 
 ## 課題の解決方法
 
@@ -60,11 +64,11 @@ LLM Optimizerは、設定とページ構造に基づいて、埋め込みメデ�
 
 エッジで公開する準備ができたら、**最適化をデプロイ**&#x200B;をクリックします。 **Edgeにデプロイ** ダイアログには、実行しようとしているURL、セレクター、操作が一覧表示されます。 リストを確認し、**デプロイ**&#x200B;または&#x200B;**キャンセル**&#x200B;を選択します。
 
-![ マルチメディアトランスクリプトの概要コンテンツパッチのEdgeへのデプロイダイアログ ](/help/dashboards/opportunities/assets/add-multimedia-transcript-summaries-deploy-dialog.png)
+![&#x200B; マルチメディアトランスクリプトの概要コンテンツパッチのEdgeへのデプロイダイアログ &#x200B;](/help/dashboards/opportunities/assets/add-multimedia-transcript-summaries-deploy-dialog.png)
 
 デプロイが正常に完了すると、**デプロイメント完了**&#x200B;は、本番環境に公開された最適化の数を確認します。 ダイアログを閉じ、**修正候補**&#x200B;を開いてステータスを確認します。
 
-![ デプロイメント完了の確認](/help/dashboards/opportunities/assets/add-multimedia-transcript-summaries-deploy-confirm.png)
+![&#x200B; デプロイメント完了の確認](/help/dashboards/opportunities/assets/add-multimedia-transcript-summaries-deploy-confirm.png)
 
 >[!NOTE]
 >
@@ -78,7 +82,7 @@ LLM Optimizerは、設定とページ構造に基づいて、埋め込みメデ�
 
 一括でロールバックするには、チェックボックスを使用して最適化された行を選択し、ヘッダーで&#x200B;**ロールバック**&#x200B;を使用します。
 
-![ ロールバック前に行が選択された修正済みの提案](/help/dashboards/opportunities/assets/add-multimedia-transcript-summaries-select-in-fixed.png)
+![&#x200B; ロールバック前に行が選択された修正済みの提案](/help/dashboards/opportunities/assets/add-multimedia-transcript-summaries-select-in-fixed.png)
 
 ## ロールバック
 
@@ -86,12 +90,12 @@ LLM Optimizerは、設定とページ構造に基づいて、埋め込みメデ�
 
 **ロールバック** ダイアログには、ロールバックされる候補が一覧表示され、展開された最適化がエージェント型トラフィックのライブパスから削除されることを警告します。 確認し、**ロールバック**&#x200B;または&#x200B;**キャンセル**&#x200B;をクリックします。
 
-![ ロールバックダイアログに、元に戻す候補が一覧表示されます](/help/dashboards/opportunities/assets/add-multimedia-transcript-summaries-rollback-dialog.png)
+![&#x200B; ロールバックダイアログに、元に戻す候補が一覧表示されます](/help/dashboards/opportunities/assets/add-multimedia-transcript-summaries-rollback-dialog.png)
 
 操作が完了すると、**正常にロールバックされました**&#x200B;の概要が表示されます。ダッシュボードに戻るには、この概要を閉じます。
 
-![ ロールバック完了 – ロールバックが完了しました](/help/dashboards/opportunities/assets/add-multimedia-transcript-summaries-rollback-confirm.png)
+![&#x200B; ロールバック完了 – ロールバックが完了しました](/help/dashboards/opportunities/assets/add-multimedia-transcript-summaries-rollback-confirm.png)
 
 ## デモでやってみましょう
 
-[Frescopa デモ ](https://play.llmo.now/org/demo-org)の「マルチメディア文字起こし概要を追加」ワークフローを確認します。
+[Frescopa デモ &#x200B;](https://play.llmo.now/org/demo-org)の「マルチメディア文字起こし概要を追加」ワークフローを確認します。

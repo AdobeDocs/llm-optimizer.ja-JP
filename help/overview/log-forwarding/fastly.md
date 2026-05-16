@@ -4,10 +4,15 @@ description: FastlyからAdobeにCDN ログを転送し、LLM Optimizerでエー
 feature: Agentic Traffic
 autotag-review: '2026-05-15T17:51:51.808Z'
 TQID: 'https://experienceleague.adobe.com/9SH1I6ajHKLFeEWXy-NpvPm-Ylk2xBKhQro3qobVEX8'
-product_v2: id: d830747e-f8f3-4fce-8eff-d53b333b1639
-feature_v2: id: d1956731-2adb-4bb7-8301-2b239254ac72
-subfeature_v2: id: d23587d6-14d6-4e3f-9ee1-cc18623832e1
-topic_v2: id: d3cdead0-685a-4489-9250-4bb709942f66id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+product_v2:
+  - id: d830747e-f8f3-4fce-8eff-d53b333b1639
+feature_v2:
+  - id: d1956731-2adb-4bb7-8301-2b239254ac72
+subfeature_v2:
+  - id: d23587d6-14d6-4e3f-9ee1-cc18623832e1
+topic_v2:
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
 source-git-commit: 564171851fdccee43afd233da143d66182464889
 workflow-type: tm+mt
 source-wordcount: 381
@@ -30,7 +35,7 @@ LLM Optimizer ページ [https://llmo.now/](https://llmo.now/)で、次の操作
 
 1. 「**CDN設定**」タブをクリックします。
 
-   ![CDN設定タブ ](/help/overview/assets/log-forwarding/common/cdn-config-tab.png)
+   ![CDN設定タブ &#x200B;](/help/overview/assets/log-forwarding/common/cdn-config-tab.png)
 
 1. 「**基本を学ぶ**」をクリックします。
 1. 「**AI トラフィックインサイトをアクティブ化**」の横にある「**設定**」をクリックします。
@@ -55,10 +60,10 @@ S3 エンドポイントを作成するには、**Fastly Campaign コントロ�
 | **配置** | デフォルト |
 | **ログ形式** | 以下の「**ログ形式文字列**」セクションに表示されているログ形式文字列を使用します。 |
 | **タイムスタンプ形式** | `%Y-%m-%dT%H:%M:%S.000` |
-| **バケット名** | LLM Optimizer設定ページから&#x200B;**バケット名**&#x200B;をコピーします。 ![ バケット名](/help/overview/assets/log-forwarding/fastly/fastly-bucket-name.png) |
-| **ドメイン** | LLM Optimizer設定ページから&#x200B;**Domain Name**&#x200B;をコピーします。 ![ ドメイン名](/help/overview/assets/log-forwarding/fastly/fastly-domain-name.png) |
+| **バケット名** | LLM Optimizer設定ページから&#x200B;**バケット名**&#x200B;をコピーします。 ![&#x200B; バケット名](/help/overview/assets/log-forwarding/fastly/fastly-bucket-name.png) |
+| **ドメイン** | LLM Optimizer設定ページから&#x200B;**Domain Name**&#x200B;をコピーします。 ![&#x200B; ドメイン名](/help/overview/assets/log-forwarding/fastly/fastly-domain-name.png) |
 | **アクセス方法** | **ユーザー資格情報** |
-| **ユーザー資格情報** | LLM Optimizerの設定ページから&#x200B;**アクセスキー**&#x200B;と&#x200B;**秘密鍵**&#x200B;をコピーします。 ![ アクセスキー](/help/overview/assets/log-forwarding/common/access-keys.png) |
+| **ユーザー資格情報** | LLM Optimizerの設定ページから&#x200B;**アクセスキー**&#x200B;と&#x200B;**秘密鍵**&#x200B;をコピーします。 ![&#x200B; アクセスキー](/help/overview/assets/log-forwarding/common/access-keys.png) |
 | **期間** | `300` |
 
 **ログ形式文字列：**

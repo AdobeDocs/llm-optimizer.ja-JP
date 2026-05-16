@@ -4,10 +4,16 @@ description: CloudFrontからAdobeにCDN ログを転送する方法について
 feature: Agentic Traffic
 autotag-review: '2026-05-15T17:43:07.178Z'
 TQID: 'https://experienceleague.adobe.com/TXnY-eK1SUuKrlVoGWd2hZO5bjUqEspvyFmcyOuei3Q'
-product_v2: id: d830747e-f8f3-4fce-8eff-d53b333b1639
-feature_v2: id: d1956731-2adb-4bb7-8301-2b239254ac72
-subfeature_v2: id: d23587d6-14d6-4e3f-9ee1-cc18623832e1id: e69d5a42-0217-4ca5-9396-a9a826a170da
-topic_v2: id: d3cdead0-685a-4489-9250-4bb709942f66id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+product_v2:
+  - id: d830747e-f8f3-4fce-8eff-d53b333b1639
+feature_v2:
+  - id: d1956731-2adb-4bb7-8301-2b239254ac72
+subfeature_v2:
+  - id: d23587d6-14d6-4e3f-9ee1-cc18623832e1
+  - id: e69d5a42-0217-4ca5-9396-a9a826a170da
+topic_v2:
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
 source-git-commit: 7a92587197cf6a9eec6b01bd4eaeeaf1194d3088
 workflow-type: tm+mt
 source-wordcount: 466
@@ -30,7 +36,7 @@ LLM Optimizer ページ [https://llmo.now/](https://llmo.now/)で、次の操作
 
 1. 「**CDN設定**」タブをクリックします。
 
-   ![CDN設定タブ ](/help/overview/assets/log-forwarding/common/cdn-config-tab.png)
+   ![CDN設定タブ &#x200B;](/help/overview/assets/log-forwarding/common/cdn-config-tab.png)
 
 1. 「**基本を学ぶ**」をクリックします。
 
@@ -50,13 +56,13 @@ LLM Optimizer ページ [https://llmo.now/](https://llmo.now/)で、次の操作
 
 1. 「**オンボード**」をクリックします。
 
-   ![ オンボードボタン ](/help/overview/assets/log-forwarding/common/onboard-button.png)
+   ![&#x200B; オンボードボタン &#x200B;](/help/overview/assets/log-forwarding/common/onboard-button.png)
 
 ## 手順2：標準ログ記録を有効にする（CloudFront コンソール） {#step-2}
 
-標準ログを有効にするには、[AWS管理コンソール ](https://aws.amazon.com/console/)から次の操作を行います。
+標準ログを有効にするには、[AWS管理コンソール &#x200B;](https://aws.amazon.com/console/)から次の操作を行います。
 
-1. [CloudFront コンソール ](https://console.aws.amazon.com/cloudfront/v4/home)にアクセスし、[既存の配布](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/HowToUpdateDistribution.html#HowToUpdateDistributionProcedure)を更新します。
+1. [CloudFront コンソール &#x200B;](https://console.aws.amazon.com/cloudfront/v4/home)にアクセスし、[既存の配布](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/HowToUpdateDistribution.html#HowToUpdateDistributionProcedure)を更新します。
 
 1. 「**ログ**」タブを開きます。
 
@@ -88,7 +94,7 @@ LLM Optimizer ページ [https://llmo.now/](https://llmo.now/)で、次の操作
 
 **ソースアカウント** （CloudFront ディストリビューションを使用）は、**宛先アカウント** （LLM Optimizer CDN設定ページに表示されているS3 バケット）にアクセスログを送信します。 両方のアカウントに適切な権限が必要です。
 
-例：ソースアカウント `111111111111`は、宛先アカウント `222222222222`のS3 バケットにログを送信します。 [AWS コマンドライン インターフェイス ](https://aws.amazon.com/cli/)を使用できます。
+例：ソースアカウント `111111111111`は、宛先アカウント `222222222222`のS3 バケットにログを送信します。 [AWS コマンドライン インターフェイス &#x200B;](https://aws.amazon.com/cli/)を使用できます。
 
 >[!NOTE]
 >
