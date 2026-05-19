@@ -4,16 +4,13 @@ description: LLM Optimizer の Edge での最適化に Cloudflare BYOCDN を設�
 feature: Opportunities
 autotag-review: '2026-05-15T17:40:49.847Z'
 TQID: 'https://experienceleague.adobe.com/HkaDwdHRGZJnip-1Bp-4Z-ovwcBPxFUSDqeLUVNu0zo'
-product_v2:
-  - id: d830747e-f8f3-4fce-8eff-d53b333b1639
-feature_v2:
-  - id: d1956731-2adb-4bb7-8301-2b239254ac72
-subfeature_v2:
-  - id: d23587d6-14d6-4e3f-9ee1-cc18623832e1
+product_v2: id: d830747e-f8f3-4fce-8eff-d53b333b1639
+feature_v2: id: d1956731-2adb-4bb7-8301-2b239254ac72
+subfeature_v2: id: d23587d6-14d6-4e3f-9ee1-cc18623832e1
 source-git-commit: 7a92587197cf6a9eec6b01bd4eaeeaf1194d3088
 workflow-type: tm+mt
 source-wordcount: 1906
-ht-degree: 68%
+ht-degree: 100%
 
 ---
 
@@ -28,8 +25,8 @@ Cloudflare ワーカールーティングルールを設定する前に、以下
 
 * ドメインでワーカーが有効になっている Cloudflare アカウント。
 * Cloudflare のドメイン DNS 設定へのアクセス権。
-* LLM Optimizer UI から取得された Edge Optimize API キー。 手順については、[API キーの取得](/help/dashboards/optimize-at-edge/retrieve-api-keys.md#production-api-key)を参照してください。
-* （オプション）ステージング ルーティングをテストするには、[&#x200B; ステージング API キー](/help/dashboards/optimize-at-edge/retrieve-api-keys.md#staging-api-key-optional)を参照してください。
+* LLM Optimizer UI から取得された Edge Optimize API キー。 手順について詳しくは、[API キーの取得](/help/dashboards/optimize-at-edge/retrieve-api-keys.md#production-api-key)を参照してください。
+* （オプション）ステージングルーティングをテストするには、[Staging API キー](/help/dashboards/optimize-at-edge/retrieve-api-keys.md#staging-api-key-optional)を参照してください。
 
 **ルーティングの仕組み**
 
@@ -60,50 +57,50 @@ Edge での最適化バックエンドへのリクエストでは、次のヘッ
 
 ## 設定オプション
 
-Edge Optimize用にCloudflare Workerを設定するには、次の2つの方法があります。
+Edge での最適化用の Cloudflare Worker を設定する方法には、次の 2 つがあります。
 
-* [**オプション 1: Cloudflareへのデプロイ （推奨）**](#option-1-deploy-to-cloudflare) – 新しいワーカーを自動的に作成し、必要な環境変数とシークレットの入力を求めるメッセージを表示します。 このドメインに既存のCloudflare Workerがない場合は、このオプションを使用します。
-* [**オプション 2：手動セットアップ**](#option-2-manual-setup) — ワーカーを自分で作成および設定するための手順ごとの手順。 ドメインに既存のCloudflare Workerが既に設定されている場合は、このオプションを使用します。Edge Optimize コードを既存のワーカーにマージする必要があります（[&#x200B; ステップ 2: ワーカーコードを追加](#option-2-manual-setup)を参照）。また、デプロイメントを完全に制御する必要がある場合は、このオプションを使用します。
+* [**オプション 1：Cloudflare にデプロイ（推奨）**](#option-1-deploy-to-cloudflare) - 新しいワーカーが自動的に作成され、必要な環境変数と秘密鍵の入力を求められます。 このドメインに既存の Cloudflare Worker がない場合は、このオプションを使用します。
+* [**オプション 2：手動設定**](#option-2-manual-setup) - ワーカーを自分で作成および設定するための段階的な手順。 ドメインに既存の Cloudflare Worker が既に設定されている場合（既存のワーカーに Edge での最適化コードを結合する必要があります（[手順 2：Worker コードを追加](#option-2-manual-setup)を参照））またはデプロイメントを完全に制御する場合は、このオプションを使用します。
 
-選択したオプションに関係なく、ワーカーをドメインに手動でリンクする必要があります。[手順：ドメインへのルートの追加](#add-a-route-to-your-domain)を参照してください。
+どちらのオプションを選択した場合でも、ワーカーをドメインに手動でリンクする必要があります。[手順：ドメインにルートを追加](#add-a-route-to-your-domain)を参照してください。
 
-## オプション 1:Cloudflareへのデプロイ
+## オプション 1：Cloudflare にデプロイ
 
-このオプションでは、「**Cloudflareにデプロイ**」ボタンを使用して、ワーカーを自動的に作成し、Cloudflare アカウントに必要な環境変数とシークレットを設定します。 これは、新しいワーカーを設定する場合に最も簡単に開始できる方法です。
+このオプションでは、「**Cloudflare にデプロイ**」ボタンを使用して、ワーカーを自動的に作成し、Cloudflare アカウントに必要な環境変数と秘密鍵を設定します。 新しいワーカーを設定する場合、これが最も簡単に開始できる方法です。
 
 >[!IMPORTANT]
 >
->このオプションは、**がドメインに既存のCloudflare Workerを持っていない**&#x200B;場合にのみ使用してください。 既にワーカーがある場合は、[&#x200B; オプション 2：手動セットアップ &#x200B;](#option-2-manual-setup)を使用して、既存のワーカーにEdge Optimize ルーティングロジックを追加します。
+>このオプションは、ドメインに既存の Cloudflare Worker が&#x200B;**ない**&#x200B;場合にのみ使用します。 既にワーカーがある場合は、[オプション 2：手動設定](#option-2-manual-setup)を使用して、既存のワーカーに Edge での最適化のルーティングロジックを追加します。
 
-**手順1: ワーカーのデプロイ**
+**手順 1：ワーカーをデプロイ**
 
-以下のボタンをクリックして、Edge Optimize ワーカーをCloudflare アカウントにデプロイします。
+以下のボタンをクリックして、Edge での最適化ワーカーを Cloudflare アカウントにデプロイします。
 
-[![Cloudflareへのデプロイ &#x200B;](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/adobe/llmo-code-samples/tree/main/optimize-at-edge/cloudflare/automation)
+[![Cloudflare にデプロイ](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/adobe/llmo-code-samples/tree/main/optimize-at-edge/cloudflare/automation)
 
-**手順2：展開フォームに入力**
+**手順 2：デプロイメントフォームに入力**
 
-ボタンをクリックすると、ワーカーの設定ページが開きます。 次のようにフォームに入力します。
+ボタンをクリックすると、Worker の設定ページが開きます。 フォームを次のように入力します。
 
-![Cloudflare Workers設定ページ &#x200B;](/help/assets/optimize-at-edge/cloudflare-deploy-form.png)
+![Cloudflare Worker 設定ページ](/help/assets/optimize-at-edge/cloudflare-deploy-form.png)
 
-1. **Git アカウント** — ドロップダウンからGitHubまたはGitLab アカウントを選択します。 Cloudflareは、ワーカーコードをアカウントのリポジトリにフォークします。 アカウントがリストにない場合は、**+新規GitHub Connection**&#x200B;または&#x200B;**+新規GitLab Connection**&#x200B;を選択して、ドロップダウンから直接新しい接続を追加できます。 詳しくは、[Cloudflare Git統合ガイド &#x200B;](https://developers.cloudflare.com/workers/ci-cd/builds/git-integration/github-integration/)を参照してください。
+1. **Git アカウント** - ドロップダウンメニューから GitHub または GitLab アカウントを選択します。 Cloudflare は、ワーカーコードをアカウントのリポジトリに分岐します。 アカウントがリストにない場合は、ドロップダウンメニューから「**+ 新規 GitHub 接続**」または「**+ 新規 GitLab 接続**」を選択して、新しい接続を直接追加できます。 詳しくは、[Cloudflare Git 統合ガイド](https://developers.cloudflare.com/workers/ci-cd/builds/git-integration/github-integration/)を参照してください。
 
-   新しいGitHub接続と新しいGitLab接続オプションを表示する![Git アカウントのドロップダウン &#x200B;](/help/assets/optimize-at-edge/cloudflare-git-connection.png)
-2. **プライベート Git リポジトリを作成** – このチェックをオンのままにします（デフォルト）。
-3. **プロジェクト名** — `edge-optimize-router`のままにするか、任意の名前を入力してください。
-4. **EDGE_OPTIMIZE_API_KEY** — Adobeが提供するEdge Optimize API キーを貼り付けます。 この値は、暗号化された秘密鍵として保存されます。
-5. **EDGE_OPTIMIZE_TARGET_HOST** — プロトコルなしでサイトのドメインを入力します（例：`www.example.com`）。
-6. **ビルド コマンド** – 空のままにします。
-7. **デプロイ コマンド** — `npm run deploy`のままにします（事前入力）。
-8. **実稼動以外のブランチ用のビルド** – 選択を解除します。 これは開発者ワークフロー機能であり、このデプロイメントには必要ありません。
+   ![「新規 GitHub 接続」と「新規 GitLab 接続」のオプションを示す Git アカウントのドロップダウン](/help/assets/optimize-at-edge/cloudflare-git-connection.png)
+2. **プライベート Git リポジトリを作成** - オンのままにしておきます（デフォルト）。
+3. **プロジェクト名** - `edge-optimize-router` のままにしておくか、任意の名前を入力します。
+4. **EDGE_OPTIMIZE_API_KEY** - アドビ提供の Edge Optimize API キーをペーストします。 この値は暗号化された秘密鍵として保存されます。
+5. **EDGE_OPTIMIZE_TARGET_HOST** - プロトコルを除いたサイトのドメイン名を入力します（例：`www.example.com`）。
+6. **ビルドコマンド** - 空のままにしておきます。
+7. **デプロイコマンド** - `npm run deploy`（事前入力済み）のままにしておきます。
+8. **本番以外の分岐のビルド** - オフのままにしておきます。 これは開発者のワークフロー機能で、このデプロイメントには必要ありません。
 9. 「**作成してデプロイ**」をクリックします。
 
-ワーカーをデプロイしたら、[&#x200B; ドメインへのルートの追加](#add-a-route-to-your-domain)に進み、ワーカーをドメインにリンクします。 ルーティングは自動的に設定されないので、手動で完了する必要があります。
+ワーカーがデプロイされたら、[ドメインにルートを追加](#add-a-route-to-your-domain)に進み、ワーカーをドメインにリンクさせます。 ルーティングは自動的に設定されないので、手動で設定する必要があります。
 
-## オプション 2：手動セットアップ
+## オプション 2：手動設定
 
-ワーカーを手動で作成および設定するには、次の手順に従います。
+ワーカーを手動で作成および設定するには、次の手順に従います。.
 
 **手順 1：Cloudflare ワーカーを作成**
 
@@ -113,11 +110,11 @@ Edge Optimize用にCloudflare Workerを設定するには、次の2つの方法�
 4. ワーカーに名前を付けます（例：`edge-optimize-router`）。
 5. 「**デプロイ**」をクリックし、デフォルトのコードでワーカーを作成します。
 
-![Cloudflare ワーカーダッシュボード &#x200B;](/help/assets/optimize-at-edge/cloudflare-workers-dashboard.png)
+![Cloudflare ワーカーダッシュボード ](/help/assets/optimize-at-edge/cloudflare-workers-dashboard.png)
 
 **手順 2：ワーカーコードを追加**
 
-ワーカーを作成したら、**コードを編集**&#x200B;をクリックし、デフォルトコードを次のコードに置き換えます。 既存のCloudflare Workerがある場合は、以下のコードを完全に置き換えるのではなく、既存のワーカーコードとマージします。
+ワーカーを作成したら、「**コードを編集**」をクリックし、デフォルトのコードを次に置き換えます。 既に Cloudflare Worker がある場合は、既存のワーカーコードを完全に置き換える代わりに、以下のコードを既存のワーカーコードに結合します。
 
 ```javascript
 /**
@@ -291,7 +288,7 @@ async function failoverToOrigin(request, env, url) {
 
 ![Cloudflare ワーカーコードエディター](/help/assets/optimize-at-edge/cloudflare-worker-editor.png)
 
-**手順3：環境変数とシークレットの設定**
+**手順 3：環境変数と秘密鍵を設定**
 
 環境変数には、API キーなどの機密性の高い設定が安全に保存されます。
 
@@ -309,9 +306,9 @@ async function failoverToOrigin(request, env, url) {
 
 ![Cloudflare 環境変数](/help/assets/optimize-at-edge/cloudflare-env-variables.png)
 
-## ドメインへのルートの追加 {#add-a-route-to-your-domain}
+## ドメインにルートを追加 {#add-a-route-to-your-domain}
 
-使用した設定オプションに関係なく、ワーカーをドメインに手動でリンクする必要があります。 このステップは、トラフィック上のワーカーをアクティブにします。
+どの設定オプションを使用した場合でも、ワーカーをドメインに手動でリンクする必要があります。 この手順で、トラフィック上でワーカーがアクティブ化されます。
 
 1. ワーカーの&#x200B;**設定**／**トリガー**&#x200B;に移動します。
 2. **ルート**&#x200B;の下にある「**ルートを追加**」をクリックします。
@@ -429,7 +426,7 @@ const FAILOVER_ON_5XX = false;
 | 問題 | 考えられる原因 | 解決策 |
 |-------|----------------|----------|
 | 応答に `x-edgeoptimize-request-id` ヘッダーがない | ワーカールートが一致していないか、エージェントボットリストにユーザーエージェントがありません。 | ルートパターンがリクエスト URL と一致することを検証します。 ユーザーエージェントが `AGENTIC_BOTS` 配列にあることを確認します。 |
-| Edge での最適化からの 401 または 403 エラー | API キーが無効または欠落しています。 | `EDGE_OPTIMIZE_API_KEY`が環境変数とシークレットで正しく設定されていることを確認します。 アドビに問い合わせて、API キーがアクティブであることを確認します。 |
+| Edge での最適化からの 401 または 403 エラー | API キーが無効または欠落しています。 | 環境変数と秘密鍵に `EDGE_OPTIMIZE_API_KEY` が正しく設定されていることを検証します。 アドビに問い合わせて、API キーがアクティブであることを確認します。 |
 | 無限リダイレクトまたはループ | ループ保護ヘッダーが正しく設定または確認されていません。 | `x-edgeoptimize-request` ヘッダーの確認が行われていることを確認します。 |
 | 人間のトラフィックが影響を受けている | ワーカールーティングロジックが広すぎます。 | ユーザーエージェントの一致ロジックが正しく、大文字と小文字が区別されないことを検証します。 `TARGETED_PATHS` が正しく設定されていることを確認します。 |
 | 応答時間が遅い | Edge での最適化バックエンドに対してネットワーク遅延が発生しています。 | これは最初のリクエストで想定されます。後続のリクエストは、Edge での最適化でキャッシュされます。 |
@@ -439,7 +436,7 @@ const FAILOVER_ON_5XX = false;
 | リクエストが無効なホストで失敗する | `EDGE_OPTIMIZE_TARGET_HOST` にプロトコル（例：`https://`）が含まれています。 | プロトコルなしのドメイン名のみを使用します（例：`https://example.com` ではなく `example.com`）。 |
 | フェイルオーバー中の 530 エラー | Cloudflare がオリジンに接続できないか、フェイルオーバーリクエストに無効なヘッダーがあります。 | フェイルオーバー機能で Edge での最適化ヘッダーが削除されていることを確認します。 オリジンがアクセス可能で、DNS が正しく設定されていることを検証します。 |
 
-**ファイアウォール ルールを使用してEdgeで最適化を許可する（オプション）**
+**ファイアウォールルールを通じて Edge での最適化を許可（オプション）**
 
 {{waf-allowlist-setup}}
 

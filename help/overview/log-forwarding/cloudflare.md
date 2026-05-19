@@ -1,43 +1,38 @@
 ---
-title: ログ転送 – Cloudflare
-description: CloudflareからAdobeのS3 バケットにCDN ログを転送して、LLM Optimizerでエージェンティックトラフィックデータを収集する方法を説明します。
+title: ログ転送 - Cloudflare
+description: LLM Optimizer でのエージェントトラフィックのデータ収集において、Cloudflare からアドビの S3 バケットに CDN ログを転送する方法について説明します。
 feature: Agentic Traffic
 autotag-review: '2026-05-15T17:41:23.688Z'
 TQID: 'https://experienceleague.adobe.com/AfhcMa7tZ3L-4qCbNKiblInALmHaKxWLtL-O-Hkvc-U'
-product_v2:
-  - id: d830747e-f8f3-4fce-8eff-d53b333b1639
-feature_v2:
-  - id: d1956731-2adb-4bb7-8301-2b239254ac72
-subfeature_v2:
-  - id: d23587d6-14d6-4e3f-9ee1-cc18623832e1
-topic_v2:
-  - id: d3cdead0-685a-4489-9250-4bb709942f66
-  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+product_v2: id: d830747e-f8f3-4fce-8eff-d53b333b1639
+feature_v2: id: d1956731-2adb-4bb7-8301-2b239254ac72
+subfeature_v2: id: d23587d6-14d6-4e3f-9ee1-cc18623832e1
+topic_v2: id: d3cdead0-685a-4489-9250-4bb709942f66id: e1e0219c-f879-479f-8427-888ed2a6e9c2
 source-git-commit: 7a92587197cf6a9eec6b01bd4eaeeaf1194d3088
 workflow-type: tm+mt
 source-wordcount: 381
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
 
 # ログ転送：Cloudflare {#log-forwarding-cloudflare}
 
-このページでは、エージェント型トラフィックデータ収集用にCloudflareからAdobe S3 バケットにCDN ログを転送する方法について詳しく説明します。 LLM Optimizer CDN設定ページを使用して、LLM Optimizerにオンボーディングします。 オンボーディングプロセスが完了したら、このページに記載されている手順に従って、Cloudflare ダッシュボードコンソールでログ転送を設定します。
+このページでは、エージェントトラフィックのデータ収集において、Cloudflare からアドビの S3 バケットに CDN ログを転送する方法について説明します。 LLM Optimizer にオンボードするには、LLM Optimizer CDN 設定ページを使用します。 オンボーディングプロセスが完了したら、このページに記載されている手順に従って、Cloudflare ダッシュボードでログ転送を設定します。
 
-## ステップ 1: LLM Optimizerでのオンボーディング {#step-1}
+## 手順 1：LLM Optimizer でオンボード {#step-1}
 
-LLM Optimizer ページ [https://llmo.now/](https://llmo.now/)で、次の操作を行います。
+LLM Optimizer ページ [https://llmo.now/](https://llmo.now/) で、次の手順に従います。
 
 1. **顧客設定ダッシュボード**&#x200B;に移動します。
 
    ![設定ボタン](/help/overview/assets/log-forwarding/common/config-button.png)
 
-1. 「**CDN設定**」タブをクリックします。
+1. 「**CDN 設定**」タブをクリックします。
 
-   ![CDN設定タブ &#x200B;](/help/overview/assets/log-forwarding/common/cdn-config-tab.png)
+   ![「CDN 設定」タブ](/help/overview/assets/log-forwarding/common/cdn-config-tab.png)
 
-1. 「**基本を学ぶ**」をクリックします。
+1. 「**開始**」をクリックします。
 
    <!-- ![Onboard CDN button](/help/overview/assets/log-forwarding/common/onboard-cdn-button.png) -->
 
@@ -45,69 +40,69 @@ LLM Optimizer ページ [https://llmo.now/](https://llmo.now/)で、次の操作
 
    ![設定](/help/overview/assets/log-forwarding/common/configure.png)
 
-1. **Cloudflare （BYOCDN）**&#x200B;を選択します。
+1. 「**Cloudflare（BYOCDN）**」を選択します。
 
-   ![Cloudflareを選択](/help/overview/assets/log-forwarding/cloudflare/cloudflare-select.png)
+   ![「Cloudflare」を選択](/help/overview/assets/log-forwarding/cloudflare/cloudflare-select.png)
 
 1. 「**オンボード**」をクリックします。
 
    <!-- ![Onboard button](/help/overview/assets/log-forwarding/common/onboard-button.png)-->
 
-## ステップ 2:CloudflareでLogpush ジョブを作成する {#step-2}
+## 手順 2：Cloudflare で Logpush ジョブを作成 {#step-2}
 
-[Cloudflare ダッシュボード &#x200B;](https://dash.cloudflare.com/login)で、次の手順に従います。
+[Cloudflare ダッシュボード](https://dash.cloudflare.com/login)で、次の手順に従います。
 
-1. **ドメイン （ゾーン）** レベルの&#x200B;**Logpush** ページに移動します。
-1. **ログプッシュジョブの作成**&#x200B;を選択します。
-1. **宛先を選択**&#x200B;で、**Amazon S3**&#x200B;を選択します。
+1. **ドメイン（ゾーン）**&#x200B;レベルの **Logpush** ページに移動します。
+1. 「**Logpush ジョブを作成**」を選択します。
+1. **宛先を選択**&#x200B;で、「**Amazon S3**」を選択します。
 1. 次の宛先情報を入力します。
 
-   - **Bucket** — S3 バケット名。 LLM Optimizer CDN Configuration ページから値をコピーします。
+   - **バケット** - S3 バケット名。 LLM Optimizer CDN 設定ページから値をコピーします。
 
-     ![&#x200B; バケット名](/help/overview/assets/log-forwarding/common/bucket-name.png)
+     ![バケット名](/help/overview/assets/log-forwarding/common/bucket-name.png)
 
-   - **パス** — ストレージコンテナ内のバケットの場所。 LLM Optimizer CDN Configuration ページから値をコピーします。
+   - **パス** - ストレージコンテナ内のバケットの場所。 LLM Optimizer CDN 設定ページから値をコピーします。
 
-     ![Cloudflare パス &#x200B;](/help/overview/assets/log-forwarding/cloudflare/cloudflare-path.png)
+     ![Cloudflare パス](/help/overview/assets/log-forwarding/cloudflare/cloudflare-path.png)
 
-   - **ログを毎日のサブフォルダー**&#x200B;に整理します（推奨）。
+   - **ログを毎日のサブフォルダーに整理します**（推奨）。
 
-     ![日別サブフォルダー](/help/overview/assets/log-forwarding/cloudflare/cloudflare-daily-subfolders.png)
+     ![毎日のサブフォルダー](/help/overview/assets/log-forwarding/cloudflare/cloudflare-daily-subfolders.png)
 
-   - **バケット領域** — LLM Optimizer CDN Configuration ページから値をコピーします。
+   - **バケット領域** - LLM Optimizer CDN 設定ページから値をコピーします。
 
      <!-- ![Region](/help/overview/assets/log-forwarding/cloudflare/cloudflare-region.png)-->
 
    - サーバーサイドの暗号化が必要ない場合は、オフのままにします。
 
-   上記の手順を完了したら、**続行**&#x200B;を選択します。
+   上記の手順を完了したら、「**続行**」を選択します。
 
-1. 所有権を証明するために、Cloudflareは指定した宛先にファイルを送信します。 トークンを見つけるには、所有権チャレンジファイルの「**概要**」タブにある「**開く**」ボタンをクリックします。 LLM Optimizer CDN設定ページから所有権トークンをコピーし、それをCloudflare ダッシュボードに貼り付けて、バケットへのアクセスを確認します。 所有権トークンを入力し、**続行**&#x200B;を選択します。
+1. 所有権を証明するために、Cloudflare は指定された宛先にファイルを送信します。 トークンを見つけるには、所有権課題ファイルの「**概要**」タブにある「**開く**」ボタンをクリックします。 LLM Optimizer CDN 設定ページから所有権トークンをコピーし、Cloudflare ダッシュボードにペーストして、バケットへのアクセス権を確認します。 所有権トークンを入力し、「**続行**」を選択します。
 
    <!--![Ownership token](/help/overview/assets/log-forwarding/cloudflare/cloudflare-ownership-token.png)-->
 
-1. ストレージ サービスにプッシュする&#x200B;**HTTP Requests** データセットを選択します。
+1. ストレージサービスにプッシュする **HTTP リクエスト**&#x200B;データセットを選択します。
 
 1. Logpush ジョブを設定します。
 
    - **ジョブ名**&#x200B;を入力します。
 
-   - **次のフィールドを送信する**&#x200B;で、LLM Optimizer設定ページの値を参照してください。
+   - **次のフィールドを送信**&#x200B;で、LLM Optimizer 設定ページにある値を参照します。
 
-     ![&#x200B; ログプッシュフィールド &#x200B;](/help/overview/assets/log-forwarding/cloudflare/cloudflare-logpush-fields.png)
+     ![Logpush フィールド](/help/overview/assets/log-forwarding/cloudflare/cloudflare-logpush-fields.png)
 
-   - **ログ形式**: JSON。
+   - **ログ形式**：JSON。
 
      <!--![JSON format](/help/overview/assets/log-forwarding/cloudflare/cloudflare-json-format.png)-->
 
-1. **詳細オプション**&#x200B;で：
+1. **詳細オプション**&#x200B;で、次の操作を実行します。
 
-   - ログのタイムスタンプフィールドの形式を選択してください：`RFC3339`。
+   - ログのタイムスタンプフィールドの形式（`RFC3339`）を選択します。
 
-     ![&#x200B; タイムスタンプ形式](/help/overview/assets/log-forwarding/cloudflare/cloudflare-timestamp-format.png)
+     ![タイムスタンプ形式](/help/overview/assets/log-forwarding/cloudflare/cloudflare-timestamp-format.png)
 
-   - サンプリングレートの場合は、**すべてのログ**&#x200B;を選択します。
+   - サンプリングレートの場合は、「**すべてのログ**」を選択します。
 
-     ![&#x200B; サンプリングレート &#x200B;](/help/overview/assets/log-forwarding/cloudflare/cloudflare-sampling-rate.png)
+     ![サンプリングレート](/help/overview/assets/log-forwarding/cloudflare/cloudflare-sampling-rate.png)
 
-1. ログプッシュジョブの設定が完了したら、**送信**&#x200B;を選択します。
+1. Logpush ジョブの設定が完了したら、「**送信**」を選択します。

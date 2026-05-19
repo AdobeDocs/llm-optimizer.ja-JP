@@ -4,16 +4,13 @@ description: LLM Optimizer の Edge での最適化に Akamai BYOCDN を設定�
 feature: Opportunities
 autotag-review: '2026-05-15T17:34:47.891Z'
 TQID: 'https://experienceleague.adobe.com/oGtqsnvHYn0BSNLl40-KpVl0TjCZHESRgH1LcVmjOiY'
-product_v2:
-  - id: d830747e-f8f3-4fce-8eff-d53b333b1639
-feature_v2:
-  - id: d1956731-2adb-4bb7-8301-2b239254ac72
-subfeature_v2:
-  - id: d23587d6-14d6-4e3f-9ee1-cc18623832e1
+product_v2: id: d830747e-f8f3-4fce-8eff-d53b333b1639
+feature_v2: id: d1956731-2adb-4bb7-8301-2b239254ac72
+subfeature_v2: id: d23587d6-14d6-4e3f-9ee1-cc18623832e1
 source-git-commit: 7a92587197cf6a9eec6b01bd4eaeeaf1194d3088
 workflow-type: tm+mt
 source-wordcount: 809
-ht-degree: 62%
+ht-degree: 100%
 
 ---
 
@@ -27,14 +24,14 @@ ht-degree: 62%
 Akamai Property Manager ルールを設定する前に、次の内容を確認します。
 
 * ドメインの Akamai Property Manager へのアクセス権。
-* LLM Optimizer UI から取得された Edge Optimize API キー。 手順については、[API キーの取得](/help/dashboards/optimize-at-edge/retrieve-api-keys.md#production-api-key)を参照してください。
-* （オプション）ステージング ルーティングをテストするには、[&#x200B; ステージング API キー](/help/dashboards/optimize-at-edge/retrieve-api-keys.md#staging-api-key-optional)を参照してください。
+* LLM Optimizer UI から取得された Edge Optimize API キー。 手順について詳しくは、[API キーの取得](/help/dashboards/optimize-at-edge/retrieve-api-keys.md#production-api-key)を参照してください。
+* （オプション）ステージングルーティングをテストするには、[Staging API キー](/help/dashboards/optimize-at-edge/retrieve-api-keys.md#staging-api-key-optional)を参照してください。
 
 **設定**
 
-次のAkamai Property Manager ルールは、エージェント型HTML ページトラフィックをEdge Optimizeにルーティングします。 設定には、次の手順が含まれます。
+次の Akamai Property Manager ルールでは、エージェント型 HTML ページトラフィックを Edge での最適化にルーティングします。 設定には、次の手順が含まれます。
 
-**1. ルーティング条件の設定（User-AgentとHTMLのトラフィックの一致）**
+**1. ルーティング条件を設定（ユーザーエージェントと HTML トラフィックの一致）**
 
 次のユーザーエージェントのルーティングを設定します。
 
@@ -49,7 +46,7 @@ Akamai Property Manager ルールを設定する前に、次の内容を確認�
 
 >[!NOTE]
 >
->Edgeで最適化のルーティングルールをエージェント型HTML ページトラフィックにのみ適用します。 一般的な設定では、**File Extension**&#x200B;などのリクエストサイドの条件を使用して、拡張機能のないページ URLに`html`と`EMPTY_STRING`を一致させることができます。 サイトが他のURL パターンからHTMLを提供している場合、またはAPI エンドポイントなどの拡張なし非ページルートを含んでいる場合は、パスベースの条件を追加してルールを絞り込みます。
+>Edge での最適化ルーティングルールは、エージェント型 HTML ページトラフィックにのみ適用します。 一般的な設定としては、リクエスト側の条件として、`html` に一致する&#x200B;**ファイル拡張子**&#x200B;や、拡張子のないページ URL に一致する `EMPTY_STRING` などを使用することがあります。 サイトが他の URL パターンから HTML を配信する場合や、API エンドポイントなどの拡張子のない非ページルートが含まれる場合は、パスベースの追加条件でルールを絞り込みます。
 
 ![ルーティング条件を設定](/help/assets/optimize-at-edge/akamai-step1-routing.png)
 
@@ -59,7 +56,7 @@ Akamai Property Manager ルールを設定する前に、次の内容を確認�
 
 >[!NOTE]
 >
->Edgeで最適化ルールを追加した後にプロパティのアクティベーションが失敗した場合は、ルールでデフォルトのルールとは異なるOrigin Server SSL検証モードが使用されているかどうかを確認します。 その場合は、デフォルトのルールに一致するように、「Edgeで最適化」ルールを更新します。 例えば、デフォルトのルールで&#x200B;**プラットフォーム設定**&#x200B;を使用している場合は、ここでも&#x200B;**プラットフォーム設定**&#x200B;を使用します。 必要な設定を使用できない場合は、Akamai サポートにお問い合わせください。
+>Edge での最適化ルールを追加した後にプロパティのアクティブ化が失敗する場合は、そのルールがデフォルトのルールとは異なるオリジンサーバーの SSL 検証モードを使用しているかどうかを確認します。 異なるモードを使用している場合は、Edge での最適化ルールをデフォルトのルールと一致するように更新します。 例えば、デフォルトのルールで&#x200B;**プラットフォーム設定**&#x200B;を使用している場合は、ここでも&#x200B;**プラットフォーム設定**&#x200B;を使用します。 必要な設定を使用できない場合は、Akamai サポートにお問い合わせください。
 
 ![オリジンと SSL の動作を設定](/help/assets/optimize-at-edge/akamai-step2-origin.png)
 
@@ -76,21 +73,21 @@ Akamai Property Manager ルールを設定する前に、次の内容を確認�
 **5. 受信リクエストヘッダーを変更**
 
 次の受信リクエストヘッダーを設定します。
-LLMOから取得したAPI キーへの`x-edgeoptimize-api-key`
+`x-edgeoptimize-api-key` を LLMO から取得した API キーに
 `x-edgeoptimize-config` コピー先： `LLMCLIENT=TRUE;`
-`x-edgeoptimize-url` ～ `{{builtin.AK_URL}}`
+`x-edgeoptimize-url` を `{{builtin.AK_URL}}` に
 
 ![受信リクエストヘッダーを変更](/help/assets/optimize-at-edge/akamai-step5-request.png)
 
-**ファイアウォール ルールを使用してEdgeで最適化を許可する（オプション）**
+**ファイアウォールルールを通じて Edge での最適化を許可（オプション）**
 
 {{waf-allowlist-setup}}
 
-![Property Manager](/help/assets/optimize-at-edge/akamai-step10-fetcher-key.png)でx-edgeoptimize-fetcher-key ヘッダーを設定
+![プロパティマネージャーで x-edgeoptimize-fetcher-key ヘッダーを設定](/help/assets/optimize-at-edge/akamai-step10-fetcher-key.png)
 
 >[!NOTE]
 >
->Akamai Bot Managerで`*AdobeEdgeOptimize/1.0*` ユーザーエージェントと`x-edgeoptimize-fetcher-key` ヘッダーも許可リストに加えるします。
+>また、Akamai Bot Manager で `*AdobeEdgeOptimize/1.0*` ユーザーエージェントと `x-edgeoptimize-fetcher-key` ヘッダーを許可リストに追加します。
 
 **6. 受信応答ヘッダーを変更**
 
@@ -116,7 +113,7 @@ LLMOから取得したAPI キーへの`x-edgeoptimize-api-key`
 
 >[!IMPORTANT]
 >
->この手順のXML スニペットには、**詳細**&#x200B;動作が必要です。 一部のAkamai環境では、この動作はセルフサービス編集では使用できません。 **Advanced** オプションが表示されない場合は、Akamai アカウントチームまたはAkamai サポートに連絡して、必要な設定を有効にしてください。
+>この手順で使用する XML スニペットには、**詳細**&#x200B;な動作が必要です。 Akamai の一部の環境では、セルフサービス編集に対してこの機能を使用できません。 「**詳細**」オプションが表示されない場合は、Akamai アカウントチームまたは Akamai サポートに連絡して、必要な設定を有効にしてください。
 
 ![サイトフェイルオーバー](/help/assets/optimize-at-edge/akamai-step9-failover.png)
 
@@ -148,7 +145,7 @@ LLMOから取得したAPI キーへの`x-edgeoptimize-api-key`
 >
 >これにより、フェイルオーバーテストヘッダールールが、1 つだけでなく、**すべて**&#x200B;のルーティングルールに対して評価されることが確保されます。
 >
->また、**Edge ルーティングで最適化** ルールが、同じリクエストのオリジン、キャッシュ動作、またはキャッシュ IDを変更する後で一致するルールによって上書きされないようにします。 別の一致するルールがこれらの動作をリセットする場合、Edgeで最適化のルーティングまたはキャッシュが期待どおりに動作しない可能性があります。
+>また、**Edge での最適化ルーティング**&#x200B;ルールが、同じリクエストのオリジン、キャッシュ動作、キャッシュ ID を変更する後続の一致ルールにより上書きされないことも確保されます。 別の一致ルールにより、これらの動作がリセットされた場合、Edge での最適化ルーティングまたはキャッシュが期待どおりに機能しないことがあります。
 
 リクエストヘッダーの `x-edgeoptimize-request` の値が `fo` の場合、送信応答ヘッダーの `x-edgeoptimize-fo` を `true` に設定します。
 

@@ -4,24 +4,14 @@ description: カスタマイズされたブランドモニタリングと戦略�
 feature: Best Practices, Customer Configuration
 autotag-review: '2026-05-15T17:36:13.598Z'
 TQID: 'https://experienceleague.adobe.com/aZCxLQbfeDDtqD3hBGuD-JuCZoMuGiqQrs0gaqxt4-4'
-product_v2:
-  - id: d830747e-f8f3-4fce-8eff-d53b333b1639
-feature_v2:
-  - id: c0713b97-4af8-4c41-b742-5afcc6ced468
-  - id: d1956731-2adb-4bb7-8301-2b239254ac72
-  - id: e0828736-236a-487b-a478-5a635455eadc
-subfeature_v2:
-  - id: c898dfb2-0885-42fb-b2af-b2d756752646
-  - id: e69d5a42-0217-4ca5-9396-a9a826a170da
-topic_v2:
-  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
-  - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
-  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
-  - id: f8667931-f646-4dd3-af2a-b9d0cb8098ad
+product_v2: id: d830747e-f8f3-4fce-8eff-d53b333b1639
+feature_v2: id: c0713b97-4af8-4c41-b742-5afcc6ced468id: d1956731-2adb-4bb7-8301-2b239254ac72id: e0828736-236a-487b-a478-5a635455eadc
+subfeature_v2: id: c898dfb2-0885-42fb-b2af-b2d756752646id: e69d5a42-0217-4ca5-9396-a9a826a170da
+topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: cdd65e7e-8839-44a2-bc21-0e03623b5dd1id: eddd9b14-83bd-4ff4-9072-54a4a484abb7id: f8667931-f646-4dd3-af2a-b9d0cb8098ad
 source-git-commit: 7a92587197cf6a9eec6b01bd4eaeeaf1194d3088
 workflow-type: tm+mt
 source-wordcount: 1530
-ht-degree: 93%
+ht-degree: 100%
 
 ---
 
@@ -37,19 +27,19 @@ ht-degree: 93%
 
 [!UICONTROL 顧客設定]ダッシュボードでは、カテゴリ（ビジネス単位や製品ラインなど）のカスタマイズ、その他のブランドのトラッキング、ブランド言及エイリアスの追加を行い、プロンプトをまたいでブランドのすべてのバリエーションを取得できます。 この設定により、プラットフォームはビジネスコンテキストに合わせてインサイトを調整し、正確な可視性、トラフィック、オポチュニティの分析ができるようになります。
 
-## ブランド中心主義
+## ブランド中心のエクスペリエンス
 
-デフォルトでは、新規顧客はオンボーディング主導の設定により、焦点を絞ったブランドファーストのインターフェイスから開始されます。 この新しいインターフェイスでは、各組織は1つのアクティブなブランドと、選択できる追加の推奨ブランドから始まります。 既存のLLM Optimizerのお客様は、このブランド中心の体験に徐々に移行していきます。
+デフォルトでは、新規顧客はオンボーディング駆動型の設定により、焦点を当てたブランドファーストのインターフェイスで開始します。 この新しいインターフェイスでは、各組織は 1 つのアクティブなブランドから開始し、追加の推奨ブランドから選択できます。 既存の LLM Optimizer のお客様は、このブランド中心のエクスペリエンスに徐々に移行されます。
 
-ブランド中心型のエクスペリエンスを利用している場合、**ブランド管理**&#x200B;で、ブランドの監視および分析方法を定義します。
+ブランド中心のエクスペリエンスを使用している場合は、**ブランド管理**&#x200B;でブランドの監視および分析方法を定義します。
 
-![&#x200B; ブランド管理 – アプリのナビゲーション （ブランド中心のエクスペリエンス） &#x200B;](/help/assets/brand-centric-experience/llmo-app-shell.png)
+![ブランド管理 - アプリのナビゲーション（ブランド中心のエクスペリエンス）](/help/assets/brand-centric-experience/llmo-app-shell.png)
 
-![&#x200B; ブランド管理 – 設定の概要](/help/assets/brand-centric-experience/brands-management-configuration.png)
+![ブランド管理 - 設定の概要](/help/assets/brand-centric-experience/brands-management-configuration.png)
 
 特定のブランドのトピックとプロンプトを設定するには、**プロンプト管理**&#x200B;を使用します。
 
-![&#x200B; プロンプト管理](/help/assets/brand-centric-experience/prompts-management.png)
+![プロンプト管理](/help/assets/brand-centric-experience/prompts-management.png)
 
 ## 業界プロンプトライブラリ
 
@@ -119,7 +109,7 @@ LLM ツールでの AI 検索とプロンプト行動に関する顧客トレン
 >[!IMPORTANT]
 >
 > * 1 つのアプローチを選択し、使用し続けます。
-> * アカウント／ブランドごとにカテゴリモデルは **1** 個しか使用できません。 **SBU**&#x200B;と&#x200B;**URL_DIR**&#x200B;を同時に混在させないでください。
+> * アカウント／ブランドごとにカテゴリモデルは **1** 個しか使用できません。 **SBU** と **URL_DIR** を同時に混在させないでください。
 <!--Can you mix Product/Service with these?-->
 
 例：
