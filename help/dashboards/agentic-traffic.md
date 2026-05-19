@@ -18,7 +18,7 @@ topic_v2:
 source-git-commit: 7a92587197cf6a9eec6b01bd4eaeeaf1194d3088
 workflow-type: tm+mt
 source-wordcount: 1407
-ht-degree: 90%
+ht-degree: 100%
 
 ---
 
@@ -38,9 +38,9 @@ ht-degree: 90%
 * [上位と下位のムーバー](#top-bottom-movers)
 * [ユーザーエージェントと URL パフォーマンス分析](#user-url-performance)
 
-[&#x200B; ブランド中心のエクスペリエンス &#x200B;](/help/overview/quick-start.md#brand-centric-experience)を利用している場合は、**エージェンティックトラフィック**&#x200B;に移動し、エージェンティックトラフィックインサイトを表示するサイトを選択します。
+[ブランド中心のエクスペリエンス](/help/overview/quick-start.md#brand-centric-experience)を使用している場合は、**エージェントトラフィック**&#x200B;に移動し、エージェントトラフィックのインサイトを表示するサイトを選択します。
 
-![&#x200B; エージェンティックトラフィック – サイトセレクター（ブランド中心のエクスペリエンス） &#x200B;](/help/assets/brand-centric-experience/agentic-traffic-dashboard.png)
+![エージェントトラフィック - サイトセレクター（ブランド中心のエクスペリエンス）](/help/assets/brand-centric-experience/agentic-traffic-dashboard.png)
 
 ## CDN ログ転送 {#cdn-setup}
 
@@ -67,19 +67,19 @@ ht-degree: 90%
 「**その他**」を選択した場合は、llmo-now@adobe.com に問い合わせてサポートを受ける必要があります。
 
 >[!NOTE]
->顧客管理CDN （BYOCDN）を使用する際のログ転送について詳しくは、[BYOCDN ログ転送の概要](/help/overview/log-forwarding/log-forwarding-overview.md)を参照してください
+>顧客管理 CDN（BYOCDN）を使用する際のログ転送について詳しくは、[BYOCDN ログ転送の概要](/help/overview/log-forwarding/log-forwarding-overview.md)を参照してください。
 
 アクティブ化すると、ログが取り込まれ、合計エージェントインタラクション数、成功率、マーケット別のヒット数、ユーザーエージェント分析、URL レベルのパフォーマンスなどの指標がダッシュボードに入力されます。
 
-### ブランド中心主義
+### ブランド中心のエクスペリエンス
 
-[&#x200B; ブランド中心のエクスペリエンス &#x200B;](/help/overview/quick-start.md#brand-centric-experience)を利用している場合は、**ブランド管理**&#x200B;に移動し、**CDN** ラベルをクリックして、CDN ログ転送情報を追加できます。
+[ブランド中心のエクスペリエンス](/help/overview/quick-start.md#brand-centric-experience)を使用している場合は、**ブランド管理**&#x200B;に移動し、**CDN** ラベルをクリックして、CDN ログ転送情報を追加できます。
 
-![&#x200B; ブランド管理 – CDN ログ転送](/help/assets/brand-centric-experience/brands-management-cdn.png)
+![ブランド管理 - CDN ログ転送](/help/assets/brand-centric-experience/brands-management-cdn.png)
 
 LLM Optimizer では、CDN ログからのフィールドのサブセットを処理します。 生のログフィールド名は CDN プロバイダーによって異なりますが、次のように正規化されて表示されます。
 
-* URL （パスとクエリパラメーター）
+* URL（パスとクエリパラメーター）
 * ユーザーエージェント
 * ステータスコード
 * リファラーヘッダー
@@ -126,7 +126,7 @@ LLM Optimizer では、CDN ログからのフィールドのサブセットを�
 
 ## 上位と下位のムーバー {#top-bottom-movers}
 
-トップとボトムムーバーのビューでは、エージェンティックのトラフィック（コンテンツにアクセスするAI システムからの訪問またはヒット）が週ごとに最大に変化するURLがハイライトされます。 **Top Movers**&#x200B;はページの可視性またはエンゲージメントを示し、**Bottom Movers**&#x200B;はURLが最も急激に低下していることを示します。 これにより、どのコンテンツがトレンド上昇中か、どのコンテンツに注意が必要か、AI 駆動型の検出パターンがどこで変化しているかをすばやく特定できます。
+上位と下位のムーバーのビューでは、エージェントトラフィック（コンテンツにアクセスする AI システムからの訪問数またはヒット数）の週別の変化が最も大きかった URL がハイライト表示されます。 **上位のムーバー**&#x200B;では、可視性やエンゲージメントを獲得しているページが表示され、**下位のムーバー**&#x200B;では、最も急落した URL が表示されます。 これにより、どのコンテンツがトレンド上昇中か、どのコンテンツに注意が必要か、AI 駆動型の検出パターンがどこで変化しているかをすばやく特定できます。
 
 ![上位と下位のムーバー](/help/dashboards/assets/movers.png)
 

@@ -1,6 +1,6 @@
 ---
-title: ログ転送 – CloudFront （AWS CLI）
-description: 配信の設定と操作にAWS CLIを使用して、CloudFront CDN ログをAdobeのS3 バケットに転送します。
+title: ログ転送 - CloudFront（AWS CLI）
+description: 配信の設定と操作に AWS CLI を使用して、CloudFront CDN ログをアドビの S3 バケットに転送します。
 feature: Agentic Traffic
 autotag-review: '2026-05-15T17:42:44.992Z'
 TQID: 'https://experienceleague.adobe.com/NoVv3qv1RbtqAWGMPYC1Rz4wO-5Au1yL2e8tRKd9Hao'
@@ -17,32 +17,32 @@ topic_v2:
 source-git-commit: 7a92587197cf6a9eec6b01bd4eaeeaf1194d3088
 workflow-type: tm+mt
 source-wordcount: 379
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
 
-# ログ転送：CloudFront （AWS CLI） {#log-forwarding-cloudfront-cli}
+# ログ転送：CloudFront（AWS CLI） {#log-forwarding-cloudfront-cli}
 
-このページでは、エージェント型トラフィックデータ収集用にCloudFrontからAdobeのS3 バケットにCDN ログを転送する方法について詳しく説明します。 LLM Optimizer CDN設定ページを使用して、LLM Optimizerにオンボーディングします。 オンボーディングプロセスが完了したら、このページに記載されている手順に従って、[&#x200B; ステップ 2](#step-2-cli)の[AWS コマンドラインインターフェイス &#x200B;](https://aws.amazon.com/cli/)を使用してログ転送を設定します。
+このページでは、エージェントトラフィックのデータ収集において、CloudFront から CDN ログをアドビの S3 バケットに転送する方法について説明します。 LLM Optimizer にオンボードするには、LLM Optimizer CDN 設定ページを使用します。 オンボーディングプロセスが完了したら、このページに記載されている手順に従って、[手順 2](#step-2-cli) の [AWS コマンドラインインターフェイス](https://aws.amazon.com/cli/)を使用してログ転送を設定します。
 
 >[!NOTE]
 >
-> このガイドでは、[AWS コマンドラインインターフェイス &#x200B;](https://aws.amazon.com/cli/)を使用してログ転送を設定する方法について説明します。 **CloudFront UI**&#x200B;を使用してログ転送を設定する場合は、[&#x200B; ログ転送：CloudFront](/help/overview/log-forwarding/cloudfront.md)を参照してください。
+> このガイドでは、[AWS コマンドラインインターフェイス](https://aws.amazon.com/cli/)を使用してログ転送を設定する方法について説明します。 **CloudFront UI** を使用してログ転送を設定する場合は、[ログ転送：CloudFront](/help/overview/log-forwarding/cloudfront.md) を参照してください。
 
-## ステップ 1: LLM Optimizerでのオンボーディング {#step-1}
+## 手順 1：LLM Optimizer でオンボード {#step-1}
 
-LLM Optimizer ページ [https://llmo.now/](https://llmo.now/)で、次の操作を行います。
+LLM Optimizer ページ [https://llmo.now/](https://llmo.now/) で、次の手順に従います。
 
 1. **顧客設定ダッシュボード**&#x200B;に移動します。
 
    ![設定ボタン](/help/overview/assets/log-forwarding/common/config-button.png)
 
-1. 「**CDN設定**」タブをクリックします。
+1. 「**CDN 設定**」タブをクリックします。
 
-   ![CDN設定タブ &#x200B;](/help/overview/assets/log-forwarding/common/cdn-config-tab.png)
+   ![「CDN 設定」タブ](/help/overview/assets/log-forwarding/common/cdn-config-tab.png)
 
-1. 「**基本を学ぶ**」をクリックします。
+1. 「**開始**」をクリックします。
 
    <!-- ![Onboard CDN button](/help/overview/assets/log-forwarding/common/onboard-cdn-button.png)-->
 
@@ -50,25 +50,25 @@ LLM Optimizer ページ [https://llmo.now/](https://llmo.now/)で、次の操作
 
    ![設定](/help/overview/assets/log-forwarding/common/configure.png)
 
-1. **AWS アカウント** IDを入力してください。
+1. **AWS アカウント** ID を入力します。
 
 <!--  ![AWS Account ID](/help/overview/assets/log-forwarding/cloudfront/cloudfront-aws-account.png)-->
 
-1. **CloudFront （BYOCDN）**&#x200B;を選択します。
+1. 「**CloudFront（BYOCDN）**」を選択します。
 
-   ![CloudFrontを選択](/help/overview/assets/log-forwarding/cloudfront/cloudfront-select.png)
+   ![CloudFront を選択](/help/overview/assets/log-forwarding/cloudfront/cloudfront-select.png)
 
 1. 「**オンボード**」をクリックします。
 
 <!-- ![Onboard button](/help/overview/assets/log-forwarding/common/onboard-button.png)-->
 
-## 手順2:AWS CLIを使用したCDN ログ転送の設定 {#step-2-cli}
+## 手順 2：AWS CLI を使用して CDN ログ転送を設定 {#step-2-cli}
 
-AWS CLIを使用したCDN ログ転送の設定は次のとおりです。
+AWS CLI を使用して CDN ログ転送を設定するには、次の手順に従います。
 
-### AWS CLI資格情報の設定
+### AWS CLI 資格情報の設定
 
-AWS CLI資格情報MACを設定します。 ～/.aws/credentialsを開き、以下の変数の値を入力します。
+AWS CLI 資格情報 MAC を設定します。 ～/.aws/credentials を開き、以下の変数の値を入力します。
 
 ```text
 [LLMO]
@@ -77,9 +77,9 @@ aws_secret_access_key=<VALUE_OF_SECRET_KEY>
 aws_session_token=<ONLY_IF_USING_SECURITY_TOKEN_SERVICE> ## Optional
 ```
 
-### 接続をテストする
+### 接続のテスト
 
-接続をテストするには、次のコマンドを実行します。
+接続をテストするには、以下のコマンドを実行します。
 
 ```bash
 aws sts get-caller-identity --profile LLMO
@@ -98,13 +98,13 @@ aws sts get-caller-identity --profile LLMO
 
 ### 変数の初期化
 
-`REPLACEME123@AdobeOrg`を組織Adobe IMSの組織IDに置き換え、以下のコマンドを実行します。 このコマンドの出力IDは`TRANSFORM_IMS_ID`と呼ばれます。
+`REPLACEME123@AdobeOrg` を組織の Adobe IMS 組織 ID に置き換えて、以下のコマンドを実行します。 このコマンドの出力 ID は、`TRANSFORM_IMS_ID` と呼ばれます。
 
 ```bash
 echo "REPLACEME123@AdobeOrg" | sed 's/@AdobeOrg$//' | tr '[:upper:]' '[:lower:]'
 ```
 
-以下のガイドラインに従って`CUSTOMER`、`CDN_ID`、`ACCT1`および`TRANSFORM_IMS_ID`の値を入力し、ターミナルからコマンドを実行します。
+以下のガイドラインに従って、`CUSTOMER`、`CDN_ID`、`ACCT1`、`TRANSFORM_IMS_ID` の値を入力し、ターミナルからコマンドを実行します。
 
 ```bash
 export PROFILE1=LLMO
@@ -119,7 +119,7 @@ export DELIVERY_DEST_ARN=arn:aws:logs:us-east-1:640168421876:delivery-destinatio
 
 ### 配信ソースの作成
 
-手順3が実行された同じターミナルから、次のコマンドを実行します。
+手順 3 を実行したのと同じターミナルから、以下のコマンドを実行します。
 
 ```bash
 aws logs put-delivery-source --name llmo-cf-${CUSTOMER}-${CDN_ID} \
@@ -130,9 +130,9 @@ aws logs put-delivery-source --name llmo-cf-${CUSTOMER}-${CDN_ID} \
 
 >[!IMPORTANT]
 >
->次のエラーが発生した場合は、既存の配信ソースを検索します。*PutDeliverySource オペレーションの呼び出し中にエラーが発生しました（ConflictException）：このResourceIdは、このアカウントの別の配信Sourceで既に使用されています。*
+>次のエラーが発生した場合は、既存の配信ソースを検索します。*PutDeliverySource 操作の呼び出しの際にエラーが発生しました（ConflictException）：この ResourceId は、このアカウントの別の配信ソースで既に使用されています。*
 >
->既存の配信ソースを検索するには、次のコマンドを実行します。
+>既存の配送ソースを検索するには、次のコマンドを実行します。
 >
 >```bash
 >aws logs describe-delivery-sources --region us-east-1 \
@@ -152,4 +152,4 @@ aws logs create-delivery \
   --record-fields 'date' 'time' 'x-edge-location' 'cs-method' 'cs(Host)' 'cs-uri-stem' 'sc-status' 'cs(Referer)' 'cs(User-Agent)' 'time-to-first-byte' 'sc-content-type' 'x-host-header'
 ```
 
-&lt;! – ドキュメントまたは製品値が変更された場合は、`--record-fields`と`--s3-delivery-configuration`をLLM Optimizer CDN設定ページに表示されているフィールドリストとパスサフィックスに合わせます。—>
+&lt;!--ドキュメントや製品値が変更された場合は、`--record-fields` と `--s3-delivery-configuration` を LLM Optimizer CDN 設定ページに表示されているフィールドリストとパス接頭辞に一致させます。-->

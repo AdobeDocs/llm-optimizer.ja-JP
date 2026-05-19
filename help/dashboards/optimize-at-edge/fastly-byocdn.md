@@ -13,7 +13,7 @@ subfeature_v2:
 source-git-commit: 564171851fdccee43afd233da143d66182464889
 workflow-type: tm+mt
 source-wordcount: 349
-ht-degree: 92%
+ht-degree: 99%
 
 ---
 
@@ -27,8 +27,8 @@ ht-degree: 92%
 Fastly VCL ルールを設定する前に、以下を確認します。
 
 * ドメインの Fastly へのアクセス権。
-* LLM Optimizer UI から取得された Edge Optimize API キー。 手順については、[API キーの取得](/help/dashboards/optimize-at-edge/retrieve-api-keys.md#production-api-key)を参照してください。
-* （オプション）ステージング ルーティングをテストするには、[&#x200B; ステージング API キー](/help/dashboards/optimize-at-edge/retrieve-api-keys.md#staging-api-key-optional)を参照してください。
+* LLM Optimizer UI から取得された Edge Optimize API キー。 手順について詳しくは、[API キーの取得](/help/dashboards/optimize-at-edge/retrieve-api-keys.md#production-api-key)を参照してください。
+* （オプション）ステージングルーティングをテストするには、[Staging API キー](/help/dashboards/optimize-at-edge/retrieve-api-keys.md#staging-api-key-optional)を参照してください。
 
 **設定**
 
@@ -94,7 +94,7 @@ if (!req.http.x-edgeoptimize-config && req.http.x-edgeoptimize-request == "failo
 | Edge での最適化で `4XX` または `5XX` が返される | リクエストが再開され、デフォルトのオリジンから提供されます。 |
 | フェイルオーバー応答 | ヘッダー `x-edgeoptimize-fo: 1` を含みます。 |
 
-**ファイアウォール ルールを使用してEdgeで最適化を許可する（オプション）**
+**ファイアウォールルールを通じて Edge での最適化を許可（オプション）**
 
 {{waf-allowlist-setup}}
 

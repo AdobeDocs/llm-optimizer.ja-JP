@@ -17,7 +17,7 @@ topic_v2:
 source-git-commit: 09e228275cf84316ee2e8990636bb3b8865ac263
 workflow-type: tm+mt
 source-wordcount: 750
-ht-degree: 78%
+ht-degree: 92%
 
 ---
 
@@ -27,7 +27,7 @@ ht-degree: 78%
 リファラルトラフィックでは、外部プラットフォーム、AI の引用、リファラルリンクから訪問者がサイトに到達する方法が表示されます。 外部の web サイトやプラットフォームからのトラフィックソース、リファラルパターン、コンバージョン指標を追跡および分析します。 これは、最も関与の多いトラフィックを推進するソース、地域、ページを理解するのに役立ちます。<!--Data is sourced from the CDN logs, a privacy-preserving source that does not capture personal user data.--> また、表示するデータを絞り込むのに役立つカスタマイズ可能なフィルターもあります。
 
 >[!NOTE]
->デフォルトでは、このダッシュボードは&#x200B;**CDN ログ**&#x200B;からトラフィックインサイトを構築します。 有料オファーを利用している場合は、**Adobe Analytics**&#x200B;または&#x200B;**Google Analytics 4** （GA4）に接続して、AI主導の発見とサイトエンゲージメントを測定するデータを追加できます。 このデータは、**ビジネスへの影響** タブで利用できます。 Adobe AnalyticsまたはGA4との統合がなければ、タブには入力されないことに注意してください。 詳細については、[Adobe Analytics統合](/help/dashboards/adobe-analytics-integration.md)または[Google Analytics統合](/help/dashboards/google-analytics-integration.md)を参照してください。
+>デフォルトでは、このダッシュボードは **CDN ログ**&#x200B;からトラフィックに関するインサイトを作成します。 有料オファーを利用している場合は、**Adobe Analytics**&#x200B;または&#x200B;**Google Analytics 4** （GA4）に接続して、AI主導の発見とサイトエンゲージメントを測定するデータを追加できます。 このデータは、「**ビジネスへの影響**」タブで確認できます。 Adobe AnalyticsまたはGA4との統合がなければ、タブには入力されないことに注意してください。 詳細については、[Adobe Analytics統合](/help/dashboards/adobe-analytics-integration.md)または[Google Analytics統合](/help/dashboards/google-analytics-integration.md)を参照してください。
 
 ![リファラルページ](/help/dashboards/assets/referral-traffic.png)
 
@@ -39,17 +39,17 @@ ht-degree: 78%
 * [上位のリファラル URL](#top-referrals)
 * [リファラルトラフィックの詳細](#traffic-details)
 
-[&#x200B; ブランド中心のエクスペリエンス &#x200B;](/help/overview/quick-start.md#brand-centric-experience)を利用している場合は、**リファラルトラフィック**&#x200B;に移動し、LLM リファラルトラフィックのインサイトを表示するサイトを選択します。
+[ブランド中心のエクスペリエンス](/help/overview/quick-start.md#brand-centric-experience)を使用している場合は、**リファラルトラフィック**&#x200B;に移動し、LLM リファラルトラフィックのインサイトを表示するサイトを選択します。
 
-![リファラルトラフィック — サイトセレクター（ブランド中心のエクスペリエンス） &#x200B;](/help/assets/brand-centric-experience/referral-traffic-dashboard.png)
+![リファラルトラフィック - サイトセレクター（ブランド中心のエクスペリエンス）](/help/assets/brand-centric-experience/referral-traffic-dashboard.png)
 
 ## 設定 {#setup}
 
 初回ログイン時に、リファラルトラフィックダッシュボードが空白で表示される場合があります。 データを表示するには、CDN ログ転送を設定する必要があります。
 
-[&#x200B; ブランド中心のエクスペリエンス &#x200B;](/help/overview/quick-start.md#brand-centric-experience)を利用しているお客様の場合、**ブランド管理**&#x200B;に移動し、**CDN** ラベルをクリックすると、CDN ログ転送情報を追加できます。
+[ブランド中心のエクスペリエンス](/help/overview/quick-start.md#brand-centric-experience)を使用しているお客様の場合は、**ブランド管理**&#x200B;に移動し、**CDN** ラベルをクリックして、CDN ログ転送情報を追加できます。
 
-**顧客設定（クラシックエクスペリエンス）:** **設定に移動**&#x200B;を選択して、[CDN ログ転送](/help/dashboards/customer-configuration.md#cdn-configuration)を設定します。
+**顧客設定（従来のエクスペリエンス）**：「**設定に移動**」を選択して、[CDN ログ転送](/help/dashboards/customer-configuration.md#cdn-configuration)を設定します。
 
 ![リファラル設定](/help/dashboards/assets/referral-setup1.png)
 

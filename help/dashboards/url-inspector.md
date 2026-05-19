@@ -16,7 +16,7 @@ topic_v2:
 source-git-commit: 564171851fdccee43afd233da143d66182464889
 workflow-type: tm+mt
 source-wordcount: 718
-ht-degree: 95%
+ht-degree: 100%
 
 ---
 
@@ -27,9 +27,9 @@ URL インスペクターは、AI 検索におけるドメイン上の特定の�
 
 ![URL インスペクター](/help/dashboards/assets/url-insp.png)
 
-[&#x200B; ブランド中心のエクスペリエンス &#x200B;](/help/overview/quick-start.md#brand-centric-experience)を利用している場合は、**URL インスペクター**&#x200B;に移動し、インサイトを表示するサイトを選択します。
+[ブランド中心のエクスペリエンス](/help/overview/quick-start.md#brand-centric-experience)を使用している場合は、**URL インスペクター**&#x200B;に移動し、インサイトを表示するサイトを選択します。
 
-![URL インスペクター – サイトセレクター（ブランド中心のエクスペリエンス） &#x200B;](/help/assets/brand-centric-experience/url-inspector-dashboard.png)
+![URL インスペクター - サイトセレクター（ブランド中心のエクスペリエンス）](/help/assets/brand-centric-experience/url-inspector-dashboard.png)
 
 ## フィルター
 
