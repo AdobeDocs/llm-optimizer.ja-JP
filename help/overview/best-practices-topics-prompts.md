@@ -4,10 +4,20 @@ description: カスタマイズされたブランドモニタリングと戦略�
 feature: Best Practices, Customer Configuration
 autotag-review: '2026-05-15T17:36:13.598Z'
 TQID: 'https://experienceleague.adobe.com/aZCxLQbfeDDtqD3hBGuD-JuCZoMuGiqQrs0gaqxt4-4'
-product_v2: id: d830747e-f8f3-4fce-8eff-d53b333b1639
-feature_v2: id: c0713b97-4af8-4c41-b742-5afcc6ced468id: d1956731-2adb-4bb7-8301-2b239254ac72id: e0828736-236a-487b-a478-5a635455eadc
-subfeature_v2: id: c898dfb2-0885-42fb-b2af-b2d756752646id: e69d5a42-0217-4ca5-9396-a9a826a170da
-topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: cdd65e7e-8839-44a2-bc21-0e03623b5dd1id: eddd9b14-83bd-4ff4-9072-54a4a484abb7id: f8667931-f646-4dd3-af2a-b9d0cb8098ad
+product_v2:
+  - id: d830747e-f8f3-4fce-8eff-d53b333b1639
+feature_v2:
+  - id: c0713b97-4af8-4c41-b742-5afcc6ced468
+  - id: d1956731-2adb-4bb7-8301-2b239254ac72
+  - id: e0828736-236a-487b-a478-5a635455eadc
+subfeature_v2:
+  - id: c898dfb2-0885-42fb-b2af-b2d756752646
+  - id: e69d5a42-0217-4ca5-9396-a9a826a170da
+topic_v2:
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+  - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
+  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+  - id: f8667931-f646-4dd3-af2a-b9d0cb8098ad
 source-git-commit: 7a92587197cf6a9eec6b01bd4eaeeaf1194d3088
 workflow-type: tm+mt
 source-wordcount: 1530

@@ -4,10 +4,14 @@ description: サイトをクロールする AI エージェントにより発生
 feature: Opportunities
 autotag-review: '2026-05-15T17:32:31.900Z'
 TQID: 'https://experienceleague.adobe.com/9Gbva-14SNt8A0G0B2Qu26OOp34L5NaM0z6lCv4yrTg'
-product_v2: id: d830747e-f8f3-4fce-8eff-d53b333b1639
-feature_v2: id: e0828736-236a-487b-a478-5a635455eadc
-subfeature_v2: id: e06fae5f-830b-4222-a469-b5e148d36465
-topic_v2: id: c1579802-ddd4-4214-8a91-97b2066abe11
+product_v2:
+  - id: d830747e-f8f3-4fce-8eff-d53b333b1639
+feature_v2:
+  - id: e0828736-236a-487b-a478-5a635455eadc
+subfeature_v2:
+  - id: e06fae5f-830b-4222-a469-b5e148d36465
+topic_v2:
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
 source-git-commit: 7a92587197cf6a9eec6b01bd4eaeeaf1194d3088
 workflow-type: tm+mt
 source-wordcount: 1045
