@@ -4,12 +4,9 @@ description: コラボレーションダッシュボードを使用して、チ�
 feature: Collaboration
 autotag-review: '2026-05-15T17:43:38.581Z'
 TQID: 'https://experienceleague.adobe.com/5QOouJ96Mz2fRRkWmmQ57rMKeEDZz4o89YP6RuXckik'
-product_v2:
-  - id: d830747e-f8f3-4fce-8eff-d53b333b1639
-feature_v2:
-  - id: d1956731-2adb-4bb7-8301-2b239254ac72
-subfeature_v2:
-  - id: c8c85d42-6f96-42af-a0bc-746c341e379a
+product_v2: id: d830747e-f8f3-4fce-8eff-d53b333b1639
+feature_v2: id: d1956731-2adb-4bb7-8301-2b239254ac72
+subfeature_v2: id: c8c85d42-6f96-42af-a0bc-746c341e379a
 source-git-commit: 7a92587197cf6a9eec6b01bd4eaeeaf1194d3088
 workflow-type: tm+mt
 source-wordcount: 108
