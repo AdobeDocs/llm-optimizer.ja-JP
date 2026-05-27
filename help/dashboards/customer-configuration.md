@@ -4,10 +4,15 @@ description: 顧客設定を使用して、LLM Optimizer プラットフォー�
 feature: Customer Configuration
 autotag-review: '2026-05-15T17:45:12.067Z'
 TQID: 'https://experienceleague.adobe.com/qa7zk54n9G19-Azz9f6mn7V1kAGvnJSOJjpxbTBeHgc'
-product_v2: id: d830747e-f8f3-4fce-8eff-d53b333b1639
-feature_v2: id: a0b5a505-2fd7-4c3d-b61c-b557fb6f0558id: d1956731-2adb-4bb7-8301-2b239254ac72
-subfeature_v2: id: e69d5a42-0217-4ca5-9396-a9a826a170da
-topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+product_v2:
+  - id: d830747e-f8f3-4fce-8eff-d53b333b1639
+feature_v2:
+  - id: a0b5a505-2fd7-4c3d-b61c-b557fb6f0558
+  - id: d1956731-2adb-4bb7-8301-2b239254ac72
+subfeature_v2:
+  - id: e69d5a42-0217-4ca5-9396-a9a826a170da
+topic_v2:
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
 source-git-commit: f16c1bda1c9919a62077811653f92d5fc2c74045
 workflow-type: tm+mt
 source-wordcount: 3935
@@ -265,13 +270,13 @@ AI エージェントが既にページにアクセスしている場合、こ�
 
 >[!NOTE]
 >
-> [ ブランド中心のエクスペリエンス ](/help/overview/quick-start.md#brand-centric-experience)では、**プロンプト管理** セクションにプロンプトの提案が表示されます。
+> [&#x200B; ブランド中心のエクスペリエンス &#x200B;](/help/overview/quick-start.md#brand-centric-experience)では、**プロンプト管理** セクションにプロンプトの提案が表示されます。
 
 ### 仕組み {#prompt-suggestions-how-it-works}
 
 プロンプト提案ワークフローは4つのステップで実行され、CDN トラフィックシグナルをすぐに設定可能なプロンプト提案に変換します。 各ステップは、以前のステップの上に構築されます。AI エージェントのアクティビティが既に証明されているページから開始し、それらのページが何であるかを理解し、既にカバーされているものを確認し、特定の根拠があり、公開する準備ができているプロンプトを生成します。
 
-![ エージェント型トラフィックワークフローからの提案を促す](/help/dashboards/assets/prompt-suggestions-workflow.png)
+![&#x200B; エージェント型トラフィックワークフローからの提案を促す](/help/dashboards/assets/prompt-suggestions-workflow.png)
 
 #### ステップ 1：エージェント型トラフィックから有望なページを特定する {#prompt-suggestions-step-1}
 
@@ -309,7 +314,7 @@ AI エージェントが既にページにアクセスしている場合、こ�
 
 #### ステップ 4 - URL別の生成、品質チェック、プロンプトのランク付け {#prompt-suggestions-step-4}
 
-![ プロンプト生成と品質チェック ](/help/dashboards/assets/prompt-suggestions-generation.png)
+![&#x200B; プロンプト生成と品質チェック &#x200B;](/help/dashboards/assets/prompt-suggestions-generation.png)
 
 ギャップの各ページについて、パイプラインは、ページコンテンツの内容にもとづいて、自然な音のプロンプトを生成します。 最初に、関連するペルソナを特定します。候補者プロンプトを生成する前に、このページが回答を提供する現実的な質問を作成し、そのペルソナに関する現実的なシナリオを構築する人物です。
 
@@ -330,7 +335,7 @@ AI エージェントが既にページにアクセスしている場合、こ�
 1. **推論**&#x200B;と&#x200B;**優先度**&#x200B;の列を確認して、各提案を評価します。
 1. 追加するプロンプトを選択し、**選択範囲を追加**&#x200B;をクリックして、設定済みのプロンプトに追加します。
 
-![ プロンプトの提案タブ （引用の試行ソースフィルター付き） ](/help/dashboards/assets/prompt-suggestions-citation-attempt.png)
+![&#x200B; プロンプトの提案タブ （引用の試行ソースフィルター付き） &#x200B;](/help/dashboards/assets/prompt-suggestions-citation-attempt.png)
 
 ![選択したプロンプト候補を追加](/help/dashboards/assets/prompt-suggestions-add-selection.png)
 
