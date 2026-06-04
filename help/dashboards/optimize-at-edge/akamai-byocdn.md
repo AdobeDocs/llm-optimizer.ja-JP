@@ -4,9 +4,12 @@ description: LLM Optimizer の Edge での最適化に Akamai BYOCDN を設定�
 feature: Opportunities
 autotag-review: '2026-05-15T17:34:47.891Z'
 TQID: 'https://experienceleague.adobe.com/oGtqsnvHYn0BSNLl40-KpVl0TjCZHESRgH1LcVmjOiY'
-product_v2: id: d830747e-f8f3-4fce-8eff-d53b333b1639
-feature_v2: id: d1956731-2adb-4bb7-8301-2b239254ac72
-subfeature_v2: id: d23587d6-14d6-4e3f-9ee1-cc18623832e1
+product_v2:
+  - id: d830747e-f8f3-4fce-8eff-d53b333b1639
+feature_v2:
+  - id: d1956731-2adb-4bb7-8301-2b239254ac72
+subfeature_v2:
+  - id: d23587d6-14d6-4e3f-9ee1-cc18623832e1
 source-git-commit: 34837b04c48141b8c3657b8f07cb3c2e4852a9ea
 workflow-type: tm+mt
 source-wordcount: 809
