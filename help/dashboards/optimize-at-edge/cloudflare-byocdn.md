@@ -10,10 +10,10 @@ feature_v2:
   - id: d1956731-2adb-4bb7-8301-2b239254ac72
 subfeature_v2:
   - id: d23587d6-14d6-4e3f-9ee1-cc18623832e1
-source-git-commit: f1c0ad79ff4e71515da0b0d86632a558b0e99661
+source-git-commit: c5a8f033aac85913b56a40bb1560537da04847f2
 workflow-type: tm+mt
-source-wordcount: 1915
-ht-degree: 97%
+source-wordcount: 1916
+ht-degree: 96%
 
 ---
 
@@ -24,7 +24,7 @@ ht-degree: 97%
 
 **前提条件**
 
-Cloudflare ワーカールーティングルールを設定する前に、以下を確認します。
+Cloudflare Workerのルーティングルールを設定する前に、次のことを確認してください。
 
 * ドメインでワーカーが有効になっている Cloudflare アカウント。
 * Cloudflare のドメイン DNS 設定へのアクセス権。
