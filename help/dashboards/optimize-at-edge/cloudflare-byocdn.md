@@ -4,15 +4,12 @@ description: LLM Optimizer の Edge での最適化に Cloudflare BYOCDN を設�
 feature: Opportunities
 autotag-review: '2026-05-15T17:40:49.847Z'
 TQID: 'https://experienceleague.adobe.com/HkaDwdHRGZJnip-1Bp-4Z-ovwcBPxFUSDqeLUVNu0zo'
-product_v2:
-  - id: d830747e-f8f3-4fce-8eff-d53b333b1639
-feature_v2:
-  - id: d1956731-2adb-4bb7-8301-2b239254ac72
-subfeature_v2:
-  - id: d23587d6-14d6-4e3f-9ee1-cc18623832e1
-source-git-commit: 3237a5fdff501eaee29b678c8c2698b95469a125
+product_v2: id: d830747e-f8f3-4fce-8eff-d53b333b1639
+feature_v2: id: d1956731-2adb-4bb7-8301-2b239254ac72
+subfeature_v2: id: d23587d6-14d6-4e3f-9ee1-cc18623832e1
+source-git-commit: 5a903ec2b6976e7997c45848265d022ca67bed9d
 workflow-type: tm+mt
-source-wordcount: 1916
+source-wordcount: 1919
 ht-degree: 96%
 
 ---
@@ -113,11 +110,11 @@ Edge での最適化用の Cloudflare Worker を設定する方法には、次�
 4. ワーカーに名前を付けます（例：`edge-optimize-router`）。
 5. 「**デプロイ**」をクリックし、デフォルトのコードでワーカーを作成します。
 
-![Cloudflare ワーカーダッシュボード &#x200B;](/help/assets/optimize-at-edge/cloudflare-workers-dashboard.png)
+![Cloudflare ワーカーダッシュボード ](/help/assets/optimize-at-edge/cloudflare-workers-dashboard.png)
 
 **手順 2：ワーカーコードを追加**
 
-ワーカーを作成したら、**コードを編集**&#x200B;をクリックし、デフォルトコードを[worker.js](https://github.com/adobe-rnd/llmo-edge-optimize-samples/blob/main/cloudflare/worker.js)のコードに置き換えます。 既存のCloudflare Workerがある場合は、コードを完全に置き換えるのではなく、既存のワーカーコードと結合します。
+ワーカーを作成したら、**コードを編集**&#x200B;をクリックし、デフォルトコードを[worker.js](https://github.com/adobe/llmo-code-samples/blob/main/optimize-at-edge/cloudflare/automation/src/worker.js)のコードに置き換えます。 既存のCloudflare Workerがある場合は、コードを完全に置き換えるのではなく、既存のワーカーコードと結合します。
 
 「**保存してデプロイ**」をクリックし、ワーカーを公開します。
 
