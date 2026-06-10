@@ -10,10 +10,10 @@ feature_v2:
   - id: d1956731-2adb-4bb7-8301-2b239254ac72
 subfeature_v2:
   - id: d23587d6-14d6-4e3f-9ee1-cc18623832e1
-source-git-commit: 7a92587197cf6a9eec6b01bd4eaeeaf1194d3088
+source-git-commit: 5a903ec2b6976e7997c45848265d022ca67bed9d
 workflow-type: tm+mt
-source-wordcount: 2217
-ht-degree: 99%
+source-wordcount: 2204
+ht-degree: 96%
 
 ---
 
@@ -67,7 +67,7 @@ CloudFront 設定を指定する前に、次を確認します。
    * **名前：** `edgeoptimize-routing`
    * **ランタイム：** `cloudfront-js-2.0`
 
-3. デフォルトのコードを [viewer-request.js](https://github.com/adobe-rnd/llmo-edge-optimize-samples/blob/main/cloudfront/cloudfront-function/viewer-request.js) のコードに置き換えます。
+3. デフォルトのコードを [viewer-request.js](https://github.com/adobe/llmo-code-samples/blob/main/optimize-at-edge/cloudfront/cloudfront-function/viewer-request.js) のコードに置き換えます。
 
    公開する前に、コード内の次の値をカスタマイズします。
 
@@ -120,7 +120,7 @@ CloudFront 設定を指定する前に、次を確認します。
 
 2. 「**編集**」をクリックします。
 
-3. **最小 TTL** を `0` に設定することをお勧めします。 ただし、現在の最小 TTL が既に非常に短い場合、変更する必要はありません。
+3. **最小TTL**&#x200B;を`0`に設定することをお勧めします。ただし、現在の最小TTLがすでに非常に短い場合は、変更する必要がない可能性があります。
    ![キャッシュポリシー TTL 設定](/help/assets/optimize-at-edge/cloudfront-cache-policy-ttl.png)
 
 4. **キャッシュキー設定**／**ヘッダー**&#x200B;の下に、既存のインクルージョンと共に、`x-edgeoptimize-config` と `x-edgeoptimize-url` を追加します。
@@ -195,7 +195,7 @@ CloudFront 設定を指定する前に、次を確認します。
 
 4. 「**関数を作成**」をクリックします。
 
-5. コードエディターで、デフォルトのコードを [origin-request-response.js](https://github.com/adobe-rnd/llmo-edge-optimize-samples/blob/main/cloudfront/lambda/origin-request-response.js) のコードに置き換えます。
+5. コードエディターで、デフォルトのコードを [origin-request-response.js](https://github.com/adobe/llmo-code-samples/blob/main/optimize-at-edge/cloudfront/lambda/origin-request-response.js) のコードに置き換えます。
 
 6. 「**デプロイ**」をクリックして、コードを保存します。
 
@@ -209,7 +209,7 @@ CloudFront 設定を指定する前に、次を確認します。
 
 1. 「**信頼ポリシーを編集**」をクリックします。
 
-2. ポリシーを [trust-policy.json](https://github.com/adobe-rnd/llmo-edge-optimize-samples/blob/main/cloudfront/lambda/trust-policy.json) の内容に置き換えます。
+2. ポリシーを [trust-policy.json](https://github.com/adobe/llmo-code-samples/blob/main/optimize-at-edge/cloudfront/lambda/trust-policy.json) の内容に置き換えます。
 
 3. 「**ポリシーを更新**」をクリックします。
 
@@ -224,7 +224,7 @@ CloudFront 設定を指定する前に、次を確認します。
 
 1. 「**編集**」をクリックします。
 
-2. ポリシーを [cloudwatch-policy.json](https://github.com/adobe-rnd/llmo-edge-optimize-samples/blob/main/cloudfront/lambda/cloudwatch-policy.json) の内容に置き換えます。
+2. ポリシーを [cloudwatch-policy.json](https://github.com/adobe/llmo-code-samples/blob/main/optimize-at-edge/cloudfront/lambda/cloudwatch-policy.json) の内容に置き換えます。
 
    JSON では、`ACCOUNT_ID` を実際の AWS アカウント ID（AWS コンソールの右上隅に表示）に、`FUNCTION_NAME` を Lambda 関数の名前（例：`edgeoptimize-origin`）に置き換えます。
 
