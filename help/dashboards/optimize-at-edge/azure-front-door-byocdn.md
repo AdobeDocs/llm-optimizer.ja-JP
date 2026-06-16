@@ -2,9 +2,12 @@
 title: Edgeで最適化 – Azure フロントドア （BYOCDN）
 description: LLM OptimizerのEdgeでAzure Front Door BYOCDN for Optimizeを設定する方法について説明します。
 feature: Opportunities
-product_v2: id: d830747e-f8f3-4fce-8eff-d53b333b1639
-feature_v2: id: d1956731-2adb-4bb7-8301-2b239254ac72
-subfeature_v2: id: d23587d6-14d6-4e3f-9ee1-cc18623832e1
+product_v2:
+  - id: d830747e-f8f3-4fce-8eff-d53b333b1639
+feature_v2:
+  - id: d1956731-2adb-4bb7-8301-2b239254ac72
+subfeature_v2:
+  - id: d23587d6-14d6-4e3f-9ee1-cc18623832e1
 source-git-commit: 1d07ce1820e2688a130e410ee88ab329d628356a
 workflow-type: tm+mt
 source-wordcount: 768
@@ -42,7 +45,7 @@ Azure Front Door プロファイルには、既に、オリジンを指すデフ
 * **セッションの親和性：** **無効**
 * **証明書の件名の検証：** **有効**
 
-![Edge Optimize origin groupと2つの優先度ベースのオリジンとヘルスプローブ ](/help/assets/optimize-at-edge/azure-front-door-origin-group.png)
+![Edge Optimize origin groupと2つの優先度ベースのオリジンとヘルスプローブ &#x200B;](/help/assets/optimize-at-edge/azure-front-door-origin-group.png)
 
 >[!NOTE]
 >
@@ -56,7 +59,7 @@ Azure Front Door プロファイルには、既に、オリジンを指すデフ
 
 **ルールセット** > **ルールセット**&#x200B;に移動し、`EORouting`という名前を付けます。 この順序で3つのルールを追加します。
 
-ヘッダーストリッピングとボットルーティングのルールを示す![EORouting ルールセット ](/help/assets/optimize-at-edge/azure-front-door-ruleset-routing.png)
+ヘッダーストリッピングとボットルーティングのルールを示す![EORouting ルールセット &#x200B;](/help/assets/optimize-at-edge/azure-front-door-ruleset-routing.png)
 
 ### ルール 1: StripIncomingEOHeaders01
 
@@ -79,7 +82,7 @@ HTML ページパスのボットリクエストをEdge Optimizeにルーティ�
 * リクエストパス：**RegEx** `(^$|^.*/$|(^|.*/)[^./]+$|^.*\.html$)` （サイトルート、`/`で終わるパス、拡張機能のないページパス、`.html`個のパスに一致）
 * User-Agent: **いずれかの** `chatgpt-user`、`gptbot`、`oai-searchbot`、`adobeedgeoptimize-ai`、`perplexitybot`、`perplexity-user`、`claudebot`、`claude-user`、`claude-searchbot`が含まれます。 文字列変換を&#x200B;**小文字**&#x200B;に設定します。
 * `x-edgeoptimize-monitor`: **含まれていません** `1`
-* `x-edgeoptimize-request`: **** `failover`、`1`のいずれも含まれていません
+* `x-edgeoptimize-request`: **&#x200B;**&#x200B;`failover`、`1`のいずれも含まれていません
 
 **アクション**:
 
@@ -93,7 +96,7 @@ HTML ページパスのボットリクエストをEdge Optimizeにルーティ�
 
 Azure Front Door ヘルスプローブのリクエストを書き換えて、`/health/<domain>`ではなく`/`としてオリジンに到達させます。 これにより、Azure Front Doorは、オリジンに専用のヘルスエンドポイントを必要とせずに、Edge Optimizeの可用性を監視できます。 評価を停止：**上**。
 
-![ ヘルスプローブの書き換えルール ](/help/assets/optimize-at-edge/azure-front-door-ruleset-healthprobe.png)
+![&#x200B; ヘルスプローブの書き換えルール &#x200B;](/help/assets/optimize-at-edge/azure-front-door-ruleset-healthprobe.png)
 
 **条件** （すべて一致する必要があります）:
 
