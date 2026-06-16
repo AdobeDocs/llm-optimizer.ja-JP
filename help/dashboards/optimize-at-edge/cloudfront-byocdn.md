@@ -4,16 +4,13 @@ description: LLM Optimizer の Edge での最適化に CloudFront BYOCDN を設�
 feature: Opportunities
 autotag-review: '2026-05-15T17:41:48.977Z'
 TQID: 'https://experienceleague.adobe.com/fGlW2FIQooU-8nv8H1lH3WOxinOFUVK7RVNol7ACPq8'
-product_v2:
-  - id: d830747e-f8f3-4fce-8eff-d53b333b1639
-feature_v2:
-  - id: d1956731-2adb-4bb7-8301-2b239254ac72
-subfeature_v2:
-  - id: d23587d6-14d6-4e3f-9ee1-cc18623832e1
-source-git-commit: 5a903ec2b6976e7997c45848265d022ca67bed9d
+product_v2: id: d830747e-f8f3-4fce-8eff-d53b333b1639
+feature_v2: id: d1956731-2adb-4bb7-8301-2b239254ac72
+subfeature_v2: id: d23587d6-14d6-4e3f-9ee1-cc18623832e1
+source-git-commit: 7097550211d1570d6ff65ab980f9a160f8d2a9e0
 workflow-type: tm+mt
-source-wordcount: 2204
-ht-degree: 96%
+source-wordcount: 2343
+ht-degree: 90%
 
 ---
 
@@ -85,9 +82,9 @@ CloudFront 設定を指定する前に、次を確認します。
 
 現在、動作にアタッチされているキャッシュポリシーを確認します。 動作の「**編集**」をクリックし、「**キャッシュキーとオリジンリクエスト**」セクションを確認して、シナリオを特定します。
 
-* **シナリオ A （レガシー）：**&#x200B;**レガシーキャッシュ設定**&#x200B;というラベルのラジオボタンが選択されている状態が表示されます。 ポリシー名のドロップダウンはなく、代わりにインライン TTL とヘッダー設定が表示されます。
-* **シナリオ B （カスタムポリシー）：**&#x200B;**キャッシュポリシー**&#x200B;が選択されている状態が表示され、そのポリシー名は、自分または自分のチームが作成した名前（AWS が提供したポリシーではない）です。
-* **シナリオ C （管理ポリシー）：**&#x200B;**キャッシュポリシー**&#x200B;が選択されている状態が表示され、その AWS が提供した名前は `CachingOptimized`、`CachingDisabled` または `CachingOptimizedForUncompressedObjects` などですが、これらは編集できません。
+* **シナリオ A （レガシー）：****レガシーキャッシュ設定**&#x200B;というラベルのラジオボタンが選択されている状態が表示されます。 ポリシー名のドロップダウンはなく、代わりにインライン TTL とヘッダー設定が表示されます。
+* **シナリオ B （カスタムポリシー）：****キャッシュポリシー**&#x200B;が選択されている状態が表示され、そのポリシー名は、自分または自分のチームが作成した名前（AWS が提供したポリシーではない）です。
+* **シナリオ C （管理ポリシー）：****キャッシュポリシー**&#x200B;が選択されている状態が表示され、その AWS が提供した名前は `CachingOptimized`、`CachingDisabled` または `CachingOptimizedForUncompressedObjects` などですが、これらは編集できません。
 
 **シナリオ A：レガシーキャッシュ設定**
 
@@ -232,6 +229,27 @@ CloudFront 設定を指定する前に、次を確認します。
 
 >[!WARNING]
 >ARN の地域は `*` にする必要があります - Lambda@Edge はビューアに最も近い Edge の場所で実行されるので、ログは必ずしも `us-east-1` ではなく、Edge の場所の地域（例：`ap-south-1`、`eu-west-1`）の CloudWatch に書き込まれます。 ロググループは、地域名を接頭辞とした名前（`/aws/lambda/us-east-1.FUNCTION_NAME`）を使用します。ここで、`us-east-1` は常にその関数のホーム地域です。
+
+**CloudWatch ログリンクを修正**
+
+デフォルトでは、Lambda コンソールの&#x200B;**View CloudWatch logs** ショートカットは、`us-east-1`の`/aws/lambda/FUNCTION_NAME`にリンクします。これは、Lambda@Edgeに対して間違ったロググループです。 リンクが正しいパスを指すように、カスタムロググループを設定します。
+
+**ナビゲーション：** AWS コンソール > Lambda > [お使いの関数] > Configuration > Monitoring and operations tools
+
+1. 「**編集**」をクリックします。
+
+2. **CloudWatch ロググループ**&#x200B;で、**カスタム**&#x200B;を選択します。
+
+3. カスタムロググループ名を`/aws/lambda/us-east-1.edgeoptimize-origin`に設定します。
+
+4. **権限**&#x200B;で、**必要な権限を追加** チェックボックス **オフ**&#x200B;のままにします。
+
+   ![Lambda カスタムロググループ設定](/help/assets/optimize-at-edge/cloudfront-lambda-custom-log-group.png)
+
+5. 「**保存**」をクリックします。
+
+>[!NOTE]
+>この修正を行った後でも、**View CloudWatch logs** リンクは正しいロググループ名を開きますが、間違った地域に存在する場合はデータが表示されない場合があります。 Lambda@Edge ログは、`us-east-1`ではなく、リクエストを配信したエッジ領域（例：`eu-west-1`、`ap-south-1`）に書き込まれます。 引き続き、CloudWatchの正しいリージョンに切り替えて、ログを確認する必要があります。
 
 **バージョンの公開**
 
