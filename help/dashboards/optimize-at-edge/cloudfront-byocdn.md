@@ -4,9 +4,12 @@ description: LLM Optimizer の Edge での最適化に CloudFront BYOCDN を設�
 feature: Opportunities
 autotag-review: '2026-05-15T17:41:48.977Z'
 TQID: 'https://experienceleague.adobe.com/fGlW2FIQooU-8nv8H1lH3WOxinOFUVK7RVNol7ACPq8'
-product_v2: id: d830747e-f8f3-4fce-8eff-d53b333b1639
-feature_v2: id: d1956731-2adb-4bb7-8301-2b239254ac72
-subfeature_v2: id: d23587d6-14d6-4e3f-9ee1-cc18623832e1
+product_v2:
+  - id: d830747e-f8f3-4fce-8eff-d53b333b1639
+feature_v2:
+  - id: d1956731-2adb-4bb7-8301-2b239254ac72
+subfeature_v2:
+  - id: d23587d6-14d6-4e3f-9ee1-cc18623832e1
 source-git-commit: 7097550211d1570d6ff65ab980f9a160f8d2a9e0
 workflow-type: tm+mt
 source-wordcount: 2343
@@ -82,9 +85,9 @@ CloudFront 設定を指定する前に、次を確認します。
 
 現在、動作にアタッチされているキャッシュポリシーを確認します。 動作の「**編集**」をクリックし、「**キャッシュキーとオリジンリクエスト**」セクションを確認して、シナリオを特定します。
 
-* **シナリオ A （レガシー）：****レガシーキャッシュ設定**&#x200B;というラベルのラジオボタンが選択されている状態が表示されます。 ポリシー名のドロップダウンはなく、代わりにインライン TTL とヘッダー設定が表示されます。
-* **シナリオ B （カスタムポリシー）：****キャッシュポリシー**&#x200B;が選択されている状態が表示され、そのポリシー名は、自分または自分のチームが作成した名前（AWS が提供したポリシーではない）です。
-* **シナリオ C （管理ポリシー）：****キャッシュポリシー**&#x200B;が選択されている状態が表示され、その AWS が提供した名前は `CachingOptimized`、`CachingDisabled` または `CachingOptimizedForUncompressedObjects` などですが、これらは編集できません。
+* **シナリオ A （レガシー）：**&#x200B;**レガシーキャッシュ設定**&#x200B;というラベルのラジオボタンが選択されている状態が表示されます。 ポリシー名のドロップダウンはなく、代わりにインライン TTL とヘッダー設定が表示されます。
+* **シナリオ B （カスタムポリシー）：**&#x200B;**キャッシュポリシー**&#x200B;が選択されている状態が表示され、そのポリシー名は、自分または自分のチームが作成した名前（AWS が提供したポリシーではない）です。
+* **シナリオ C （管理ポリシー）：**&#x200B;**キャッシュポリシー**&#x200B;が選択されている状態が表示され、その AWS が提供した名前は `CachingOptimized`、`CachingDisabled` または `CachingOptimizedForUncompressedObjects` などですが、これらは編集できません。
 
 **シナリオ A：レガシーキャッシュ設定**
 
