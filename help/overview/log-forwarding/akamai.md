@@ -12,10 +12,10 @@ subfeature_v2:
   - id: d23587d6-14d6-4e3f-9ee1-cc18623832e1
 topic_v2:
   - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
-source-git-commit: 7a92587197cf6a9eec6b01bd4eaeeaf1194d3088
+source-git-commit: 57c429630874b7304472f16b8c23ba9c6cff44fc
 workflow-type: tm+mt
-source-wordcount: 595
-ht-degree: 100%
+source-wordcount: 612
+ht-degree: 96%
 
 ---
 
@@ -71,7 +71,7 @@ country -> 国／地域
 * **メッセージ交換データ**
 reqHost -> リクエストホスト
 reqPath -> リクエストパス
-queryStr -> クエリ文字列
+queryStr -> クエリ文字列（オプション）
 reqMethod -> リクエストメソッド
 ua -> ユーザーエージェント
 statusCode -> HTTP ステータスコード
@@ -81,13 +81,17 @@ referer -> リファラー
 * **ネットワークパフォーマンスデータ**
 timeToFirstByte -> Time to first byte
 
+>[!NOTE]
+>
+>`queryStr` パラメーターはオプションです。 クエリ文字列にPII情報が含まれている場合は、省略できます。
+
 Akamai データセットフィールド（ID を含む）は次のとおりです。
 
 1100, # reqTimeSec -> リクエスト時間
 2012, # country -> 国／地域
 1011, # reqHost -> リクエストホスト
 1013, # reqPath -> リクエストパス
-2009, # queryStr -> クエリ文字列
+2009, # queryStr -> クエリ文字列（オプション）
 1012, # reqMethod -> リクエストメソッド
 1017, # ua -> ユーザーエージェント
 1008, # statusCode -> HTTP ステータスコード
@@ -107,7 +111,7 @@ Akamai データセットフィールド（ID を含む）は次のとおりで�
 
 4. **フォルダーパス**&#x200B;で、LLM Optimizer 設定ページから&#x200B;**パス**&#x200B;をコピーします。
 
-   ![ パス設定](/help/overview/assets/log-forwarding/akamai/akamai-path-config.png)
+   ![&#x200B; パス設定](/help/overview/assets/log-forwarding/akamai/akamai-path-config.png)
 
 5. **地域**&#x200B;で、LLM Optimizer 設定ページから&#x200B;**地域**&#x200B;をコピーします。
 
