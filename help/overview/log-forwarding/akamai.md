@@ -12,10 +12,10 @@ subfeature_v2:
   - id: d23587d6-14d6-4e3f-9ee1-cc18623832e1
 topic_v2:
   - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
-source-git-commit: 57c429630874b7304472f16b8c23ba9c6cff44fc
+source-git-commit: 76d1b915d41771580544d3d87732092cfecda6d5
 workflow-type: tm+mt
 source-wordcount: 612
-ht-degree: 96%
+ht-degree: 93%
 
 ---
 
@@ -58,7 +58,7 @@ Akamai コントロールパネル（[https://control.akamai.com/](https://contr
 
 ## 手順 3：データパラメーターを選択 {#step-3}
 
-ストリームを作成したら、Akamai コントロールパネルで「次へ」をクリックして、「**データセット**」タブに進みます。 Akamai 公式ドキュメントの手順に従って、[データパラメーター](https://techdocs.akamai.com/datastream2/docs/choose-data-parameters)を選択します。 LLM Optimizer 設定の次のフィールドが必要になります。
+ストリームを作成した後、Akamai コントロールパネルで「**次へ**」をクリックして「**データセット**」タブに進みます。 Akamai 公式ドキュメントの手順に従って、[データパラメーター](https://techdocs.akamai.com/datastream2/docs/choose-data-parameters)を選択します。 LLM Optimizer 設定の次のフィールドが必要になります。
 
 ![LLMO 設定フィールド](/help/overview/assets/log-forwarding/akamai/akamai-llmo-config-fields.png)
 
