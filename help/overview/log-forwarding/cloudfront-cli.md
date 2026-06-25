@@ -14,7 +14,7 @@ subfeature_v2:
 topic_v2:
   - id: d3cdead0-685a-4489-9250-4bb709942f66
   - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
-source-git-commit: 7a92587197cf6a9eec6b01bd4eaeeaf1194d3088
+source-git-commit: a68e70baa717d392a03249cada83337d3f51341c
 workflow-type: tm+mt
 source-wordcount: 379
 ht-degree: 100%
@@ -112,7 +112,7 @@ export REGION1=us-east-1
 export CUSTOMER=<CUSTOMER_NAME> ## No Space, user letters,numbers and dash
 export CDN_ID=<YOUR_CLOUDFRONT_DISTRIBUTION_ID>
 export ACCT1=<YOUR_AWS_ACCOUNT_NUMBER>
-export DELIVERY_DEST_ARN=arn:aws:logs:us-east-1:640168421876:delivery-destination:cdn-logs-<TRANSFORM_IMS_ID>-ams  ## Replace TRANSFORM_IMS_ID with the output of the command above
+export DELIVERY_DEST_ARN=arn:aws:logs:us-east-1:640168421876:delivery-destination:cdn-logs-<TRANSFORM_IMS_ID>  ## Replace TRANSFORM_IMS_ID with the output of the command above
 ```
 
 <!--Use the **Delivery destination ARN** and org values from the LLM Optimizer CDN configuration page if they differ from the pattern above.-->
