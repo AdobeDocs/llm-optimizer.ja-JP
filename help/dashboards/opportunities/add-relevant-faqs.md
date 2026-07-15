@@ -4,11 +4,18 @@ description: LLM Optimizerが、AI エージェント向けの構造化された
 feature: Opportunities
 autotag-review: '2026-07-15T16:47:24.291Z'
 TQID: 'https://experienceleague.adobe.com/ObmJKEvR9-ovzugCtAsRkcUBemcsMw6cNwizkuKYPcc'
-product_v2: id: d830747e-f8f3-4fce-8eff-d53b333b1639
-feature_v2: id: e1b649f0-0a61-46e4-9082-64d5cb2576c6id: ef4e63f5-cb4d-462d-bf9a-1f617edf2a3a
-subfeature_v2: id: bbfc1b77-44c5-4fe8-b65f-ec160fe0d021
-role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554
-topic_v2: id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+product_v2:
+  - id: d830747e-f8f3-4fce-8eff-d53b333b1639
+feature_v2:
+  - id: e1b649f0-0a61-46e4-9082-64d5cb2576c6
+  - id: ef4e63f5-cb4d-462d-bf9a-1f617edf2a3a
+subfeature_v2:
+  - id: bbfc1b77-44c5-4fe8-b65f-ec160fe0d021
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+topic_v2:
+  - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
 source-git-commit: 2705cf26faea9c09817bbdcec4b4c531552df7ba
 workflow-type: tm+mt
 source-wordcount: 742
@@ -54,7 +61,7 @@ LLM Optimizerは、ブランドのプロンプトセットにもとづいて、Q
 
 行のチェックボックスを使用して、配送するFAQの提案を選択します。 フッターには、選択された数が表示され、**修正済みとしてマーク**、**推奨事項を無視**、**最適化をデプロイ**&#x200B;できます。
 
-![ デプロイの最適化に関する現在の提案に関するFAQ候補を選択](/help/dashboards/opportunities/assets/add-relevant-faqs-ui-02.png)
+![&#x200B; デプロイの最適化に関する現在の提案に関するFAQ候補を選択](/help/dashboards/opportunities/assets/add-relevant-faqs-ui-02.png)
 
 ### 最適化のデプロイ
 
@@ -64,7 +71,7 @@ LLM Optimizerは、ブランドのプロンプトセットにもとづいて、Q
 
 デプロイが正常に完了すると、**デプロイメント完了**&#x200B;は、本番環境に公開された最適化の数を確認します。 ダイアログを閉じ、**修正候補**&#x200B;を開いてステータスを確認します。
 
-![ デプロイメント完了の確認](/help/dashboards/opportunities/assets/add-relevant-faqs-ui-04.png)
+![&#x200B; デプロイメント完了の確認](/help/dashboards/opportunities/assets/add-relevant-faqs-ui-04.png)
 
 >[!NOTE]
 >
@@ -78,7 +85,7 @@ LLM Optimizerは、ブランドのプロンプトセットにもとづいて、Q
 
 「**ライブを表示**」ウィンドウには、そのチェックに表示されているページ構造とFAQ コピーが表示されます。
 
-![ ライブを表示 – FAQを含む現在のページコンテンツ ](/help/dashboards/opportunities/assets/add-relevant-faqs-ui-05.png)
+![&#x200B; ライブを表示 – FAQを含む現在のページコンテンツ &#x200B;](/help/dashboards/opportunities/assets/add-relevant-faqs-ui-05.png)
 
 ## ロールバック
 
@@ -86,12 +93,12 @@ LLM Optimizerは、ブランドのプロンプトセットにもとづいて、Q
 
 **ロールバック** ダイアログには、ロールバックされる提案が一覧表示され、展開された最適化が元に戻されることを示す短い警告が表示されます。 リストを確認し、**ロールバック**&#x200B;または&#x200B;**キャンセル**&#x200B;をクリックします。
 
-![ ロールバックダイアログに、元に戻す候補が一覧表示されます](/help/dashboards/opportunities/assets/add-relevant-faqs-ui-07.png)
+![&#x200B; ロールバックダイアログに、元に戻す候補が一覧表示されます](/help/dashboards/opportunities/assets/add-relevant-faqs-ui-07.png)
 
 操作が完了すると、**正常にロールバックされました**&#x200B;の概要が表示されます。ダッシュボードに戻るには、この概要を閉じます。
 
-![ ロールバック完了 – ロールバックが完了しました](/help/dashboards/opportunities/assets/add-relevant-faqs-ui-08.png)
+![&#x200B; ロールバック完了 – ロールバックが完了しました](/help/dashboards/opportunities/assets/add-relevant-faqs-ui-08.png)
 
 ## デモで試す
 
-[Frescopa デモ ](https://play.llmo.now/org/demo-org)で、「関連するFAQを追加」ワークフローを確認します。
+[Frescopa デモ &#x200B;](https://play.llmo.now/org/demo-org)で、「関連するFAQを追加」ワークフローを確認します。

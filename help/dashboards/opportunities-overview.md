@@ -4,11 +4,21 @@ description: オポチュニティダッシュボードを使用して、ブラ�
 feature: Opportunities
 autotag-review: '2026-07-15T18:08:26.657Z'
 TQID: 'https://experienceleague.adobe.com/nEVOXJiQZIqfs2Q-tpA3DeiBNwpZAjhMSyIVuNlACdM'
-product_v2: id: d830747e-f8f3-4fce-8eff-d53b333b1639
-feature_v2: id: e1b649f0-0a61-46e4-9082-64d5cb2576c6id: ef4e63f5-cb4d-462d-bf9a-1f617edf2a3a
-subfeature_v2: id: bbfc1b77-44c5-4fe8-b65f-ec160fe0d021id: a6256a78-8814-462c-9627-86699b39cee1id: e0ec491f-fe51-42b6-801c-1c0dfcc0e64fid: fe92ae96-fc87-4fea-96a0-adc06310d4f4
-role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554
-topic_v2: id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+product_v2:
+  - id: d830747e-f8f3-4fce-8eff-d53b333b1639
+feature_v2:
+  - id: e1b649f0-0a61-46e4-9082-64d5cb2576c6
+  - id: ef4e63f5-cb4d-462d-bf9a-1f617edf2a3a
+subfeature_v2:
+  - id: bbfc1b77-44c5-4fe8-b65f-ec160fe0d021
+  - id: a6256a78-8814-462c-9627-86699b39cee1
+  - id: e0ec491f-fe51-42b6-801c-1c0dfcc0e64f
+  - id: fe92ae96-fc87-4fea-96a0-adc06310d4f4
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+topic_v2:
+  - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
 source-git-commit: 2705cf26faea9c09817bbdcec4b4c531552df7ba
 workflow-type: tm+mt
 source-wordcount: 1225
@@ -39,7 +49,7 @@ ht-degree: 56%
 |---------|----------|----------|----------|
 | [LLMに適した概要を追加](/help/dashboards/opportunities/add-llm-friendly-summaries.md) | コンテンツ（オンサイト） | ページやセクションレベルで、簡潔な要約と構造化されたキーポイントが不足しているトラフィックの多いページを特定し、AI担当者がブランドの主張をスキャンして解釈するのを困難にします。 影響を受けるURLとサマリーが推奨される場所を表示します。 | AIが生成した要約と、既存のコンテンツに基づいたキーポイントを確認し、Edgeの最適化を使用してCDN エッジに展開することで、担当者がより明確でスキャン可能なコンテキストを受け取れるようにします。 |
 | [関連するFAQを追加](/help/dashboards/opportunities/add-relevant-faqs.md) | コンテンツ（オンサイト） | プロンプトセットに沿った構造化されたQ&amp;A コンテンツが存在しない、トラフィックの多いページを特定します。これにより、AI エージェントがページに対するユーザーの質問を一致させることが困難になります。 影響を受けるURLとFAQが推奨される場所を表示します。 | 既存のページの素材に基づいて、AIが生成し、意図に沿ってFAQ コンテンツをレビューし、その後、EdgeのOptimize機能を使用してCDN エッジにデプロイすることで、担当者が明確なQ&amp;Aのコンテキストを受け取れるようにします。 |
-| [ マルチメディア文字起こしサマリーの追加](/help/dashboards/opportunities/add-multimedia-transcript-summaries.md) | コンテンツ（オンサイト） | 機械で読み取れる文字起こしや要約がなくても、動画やその他のメディアに主要な情報が埋め込まれているページを特定できるため、AI エージェントがそのコンテンツを使用しにくくなります。 影響を受けるURLと推奨テキストを表示します。 | AIが生成した文字起こしサマリーをメディアとページに基づいて確認し、その後、Edgeの最適化を使用してCDN エッジにデプロイして、エージェントが機械読み取り可能なテキスト（関連するビデオの近くなど）を受け取れるようにします。 |
+| [&#x200B; マルチメディア文字起こしサマリーの追加](/help/dashboards/opportunities/add-multimedia-transcript-summaries.md) | コンテンツ（オンサイト） | 機械で読み取れる文字起こしや要約がなくても、動画やその他のメディアに主要な情報が埋め込まれているページを特定できるため、AI エージェントがそのコンテンツを使用しにくくなります。 影響を受けるURLと推奨テキストを表示します。 | AIが生成した文字起こしサマリーをメディアとページに基づいて確認し、その後、Edgeの最適化を使用してCDN エッジにデプロイして、エージェントが機械読み取り可能なテキスト（関連するビデオの近くなど）を受け取れるようにします。 |
 | [robots.txt によってブロックされたトラフィック](/help/dashboards/opportunities/traffic-blocked-by-robots.md) | テクニカル GEO | robots.txt ファイルを分析し、通常は一般公開されているコンテンツに対して、AI エージェントによるアクセスを選択的にブロックするルールを検出します。 影響を受ける URL とブロックされたエージェントをレポートします。 | 必要に応じて、robots.txt ファイルを更新して、サポートされている AI クローラーのアクセスを許可します。 |
 | [エージェントトラフィックエラー](/help/dashboards/opportunities/agentic-traffic-errors.md) | テクニカル GEO | AI エージェントに返される 404、403、5xx エラー応答について、CDN ログを監視します。 影響を受ける URL と失われた合計ヒット数をレポートします。 | 破損したリンクを修正し、権限を更新し、サーバーサイドの問題を解決して、主要なコンテンツが 200 応答を返すようにします。 |
 | [複雑なコンテンツを簡略化](/help/dashboards/opportunities/simplify-complex-content.md) | コンテンツ（オンサイト） | 高密度または複雑なコピーが読みやすさのしきい値を下回っている、トラフィックの多いページを特定します。これにより、AI エージェントが重要な情報を解釈することが難しくなります。 影響を受けるURLと、簡略化されたテキストが推奨される場所を表示します。 | 既存のページコンテンツをベースにAIが生成した改善されたテキストを確認し、EdgeのOptimizeでCDN エッジにデプロイすることで、担当者がより明確でスキャンしやすい文章を受け取れるようにします。 |
@@ -49,7 +59,7 @@ ht-degree: 56%
 | [YouTube のセンチメント分析（Beta）](/help/dashboards/opportunities/youtube-sentiment-analysis.md) | オフサイト、ソーシャル、コミュニティ | ブランド言及、センチメント、シェアオブボイス、繰り返しトピックに対するブランドプレゼンスのプロンプトセットで引用された YouTube ビデオを分析します。 プロンプトセットの引用として YouTube ビデオが検出された場合にのみ表示されます。 | YouTube コンテンツをまたいでブランドイメージを向上させるための優先順位が付けられたレコメンデーションを確認します。レコメンデーションには、候補アクションと、これらの実装を担当するチームが含まれます。 |
 | [Reddit のセンチメント分析（Beta）](/help/dashboards/opportunities/reddit-sentiment-analysis.md) | オフサイト、ソーシャル、コミュニティ | ブランド言及、センチメント、シェアオブボイス、繰り返しトピックに対するブランドプレゼンスのプロンプトセットで引用された Reddit のスレッドを分析します。 プロンプトセットの引用として Reddit のスレッドが検出された場合にのみ表示されます。 | Reddit コンテンツをまたいでブランドイメージを向上させるための優先順位が付けられたレコメンデーションを確認します。レコメンデーションには、候補アクションと、これらの実装を担当するチームが含まれます。 |
 | [引用されたセンチメント分析（Beta）](/help/dashboards/opportunities/cited-sentiment-analysis.md) | オフサイト、ソーシャル、コミュニティ | ブランド言及、センチメント、シェアオブボイス、繰り返しトピックに対するブランドプレゼンスのプロンプトセットで検出された上位の引用 URL を分析します。 | AI システムがブランドに関するプロンプトに応答する際に最も多く引用するページをまたいでブランドイメージを向上させるための優先順位が付けられたレコメンデーションを確認します。 |
-| [商品カタログの拡充（Beta） ](/help/dashboards/opportunities/enrich-product-catalog.md) | コンテンツ（オンサイト）, Adobe Commerce | LLMが解釈できない、汎用的な、技術的に密度の高い、または曖昧な名前または説明を持つCommerce カタログ製品を識別します。 評価済みのPDP、Agentic traffic context、AI生成のナラティブ強化を表示します。 | 提案された製品名と説明を確認および編集し、最適化をデプロイして、更新をAdobe Commerce カタログに直接公開します（修正済みの提案からのロールバックを使用）。 |
+| [商品カタログの拡充（Beta） &#x200B;](/help/dashboards/opportunities/enrich-product-catalog.md) | コンテンツ（オンサイト）, Adobe Commerce | LLMが解釈できない、汎用的な、技術的に密度の高い、または曖昧な名前または説明を持つCommerce カタログ製品を識別します。 評価済みのPDP、Agentic traffic context、AI生成のナラティブ強化を表示します。 | 提案された製品名と説明を確認および編集し、最適化をデプロイして、更新をAdobe Commerce カタログに直接公開します（修正済みの提案からのロールバックを使用）。 |
 | [製品詳細ページの拡充](/help/dashboards/opportunities/enrich-product-detail-pages.md) | テクニカル地域，Adobe Commerce | Adobe Commerce ストアフロントの場合、完全なカタログデータを、AI担当者が各製品詳細ページでアクセスできるデータと比較します。エージェントのトラフィックによって優先順位付けされた、エージェントに表示されるHTMLからバリエーション、仕様、属性、関連カタログフィールドが欠落しているPDPを表示します。 | エージェントのビューから復元可能なカタログ情報をハイライト表示し、LLM主導の製品発見が重要な理由を示します。Edgeで最適化をデプロイして、完全にレンダリングされたAI フレンドリーなHTML スナップショットをCDN エッジのエージェンティックトラフィックに提供することで、エージェントはCMSやカタログの変更なしに、カタログから豊富な製品コンテキストを受け取ることができます。 |
 
 ## 自動最適化 {#auto-optimization}

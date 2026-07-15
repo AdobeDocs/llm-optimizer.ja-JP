@@ -4,10 +4,15 @@ description: Google Analytics 4とLLM Optimizerを連携させて、AIを活用�
 feature: Referral Traffic
 autotag-review: '2026-07-15T17:51:53.586Z'
 TQID: 'https://experienceleague.adobe.com/SvWn3W6hpVsWNzfWdJFvPs94lwlKX4ufjjcXKM-6xIc'
-product_v2: id: d830747e-f8f3-4fce-8eff-d53b333b1639
-feature_v2: id: d1956731-2adb-4bb7-8301-2b239254ac72
-subfeature_v2: id: f5a6cbd1-8a9a-4c79-a6db-ba46537f516e
-role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: b69b2659-1057-424e-8fc5-ed9e016dc554
+product_v2:
+  - id: d830747e-f8f3-4fce-8eff-d53b333b1639
+feature_v2:
+  - id: d1956731-2adb-4bb7-8301-2b239254ac72
+subfeature_v2:
+  - id: f5a6cbd1-8a9a-4c79-a6db-ba46537f516e
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
 source-git-commit: 2705cf26faea9c09817bbdcec4b4c531552df7ba
 workflow-type: tm+mt
 source-wordcount: 1169
@@ -42,15 +47,15 @@ Google Cloud プロジェクトを作成する、サービスアカウントを�
 
 1. 「**ビジネスへの影響**」タブを開きます。
 
-   ![リファラルトラフィックダッシュボード、「ビジネスへの影響」タブ ](/help/dashboards/assets/ga4-integration-01-business-impact-tab.png)
+   ![リファラルトラフィックダッシュボード、「ビジネスへの影響」タブ &#x200B;](/help/dashboards/assets/ga4-integration-01-business-impact-tab.png)
 
 1. 「**Analytics に接続**」を選択します。 LLM Optimizerによって&#x200B;**Customer Configuration > Analytics**&#x200B;にルーティングされます。 Analytics Provider ピッカーで、**Connect Google Analytics 4**&#x200B;を選択します。
 
-   ![顧客設定、GA4が選択されたAnalytics タブ ](/help/dashboards/assets/ga4-integration-02-analytics-ga4-picker.png)
+   ![顧客設定、GA4が選択されたAnalytics タブ &#x200B;](/help/dashboards/assets/ga4-integration-02-analytics-ga4-picker.png)
 
 1. 「**アカウントを接続**」を選択します。 Googleのログイン画面に新しいブラウザータブが開きます。
 
-   ![GA4接続に対するGoogle ログイン ](/help/dashboards/assets/ga4-integration-03-google-sign-in.png)
+   ![GA4接続に対するGoogle ログイン &#x200B;](/help/dashboards/assets/ga4-integration-03-google-sign-in.png)
 
 1. 接続するGA4 プロパティにアクセスできるGoogle アカウントでログインします。 Googleでプロンプトが表示されたら、`See and download your Google Analytics data`権限（`analytics.readonly` スコープ）を承認します。
 

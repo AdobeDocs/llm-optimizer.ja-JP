@@ -4,11 +4,19 @@ description: LLM Optimizerが、AI エージェントからカタログデータ
 feature: Opportunities
 autotag-review: '2026-07-15T17:50:18.330Z'
 TQID: 'https://experienceleague.adobe.com/UINqU57uqqbNJE3cV6zK56hxCcAmRrMMv-esNEfxqKI'
-product_v2: id: d830747e-f8f3-4fce-8eff-d53b333b1639
-feature_v2: id: e1b649f0-0a61-46e4-9082-64d5cb2576c6id: ef4e63f5-cb4d-462d-bf9a-1f617edf2a3a
-subfeature_v2: id: a6256a78-8814-462c-9627-86699b39cee1
-role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554
-topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dcid: cdd65e7e-8839-44a2-bc21-0e03623b5dd1id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+product_v2:
+  - id: d830747e-f8f3-4fce-8eff-d53b333b1639
+feature_v2:
+  - id: e1b649f0-0a61-46e4-9082-64d5cb2576c6
+  - id: ef4e63f5-cb4d-462d-bf9a-1f617edf2a3a
+subfeature_v2:
+  - id: a6256a78-8814-462c-9627-86699b39cee1
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+  - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
 source-git-commit: 2705cf26faea9c09817bbdcec4b4c531552df7ba
 workflow-type: tm+mt
 source-wordcount: 1210
@@ -42,7 +50,7 @@ Adobe Commerce Catalog Agentは、バリエーション、より詳細な商品�
 
 この修正は、[Optimize at Edge](https://experienceleague.adobe.com/en/docs/llm-optimizer/using/resources/optimize-at-edge/overview#what-is-optimize-at-edge) —Adobeのエッジベースのデプロイメント機能を使用して適用されます。この機能は、CDN レイヤーのLLM ユーザーエージェントに、完全に事前レンダリングされたAIに適したHTML スナップショットを提供します。 これにより、Commerceのカタログや人間が見えるストアフロントのUIに触れることなく、これまで非表示にされていたカタログデータ（製品バリエーション、技術仕様、機能の詳細を含む）をすべて復元できます。
 
-候補テーブル ](/help/dashboards/opportunities/assets/enrich-product-detail-pages-suggestions.png)を含む![URL
+候補テーブル ![&#128279;](/help/dashboards/opportunities/assets/enrich-product-detail-pages-suggestions.png)を含むURL
 
 ## URL と提案
 

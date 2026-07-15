@@ -4,11 +4,17 @@ description: LLM Optimizerが、一般的な説明や技術的に詳細な説明
 feature: Opportunities
 autotag-review: '2026-07-15T17:49:49.047Z'
 TQID: 'https://experienceleague.adobe.com/icskl9CwYYRbnFNXWLflduAD9Eba1y4xtXTKaebh-hs'
-product_v2: id: d830747e-f8f3-4fce-8eff-d53b333b1639
-feature_v2: id: e1b649f0-0a61-46e4-9082-64d5cb2576c6
-subfeature_v2: id: a6256a78-8814-462c-9627-86699b39cee1
-role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554
-topic_v2: id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+product_v2:
+  - id: d830747e-f8f3-4fce-8eff-d53b333b1639
+feature_v2:
+  - id: e1b649f0-0a61-46e4-9082-64d5cb2576c6
+subfeature_v2:
+  - id: a6256a78-8814-462c-9627-86699b39cee1
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+topic_v2:
+  - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
 source-git-commit: 2705cf26faea9c09817bbdcec4b4c531552df7ba
 workflow-type: tm+mt
 source-wordcount: 1266
@@ -73,7 +79,7 @@ Adobe Commerce Catalog Agentは、商品カタログデータを読み取り、�
 >
 >カタログの強化を行うには、LLM OptimizerをAdobe Commerceに接続する必要があります。 Commerce インスタンスがまだLLM Optimizerに接続されていない場合は、エンリッチメントを適用する前に接続設定に移動します。
 
-![ エンリッチメントの適用ダイアログ ](/help/dashboards/opportunities/assets/enrich-product-catalog-deploy.png)
+![&#x200B; エンリッチメントの適用ダイアログ &#x200B;](/help/dashboards/opportunities/assets/enrich-product-catalog-deploy.png)
 
 ## デモで試す
 

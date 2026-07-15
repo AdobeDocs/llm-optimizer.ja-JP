@@ -4,11 +4,21 @@ description: LLM Optimizer の Edge での最適化に CloudFront BYOCDN を設�
 feature: Opportunities
 autotag-review: '2026-07-15T17:46:25.674Z'
 TQID: 'https://experienceleague.adobe.com/yIEUTzlnvOX-WBf276KQcAN8sGYDpZNVibJt024VMWU'
-product_v2: id: d830747e-f8f3-4fce-8eff-d53b333b1639
-feature_v2: id: d1956731-2adb-4bb7-8301-2b239254ac72id: e1b649f0-0a61-46e4-9082-64d5cb2576c6id: ef4e63f5-cb4d-462d-bf9a-1f617edf2a3aid: e0828736-236a-487b-a478-5a635455eadc
-subfeature_v2: id: d23587d6-14d6-4e3f-9ee1-cc18623832e1id: e06fae5f-830b-4222-a469-b5e148d36465
-role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-topic_v2: id: c1579802-ddd4-4214-8a91-97b2066abe11id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+product_v2:
+  - id: d830747e-f8f3-4fce-8eff-d53b333b1639
+feature_v2:
+  - id: d1956731-2adb-4bb7-8301-2b239254ac72
+  - id: e1b649f0-0a61-46e4-9082-64d5cb2576c6
+  - id: ef4e63f5-cb4d-462d-bf9a-1f617edf2a3a
+  - id: e0828736-236a-487b-a478-5a635455eadc
+subfeature_v2:
+  - id: d23587d6-14d6-4e3f-9ee1-cc18623832e1
+  - id: e06fae5f-830b-4222-a469-b5e148d36465
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2:
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: 2705cf26faea9c09817bbdcec4b4c531552df7ba
 workflow-type: tm+mt
 source-wordcount: 2360
@@ -84,9 +94,9 @@ CloudFront 設定を指定する前に、次を確認します。
 
 現在、動作にアタッチされているキャッシュポリシーを確認します。 動作の「**編集**」をクリックし、「**キャッシュキーとオリジンリクエスト**」セクションを確認して、シナリオを特定します。
 
-* **シナリオ A （レガシー）：****レガシーキャッシュ設定**&#x200B;というラベルのラジオボタンが選択されている状態が表示されます。 ポリシー名のドロップダウンはなく、代わりにインライン TTL とヘッダー設定が表示されます。
-* **シナリオ B （カスタムポリシー）：****キャッシュポリシー**&#x200B;が選択されている状態が表示され、そのポリシー名は、自分または自分のチームが作成した名前（AWS が提供したポリシーではない）です。
-* **シナリオ C （管理ポリシー）：****キャッシュポリシー**&#x200B;が選択されている状態が表示され、その AWS が提供した名前は `CachingOptimized`、`CachingDisabled` または `CachingOptimizedForUncompressedObjects` などですが、これらは編集できません。
+* **シナリオ A （レガシー）：**&#x200B;**レガシーキャッシュ設定**&#x200B;というラベルのラジオボタンが選択されている状態が表示されます。 ポリシー名のドロップダウンはなく、代わりにインライン TTL とヘッダー設定が表示されます。
+* **シナリオ B （カスタムポリシー）：**&#x200B;**キャッシュポリシー**&#x200B;が選択されている状態が表示され、そのポリシー名は、自分または自分のチームが作成した名前（AWS が提供したポリシーではない）です。
+* **シナリオ C （管理ポリシー）：**&#x200B;**キャッシュポリシー**&#x200B;が選択されている状態が表示され、その AWS が提供した名前は `CachingOptimized`、`CachingDisabled` または `CachingOptimizedForUncompressedObjects` などですが、これらは編集できません。
 
 **シナリオ A：レガシーキャッシュ設定**
 

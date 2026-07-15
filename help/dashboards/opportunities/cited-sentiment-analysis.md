@@ -4,11 +4,17 @@ description: LLM Optimizer が上位の引用 URL を分析し、AI 検索結果
 feature: Opportunities
 autotag-review: '2026-07-15T17:45:11.828Z'
 TQID: 'https://experienceleague.adobe.com/B-gDBklZ7XjMCQx-HaYx8H8yr9eZbXBvuRTAUfqJ-QU'
-product_v2: id: d830747e-f8f3-4fce-8eff-d53b333b1639
-feature_v2: id: e1b649f0-0a61-46e4-9082-64d5cb2576c6id: ab7fdb62-bd53-4cfd-8c2c-169f7e47f20e
-subfeature_v2: id: cd42f7fa-7c4e-41cf-ba86-6e0de16ed456
-role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554
-topic_v2: id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+product_v2:
+  - id: d830747e-f8f3-4fce-8eff-d53b333b1639
+feature_v2:
+  - id: e1b649f0-0a61-46e4-9082-64d5cb2576c6
+  - id: ab7fdb62-bd53-4cfd-8c2c-169f7e47f20e
+subfeature_v2:
+  - id: cd42f7fa-7c4e-41cf-ba86-6e0de16ed456
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+topic_v2:
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
 source-git-commit: 2705cf26faea9c09817bbdcec4b4c531552df7ba
 workflow-type: tm+mt
 source-wordcount: 1030
