@@ -122,7 +122,7 @@ IT／CDN チームの要件：
 
 [AI コンテンツの可視性チェッカー](https://chromewebstore.google.com/detail/ai-content-visibility-che/jbjngahjjdgonbeinjlepfamjdmdcbcc) ブラウザー拡張機能は、LLM が web ページのコンテンツにどの程度にアクセスでき、どの部分が非表示になっているかを示します。 無料のスタンドアロン診断ツールとして設計され、製品ライセンスや設定は必要ありません。
 
-シングルクリックで、任意のサイトの機械による読みやすさを評価できます。 AI エージェントに表示される内容と人間のユーザーに表示される内容を並べて比較表示し、LLM Optimizer を使用して回復できるコンテンツの量を推定できます。 詳しくは、[AI は web サイトを読み取れるか](https://business.adobe.com/blog/introducing-the-llm-optimizer-chrome-extension) ページを参照してください。
+シングルクリックで、任意のサイトの機械による読みやすさを評価できます。 AI エージェントに表示される内容と人間のユーザーに表示される内容を並べて比較表示し、LLM Optimizer を使用して回復できるコンテンツの量を推定できます。 詳しくは、[AI は web サイトを読み取れるか](https://business.adobe.com/jp/blog/introducing-the-llm-optimizer-chrome-extension) ページを参照してください。
 
 ## オポチュニティの詳細
 
