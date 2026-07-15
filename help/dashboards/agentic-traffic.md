@@ -4,30 +4,25 @@ description: エージェントトラフィックダッシュボードを使用�
 feature: Agentic Traffic
 autotag-review: '2026-05-15T17:33:15.711Z'
 TQID: 'https://experienceleague.adobe.com/3dWNUxcquDVip4Gg1WMYfwv8MUSbZYWqJYnkQ3aZkmc'
-product_v2:
-  - id: d830747e-f8f3-4fce-8eff-d53b333b1639
-feature_v2:
-  - id: a0b5a505-2fd7-4c3d-b61c-b557fb6f0558
-  - id: c0713b97-4af8-4c41-b742-5afcc6ced468
-  - id: e0828736-236a-487b-a478-5a635455eadc
-subfeature_v2:
-  - id: e06fae5f-830b-4222-a469-b5e148d36465
-topic_v2:
-  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
-  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
-source-git-commit: 7a92587197cf6a9eec6b01bd4eaeeaf1194d3088
+product_v2: id: d830747e-f8f3-4fce-8eff-d53b333b1639
+feature_v2: id: a0b5a505-2fd7-4c3d-b61c-b557fb6f0558id: c0713b97-4af8-4c41-b742-5afcc6ced468id: e0828736-236a-487b-a478-5a635455eadc
+subfeature_v2: id: e06fae5f-830b-4222-a469-b5e148d36465
+topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: e1e0219c-f879-479f-8427-888ed2a6e9c2
+source-git-commit: a5bfae0a2fecc48f8deb80394817002cfb7c1a32
 workflow-type: tm+mt
-source-wordcount: 1407
-ht-degree: 100%
+source-wordcount: 1254
+ht-degree: 97%
 
 ---
 
 
 # エージェントトラフィック {#agentic-traffic}
 
-エージェントトラフィックダッシュボードには、AI エージェント（クローラーとチャットボット）によるサイトの操作方法が表示されます。 このビューを使用すると、リクエストの合計数と一般的なパフォーマンス関連指標を追跡できます。 また、マーケット、カテゴリ、ページ、エージェントをまたいでトラフィックの分布を表示することもできます。 このダッシュボードで使用するデータは CDN ログから取得されるので、指標を表示するには **CDN ログ転送**&#x200B;を設定する必要があります。 また、表示するデータを絞り込むのに役立つカスタマイズ可能なフィルターもあります。
+エージェントトラフィックダッシュボードには、AI エージェント（クローラーとチャットボット）によるサイトの操作方法が表示されます。 このビューを使用すると、リクエストの合計数と一般的なパフォーマンス関連指標を追跡できます。 また、マーケット、カテゴリ、ページ、エージェントをまたいでトラフィックの分布を表示することもできます。 このダッシュボードで使用するデータは CDN ログから取得されるので、指標を表示するには **CDN ログ転送**&#x200B;を設定する必要があります。 また、表示するデータを絞り込むのに役立つカスタマイズ可能なフィルターもあります。 **エージェント型トラフィック**&#x200B;に移動し、エージェント型トラフィックのインサイトを表示するサイトを選択します。
 
-![トラフィック分布](/help/dashboards/assets/ag-main.png)
+![エージェントトラフィック - サイトセレクター（ブランド中心のエクスペリエンス）](/help/assets/brand-centric-experience/agentic-traffic-dashboard.png)
+
+<!-- ![Traffic Distribution](/help/dashboards/assets/ag-main.png)-->
 
 このページでは次の内容について説明します。
 
@@ -38,44 +33,15 @@ ht-degree: 100%
 * [上位と下位のムーバー](#top-bottom-movers)
 * [ユーザーエージェントと URL パフォーマンス分析](#user-url-performance)
 
-[ブランド中心のエクスペリエンス](/help/overview/quick-start.md#brand-centric-experience)を使用している場合は、**エージェントトラフィック**&#x200B;に移動し、エージェントトラフィックのインサイトを表示するサイトを選択します。
-
-![エージェントトラフィック - サイトセレクター（ブランド中心のエクスペリエンス）](/help/assets/brand-centric-experience/agentic-traffic-dashboard.png)
-
 ## CDN ログ転送 {#cdn-setup}
 
 **CDN ログ転送**&#x200B;がない場合、エージェントトラフィックダッシュボードは空白になります。 エージェント型のインタラクションを表示するには、**CDN ログ転送**&#x200B;を設定する必要があります。
 
-### 顧客設定（従来のナビゲーション）
-
-初回ログイン時には、次の画像に示すように、メッセージが表示されます。
-
-![CDN 設定](/help/dashboards/assets/ag-log-forward1.png)
-
-「**設定に移動**」を選択すると、[顧客設定ダッシュボード](/help/dashboards/customer-configuration.md)の「**CDN 設定**」タブに自動的に移動します。
-
-![CDN 設定オンボード](/help/dashboards/assets/ag-log-forward2.png)
-
-このタブで、「**CDN をオンボード**」を選択します。 次に、CDN プロバイダーウィンドウが表示されます。
-
-<!-- [CDN Provider](/help/dashboards/assets/ag-log-forward3.png)-->
-**CDN プロバイダーをオンボード**&#x200B;ウィンドウで、次の手順に従います。
-
-1. CDN プロバイダー（例：Akamai、アドビが管理する Fastly、Fastly、AWS Cloudfront、Azure CDN、Cloudflare、その他）を選択します。
-2. 「**オンボード**」をクリックして、ログ転送を有効にします。
-
-「**その他**」を選択した場合は、llmo-now@adobe.com に問い合わせてサポートを受ける必要があります。
-
->[!NOTE]
->顧客管理 CDN（BYOCDN）を使用する際のログ転送について詳しくは、[BYOCDN ログ転送の概要](/help/overview/log-forwarding/log-forwarding-overview.md)を参照してください。
-
-アクティブ化すると、ログが取り込まれ、合計エージェントインタラクション数、成功率、マーケット別のヒット数、ユーザーエージェント分析、URL レベルのパフォーマンスなどの指標がダッシュボードに入力されます。
-
-### ブランド中心のエクスペリエンス
-
-[ブランド中心のエクスペリエンス](/help/overview/quick-start.md#brand-centric-experience)を使用している場合は、**ブランド管理**&#x200B;に移動し、**CDN** ラベルをクリックして、CDN ログ転送情報を追加できます。
+CDN ログ転送情報を追加するには、**Brands Management**&#x200B;に移動し、**CDN** ラベルをクリックします。
 
 ![ブランド管理 - CDN ログ転送](/help/assets/brand-centric-experience/brands-management-cdn.png)
+
+顧客管理 CDN（BYOCDN）を使用する際のログ転送について詳しくは、[BYOCDN ログ転送の概要](/help/overview/log-forwarding/log-forwarding-overview.md)を参照してください。
 
 LLM Optimizer では、CDN ログからのフィールドのサブセットを処理します。 生のログフィールド名は CDN プロバイダーによって異なりますが、次のように正規化されて表示されます。
 

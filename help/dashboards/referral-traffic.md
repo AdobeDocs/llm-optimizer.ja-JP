@@ -4,20 +4,14 @@ description: リファラルトラフィックダッシュボードを使用し�
 feature: Referral Traffic
 autotag-review: '2026-05-15T17:57:28.534Z'
 TQID: 'https://experienceleague.adobe.com/rMSltSJf-UH4FHoST9NhmeY-hGVNLXsFXbCLzZenW5w'
-product_v2:
-  - id: d830747e-f8f3-4fce-8eff-d53b333b1639
-feature_v2:
-  - id: a0b5a505-2fd7-4c3d-b61c-b557fb6f0558
-  - id: e0828736-236a-487b-a478-5a635455eadc
-subfeature_v2:
-  - id: e3c08d81-9e25-4503-9df5-8dd1f489aa99
-topic_v2:
-  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
-  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
-source-git-commit: 09e228275cf84316ee2e8990636bb3b8865ac263
+product_v2: id: d830747e-f8f3-4fce-8eff-d53b333b1639
+feature_v2: id: a0b5a505-2fd7-4c3d-b61c-b557fb6f0558id: e0828736-236a-487b-a478-5a635455eadc
+subfeature_v2: id: e3c08d81-9e25-4503-9df5-8dd1f489aa99
+topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: e1e0219c-f879-479f-8427-888ed2a6e9c2
+source-git-commit: b8f87eee62cfd0fa134b2370b04d5e14b0cfa547
 workflow-type: tm+mt
-source-wordcount: 750
-ht-degree: 92%
+source-wordcount: 716
+ht-degree: 86%
 
 ---
 
@@ -26,10 +20,14 @@ ht-degree: 92%
 
 リファラルトラフィックでは、外部プラットフォーム、AI の引用、リファラルリンクから訪問者がサイトに到達する方法が表示されます。 外部の web サイトやプラットフォームからのトラフィックソース、リファラルパターン、コンバージョン指標を追跡および分析します。 これは、最も関与の多いトラフィックを推進するソース、地域、ページを理解するのに役立ちます。<!--Data is sourced from the CDN logs, a privacy-preserving source that does not capture personal user data.--> また、表示するデータを絞り込むのに役立つカスタマイズ可能なフィルターもあります。
 
+**リファラルトラフィック**&#x200B;に移動し、LLM リファラルトラフィックインサイトを表示するサイトを選択します。
+
+![リファラルトラフィック - サイトセレクター（ブランド中心のエクスペリエンス）](/help/assets/brand-centric-experience/referral-traffic-dashboard.png)
+
 >[!NOTE]
 >デフォルトでは、このダッシュボードは **CDN ログ**&#x200B;からトラフィックに関するインサイトを作成します。 有料オファーを利用している場合は、**Adobe Analytics**&#x200B;または&#x200B;**Google Analytics 4** （GA4）に接続して、AI主導の発見とサイトエンゲージメントを測定するデータを追加できます。 このデータは、「**ビジネスへの影響**」タブで確認できます。 Adobe AnalyticsまたはGA4との統合がなければ、タブには入力されないことに注意してください。 詳細については、[Adobe Analytics統合](/help/dashboards/adobe-analytics-integration.md)または[Google Analytics統合](/help/dashboards/google-analytics-integration.md)を参照してください。
 
-![リファラルページ](/help/dashboards/assets/referral-traffic.png)
+<!-- ![Referral Page](/help/dashboards/assets/referral-traffic.png)-->
 
 このページでは次の内容について説明します。
 
@@ -39,19 +37,15 @@ ht-degree: 92%
 * [上位のリファラル URL](#top-referrals)
 * [リファラルトラフィックの詳細](#traffic-details)
 
-[ブランド中心のエクスペリエンス](/help/overview/quick-start.md#brand-centric-experience)を使用している場合は、**リファラルトラフィック**&#x200B;に移動し、LLM リファラルトラフィックのインサイトを表示するサイトを選択します。
-
-![リファラルトラフィック - サイトセレクター（ブランド中心のエクスペリエンス）](/help/assets/brand-centric-experience/referral-traffic-dashboard.png)
-
 ## 設定 {#setup}
 
 初回ログイン時に、リファラルトラフィックダッシュボードが空白で表示される場合があります。 データを表示するには、CDN ログ転送を設定する必要があります。
 
-[ブランド中心のエクスペリエンス](/help/overview/quick-start.md#brand-centric-experience)を使用しているお客様の場合は、**ブランド管理**&#x200B;に移動し、**CDN** ラベルをクリックして、CDN ログ転送情報を追加できます。
+CDN ログ転送情報を追加するには、**Brands Management**&#x200B;に移動し、**CDN** ラベルをクリックします。
 
-**顧客設定（従来のエクスペリエンス）**：「**設定に移動**」を選択して、[CDN ログ転送](/help/dashboards/customer-configuration.md#cdn-configuration)を設定します。
+<!-- **Customer Configuration (classic experience):** Configure [CDN log forwarding](/help/dashboards/customer-configuration.md#cdn-configuration) by selecting **Go To Configuration**.-->
 
-![リファラル設定](/help/dashboards/assets/referral-setup1.png)
+<!--![Referral Setup](/help/dashboards/assets/referral-setup1.png)-->
 
 <!--
 1. Select your Source (either CDN logs or AEM Operational Telemetry).
