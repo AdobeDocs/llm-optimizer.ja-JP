@@ -4,9 +4,12 @@ description: ブランド名とドメインをオンボードする方法、Expe
 feature: Quickstart, Onboarding
 autotag-review: '2026-05-15T17:56:15.005Z'
 TQID: 'https://experienceleague.adobe.com/ShjpvskyOoHqz88gorfhqbIdP5SWT9FJ9SfmjBgEm8E'
-product_v2: id: d830747e-f8f3-4fce-8eff-d53b333b1639
-feature_v2: id: c0713b97-4af8-4c41-b742-5afcc6ced468
-subfeature_v2: id: b70f186a-2ef9-43ce-b452-25fa1d91bcda
+product_v2:
+  - id: d830747e-f8f3-4fce-8eff-d53b333b1639
+feature_v2:
+  - id: c0713b97-4af8-4c41-b742-5afcc6ced468
+subfeature_v2:
+  - id: b70f186a-2ef9-43ce-b452-25fa1d91bcda
 source-git-commit: a5bfae0a2fecc48f8deb80394817002cfb7c1a32
 workflow-type: tm+mt
 source-wordcount: 1201
