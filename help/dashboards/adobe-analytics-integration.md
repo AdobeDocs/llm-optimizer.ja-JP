@@ -2,23 +2,17 @@
 title: Adobe Analytics との統合
 description: Adobe Analytics を LLM Optimizer と接続して、リファラルトラフィックダッシュボードで AI 駆動型の検出、サイトエンゲージメント、ビジネス成果を測定する方法について説明します。
 feature: Referral Traffic
-autotag-review: '2026-05-15T17:29:50.263Z'
-TQID: 'https://experienceleague.adobe.com/Wo-7p-mNQRrpS3EhmnS38UF1-IcaKEJpUz5H3BwY8Yo'
-product_v2:
-  - id: d830747e-f8f3-4fce-8eff-d53b333b1639
-feature_v2:
-  - id: c0713b97-4af8-4c41-b742-5afcc6ced468
-  - id: d1956731-2adb-4bb7-8301-2b239254ac72
-subfeature_v2:
-  - id: e69d5a42-0217-4ca5-9396-a9a826a170da
-topic_v2:
-  - id: c2be0313-b3ae-45e0-b454-d20bf54b23f2
-  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
-  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
-source-git-commit: 7a92587197cf6a9eec6b01bd4eaeeaf1194d3088
+autotag-review: '2026-07-15T16:46:49.693Z'
+TQID: 'https://experienceleague.adobe.com/H0p8HV2bf1KuKYqF1ByAF2BpGlb4YScsWDQU5mMkTRY'
+product_v2: id: d830747e-f8f3-4fce-8eff-d53b333b1639
+feature_v2: id: d1956731-2adb-4bb7-8301-2b239254ac72
+subfeature_v2: id: e69d5a42-0217-4ca5-9396-a9a826a170da
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2: id: c2be0313-b3ae-45e0-b454-d20bf54b23f2id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1id: e1e0219c-f879-479f-8427-888ed2a6e9c2id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+source-git-commit: 2705cf26faea9c09817bbdcec4b4c531552df7ba
 workflow-type: tm+mt
-source-wordcount: 879
-ht-degree: 100%
+source-wordcount: 950
+ht-degree: 92%
 
 ---
 
@@ -90,6 +84,14 @@ LLM Optimizer は、Analytics データと AI 可視性インサイトをリン�
 >[!NOTE]
 >
 >バックフィルには数時間かかる場合があります。
+
+## ビジネスへの影響を実際に見る
+
+AIによる可視化は、ストーリーの一部にすぎません。 最適化の取り組みが業績を上げているかどうかを把握するには、訪問者がサイトを訪問した後に何が起こるのかを知る必要があります。
+
+このビデオでは、LLM OptimizerとAdobe Analyticsを組み合わせた&#x200B;**ビジネス インパクト** ビューを紹介します。このビューでは、AIが参照したトラフィックがどのようにエンゲージメント、コンバージョン、収益に変換されるのかを示し、AI プレゼンスの真の価値を測定するのに役立ちます。
+
+>[!VIDEO](https://video.tv.adobe.com/v/3492503/?learn=on){transcript=true}
 
 ## 仕組み {#how-it-works}
 

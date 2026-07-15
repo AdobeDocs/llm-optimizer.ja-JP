@@ -2,15 +2,14 @@
 title: Edge での最適化 - Cloudflare（BYOCDN）
 description: LLM Optimizer の Edge での最適化に Cloudflare BYOCDN を設定する方法について説明します。
 feature: Opportunities
-autotag-review: '2026-05-15T17:40:49.847Z'
-TQID: 'https://experienceleague.adobe.com/HkaDwdHRGZJnip-1Bp-4Z-ovwcBPxFUSDqeLUVNu0zo'
-product_v2:
-  - id: d830747e-f8f3-4fce-8eff-d53b333b1639
-feature_v2:
-  - id: d1956731-2adb-4bb7-8301-2b239254ac72
-subfeature_v2:
-  - id: d23587d6-14d6-4e3f-9ee1-cc18623832e1
-source-git-commit: 5a903ec2b6976e7997c45848265d022ca67bed9d
+autotag-review: '2026-07-15T17:46:02.378Z'
+TQID: 'https://experienceleague.adobe.com/ZgOX0yC8qyb13Y7YNCg3Y1A6Q3TSk9-mUQ8gthzQvLM'
+product_v2: id: d830747e-f8f3-4fce-8eff-d53b333b1639
+feature_v2: id: d1956731-2adb-4bb7-8301-2b239254ac72id: e0828736-236a-487b-a478-5a635455eadcid: e1b649f0-0a61-46e4-9082-64d5cb2576c6id: ef4e63f5-cb4d-462d-bf9a-1f617edf2a3a
+subfeature_v2: id: d23587d6-14d6-4e3f-9ee1-cc18623832e1id: e06fae5f-830b-4222-a469-b5e148d36465
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2: id: c1579802-ddd4-4214-8a91-97b2066abe11id: d095671a-1355-40aa-8b5f-06c33c68080bid: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+source-git-commit: 2705cf26faea9c09817bbdcec4b4c531552df7ba
 workflow-type: tm+mt
 source-wordcount: 1919
 ht-degree: 96%
@@ -113,7 +112,7 @@ Edge での最適化用の Cloudflare Worker を設定する方法には、次�
 4. ワーカーに名前を付けます（例：`edge-optimize-router`）。
 5. 「**デプロイ**」をクリックし、デフォルトのコードでワーカーを作成します。
 
-![Cloudflare ワーカーダッシュボード &#x200B;](/help/assets/optimize-at-edge/cloudflare-workers-dashboard.png)
+![Cloudflare ワーカーダッシュボード ](/help/assets/optimize-at-edge/cloudflare-workers-dashboard.png)
 
 **手順 2：ワーカーコードを追加**
 

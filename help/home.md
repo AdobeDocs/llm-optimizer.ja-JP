@@ -1,24 +1,15 @@
 ---
 title: Adobe LLM Optimizer
 description: Adobe LLM Optimizer でブランドを強化します。 言及を追跡し、インサイトを明らかにし、AI 駆動型の検索を活用できます。 可視性を制御して、今すぐ最適化を開始しましょう。
-TQID: https://experienceleague.adobe.com/ACuRLzs9s5fVE0HdY0ZPUIavO5-sqi-yLiBc64Cb8wc
-product_v2:
-  - id: d830747e-f8f3-4fce-8eff-d53b333b1639
-feature_v2:
-  - id: a0b5a505-2fd7-4c3d-b61c-b557fb6f0558
-  - id: c0713b97-4af8-4c41-b742-5afcc6ced468
-  - id: d1956731-2adb-4bb7-8301-2b239254ac72
-  - id: e0828736-236a-487b-a478-5a635455eadc
-subfeature_v2:
-  - id: b70f186a-2ef9-43ce-b452-25fa1d91bcda
-  - id: c898dfb2-0885-42fb-b2af-b2d756752646
-topic_v2:
-  - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
-  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
-autotag-review: '2026-04-30T18:10:07.393Z'
-source-git-commit: 733c693f35c5b023681962cc5089492b95645b28
+autotag-review: '2026-07-15T17:53:08.251Z'
+TQID: 'https://experienceleague.adobe.com/75QCJ6I-rVCzPHJgzuRrgSC8EG-zwyx7TgAEoADZVqQ'
+product_v2: id: d830747e-f8f3-4fce-8eff-d53b333b1639
+feature_v2: id: d1956731-2adb-4bb7-8301-2b239254ac72id: ef4e63f5-cb4d-462d-bf9a-1f617edf2a3aid: a080bb92-ba2a-4e53-ba60-f5184d1a9e9a
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: f8a45b24-4be7-4f1b-909b-60d06b483a20id: b69b2659-1057-424e-8fc5-ed9e016dc554
+topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: cdd65e7e-8839-44a2-bc21-0e03623b5dd1id: e1e0219c-f879-479f-8427-888ed2a6e9c2id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+source-git-commit: 2705cf26faea9c09817bbdcec4b4c531552df7ba
 workflow-type: tm+mt
-source-wordcount: 374
+source-wordcount: 682
 ht-degree: 100%
 
 ---
@@ -142,7 +133,7 @@ CARDS
   {description= Learn how LLM Optimizer can help you drive brand authority in AI search and discovery.}
   {target=_blank}
   {cta=Learn more}
-* https://business.adobe.com/jp/products/llm-optimizer.html
+* https://business.adobe.com/products/llm-optimizer.html
   {title = Explore the capabilities of the Adobe LLM Optimizer}
   {image = /help/assets/overview/business-adobe.png}
   {target=_blank}

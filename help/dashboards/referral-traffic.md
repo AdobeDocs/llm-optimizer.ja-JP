@@ -2,19 +2,14 @@
 title: リファラルトラフィック
 description: リファラルトラフィックダッシュボードを使用して、外部プラットフォーム、AI の引用、リファラルリンクから訪問者がサイトに到達する方法を確認する方法について説明します。
 feature: Referral Traffic
-autotag-review: '2026-05-15T17:57:28.534Z'
-TQID: 'https://experienceleague.adobe.com/rMSltSJf-UH4FHoST9NhmeY-hGVNLXsFXbCLzZenW5w'
-product_v2:
-  - id: d830747e-f8f3-4fce-8eff-d53b333b1639
-feature_v2:
-  - id: a0b5a505-2fd7-4c3d-b61c-b557fb6f0558
-  - id: e0828736-236a-487b-a478-5a635455eadc
-subfeature_v2:
-  - id: e3c08d81-9e25-4503-9df5-8dd1f489aa99
-topic_v2:
-  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
-  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
-source-git-commit: b8f87eee62cfd0fa134b2370b04d5e14b0cfa547
+autotag-review: '2026-07-15T18:05:26.973Z'
+TQID: 'https://experienceleague.adobe.com/L1Aqqdbs-aPaX0Qj0ekHaQHjx0713gZfY740wIwAtRY'
+product_v2: id: d830747e-f8f3-4fce-8eff-d53b333b1639
+feature_v2: id: e0828736-236a-487b-a478-5a635455eadc
+subfeature_v2: id: e3c08d81-9e25-4503-9df5-8dd1f489aa99
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554
+topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: e1e0219c-f879-479f-8427-888ed2a6e9c2id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+source-git-commit: 2705cf26faea9c09817bbdcec4b4c531552df7ba
 workflow-type: tm+mt
 source-wordcount: 716
 ht-degree: 86%

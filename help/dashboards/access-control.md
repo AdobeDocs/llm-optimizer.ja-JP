@@ -2,17 +2,14 @@
 title: アクセス制御
 description: Adobe LLM Optimizer での製品割り当てユーザーと組織ユーザーの違い、読み取り専用ユーザーが UI で表示する内容、管理者が Adobe Admin Console でアクセス権を割り当てる方法について説明します。
 feature: Customer Configuration
-autotag-review: '2026-05-15T17:26:43.837Z'
-TQID: 'https://experienceleague.adobe.com/hJpQQpuHBRMdKT5oKA9z0Y8H3d3p6To-n2hWKrXgZsQ'
-product_v2:
-  - id: d830747e-f8f3-4fce-8eff-d53b333b1639
-feature_v2:
-  - id: d1956731-2adb-4bb7-8301-2b239254ac72
-subfeature_v2:
-  - id: b704f6a0-b2fb-4df0-9177-9753751004f5
-topic_v2:
-  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
-source-git-commit: 7a92587197cf6a9eec6b01bd4eaeeaf1194d3088
+autotag-review: '2026-07-15T16:44:26.227Z'
+TQID: 'https://experienceleague.adobe.com/km1BB-gqTl1U92LhHxbXtoH4MTA2tLXS3mPx5u9rEoQ'
+product_v2: id: d830747e-f8f3-4fce-8eff-d53b333b1639
+feature_v2: id: d1956731-2adb-4bb7-8301-2b239254ac72
+subfeature_v2: id: d622681e-b12a-44e4-b49f-91c12f18b52b
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2: id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1id: e1e0219c-f879-479f-8427-888ed2a6e9c2id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+source-git-commit: 2705cf26faea9c09817bbdcec4b4c531552df7ba
 workflow-type: tm+mt
 source-wordcount: 618
 ht-degree: 100%

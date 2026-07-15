@@ -2,19 +2,14 @@
 title: ブランドプレゼンス
 description: ブランドプレゼンスダッシュボードを使用して、AI 生成の応答レベルでブランドがどのように認識されているかを理解する方法について説明します。
 feature: Brand Presence
-autotag-review: '2026-05-15T17:37:11.161Z'
-TQID: 'https://experienceleague.adobe.com/sDPtwR-uMfeIYp5K93gzYF27qYgLHBwhyajj9hGVB7Q'
-product_v2:
-  - id: d830747e-f8f3-4fce-8eff-d53b333b1639
-feature_v2:
-  - id: a0b5a505-2fd7-4c3d-b61c-b557fb6f0558
-  - id: e0828736-236a-487b-a478-5a635455eadc
-subfeature_v2:
-  - id: ab7fdb62-bd53-4cfd-8c2c-169f7e47f20e
-topic_v2:
-  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
-  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
-source-git-commit: d547cf05e232756afacbba7d942a27578839da98
+autotag-review: '2026-07-15T17:44:10.254Z'
+TQID: 'https://experienceleague.adobe.com/XBRLNcs-1flf9qdYI93NAwqusTP8i8-1ulTfz-iLD-4'
+product_v2: id: d830747e-f8f3-4fce-8eff-d53b333b1639
+feature_v2: id: ab7fdb62-bd53-4cfd-8c2c-169f7e47f20e
+subfeature_v2: id: f718ad75-b1df-4dc1-89bf-0c3167e83b33
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554
+topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: cdd65e7e-8839-44a2-bc21-0e03623b5dd1id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+source-git-commit: 2705cf26faea9c09817bbdcec4b4c531552df7ba
 workflow-type: tm+mt
 source-wordcount: 1335
 ht-degree: 99%

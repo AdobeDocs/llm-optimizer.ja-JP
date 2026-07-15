@@ -1,19 +1,16 @@
 ---
 title: LLM Optimizer の概要
 description: Adobe LLM Optimizer が AI 駆動型検索でブランドの可視性を高める仕組みについて説明します。 言及、引用、インサイトを追跡します。 エンゲージメントと影響力を高めるために、今すぐ最適化を開始しましょう。
-autotag-review: '2026-05-15T18:10:16.637Z'
-TQID: 'https://experienceleague.adobe.com/Nyv7-xOn8QaQPa3AWYjt1ld2c36N5Cadv37TFKjYeG0'
-product_v2:
-  - id: d830747e-f8f3-4fce-8eff-d53b333b1639
-feature_v2:
-  - id: a0b5a505-2fd7-4c3d-b61c-b557fb6f0558
-  - id: c0713b97-4af8-4c41-b742-5afcc6ced468
-topic_v2:
-  - id: fc314d1d-7cb9-4a38-8dbd-8f9b6478f40d
-source-git-commit: 564171851fdccee43afd233da143d66182464889
+autotag-review: '2026-07-15T18:01:55.084Z'
+TQID: 'https://experienceleague.adobe.com/CLacB5dkUfEGpogS6f79CflqoSXpUtJmYLHmj53M2bs'
+product_v2: id: d830747e-f8f3-4fce-8eff-d53b333b1639
+feature_v2: id: a080bb92-ba2a-4e53-ba60-f5184d1a9e9a
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: b69b2659-1057-424e-8fc5-ed9e016dc554id: f8a45b24-4be7-4f1b-909b-60d06b483a20
+topic_v2: id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1id: e1e0219c-f879-479f-8427-888ed2a6e9c2id: fc314d1d-7cb9-4a38-8dbd-8f9b6478f40d
+source-git-commit: 2705cf26faea9c09817bbdcec4b4c531552df7ba
 workflow-type: tm+mt
-source-wordcount: 499
-ht-degree: 83%
+source-wordcount: 506
+ht-degree: 97%
 
 ---
 
@@ -63,9 +60,9 @@ Adobe LLM Optimizer を使用すると、次の操作を実行できます。
 
 **ブランドの可視性を測定** - AI を活用した検索結果にブランドが言及されるタイミング、位置、頻度を追跡します。 推測に頼らずに、時間の経過と共にベンチマークできるクリアな可視性スコアを使用します。
 **競合他社のベンチマーク** – 生成エンジンにおいて、自社ブランドが競合他社とどのように差別化されているのかを確認します。 シェアオブボイスのギャップを特定し、競争上のメリットを明らかにします。
-**実用的な機会の発見** - コンテンツの機会（例：FAQ、抽象、スキーマ）と技術的な機会（クロール可能性、インデックス作成の問題）を特定し、メンションと引用を直接増やします。
-**AIによるトラフィックの影響を追跡** - エージェント型トラフィック（AI アシスタントから）とリファラルトラフィック（引用からのユーザーのクリック）を自社のプロパティにモニタリングします。 GEO の可視性を実際のエンゲージメントに結び付けます。
-**チーム Collaborationを有効にする** - ダッシュボードを共有し、プロンプトまたはカテゴリの所有者を割り当て、マーケティング、SEO、コミュニケーション機能をまたいで可視性の目標を追跡します。
+**実用的な機会を検出** - 言及と引用を直接増やすコンテンツの機会（例：FAQ、要約、スキーマ）と技術的な機会（クロール可能性、インデックス作成の問題）を特定します。
+**AI からトラフィックの影響を追跡** - 所有コンテンツのプロパティに対するエージェントトラフィック（AI アシスタントから）とリファラルトラフィック（引用からのユーザークリック）を監視します。 GEO の可視性を実際のエンゲージメントに結び付けます。
+**チームコラボレーションを有効にする** - ダッシュボードを共有し、プロンプトやカテゴリの所有者を割り当て、マーケティング、SEO、コミュニケーション機能をまたいで可視性の目標が追跡されるようにします。
 
 
 

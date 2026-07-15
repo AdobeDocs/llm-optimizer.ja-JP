@@ -2,15 +2,14 @@
 title: クイックスタート
 description: ブランド名とドメインをオンボードする方法、Experience Hub または Experience Cloud から体験版をアクティブ化する方法、Adobe LLM Optimizer の設定を完了する方法について説明します。
 feature: Quickstart, Onboarding
-autotag-review: '2026-05-15T17:56:15.005Z'
-TQID: 'https://experienceleague.adobe.com/ShjpvskyOoHqz88gorfhqbIdP5SWT9FJ9SfmjBgEm8E'
-product_v2:
-  - id: d830747e-f8f3-4fce-8eff-d53b333b1639
-feature_v2:
-  - id: c0713b97-4af8-4c41-b742-5afcc6ced468
-subfeature_v2:
-  - id: b70f186a-2ef9-43ce-b452-25fa1d91bcda
-source-git-commit: a5bfae0a2fecc48f8deb80394817002cfb7c1a32
+autotag-review: '2026-07-15T18:07:16.514Z'
+TQID: 'https://experienceleague.adobe.com/Hp5j1st4fkfiBVKTTL-eHQX6Ovmw61-2hX2g1T8Ui8Y'
+product_v2: id: d830747e-f8f3-4fce-8eff-d53b333b1639
+feature_v2: id: a080bb92-ba2a-4e53-ba60-f5184d1a9e9aid: d1956731-2adb-4bb7-8301-2b239254ac72
+subfeature_v2: id: d23587d6-14d6-4e3f-9ee1-cc18623832e1
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: b69b2659-1057-424e-8fc5-ed9e016dc554
+topic_v2: id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1id: d00e9f03-e50b-4162-b143-0c0817c937c2id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+source-git-commit: 2705cf26faea9c09817bbdcec4b4c531552df7ba
 workflow-type: tm+mt
 source-wordcount: 1201
 ht-degree: 87%

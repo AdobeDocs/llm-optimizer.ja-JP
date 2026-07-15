@@ -2,20 +2,17 @@
 title: LLMに適した要約の追加
 description: LLM Optimizerが、AI エージェントのための簡潔な要約と重要ポイントが不足しているトラフィックの多いページを特定する方法と、EdgeのOptimizeを使用してページをレビューおよび展開する方法について説明します。
 feature: Opportunities
-autotag-review: '2026-05-15T17:27:51.631Z'
-TQID: 'https://experienceleague.adobe.com/QpBdx3B-qg41ZWtPU2R4CNq-POrSs31UIb0kms1H3GU'
-product_v2:
-  - id: d830747e-f8f3-4fce-8eff-d53b333b1639
-feature_v2:
-  - id: c0713b97-4af8-4c41-b742-5afcc6ced468
-subfeature_v2:
-  - id: e1b649f0-0a61-46e4-9082-64d5cb2576c6
-topic_v2:
-  - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
-source-git-commit: 7a92587197cf6a9eec6b01bd4eaeeaf1194d3088
+autotag-review: '2026-07-15T16:47:03.003Z'
+TQID: 'https://experienceleague.adobe.com/InOzeT7WlDaACpB-WT0F-JqI1nopOJewihCP9eUQnNY'
+product_v2: id: d830747e-f8f3-4fce-8eff-d53b333b1639
+feature_v2: id: e1b649f0-0a61-46e4-9082-64d5cb2576c6id: ef4e63f5-cb4d-462d-bf9a-1f617edf2a3a
+subfeature_v2: id: bbfc1b77-44c5-4fe8-b65f-ec160fe0d021
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554
+topic_v2: id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+source-git-commit: 2705cf26faea9c09817bbdcec4b4c531552df7ba
 workflow-type: tm+mt
 source-wordcount: 793
-ht-degree: 0%
+ht-degree: 9%
 
 ---
 
@@ -42,12 +39,12 @@ LLM Optimizerは、ページレベルまたはセクションレベルの&#x200B
 
 現在の提案に関する提案を含む![URL。ページとセクションの概要の提案を含む行が拡張されました](/help/dashboards/opportunities/assets/add-llm-friendly-summaries-expand.png)
 
-候補&#x200B;**テーブルを含む** URLには、エージェントの検出に役立つ概要が表示されます。 提案は、**現在の提案**、**修正提案**、**無視された提案**&#x200B;に整理されます。 URLごとに、次の操作を実行できます。
+候補&#x200B;**テーブルを含む** URLには、エージェントの検出に役立つ概要が表示されます。 提案は、**現在の提案**、**修正提案**、**無視された提案**&#x200B;に整理されます。 各 URL について、次の操作を実行できます。
 
 - **行**&#x200B;を展開して、分析と提案された概要テキスト（および含まれている場合はキーポイント）を表示します。
 - エージェント型トラフィックの前後の比較を&#x200B;**プレビュー**&#x200B;します。
 - **LLM Optimizer以外で商談に対処した場合は、**&#x200B;を修正済みとしてマークします。
-- **関連しない提案を無視**&#x200B;します。
+- **無視**：関連しない候補に対して実行します。
 
 展開された各エントリには、ページレベルおよびセクションレベルの概要手順、**AIが生成した**&#x200B;のコピー、編集コントロール、ライブページに関連付けられたコンテキストが表示されます。
 
@@ -55,31 +52,31 @@ LLM Optimizerは、ページレベルまたはセクションレベルの&#x200B
 
 公開する準備ができたら、チェックボックスを使用して概要とキーポイント行の項目を選択します。 フッターには、選択された数が表示され、**修正済みとしてマーク**、**推奨事項を無視**、**最適化をデプロイ**&#x200B;できます。
 
-![概要行アイテムを選択した現在の提案と、フッターに最適化をデプロイ &#x200B;](/help/dashboards/opportunities/assets/add-llm-friendly-summaries-select-url.png)
+![概要行アイテムを選択した現在の提案と、フッターに最適化をデプロイ ](/help/dashboards/opportunities/assets/add-llm-friendly-summaries-select-url.png)
 
 ### 最適化のデプロイ
 
 エッジで公開する準備ができたら、**最適化をデプロイ**&#x200B;をクリックします。 選択したURLと最適化の詳細が、**Edgeにデプロイ** ダイアログに一覧表示されます。 リストを確認し、**デプロイ**&#x200B;または&#x200B;**キャンセル**&#x200B;を選択します。
 
-![Edgeへのデプロイ ダイアログ &#x200B;](/help/dashboards/opportunities/assets/add-llm-friendly-summaries-deploy-dialog.png)
+![Edge にデプロイダイアログ](/help/dashboards/opportunities/assets/add-llm-friendly-summaries-deploy-dialog.png)
 
 デプロイが正常に完了すると、**デプロイメント完了**&#x200B;は本番稼動した最適化回数を確認し、AI エージェントが更新のインデックス作成に時間がかかる場合があることをメモします。 ダイアログを閉じ、**修正候補**&#x200B;を開いてステータスを確認します。
 
-![&#x200B; デプロイメント完了の確認](/help/dashboards/opportunities/assets/add-llm-friendly-summaries-deploy-confirm.png)
+![ デプロイメント完了の確認](/help/dashboards/opportunities/assets/add-llm-friendly-summaries-deploy-confirm.png)
 
 >[!NOTE]
 >
->最適化をデプロイするには、Edgeで最適化のオンボーディングプロセスを完了する必要があります。 まだオンボーディングしていない場合は、**最適化をデプロイ**&#x200B;をクリックすると、オンボーディングプロセスに移動します。 Edgeでの最適化の仕組み、サポートされているCDN プロバイダー、オンボーディングプロセスについて詳しくは、[Edgeでの最適化](/help/dashboards/optimize-at-edge/overview.md) ページを参照してください。
+>最適化をデプロイするには、Edge での最適化のオンボーディングプロセスを完了する必要があります。 まだオンボードしていない場合は、「**最適化をデプロイ**」をクリックすると、オンボーディングプロセスに移動します。 Edge での最適化の仕組み、サポートされている CDNプロバイダー、オンボーディングプロセスについて詳しくは、[Edge での最適化](/help/dashboards/optimize-at-edge/overview.md)ページを参照してください。
 
 ### 修正候補とライブ表示
 
 **修正候補**&#x200B;で、デプロイされたURLは、ステータス列に&#x200B;**最適化**&#x200B;と表示されます。 行を展開して、デプロイされた概要コピーと手順を確認します。
 
-![最適化されたステータス、展開された概要の拡張、ライブの表示、および詳細が表示された「修正済みの提案」タブ &#x200B;](/help/dashboards/opportunities/assets/add-llm-friendly-summaries-fixed.png)
+![最適化されたステータス、展開された概要の拡張、ライブの表示、および詳細が表示された「修正済みの提案」タブ ](/help/dashboards/opportunities/assets/add-llm-friendly-summaries-fixed.png)
 
 行の「**ライブを表示**」をクリックして、検証用に提供された&#x200B;**現在のページコンテンツ** （適用済みの&#x200B;**概要** ブロックと&#x200B;**キーポイント** ブロックを含む）の読み取り専用ビューを開きます。 Analyticsに&#x200B;**Details**&#x200B;を使用します。 エッジの変更を一括で元に戻す必要がある場合は、チェックボックスを使用して最適化された行を選択し、ヘッダーに&#x200B;**ロールバック**&#x200B;を使用します。
 
-![&#x200B; ロールバック前の一括選択のチェックボックス付きの修正済みの提案](/help/dashboards/opportunities/assets/add-llm-friendly-summaries-select-in-fixed.png)
+![ ロールバック前の一括選択のチェックボックス付きの修正済みの提案](/help/dashboards/opportunities/assets/add-llm-friendly-summaries-select-in-fixed.png)
 
 ## ロールバック
 
@@ -87,12 +84,12 @@ LLM Optimizerは、ページレベルまたはセクションレベルの&#x200B
 
 **ロールバック** ダイアログには、ロールバックされる提案が一覧表示され、展開された最適化が元に戻されることを示す短い警告が表示されます。 リストを確認し、**ロールバック**&#x200B;または&#x200B;**キャンセル**&#x200B;をクリックします。
 
-![&#x200B; ロールバックダイアログに、元に戻す候補が一覧表示されます](/help/dashboards/opportunities/assets/add-llm-friendly-summaries-rollback-dialog.png)
+![ ロールバックダイアログに、元に戻す候補が一覧表示されます](/help/dashboards/opportunities/assets/add-llm-friendly-summaries-rollback-dialog.png)
 
 操作が完了すると、**正常にロールバックされました**&#x200B;の概要が表示されます。ダッシュボードに戻るには、この概要を閉じます。
 
-![&#x200B; ロールバック完了 – ロールバックが完了しました](/help/dashboards/opportunities/assets/add-llm-friendly-summaries-rollback-confirm.png)
+![ ロールバック完了 – ロールバックが完了しました](/help/dashboards/opportunities/assets/add-llm-friendly-summaries-rollback-confirm.png)
 
-## デモでやってみましょう
+## デモで試す
 
-[Frescopa デモ &#x200B;](https://play.llmo.now/org/demo-org)で、LLMに適した概要を追加ワークフローを確認します。
+[Frescopa デモ ](https://play.llmo.now/org/demo-org)で、LLMに適した概要を追加ワークフローを確認します。
