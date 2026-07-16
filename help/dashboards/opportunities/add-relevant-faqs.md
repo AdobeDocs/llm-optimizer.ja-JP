@@ -2,20 +2,24 @@
 title: 関連する FAQ の追加
 description: LLM Optimizerが、AI エージェント向けの構造化されたQ&A コンテンツを欠く、トラフィックの多いページをどのように特定するのか、そしてEdgeのOptimizeでAIが生成したFAQをレビューしてデプロイする方法をご紹介します。
 feature: Opportunities
-autotag-review: '2026-05-15T17:28:53.611Z'
-TQID: 'https://experienceleague.adobe.com/491jK6SRnc2yJ4Uw9UzK71W3nsTWDhxt3lW0Sy8-3NQ'
+autotag-review: '2026-07-15T16:47:24.291Z'
+TQID: 'https://experienceleague.adobe.com/ObmJKEvR9-ovzugCtAsRkcUBemcsMw6cNwizkuKYPcc'
 product_v2:
   - id: d830747e-f8f3-4fce-8eff-d53b333b1639
 feature_v2:
-  - id: c0713b97-4af8-4c41-b742-5afcc6ced468
-subfeature_v2:
   - id: e1b649f0-0a61-46e4-9082-64d5cb2576c6
+  - id: ef4e63f5-cb4d-462d-bf9a-1f617edf2a3a
+subfeature_v2:
+  - id: bbfc1b77-44c5-4fe8-b65f-ec160fe0d021
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
 topic_v2:
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
-source-git-commit: 7a92587197cf6a9eec6b01bd4eaeeaf1194d3088
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+source-git-commit: 2705cf26faea9c09817bbdcec4b4c531552df7ba
 workflow-type: tm+mt
 source-wordcount: 742
-ht-degree: 1%
+ht-degree: 10%
 
 ---
 
@@ -42,12 +46,12 @@ LLM Optimizerは、ブランドのプロンプトセットにもとづいて、Q
 
 現在の提案に関する提案が含まれる![URL、FAQ プロンプトとAIが生成した回答が含まれる行の拡張](/help/dashboards/opportunities/assets/add-relevant-faqs-expand.png)
 
-候補&#x200B;**テーブルを含む** URLには、AIによる検出に役立つFAQが表示されます。 提案は、**現在の提案**、**修正提案**、**無視された提案**&#x200B;に整理されます。 URLごとに、次の操作を実行できます。
+候補&#x200B;**テーブルを含む** URLには、AIによる検出に役立つFAQが表示されます。 提案は、**現在の提案**、**修正提案**、**無視された提案**&#x200B;に整理されます。 各 URL について、次の操作を実行できます。
 
 - **行**&#x200B;を展開して、そのページの提案されたFAQ コンテンツを表示します。
 - エージェント型トラフィックの前後の比較を&#x200B;**プレビュー**&#x200B;します。
 - **LLM Optimizer以外で商談に対処した場合は、**&#x200B;を修正済みとしてマークします。
-- **関連しない提案を無視**&#x200B;します。
+- **無視**：関連しない候補に対して実行します。
 
 展開された各項目には、FAQ **プロンプト**、**AIが生成した**&#x200B;の提案された回答、概要&#x200B;**推論**、ページに関連付けられた&#x200B;**ソース**&#x200B;が一覧表示されます。 また、この表には、優先順位付けに役立つFAQがURLと&#x200B;**Agentic traffic （4週間）**&#x200B;ごとに提案される数も示されています。
 
@@ -63,7 +67,7 @@ LLM Optimizerは、ブランドのプロンプトセットにもとづいて、Q
 
 エッジで公開する準備ができたら、**最適化をデプロイ**&#x200B;をクリックします。 「**Edgeにデプロイ**」ダイアログには、プッシュするURL、質問、および回答が一覧表示されます。 リストを確認し、**デプロイ**&#x200B;または&#x200B;**キャンセル**&#x200B;のいずれかを選択します。
 
-![Edgeへのデプロイ ダイアログ &#x200B;](/help/dashboards/opportunities/assets/add-relevant-faqs-ui-03.png)
+![Edge にデプロイダイアログ](/help/dashboards/opportunities/assets/add-relevant-faqs-ui-03.png)
 
 デプロイが正常に完了すると、**デプロイメント完了**&#x200B;は、本番環境に公開された最適化の数を確認します。 ダイアログを閉じ、**修正候補**&#x200B;を開いてステータスを確認します。
 
@@ -71,7 +75,7 @@ LLM Optimizerは、ブランドのプロンプトセットにもとづいて、Q
 
 >[!NOTE]
 >
->最適化をデプロイするには、Edgeで最適化のオンボーディングプロセスを完了する必要があります。 まだオンボーディングしていない場合は、**最適化をデプロイ**&#x200B;をクリックすると、オンボーディングプロセスに移動します。 Edgeでの最適化の仕組み、サポートされているCDN プロバイダー、オンボーディングプロセスについて詳しくは、[Edgeでの最適化](/help/dashboards/optimize-at-edge/overview.md) ページを参照してください。
+>最適化をデプロイするには、Edge での最適化のオンボーディングプロセスを完了する必要があります。 まだオンボードしていない場合は、「**最適化をデプロイ**」をクリックすると、オンボーディングプロセスに移動します。 Edge での最適化の仕組み、サポートされている CDNプロバイダー、オンボーディングプロセスについて詳しくは、[Edge での最適化](/help/dashboards/optimize-at-edge/overview.md)ページを参照してください。
 
 ### 修正候補とライブ表示
 
@@ -95,6 +99,6 @@ LLM Optimizerは、ブランドのプロンプトセットにもとづいて、Q
 
 ![&#x200B; ロールバック完了 – ロールバックが完了しました](/help/dashboards/opportunities/assets/add-relevant-faqs-ui-08.png)
 
-## デモでやってみましょう
+## デモで試す
 
 [Frescopa デモ &#x200B;](https://play.llmo.now/org/demo-org)で、「関連するFAQを追加」ワークフローを確認します。

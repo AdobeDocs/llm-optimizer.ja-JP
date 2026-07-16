@@ -2,20 +2,24 @@
 title: 目次を追加
 description: LLM Optimizerが、AI エージェントの明確なナビゲーション構造を持たないトラフィックの多いページを特定する方法と、EdgeでOptimizeを使用して目次をレビューおよびデプロイする方法について説明します。
 feature: Opportunities
-autotag-review: '2026-05-15T17:29:21.334Z'
-TQID: 'https://experienceleague.adobe.com/A-Oxmmn-Cb4l9-iVx1TAKxvBTEOxRIAnRe1w1PqF6OI'
+autotag-review: '2026-07-15T16:47:42.882Z'
+TQID: 'https://experienceleague.adobe.com/x-7FiZKCLMmEfm1x2lQNtfOd4su1MyGLrcAtLnjpaqw'
 product_v2:
   - id: d830747e-f8f3-4fce-8eff-d53b333b1639
 feature_v2:
-  - id: c0713b97-4af8-4c41-b742-5afcc6ced468
-subfeature_v2:
   - id: e1b649f0-0a61-46e4-9082-64d5cb2576c6
+  - id: ef4e63f5-cb4d-462d-bf9a-1f617edf2a3a
+subfeature_v2:
+  - id: bbfc1b77-44c5-4fe8-b65f-ec160fe0d021
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
 topic_v2:
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
-source-git-commit: 7a92587197cf6a9eec6b01bd4eaeeaf1194d3088
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+source-git-commit: 2705cf26faea9c09817bbdcec4b4c531552df7ba
 workflow-type: tm+mt
 source-wordcount: 655
-ht-degree: 0%
+ht-degree: 9%
 
 ---
 
@@ -51,7 +55,7 @@ LLM Optimizerでは、**目次**&#x200B;によって、AI エージェントが�
 - **行**&#x200B;を展開して、提案された目次を検査します（ページ上の見出しから解析され、アンカーでリンクされたエントリとして表示されます）。
 - 比較の前後に&#x200B;**プレビュー**&#x200B;します。
 - **LLM Optimizer以外で商談に対処した場合は、**&#x200B;を修正済みとしてマークします。
-- **関連しない提案を無視**&#x200B;します。
+- **無視**：関連しない候補に対して実行します。
 
 候補は、**現在の候補**、**修正候補**、**無視された候補**&#x200B;に整理され、他のEdgeの最適化の機会と一致しています。
 
@@ -65,7 +69,7 @@ LLM Optimizerでは、**目次**&#x200B;によって、AI エージェントが�
 
 >[!NOTE]
 >
->最適化をデプロイするには、Edgeで最適化のオンボーディングプロセスを完了する必要があります。 まだオンボーディングしていない場合は、**最適化をデプロイ**&#x200B;をクリックすると、オンボーディングプロセスに移動します。 Edgeでの最適化の仕組み、サポートされているCDN プロバイダー、オンボーディングプロセスについて詳しくは、[Edgeでの最適化](/help/dashboards/optimize-at-edge/overview.md) ページを参照してください。
+>最適化をデプロイするには、Edge での最適化のオンボーディングプロセスを完了する必要があります。 まだオンボードしていない場合は、「**最適化をデプロイ**」をクリックすると、オンボーディングプロセスに移動します。 Edge での最適化の仕組み、サポートされている CDNプロバイダー、オンボーディングプロセスについて詳しくは、[Edge での最適化](/help/dashboards/optimize-at-edge/overview.md)ページを参照してください。
 
 ### 修正候補とライブ表示
 

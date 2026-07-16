@@ -2,32 +2,32 @@
 title: URL インスペクター
 description: URL インスペクターを使用して、AI 検索におけるドメイン上の特定のページのパフォーマンスを分析する方法について説明します。
 feature: URL Inspector
-autotag-review: '2026-05-15T18:10:59.172Z'
-TQID: 'https://experienceleague.adobe.com/n5IgVprujFrB8bImxkgzcAzK1fT6bsvnwNzSdBaV-4E'
+autotag-review: '2026-07-15T18:01:06.691Z'
+TQID: 'https://experienceleague.adobe.com/fD1LpXh53O8SCV-c1VHXr1CxX8UWdUt9rIVk0OA2dro'
 product_v2:
   - id: d830747e-f8f3-4fce-8eff-d53b333b1639
 feature_v2:
-  - id: a0b5a505-2fd7-4c3d-b61c-b557fb6f0558
-  - id: c0713b97-4af8-4c41-b742-5afcc6ced468
+  - id: e0828736-236a-487b-a478-5a635455eadc
 subfeature_v2:
   - id: aedaee53-dfb4-4ab4-9d23-fa6188148769
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
 topic_v2:
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
   - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
-source-git-commit: 564171851fdccee43afd233da143d66182464889
+source-git-commit: 2705cf26faea9c09817bbdcec4b4c531552df7ba
 workflow-type: tm+mt
-source-wordcount: 718
-ht-degree: 100%
+source-wordcount: 710
+ht-degree: 97%
 
 ---
 
 
 # URL インスペクター
 
-URL インスペクターは、AI 検索におけるドメイン上の特定のページのパフォーマンスを分析するのに役立ちます。 URL レベルでの可視性、エージェントトラフィック、リファラルデータを組み合わせて、どの URL が引用されているか、応答にどのくらいの頻度で表示されるかを詳細に表示します。
+URL インスペクターは、AI 検索におけるドメイン上の特定のページのパフォーマンスを分析するのに役立ちます。 URL レベルでの可視性、エージェントトラフィック、リファラルデータを組み合わせて、どの URL が引用されているか、応答にどのくらいの頻度で表示されるかを詳細に表示します。 **URL インスペクター**&#x200B;に移動し、インサイトを表示するサイトを選択します。
 
 ![URL インスペクター](/help/dashboards/assets/url-insp.png)
-
-[ブランド中心のエクスペリエンス](/help/overview/quick-start.md#brand-centric-experience)を使用している場合は、**URL インスペクター**&#x200B;に移動し、インサイトを表示するサイトを選択します。
 
 ![URL インスペクター - サイトセレクター（ブランド中心のエクスペリエンス）](/help/assets/brand-centric-experience/url-inspector-dashboard.png)
 

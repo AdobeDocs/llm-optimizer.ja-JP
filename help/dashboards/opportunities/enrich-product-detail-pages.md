@@ -2,21 +2,25 @@
 title: 製品詳細ページの強化
 description: LLM Optimizerが、AI エージェントからカタログデータが隠されている商品ページを特定する方法と、Adobe Commerceによって提供されるエッジベースの最適化と商品カタログインサイトを使用して、その可視性を復元する方法について説明します。
 feature: Opportunities
-autotag-review: '2026-05-15T17:46:41.487Z'
-TQID: 'https://experienceleague.adobe.com/l4hTGNNg1NW40ceI00P41KZBSGcqmr-t1RWM-NXtRV4'
+autotag-review: '2026-07-15T17:50:18.330Z'
+TQID: 'https://experienceleague.adobe.com/UINqU57uqqbNJE3cV6zK56hxCcAmRrMMv-esNEfxqKI'
 product_v2:
   - id: d830747e-f8f3-4fce-8eff-d53b333b1639
 feature_v2:
-  - id: c0713b97-4af8-4c41-b742-5afcc6ced468
-subfeature_v2:
   - id: e1b649f0-0a61-46e4-9082-64d5cb2576c6
+  - id: ef4e63f5-cb4d-462d-bf9a-1f617edf2a3a
+subfeature_v2:
+  - id: a6256a78-8814-462c-9627-86699b39cee1
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
 topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
   - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
-source-git-commit: 564171851fdccee43afd233da143d66182464889
+source-git-commit: 2705cf26faea9c09817bbdcec4b4c531552df7ba
 workflow-type: tm+mt
 source-wordcount: 1210
-ht-degree: 0%
+ht-degree: 7%
 
 ---
 
@@ -34,7 +38,7 @@ AI エージェントは、自分で理解できる商品しかレコメンデ�
 
 ![製品詳細ページダッシュボードの拡充](/help/dashboards/opportunities/assets/enrich-product-detail-pages-overview.png)
 
-このオポチュニティは、Edge[&#128279;](https://experienceleague.adobe.com/ja/docs/llm-optimizer/using/resources/optimize-at-edge/overview#what-is-optimize-at-edge)で最適化を使用して最適化できます。 最適化は、人間の訪問者に影響を与えることなく、AI エージェントにのみ配信され（ボットのみの配信）、CMSやカタログの変更が必要なく、CDN レイヤーで適用されます。開発者の関与なしに数分で実施できるため、大規模な商品カタログの迅速かつ低リスクのデプロイメントパスとなります。
+このオポチュニティは、[Edge での最適化](https://experienceleague.adobe.com/ja/docs/llm-optimizer/using/resources/optimize-at-edge/overview#what-is-optimize-at-edge)を使用することで最適化できます。 最適化は、人間の訪問者に影響を与えることなく、AI エージェントにのみ配信され（ボットのみの配信）、CMSやカタログの変更が必要なく、CDN レイヤーで適用されます。開発者の関与なしに数分で実施できるため、大規模な商品カタログの迅速かつ低リスクのデプロイメントパスとなります。
 
 ## 仕組み
 
@@ -56,7 +60,7 @@ Adobe Commerce Catalog Agentは、バリエーション、より詳細な商品�
 - 最適化がデプロイされ、検証されたら、**修正済みとしてマーク**
 - マーチャンダイジング戦略に関連しない&#x200B;**無視**&#x200B;の提案
 
-提案は、**現在の提案**、**修正提案**、**無視された提案**&#x200B;の3つのビューに整理されます。 提案がデプロイされると、ステータスが&#x200B;**最適化**&#x200B;で&#x200B;**ライブを表示** アクションの修正提案に移動し、エージェント型トラフィックのエンリッチメントがライブであることを確認します。 修正された提案はいつでもロールバックできます。
+候補は、**現在の候補**、**修正された候補**、**無視された候補**&#x200B;の 3 つのビューに整理されます。 提案がデプロイされると、ステータスが&#x200B;**最適化**&#x200B;で&#x200B;**ライブを表示** アクションの修正提案に移動し、エージェント型トラフィックのエンリッチメントがライブであることを確認します。 修正された提案はいつでもロールバックできます。
 
 ## 最適化のデプロイ
 
@@ -70,11 +74,11 @@ Adobe Commerce Catalog Agentは、バリエーション、より詳細な商品�
 
 Commerce インスタンスがまだLLM Optimizerに接続されていない場合は、エンリッチメントを適用する前に接続設定に移動します。
 
-まだオンボーディングしていない場合は、**最適化をデプロイ**&#x200B;をクリックすると、オンボーディングプロセスに移動します。 Edgeでの最適化の仕組み、サポートされているCDN プロバイダー、オンボーディングプロセスについて詳しくは、[Edgeでの最適化](https://experienceleague.adobe.com/ja/docs/llm-optimizer/using/resources/optimize-at-edge/overview#what-is-optimize-at-edge) ページを参照してください。
+まだオンボードしていない場合は、「**最適化をデプロイ**」をクリックすると、オンボーディングプロセスに移動します。 Edge での最適化の仕組み、サポートされている CDNプロバイダー、オンボーディングプロセスについて詳しくは、[Edge での最適化](https://experienceleague.adobe.com/ja/docs/llm-optimizer/using/resources/optimize-at-edge/overview#what-is-optimize-at-edge)ページを参照してください。
 
-![Edgeへのデプロイ ダイアログ &#x200B;](/help/dashboards/opportunities/assets/enrich-product-detail-pages-deploy.png)
+![Edge にデプロイダイアログ](/help/dashboards/opportunities/assets/enrich-product-detail-pages-deploy.png)
 
-## デモでやってみましょう
+## デモで試す
 
 Frescopaのデモ環境を使用した製品詳細ページのエンリッチ機能の実際をご覧ください。
 
@@ -92,7 +96,7 @@ Commerceのストアフロントは、人間味のあるショッピング体験
 
 **この最適化は、人間の訪問者、SEO ボット、またはストアフロントのパフォーマンスに影響しますか？**
 
-いいえ。 Edgeでの最適化は、AI ユーザーエージェントのみを対象としています。 人間の訪問者とSEO ボットは、エクスペリエンス、ページ読み込みパフォーマンス、ストアフロントデザインに変更を加えることなく、以前とまったく同じように元の製品ページを受け取ります。
+いいえ。 Edge での最適化は、AI ユーザーエージェントのみをターゲットにしています。 人間の訪問者とSEO ボットは、エクスペリエンス、ページ読み込みパフォーマンス、ストアフロントデザインに変更を加えることなく、以前とまったく同じように元の製品ページを受け取ります。
 
 **Commerce カタログ、CMSを変更する必要がありますか。または、開発者が参加する必要がありますか？**
 

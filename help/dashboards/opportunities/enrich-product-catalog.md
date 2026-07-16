@@ -2,20 +2,23 @@
 title: 製品カタログの強化
 description: LLM Optimizerが、一般的な説明や技術的に詳細な説明を含む商品をどのように識別するのか、またAdobe CommerceでAIが生成したストーリーの強化機能を活用して商品を改善する方法について説明します。
 feature: Opportunities
-autotag-review: '2026-05-15T17:45:51.619Z'
-TQID: 'https://experienceleague.adobe.com/5ihGQ8L-37uWsZSDo4TVCUPBPqsqqQ5waGbH3VKPIig'
+autotag-review: '2026-07-15T17:49:49.047Z'
+TQID: 'https://experienceleague.adobe.com/icskl9CwYYRbnFNXWLflduAD9Eba1y4xtXTKaebh-hs'
 product_v2:
   - id: d830747e-f8f3-4fce-8eff-d53b333b1639
 feature_v2:
-  - id: c0713b97-4af8-4c41-b742-5afcc6ced468
-subfeature_v2:
   - id: e1b649f0-0a61-46e4-9082-64d5cb2576c6
+subfeature_v2:
+  - id: a6256a78-8814-462c-9627-86699b39cee1
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
 topic_v2:
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
-source-git-commit: 564171851fdccee43afd233da143d66182464889
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+source-git-commit: 2705cf26faea9c09817bbdcec4b4c531552df7ba
 workflow-type: tm+mt
 source-wordcount: 1266
-ht-degree: 0%
+ht-degree: 2%
 
 ---
 
@@ -26,7 +29,7 @@ LLMは、製品属性を、実際の価値、ユースケース、買い物客�
 
 商品カタログのエンリッチメント機能を利用すれば、Commerceカタログ内の商品を特定できます。LLMが正確に解釈するには、名前と説明が一般的すぎたり、技術的に密度が高すぎたり、あいまいすぎたりします。 Adobe Commerceを利用して、商品名と説明用にナラティブ主導のインテントリッチなエンリッチメントを生成し、ワンクリックでCommerceカタログに直接適用できます。
 
-ここでは、2つの主要な指標を一目で確認できます。
+ここでは、次の 2 つの主要指標を一目で確認できます。
 
 - **URL** — エンリッチメント品質が評価された製品詳細ページ （カタログ内の製品）のリスト。
 - **エージェンティックトラフィック** — ユーザーの代理で動作する自律型AI エージェント（LLMを活用したアシスタントやボットなど）によって開始および実行され、コンテンツの検索、取得、エンゲージメントを行うサイトの合計訪問数とインタラクション数。
@@ -62,7 +65,7 @@ Adobe Commerce Catalog Agentは、商品カタログデータを読み取り、�
 - エンリッチメントがレビューおよび適用されたら、**修正済みとしてマーク**&#x200B;します。
 - カタログ戦略に関連しない提案を&#x200B;**無視**&#x200B;します。
 
-提案は、**現在の提案**、**修正提案**、**無視された提案**&#x200B;の3つのビューに整理されます。 エンリッチメントが適用されると、ステータスが&#x200B;**Applied**&#x200B;で&#x200B;**View in Catalog** アクションのFixed Suggestionsに移動し、Adobe Commerceで更新を確認します。 適用されたエンリッチメントはいつでもロールバックでき、元の製品名と説明を復元できます。
+候補は、**現在の候補**、**修正された候補**、**無視された候補**&#x200B;の 3 つのビューに整理されます。 エンリッチメントが適用されると、ステータスが&#x200B;**Applied**&#x200B;で&#x200B;**View in Catalog** アクションのFixed Suggestionsに移動し、Adobe Commerceで更新を確認します。 適用されたエンリッチメントはいつでもロールバックでき、元の製品名と説明を復元できます。
 
 <!--[Fixed suggestions with Applied status](/help/dashboards/opportunities/assets/enrich-product-catalog-fixed.png)-->
 
@@ -78,7 +81,7 @@ Adobe Commerce Catalog Agentは、商品カタログデータを読み取り、�
 
 ![&#x200B; エンリッチメントの適用ダイアログ &#x200B;](/help/dashboards/opportunities/assets/enrich-product-catalog-deploy.png)
 
-## デモでやってみましょう
+## デモで試す
 
 Frescopaのデモ環境を使用して、製品カタログのエンリッチ機能を実際に確認してください。
 

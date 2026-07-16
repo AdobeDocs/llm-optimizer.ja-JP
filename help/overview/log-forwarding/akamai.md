@@ -2,17 +2,23 @@
 title: ログ転送 - Akamai
 description: LLM Optimizer でのエージェントトラフィックのデータ収集において、Akamai からアドビの S3 バケットに CDN ログを転送する方法について説明します。
 feature: Agentic Traffic
-autotag-review: '2026-05-15T17:35:22.816Z'
-TQID: 'https://experienceleague.adobe.com/cO-qqOveWFee1-QnVSlzmO-n383sptHl59Ni2qQcvAU'
+autotag-review: '2026-07-15T17:40:31.728Z'
+TQID: 'https://experienceleague.adobe.com/I-FHVzjiUvTwncGnfR2aAV2lOgtyltvac8aRN5LEQoE'
 product_v2:
   - id: d830747e-f8f3-4fce-8eff-d53b333b1639
 feature_v2:
   - id: d1956731-2adb-4bb7-8301-2b239254ac72
+  - id: e0828736-236a-487b-a478-5a635455eadc
 subfeature_v2:
   - id: d23587d6-14d6-4e3f-9ee1-cc18623832e1
+  - id: e06fae5f-830b-4222-a469-b5e148d36465
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
 topic_v2:
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
   - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
-source-git-commit: 76d1b915d41771580544d3d87732092cfecda6d5
+  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+source-git-commit: 2705cf26faea9c09817bbdcec4b4c531552df7ba
 workflow-type: tm+mt
 source-wordcount: 612
 ht-degree: 93%

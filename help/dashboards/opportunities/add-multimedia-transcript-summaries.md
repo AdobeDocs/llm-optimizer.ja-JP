@@ -2,20 +2,25 @@
 title: マルチメディア文字起こしサマリーの追加
 description: LLM Optimizerが、機械読み取り可能なテキストを使用せずにビデオにキー情報が埋め込まれているページを識別する方法と、Edgeで最適化を使用してAIが生成した文字起こしサマリーをレビューおよびデプロイする方法について説明します。
 feature: Opportunities
-autotag-review: '2026-05-15T17:28:28.569Z'
-TQID: 'https://experienceleague.adobe.com/LiXMsMq6D08ciXR85aQBNDpmR5Csiv-5b9kv3lfTpDc'
+autotag-review: '2026-07-15T16:47:13.112Z'
+TQID: 'https://experienceleague.adobe.com/lsMTVS4cFaGnhZonULQE4MB31bMdkzxoKA62o4IBcz0'
 product_v2:
   - id: d830747e-f8f3-4fce-8eff-d53b333b1639
 feature_v2:
-  - id: c0713b97-4af8-4c41-b742-5afcc6ced468
-subfeature_v2:
   - id: e1b649f0-0a61-46e4-9082-64d5cb2576c6
+  - id: ef4e63f5-cb4d-462d-bf9a-1f617edf2a3a
+subfeature_v2:
+  - id: bbfc1b77-44c5-4fe8-b65f-ec160fe0d021
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
 topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
-source-git-commit: 7a92587197cf6a9eec6b01bd4eaeeaf1194d3088
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+source-git-commit: 2705cf26faea9c09817bbdcec4b4c531552df7ba
 workflow-type: tm+mt
 source-wordcount: 775
-ht-degree: 0%
+ht-degree: 9%
 
 ---
 
@@ -51,12 +56,12 @@ LLM Optimizerは、設定とページ構造に基づいて、埋め込みメデ�
 
 現在の提案に関する提案、コンテンツパッチ付きの拡張された行、実装の詳細、および根拠を含む![URL](/help/dashboards/opportunities/assets/add-multimedia-transcript-summaries-expand.png)
 
-候補を含む&#x200B;**URL** テーブルには、トランスクリプトまたは概要テキストがエージェントによる検出に役立つページが一覧表示されます。 提案は、**現在の提案**、**修正提案**、**無視された提案**&#x200B;に整理されます。 URLごとに、次の操作を実行できます。
+候補を含む&#x200B;**URL** テーブルには、トランスクリプトまたは概要テキストがエージェントによる検出に役立つページが一覧表示されます。 提案は、**現在の提案**、**修正提案**、**無視された提案**&#x200B;に整理されます。 各 URL について、次の操作を実行できます。
 
 - **行**&#x200B;を展開して、**コンテンツパッチ** テキスト、**実装**&#x200B;の詳細（予定されているDOM操作とCSS セレクターを含む）、および変更の&#x200B;**根拠**&#x200B;を表示します。
 - エージェント型トラフィックの前後の比較を&#x200B;**プレビュー**&#x200B;します。
 - **LLM Optimizer以外で商談に対処した場合は、**&#x200B;を修正済みとしてマークします。
-- **関連しない提案を無視**&#x200B;します。
+- **無視**：関連しない候補に対して実行します。
 
 サポートされている場合は、行からパッチテキストを編集できます（鉛筆コントロール）。次に、行のチェックボックスを使用して、デプロイする内容を選択します。 フッターには、選択された数が表示され、**修正済みとしてマーク**、**推奨事項を無視**、**最適化をデプロイ**&#x200B;できます。
 
@@ -72,7 +77,7 @@ LLM Optimizerは、設定とページ構造に基づいて、埋め込みメデ�
 
 >[!NOTE]
 >
-> 最適化をデプロイするには、Edgeで最適化のオンボーディングプロセスを完了する必要があります。 まだオンボーディングしていない場合は、**最適化をデプロイ**&#x200B;をクリックすると、オンボーディングプロセスに移動します。 Edgeでの最適化の仕組み、サポートされているCDN プロバイダー、オンボーディングプロセスについて詳しくは、[Edgeでの最適化](/help/dashboards/optimize-at-edge/overview.md) ページを参照してください。
+> 最適化をデプロイするには、Edge での最適化のオンボーディングプロセスを完了する必要があります。 まだオンボードしていない場合は、「**最適化をデプロイ**」をクリックすると、オンボーディングプロセスに移動します。 Edge での最適化の仕組み、サポートされている CDNプロバイダー、オンボーディングプロセスについて詳しくは、[Edge での最適化](/help/dashboards/optimize-at-edge/overview.md)ページを参照してください。
 
 ### 修正候補とライブ表示
 
@@ -96,6 +101,6 @@ LLM Optimizerは、設定とページ構造に基づいて、埋め込みメデ�
 
 ![&#x200B; ロールバック完了 – ロールバックが完了しました](/help/dashboards/opportunities/assets/add-multimedia-transcript-summaries-rollback-confirm.png)
 
-## デモでやってみましょう
+## デモで試す
 
 [Frescopa デモ &#x200B;](https://play.llmo.now/org/demo-org)の「マルチメディア文字起こし概要を追加」ワークフローを確認します。

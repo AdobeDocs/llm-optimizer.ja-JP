@@ -2,22 +2,24 @@
 title: ブランドプレゼンス
 description: ブランドプレゼンスダッシュボードを使用して、AI 生成の応答レベルでブランドがどのように認識されているかを理解する方法について説明します。
 feature: Brand Presence
-autotag-review: '2026-05-15T17:37:11.161Z'
-TQID: 'https://experienceleague.adobe.com/sDPtwR-uMfeIYp5K93gzYF27qYgLHBwhyajj9hGVB7Q'
+autotag-review: '2026-07-15T17:44:10.254Z'
+TQID: 'https://experienceleague.adobe.com/XBRLNcs-1flf9qdYI93NAwqusTP8i8-1ulTfz-iLD-4'
 product_v2:
   - id: d830747e-f8f3-4fce-8eff-d53b333b1639
 feature_v2:
-  - id: a0b5a505-2fd7-4c3d-b61c-b557fb6f0558
-  - id: e0828736-236a-487b-a478-5a635455eadc
-subfeature_v2:
   - id: ab7fdb62-bd53-4cfd-8c2c-169f7e47f20e
+subfeature_v2:
+  - id: f718ad75-b1df-4dc1-89bf-0c3167e83b33
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
 topic_v2:
   - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+  - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
   - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
-source-git-commit: 7a92587197cf6a9eec6b01bd4eaeeaf1194d3088
+source-git-commit: 2705cf26faea9c09817bbdcec4b4c531552df7ba
 workflow-type: tm+mt
-source-wordcount: 1346
-ht-degree: 100%
+source-wordcount: 1335
+ht-degree: 99%
 
 ---
 
@@ -26,7 +28,11 @@ ht-degree: 100%
 
 ブランドプレゼンスダッシュボードには、AI 生成の応答レベルでブランドがどのように認識されているかに関する詳細な概要が表示されます。 ブランドが言及されている場所、頻度、コンテキストが表示されます。 ダッシュボードを使用して、可視性の測定、引用の追跡、センチメントトレンドの探索を行うことができます。 ダッシュボードは複数のセクションに分かれており、それぞれ異なるインサイトが表示されます。 また、表示するデータを絞り込むのに役立つカスタマイズ可能なフィルターもあります。
 
-![ブランドプレゼンスの概要](/help/dashboards/assets/brand-main.png)
+**ブランドプレゼンス**&#x200B;に移動します。 ブランドのドロップダウンリストで、分析するブランドを選択するか、「**すべてのブランド**」を選択して、すべてのブランドセットでの可視性を確認します。
+
+![ブランドセレクターを使用したブランドプレゼンス（ブランド中心のエクスペリエンス）](/help/assets/brand-centric-experience/brand-presence-brand-centric.png)
+
+<!-- ![Brand Presence overview](/help/dashboards/assets/brand-main.png)-->
 
 このページでは次の内容について説明します。
 
@@ -35,10 +41,6 @@ ht-degree: 100%
 * [その他の比較](##others-comparison)
 * [センチメントトレンド](#sentiment-trend)
 * [データインサイト](#data-insights)
-
-[ブランド中心のエクスペリエンス](/help/overview/quick-start.md#brand-centric-experience)を使用している場合は、**ブランドプレゼンス**&#x200B;に移動します。 ブランドのドロップダウンリストで、分析するブランドを選択するか、「**すべてのブランド**」を選択して、すべてのブランドセットでの可視性を確認します。
-
-![ブランドセレクターを使用したブランドプレゼンス（ブランド中心のエクスペリエンス）](/help/assets/brand-centric-experience/brand-presence-brand-centric.png)
 
 ## フィルター {#filters}
 

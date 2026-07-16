@@ -1,20 +1,23 @@
 ---
 title: LLM Optimizer の基本
 description: Adobe LLM Optimizer が AI 駆動型検索でブランドの可視性を高める仕組みについて説明します。 言及、引用、インサイトを追跡します。 エンゲージメントと影響力を高めるために、今すぐ最適化を開始しましょう。
-autotag-review: '2026-05-15T17:53:03.904Z'
-TQID: 'https://experienceleague.adobe.com/AI6oPtSezIqw3TBl-mUYH1clgJ-TQ-4z4KSjbN2Qr50'
+autotag-review: '2026-07-15T17:59:11.436Z'
+TQID: 'https://experienceleague.adobe.com/FfpcsoeownQ6gVm9GsNH51RPu6P0OHGu9xN2BIL1HJg'
 product_v2:
   - id: d830747e-f8f3-4fce-8eff-d53b333b1639
 feature_v2:
-  - id: a0b5a505-2fd7-4c3d-b61c-b557fb6f0558
-  - id: c0713b97-4af8-4c41-b742-5afcc6ced468
+  - id: a080bb92-ba2a-4e53-ba60-f5184d1a9e9a
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
 topic_v2:
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
   - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
   - id: fc314d1d-7cb9-4a38-8dbd-8f9b6478f40d
-source-git-commit: 564171851fdccee43afd233da143d66182464889
+source-git-commit: 2705cf26faea9c09817bbdcec4b4c531552df7ba
 workflow-type: tm+mt
-source-wordcount: 508
+source-wordcount: 515
 ht-degree: 100%
 
 ---

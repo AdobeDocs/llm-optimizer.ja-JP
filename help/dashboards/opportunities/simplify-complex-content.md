@@ -2,20 +2,24 @@
 title: 複雑なコンテンツの簡素化
 description: LLM Optimizerが、AI担当者が解釈しにくい高密度コピーを使用して、トラフィックの多いページを特定する方法や、EdgeのOptimizeを使用して簡略化されたテキストをレビューおよびデプロイする方法を説明します。
 feature: Opportunities
-autotag-review: '2026-05-15T17:58:39.879Z'
-TQID: 'https://experienceleague.adobe.com/wO3ZY-fEgOi7cD4dq0kCltk-YJSD431bkA6-9PW42Lo'
+autotag-review: '2026-07-15T18:04:55.581Z'
+TQID: 'https://experienceleague.adobe.com/uMK9qeAGMNrtvR0TYbeg8SIOKlwKf4L5NIE9ZgsJaUw'
 product_v2:
   - id: d830747e-f8f3-4fce-8eff-d53b333b1639
 feature_v2:
-  - id: c0713b97-4af8-4c41-b742-5afcc6ced468
-subfeature_v2:
   - id: e1b649f0-0a61-46e4-9082-64d5cb2576c6
+  - id: ef4e63f5-cb4d-462d-bf9a-1f617edf2a3a
+subfeature_v2:
+  - id: bbfc1b77-44c5-4fe8-b65f-ec160fe0d021
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
 topic_v2:
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
-source-git-commit: 564171851fdccee43afd233da143d66182464889
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+source-git-commit: 2705cf26faea9c09817bbdcec4b4c531552df7ba
 workflow-type: tm+mt
 source-wordcount: 785
-ht-degree: 1%
+ht-degree: 10%
 
 ---
 
@@ -47,12 +51,12 @@ LLM Optimizerは、高いエージェント型トラフィックを受け取り�
 
 現在の提案に関する提案を含む![URL、改善されたテキストとプレビューで行を拡張](/help/dashboards/opportunities/assets/simplify-complex-content-expand.png)
 
-候補&#x200B;**テーブルを含む** URLには、簡略化されたコンテンツがエージェンティックの理解に役立つページが一覧表示されます。 提案は、**現在の提案**、**修正提案**、**無視された提案**&#x200B;に整理されます。 URLごとに、次の操作を実行できます。
+候補&#x200B;**テーブルを含む** URLには、簡略化されたコンテンツがエージェンティックの理解に役立つページが一覧表示されます。 提案は、**現在の提案**、**修正提案**、**無視された提案**&#x200B;に整理されます。 各 URL について、次の操作を実行できます。
 
 - **行**&#x200B;を展開して、そのページの&#x200B;**改善されたテキスト**&#x200B;の候補を表示します。
 - エージェント型トラフィックの前後の比較を&#x200B;**プレビュー**&#x200B;します。
 - **LLM Optimizer以外で商談に対処した場合は、**&#x200B;を修正済みとしてマークします。
-- **関連しない提案を無視**&#x200B;します。
+- **無視**：関連しない候補に対して実行します。
 
 **ビュー**&#x200B;には、**現在の提案**、**修正提案** （デプロイ時のステータス **最適化**）、**無視された提案**&#x200B;が含まれます。 **修正候補**&#x200B;の&#x200B;**ライブを表示**&#x200B;を使用してライブデプロイメントを確認し、いつでもロールバックできます。
 
@@ -64,7 +68,7 @@ LLM Optimizerは、高いエージェント型トラフィックを受け取り�
 
 エッジで公開する準備ができたら、**最適化をデプロイ**&#x200B;をクリックします。 選択したURLと最適化の詳細が、**Edgeにデプロイ** ダイアログに一覧表示されます。 リストを確認し、**デプロイ**&#x200B;または&#x200B;**キャンセル**&#x200B;を選択します。
 
-![Edgeへのデプロイ ダイアログ &#x200B;](/help/dashboards/opportunities/assets/simplify-complex-content-deploy-dialog.png)
+![Edge にデプロイダイアログ](/help/dashboards/opportunities/assets/simplify-complex-content-deploy-dialog.png)
 
 デプロイが正常に完了すると、**デプロイメント完了**&#x200B;は本番稼動した最適化回数を確認し、AI エージェントが更新のインデックス作成に時間がかかる場合があることをメモします。 ダイアログを閉じ、**修正候補**&#x200B;を開いてステータスを確認します。
 
@@ -72,7 +76,7 @@ LLM Optimizerは、高いエージェント型トラフィックを受け取り�
 
 >[!NOTE]
 >
->最適化をデプロイするには、Edgeで最適化のオンボーディングプロセスを完了する必要があります。 まだオンボーディングしていない場合は、**最適化をデプロイ**&#x200B;をクリックすると、オンボーディングプロセスに移動します。 Edgeでの最適化の仕組み、サポートされているCDN プロバイダー、オンボーディングプロセスについて詳しくは、[Edgeでの最適化](/help/dashboards/optimize-at-edge/overview.md) ページを参照してください。
+>最適化をデプロイするには、Edge での最適化のオンボーディングプロセスを完了する必要があります。 まだオンボードしていない場合は、「**最適化をデプロイ**」をクリックすると、オンボーディングプロセスに移動します。 Edge での最適化の仕組み、サポートされている CDNプロバイダー、オンボーディングプロセスについて詳しくは、[Edge での最適化](/help/dashboards/optimize-at-edge/overview.md)ページを参照してください。
 
 ### 修正候補とライブ表示
 
@@ -100,6 +104,6 @@ LLM Optimizerは、高いエージェント型トラフィックを受け取り�
 
 ![&#x200B; ロールバック完了 – ロールバックが完了しました](/help/dashboards/opportunities/assets/simplify-complex-content-rollback-confirm.png)
 
-## デモでやってみましょう
+## デモで試す
 
 [Frescopa デモ &#x200B;](https://play.llmo.now/org/demo-org)で、複雑なコンテンツを簡略化ワークフローを確認してください。
