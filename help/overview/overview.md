@@ -24,7 +24,7 @@ ht-degree: 88%
 
 # LLM Optimizer の概要
 
->[!VIDEO](https://video.tv.adobe.com/v/3492471/?learn=on){transcript=true}
+>[!VIDEO](https://video.tv.adobe.com/v/3492472/?captions=jpn&learn=on){transcript=true}
 
 Adobe LLM Optimizerを活用する前に、知っておくべきことを解説します。
 
