@@ -4,26 +4,15 @@ description: 顧客設定を使用して、LLM Optimizer プラットフォー�
 feature: Customer Configuration
 autotag-review: '2026-07-15T17:48:20.742Z'
 TQID: 'https://experienceleague.adobe.com/BvaFF-pMzojy1TNZvCQQRbcT5c5AQ75OqjclmDi14Z0'
-product_v2:
-  - id: d830747e-f8f3-4fce-8eff-d53b333b1639
-feature_v2:
-  - id: c898dfb2-0885-42fb-b2af-b2d756752646
-  - id: d1956731-2adb-4bb7-8301-2b239254ac72
-  - id: e1b649f0-0a61-46e4-9082-64d5cb2576c6
-subfeature_v2:
-  - id: e69d5a42-0217-4ca5-9396-a9a826a170da
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-topic_v2:
-  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
-  - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
-  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
-  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
-  - id: fc314d1d-7cb9-4a38-8dbd-8f9b6478f40d
-source-git-commit: 2705cf26faea9c09817bbdcec4b4c531552df7ba
+product_v2: id: d830747e-f8f3-4fce-8eff-d53b333b1639
+feature_v2: id: c898dfb2-0885-42fb-b2af-b2d756752646id: d1956731-2adb-4bb7-8301-2b239254ac72id: e1b649f0-0a61-46e4-9082-64d5cb2576c6
+subfeature_v2: id: e69d5a42-0217-4ca5-9396-a9a826a170da
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: cdd65e7e-8839-44a2-bc21-0e03623b5dd1id: e1e0219c-f879-479f-8427-888ed2a6e9c2id: eddd9b14-83bd-4ff4-9072-54a4a484abb7id: fc314d1d-7cb9-4a38-8dbd-8f9b6478f40d
+source-git-commit: 72cc645997dbd5ae0442fefad73fe6a4e7ffe050
 workflow-type: tm+mt
-source-wordcount: 3935
-ht-degree: 57%
+source-wordcount: 3926
+ht-degree: 56%
 
 ---
 
@@ -48,9 +37,9 @@ LLM Optimizer で様々なマーケットや競争環境をまたいでブラン
 
 [ブランド中心のエクスペリエンス](/help/overview/quick-start.md#brand-centric-experience)を使用している場合は、**ブランド管理**&#x200B;に移動し、ブランド、ブランドエイリアスを設定して、追跡対象となる競合他社を定義します。 また、**ブランド管理**&#x200B;を使用すると、Google Search Console、Adobe Analytics およびブランドに関連付けられた URL に関連する CDN ログ転送などの統合を設定できます。 この操作を実行するには、対応するタブ（GSC、CDN など）をクリックします。
 
-![ブランド管理 - アプリのナビゲーション（ブランド中心のエクスペリエンス）](/help/assets/brand-centric-experience/llmo-app-shell.png)
+![ ブランド管理 – アプリ ナビゲーション （ブランド中心のエクスペリエンス） ](/help/assets/brand-centric-experience/llmo-app-shell.png)
 
-![ブランド管理 - 設定の概要（ブランド中心のエクスペリエンス）](/help/assets/brand-centric-experience/brands-management-configuration.png)
+![ ブランド管理 – 設定の概要（ブランド中心のエクスペリエンス） ](/help/assets/brand-centric-experience/brands-management-configuration.png)
 
 >[!IMPORTANT]
 >
@@ -225,7 +214,7 @@ Google Search Console アカウントを LLM Optimizer と統合すると、Sear
 1. 「Google Search Console」タブで、Search Console から取得したトピックとプロンプトのリストを確認します。
    ![プロンプトリスト](/help/dashboards/assets/prompts-list.png)
 1. 目的のトピック／プロンプトカテゴリをクリックして、リストを展開します。
-1. 「**追加**」ボタンを使用して、リストからプロンプトを追加します。 また、「**すべて追加**」を使用すると、プロンプトとカテゴリを一括で追加することもできます。
+1. リストからプロンプトを追加するには、**追加** ボタンを使用します。**すべて追加**を使用して、プロンプトとカテゴリを一括追加することもできます。
    ![プロンプトを追加](/help/dashboards/assets/add-prompts.png)
 1. 選択が完了したら、通知メッセージの「**保存**」をクリックします。
 
@@ -277,13 +266,13 @@ AI エージェントが既にページにアクセスしている場合、こ�
 
 >[!NOTE]
 >
-> [&#x200B; ブランド中心のエクスペリエンス &#x200B;](/help/overview/quick-start.md#brand-centric-experience)では、**プロンプト管理** セクションにプロンプトの提案が表示されます。
+> [ ブランド中心のエクスペリエンス ](/help/overview/quick-start.md#brand-centric-experience)では、**プロンプト管理** セクションにプロンプトの提案が表示されます。
 
 ### 仕組み {#prompt-suggestions-how-it-works}
 
 プロンプト提案ワークフローは4つのステップで実行され、CDN トラフィックシグナルをすぐに設定可能なプロンプト提案に変換します。 各ステップは、以前のステップの上に構築されます。AI エージェントのアクティビティが既に証明されているページから開始し、それらのページが何であるかを理解し、既にカバーされているものを確認し、特定の根拠があり、公開する準備ができているプロンプトを生成します。
 
-![&#x200B; エージェント型トラフィックワークフローからの提案を促す](/help/dashboards/assets/prompt-suggestions-workflow.png)
+![ エージェント型トラフィックワークフローからの提案を促す](/help/dashboards/assets/prompt-suggestions-workflow.png)
 
 #### ステップ 1：エージェント型トラフィックから有望なページを特定する {#prompt-suggestions-step-1}
 
@@ -321,7 +310,7 @@ AI エージェントが既にページにアクセスしている場合、こ�
 
 #### ステップ 4 - URL別の生成、品質チェック、プロンプトのランク付け {#prompt-suggestions-step-4}
 
-![&#x200B; プロンプト生成と品質チェック &#x200B;](/help/dashboards/assets/prompt-suggestions-generation.png)
+![ プロンプト生成と品質チェック ](/help/dashboards/assets/prompt-suggestions-generation.png)
 
 ギャップの各ページについて、パイプラインは、ページコンテンツの内容にもとづいて、自然な音のプロンプトを生成します。 最初に、関連するペルソナを特定します。候補者プロンプトを生成する前に、このページが回答を提供する現実的な質問を作成し、そのペルソナに関する現実的なシナリオを構築する人物です。
 
@@ -342,7 +331,7 @@ AI エージェントが既にページにアクセスしている場合、こ�
 1. **推論**&#x200B;と&#x200B;**優先度**&#x200B;の列を確認して、各提案を評価します。
 1. 追加するプロンプトを選択し、**選択範囲を追加**&#x200B;をクリックして、設定済みのプロンプトに追加します。
 
-![&#x200B; プロンプトの提案タブ （引用の試行ソースフィルター付き） &#x200B;](/help/dashboards/assets/prompt-suggestions-citation-attempt.png)
+![ プロンプトの提案タブ （引用の試行ソースフィルター付き） ](/help/dashboards/assets/prompt-suggestions-citation-attempt.png)
 
 ![選択したプロンプト候補を追加](/help/dashboards/assets/prompt-suggestions-add-selection.png)
 

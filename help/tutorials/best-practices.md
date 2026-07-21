@@ -4,23 +4,12 @@ description: AI 検索でブランドの可視性を高める LLM 最適化の�
 feature: Best Practices, Agentic Traffic, Brand Presence
 autotag-review: '2026-07-15T17:43:32.482Z'
 TQID: 'https://experienceleague.adobe.com/-6jlC0LzPlLvJwhl07pgeT3BDbzeP-K7LrfyhepJ5UA'
-product_v2:
-  - id: d830747e-f8f3-4fce-8eff-d53b333b1639
-feature_v2:
-  - id: c898dfb2-0885-42fb-b2af-b2d756752646
-  - id: e0828736-236a-487b-a478-5a635455eadc
-subfeature_v2:
-  - id: e06fae5f-830b-4222-a469-b5e148d36465
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
-  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
-topic_v2:
-  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
-  - id: cc72dcf1-72e1-48cc-b434-e7c27d62d67c
-  - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
-  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
-source-git-commit: 2705cf26faea9c09817bbdcec4b4c531552df7ba
+product_v2: id: d830747e-f8f3-4fce-8eff-d53b333b1639
+feature_v2: id: c898dfb2-0885-42fb-b2af-b2d756752646id: e0828736-236a-487b-a478-5a635455eadc
+subfeature_v2: id: e06fae5f-830b-4222-a469-b5e148d36465
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: f8a45b24-4be7-4f1b-909b-60d06b483a20id: b69b2659-1057-424e-8fc5-ed9e016dc554
+topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: cc72dcf1-72e1-48cc-b434-e7c27d62d67cid: cdd65e7e-8839-44a2-bc21-0e03623b5dd1id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+source-git-commit: 6b0e86f1373c3b1d85d67bd8222459acfc3620dc
 workflow-type: tm+mt
 source-wordcount: 1718
 ht-degree: 100%
@@ -285,6 +274,6 @@ It provides a percentage of content visibility, highlighting areas where LLMs ma
 
 Best Practice:
 
-Use nametbd feature to render static HTML versions of your pages for LLM bots, ensuring full content visibility.
+Use Optimize at Edge feature to render static HTML versions of your pages for LLM bots, ensuring full content visibility.
 Address issues like blocked pages, robots.txt restrictions, and client-side rendering problems.
 -->
