@@ -4,9 +4,16 @@ description: Adobe LLM Optimizer が AI 駆動型検索でブランドの可視�
 feature: Onboarding
 autotag-review: '2026-07-15T18:10:25.350Z'
 TQID: 'https://experienceleague.adobe.com/C-54mDBaDgmIWPOrLhkeUHlK1cXMbX0kRNrJZTC--4c'
-product_v2: id: d830747e-f8f3-4fce-8eff-d53b333b1639
-feature_v2: id: c898dfb2-0885-42fb-b2af-b2d756752646id: e1b649f0-0a61-46e4-9082-64d5cb2576c6id: a080bb92-ba2a-4e53-ba60-f5184d1a9e9a
-topic_v2: id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1id: e1e0219c-f879-479f-8427-888ed2a6e9c2id: fc314d1d-7cb9-4a38-8dbd-8f9b6478f40d
+product_v2:
+  - id: d830747e-f8f3-4fce-8eff-d53b333b1639
+feature_v2:
+  - id: c898dfb2-0885-42fb-b2af-b2d756752646
+  - id: e1b649f0-0a61-46e4-9082-64d5cb2576c6
+  - id: a080bb92-ba2a-4e53-ba60-f5184d1a9e9a
+topic_v2:
+  - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+  - id: fc314d1d-7cb9-4a38-8dbd-8f9b6478f40d
 source-git-commit: 6b0e86f1373c3b1d85d67bd8222459acfc3620dc
 workflow-type: tm+mt
 source-wordcount: 485
@@ -62,11 +69,11 @@ LLM 最適化は、ますます重要になっています。
 
 Adobe LLM Optimizer を使用すると、次の操作を実行できます。
 
-**ブランドの可視性を測定** - AIを利用した検索結果で、自社が言及された時期、場所、頻度を追跡します。時間をかけてベンチマークできる明確な可視性スコアにより、憶測による判断から脱却できます。[ブランドプレゼンスダッシュボード ](/help/dashboards/brand-presence.md)を参照してください。
-**他の顧客のベンチマーク** – 生成エンジンにおいて、競合他社など、他の企業と比較して、自社のブランドがどのように評価されているかを確認できます。シェアオブボイスギャップを特定し、競争上の優位性を明らかにする。[ブランドプレゼンスダッシュボード ](/help/dashboards/brand-presence.md)を参照してください。
-**実用的な機会の発見** - コンテンツの機会（例：FAQ、抽象、スキーマ）と技術的な機会（クロール可能性、インデックス作成の問題）を特定し、メンションと引用を直接増やします。[商談ダッシュボード ](/help/dashboards/opportunities-overview.md)を参照してください。
-**AIによるトラフィックの影響を追跡** - エージェント型トラフィック（AI アシスタントから）とリファラルトラフィック（引用からのユーザーのクリック）を自社のプロパティにモニタリングします。地域の可視性を実際のエンゲージメントに結び付ける。[ エージェント型トラフィックダッシュボード ](/help/dashboards/agentic-traffic.md)および[リファラルトラフィックダッシュボード ](/help/dashboards/referral-traffic.md)を参照してください。
-**チーム Collaborationを有効にする** - ダッシュボードを共有し、プロンプトまたはカテゴリの所有者を割り当て、マーケティング、SEO （検索エンジン最適化）、コミュニケーション機能をまたいで可視性の目標を追跡します。[Collaboration ダッシュボード ](/help/dashboards/collaboration.md)を参照してください。
+**ブランドの可視性を測定** - AIを利用した検索結果で、自社が言及された時期、場所、頻度を追跡します。時間をかけてベンチマークできる明確な可視性スコアにより、憶測による判断から脱却できます。[ブランドプレゼンスダッシュボード &#x200B;](/help/dashboards/brand-presence.md)を参照してください。
+**他の顧客のベンチマーク** – 生成エンジンにおいて、競合他社など、他の企業と比較して、自社のブランドがどのように評価されているかを確認できます。シェアオブボイスギャップを特定し、競争上の優位性を明らかにする。[ブランドプレゼンスダッシュボード &#x200B;](/help/dashboards/brand-presence.md)を参照してください。
+**実用的な機会の発見** - コンテンツの機会（例：FAQ、抽象、スキーマ）と技術的な機会（クロール可能性、インデックス作成の問題）を特定し、メンションと引用を直接増やします。[商談ダッシュボード &#x200B;](/help/dashboards/opportunities-overview.md)を参照してください。
+**AIによるトラフィックの影響を追跡** - エージェント型トラフィック（AI アシスタントから）とリファラルトラフィック（引用からのユーザーのクリック）を自社のプロパティにモニタリングします。地域の可視性を実際のエンゲージメントに結び付ける。[&#x200B; エージェント型トラフィックダッシュボード &#x200B;](/help/dashboards/agentic-traffic.md)および[リファラルトラフィックダッシュボード &#x200B;](/help/dashboards/referral-traffic.md)を参照してください。
+**チーム Collaborationを有効にする** - ダッシュボードを共有し、プロンプトまたはカテゴリの所有者を割り当て、マーケティング、SEO （検索エンジン最適化）、コミュニケーション機能をまたいで可視性の目標を追跡します。[Collaboration ダッシュボード &#x200B;](/help/dashboards/collaboration.md)を参照してください。
 
 ## 詳細情報
 
@@ -74,7 +81,7 @@ LLM Optimizer を最大限に活用するのに役立つリソースを以下に
 
 * [クイックスタート](/help/overview/quick-start.md)ですぐに使い始めることができます。
 * [ダッシュボードの概要](/help/dashboards/dashboards-overview.md)では、LLM Optimizer で使用できるすべてのダッシュボードについて説明します。
-* [ カテゴリー、トピック、プロンプト、その他のブランドをトラッキングするように設定するためのベストプラクティス ](/help/overview/best-practices-topics-prompts.md)には、LLM Optimizerの設定に関する重要な情報が含まれています。
+* [&#x200B; カテゴリー、トピック、プロンプト、その他のブランドをトラッキングするように設定するためのベストプラクティス &#x200B;](/help/overview/best-practices-topics-prompts.md)には、LLM Optimizerの設定に関する重要な情報が含まれています。
 * [ベストプラクティス](/help/tutorials/best-practices.md)では、AI 検索でブランドの可視性を高める LLM 最適化のベストプラクティスを見つけることができます。
 
 
