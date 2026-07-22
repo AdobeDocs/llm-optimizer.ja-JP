@@ -20,7 +20,7 @@ topic_v2:
   - id: cc72dcf1-72e1-48cc-b434-e7c27d62d67c
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
   - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
-source-git-commit: 2705cf26faea9c09817bbdcec4b4c531552df7ba
+source-git-commit: 6b0e86f1373c3b1d85d67bd8222459acfc3620dc
 workflow-type: tm+mt
 source-wordcount: 1718
 ht-degree: 100%
@@ -285,6 +285,6 @@ It provides a percentage of content visibility, highlighting areas where LLMs ma
 
 Best Practice:
 
-Use nametbd feature to render static HTML versions of your pages for LLM bots, ensuring full content visibility.
+Use Optimize at Edge feature to render static HTML versions of your pages for LLM bots, ensuring full content visibility.
 Address issues like blocked pages, robots.txt restrictions, and client-side rendering problems.
 -->

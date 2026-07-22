@@ -18,10 +18,10 @@ role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
 topic_v2:
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
-source-git-commit: 2705cf26faea9c09817bbdcec4b4c531552df7ba
+source-git-commit: 9d2324e23e07f01e16c4fc16c96213d03214918f
 workflow-type: tm+mt
-source-wordcount: 810
-ht-degree: 98%
+source-wordcount: 795
+ht-degree: 76%
 
 ---
 
@@ -119,58 +119,44 @@ Akamai プロパティマネージャールールを設定する前に、次の�
 
 **9. サイトフェイルオーバー**
 
-サイトフェイルオーバー設定には、フェイルオーバー動作（メインの optimize-at-edge ルーティングルール内で設定）と、個別のフェイルオーバーテストヘッダールールの 2 つの部分かがあります。
+サイト フェールオーバー設定には、メインのOptimize at Edge ルーティング ルール内のフェールオーバー動作と、フォールバックが発生したときにレスポンス ヘッダーを追加する兄弟ルールの2つの部分があります。
 
-**9a. サイトフェイルオーバー動作（メインの optimize-at-edge ルーティングルール内）**
+**9a. サイト フェールオーバー動作の設定**
 
-メインのルーティングルール内で、サイトフェイルオーバー動作と高度な XML スニペットを次のように設定します。
+Edgeのメインの最適化ルーティングルール内で、**Site Failover Behavior**&#x200B;という名前の子ルールを作成します。 **Match Any**&#x200B;に設定し、次の条件を追加します。
 
->[!IMPORTANT]
->
->この手順で使用する XML スニペットには、**詳細**&#x200B;な動作が必要です。 Akamai の一部の環境では、セルフサービス編集に対してこの機能を使用できません。 「**詳細**」オプションが表示されない場合は、Akamai アカウントチームまたは Akamai サポートに連絡して、必要な設定を有効にしてください。
+* **応答ステータスコード**&#x200B;は`400` ～ `599`の範囲にあります。
+* **オリジン タイムアウト**&#x200B;は`Yes`です。
 
 ![サイトフェイルオーバー](/help/assets/optimize-at-edge/akamai-step9-failover.png)
 
-高度な XML を通じて、リクエストヘッダー `x-edgeoptimize-request` に値 `fo` を追加します。
+![&#x200B; サイト フェールオーバー動作の設定](/help/assets/optimize-at-edge/akamai-step9-failover-settings.png)
 
-```
-<forward:availability.fail-action2>
-<add-header>
-<status>on</status>
-<name>x-edgeoptimize-request</name>
-<value>fo</value>
-</add-header>
-</forward:availability.fail-action2>
-```
-
-![フェイルオーバー動作](/help/assets/optimize-at-edge/akamai-step9-failover-behaviors.png)
-
-**9b. フェイルオーバーテストヘッダールール（兄弟ルール）**
+**9b. フェールオーバー応答ヘッダー規則**&#x200B;を設定します
 
 >[!IMPORTANT]
 >
 >**EdgeOptimize フェイルオーバー - テストヘッダー**&#x200B;ルールを、ルーティングルールの&#x200B;**兄弟**&#x200B;として（同じレベルで）作成します。ルーティングルールの内部にネスト&#x200B;**しない**&#x200B;でください。 Akamai Property Manager のルールツリーでは、階層は次のようになります。
 >
 >```
->▼ Parent Rule
->   ▶ Optimize at Edge Routing     ← routing rule
->       EdgeOptimize Failover - Test Header       ← sibling, same level
+>▼ Optimize at Edge                         ← parent rule group
+>   ▼ Optimize at Edge Routing               ← routing child
+>       Site Failover Behavior                 ← nested child
+>   EdgeOptimize Failover - Test Header      ← sibling of routing child
 >```
 >
->これにより、フェイルオーバーテストヘッダールールが、1 つだけでなく、**すべて**&#x200B;のルーティングルールに対して評価されることが確保されます。
+>兄弟ルールは、Akamaiが元のホスト名に対して失敗したリクエストを再作成したときに評価されます。 ルーティングルールのAPI キー条件により、そのリクエストがEdge Optimizeに再度送信されるのを防ぐことができます。
 >
 >また、**Edge での最適化ルーティング**&#x200B;ルールが、同じリクエストのオリジン、キャッシュ動作、キャッシュ ID を変更する後続の一致ルールにより上書きされないことも確保されます。 別の一致ルールにより、これらの動作がリセットされた場合、Edge での最適化ルーティングまたはキャッシュが期待どおりに機能しないことがあります。
 
-リクエストヘッダーの `x-edgeoptimize-request` の値が `fo` の場合、送信応答ヘッダーの `x-edgeoptimize-fo` を `true` に設定します。
+![&#x200B; フェールオーバー応答ヘッダールールを設定](/help/assets/optimize-at-edge/akamai-step9-failover-header.png)
 
-![フェイルオーバールール](/help/assets/optimize-at-edge/akamai-step9-failover-rules.png)
-
-サイトフェイルオーバーにより、Edge での最適化が `4XX` または `5XX` エラーを返した場合、リクエストは自動的にデフォルトのオリジンにルーティングされるので、エンドユーザーは応答を引き続き受信できます。
+サイトフェールオーバーは、Edge Optimizeがエラーを返したりタイムアウトしたりした場合、訪問者がサイトの通常の応答を引き続き受け取るように、元のホスト名のリクエストをAkamaiが再作成します。
 
 | シナリオ | 動作 |
 | --- | --- |
-| Edge での最適化で `2XX` が返される | 最適化された応答がクライアントに提供されます。 |
-| Edge での最適化で `4XX` または `5XX` が返される | リクエストがデフォルトのオリジンにルーティングされます。 |
+| Edge での最適化で `2XX` または `3XX` が返される | 最適化された応答が提供されます。 `x-edgeoptimize-request-id`が存在します。 |
+| Edge Optimizeが`4XX`～`5XX`を返すか、オリジンがタイムアウトします | リクエストは、元のホスト名に対して再作成されます。 応答に`x-edgeoptimize-fo: true`が含まれています。 |
 
 **設定の検証**
 
@@ -208,7 +194,7 @@ curl -svo /dev/null https://www.example.com/page.html \
 | ヘッダー | ボットトラフィック（最適化） | 人間のトラフィック（影響を受けない） |
 |---|---|---|
 | `x-edgeoptimize-request-id` | 存在 - 一意のリクエスト ID が含まれます | 不在 |
-| `x-edgeoptimize-fo` | フェイルオーバーが発生した場合のみ存在（値：`1`） | 不在 |
+| `x-edgeoptimize-fo` | フェイルオーバーが発生した場合のみ存在（値：`true`） | 不在 |
 
 {{verify-routing-status-in-ui}}
 

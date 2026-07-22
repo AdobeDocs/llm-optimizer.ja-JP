@@ -20,10 +20,10 @@ topic_v2:
   - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
   - id: fc314d1d-7cb9-4a38-8dbd-8f9b6478f40d
-source-git-commit: 2705cf26faea9c09817bbdcec4b4c531552df7ba
+source-git-commit: 72cc645997dbd5ae0442fefad73fe6a4e7ffe050
 workflow-type: tm+mt
-source-wordcount: 3935
-ht-degree: 57%
+source-wordcount: 3926
+ht-degree: 56%
 
 ---
 
@@ -48,9 +48,9 @@ LLM Optimizer で様々なマーケットや競争環境をまたいでブラン
 
 [ブランド中心のエクスペリエンス](/help/overview/quick-start.md#brand-centric-experience)を使用している場合は、**ブランド管理**&#x200B;に移動し、ブランド、ブランドエイリアスを設定して、追跡対象となる競合他社を定義します。 また、**ブランド管理**&#x200B;を使用すると、Google Search Console、Adobe Analytics およびブランドに関連付けられた URL に関連する CDN ログ転送などの統合を設定できます。 この操作を実行するには、対応するタブ（GSC、CDN など）をクリックします。
 
-![ブランド管理 - アプリのナビゲーション（ブランド中心のエクスペリエンス）](/help/assets/brand-centric-experience/llmo-app-shell.png)
+![&#x200B; ブランド管理 – アプリ ナビゲーション （ブランド中心のエクスペリエンス） &#x200B;](/help/assets/brand-centric-experience/llmo-app-shell.png)
 
-![ブランド管理 - 設定の概要（ブランド中心のエクスペリエンス）](/help/assets/brand-centric-experience/brands-management-configuration.png)
+![&#x200B; ブランド管理 – 設定の概要（ブランド中心のエクスペリエンス） &#x200B;](/help/assets/brand-centric-experience/brands-management-configuration.png)
 
 >[!IMPORTANT]
 >
@@ -225,7 +225,7 @@ Google Search Console アカウントを LLM Optimizer と統合すると、Sear
 1. 「Google Search Console」タブで、Search Console から取得したトピックとプロンプトのリストを確認します。
    ![プロンプトリスト](/help/dashboards/assets/prompts-list.png)
 1. 目的のトピック／プロンプトカテゴリをクリックして、リストを展開します。
-1. 「**追加**」ボタンを使用して、リストからプロンプトを追加します。 また、「**すべて追加**」を使用すると、プロンプトとカテゴリを一括で追加することもできます。
+1. リストからプロンプトを追加するには、**追加** ボタンを使用します。**すべて追加**&#x200B;を使用して、プロンプトとカテゴリを一括追加することもできます。
    ![プロンプトを追加](/help/dashboards/assets/add-prompts.png)
 1. 選択が完了したら、通知メッセージの「**保存**」をクリックします。
 

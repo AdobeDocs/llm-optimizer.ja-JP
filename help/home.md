@@ -18,10 +18,10 @@ topic_v2:
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
   - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
-source-git-commit: 2705cf26faea9c09817bbdcec4b4c531552df7ba
+source-git-commit: 6b0e86f1373c3b1d85d67bd8222459acfc3620dc
 workflow-type: tm+mt
-source-wordcount: 682
-ht-degree: 100%
+source-wordcount: 364
+ht-degree: 86%
 
 ---
 
@@ -73,7 +73,7 @@ CARDS
                     <p class="is-size-6">Adobe LLM Optimizer が AI 駆動型検索でブランドの可視性を高める仕組みについて説明します。</p>
                 </div>
                 <a href="./overview/overview.md" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
-                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">詳細情報</span>
+                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">詳細情報</span>
                 </a>
             </div>
         </div>
@@ -96,7 +96,7 @@ CARDS
                     <p class="is-size-6">LLM Optimizer をすばやく起動して実行する方法について説明します。</p>
                 </div>
                 <a href="./overview/quick-start.md" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
-                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">詳細情報</span>
+                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">詳細情報</span>
                 </a>
             </div>
         </div>
@@ -119,7 +119,7 @@ CARDS
                     <p class="is-size-6">ダッシュボードを使用して、サイトのインサイトを取得し、レコメンデーションを取得する方法について説明します。</p>
                 </div>
                 <a href="./dashboards/dashboards-overview.md" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
-                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">詳細情報</span>
+                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">詳細情報</span>
                 </a>
             </div>
         </div>
@@ -133,14 +133,14 @@ CARDS
 CARDS
 
 * ./overview/best-practices-topics-prompts.md
-  {title= Best practices for setting up categories, topics, prompts, and tracking others}
+  {title= Best practices for setting up categories, topics, prompts, and tracking other brands}
   {description= Learn how to configure LLM Optimizer for tailored brand monitoring and strategic content analysis.}
-  {image= /help/assets/overview/customer-configuration-card.png}
+  {image= /help/assets/best-practices/add-new-topic1.png}
   {target=_blank}
   {cta=Learn more}
 * ./tutorials/best-practices.md
   {title= Best practices for LLM optimization using Adobe LLM Optimizer}
-  {image= /help/assets/overview/best-practices-card.png}
+  {image= /help/assets/best-practices/create-category1.png}
   {description= Learn how LLM Optimizer can help you drive brand authority in AI search and discovery.}
   {target=_blank}
   {cta=Learn more}
@@ -153,12 +153,12 @@ CARDS
 -->
 <!-- START CARDS HTML - DO NOT MODIFY BY HAND -->
 <div class="columns">
-    <div class="column is-half-tablet is-half-desktop is-one-third-widescreen" aria-label="Best practices for setting up categories, topics, prompts, and tracking others">
+    <div class="column is-half-tablet is-half-desktop is-one-third-widescreen" aria-label="Best practices for setting up categories, topics, prompts, and tracking other brands">
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="./overview/best-practices-topics-prompts.md" title="カテゴリ、トピック、プロンプトの設定およびその他の追跡のベストプラクティス" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="/help/assets/overview/customer-configuration-card.png" alt="カテゴリ、トピック、プロンプトの設定およびその他の追跡のベストプラクティス"
+                    <a href="./overview/best-practices-topics-prompts.md" title="カテゴリー、トピック、プロンプト、その他のブランドのトラッキングを設定するためのベストプラクティス" target="_blank" rel="referrer">
+                        <img class="is-bordered-r-small" src="/help/assets/best-practices/add-new-topic1.png" alt="カテゴリー、トピック、プロンプト、その他のブランドのトラッキングを設定するためのベストプラクティス"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -166,12 +166,12 @@ CARDS
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="./overview/best-practices-topics-prompts.md" target="_blank" rel="referrer" title="カテゴリ、トピック、プロンプトの設定およびその他の追跡のベストプラクティス">カテゴリ、トピック、プロンプトの設定およびその他の追跡のベストプラクティス</a>
+                        <a href="./overview/best-practices-topics-prompts.md" target="_blank" rel="referrer" title="カテゴリー、トピック、プロンプト、その他のブランドのトラッキングを設定するためのベストプラクティス"> カテゴリー、トピック、プロンプト、および他のブランドのトラッキングを設定するためのベストプラクティス </a>
                     </p>
                     <p class="is-size-6">カスタマイズされたブランドモニタリングと戦略的コンテンツ分析用に LLM Optimizer を設定する方法について説明します。</p>
                 </div>
                 <a href="./overview/best-practices-topics-prompts.md" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
-                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">詳細情報</span>
+                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">詳細情報</span>
                 </a>
             </div>
         </div>
@@ -181,7 +181,7 @@ CARDS
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="./tutorials/best-practices.md" title="Adobe LLM Optimizer を使用した LLM 最適化のベストプラクティス" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="/help/assets/overview/best-practices-card.png" alt="Adobe LLM Optimizer を使用した LLM 最適化のベストプラクティス"
+                        <img class="is-bordered-r-small" src="/help/assets/best-practices/create-category1.png" alt="Adobe LLM Optimizer を使用した LLM 最適化のベストプラクティス"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -194,7 +194,7 @@ CARDS
                     <p class="is-size-6">LLM Optimizer が AI 検索と検出でのブランド権限の向上にどのように役立つかについて説明します。</p>
                 </div>
                 <a href="./tutorials/best-practices.md" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
-                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">詳細情報</span>
+                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">詳細情報</span>
                 </a>
             </div>
         </div>
@@ -217,7 +217,7 @@ CARDS
                     <p class="is-size-6">Adobe LLM Optimizer を使用して、AI 検索結果でのブランドのプレゼンスを形成します。 地域に関するインサイトを得て、LLM 全体の可視性を高め、測定可能なトラフィックの増加を推進します。</p>
                 </div>
                 <a href="https://business.adobe.com/jp/products/llm-optimizer.html" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
-                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">詳細情報</span>
+                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">詳細情報</span>
                 </a>
             </div>
         </div>
@@ -258,7 +258,7 @@ CARDS
                     <p class="is-size-6">オーサリングの変更を必要とせずに、LLM Optimizer の最適化を実現する方法について説明します。</p>
                 </div>
                 <a href="./dashboards/optimize-at-edge/overview.md" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
-                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">詳細情報</span>
+                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">詳細情報</span>
                 </a>
             </div>
         </div>
