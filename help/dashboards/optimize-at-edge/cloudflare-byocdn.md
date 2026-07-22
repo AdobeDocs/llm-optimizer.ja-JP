@@ -20,10 +20,10 @@ topic_v2:
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
-source-git-commit: 2705cf26faea9c09817bbdcec4b4c531552df7ba
+source-git-commit: e36ee407933e2d3d56cadf1c9517f23f24d41d91
 workflow-type: tm+mt
 source-wordcount: 1919
-ht-degree: 96%
+ht-degree: 93%
 
 ---
 
@@ -41,11 +41,11 @@ Cloudflare Workerのルーティングルールを設定する前に、次のこ
 * LLM Optimizer UI から取得された Edge Optimize API キー。 手順について詳しくは、[API キーの取得](/help/dashboards/optimize-at-edge/retrieve-api-keys.md#production-api-key)を参照してください。
 * （オプション）ステージングルーティングをテストするには、[Staging API キー](/help/dashboards/optimize-at-edge/retrieve-api-keys.md#staging-api-key-optional)を参照してください。
 
-**ルーティングの仕組み**
+## ルーティングの仕組み
 
 正しく設定されると、エージェント型ユーザーエージェントからドメイン（例：`www.example.com/page.html`）へのリクエストは、Cloudflare ワーカーによって傍受され、Edge での最適化バックエンドにルーティングされます。 バックエンドリクエストには、必要なヘッダーが含まれます。
 
-**バックエンドリクエストのテスト**
+### バックエンドリクエストのテスト
 
 Edge での最適化バックエンドに直接リクエストを行うことで、ルーティングを検証できます。
 
@@ -57,7 +57,7 @@ curl -svo /dev/null https://live.edgeoptimize.net/page.html \
   -H 'x-edgeoptimize-config: LLMCLIENT=TRUE;'
 ```
 
-**必須ヘッダー**
+### 必須ヘッダー
 
 Edge での最適化バックエンドへのリクエストでは、次のヘッダーを設定する必要があります。
 
@@ -85,13 +85,13 @@ Edge での最適化用の Cloudflare Worker を設定する方法には、次�
 >
 >このオプションは、ドメインに既存の Cloudflare Worker が&#x200B;**ない**&#x200B;場合にのみ使用します。 既にワーカーがある場合は、[オプション 2：手動設定](#option-2-manual-setup)を使用して、既存のワーカーに Edge での最適化のルーティングロジックを追加します。
 
-**手順 1：ワーカーをデプロイ**
+### 手順1：ワーカーのデプロイ
 
 以下のボタンをクリックして、Edge での最適化ワーカーを Cloudflare アカウントにデプロイします。
 
 [![Cloudflare にデプロイ](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/adobe/llmo-code-samples/tree/main/optimize-at-edge/cloudflare/automation)
 
-**手順 2：デプロイメントフォームに入力**
+### 手順2：デプロイメントフォームへの入力
 
 ボタンをクリックすると、Worker の設定ページが開きます。 フォームを次のように入力します。
 
@@ -115,7 +115,7 @@ Edge での最適化用の Cloudflare Worker を設定する方法には、次�
 
 ワーカーを手動で作成および設定するには、次の手順に従います。.
 
-**手順 1：Cloudflare ワーカーを作成**
+### 手順1:Cloudflare Workerの作成
 
 1. Cloudflare ダッシュボードにログインします。
 2. サイドバーの&#x200B;**ワーカーとページ**&#x200B;に移動します。
@@ -125,13 +125,13 @@ Edge での最適化用の Cloudflare Worker を設定する方法には、次�
 
 ![Cloudflare ワーカーダッシュボード &#x200B;](/help/assets/optimize-at-edge/cloudflare-workers-dashboard.png)
 
-**手順 2：ワーカーコードを追加**
+### 手順2：ワーカーコードの追加
 
 ワーカーを作成したら、**コードを編集**&#x200B;をクリックし、デフォルトコードを[worker.js](https://github.com/adobe/llmo-code-samples/blob/main/optimize-at-edge/cloudflare/automation/src/worker.js)のコードに置き換えます。 既存のCloudflare Workerがある場合は、コードを完全に置き換えるのではなく、既存のワーカーコードと結合します。
 
 「**保存してデプロイ**」をクリックし、ワーカーを公開します。
 
-**手順 3：環境変数と秘密鍵を設定**
+### 手順3：環境変数とシークレットの設定
 
 環境変数には、API キーなどの機密性の高い設定が安全に保存されます。
 
@@ -167,7 +167,7 @@ Edge での最適化用の Cloudflare Worker を設定する方法には、次�
 
 ![Cloudflare ワーカールート](/help/assets/optimize-at-edge/cloudflare-worker-routes.png)
 
-**フェイルオーバー動作の検証**
+### フェイルオーバー動作の検証
 
 Edge での最適化が使用できない場合やエラーが返された場合、ワーカーは自動的にオリジンにフェイルオーバーします。 フェイルオーバー応答には、`x-edgeoptimize-fo` ヘッダーが含まれます。
 
@@ -178,7 +178,7 @@ Edge での最適化が使用できない場合やエラーが返された場合
 
 Cloudflare ワーカーのログでフェイルオーバーイベントを監視して、問題のトラブルシューティングを行うことができます。
 
-**ワーカーロジックについて**
+### ワーカーロジックについて
 
 Cloudflare ワーカーは、次のロジックを実装します。
 
@@ -200,11 +200,11 @@ Cloudflare ワーカーは、次のロジックを実装します。
 
 7. **リダイレクト処理：**`redirect: "manual"` オプションを指定すると、Edge での最適化からのリダイレクト応答がワーカーを経由せずにクライアントに渡されます。
 
-**設定のカスタマイズ**
+## 設定のカスタマイズ
 
 コードの上部にある設定定数を変更して、ワーカーの動作をカスタマイズできます。
 
-**エージェント型ボットリスト**
+### エージェント型ボット リスト
 
 `AGENTIC_BOTS` 配列を変更して、ユーザーエージェントを追加または削除します。
 
@@ -223,7 +223,7 @@ const AGENTIC_BOTS = [
 ];
 ```
 
-**ターゲットパス**
+### ターゲットパス
 
 デフォルトでは、すべての HTML ページが Edge での最適化にルーティングされます。 特定のパスにルーティングを制限するには、`TARGETED_PATHS` 配列を変更します。
 
@@ -235,7 +235,7 @@ const TARGETED_PATHS = null;
 const TARGETED_PATHS = ['/', '/page.html', '/products', '/about-us'];
 ```
 
-**フェイルオーバー設定**
+### フェールオーバー設定
 
 デフォルトでは、Edge での最適化から 4XX または 5XX エラーが発生した場合、ワーカーはフェイルオーバーします。 この動作をカスタマイズします。
 
@@ -253,7 +253,7 @@ const FAILOVER_ON_4XX = false;
 const FAILOVER_ON_5XX = false;
 ```
 
-**重要な検討事項**
+### 重要な検討事項
 
 * **フェイルオーバー動作：** Edge での最適化がエラー（4XX または 5XX ステータスコード）を返した場合や、ネットワークエラーによりリクエストが失敗した場合、ワーカーは自動的にオリジンサーバーにフェイルオーバーします。 フェイルオーバーでは、オリジンドメインとして `EDGE_OPTIMIZE_TARGET_HOST` が使用されます（Fastly の `F_Default_Origin` やCloudFront の `Default_Origin` と同様）。 フェイルオーバー応答には、監視やデバッグに使用できる `x-edgeoptimize-fo: 1` ヘッダーが含まれます。
 
@@ -265,7 +265,7 @@ const FAILOVER_ON_5XX = false;
 
 * **ログ：** Cloudflare ワーカーのログを有効にして、リクエストの監視や問題のトラブルシューティングを行います。 リアルタイムログを表示するには、**ワーカー**／**お客様のワーカー**／**ログ**&#x200B;に移動します。 ワーカーは、デバッグの目的でフェイルオーバーイベントをログに記録します。
 
-**トラブルシューティング**
+## トラブルシューティング
 
 | 問題 | 考えられる原因 | 解決策 |
 |-------|----------------|----------|
@@ -280,11 +280,11 @@ const FAILOVER_ON_5XX = false;
 | リクエストが無効なホストで失敗する | `EDGE_OPTIMIZE_TARGET_HOST` にプロトコル（例：`https://`）が含まれています。 | プロトコルなしのドメイン名のみを使用します（例：`https://example.com` ではなく `example.com`）。 |
 | フェイルオーバー中の 530 エラー | Cloudflare がオリジンに接続できないか、フェイルオーバーリクエストに無効なヘッダーがあります。 | フェイルオーバー機能で Edge での最適化ヘッダーが削除されていることを確認します。 オリジンがアクセス可能で、DNS が正しく設定されていることを検証します。 |
 
-**ファイアウォールルールを通じて Edge での最適化を許可（オプション）**
+## ファイアウォールルールによるEdgeでの最適化を許可する（オプション）
 
 {{waf-allowlist-setup}}
 
-**設定の検証**
+## 設定の検証
 
 設定が完了したら、ボットトラフィックが Edge での最適化にルーティングされていることと、人間のトラフィックに影響がないことを確認します。
 

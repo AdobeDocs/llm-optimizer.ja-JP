@@ -18,10 +18,10 @@ role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
 topic_v2:
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
-source-git-commit: 2705cf26faea9c09817bbdcec4b4c531552df7ba
+source-git-commit: e36ee407933e2d3d56cadf1c9517f23f24d41d91
 workflow-type: tm+mt
 source-wordcount: 350
-ht-degree: 96%
+ht-degree: 92%
 
 ---
 
@@ -38,7 +38,7 @@ Fastly VCL ルールを設定する前に、次のことを確認してくださ
 * LLM Optimizer UI から取得された Edge Optimize API キー。 手順について詳しくは、[API キーの取得](/help/dashboards/optimize-at-edge/retrieve-api-keys.md#production-api-key)を参照してください。
 * （オプション）ステージングルーティングをテストするには、[Staging API キー](/help/dashboards/optimize-at-edge/retrieve-api-keys.md#staging-api-key-optional)を参照してください。
 
-**設定**
+## 設定
 
 Fastly サービスに次の 3 つの VCL スニペットを追加します。 これらのスニペットは、エージェント型リクエストを Edge での最適化にルーティングする処理、キャッシュキーの分離、デフォルトのオリジンへのフェイルオーバーを処理します。
 
@@ -46,7 +46,7 @@ Fastly サービスに次の 3 つの VCL スニペットを追加します。 �
 
 ![VCL スニペットを追加](/help/assets/optimize-at-edge/add-vcl-snippets.png)
 
-**vcl_recv スニペット**
+### vcl_recv スニペット
 
 ```
 unset req.http.x-edgeoptimize-url;
@@ -66,7 +66,7 @@ if (!req.http.x-edgeoptimize-request
 }
 ```
 
-**vcl_hash スニペット**
+### vcl_hash スニペット
 
 ```
 if (req.http.x-edgeoptimize-config) {
@@ -75,7 +75,7 @@ if (req.http.x-edgeoptimize-config) {
 }
 ```
 
-**vcl_deliver スニペット**
+### vcl_deliver スニペット
 
 ```
 if (req.http.x-edgeoptimize-config && resp.status >= 400) {
@@ -92,7 +92,7 @@ if (!req.http.x-edgeoptimize-config && req.http.x-edgeoptimize-request == "failo
 }
 ```
 
-**フェイルオーバー**
+### フェイルオーバー
 
 `vcl_deliver` スニペットは、フェイルオーバーを自動的に処理します。 Edge での最適化が `4XX` または `5XX` エラーを返した場合、リクエストは再開され、デフォルトのオリジンにルーティングされるので、エンドユーザーは応答を引き続き受信できます。 フェイルオーバー応答には、`x-edgeoptimize-fo: 1` ヘッダーが含まれます。
 
@@ -102,11 +102,11 @@ if (!req.http.x-edgeoptimize-config && req.http.x-edgeoptimize-request == "failo
 | Edge での最適化で `4XX` または `5XX` が返される | リクエストが再開され、デフォルトのオリジンから提供されます。 |
 | フェイルオーバー応答 | ヘッダー `x-edgeoptimize-fo: 1` を含みます。 |
 
-**ファイアウォールルールを通じて Edge での最適化を許可（オプション）**
+## ファイアウォールルールによるEdgeでの最適化を許可する（オプション）
 
 {{waf-allowlist-setup}}
 
-**設定の検証**
+## 設定の検証
 
 設定が完了したら、ボットトラフィックが Edge での最適化にルーティングされていることと、人間のトラフィックに影響がないことを確認します。
 

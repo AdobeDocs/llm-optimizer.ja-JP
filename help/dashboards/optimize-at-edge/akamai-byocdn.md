@@ -18,10 +18,10 @@ role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
 topic_v2:
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
-source-git-commit: 9d2324e23e07f01e16c4fc16c96213d03214918f
+source-git-commit: 4f0c6d398e2aab337485b7e26cf6f2aba56375fd
 workflow-type: tm+mt
 source-wordcount: 795
-ht-degree: 76%
+ht-degree: 70%
 
 ---
 
@@ -42,7 +42,7 @@ Akamai プロパティマネージャールールを設定する前に、次の�
 
 次の Akamai Property Manager ルールでは、エージェント型 HTML ページトラフィックを Edge での最適化にルーティングします。 設定には、次の手順が含まれます。
 
-**1. ルーティング条件を設定（ユーザーエージェントと HTML トラフィックの一致）**
+## &#x200B;1. ルーティング条件の設定（User-AgentとHTMLのトラフィックマッチング）
 
 次のユーザーエージェントのルーティングを設定します。
 
@@ -64,7 +64,7 @@ Akamai プロパティマネージャールールを設定する前に、次の�
 
 ![ルーティング条件を設定](/help/assets/optimize-at-edge/akamai-step1-routing.png)
 
-**2. オリジンと SSL の動作を設定**
+## &#x200B;2. オリジンとSSL動作の設定
 
 オリジンを `live.edgeoptimize.net` として設定し、SAN を `*.edgeoptimize.net` に一致させます。
 
@@ -74,17 +74,17 @@ Akamai プロパティマネージャールールを設定する前に、次の�
 
 ![オリジンと SSL の動作を設定](/help/assets/optimize-at-edge/akamai-step2-origin.png)
 
-**3. キャッシュキー変数を設定**
+## &#x200B;3. キャッシュキー変数の設定
 
 キャッシュキー変数 `PMUSER_EDGE_OPTIMIZE_CACHE_KEY` を `LLMCLIENT=TRUE;X_FORWARDED_HOST={{builtin.AK_HOST}}` に設定します。
 
 ![キャッシュキー変数を設定](/help/assets/optimize-at-edge/akamai-step3-cachekey.png)
 
-**4. キャッシュルール**
+## &#x200B;4. キャッシングルール
 
 ![キャッシュルール](/help/assets/optimize-at-edge/akamai-step4-rules.png)
 
-**5. 受信リクエストヘッダーを変更**
+## &#x200B;5. 受信リクエストヘッダーの変更
 
 次の受信リクエストヘッダーを設定します。
 `x-edgeoptimize-api-key` を LLMO から取得した API キーに
@@ -93,7 +93,7 @@ Akamai プロパティマネージャールールを設定する前に、次の�
 
 ![受信リクエストヘッダーを変更](/help/assets/optimize-at-edge/akamai-step5-request.png)
 
-**ファイアウォールルールを通じて Edge での最適化を許可（オプション）**
+## ファイアウォールルールによるEdgeでの最適化を許可する（オプション）
 
 {{waf-allowlist-setup}}
 
@@ -103,25 +103,25 @@ Akamai プロパティマネージャールールを設定する前に、次の�
 >
 >また、Akamai Bot Manager で `*AdobeEdgeOptimize/1.0*` ユーザーエージェントと `x-edgeoptimize-fetcher-key` ヘッダーを許可リストに追加します。
 
-**6. 受信応答ヘッダーを変更**
+## &#x200B;6. 受信レスポンスヘッダーの変更
 
 ![受信応答ヘッダーを変更](/help/assets/optimize-at-edge/akamai-step6-response.png)
 
-**7. キャッシュ ID の変更**
+## &#x200B;7. キャッシュ IDの変更
 
 ![キャッシュ ID の変更](/help/assets/optimize-at-edge/akamai-step7-cacheid.png)
 
-**8. 送信リクエストヘッダーを変更**
+## &#x200B;8. 送信リクエストヘッダーの変更
 
 `x-forwarded-host` ヘッダーを `{{builtin.AK_HOST}}` に設定します。
 
 ![送信リクエストヘッダーを変更](/help/assets/optimize-at-edge/akamai-step8-outgoing-request.png)
 
-**9. サイトフェイルオーバー**
+## &#x200B;9. サイト フェールオーバー
 
 サイト フェールオーバー設定には、メインのOptimize at Edge ルーティング ルール内のフェールオーバー動作と、フォールバックが発生したときにレスポンス ヘッダーを追加する兄弟ルールの2つの部分があります。
 
-**9a. サイト フェールオーバー動作の設定**
+### 9a. サイト フェールオーバー動作の設定
 
 Edgeのメインの最適化ルーティングルール内で、**Site Failover Behavior**&#x200B;という名前の子ルールを作成します。 **Match Any**&#x200B;に設定し、次の条件を追加します。
 
@@ -132,7 +132,7 @@ Edgeのメインの最適化ルーティングルール内で、**Site Failover 
 
 ![&#x200B; サイト フェールオーバー動作の設定](/help/assets/optimize-at-edge/akamai-step9-failover-settings.png)
 
-**9b. フェールオーバー応答ヘッダー規則**&#x200B;を設定します
+### 9b. フェールオーバー応答ヘッダールールの設定
 
 >[!IMPORTANT]
 >
@@ -158,7 +158,7 @@ Edgeのメインの最適化ルーティングルール内で、**Site Failover 
 | Edge での最適化で `2XX` または `3XX` が返される | 最適化された応答が提供されます。 `x-edgeoptimize-request-id`が存在します。 |
 | Edge Optimizeが`4XX`～`5XX`を返すか、オリジンがタイムアウトします | リクエストは、元のホスト名に対して再作成されます。 応答に`x-edgeoptimize-fo: true`が含まれています。 |
 
-**設定の検証**
+## 設定の検証
 
 設定が完了したら、ボットトラフィックが Edge での最適化にルーティングされていることと、人間のトラフィックに影響がないことを確認します。
 

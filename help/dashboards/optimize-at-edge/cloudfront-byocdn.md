@@ -19,10 +19,10 @@ role_v2:
 topic_v2:
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
-source-git-commit: 2705cf26faea9c09817bbdcec4b4c531552df7ba
+source-git-commit: e36ee407933e2d3d56cadf1c9517f23f24d41d91
 workflow-type: tm+mt
-source-wordcount: 2360
-ht-degree: 91%
+source-wordcount: 2343
+ht-degree: 85%
 
 ---
 
@@ -40,7 +40,7 @@ CloudFront 設定を指定する前に、次を確認します。
 * LLM Optimizer UI から取得された Edge Optimize API キー。 手順について詳しくは、[API キーの取得](/help/dashboards/optimize-at-edge/retrieve-api-keys.md#production-api-key)を参照してください。
 * （オプション）ステージングルーティングをテストするには、[Staging API キー](/help/dashboards/optimize-at-edge/retrieve-api-keys.md#staging-api-key-optional)を参照してください。
 
-**手順 1：Edge での最適化オリジンを作成**
+## 手順1:Edge Optimize Originの作成
 
 **ナビゲーション：** AWS コンソール／CloudFront／配布／[配布]／オリジンタブ
 
@@ -66,7 +66,7 @@ CloudFront 設定を指定する前に、次を確認します。
 
 ![Cloudfront オリジンの作成](/help/assets/optimize-at-edge/cloudfront-origin-creation.png)
 
-**手順 2：ビューアリクエスト関数を作成**
+## 手順2：ビューアリクエスト関数の作成
 
 **ナビゲーション：** AWS コンソール／CloudFront／関数
 
@@ -88,7 +88,7 @@ CloudFront 設定を指定する前に、次を確認します。
 ![Cloudfront 関数の作成](/help/assets/optimize-at-edge/cloudfront-function-creation.png)
 
 
-**手順 3：キャッシュポリシーを設定**
+## 手順3：キャッシュポリシーの設定
 
 **ナビゲーション：** AWS コンソール／CloudFront／配分／[配分]／動作
 
@@ -98,7 +98,7 @@ CloudFront 設定を指定する前に、次を確認します。
 * **シナリオ B （カスタムポリシー）：**&#x200B;**キャッシュポリシー**&#x200B;が選択されている状態が表示され、そのポリシー名は、自分または自分のチームが作成した名前（AWS が提供したポリシーではない）です。
 * **シナリオ C （管理ポリシー）：**&#x200B;**キャッシュポリシー**&#x200B;が選択されている状態が表示され、その AWS が提供した名前は `CachingOptimized`、`CachingDisabled` または `CachingOptimizedForUncompressedObjects` などですが、これらは編集できません。
 
-**シナリオ A：レガシーキャッシュ設定**
+### シナリオ A：従来のキャッシュ設定
 
 動作でレガシーキャッシュ設定を使用している場合は、次の手順に従います。
 
@@ -119,7 +119,7 @@ CloudFront 設定を指定する前に、次を確認します。
 
 4. 「**変更を保存**」をクリックします。
 
-**シナリオ B：カスタムキャッシュポリシーを持つレガシー以外**
+### シナリオ B：カスタムキャッシュポリシーを使用したレガシー以外
 
 動作で既にカスタムキャッシュポリシー（AWS が管理するポリシーではなく、作成したポリシー）を使用している場合は、次の手順に従います。
 
@@ -129,7 +129,7 @@ CloudFront 設定を指定する前に、次を確認します。
 
 2. 「**編集**」をクリックします。
 
-3. **最小 TTL** を `0` に設定することをお勧めします。 ただし、現在の最小 TTL が既に非常に短い場合、変更する必要はありません。
+3. **最小TTL**&#x200B;を`0`に設定することをお勧めします。ただし、現在の最小TTLがすでに非常に短い場合は、変更する必要がない可能性があります。
    ![キャッシュポリシー TTL 設定](/help/assets/optimize-at-edge/cloudfront-cache-policy-ttl.png)
 
 4. **キャッシュキー設定**／**ヘッダー**&#x200B;の下に、既存のインクルージョンと共に、`x-edgeoptimize-config` と `x-edgeoptimize-url` を追加します。
@@ -137,7 +137,7 @@ CloudFront 設定を指定する前に、次を確認します。
 
 5. 「**変更を保存**」をクリックします。
 
-**シナリオ C：管理対象（AWS） キャッシュポリシーを持つレガシー以外**
+### シナリオ C：管理対象（AWS）キャッシュポリシーを使用したレガシー以外
 
 動作で AWS が管理するキャッシュポリシー（例：`CachingOptimized`）を使用している場合、編集できません。 既存の管理するポリシー設定をレプリケートし、上部に Edge での最適化ヘッダーを追加する新しいカスタムキャッシュポリシーを作成する必要があります。
 
@@ -185,12 +185,12 @@ CloudFront 設定を指定する前に、次を確認します。
    3. ドロップダウンから `edgeoptimize-cache` を選択します。
    4. 「**変更を保存**」をクリックします。
 
-**手順 4：Lambda@Edge 関数を作成（オリジンリクエストと応答）**
+## ステップ 4: Lambda@Edge関数を作成する（オリジンのリクエストとレスポンス）
 
 >[!IMPORTANT]
 >Lambda@Edge 関数は、**`us-east-1`（バージニア北部）地域**&#x200B;で作成する必要があります。 これは AWS の要件です。 関数を `us-east-1` で作成したとしても、AWS は世界中のすべての CloudFront Edge の場所に自動的にレプリケートするので、ビューアに最も近い Edge の場所で実行されます。 先に進む前に、AWS コンソールで `us-east-1` 地域にいることを確認してください。
 
-**Lambda 関数の作成**
+### Lambda関数の作成
 
 **ナビゲーション：** AWS コンソール／Lambda
 
@@ -210,7 +210,7 @@ CloudFront 設定を指定する前に、次を確認します。
 
 7. **設定**／**権限**&#x200B;の下に表示される&#x200B;**実行役割名**&#x200B;をメモします（例：`edgeoptimize-origin-role-xxxxx`）。 これは、次の手順で必要になります。
 
-**実行役割の信頼ポリシーの更新**
+### 実行ロールの信頼ポリシーの更新
 
 自動作成された役割は、`lambda.amazonaws.com` のみを信頼します。 Lambda@Edge の場合は、`edgelambda.amazonaws.com` も追加する必要があります。
 
@@ -225,7 +225,7 @@ CloudFront 設定を指定する前に、次を確認します。
 >[!WARNING]
 >Lambda@Edge には、`edgelambda.amazonaws.com` サービスプリンシパルが&#x200B;**必須**&#x200B;です。 これがないと、CloudFront は Edge の場所で関数を呼び出すことができません。
 
-**CloudWatch ログの権限ポリシーの修正**
+### CloudWatch Logs権限ポリシーの修正
 
 通常の Lambda 用に設定された `AWSLambdaBasicExecutionRole` ポリシーが含まれますが、Lambda@Edge に対して地域とロググループ名が間違っています。 これを更新する必要があります。
 
@@ -242,7 +242,7 @@ CloudFront 設定を指定する前に、次を確認します。
 >[!WARNING]
 >ARN の地域は `*` にする必要があります - Lambda@Edge はビューアに最も近い Edge の場所で実行されるので、ログは必ずしも `us-east-1` ではなく、Edge の場所の地域（例：`ap-south-1`、`eu-west-1`）の CloudWatch に書き込まれます。 ロググループは、地域名を接頭辞とした名前（`/aws/lambda/us-east-1.FUNCTION_NAME`）を使用します。ここで、`us-east-1` は常にその関数のホーム地域です。
 
-**CloudWatch ログリンクを修正**
+### CloudWatch ログリンクの修正
 
 デフォルトでは、Lambda コンソールの&#x200B;**View CloudWatch logs** ショートカットは、`us-east-1`の`/aws/lambda/FUNCTION_NAME`にリンクします。これは、Lambda@Edgeに対して間違ったロググループです。 リンクが正しいパスを指すように、カスタムロググループを設定します。
 
@@ -263,7 +263,7 @@ CloudFront 設定を指定する前に、次を確認します。
 >[!NOTE]
 >この修正を行った後でも、**View CloudWatch logs** リンクは正しいロググループ名を開きますが、間違った地域に存在する場合はデータが表示されない場合があります。 Lambda@Edge ログは、`us-east-1`ではなく、リクエストを配信したエッジ領域（例：`eu-west-1`、`ap-south-1`）に書き込まれます。 引き続き、CloudWatchの正しいリージョンに切り替えて、ログを確認する必要があります。
 
-**バージョンの公開**
+### バージョンの公開
 
 1. 関数ページで、**アクション**（右上）／**新しいバージョンを公開**&#x200B;をクリックします。
 
@@ -275,7 +275,7 @@ CloudFront 設定を指定する前に、次を確認します。
 4. **関数 ARN** をコピーまたはメモします。これは、次の手順で必要になります。
    ![Lambda ARN](/help/assets/optimize-at-edge/cloudfront-lambda-arn.png)
 
-**手順 5：関数とキャッシュポリシーを動作に関連付け**
+## 手順5：関数とキャッシュポリシーを動作に関連付ける
 
 **ナビゲーション：** AWS コンソール／CloudFront／配分／[配分]／動作
 
@@ -294,11 +294,11 @@ CloudFront 設定を指定する前に、次を確認します。
 
 4. 「**変更を保存**」をクリックします。
 
-**ファイアウォールルールを通じて Edge での最適化を許可（オプション）**
+## ファイアウォールルールによるEdgeでの最適化を許可する（オプション）
 
 {{waf-allowlist-setup}}
 
-**手順 6：設定をテスト**
+## 手順6：設定のテスト
 
 **1. ボットトラフィックをテスト（最適化する必要があります）**
 
@@ -372,7 +372,7 @@ curl -svo /dev/null https://www.example.com/page.html \
 
 ロググループが存在しない場合は、手順 4 で IAM 権限が正しく更新されたことを確認します。 また、近くにある他の AWS 地域も確認します。リクエストを提供した Edge の場所は、想定していたものと異なる場合があります。
 
-**トラブルシューティング**
+## トラブルシューティング
 
 | 問題 | 考えられる原因 | 解決策 |
 |-------|----------------|----------|
@@ -382,16 +382,16 @@ curl -svo /dev/null https://www.example.com/page.html \
 | キャッシュが `cache-control: no-store` を適用していない | 最小 TTL が高すぎる場合がある | キャッシュポリシーで最小 TTL を `0` に設定します（手順 3）。 最小 TTL が既に非常に短い場合は、これが問題ではないことがあります。 |
 | 設定後に通常の（エージェント型以外の）トラフィックが破損する | キャッシュポリシーの設定ミス | 新しいキャッシュポリシーを作成した場合（シナリオC）、元の管理するポリシーからすべての設定をレプリケートしたことを確認します。 |
 
-**Edge での最適化の無効化と再有効化**
+## EdgeでのOptimizeの無効化と再有効化
 
 Lambda@Edge 関数（`edgeoptimize-origin`）は、CloudFront 動作のオリジンリクエストおよびオリジン応答イベントに関連付けられています。 Lambda@Edge は、その動作を通過するすべてのリクエスト（人間とエージェントの両方）に対してインラインで実行されるので、Lambda@Edge の停止は、エージェント型リクエストだけでなく、すべてのライブトラフィックに影響を与えます。 Lambda@Edge の停止を検出した場合は、すぐに関数の関連付けを削除して、デフォルトのオリジンへの通常のトラフィックフローを復元します。
 
-**Lambda@Edge の停止を検出する方法**
+### Lambda@Edgeの障害を検出する方法
 
 * **AWS サービスヘルスダッシュボード** - [AWS サービスヘルスダッシュボード](https://health.aws.amazon.com/health/status)で、**Amazon CloudFront** または **AWS Lambda** に影響を与えているアクティブなインシデントがないか確認します。 ここで報告されたグローバルまたは地域的な停止は、問題が設定ではなく AWS インフラストラクチャ側にあることを最も迅速に確認する方法です。
 * **Lambda@Edge エラー** - **AWS コンソール／CloudFront／監視／[配分]**&#x200B;に移動します。 「**Lambda@Edge エラー**」タブを開き、**実行エラー**&#x200B;グラフで実行エラーを確認します。 エラー数が高い場合は、Lambda@Edge がダウンしている可能性があります。
 
-**Lambda@Edge 関数のデタッチ**
+### Lambda@Edge関数のデタッチ
 
 **ナビゲーション：** AWS コンソール／CloudFront／配分／[配分]／動作
 
@@ -415,7 +415,7 @@ Lambda@Edge 関数（`edgeoptimize-origin`）は、CloudFront 動作のオリジ
 
 デプロイ後、すべてのトラフィックがデフォルトのオリジンに直接ルーティングされます。 設定は削除されません。Lambda 関数とその関連付けはいつでも復元できます。
 
-**Lambda@Edge 関数の再アタッチ**
+### Lambda@Edge関数を再アタッチする
 
 **ナビゲーション：** AWS コンソール／CloudFront／配分／[配分]／動作
 
