@@ -2,9 +2,12 @@
 title: Edgeでの最適化 – Apache HTTP Server
 description: LLM OptimizerのEdgeでOptimize用にApache HTTP Server （セルフホスト型リバースプロキシ） BYOCDNを設定する方法について説明します。
 feature: Opportunities
-product_v2: id: d830747e-f8f3-4fce-8eff-d53b333b1639
-feature_v2: id: d1956731-2adb-4bb7-8301-2b239254ac72
-subfeature_v2: id: d23587d6-14d6-4e3f-9ee1-cc18623832e1
+product_v2:
+  - id: d830747e-f8f3-4fce-8eff-d53b333b1639
+feature_v2:
+  - id: d1956731-2adb-4bb7-8301-2b239254ac72
+subfeature_v2:
+  - id: d23587d6-14d6-4e3f-9ee1-cc18623832e1
 source-git-commit: d7e723161836027dcdde931378f5d0f776a1ecfc
 workflow-type: tm+mt
 source-wordcount: 585
@@ -32,7 +35,7 @@ Apache ルーティングルールを設定する前に、次のことを確認�
 
 **1. 設定ファイルをダウンロード**
 
-[Optimize at Edge code samples リポジトリ ](https://github.com/adobe/llmo-code-samples/tree/main/optimize-at-edge/apache)から3つのEdge Optimize インクルードファイルをダウンロードし、Apache サーバー上のディレクトリに配置します（例：`conf/oae/`）。
+[Optimize at Edge code samples リポジトリ &#x200B;](https://github.com/adobe/llmo-code-samples/tree/main/optimize-at-edge/apache)から3つのEdge Optimize インクルードファイルをダウンロードし、Apache サーバー上のディレクトリに配置します（例：`conf/oae/`）。
 
 | ファイル | 目的 |
 |------|---------|
