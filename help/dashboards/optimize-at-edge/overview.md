@@ -4,30 +4,15 @@ description: オーサリングの変更を必要とせずに、CDN Edge で LLM
 feature: Opportunities
 autotag-review: '2026-07-15T18:10:00.249Z'
 TQID: 'https://experienceleague.adobe.com/nRq5punuSnNb4XXIJzkO1NGF66tsyN1rdt-O9dd8tmU'
-product_v2:
-  - id: d830747e-f8f3-4fce-8eff-d53b333b1639
-feature_v2:
-  - id: d1956731-2adb-4bb7-8301-2b239254ac72
-  - id: e1b649f0-0a61-46e4-9082-64d5cb2576c6
-  - id: ef4e63f5-cb4d-462d-bf9a-1f617edf2a3a
-subfeature_v2:
-  - id: bbfc1b77-44c5-4fe8-b65f-ec160fe0d021
-  - id: a6256a78-8814-462c-9627-86699b39cee1
-  - id: e0ec491f-fe51-42b6-801c-1c0dfcc0e64f
-  - id: fe92ae96-fc87-4fea-96a0-adc06310d4f4
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
-  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
-topic_v2:
-  - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
-  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
-  - id: e9001ce2-5245-4a8e-8601-dd958009072f
-  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
-source-git-commit: 2705cf26faea9c09817bbdcec4b4c531552df7ba
+product_v2: id: d830747e-f8f3-4fce-8eff-d53b333b1639
+feature_v2: id: d1956731-2adb-4bb7-8301-2b239254ac72id: e1b649f0-0a61-46e4-9082-64d5cb2576c6id: ef4e63f5-cb4d-462d-bf9a-1f617edf2a3a
+subfeature_v2: id: bbfc1b77-44c5-4fe8-b65f-ec160fe0d021id: a6256a78-8814-462c-9627-86699b39cee1id: e0ec491f-fe51-42b6-801c-1c0dfcc0e64fid: fe92ae96-fc87-4fea-96a0-adc06310d4f4
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: f8a45b24-4be7-4f1b-909b-60d06b483a20id: b69b2659-1057-424e-8fc5-ed9e016dc554
+topic_v2: id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1id: e1e0219c-f879-479f-8427-888ed2a6e9c2id: e9001ce2-5245-4a8e-8601-dd958009072fid: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+source-git-commit: 7df9f2722df2f532efe7f05e84c49e9f5a63b58b
 workflow-type: tm+mt
-source-wordcount: 3147
-ht-degree: 67%
+source-wordcount: 2941
+ht-degree: 63%
 
 ---
 
@@ -97,6 +82,7 @@ IT／CDN チームの要件：
 | Cloudflare（BYOCDN） | 独自の CDN の導入 | [設定ガイドを表示](/help/dashboards/optimize-at-edge/cloudflare-byocdn.md) |
 | CloudFront（BYOCDN） | 独自の CDN の導入 | [設定ガイドを表示](/help/dashboards/optimize-at-edge/cloudfront-byocdn.md) |
 | Azure正面玄関（BYOCDN） | 独自の CDN の導入 | [設定ガイドを表示](/help/dashboards/optimize-at-edge/azure-front-door-byocdn.md) |
+| Apache HTTP サーバー | 独自の CDN の導入 | [設定ガイドを表示](/help/dashboards/optimize-at-edge/apache-http-server.md) |
 
 >[!NOTE]
 >
@@ -116,13 +102,13 @@ IT／CDN チームの要件：
 | [関連するFAQを追加](/help/dashboards/opportunities/add-relevant-faqs.md) | コンテンツの最適化 | プロンプトセットに沿った構造化されたQ&amp;A コンテンツが存在しない、トラフィックの多いページを特定します。これにより、AI エージェントがページに対するユーザーの質問を一致させることが困難になります。 | ユーザーの意図と既存のページトピックに合わせて、AIが生成したFAQ コンテンツを提案します。 | FAQ コンテンツを HTML に挿入することで、ページがより見つけやすくなり、AI 駆動型の回答の関連性を高めます。 |
 | [複雑なコンテンツを簡略化](/help/dashboards/opportunities/simplify-complex-content.md) | コンテンツの最適化 | AI の理解を妨げる可能性のある複雑なテキストを含むページにフラグを付けます。 | 元の意味を維持しながら、複雑なテキストの AI 生成の簡素化バージョンを提供します。 | ページ内の複雑なセクションを書き換えて、AI の読みやすさを向上させます。 |
 | [目次を追加](/help/dashboards/opportunities/add-table-of-contents.md) | テクニカル GEO | 明確な構造化やナビゲーションの見出しに欠けるページを検出し、AI エージェントがコンテンツを解析してユーザークエリにマッピングするのを困難にします。 | ページのメインセクションを反映するアンカーでリンクされた見出しを含む構造化目次を提案します。 | HTMLに目次を挿入し、ページ構造を改善することで、AI モデルが関連するセクションをより簡単に抽出、マッピング、引用できるようになります。 |
-| [&#x200B; マルチメディア文字起こしサマリーの追加](/help/dashboards/opportunities/add-multimedia-transcript-summaries.md) | コンテンツの最適化 | 機械で読み取れる文字起こしや要約がなくても、動画やその他のメディアに主要な情報が埋め込まれているページを特定できるため、AI エージェントがそのコンテンツを使用しにくくなります。 影響を受けるURLと推奨テキストを表示します。 | メディアやページに合わせてAIが生成した文字起こしサマリーをレコメンドします。 | エージェント型トラフィックが機械読み取り可能なテキスト（例えば、関連するビデオの近く）を受け取るように、トランスクリプトの要約をHTMLに挿入します。 |
+| [ マルチメディア文字起こしサマリーの追加](/help/dashboards/opportunities/add-multimedia-transcript-summaries.md) | コンテンツの最適化 | 機械で読み取れる文字起こしや要約がなくても、動画やその他のメディアに主要な情報が埋め込まれているページを特定できるため、AI エージェントがそのコンテンツを使用しにくくなります。 影響を受けるURLと推奨テキストを表示します。 | メディアやページに合わせてAIが生成した文字起こしサマリーをレコメンドします。 | エージェント型トラフィックが機械読み取り可能なテキスト（例えば、関連するビデオの近く）を受け取るように、トランスクリプトの要約をHTMLに挿入します。 |
 
 ### その他のツール
 
 [AI コンテンツの可視性チェッカー](https://chromewebstore.google.com/detail/ai-content-visibility-che/jbjngahjjdgonbeinjlepfamjdmdcbcc) ブラウザー拡張機能は、LLM が web ページのコンテンツにどの程度にアクセスでき、どの部分が非表示になっているかを示します。 無料のスタンドアロン診断ツールとして設計され、製品ライセンスや設定は必要ありません。
 
-シングルクリックで、任意のサイトの機械による読みやすさを評価できます。 AI エージェントに表示される内容と人間のユーザーに表示される内容を並べて比較表示し、LLM Optimizer を使用して回復できるコンテンツの量を推定できます。 詳しくは、[AI は web サイトを読み取れるか](https://business.adobe.com/jp/blog/introducing-the-llm-optimizer-chrome-extension) ページを参照してください。
+シングルクリックで、任意のサイトの機械による読みやすさを評価できます。 AI エージェントに表示される内容と人間のユーザーに表示される内容を並べて比較表示し、LLM Optimizer を使用して回復できるコンテンツの量を推定できます。 詳しくは、[AI は web サイトを読み取れるか](https://business.adobe.com/blog/introducing-the-llm-optimizer-chrome-extension) ページを参照してください。
 
 ## オポチュニティの詳細
 
@@ -130,8 +116,8 @@ IT／CDN チームの要件：
 
 ### コンテンツの可視性を回復
 
-このオポチュニティでは、クライアントサイドレンダリングにより、AI エージェントに対して重要なコンテンツが非表示になっているページにフラグを付けます。 特定した各ページについて、AI エージェントビューに欠落しているコンテンツが正確に表示され、可視性のギャップがハイライト表示され、変更を直接適用して非表示のコンテンツを回復できます。 Edge での最適化を使用してこのオポチュニティをデプロイする際、事前にレンダリングされ、AI で最適化されたバージョンのページが LLM ユーザーエージェントに提供されるので、LLM ユーザーエージェントは JavaScript を実行せずに完全なコンテキストにアクセスできます。
-これにより、ページが最初に AI エージェントに完全に表示されます。 事前にレンダリングされた HTML の上に追加の拡張機能が適用されます。
+この商談では、クライアントサイドのレンダリングにより、AI エージェントの主要なコンテンツが非表示になっているページにフラグが付けられます。特定されたページごとに、AI エージェントビューに表示されていないコンテンツを正確に把握し、表示のギャップを強調して、変更を直接適用して非表示のコンテンツを復元することができます。このオポチュニティをEdgeでOptimizeを使用してデプロイすると、AIで最適化されたプレレンダリング版のページがLLM ユーザーエージェントに提供され、Javascriptを実行することなく完全なコンテキストにアクセスできるようになります。
+これにより、AI エージェントが最初にページを完全に表示できるようになります。事前にレンダリングされたHTMLの上に、さらに機能強化が適用されます。
 
 >[!IMPORTANT]
 >この事前レンダリング機能は、Edge での最適化でデプロイした際、以下に示すすべての機会に自動的に適用され、ページが AI エージェントに完全に表示されます。
@@ -172,13 +158,13 @@ IT／CDN チームの要件：
 
 この機会は、AI エージェントが読むことができる文字起こしやテキストの要約がなくても、重要な情報が動画再生内にのみ存在するページをターゲットにします。 各ページでは、AIが生成した文字起こしと、メディアからの重要なポイントの短い要約をレコメンドしています。 EdgeのOptimizeを使用すると、これらの要約は機械読み取り可能なテキストとしてHTMLに追加され、担当者はビデオの視聴から得られるのと同じ内容を使用できます。
 
-ダッシュボードのチュートリアル、デプロイメント手順、よくある質問については、[&#x200B; マルチメディア文字起こし概要の追加](/help/dashboards/opportunities/add-multimedia-transcript-summaries.md)を参照してください。
+ダッシュボードのチュートリアル、デプロイメント手順、よくある質問については、[ マルチメディア文字起こし概要の追加](/help/dashboards/opportunities/add-multimedia-transcript-summaries.md)を参照してください。
 
 ## Edge での自動最適化
 
 各オポチュニティについて、Edge での最適化をプレビュー、編集、デプロイ、ライブ表示、ロールバックできます。
 
->[!VIDEO](https://video.tv.adobe.com/v/3477985/?captions=jpn&learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3477983/?learn=on&enablevpops)
 
 ### プレビュー
 
@@ -240,7 +226,7 @@ Q. Edge での最適化にまだオンボードしていない場合はどうな
 
 Q：ソースでコンテンツを更新する際、何が発生しますか？
 
-基になるソースページを変更していない限り、キャッシュからページの最適化されたバージョンが提供されます。 ただし、**コンテンツの可視性を回復**&#x200B;のソースを変更すると、システムが自動的に更新されるので、AI エージェントは常に最新のコンテンツを受信できます。 これは、低いキャッシュの有効期間（TTL）設定を（分単位で）使用し、サイトのコンテンツを更新すると、その期間内に新しい最適化がトリガーされるからです。 **LLM 対応の概要を追加**&#x200B;などのコンテンツの機会では、LLM Optimizer はソースページの変更を監視します。 変更が検出された場合、エージェントが表示するページと人間が表示するページの間でコンテンツがずれるのを防ぐには、最適化を一時停止して、人間によるレビューにフラグを付けます。
+基礎となるソースページが変更されていない限り、最適化されたバージョンのページをキャッシュから提供します。ただし、**コンテンツの可視性を復元**&#x200B;するソースが変更されると、システムが自動的に更新されるため、AI担当者は常に最新のコンテンツを受け取ることができます。これは、サイト上のコンテンツの更新がそのウィンドウ内で新しい最適化をトリガーするように、低キャッシュ時間をライブ（TTL）設定（分単位）に使用するためです。**LLMに適した概要を追加**などのコンテンツに関する商談については、LLM Optimizerがソースページの変更内容を監視します。変更が検出された場合は、最適化を一時停止し、人間によるレビュー用にフラグを付けて、エージェントに表示されるページと人間に表示されるページの間のコンテンツドリフトを防ぎます。
 <!--As there is no universal TTL that fits every site, we can configure this TTL based on your cache invalidation rules to ensure both systems stay in sync.-->
 
 Q. Edge での最適化は、Adobe Edge Delivery Service（EDS）を使用しているサイトのみの対象ですか？
