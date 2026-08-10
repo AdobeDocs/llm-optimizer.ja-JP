@@ -4,20 +4,11 @@ description: LLM Optimizer の Edge での最適化に Akamai BYOCDN を設定�
 feature: Opportunities
 autotag-review: '2026-07-15T17:40:02.356Z'
 TQID: 'https://experienceleague.adobe.com/XlHpXbtxqPl-XQQKWeQc3rbsizCT7U0TF1bQkyv0iM8'
-product_v2:
-  - id: d830747e-f8f3-4fce-8eff-d53b333b1639
-feature_v2:
-  - id: d1956731-2adb-4bb7-8301-2b239254ac72
-  - id: e1b649f0-0a61-46e4-9082-64d5cb2576c6
-  - id: ef4e63f5-cb4d-462d-bf9a-1f617edf2a3a
-  - id: e0828736-236a-487b-a478-5a635455eadc
-subfeature_v2:
-  - id: d23587d6-14d6-4e3f-9ee1-cc18623832e1
-  - id: e06fae5f-830b-4222-a469-b5e148d36465
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-topic_v2:
-  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+product_v2: id: d830747e-f8f3-4fce-8eff-d53b333b1639
+feature_v2: id: d1956731-2adb-4bb7-8301-2b239254ac72id: e1b649f0-0a61-46e4-9082-64d5cb2576c6id: ef4e63f5-cb4d-462d-bf9a-1f617edf2a3aid: e0828736-236a-487b-a478-5a635455eadc
+subfeature_v2: id: d23587d6-14d6-4e3f-9ee1-cc18623832e1id: e06fae5f-830b-4222-a469-b5e148d36465
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2: id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: 4f0c6d398e2aab337485b7e26cf6f2aba56375fd
 workflow-type: tm+mt
 source-wordcount: 795
@@ -130,7 +121,7 @@ Edgeのメインの最適化ルーティングルール内で、**Site Failover 
 
 ![サイトフェイルオーバー](/help/assets/optimize-at-edge/akamai-step9-failover.png)
 
-![&#x200B; サイト フェールオーバー動作の設定](/help/assets/optimize-at-edge/akamai-step9-failover-settings.png)
+![ サイト フェールオーバー動作の設定](/help/assets/optimize-at-edge/akamai-step9-failover-settings.png)
 
 ### 9b. フェールオーバー応答ヘッダールールの設定
 
@@ -149,7 +140,7 @@ Edgeのメインの最適化ルーティングルール内で、**Site Failover 
 >
 >また、**Edge での最適化ルーティング**&#x200B;ルールが、同じリクエストのオリジン、キャッシュ動作、キャッシュ ID を変更する後続の一致ルールにより上書きされないことも確保されます。 別の一致ルールにより、これらの動作がリセットされた場合、Edge での最適化ルーティングまたはキャッシュが期待どおりに機能しないことがあります。
 
-![&#x200B; フェールオーバー応答ヘッダールールを設定](/help/assets/optimize-at-edge/akamai-step9-failover-header.png)
+![ フェールオーバー応答ヘッダールールを設定](/help/assets/optimize-at-edge/akamai-step9-failover-header.png)
 
 サイトフェールオーバーは、Edge Optimizeがエラーを返したりタイムアウトしたりした場合、訪問者がサイトの通常の応答を引き続き受け取るように、元のホスト名のリクエストをAkamaiが再作成します。
 
