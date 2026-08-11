@@ -18,9 +18,9 @@ topic_v2:
   - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: 2705cf26faea9c09817bbdcec4b4c531552df7ba
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: 950
-ht-degree: 92%
+ht-degree: 100%
 
 ---
 
@@ -93,11 +93,11 @@ LLM Optimizer は、Analytics データと AI 可視性インサイトをリン�
 >
 >バックフィルには数時間かかる場合があります。
 
-## ビジネスへの影響を実際に見る
+## ビジネスへの影響を表示
 
-AIによる可視化は、ストーリーの一部にすぎません。 最適化の取り組みが業績を上げているかどうかを把握するには、訪問者がサイトを訪問した後に何が起こるのかを知る必要があります。
+AI での可視性は、ほんの一部にすぎません。最適化の取り組みがビジネス成果につながっているかどうかを把握するには、訪問者がサイトにアクセスした後に何が起きているかを知る必要があります。
 
-このビデオでは、LLM OptimizerとAdobe Analyticsを組み合わせた&#x200B;**ビジネス インパクト** ビューを紹介します。このビューでは、AIが参照したトラフィックがどのようにエンゲージメント、コンバージョン、収益に変換されるのかを示し、AI プレゼンスの真の価値を測定するのに役立ちます。
+この動画では、**ビジネスへの影響**&#x200B;ビューを紹介します。このビューは、LLM Optimizer と Adobe Analytics を組み合わせることで、AI 経由のトラフィックがエンゲージメント、コンバージョン、収益にどのようにつながっているかを可視化し、AI 活用の真の価値を測定できるようにします。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3492506/?captions=jpn&learn=on){transcript=true}
 
@@ -107,7 +107,7 @@ AIによる可視化は、ストーリーの一部にすぎません。 最適�
 
 設定時に、LLM Optimizer が Adobe Analytics のデータ取り込みに使用するレポートスイートとページディメンションを定義します。 ページディメンションは、レポートスイートに応じて、標準 `variables/page` マッピングまたはカスタム `eVar` のいずれかになります。
 
-### LLM トラフィックの特定方法
+### LLM トラフィックの識別方法
 
 LLM で発生したトラフィックは、Adobe Analytics の[リファラータイプ - 対話型 AI ツール](https://experienceleague.adobe.com/ja/docs/analytics/components/dimensions/referrer-type#conversational-ai-tools)を使用して特定されます。
 
@@ -142,7 +142,7 @@ LLM で発生したトラフィックは、Adobe Analytics の[リファラー�
 * 売上高
 * 購入点数
 
-### LLM Optimizer がこのデータを使用する仕組み
+### LLM Optimizer におけるこのデータの使用方法
 
 このデータセットは、LLM Optimizer の次のインサイトを強化します。
 
@@ -157,9 +157,9 @@ Q：Adobe Analytics との統合は、体験版期間中も使用できますか
 
 いいえ。 統合は、LLM Optimizer の有料顧客のみが使用できます。
 
-Q：収集または保存されるデータは何ですか？
+Q：どのようなデータが収集または保存されますか？
 
-上記の[取り込まれたデータ &#x200B;](#data-ingested)の章を参照してください。 LLM Optimizer は、生のヒットレベルのデータではなく、組織により承認された Adobe Analytics API からの集計済み指標を使用して動作します。
+上記の[取り込まれたデータ ](#data-ingested)の章を参照してください。 LLM Optimizer は、生のヒットレベルのデータではなく、組織により承認された Adobe Analytics API からの集計済み指標を使用して動作します。
 
 Q：データはどのように取り込まれますか？
 

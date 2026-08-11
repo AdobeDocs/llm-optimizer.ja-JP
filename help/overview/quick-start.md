@@ -19,9 +19,9 @@ topic_v2:
   - id: d00e9f03-e50b-4162-b143-0c0817c937c2
   - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
 source-git-commit: 2705cf26faea9c09817bbdcec4b4c531552df7ba
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: 1201
-ht-degree: 87%
+ht-degree: 100%
 
 ---
 
@@ -34,7 +34,7 @@ LLM Optimizer を開始するには、オンボーディングプロセスを完
 
 ## ブランド中心のエクスペリエンス {#brand-centric-experience}
 
-デフォルトでは、顧客はオンボーディング主導の設定により、焦点を絞ったブランドファーストのインターフェイスから始まります。 このインターフェイスでは、各組織は1つのアクティブなブランドと、選択できる追加の推奨ブランドから始まります。<!--Existing LLM Optimizer customers will shift to this Brand Centric experience gradually.-->
+デフォルトでは、顧客はオンボーディング駆動型の設定により、焦点を当てたブランドファーストのインターフェイスで開始します。 このインターフェイスでは、各組織は 1 つのアクティブなブランドから開始し、追加の推奨ブランドから選択できます。<!--Existing LLM Optimizer customers will shift to this Brand Centric experience gradually.-->
 
 ## オンボーディングの概要
 
@@ -68,9 +68,9 @@ AEM Cloud のお客様は、体験版をアクティブ化するために、次�
 
 ![LLM Optimizer 体験版](/help/overview/assets/llm-trial.png)
 
-#### Adobe AnalyticsとAdobe Customer Journey Analytics
+#### Adobe Analytics と Adobe Customer Journey Analytics
 
-Adobe AnalyticsとAdobe Customer Journey Analyticsをご利用のお客様の場合は、Experience Cloud ホームページにバナーが表示されます。
+Adobe Analytics と Adobe Customer Journey Analytics のお客様の場合は、Experience Cloud のホームページにバナーが表示されます。
 
 ![Experience Cloud ホームページと「Adobe LLM Optimizer体験版を開始」バナー](/help/overview/assets/experience-cloud-llmo-trial-banner.png)
 
@@ -83,7 +83,7 @@ Adobe AnalyticsとAdobe Customer Journey Analyticsをご利用のお客様の場
 
 >[!NOTE]
 >
-> * **無償体験版：** AEM CloudおよびAdobe Analytics/Customer Journey Analyticsのお客様は、無償体験版のLLM Optimizerを使用できます。
+> * **無料体験版**：AEM Cloud および Adobe Analytics／Customer Journey Analytics のお客様は、LLM Optimizer の無料体験版をご利用いただけます。
 > * **2026年4月1日（PT）以降に体験版をアクティブ化したお客様**&#x200B;は、最大 100 個のプロンプト、1 個のドメインを使用でき、単一のオポチュニティタイプに対して最大 10 個の URL をまたいで最適化をデプロイできます。
 > * **2026年4月1日（PT）より前に体験版をアクティブ化したお客様**&#x200B;は、既存の条件に従って、引き続き最大 200 個のプロンプトへのアクセス権が付与されます。
 >
@@ -146,7 +146,7 @@ LLM Optimizer の使用を開始するには、ブランド名とドメインを
 
 ドメインをオンボードした後、オンボーディング中に自動的に生成されたプロンプトに基づいて、ブランドプレゼンスビューに初期インサイトが表示されます。 独自のカテゴリ、トピック、プロンプトをカスタマイズすると、LLM Optimizer では指定したプロンプトに基づいてブランドプレゼンス分析を自動的にトリガーし、結果は 24 時間以内に使用できるようになります。
 
-**ブランドプレゼンス**&#x200B;に移動し、ブランド ドロップダウンを使用してブランドプレゼンスを表示するブランドを選択します。 また、このエクスペリエンスでは、**すべてのブランド**&#x200B;レベルでブランドの可視性を確認することもできます。
+**ブランドプレゼンス**&#x200B;に移動し、ブランドドロップダウンを使用して、ブランドプレゼンスを表示するブランドを選択します。 また、このエクスペリエンスでは、**すべてのブランド**&#x200B;レベルでブランドの可視性を確認することもできます。
 
 ## 手順 4：CDN ログ転送の情報を指定 {#step-4}
 
@@ -154,7 +154,7 @@ LLM Optimizer の使用を開始するには、ブランド名とドメインを
 
 ### CDN ログ転送
 
-**Brands Management**&#x200B;からCDN ログ転送情報を追加できます。**Brands Management**&#x200B;を開き、**CDN** ラベルをクリックします。
+**ブランド管理**&#x200B;から次のように CDN ログ転送情報を追加できます。**ブランド管理**&#x200B;を開き、**CDN** ラベルをクリックします。
 
 ![ブランド管理 - CDN ログ転送](/help/assets/brand-centric-experience/brands-management-cdn.png)
 

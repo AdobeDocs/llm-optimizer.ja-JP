@@ -21,8 +21,8 @@ topic_v2:
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: e36ee407933e2d3d56cadf1c9517f23f24d41d91
 workflow-type: tm+mt
-source-wordcount: 2343
-ht-degree: 85%
+source-wordcount: 2360
+ht-degree: 95%
 
 ---
 
@@ -58,7 +58,7 @@ CloudFront 設定を指定する前に、次を確認します。
    |--------|-------|
    | `x-edgeoptimize-api-key` | API キー |
    | `x-forwarded-host` | `www.example.com` |
-   | `x-edgeoptimize-fetcher-key` | Fetcher キー（WAFを許可リストに加えるする場合のみ必要） |
+   | `x-edgeoptimize-fetcher-key` | Fetcher キー（WAF の許可リスト登録を行う場合にのみ必須） |
 
    `www.example.com` を実際の web サイトのドメインに、`Your API key` をアドビ担当者から提供された Edge Optimize API キーに置き換えます。
 
@@ -129,7 +129,7 @@ CloudFront 設定を指定する前に、次を確認します。
 
 2. 「**編集**」をクリックします。
 
-3. **最小TTL**&#x200B;を`0`に設定することをお勧めします。ただし、現在の最小TTLがすでに非常に短い場合は、変更する必要がない可能性があります。
+3. **最小 TTL** を `0` に設定することをお勧めします。 ただし、現在の最小 TTL が既に非常に短い場合、変更する必要はありません。
    ![キャッシュポリシー TTL 設定](/help/assets/optimize-at-edge/cloudfront-cache-policy-ttl.png)
 
 4. **キャッシュキー設定**／**ヘッダー**&#x200B;の下に、既存のインクルージョンと共に、`x-edgeoptimize-config` と `x-edgeoptimize-url` を追加します。
@@ -244,24 +244,24 @@ CloudFront 設定を指定する前に、次を確認します。
 
 ### CloudWatch ログリンクの修正
 
-デフォルトでは、Lambda コンソールの&#x200B;**View CloudWatch logs** ショートカットは、`us-east-1`の`/aws/lambda/FUNCTION_NAME`にリンクします。これは、Lambda@Edgeに対して間違ったロググループです。 リンクが正しいパスを指すように、カスタムロググループを設定します。
+デフォルトでは、Lambda コンソールの **CloudWatch ログを表示**&#x200B;ショートカットは `us-east-1` リージョンの `/aws/lambda/FUNCTION_NAME` にリンクされますが、これは Lambda@Edge に対して間違ったロググループです。 リンクが正しいパスを指すように、カスタムロググループを設定します。
 
-**ナビゲーション：** AWS コンソール > Lambda > [お使いの関数] > Configuration > Monitoring and operations tools
+**ナビゲーション：** AWS コンソール > Lambda > [お使いの関数] > 設定 > 監視と操作ツール
 
 1. 「**編集**」をクリックします。
 
-2. **CloudWatch ロググループ**&#x200B;で、**カスタム**&#x200B;を選択します。
+2. **CloudWatch ロググループ**&#x200B;で、「**カスタム**」を選択します。
 
-3. カスタムロググループ名を`/aws/lambda/us-east-1.edgeoptimize-origin`に設定します。
+3. カスタムロググループ名を `/aws/lambda/us-east-1.edgeoptimize-origin` に設定します。
 
-4. **権限**&#x200B;で、**必要な権限を追加** チェックボックス **オフ**&#x200B;のままにします。
+4. **権限**&#x200B;で、「**必要な権限を追加**」チェックボックスを&#x200B;**オフ**&#x200B;のままにします。
 
    ![Lambda カスタムロググループ設定](/help/assets/optimize-at-edge/cloudfront-lambda-custom-log-group.png)
 
 5. 「**保存**」をクリックします。
 
 >[!NOTE]
->この修正を行った後でも、**View CloudWatch logs** リンクは正しいロググループ名を開きますが、間違った地域に存在する場合はデータが表示されない場合があります。 Lambda@Edge ログは、`us-east-1`ではなく、リクエストを配信したエッジ領域（例：`eu-west-1`、`ap-south-1`）に書き込まれます。 引き続き、CloudWatchの正しいリージョンに切り替えて、ログを確認する必要があります。
+>この修正を行った後でも、**CloudWatch ログを表示**&#x200B;リンクは正しいロググループ名を開きますが、間違った地域に存在する場合はデータが表示されないことがあります。 Lambda@Edge ログは、`us-east-1` ではなく、リクエスト（例：`eu-west-1`、`ap-south-1`）を提供した Edge の地域で書き込まれます。 引き続き、CloudWatch の正しい地域に切り替えて、ログを確認する必要があります。
 
 ### バージョンの公開
 
@@ -294,7 +294,7 @@ CloudFront 設定を指定する前に、次を確認します。
 
 4. 「**変更を保存**」をクリックします。
 
-## ファイアウォールルールによるEdgeでの最適化を許可する（オプション）
+## ファイアウォールルールで Edge での最適化を許可する（任意）
 
 {{waf-allowlist-setup}}
 

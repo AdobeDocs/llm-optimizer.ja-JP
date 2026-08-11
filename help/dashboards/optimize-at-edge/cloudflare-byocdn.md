@@ -23,7 +23,7 @@ topic_v2:
 source-git-commit: e36ee407933e2d3d56cadf1c9517f23f24d41d91
 workflow-type: tm+mt
 source-wordcount: 1919
-ht-degree: 93%
+ht-degree: 96%
 
 ---
 
@@ -34,7 +34,7 @@ ht-degree: 93%
 
 **前提条件**
 
-Cloudflare Workerのルーティングルールを設定する前に、次のことを確認してください。
+Cloudflare ワーカールーティングルールを設定する前に、以下を確認します。
 
 * ドメインでワーカーが有効になっている Cloudflare アカウント。
 * Cloudflare のドメイン DNS 設定へのアクセス権。
@@ -127,7 +127,7 @@ Edge での最適化用の Cloudflare Worker を設定する方法には、次�
 
 ### 手順2：ワーカーコードの追加
 
-ワーカーを作成したら、**コードを編集**&#x200B;をクリックし、デフォルトコードを[worker.js](https://github.com/adobe/llmo-code-samples/blob/main/optimize-at-edge/cloudflare/automation/src/worker.js)のコードに置き換えます。 既存のCloudflare Workerがある場合は、コードを完全に置き換えるのではなく、既存のワーカーコードと結合します。
+ワーカーを作成したら、「**コードを編集**」をクリックし、デフォルトのコードを [worker.js](https://github.com/adobe/llmo-code-samples/blob/main/optimize-at-edge/cloudflare/automation/src/worker.js) のコードに置き換えます。 既に Cloudflare Worker がある場合は、既存のワーカーコードを、完全に置き換える代わりに、既存のワーカーコードに結合します。
 
 「**保存してデプロイ**」をクリックし、ワーカーを公開します。
 
@@ -280,7 +280,7 @@ const FAILOVER_ON_5XX = false;
 | リクエストが無効なホストで失敗する | `EDGE_OPTIMIZE_TARGET_HOST` にプロトコル（例：`https://`）が含まれています。 | プロトコルなしのドメイン名のみを使用します（例：`https://example.com` ではなく `example.com`）。 |
 | フェイルオーバー中の 530 エラー | Cloudflare がオリジンに接続できないか、フェイルオーバーリクエストに無効なヘッダーがあります。 | フェイルオーバー機能で Edge での最適化ヘッダーが削除されていることを確認します。 オリジンがアクセス可能で、DNS が正しく設定されていることを検証します。 |
 
-## ファイアウォールルールによるEdgeでの最適化を許可する（オプション）
+## ファイアウォールルールで Edge での最適化を許可する（任意）
 
 {{waf-allowlist-setup}}
 

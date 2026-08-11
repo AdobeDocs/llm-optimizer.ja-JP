@@ -19,9 +19,9 @@ topic_v2:
   - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: 2705cf26faea9c09817bbdcec4b4c531552df7ba
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: 612
-ht-degree: 93%
+ht-degree: 100%
 
 ---
 
@@ -64,7 +64,7 @@ Akamai コントロールパネル（[https://control.akamai.com/](https://contr
 
 ## 手順 3：データパラメーターを選択 {#step-3}
 
-ストリームを作成した後、Akamai コントロールパネルで「**次へ**」をクリックして「**データセット**」タブに進みます。 Akamai 公式ドキュメントの手順に従って、[データパラメーター](https://techdocs.akamai.com/datastream2/docs/choose-data-parameters)を選択します。 LLM Optimizer 設定の次のフィールドが必要になります。
+ストリームを作成したら、Akamai コントロールパネルで「**次へ**」をクリックして、「**データセット**」タブに進みます。Akamai 公式ドキュメントの手順に従って、[データパラメーター](https://techdocs.akamai.com/datastream2/docs/choose-data-parameters)を選択します。 LLM Optimizer 設定の次のフィールドが必要になります。
 
 ![LLMO 設定フィールド](/help/overview/assets/log-forwarding/akamai/akamai-llmo-config-fields.png)
 
@@ -77,7 +77,7 @@ country -> 国／地域
 * **メッセージ交換データ**
 reqHost -> リクエストホスト
 reqPath -> リクエストパス
-queryStr -> クエリ文字列（オプション）
+queryStr -> クエリ文字列（任意）
 reqMethod -> リクエストメソッド
 ua -> ユーザーエージェント
 statusCode -> HTTP ステータスコード
@@ -89,7 +89,7 @@ timeToFirstByte -> Time to first byte
 
 >[!NOTE]
 >
->`queryStr` パラメーターはオプションです。 クエリ文字列にPII情報が含まれている場合は、省略できます。
+>`queryStr` パラメーターはオプションです。クエリ文字列に PII 情報が含まれている場合は、省略できます。
 
 Akamai データセットフィールド（ID を含む）は次のとおりです。
 
@@ -97,7 +97,7 @@ Akamai データセットフィールド（ID を含む）は次のとおりで�
 2012, # country -> 国／地域
 1011, # reqHost -> リクエストホスト
 1013, # reqPath -> リクエストパス
-2009, # queryStr -> クエリ文字列（オプション）
+2009、# queryStr -> クエリ文字列（任意）
 1012, # reqMethod -> リクエストメソッド
 1017, # ua -> ユーザーエージェント
 1008, # statusCode -> HTTP ステータスコード
@@ -117,7 +117,7 @@ Akamai データセットフィールド（ID を含む）は次のとおりで�
 
 4. **フォルダーパス**&#x200B;で、LLM Optimizer 設定ページから&#x200B;**パス**&#x200B;をコピーします。
 
-   ![&#x200B; パス設定](/help/overview/assets/log-forwarding/akamai/akamai-path-config.png)
+   ![ パス設定](/help/overview/assets/log-forwarding/akamai/akamai-path-config.png)
 
 5. **地域**&#x200B;で、LLM Optimizer 設定ページから&#x200B;**地域**&#x200B;をコピーします。
 

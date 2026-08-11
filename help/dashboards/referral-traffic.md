@@ -17,9 +17,9 @@ topic_v2:
   - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
 source-git-commit: 2705cf26faea9c09817bbdcec4b4c531552df7ba
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: 716
-ht-degree: 86%
+ht-degree: 100%
 
 ---
 
@@ -28,12 +28,12 @@ ht-degree: 86%
 
 リファラルトラフィックでは、外部プラットフォーム、AI の引用、リファラルリンクから訪問者がサイトに到達する方法が表示されます。 外部の web サイトやプラットフォームからのトラフィックソース、リファラルパターン、コンバージョン指標を追跡および分析します。 これは、最も関与の多いトラフィックを推進するソース、地域、ページを理解するのに役立ちます。<!--Data is sourced from the CDN logs, a privacy-preserving source that does not capture personal user data.--> また、表示するデータを絞り込むのに役立つカスタマイズ可能なフィルターもあります。
 
-**リファラルトラフィック**&#x200B;に移動し、LLM リファラルトラフィックインサイトを表示するサイトを選択します。
+**リファラルトラフィック**&#x200B;に移動し、LLM リファラルトラフィックの分析情報を表示するサイトを選択します。
 
 ![リファラルトラフィック - サイトセレクター（ブランド中心のエクスペリエンス）](/help/assets/brand-centric-experience/referral-traffic-dashboard.png)
 
 >[!NOTE]
->デフォルトでは、このダッシュボードは **CDN ログ**&#x200B;からトラフィックに関するインサイトを作成します。 有料オファーを利用している場合は、**Adobe Analytics**&#x200B;または&#x200B;**Google Analytics 4** （GA4）に接続して、AI主導の発見とサイトエンゲージメントを測定するデータを追加できます。 このデータは、「**ビジネスへの影響**」タブで確認できます。 Adobe AnalyticsまたはGA4との統合がなければ、タブには入力されないことに注意してください。 詳細については、[Adobe Analytics統合](/help/dashboards/adobe-analytics-integration.md)または[Google Analytics統合](/help/dashboards/google-analytics-integration.md)を参照してください。
+>デフォルトでは、このダッシュボードは **CDN ログ**&#x200B;からトラフィックに関するインサイトを作成します。 組織で有償プランを利用している場合は、**Adobe Analytics** または **Google Analytics 4**（GA4）を接続して、AI による検出状況やサイトエンゲージメントを測定するデータを追加できます。このデータは、「**ビジネスへの影響**」タブで確認できます。 Adobe Analytics または GA4 と連携していない場合、このタブにはデータは表示されません。そのため、詳細については、[Adobe Analytics との連携](/help/dashboards/adobe-analytics-integration.md)または [Google Analytics との連携](/help/dashboards/google-analytics-integration.md)を参照してください。
 
 <!-- ![Referral Page](/help/dashboards/assets/referral-traffic.png)-->
 
@@ -49,7 +49,7 @@ ht-degree: 86%
 
 初回ログイン時に、リファラルトラフィックダッシュボードが空白で表示される場合があります。 データを表示するには、CDN ログ転送を設定する必要があります。
 
-CDN ログ転送情報を追加するには、**Brands Management**&#x200B;に移動し、**CDN** ラベルをクリックします。
+**ブランド管理**&#x200B;に移動し、**CDN** ラベルをクリックすると、CDN ログ転送情報を追加できます。
 
 <!-- **Customer Configuration (classic experience):** Configure [CDN log forwarding](/help/dashboards/customer-configuration.md#cdn-configuration) by selecting **Go To Configuration**.-->
 

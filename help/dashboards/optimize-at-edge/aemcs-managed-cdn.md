@@ -22,8 +22,8 @@ topic_v2:
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: 2705cf26faea9c09817bbdcec4b4c531552df7ba
-workflow-type: tm+mt
-source-wordcount: 836
+workflow-type: ht
+source-wordcount: 815
 ht-degree: 100%
 
 ---
@@ -37,10 +37,8 @@ ht-degree: 100%
 
 この機能にアクセスするには：
 
-- 有料のお客様は、**Adobe LLM Optimizer ユーザー** IMS 製品プロファイルへのアクセス権が必要です。 アクセス権をリクエストするには、組織の管理者にお問い合わせください。
-  ![製品プロファイルにユーザーを追加](/help/assets/optimize-at-edge/cs-fastly-user-product-profiles.png)
-- 体験版のユーザーは、**LLMO 管理者** IMS グループに参加している必要があります。 グループが存在しない場合は、組織の管理者がグループを作成して追加できます。
-  ![LLMO 管理者 IMS グループを作成](/help/assets/optimize-at-edge/cs-fastly-create-ims-group.png)
+- 有料のお客様は、**Adobe LLM Optimizer ユーザー** IMS 製品プロファイルへのアクセス権が必要です。アクセス権が必要な場合は、組織の管理者にお問い合わせください。  ![製品プロファイルにユーザーを追加](/help/assets/optimize-at-edge/cs-fastly-user-product-profiles.png)
+- トライアルユーザーは、**LLMO Admin** IMS グループのメンバーである必要があります。グループが存在しない場合は、組織の管理者がグループを作成して追加できます。  ![LLMO 管理者 IMS グループを作成](/help/assets/optimize-at-edge/cs-fastly-create-ims-group.png)
 
 >[!NOTE]
 > この機能は、Safari または匿名／プライベート参照モードではサポートされていません。

@@ -21,7 +21,7 @@ topic_v2:
 source-git-commit: e36ee407933e2d3d56cadf1c9517f23f24d41d91
 workflow-type: tm+mt
 source-wordcount: 350
-ht-degree: 92%
+ht-degree: 98%
 
 ---
 
@@ -32,7 +32,7 @@ ht-degree: 92%
 
 **前提条件**
 
-Fastly VCL ルールを設定する前に、次のことを確認してください。
+Fastly VCL ルールを設定する前に、次の要件を満たしていることを確認してください。
 
 * ドメインの Fastly へのアクセス権。
 * LLM Optimizer UI から取得された Edge Optimize API キー。 手順について詳しくは、[API キーの取得](/help/dashboards/optimize-at-edge/retrieve-api-keys.md#production-api-key)を参照してください。
@@ -102,7 +102,7 @@ if (!req.http.x-edgeoptimize-config && req.http.x-edgeoptimize-request == "failo
 | Edge での最適化で `4XX` または `5XX` が返される | リクエストが再開され、デフォルトのオリジンから提供されます。 |
 | フェイルオーバー応答 | ヘッダー `x-edgeoptimize-fo: 1` を含みます。 |
 
-## ファイアウォールルールによるEdgeでの最適化を許可する（オプション）
+## ファイアウォールルールで Edge での最適化を許可する（任意）
 
 {{waf-allowlist-setup}}
 
