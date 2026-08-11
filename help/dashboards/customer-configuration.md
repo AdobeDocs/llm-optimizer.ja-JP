@@ -4,11 +4,22 @@ description: 顧客設定を使用して、LLM Optimizer プラットフォー�
 feature: Customer Configuration
 autotag-review: '2026-07-15T17:48:20.742Z'
 TQID: 'https://experienceleague.adobe.com/BvaFF-pMzojy1TNZvCQQRbcT5c5AQ75OqjclmDi14Z0'
-product_v2: id: d830747e-f8f3-4fce-8eff-d53b333b1639
-feature_v2: id: c898dfb2-0885-42fb-b2af-b2d756752646id: d1956731-2adb-4bb7-8301-2b239254ac72id: e1b649f0-0a61-46e4-9082-64d5cb2576c6
-subfeature_v2: id: e69d5a42-0217-4ca5-9396-a9a826a170da
-role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: cdd65e7e-8839-44a2-bc21-0e03623b5dd1id: e1e0219c-f879-479f-8427-888ed2a6e9c2id: eddd9b14-83bd-4ff4-9072-54a4a484abb7id: fc314d1d-7cb9-4a38-8dbd-8f9b6478f40d
+product_v2:
+  - id: d830747e-f8f3-4fce-8eff-d53b333b1639
+feature_v2:
+  - id: c898dfb2-0885-42fb-b2af-b2d756752646
+  - id: d1956731-2adb-4bb7-8301-2b239254ac72
+  - id: e1b649f0-0a61-46e4-9082-64d5cb2576c6
+subfeature_v2:
+  - id: e69d5a42-0217-4ca5-9396-a9a826a170da
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2:
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+  - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+  - id: fc314d1d-7cb9-4a38-8dbd-8f9b6478f40d
 source-git-commit: 72cc645997dbd5ae0442fefad73fe6a4e7ffe050
 workflow-type: tm+mt
 source-wordcount: 3935
@@ -37,9 +48,9 @@ LLM Optimizer で様々なマーケットや競争環境をまたいでブラン
 
 [ブランド中心のエクスペリエンス](/help/overview/quick-start.md#brand-centric-experience)を使用している場合は、**ブランド管理**&#x200B;に移動し、ブランド、ブランドエイリアスを設定して、追跡対象となる競合他社を定義します。 また、**ブランド管理**&#x200B;を使用すると、Google Search Console、Adobe Analytics およびブランドに関連付けられた URL に関連する CDN ログ転送などの統合を設定できます。 この操作を実行するには、対応するタブ（GSC、CDN など）をクリックします。
 
-![ ブランド管理 – アプリ ナビゲーション （ブランド中心のエクスペリエンス） ](/help/assets/brand-centric-experience/llmo-app-shell.png)
+![&#x200B; ブランド管理 – アプリ ナビゲーション （ブランド中心のエクスペリエンス） &#x200B;](/help/assets/brand-centric-experience/llmo-app-shell.png)
 
-![ ブランド管理 – 設定の概要（ブランド中心のエクスペリエンス） ](/help/assets/brand-centric-experience/brands-management-configuration.png)
+![&#x200B; ブランド管理 – 設定の概要（ブランド中心のエクスペリエンス） &#x200B;](/help/assets/brand-centric-experience/brands-management-configuration.png)
 
 >[!IMPORTANT]
 >
