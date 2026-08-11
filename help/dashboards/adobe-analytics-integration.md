@@ -99,7 +99,7 @@ AI での可視性は、ほんの一部にすぎません。最適化の取り�
 
 この動画では、**ビジネスへの影響**&#x200B;ビューを紹介します。このビューは、LLM Optimizer と Adobe Analytics を組み合わせることで、AI 経由のトラフィックがエンゲージメント、コンバージョン、収益にどのようにつながっているかを可視化し、AI 活用の真の価値を測定できるようにします。
 
->[!VIDEO](https://video.tv.adobe.com/v/3492503/?learn=on){transcript=true}
+>[!VIDEO](https://video.tv.adobe.com/v/3492506/?captions=jpn&learn=on){transcript=true}
 
 ## 仕組み {#how-it-works}
 
