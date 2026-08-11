@@ -4,11 +4,18 @@ description: ブランドプレゼンスダッシュボードを使用して、A
 feature: Brand Presence
 autotag-review: '2026-07-15T17:44:10.254Z'
 TQID: 'https://experienceleague.adobe.com/XBRLNcs-1flf9qdYI93NAwqusTP8i8-1ulTfz-iLD-4'
-product_v2: id: d830747e-f8f3-4fce-8eff-d53b333b1639
-feature_v2: id: ab7fdb62-bd53-4cfd-8c2c-169f7e47f20e
-subfeature_v2: id: f718ad75-b1df-4dc1-89bf-0c3167e83b33
-role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554
-topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: cdd65e7e-8839-44a2-bc21-0e03623b5dd1id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+product_v2:
+  - id: d830747e-f8f3-4fce-8eff-d53b333b1639
+feature_v2:
+  - id: ab7fdb62-bd53-4cfd-8c2c-169f7e47f20e
+subfeature_v2:
+  - id: f718ad75-b1df-4dc1-89bf-0c3167e83b33
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+topic_v2:
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+  - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
 source-git-commit: 2705cf26faea9c09817bbdcec4b4c531552df7ba
 workflow-type: ht
 source-wordcount: 1335

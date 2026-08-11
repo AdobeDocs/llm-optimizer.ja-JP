@@ -4,11 +4,19 @@ description: LLM Optimizer が、重要なコンテンツが AI エージェン�
 feature: Opportunities
 autotag-review: '2026-07-15T18:06:12.342Z'
 TQID: 'https://experienceleague.adobe.com/ILtulZHGNjX0Qes77aNZMe-Fs66BLryK3kHcORZ58A8'
-product_v2: id: d830747e-f8f3-4fce-8eff-d53b333b1639
-feature_v2: id: e1b649f0-0a61-46e4-9082-64d5cb2576c6id: ef4e63f5-cb4d-462d-bf9a-1f617edf2a3a
-subfeature_v2: id: bbfc1b77-44c5-4fe8-b65f-ec160fe0d021
-role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-topic_v2: id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+product_v2:
+  - id: d830747e-f8f3-4fce-8eff-d53b333b1639
+feature_v2:
+  - id: e1b649f0-0a61-46e4-9082-64d5cb2576c6
+  - id: ef4e63f5-cb4d-462d-bf9a-1f617edf2a3a
+subfeature_v2:
+  - id: bbfc1b77-44c5-4fe8-b65f-ec160fe0d021
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2:
+  - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
 source-git-commit: 2705cf26faea9c09817bbdcec4b4c531552df7ba
 workflow-type: ht
 source-wordcount: 928

@@ -4,11 +4,17 @@ description: エージェントトラフィックダッシュボードを使用�
 feature: Agentic Traffic
 autotag-review: '2026-07-15T17:38:14.233Z'
 TQID: 'https://experienceleague.adobe.com/4pvsCwqZXkX7xOJWqKge6rkJYaAq27cSjLeTxaA4ysM'
-product_v2: id: d830747e-f8f3-4fce-8eff-d53b333b1639
-feature_v2: id: e0828736-236a-487b-a478-5a635455eadc
-subfeature_v2: id: e06fae5f-830b-4222-a469-b5e148d36465
-role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554
-topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: e1e0219c-f879-479f-8427-888ed2a6e9c2
+product_v2:
+  - id: d830747e-f8f3-4fce-8eff-d53b333b1639
+feature_v2:
+  - id: e0828736-236a-487b-a478-5a635455eadc
+subfeature_v2:
+  - id: e06fae5f-830b-4222-a469-b5e148d36465
+role_v2:
+  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+topic_v2:
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
 source-git-commit: 2705cf26faea9c09817bbdcec4b4c531552df7ba
 workflow-type: ht
 source-wordcount: 1254
