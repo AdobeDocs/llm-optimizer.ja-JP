@@ -4,28 +4,11 @@ description: カスタマイズされたブランドモニタリングと戦略�
 feature: Best Practices, Customer Configuration
 autotag-review: '2026-07-15T17:42:20.391Z'
 TQID: 'https://experienceleague.adobe.com/nnLohajbU-fogbmBfGE5PUzdsoTJ5fjwW-ruVTjOWtM'
-product_v2:
-  - id: d830747e-f8f3-4fce-8eff-d53b333b1639
-feature_v2:
-  - id: c898dfb2-0885-42fb-b2af-b2d756752646
-  - id: d1956731-2adb-4bb7-8301-2b239254ac72
-subfeature_v2:
-  - id: e69d5a42-0217-4ca5-9396-a9a826a170da
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: f8a45b24-4be7-4f1b-909b-60d06b483a20
-  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
-topic_v2:
-  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
-  - id: addf009e-030a-4310-8534-776a3e62ed48
-  - id: b5520579-b31f-4df7-9281-f0d9f91e2edc
-  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
-  - id: c1579802-ddd4-4214-8a91-97b2066abe11
-  - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
-  - id: d00e9f03-e50b-4162-b143-0c0817c937c2
-  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
-  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
-  - id: f8667931-f646-4dd3-af2a-b9d0cb8098ad
+product_v2: id: d830747e-f8f3-4fce-8eff-d53b333b1639
+feature_v2: id: c898dfb2-0885-42fb-b2af-b2d756752646id: d1956731-2adb-4bb7-8301-2b239254ac72
+subfeature_v2: id: e69d5a42-0217-4ca5-9396-a9a826a170da
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: f8a45b24-4be7-4f1b-909b-60d06b483a20id: b69b2659-1057-424e-8fc5-ed9e016dc554
+topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: addf009e-030a-4310-8534-776a3e62ed48id: b5520579-b31f-4df7-9281-f0d9f91e2edcid: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: c1579802-ddd4-4214-8a91-97b2066abe11id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1id: d00e9f03-e50b-4162-b143-0c0817c937c2id: e1e0219c-f879-479f-8427-888ed2a6e9c2id: eddd9b14-83bd-4ff4-9072-54a4a484abb7id: f8667931-f646-4dd3-af2a-b9d0cb8098ad
 source-git-commit: 74484901cba1f054070673f2d706b26b6360aacb
 workflow-type: tm+mt
 source-wordcount: 1482
@@ -39,15 +22,15 @@ ht-degree: 77%
 
 この設定は重要な最初のステップです。 ここで決定する内容によって、ビジネスコンテキストに合わせた情報のカスタマイズ方法が決まります。 今後、カテゴリに変更を行うと、履歴データがリセットされます。
 
-[[!UICONTROL &#x200B; ブランド管理]](/help/dashboards/customer-configuration.md) ダッシュボードは、LLM Optimizer プラットフォーム内でのブランドの監視および分析方法を定義する場所です。
+[[!UICONTROL  ブランド管理]](/help/dashboards/customer-configuration.md) ダッシュボードは、LLM Optimizer プラットフォーム内でのブランドの監視および分析方法を定義する場所です。
 
 また、カテゴリー（事業部門や商品ラインなど）のカスタマイズ、他のブランドの追跡、ブランド言及エイリアスの追加により、プロンプトをまたいでブランドのあらゆるバリエーションを取り込むことができます。 この設定により、プラットフォームはビジネスコンテキストに合わせてインサイトを調整し、正確な可視性、トラフィック、オポチュニティの分析ができるようになります。
 
 デフォルトでは、各組織は1つのアクティブなブランドと、選択できる追加の推奨ブランドから始まります。
 
-![&#x200B; ブランド管理 – アプリ ナビゲーション （ブランド中心のエクスペリエンス） &#x200B;](/help/assets/brand-centric-experience/llmo-app-shell.png)
+![ ブランド管理 – アプリ ナビゲーション （ブランド中心のエクスペリエンス） ](/help/assets/brand-centric-experience/llmo-app-shell.png)
 
-![&#x200B; ブランド管理 – 設定の概要](/help/assets/brand-centric-experience/brands-management-configuration.png)
+![ ブランド管理 – 設定の概要](/help/assets/brand-centric-experience/brands-management-configuration.png)
 
 特定のブランドのトピックとプロンプトを設定するには、**プロンプトライブラリ** ダッシュボードを使用します。
 
@@ -210,7 +193,7 @@ LLM ツールでの AI 検索とプロンプト行動に関する顧客トレン
 
 ## 詳細情報
 
-* [&#x200B; ブランド管理](/help/dashboards/customer-configuration.md)では、カテゴリやその他のブランドを追跡するように設定します。
-* [&#x200B; プロンプトライブラリ &#x200B;](/help/dashboards/customer-configuration.md)では、トピックとプロンプトを設定できます。
+* [ ブランド管理](/help/dashboards/customer-configuration.md)では、カテゴリやその他のブランドを追跡するように設定します。
+* [ プロンプトライブラリ ](/help/dashboards/customer-configuration.md)では、トピックとプロンプトを設定できます。
 * [LLM Optimizer ベストプラクティス](/help/tutorials/best-practices.md)では、LLM 最適化に関するベストプラクティスについて説明します。
 

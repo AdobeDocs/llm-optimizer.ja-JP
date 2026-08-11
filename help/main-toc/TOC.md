@@ -5,7 +5,7 @@ user-guide-description: Adobe LLM Optimizer でブランドを強化します。
 source-git-commit: d7e723161836027dcdde931378f5d0f776a1ecfc
 workflow-type: tm+mt
 source-wordcount: '171'
-ht-degree: 84%
+ht-degree: 100%
 
 ---
 
@@ -29,17 +29,17 @@ ht-degree: 84%
     + [エージェントトラフィックエラー](/help/dashboards/opportunities/agentic-traffic-errors.md)
     + [robots.txt によってブロックされたトラフィック](/help/dashboards/opportunities/traffic-blocked-by-robots.md)
     + [コンテンツの可視性を回復](/help/dashboards/opportunities/recover-content-visibility.md)
-    + [LLMに適した要約の追加](/help/dashboards/opportunities/add-llm-friendly-summaries.md)
+    + [LLM に対応した概要を追加](/help/dashboards/opportunities/add-llm-friendly-summaries.md)
     + [関連する FAQ の追加](/help/dashboards/opportunities/add-relevant-faqs.md)
-    + [マルチメディア文字起こしサマリーの追加](/help/dashboards/opportunities/add-multimedia-transcript-summaries.md)
-    + [目次を追加](/help/dashboards/opportunities/add-table-of-contents.md)
+    + [マルチメディアトランスクリプト要約の追加](/help/dashboards/opportunities/add-multimedia-transcript-summaries.md)
+    + [目次の追加](/help/dashboards/opportunities/add-table-of-contents.md)
     + [複雑なコンテンツの簡素化](/help/dashboards/opportunities/simplify-complex-content.md)
     + [Wikipedia 分析](/help/dashboards/opportunities/wikipedia-analysis.md)
     + [YouTube のセンチメント分析](/help/dashboards/opportunities/youtube-sentiment-analysis.md)
     + [Reddit のセンチメント分析](/help/dashboards/opportunities/reddit-sentiment-analysis.md)
     + [引用されたセンチメント分析](/help/dashboards/opportunities/cited-sentiment-analysis.md)
-    + [商品カタログを拡充](/help/dashboards/opportunities/enrich-product-catalog.md)
-    + [製品詳細ページの充実](/help/dashboards/opportunities/enrich-product-detail-pages.md)
+    + [商品カタログを強化](/help/dashboards/opportunities/enrich-product-catalog.md)
+    + [製品詳細ページのエンリッチメント](/help/dashboards/opportunities/enrich-product-detail-pages.md)
   + [顧客設定](/help/dashboards/customer-configuration.md)
   + [コラボレーション](/help/dashboards/collaboration.md)
 + BYOCDN ログ転送{#log-forwarding}
@@ -60,8 +60,8 @@ ht-degree: 84%
     + [Akamai（BYOCDN）](/help/dashboards/optimize-at-edge/akamai-byocdn.md)
     + [Cloudflare（BYOCDN）](/help/dashboards/optimize-at-edge/cloudflare-byocdn.md)
     + [CloudFront（BYOCDN）](/help/dashboards/optimize-at-edge/cloudfront-byocdn.md)
-    + [Azure正面玄関（BYOCDN）](/help/dashboards/optimize-at-edge/azure-front-door-byocdn.md)
+    + [Azure Front Door（BYOCDN）](/help/dashboards/optimize-at-edge/azure-front-door-byocdn.md)
     + [Apache HTTP サーバー](/help/dashboards/optimize-at-edge/apache-http-server.md)
   + [アクセス制御](/help/dashboards/access-control.md)
   + [Adobe Analytics との統合](/help/dashboards/adobe-analytics-integration.md)
-  + [Google Analyticsとの連携](/help/dashboards/google-analytics-integration.md)
+  + [Google Analytics との統合](/help/dashboards/google-analytics-integration.md)

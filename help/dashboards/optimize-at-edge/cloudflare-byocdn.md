@@ -4,26 +4,15 @@ description: LLM Optimizer の Edge での最適化に Cloudflare BYOCDN を設�
 feature: Opportunities
 autotag-review: '2026-07-15T17:46:02.378Z'
 TQID: 'https://experienceleague.adobe.com/ZgOX0yC8qyb13Y7YNCg3Y1A6Q3TSk9-mUQ8gthzQvLM'
-product_v2:
-  - id: d830747e-f8f3-4fce-8eff-d53b333b1639
-feature_v2:
-  - id: d1956731-2adb-4bb7-8301-2b239254ac72
-  - id: e0828736-236a-487b-a478-5a635455eadc
-  - id: e1b649f0-0a61-46e4-9082-64d5cb2576c6
-  - id: ef4e63f5-cb4d-462d-bf9a-1f617edf2a3a
-subfeature_v2:
-  - id: d23587d6-14d6-4e3f-9ee1-cc18623832e1
-  - id: e06fae5f-830b-4222-a469-b5e148d36465
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-topic_v2:
-  - id: c1579802-ddd4-4214-8a91-97b2066abe11
-  - id: d095671a-1355-40aa-8b5f-06c33c68080b
-  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+product_v2: id: d830747e-f8f3-4fce-8eff-d53b333b1639
+feature_v2: id: d1956731-2adb-4bb7-8301-2b239254ac72id: e0828736-236a-487b-a478-5a635455eadcid: e1b649f0-0a61-46e4-9082-64d5cb2576c6id: ef4e63f5-cb4d-462d-bf9a-1f617edf2a3a
+subfeature_v2: id: d23587d6-14d6-4e3f-9ee1-cc18623832e1id: e06fae5f-830b-4222-a469-b5e148d36465
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2: id: c1579802-ddd4-4214-8a91-97b2066abe11id: d095671a-1355-40aa-8b5f-06c33c68080bid: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: e36ee407933e2d3d56cadf1c9517f23f24d41d91
 workflow-type: tm+mt
 source-wordcount: 1919
-ht-degree: 93%
+ht-degree: 96%
 
 ---
 
@@ -34,7 +23,7 @@ ht-degree: 93%
 
 **前提条件**
 
-Cloudflare Workerのルーティングルールを設定する前に、次のことを確認してください。
+Cloudflare ワーカールーティングルールを設定する前に、以下を確認します。
 
 * ドメインでワーカーが有効になっている Cloudflare アカウント。
 * Cloudflare のドメイン DNS 設定へのアクセス権。
@@ -123,11 +112,11 @@ Edge での最適化用の Cloudflare Worker を設定する方法には、次�
 4. ワーカーに名前を付けます（例：`edge-optimize-router`）。
 5. 「**デプロイ**」をクリックし、デフォルトのコードでワーカーを作成します。
 
-![Cloudflare ワーカーダッシュボード &#x200B;](/help/assets/optimize-at-edge/cloudflare-workers-dashboard.png)
+![Cloudflare ワーカーダッシュボード ](/help/assets/optimize-at-edge/cloudflare-workers-dashboard.png)
 
 ### 手順2：ワーカーコードの追加
 
-ワーカーを作成したら、**コードを編集**&#x200B;をクリックし、デフォルトコードを[worker.js](https://github.com/adobe/llmo-code-samples/blob/main/optimize-at-edge/cloudflare/automation/src/worker.js)のコードに置き換えます。 既存のCloudflare Workerがある場合は、コードを完全に置き換えるのではなく、既存のワーカーコードと結合します。
+ワーカーを作成したら、「**コードを編集**」をクリックし、デフォルトのコードを [worker.js](https://github.com/adobe/llmo-code-samples/blob/main/optimize-at-edge/cloudflare/automation/src/worker.js) のコードに置き換えます。 既に Cloudflare Worker がある場合は、既存のワーカーコードを、完全に置き換える代わりに、既存のワーカーコードに結合します。
 
 「**保存してデプロイ**」をクリックし、ワーカーを公開します。
 
@@ -280,7 +269,7 @@ const FAILOVER_ON_5XX = false;
 | リクエストが無効なホストで失敗する | `EDGE_OPTIMIZE_TARGET_HOST` にプロトコル（例：`https://`）が含まれています。 | プロトコルなしのドメイン名のみを使用します（例：`https://example.com` ではなく `example.com`）。 |
 | フェイルオーバー中の 530 エラー | Cloudflare がオリジンに接続できないか、フェイルオーバーリクエストに無効なヘッダーがあります。 | フェイルオーバー機能で Edge での最適化ヘッダーが削除されていることを確認します。 オリジンがアクセス可能で、DNS が正しく設定されていることを検証します。 |
 
-## ファイアウォールルールによるEdgeでの最適化を許可する（オプション）
+## ファイアウォールルールで Edge での最適化を許可する（任意）
 
 {{waf-allowlist-setup}}
 
