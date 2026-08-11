@@ -1,130 +1,121 @@
 ---
-title: Edgeで最適化 – Azure フロントドア （BYOCDN）
-description: LLM OptimizerのEdgeでAzure Front Door BYOCDN for Optimizeを設定する方法について説明します。
+title: Edge での最適化 - Azure フロントドア（BYOCDN）
+description: LLM Optimizer の Edge での最適化に Azure Front Door BYOCDN を設定する方法について説明します。
 feature: Opportunities
 autotag-review: '2026-07-15T17:40:54.797Z'
 TQID: 'https://experienceleague.adobe.com/fe-kultqzWQdRdcUjzfNs21UpL6m5zcoAmaQyMMv5kk'
-product_v2:
-  - id: d830747e-f8f3-4fce-8eff-d53b333b1639
-feature_v2:
-  - id: d1956731-2adb-4bb7-8301-2b239254ac72
-  - id: e1b649f0-0a61-46e4-9082-64d5cb2576c6
-  - id: ef4e63f5-cb4d-462d-bf9a-1f617edf2a3a
-  - id: e0828736-236a-487b-a478-5a635455eadc
-subfeature_v2:
-  - id: d23587d6-14d6-4e3f-9ee1-cc18623832e1
-  - id: e06fae5f-830b-4222-a469-b5e148d36465
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-topic_v2:
-  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+product_v2: id: d830747e-f8f3-4fce-8eff-d53b333b1639
+feature_v2: id: d1956731-2adb-4bb7-8301-2b239254ac72id: e1b649f0-0a61-46e4-9082-64d5cb2576c6id: ef4e63f5-cb4d-462d-bf9a-1f617edf2a3aid: e0828736-236a-487b-a478-5a635455eadc
+subfeature_v2: id: d23587d6-14d6-4e3f-9ee1-cc18623832e1id: e06fae5f-830b-4222-a469-b5e148d36465
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2: id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: 2705cf26faea9c09817bbdcec4b4c531552df7ba
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: 768
-ht-degree: 24%
+ht-degree: 100%
 
 ---
 
 
-# Azure正面玄関（BYOCDN）
+# Azure Front Door（BYOCDN）
 
 この設定では、エージェントトラフィック（AI ボットおよび LLM ユーザーエージェントからのリクエスト）を Edge での最適化バックエンドサービス（`live.edgeoptimize.net`）にルーティングします。 人間の訪問者と SEO ボットは、通常どおりオリジンから引き続き提供されます。 設定をテストするには、設定が完了したら、応答のヘッダー `x-edgeoptimize-request-id` を探します。
 
-Azure Front Doorでは、エッジでカスタムコードを実行しません。 ルーティングは、**ルールセット**&#x200B;と専用の&#x200B;**オリジングループ**&#x200B;を使用してEdge Optimize用に設定されます。 フェールオーバーは、Azure Front Doorの優先度ベースのオリジングループ ヘルスプローブによって処理されます。
+Azure Front Door では、Edge でカスタムコードを実行しません。ルーティングは、**ルールセット**&#x200B;と、Edge での最適化専用の&#x200B;**オリジングループ**&#x200B;を組み合わせて構成します。フェイルオーバーは、Azure Front Door の優先順位ベースのオリジングループの正常性プローブによって処理されます。
 
 **前提条件**
 
-Azure フロントドアのルーティングルールを設定する前に、次のことを確認してください。
+Azure Front Door のルーティングルールを設定する前に、次のものを用意してください。
 
-* Azure Front Doorのプロフィールにアクセスします。
+* Azure Front Door プロファイルへのアクセス権。
 * LLM Optimizer UI から取得された Edge Optimize API キー。 手順について詳しくは、[API キーの取得](/help/dashboards/optimize-at-edge/retrieve-api-keys.md#production-api-key)を参照してください。
 * （オプション）ステージングルーティングをテストするには、[Staging API キー](/help/dashboards/optimize-at-edge/retrieve-api-keys.md#staging-api-key-optional)を参照してください。
 
-## 手順1:Edge Optimizeのオリジンのグループを作成する
+## 手順 1：Edge Optimize 用の配信元グループを作成する
 
-Azure Front Door プロファイルには、既に、オリジンを指すデフォルトのオリジン グループがあります。 Edge Optimize用に&#x200B;**new** オリジン グループを作成します。
+Azure Front Door プロファイルには、配信元を指すデフォルトの配信元グループがすでに存在します。Edge Optimize 用の&#x200B;**新しい**&#x200B;配信元グループを作成します。
 
 * **名前：** `edge-optimize-origin-group`
-* **発信元（優先ベースのフェールオーバー）:**
-   * **優先度1** — `live.edgeoptimize.net` （オリジン ホスト ヘッダー：`live.edgeoptimize.net`）
-   * **優先度2** — ドメイン エンドポイント （例：`www.example.com`）。 これはフェールオーバー用です。Edge Optimizeが正常でない場合、リクエストはドメインにルーティングされ、Azure フロントドアに再エントリし、デフォルトのオリジンから提供されます。
-* **正常性プローブ：** **有効**
-   * パス：`/health/<your-domain>` （例：`/health/www.example.com`）
-   * プロトコル：HTTPS
-   * 間隔：225秒
-* **セッションの親和性：** **無効**
-* **証明書の件名の検証：** **有効**
+* **配信元（優先順位ベースのフェールオーバー）：**
+  * **優先順位 1** — `live.edgeoptimize.net`（配信元ホストヘッダー：`live.edgeoptimize.net`）
+  * **優先順位 2** — ドメインエンドポイント（例：`www.example.com`）。これはフェールオーバーのためです。Edge Optimize が正常に動作していない場合、リクエストはドメインエンドポイントにルーティングされ、Azure Front Door に再び送られた後、デフォルトの配信元から配信されます。
+* **正常性プローブ：****有効**
+  * パス：`/health/<your-domain>`（例：`/health/www.example.com`）
+  * プロトコル：HTTPS
+  * 間隔：225秒
+* **セッションアフィニティ：****無効**
+* **証明書のサブジェクト名の検証：****有効**
 
-![Edge Optimize origin groupと2つの優先度ベースのオリジンとヘルスプローブ &#x200B;](/help/assets/optimize-at-edge/azure-front-door-origin-group.png)
+![2 つの優先順位ベースの配信元と正常性プローブを備えた Edge Optimize 配信元グループ](/help/assets/optimize-at-edge/azure-front-door-origin-group.png)
 
 >[!NOTE]
 >
->`edge-optimize-origin-group`の発信元グループに、ポータルに&#x200B;**「関連付けられていません」**&#x200B;の警告が表示されます。 これは想定されています。ルートから直接ではなく、ルールセットのルートオーバーライドを使用して参照されます。
+>`edge-optimize-origin-group`配信元グループには、ポータルで&#x200B;**「関連付けられていません」**&#x200B;という警告が表示されます。これは想定どおりの動作です。配信元グループはルールセットのルートオーバーライドを通じて参照されており、ルートから直接参照されているわけではありません。
 
-## 手順2：ルートの設定
+## 手順 2：ルートを構成する
 
-デフォルトのルートは、通常、Azureのフロントドアのプロファイルで作成されます。 ルールセット（ステップ 3）は、エージェント型トラフィックのオリジングループを上書きするため、Edge Optimizeに個別のルートは必要ありません。
+通常、Azure Front Door プロファイルにはデフォルトルートが作成されています。ルールセット（手順 3）でエージェントトラフィックの配信元グループをオーバーライドするため、Edge Optimize 用に個別のルートを作成する必要はありません。
 
-## 手順3：ルールセットの作成
+## 手順 3：ルールセットを作成する
 
-**ルールセット** > **ルールセット**&#x200B;に移動し、`EORouting`という名前を付けます。 この順序で3つのルールを追加します。
+**ルールセット** > **ルールセットの追加**&#x200B;に移動し、`EORouting`という名前を付けます。次の順序で 3 つのルールを追加します。
 
-ヘッダーストリッピングとボットルーティングのルールを示す![EORouting ルールセット &#x200B;](/help/assets/optimize-at-edge/azure-front-door-ruleset-routing.png)
+![ヘッダー削除ルールとボットルーティングルールを示す EORouting ルールセット](/help/assets/optimize-at-edge/azure-front-door-ruleset-routing.png)
 
-### ルール 1: StripIncomingEOHeaders01
+### ルール 1：StripIncomingEOHeaders01
 
-Edge Optimizeの受信ヘッダーを削除して、スプーフィングを防止します。 条件なし – すべてのリクエストに適用されます。 評価を停止：**オフ**。
+なりすましを防ぐため、受信した Edge Optimize ヘッダーを削除します。条件はありません。すべてのリクエストに適用されます。評価を停止：**オフ**。
 
-**アクション** – 各件のリクエストヘッダーを削除：
+**アクション**：次の各リクエストヘッダーを削除します。
 
 * `x-edgeoptimize-url`
 * `x-edgeoptimize-config`
 * `x-edgeoptimize-api-key`
 * `x-edgeoptimize-fetcher-key`
 
-### ルール 2: EOGPTBotRootGET03
+### ルール 2：EOGPTBotRootGET03
 
-HTML ページパスのボットリクエストをEdge Optimizeにルーティングします。 評価を停止：**上**。
+HTML ページパスに対するボットからのリクエストを Edge Optimize にルーティングします。評価を停止：**オン**。
 
-**条件** （すべて一致する必要があります）:
+**条件**（すべて一致する必要があります）：
 
 * リクエストメソッド：**次と等しい** `GET`
-* リクエストパス：**RegEx** `(^$|^.*/$|(^|.*/)[^./]+$|^.*\.html$)` （サイトルート、`/`で終わるパス、拡張機能のないページパス、`.html`個のパスに一致）
-* User-Agent: **いずれかの** `chatgpt-user`、`gptbot`、`oai-searchbot`、`adobeedgeoptimize-ai`、`perplexitybot`、`perplexity-user`、`claudebot`、`claude-user`、`claude-searchbot`が含まれます。 文字列変換を&#x200B;**小文字**&#x200B;に設定します。
-* `x-edgeoptimize-monitor`: **含まれていません** `1`
-* `x-edgeoptimize-request`: **&#x200B;**&#x200B;`failover`、`1`のいずれも含まれていません
+* リクエストパス：**正規表現** `(^$|^.*/$|(^|.*/)[^./]+$|^.*\.html$)`（サイトのルート、`/`で終わるパス、拡張子のないページパス、および `.html` パスに一致します）
+* User-Agent：**次のいずれかを含む** `chatgpt-user`、`gptbot`、`oai-searchbot`、`adobeedgeoptimize-ai`、`perplexitybot`、`perplexity-user`、`claudebot`、`claude-user`、`claude-searchbot`。文字列変換を&#x200B;**小文字に変換**&#x200B;に設定します。
+* `x-edgeoptimize-monitor`：**次を含まない** `1`
+* `x-edgeoptimize-request`：**次のいずれも含まない** `failover`、`1`
 
-**アクション**:
+**アクション**：
 
-* リクエストヘッダーの上書き`x-edgeoptimize-url` = `/{url_path}?{query_string}`
-* リクエストヘッダーの上書き`x-edgeoptimize-config` = `LLMCLIENT=TRUE;`
-* リクエストヘッダーの上書き`x-edgeoptimize-api-key` = `YOUR_API_KEY`
-* リクエストヘッダーの上書き`x-edgeoptimize-monitor` = `1`
-* ルート設定の上書き：発信元グループ → `edge-optimize-origin-group`、転送プロトコル →着信要求の一致、キャッシュ → **無効**
+* リクエストヘッダーを上書き `x-edgeoptimize-url` = `/{url_path}?{query_string}`
+* リクエストヘッダーを上書き `x-edgeoptimize-config` = `LLMCLIENT=TRUE;`
+* リクエストヘッダーを上書き `x-edgeoptimize-api-key` = `YOUR_API_KEY`
+* リクエストヘッダーを上書き `x-edgeoptimize-monitor` = `1`
+* ルート構成の上書き：配信元グループ → `edge-optimize-origin-group`、転送プロトコル → 受信リクエストに一致、キャッシュ → **無効**
 
-### ルール 3: HealthProbeRewrite03
+### ルール 3：HealthProbeRewrite03
 
-Azure Front Door ヘルスプローブのリクエストを書き換えて、`/health/<domain>`ではなく`/`としてオリジンに到達させます。 これにより、Azure Front Doorは、オリジンに専用のヘルスエンドポイントを必要とせずに、Edge Optimizeの可用性を監視できます。 評価を停止：**上**。
+Azure Front Door の正常性プローブリクエストを、`/`ではなく `/health/<domain>` として配信元に届くように書き換えます。これにより、Azure Front Door は、配信元に専用の正常性チェックエンドポイントを用意しなくても、Edge Optimize の可用性を監視できます。評価を停止：**オン**。
 
-![&#x200B; ヘルスプローブの書き換えルール &#x200B;](/help/assets/optimize-at-edge/azure-front-door-ruleset-healthprobe.png)
+![正常性プローブ書き換えルール](/help/assets/optimize-at-edge/azure-front-door-ruleset-healthprobe.png)
 
-**条件** （すべて一致する必要があります）:
+**条件**（すべて一致する必要があります）：
 
-* リクエスト URL パス：**が** `/health/`で始まります
-* `x-fd-healthprobe`: **次を含む** `1`
+* リクエスト URL パス：**次で始まる** `/health/`
+* `x-fd-healthprobe`：**次を含む** `1`
 
-**アクション**:
+**アクション**：
 
-* URL書き換え – Source パターン：`/health/`、宛先：`/`
-* 応答ヘッダーの上書き`custom-origin-health` = `routed` （診断 – 検証後に削除できます）
-* Request header append `user-agent` = ` AdobeEdgeOptimize/1.0` （先頭のスペースを追加 – Azure Front Doorは値をそのまま追加します）
-* ルート設定の上書き：発信元グループ → `default-origin-group`、転送プロトコル →着信要求の一致、キャッシュ → **無効**
+* URL 書き換え：ソースパターン：`/health/`、宛先：`/`
+* 応答ヘッダーの上書き`custom-origin-health` = `routed`（診断用。確認後に削除できます）
+* 要求ヘッダーを追加`user-agent` = ` AdobeEdgeOptimize/1.0`（先頭に半角スペースを追加します。Azure Front Door は値をそのまま追加します）
+* ルート構成の上書き：配信元グループ → `default-origin-group`、転送プロトコル → 受信リクエストに一致、キャッシュ → **無効**
 
-## 手順4：ルールセットをルートに関連付ける
+## 手順 4：ルールセットをルートに関連付ける
 
-ルートを開き、下部の「**ルール**」セクションまでスクロールし、ドロップダウンから「`EORouting`」ルールセットを選択します。 既存のルールセットがある場合は、**上に移動**&#x200B;を使用して、`EORouting`を&#x200B;**#1**&#x200B;に配置します。 Edgeでの最適化ルールでは、エージェント型トラフィックとEdge Optimizeのループバックリクエストのみが処理されます。他のトラフィックは、他のルールに影響を与えずに通過します。 保存して反映を待ちます（約20分）。
+ルートを開き、一番下の「**ルール**」セクションまでスクロールして、ドロップダウンから `EORouting` ルールセットを選択します。既存のルールセットがある場合は、**最上位へ移動**&#x200B;を使用して、`EORouting` を **#1** の位置に配置します。Edgeでの最適化ルールは、エージェントトラフィックと Edge Optimize のループバックリクエストのみを処理します。それ以外のすべてのトラフィックは影響を受けず、他のルールにそのまま渡されます。保存して、反映されるまで待ちます（約 20 分）。
 
-## ファイアウォールルールによるEdgeでの最適化を許可する（オプション）
+## ファイアウォールルールで Edge での最適化を許可する（任意）
 
 {{waf-allowlist-setup}}
 

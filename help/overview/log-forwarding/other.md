@@ -4,24 +4,13 @@ description: サポートされていない CDN プロバイダーを使用し�
 feature: Agentic Traffic
 autotag-review: '2026-07-15T18:08:55.588Z'
 TQID: 'https://experienceleague.adobe.com/tuB95AJnFbB4O0o2BYHiRP-W0RTxzMeMLNg-5OjF-8s'
-product_v2:
-  - id: d830747e-f8f3-4fce-8eff-d53b333b1639
-feature_v2:
-  - id: d1956731-2adb-4bb7-8301-2b239254ac72
-  - id: e0828736-236a-487b-a478-5a635455eadc
-  - id: ef4e63f5-cb4d-462d-bf9a-1f617edf2a3a
-subfeature_v2:
-  - id: d23587d6-14d6-4e3f-9ee1-cc18623832e1
-  - id: dd952468-5202-43af-a365-6e0d2e67a703
-  - id: e06fae5f-830b-4222-a469-b5e148d36465
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-topic_v2:
-  - id: d3cdead0-685a-4489-9250-4bb709942f66
-  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
-  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+product_v2: id: d830747e-f8f3-4fce-8eff-d53b333b1639
+feature_v2: id: d1956731-2adb-4bb7-8301-2b239254ac72id: e0828736-236a-487b-a478-5a635455eadcid: ef4e63f5-cb4d-462d-bf9a-1f617edf2a3a
+subfeature_v2: id: d23587d6-14d6-4e3f-9ee1-cc18623832e1id: dd952468-5202-43af-a365-6e0d2e67a703id: e06fae5f-830b-4222-a469-b5e148d36465
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2: id: d3cdead0-685a-4489-9250-4bb709942f66id: e1e0219c-f879-479f-8427-888ed2a6e9c2id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: 2705cf26faea9c09817bbdcec4b4c531552df7ba
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: 670
 ht-degree: 100%
 
@@ -102,10 +91,10 @@ ht-degree: 100%
 
 - フィールド名は、（大文字と小文字、スペルが）**完全に**&#x200B;一致する必要があります。
 - データタイプは、次のとおり正しく指定する必要があります。
-   - **timestamp** は、**ISO 8601** 形式の文字列にする必要があります。 UNIX 形式のタイムスタンプは正しく動作しない場合があります。
-   - **response_status** は整数にする必要があります。
-   - **time_to_first_byte** は整数にし、ミリ秒を使用する必要があります。
-   - 文字列は、有効な JSON 文字列にする必要があります。
+  - **timestamp** は、**ISO 8601** 形式の文字列にする必要があります。 UNIX 形式のタイムスタンプは正しく動作しない場合があります。
+  - **response_status** は整数にする必要があります。
+  - **time_to_first_byte** は整数にし、ミリ秒を使用する必要があります。
+  - 文字列は、有効な JSON 文字列にする必要があります。
 - JSON の形式が不正であったり、フィールドが欠落／不正確であったりすると、ログがスキップされたり、解析に失敗したりして、レポートにデータが欠落する場合があります。
 
 ### アップロード場所と処理ケイデンス {#upload-location}

@@ -4,28 +4,22 @@ description: エージェントトラフィックダッシュボードを使用�
 feature: Agentic Traffic
 autotag-review: '2026-07-15T17:38:14.233Z'
 TQID: 'https://experienceleague.adobe.com/4pvsCwqZXkX7xOJWqKge6rkJYaAq27cSjLeTxaA4ysM'
-product_v2:
-  - id: d830747e-f8f3-4fce-8eff-d53b333b1639
-feature_v2:
-  - id: e0828736-236a-487b-a478-5a635455eadc
-subfeature_v2:
-  - id: e06fae5f-830b-4222-a469-b5e148d36465
-role_v2:
-  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
-topic_v2:
-  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
-  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+product_v2: id: d830747e-f8f3-4fce-8eff-d53b333b1639
+feature_v2: id: e0828736-236a-487b-a478-5a635455eadc
+subfeature_v2: id: e06fae5f-830b-4222-a469-b5e148d36465
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554
+topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: e1e0219c-f879-479f-8427-888ed2a6e9c2
 source-git-commit: 2705cf26faea9c09817bbdcec4b4c531552df7ba
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: 1254
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
 
 # エージェントトラフィック {#agentic-traffic}
 
-エージェントトラフィックダッシュボードには、AI エージェント（クローラーとチャットボット）によるサイトの操作方法が表示されます。 このビューを使用すると、リクエストの合計数と一般的なパフォーマンス関連指標を追跡できます。 また、マーケット、カテゴリ、ページ、エージェントをまたいでトラフィックの分布を表示することもできます。 このダッシュボードで使用するデータは CDN ログから取得されるので、指標を表示するには **CDN ログ転送**&#x200B;を設定する必要があります。 また、表示するデータを絞り込むのに役立つカスタマイズ可能なフィルターもあります。 **エージェント型トラフィック**&#x200B;に移動し、エージェント型トラフィックのインサイトを表示するサイトを選択します。
+エージェントトラフィックダッシュボードには、AI エージェント（クローラーとチャットボット）によるサイトの操作方法が表示されます。 このビューを使用すると、リクエストの合計数と一般的なパフォーマンス関連指標を追跡できます。 また、マーケット、カテゴリ、ページ、エージェントをまたいでトラフィックの分布を表示することもできます。 このダッシュボードで使用するデータは CDN ログから取得されるので、指標を表示するには **CDN ログ転送**&#x200B;を設定する必要があります。 また、表示するデータを絞り込むのに役立つカスタマイズ可能なフィルターもあります。 **エージェントトラフィック**&#x200B;に移動し、エージェントトラフィックのインサイトを表示するサイトを選択します。
 
 ![エージェントトラフィック - サイトセレクター（ブランド中心のエクスペリエンス）](/help/assets/brand-centric-experience/agentic-traffic-dashboard.png)
 
@@ -44,7 +38,7 @@ ht-degree: 97%
 
 **CDN ログ転送**&#x200B;がない場合、エージェントトラフィックダッシュボードは空白になります。 エージェント型のインタラクションを表示するには、**CDN ログ転送**&#x200B;を設定する必要があります。
 
-CDN ログ転送情報を追加するには、**Brands Management**&#x200B;に移動し、**CDN** ラベルをクリックします。
+**ブランド管理**&#x200B;に移動し、**CDN** ラベルをクリックして、CDN ログ転送情報を追加できます。
 
 ![ブランド管理 - CDN ログ転送](/help/assets/brand-centric-experience/brands-management-cdn.png)
 

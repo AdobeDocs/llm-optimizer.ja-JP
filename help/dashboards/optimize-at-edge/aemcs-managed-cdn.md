@@ -4,26 +4,14 @@ description: LLM Optimizer の Edge での最適化を行うのに AEM Cloud Ser
 feature: Opportunities
 autotag-review: '2026-07-15T16:49:32.275Z'
 TQID: 'https://experienceleague.adobe.com/2-IzfF1iTEzW-gpqPA-t3mffRuhMxaKi1Dp0A62IZ9U'
-product_v2:
-  - id: d830747e-f8f3-4fce-8eff-d53b333b1639
-feature_v2:
-  - id: d1956731-2adb-4bb7-8301-2b239254ac72
-  - id: e0828736-236a-487b-a478-5a635455eadc
-  - id: e1b649f0-0a61-46e4-9082-64d5cb2576c6
-  - id: ef4e63f5-cb4d-462d-bf9a-1f617edf2a3a
-subfeature_v2:
-  - id: d23587d6-14d6-4e3f-9ee1-cc18623832e1
-  - id: e06fae5f-830b-4222-a469-b5e148d36465
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-topic_v2:
-  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
-  - id: c1579802-ddd4-4214-8a91-97b2066abe11
-  - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
-  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+product_v2: id: d830747e-f8f3-4fce-8eff-d53b333b1639
+feature_v2: id: d1956731-2adb-4bb7-8301-2b239254ac72id: e0828736-236a-487b-a478-5a635455eadcid: e1b649f0-0a61-46e4-9082-64d5cb2576c6id: ef4e63f5-cb4d-462d-bf9a-1f617edf2a3a
+subfeature_v2: id: d23587d6-14d6-4e3f-9ee1-cc18623832e1id: e06fae5f-830b-4222-a469-b5e148d36465
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: c1579802-ddd4-4214-8a91-97b2066abe11id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: 2705cf26faea9c09817bbdcec4b4c531552df7ba
-workflow-type: tm+mt
-source-wordcount: 836
+workflow-type: ht
+source-wordcount: 815
 ht-degree: 100%
 
 ---
@@ -37,10 +25,8 @@ ht-degree: 100%
 
 この機能にアクセスするには：
 
-- 有料のお客様は、**Adobe LLM Optimizer ユーザー** IMS 製品プロファイルへのアクセス権が必要です。 アクセス権をリクエストするには、組織の管理者にお問い合わせください。
-  ![製品プロファイルにユーザーを追加](/help/assets/optimize-at-edge/cs-fastly-user-product-profiles.png)
-- 体験版のユーザーは、**LLMO 管理者** IMS グループに参加している必要があります。 グループが存在しない場合は、組織の管理者がグループを作成して追加できます。
-  ![LLMO 管理者 IMS グループを作成](/help/assets/optimize-at-edge/cs-fastly-create-ims-group.png)
+- 有料のお客様は、**Adobe LLM Optimizer ユーザー** IMS 製品プロファイルへのアクセス権が必要です。アクセス権が必要な場合は、組織の管理者にお問い合わせください。  ![製品プロファイルにユーザーを追加](/help/assets/optimize-at-edge/cs-fastly-user-product-profiles.png)
+- トライアルユーザーは、**LLMO Admin** IMS グループのメンバーである必要があります。グループが存在しない場合は、組織の管理者がグループを作成して追加できます。  ![LLMO 管理者 IMS グループを作成](/help/assets/optimize-at-edge/cs-fastly-create-ims-group.png)
 
 >[!NOTE]
 > この機能は、Safari または匿名／プライベート参照モードではサポートされていません。
